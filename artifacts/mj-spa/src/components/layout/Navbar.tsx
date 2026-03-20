@@ -66,21 +66,12 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group cursor-pointer">
-            <div
-              className={`text-2xl md:text-3xl font-serif font-bold tracking-wider transition-colors ${
-                isScrolled ? "text-primary" : "text-white"
-              }`}
-            >
-              MJ
-              <span
-                className={`text-sm md:text-base font-sans tracking-widest font-light block -mt-1 ${
-                  isScrolled ? "text-foreground" : "text-white/90"
-                }`}
-              >
-                Fisio Estética y Spa
-              </span>
-            </div>
+          <Link href="/" className="flex items-center cursor-pointer">
+            <img
+              src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
+              alt="MJ Fisio Estética y Spa"
+              className="h-14 md:h-16 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Nav */}

@@ -9,7 +9,11 @@ export function Footer() {
           
           {/* Brand */}
           <div className="space-y-4">
-            <h3 className="text-3xl font-serif text-white mb-6">MJ <span className="block text-lg font-sans font-light tracking-widest mt-1 text-secondary">Fisio Estética y Spa</span></h3>
+            <img
+              src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
+              alt="MJ Fisio Estética y Spa"
+              className="h-16 w-auto object-contain mb-6"
+            />
             <p className="text-white/60 font-light leading-relaxed">
               Tu centro de confianza en Turrialba para cuidar de tu cuerpo, mente y bienestar con los mejores profesionales.
             </p>
