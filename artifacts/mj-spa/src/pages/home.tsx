@@ -122,7 +122,7 @@ export default function Home() {
               Cuidado Integral
             </span>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 drop-shadow-lg leading-tight">
-              Tu bienestar es<br />
+              <span className="text-white">Tu bienestar es</span><br />
               <span className="text-secondary italic font-light">nuestra prioridad</span>
             </h1>
             <p className="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto text-white/90 drop-shadow-md">
