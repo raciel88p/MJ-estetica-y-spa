@@ -235,7 +235,9 @@ export default function Home() {
                   "Profesionales certificados",
                   "Tecnología avanzada",
                   "Ambiente relajante",
-                  "Trato personalizado"
+                  "Trato personalizado",
+                  "Paquetes especiales",
+                  "Productos de alta gama"
                 ].map((feature, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary" />
