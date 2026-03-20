@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "MJ Fisio Estetica y Spa"
+version = "1.0.0"
+id = "artifacts/mj-spa"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23163
+
+[services.development]
+run = "pnpm --filter @workspace/mj-spa run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mj-spa", "run", "build" ]
+publicDir = "artifacts/mj-spa/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23163"
+BASE_PATH = "/"

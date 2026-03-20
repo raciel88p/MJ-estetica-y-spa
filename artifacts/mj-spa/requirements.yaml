@@ -1,0 +1,23 @@
+packages:
+  "framer-motion": "For elegant page transitions and scroll-triggered animations"
+  "react-hook-form": "For managing contact form state"
+  "@hookform/resolvers": "For Zod validation integration"
+  "zod": "For contact form schema validation"
+  "clsx": "Utility for constructing className strings conditionally"
+  "tailwind-merge": "Utility to merge tailwind classes"
+
+images:
+  - path: "artifacts/mj-spa/public/images/hero-bg.png"
+    description: "Luxurious spa setting with warm soft lighting, massage bed, folded white towels, and subtle elegant orchid flowers, warm beige and dusty rose tones, photorealistic"
+    aspect_ratio: "16:9"
+  - path: "artifacts/mj-spa/public/images/about-us.png"
+    description: "Professional elegant beauty clinic treatment room with modern aesthetics equipment, warm cream and beige tones, bright, clean and welcoming atmosphere, photorealistic"
+    aspect_ratio: "4:3"
+  - path: "artifacts/mj-spa/public/images/spa-texture.png"
+    description: "Abstract soft fluid gradient mesh background in warm cream, champagne, and dusty rose tones, elegant, soothing, and luxurious texture"
+    aspect_ratio: "16:9"
+
+notes:
+  - This is a static frontend landing page recreation.
+  - Using framer-motion for scroll reveals.
+  - Contact form is UI-only and triggers a local success toast.
