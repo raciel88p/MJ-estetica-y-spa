@@ -13,7 +13,7 @@ export function Footer() {
               Tu centro de confianza en Turrialba para cuidar de tu cuerpo, mente y bienestar con los mejores profesionales.
             </p>
             <div className="flex gap-4 pt-4 flex-wrap">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+              <a href="https://www.instagram.com/fisioesteticamj/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="https://www.facebook.com/MJFisioEsteticaySpa" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
