@@ -70,7 +70,7 @@ const team = [
 const stats = [
   { value: "+3", label: "Años de experiencia" },
   { value: "2335", label: "Clientes satisfechos" },
-  { value: "15+", label: "Tratamientos disponibles" },
+  { value: "82+", label: "Tratamientos disponibles" },
   { value: "100%", label: "Atención personalizada" },
 ];
 
