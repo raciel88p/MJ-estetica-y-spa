@@ -31,8 +31,11 @@ export function Navbar() {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isMedicosOpen, setIsMedicosOpen] = useState(false);
   const [isMobileMedicosOpen, setIsMobileMedicosOpen] = useState(false);
+  const [isNosotrosOpen, setIsNosotrosOpen] = useState(false);
+  const [isMobileNosotrosOpen, setIsMobileNosotrosOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const medicosDropdownRef = useRef<HTMLDivElement>(null);
+  const nosotrosDropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -47,6 +50,9 @@ export function Navbar() {
       }
       if (medicosDropdownRef.current && !medicosDropdownRef.current.contains(e.target as Node)) {
         setIsMedicosOpen(false);
+      }
+      if (nosotrosDropdownRef.current && !nosotrosDropdownRef.current.contains(e.target as Node)) {
+        setIsNosotrosOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -76,9 +82,46 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link href="/nosotros" className={`${linkBase} ${textClass}`}>
-              Nosotros
-            </Link>
+            {/* Nosotros Dropdown */}
+            <div ref={nosotrosDropdownRef} className="relative">
+              <button
+                className={`flex items-center gap-1 ${linkBase} ${textClass}`}
+                onMouseEnter={() => setIsNosotrosOpen(true)}
+                onClick={() => setIsNosotrosOpen(!isNosotrosOpen)}
+              >
+                Nosotros
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isNosotrosOpen ? "rotate-180" : ""}`} />
+              </button>
+              <AnimatePresence>
+                {isNosotrosOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 8, scale: 0.97 }}
+                    transition={{ duration: 0.18, ease: "easeOut" }}
+                    onMouseLeave={() => setIsNosotrosOpen(false)}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-52 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden z-50"
+                  >
+                    <div className="px-3 pt-4 pb-3 flex flex-col gap-1">
+                      <Link
+                        href="/nosotros"
+                        className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
+                        onClick={() => setIsNosotrosOpen(false)}
+                      >
+                        Sobre Nosotros
+                      </Link>
+                      <Link
+                        href="/buzon-sugerencias"
+                        className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
+                        onClick={() => setIsNosotrosOpen(false)}
+                      >
+                        Buzón de Sugerencias
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
             <Link href="/testimonios" className={`${linkBase} ${textClass}`}>
               Testimonios
             </Link>
@@ -229,13 +272,43 @@ export function Navbar() {
             className="absolute top-full left-0 right-0 bg-white shadow-xl border-t border-border md:hidden max-h-[85vh] overflow-y-auto"
           >
             <div className="flex flex-col py-4 px-6 gap-1">
-              <Link
-                href="/nosotros"
-                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Nosotros
-              </Link>
+              {/* Mobile Nosotros Accordion */}
+              <div className="border-b border-muted">
+                <button
+                  className="w-full flex justify-between items-center text-foreground text-lg py-3 hover:text-primary transition-colors font-serif"
+                  onClick={() => setIsMobileNosotrosOpen(!isMobileNosotrosOpen)}
+                >
+                  Nosotros
+                  <ChevronDown className={`w-5 h-5 transition-transform ${isMobileNosotrosOpen ? "rotate-180" : ""}`} />
+                </button>
+                <AnimatePresence>
+                  {isMobileNosotrosOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pb-3 pl-4 flex flex-col gap-1">
+                        <Link
+                          href="/nosotros"
+                          className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
+                          onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
+                        >
+                          Sobre Nosotros
+                        </Link>
+                        <Link
+                          href="/buzon-sugerencias"
+                          className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
+                          onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
+                        >
+                          Buzón de Sugerencias
+                        </Link>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
               <Link
                 href="/testimonios"
                 className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
