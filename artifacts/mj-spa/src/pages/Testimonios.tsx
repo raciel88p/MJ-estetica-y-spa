@@ -80,7 +80,7 @@ const testimonials = [
 ];
 
 const stats = [
-  { value: "+500", label: "Clientes satisfechos" },
+  { value: "2335", label: "Clientes satisfechos" },
   { value: "4.9/5", label: "Valoración promedio" },
   { value: "98%", label: "Recomendarían el centro" },
   { value: "+3", label: "Años de confianza" },
