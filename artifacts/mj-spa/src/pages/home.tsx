@@ -212,7 +212,7 @@ export default function Home() {
                     <Star className="w-6 h-6 text-primary fill-primary" />
                   </div>
                   <div>
-                    <p className="font-bold text-2xl text-foreground">+10 Años</p>
+                    <p className="font-bold text-2xl text-foreground">+3 Años</p>
                     <p className="text-sm text-muted-foreground">de Experiencia</p>
                   </div>
                 </div>
