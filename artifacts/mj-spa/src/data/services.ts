@@ -15,6 +15,13 @@ export type ServicePageData = {
   faq?: { question: string; answer: string }[];
 };
 
+export const medicoEsteticosLinks = [
+  { name: "Nutrición", href: "/servicios/nutricion" },
+  { name: "Botox Full Face", href: "/servicios/botox-full-face" },
+  { name: "Hilos Tensores", href: "/servicios/hilos-tensores" },
+  { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
+];
+
 export const servicePages: ServicePageData[] = [
   {
     slug: "masajes-corporales",
@@ -481,6 +488,123 @@ export const servicePages: ServicePageData[] = [
         question: "¿Puedo hacer vida normal tras el tratamiento?",
         answer:
           "Sí, aunque es normal algo de hinchazón y pequeños hematomas los primeros días. El resultado definitivo se aprecia a la semana.",
+      },
+    ],
+  },
+  {
+    slug: "nutricion",
+    name: "Nutrición",
+    tagline: "Alimenta tu cuerpo, transforma tu vida",
+    heroDescription:
+      "Nuestro servicio de nutrición personalizada te acompaña en el camino hacia una alimentación equilibrada y saludable, adaptada a tus objetivos, estilo de vida y necesidades específicas.",
+    benefits: [
+      "Plan nutricional completamente personalizado",
+      "Mejora del peso y composición corporal",
+      "Mayor energía y vitalidad diaria",
+      "Reducción de enfermedades metabólicas",
+      "Hábitos alimentarios sostenibles a largo plazo",
+    ],
+    items: [
+      {
+        title: "Consulta Nutricional Inicial",
+        description:
+          "Evaluación completa de tu estado de salud, historial alimentario, objetivos y mediciones corporales para diseñar un plan totalmente personalizado.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Plan de Alimentación Personalizado",
+        description:
+          "Diseño de un menú semanal adaptado a tus gustos, necesidades calóricas y objetivos de salud o estética.",
+        duration: "Plan escrito",
+        price: "Consultar precio",
+      },
+      {
+        title: "Seguimiento Nutricional",
+        description:
+          "Sesiones de seguimiento para ajustar el plan según tu evolución, resolver dudas y mantener la motivación.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Nutrición Deportiva",
+        description:
+          "Plan específico para personas activas o deportistas, enfocado en mejorar el rendimiento, la recuperación y la composición corporal.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cuántas sesiones necesito?",
+        answer:
+          "Recomendamos una consulta inicial y al menos 2-3 sesiones de seguimiento durante el primer mes para establecer hábitos y ajustar el plan según tu evolución.",
+      },
+      {
+        question: "¿El plan incluye recetas?",
+        answer:
+          "Sí, el plan nutricional incluye sugerencias de recetas sencillas y adaptadas a tus preferencias para facilitar la adherencia al nuevo estilo alimentario.",
+      },
+    ],
+  },
+  {
+    slug: "trasplante-capilar",
+    name: "Trasplante Capilar",
+    tagline: "Recupera tu cabello, recupera tu confianza",
+    heroDescription:
+      "El trasplante capilar es la solución definitiva para la alopecia y la pérdida de cabello. Utilizamos las técnicas más avanzadas para resultados naturales, permanentes y de alta densidad.",
+    benefits: [
+      "Resultado permanente y natural",
+      "Técnicas mínimamente invasivas",
+      "Sin cicatrices visibles",
+      "Alta tasa de supervivencia del injerto",
+      "Recuperación rápida y sencilla",
+    ],
+    items: [
+      {
+        title: "Técnica FUE (Follicular Unit Extraction)",
+        description:
+          "Extracción folicular unitaria que obtiene folículos de la zona donante sin incisiones. Sin cicatriz lineal, recuperación rápida y resultados muy naturales.",
+        duration: "4-8 horas",
+        price: "Consultar precio",
+      },
+      {
+        title: "Trasplante de Barba",
+        description:
+          "Diseño y relleno de zonas sin cobertura en la barba o bigote, logrando una barba densa, uniforme y completamente natural.",
+        duration: "3-5 horas",
+        price: "Consultar precio",
+      },
+      {
+        title: "Trasplante de Cejas",
+        description:
+          "Reconstrucción o densificación de las cejas con folículos del área donante, para una apariencia definida y duradera.",
+        duration: "2-4 horas",
+        price: "Consultar precio",
+      },
+      {
+        title: "Consulta y Diagnóstico Capilar",
+        description:
+          "Evaluación del grado de alopecia, análisis del área donante y diseño personalizado de la línea de implantación según tus rasgos faciales.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cuándo se ven los resultados definitivos?",
+        answer:
+          "Los injertos entran en un ciclo de reposo durante los primeros 2-3 meses. El crecimiento progresivo comienza alrededor del mes 4 y el resultado definitivo se aprecia entre los 12-18 meses.",
+      },
+      {
+        question: "¿Es doloroso el trasplante capilar?",
+        answer:
+          "El procedimiento se realiza bajo anestesia local, por lo que no se siente dolor durante la intervención. Las molestias post-operatorias son leves y controlables con analgesia convencional.",
+      },
+      {
+        question: "¿Cuánto tiempo de recuperación necesito?",
+        answer:
+          "Puedes retomar actividades cotidianas a los 2-3 días. Se recomienda evitar ejercicio intenso y exposición solar directa durante las primeras 2-4 semanas.",
       },
     ],
   },

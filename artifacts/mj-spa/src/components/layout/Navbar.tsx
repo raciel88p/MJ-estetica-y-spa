@@ -3,6 +3,7 @@ import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
+import { medicoEsteticosLinks } from "@/data/services";
 
 const serviceLinks = [
   { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
@@ -28,7 +29,10 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
+  const [isMedicosOpen, setIsMedicosOpen] = useState(false);
+  const [isMobileMedicosOpen, setIsMobileMedicosOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const medicosDropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -40,6 +44,9 @@ export function Navbar() {
     const handleClickOutside = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setIsServicesOpen(false);
+      }
+      if (medicosDropdownRef.current && !medicosDropdownRef.current.contains(e.target as Node)) {
+        setIsMedicosOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -139,9 +146,50 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            <a href="/#servicios" className={`${linkBase} ${textClass}`}>
-              Médicos y Estéticos
-            </a>
+            {/* Médicos y Estéticos Dropdown */}
+            <div ref={medicosDropdownRef} className="relative">
+              <button
+                className={`flex items-center gap-1 ${linkBase} ${textClass}`}
+                onMouseEnter={() => setIsMedicosOpen(true)}
+                onClick={() => setIsMedicosOpen(!isMedicosOpen)}
+              >
+                Médicos y Estéticos
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${isMedicosOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              <AnimatePresence>
+                {isMedicosOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 8, scale: 0.97 }}
+                    transition={{ duration: 0.18, ease: "easeOut" }}
+                    onMouseLeave={() => setIsMedicosOpen(false)}
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden z-50"
+                  >
+                    <div className="px-3 pt-4 pb-3">
+                      <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-3 px-2">
+                        Especialidades
+                      </p>
+                      <div className="flex flex-col gap-1">
+                        {medicoEsteticosLinks.map((link) => (
+                          <Link
+                            key={link.name}
+                            href={link.href}
+                            className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
+                            onClick={() => setIsMedicosOpen(false)}
+                          >
+                            {link.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             <a href="/#contacto" className={`${linkBase} ${textClass}`}>
               Contacto
             </a>
@@ -242,13 +290,45 @@ export function Navbar() {
                 </AnimatePresence>
               </div>
 
-              <a
-                href="/#servicios"
-                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Médicos y Estéticos
-              </a>
+              {/* Mobile Médicos y Estéticos Accordion */}
+              <div className="border-b border-muted">
+                <button
+                  className="w-full flex justify-between items-center text-foreground text-lg py-3 hover:text-primary transition-colors font-serif"
+                  onClick={() => setIsMobileMedicosOpen(!isMobileMedicosOpen)}
+                >
+                  Médicos y Estéticos
+                  <ChevronDown
+                    className={`w-5 h-5 transition-transform ${isMobileMedicosOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+                <AnimatePresence>
+                  {isMobileMedicosOpen && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pb-3 pl-4 flex flex-col gap-1">
+                        {medicoEsteticosLinks.map((link) => (
+                          <Link
+                            key={link.name}
+                            href={link.href}
+                            className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
+                            onClick={() => {
+                              setIsMobileMenuOpen(false);
+                              setIsMobileMedicosOpen(false);
+                            }}
+                          >
+                            {link.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
               <a
                 href="/#contacto"
                 className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif"
