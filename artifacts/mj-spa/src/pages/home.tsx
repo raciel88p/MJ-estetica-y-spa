@@ -229,7 +229,7 @@ export default function Home() {
               <h3 className="text-4xl md:text-5xl font-serif mb-6 text-foreground">El Arte de Cuidar <br/><span className="italic text-muted-foreground">de Ti</span></h3>
               <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
                 En MJ Fisio Estética y Spa, hemos creado un espacio dedicado exclusivamente a tu salud, belleza y relajación. 
-                Situados en el corazón de Málaga, nuestro centro combina la calidez de un trato cercano con la excelencia de 
+                Situados en el corazón de Turrialba, Costa Rica, nuestro centro combina la calidez de un trato cercano con la excelencia de 
                 profesionales altamente cualificados.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
