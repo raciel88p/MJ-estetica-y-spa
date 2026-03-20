@@ -10,7 +10,7 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-3xl font-serif text-white mb-6">MJ <span className="block text-lg font-sans font-light tracking-widest mt-1 text-secondary">Fisio Estética y Spa</span></h3>
             <p className="text-white/60 font-light leading-relaxed">
-              Tu centro de confianza en Málaga para cuidar de tu cuerpo, mente y bienestar con los mejores profesionales.
+              Tu centro de confianza en Turrialba para cuidar de tu cuerpo, mente y bienestar con los mejores profesionales.
             </p>
             <div className="flex gap-4 pt-4">
               <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
