@@ -81,6 +81,9 @@ export function Navbar() {
             <a href="/#nosotros" className={`${linkBase} ${textClass}`}>
               Nosotros
             </a>
+            <a href="/#testimonios" className={`${linkBase} ${textClass}`}>
+              Testimonios
+            </a>
 
             {/* Services Dropdown */}
             <div ref={dropdownRef} className="relative">
@@ -136,14 +139,11 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            <a href="/#testimonios" className={`${linkBase} ${textClass}`}>
-              Testimonios
+            <a href="/#servicios" className={`${linkBase} ${textClass}`}>
+              Médicos y Estéticos
             </a>
             <a href="/#contacto" className={`${linkBase} ${textClass}`}>
               Contacto
-            </a>
-            <a href="/#servicios" className={`${linkBase} ${textClass}`}>
-              Médicos y Estéticos
             </a>
 
             <Button
@@ -187,6 +187,13 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Nosotros
+              </a>
+              <a
+                href="/#testimonios"
+                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Testimonios
               </a>
 
               {/* Mobile Services Accordion */}
@@ -236,11 +243,11 @@ export function Navbar() {
               </div>
 
               <a
-                href="/#testimonios"
+                href="/#servicios"
                 className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Testimonios
+                Médicos y Estéticos
               </a>
               <a
                 href="/#contacto"
@@ -248,13 +255,6 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contacto
-              </a>
-              <a
-                href="/#servicios"
-                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Médicos y Estéticos
               </a>
               <Button className="mt-4 w-full rounded-full bg-primary text-white hover:bg-primary/90" asChild>
                 <a href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
