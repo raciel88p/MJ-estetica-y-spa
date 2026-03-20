@@ -142,6 +142,9 @@ export function Navbar() {
             <a href="/#contacto" className={`${linkBase} ${textClass}`}>
               Contacto
             </a>
+            <a href="/#servicios" className={`${linkBase} ${textClass}`}>
+              Médicos y Estéticos
+            </a>
 
             <Button
               className={`rounded-full px-6 py-5 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 ${
@@ -245,6 +248,13 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contacto
+              </a>
+              <a
+                href="/#servicios"
+                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Médicos y Estéticos
               </a>
               <Button className="mt-4 w-full rounded-full bg-primary text-white hover:bg-primary/90" asChild>
                 <a href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
