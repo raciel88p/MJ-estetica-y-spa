@@ -51,7 +51,7 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                <span>Málaga, España</span>
+                <span>Turrialba, Ciudadela Jorge de Bravo</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-secondary shrink-0" />

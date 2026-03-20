@@ -356,7 +356,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-serif font-bold text-xl mb-1">Nuestra Ubicación</h4>
-                    <p className="text-muted-foreground">Málaga, España<br/>Centro Ciudad</p>
+                    <p className="text-muted-foreground">Turrialba<br/>Ciudadela Jorge de Bravo</p>
                   </div>
                 </div>
                 
