@@ -39,7 +39,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li><a href="#nosotros" className="hover:text-secondary transition-colors">Sobre Nosotros</a></li>
               <li><a href="#servicios" className="hover:text-secondary transition-colors">Servicios</a></li>
-              <li><Link href="/servicios/nutricion" className="hover:text-secondary transition-colors">Médicos y Estéticos</Link></li>
+              <li><Link href="/medicos-esteticos" className="hover:text-secondary transition-colors">Médicos y Estéticos</Link></li>
               <li><a href="#testimonios" className="hover:text-secondary transition-colors">Testimonios</a></li>
               <li><a href="#contacto" className="hover:text-secondary transition-colors">Contacto</a></li>
             </ul>
