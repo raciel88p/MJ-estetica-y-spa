@@ -106,29 +106,31 @@ export function Navbar() {
                     exit={{ opacity: 0, y: 8, scale: 0.97 }}
                     transition={{ duration: 0.18, ease: "easeOut" }}
                     onMouseLeave={() => setIsServicesOpen(false)}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-60 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden z-50"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[520px] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden z-50"
                   >
-                    <div className="py-2">
-                      <p className="px-4 pt-2 pb-1 text-xs uppercase tracking-widest text-muted-foreground font-medium">
-                        Todos los servicios
+                    <div className="px-5 pt-4 pb-2">
+                      <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-3">
+                        Nuestros Servicios
                       </p>
-                      {serviceLinks.map((link) => (
-                        <Link
-                          key={link.name}
-                          href={link.href}
-                          className="block px-4 py-2.5 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          {link.name}
-                        </Link>
-                      ))}
-                      <div className="border-t border-border mt-2 pt-2">
+                      <div className="grid grid-cols-3 gap-x-4 gap-y-1">
+                        {serviceLinks.map((link) => (
+                          <Link
+                            key={link.name}
+                            href={link.href}
+                            className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
+                            onClick={() => setIsServicesOpen(false)}
+                          >
+                            {link.name}
+                          </Link>
+                        ))}
+                      </div>
+                      <div className="border-t border-border mt-3 pt-3 pb-1">
                         <a
                           href="/#servicios"
-                          className="block px-4 py-2.5 text-sm text-primary font-semibold hover:bg-secondary/40 transition-colors"
+                          className="block px-3 py-1.5 text-sm text-primary font-semibold hover:bg-secondary/40 transition-colors rounded-lg"
                           onClick={() => setIsServicesOpen(false)}
                         >
-                          Ver todos →
+                          Ver todos los servicios →
                         </a>
                       </div>
                     </div>
