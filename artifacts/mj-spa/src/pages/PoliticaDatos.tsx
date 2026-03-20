@@ -18,7 +18,7 @@ export default function PoliticaDatos() {
               Política de Cookies y Recogida de Datos
             </h1>
             <p className="text-sm text-muted-foreground mb-10">
-              Fecha de última actualización: 22/07/2024
+              Fecha de última actualización: 20/03/2026
             </p>
 
             <div className="prose prose-stone max-w-none space-y-8 text-foreground/80 leading-relaxed">
