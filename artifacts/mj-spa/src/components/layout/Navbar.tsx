@@ -78,9 +78,6 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="/#inicio" className={`${linkBase} ${textClass}`}>
-              Inicio
-            </a>
             <a href="/#nosotros" className={`${linkBase} ${textClass}`}>
               Nosotros
             </a>
@@ -181,13 +178,6 @@ export function Navbar() {
             className="absolute top-full left-0 right-0 bg-white shadow-xl border-t border-border md:hidden max-h-[85vh] overflow-y-auto"
           >
             <div className="flex flex-col py-4 px-6 gap-1">
-              <a
-                href="/#inicio"
-                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Inicio
-              </a>
               <a
                 href="/#nosotros"
                 className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif"
