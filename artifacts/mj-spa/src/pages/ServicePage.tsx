@@ -183,7 +183,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 className="bg-white text-primary hover:bg-white/90 rounded-full px-8 py-5 text-base font-semibold shadow-lg"
                 asChild
               >
-                <a href="/#contacto">
+                <a href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
                   <Phone className="w-4 h-4 mr-2" />
                   Reserva tu cita ahora
                 </a>

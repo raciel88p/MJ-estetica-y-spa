@@ -151,7 +151,7 @@ export function Navbar() {
               }`}
               asChild
             >
-              <a href="/#contacto">
+              <a href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
                 <Phone className="w-4 h-4 mr-2" />
                 Reserva tu cita
               </a>
@@ -247,7 +247,7 @@ export function Navbar() {
                 Contacto
               </a>
               <Button className="mt-4 w-full rounded-full bg-primary text-white hover:bg-primary/90" asChild>
-                <a href="/#contacto" onClick={() => setIsMobileMenuOpen(false)}>
+                <a href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
                   Reserva tu cita
                 </a>
               </Button>

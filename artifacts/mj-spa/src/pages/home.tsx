@@ -142,7 +142,7 @@ export default function Home() {
               className="rounded-full px-8 py-6 text-lg bg-primary hover:bg-primary/90 text-white shadow-xl hover:shadow-primary/30 transition-all hover:-translate-y-1"
               asChild
             >
-              <a href="#contacto">
+              <a href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
                 Reserva tu Experiencia <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </Button>
@@ -489,11 +489,11 @@ export default function Home() {
                 </div>
 
                 <Button 
-                  type="submit" 
+                  type="button"
                   className="w-full rounded-xl py-6 text-lg bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-primary/30 transition-all hover:-translate-y-0.5"
-                  disabled={form.formState.isSubmitting}
+                  onClick={() => window.open("https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0", "_blank")}
                 >
-                  {form.formState.isSubmitting ? "Enviando..." : "Enviar Mensaje"}
+                  Enviar Mensaje
                 </Button>
               </form>
             </motion.div>
