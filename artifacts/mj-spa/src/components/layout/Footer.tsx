@@ -1,4 +1,5 @@
 import { Instagram, Facebook, MapPin, Phone, Clock, Mail } from "lucide-react";
+import { Link } from "wouter";
 
 export function Footer() {
   return (
@@ -85,7 +86,7 @@ export function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
           <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. Todos los derechos reservados.</p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-white">Política de Privacidad</a>
+            <Link href="/politica-de-datos" className="hover:text-white">Política de Privacidad</Link>
             <a href="#" className="hover:text-white">Términos y Condiciones</a>
           </div>
         </div>

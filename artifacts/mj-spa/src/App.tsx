@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
 import ServicePage from "@/pages/ServicePage";
+import PoliticaDatos from "@/pages/PoliticaDatos";
 import { servicePages } from "@/data/services";
 
 const queryClient = new QueryClient();
@@ -13,6 +14,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/politica-de-datos" component={PoliticaDatos} />
       {servicePages.map((service) => (
         <Route
           key={service.slug}
