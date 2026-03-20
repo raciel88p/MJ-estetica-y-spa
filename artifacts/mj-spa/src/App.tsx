@@ -4,6 +4,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
+import ServicePage from "@/pages/ServicePage";
+import { servicePages } from "@/data/services";
 
 const queryClient = new QueryClient();
 
@@ -11,6 +13,13 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      {servicePages.map((service) => (
+        <Route
+          key={service.slug}
+          path={`/servicios/${service.slug}`}
+          component={() => <ServicePage service={service} />}
+        />
+      ))}
       <Route component={NotFound} />
     </Switch>
   );
