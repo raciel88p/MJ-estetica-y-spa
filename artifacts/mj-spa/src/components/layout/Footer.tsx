@@ -37,7 +37,6 @@ export function Footer() {
           <div>
             <h4 className="text-xl font-serif text-white mb-6">Enlaces Rápidos</h4>
             <ul className="space-y-3">
-              <li><a href="#inicio" className="hover:text-secondary transition-colors">Inicio</a></li>
               <li><a href="#nosotros" className="hover:text-secondary transition-colors">Sobre Nosotros</a></li>
               <li><a href="#servicios" className="hover:text-secondary transition-colors">Servicios</a></li>
               <li><a href="#testimonios" className="hover:text-secondary transition-colors">Testimonios</a></li>
