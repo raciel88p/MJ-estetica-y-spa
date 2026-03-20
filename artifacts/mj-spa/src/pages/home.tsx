@@ -376,7 +376,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-serif font-bold text-xl mb-1">Horario</h4>
-                    <p className="text-muted-foreground">Lunes a Viernes: 9:00 - 20:00<br/>Sábados: 9:00 - 14:00</p>
+                    <p className="text-muted-foreground">Lun, Mar, Jue, Vie: 9:00 - 20:00<br/>Sábados: 8:00 - 15:00</p>
                   </div>
                 </div>
               </div>
