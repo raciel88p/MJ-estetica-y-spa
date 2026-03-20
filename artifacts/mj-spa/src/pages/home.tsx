@@ -366,7 +366,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h4 className="font-serif font-bold text-xl mb-1">Llámanos</h4>
-                    <p className="text-muted-foreground">+34 900 000 000<br/>Para reservas o consultas</p>
+                    <p className="text-muted-foreground">+506 86907757<br/>Para reservas o consultas</p>
                   </div>
                 </div>
 
