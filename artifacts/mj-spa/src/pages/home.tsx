@@ -19,14 +19,6 @@ import { useToast } from "@/hooks/use-toast";
 
 // --- DATA ---
 const servicesData = {
-  "Fisioterapia": [
-    { title: "Fisioterapia Manual", desc: "Tratamiento de dolores musculares y articulares mediante técnicas manuales.", icon: Activity },
-    { title: "Electroestimulación", desc: "Técnica para aliviar el dolor y mejorar la función muscular.", icon: Zap },
-    { title: "Vendaje Funcional", desc: "Técnica de vendaje para soporte y recuperación.", icon: Heart },
-    { title: "Masaje Terapéutico", desc: "Masaje especializado para alivio de tensiones y dolores.", icon: Waves },
-    { title: "Punción Seca", desc: "Tratamiento de puntos gatillo mediante agujas finas.", icon: Activity },
-    { title: "Drenaje Linfático", desc: "Técnica de masaje para estimular el sistema linfático.", icon: Droplets },
-  ],
   "Estética Facial": [
     { title: "Limpieza Facial Profunda", desc: "Limpieza y purificación profunda de la piel.", icon: Sparkles },
     { title: "Higiene Facial Completa", desc: "Tratamiento completo de higiene y cuidado facial.", icon: Smile },
@@ -85,7 +77,7 @@ const staggerContainer = {
 };
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<keyof typeof servicesData>("Fisioterapia");
+  const [activeTab, setActiveTab] = useState<keyof typeof servicesData>("Estética Facial");
   const { toast } = useToast();
 
   const form = useForm<ContactFormValues>({
@@ -134,8 +126,8 @@ export default function Home() {
               <span className="text-secondary italic font-light">nuestra prioridad</span>
             </h1>
             <p className="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto text-white/90 drop-shadow-md">
-              Descubre un oasis de paz en Málaga. Especialistas en fisioterapia, 
-              estética avanzada y tratamientos spa para revitalizar tu cuerpo y alma.
+              Descubre un oasis de paz en Turrialba. Especialistas en estética avanzada, 
+              tratamientos médicos y spa para revitalizar tu cuerpo y alma.
             </p>
             <Button 
               size="lg" 
@@ -233,7 +225,7 @@ export default function Home() {
                 profesionales altamente cualificados.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
-                Nuestro equipo de expertos en fisioterapia y estética trabaja de manera integral para ofrecerte 
+                Nuestro equipo de expertos en estética y bienestar trabaja de manera integral para ofrecerte 
                 tratamientos personalizados que responden a tus necesidades reales, utilizando tecnología de 
                 vanguardia en un ambiente diseñado para desconectar.
               </p>
@@ -462,10 +454,6 @@ export default function Home() {
                     className={`w-full bg-white border border-border/50 py-4 px-4 rounded-xl text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all ${form.formState.errors.service ? 'border-destructive' : ''}`}
                   >
                     <option value="">Selecciona un servicio</option>
-                    <optgroup label="Fisioterapia">
-                      <option value="fisioterapia-manual">Fisioterapia Manual</option>
-                      <option value="masaje-terapeutico">Masaje Terapéutico</option>
-                    </optgroup>
                     <optgroup label="Estética">
                       <option value="limpieza-facial">Limpieza Facial</option>
                       <option value="tratamiento-corporal">Tratamiento Corporal</option>
