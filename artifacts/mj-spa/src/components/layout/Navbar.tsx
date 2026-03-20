@@ -88,9 +88,9 @@ export function Navbar() {
             <Link href="/nosotros" className={`${linkBase} ${textClass}`}>
               Nosotros
             </Link>
-            <a href="/#testimonios" className={`${linkBase} ${textClass}`}>
+            <Link href="/testimonios" className={`${linkBase} ${textClass}`}>
               Testimonios
-            </a>
+            </Link>
 
             {/* Services Dropdown */}
             <div ref={dropdownRef} className="relative">
@@ -245,13 +245,13 @@ export function Navbar() {
               >
                 Nosotros
               </Link>
-              <a
-                href="/#testimonios"
-                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif"
+              <Link
+                href="/testimonios"
+                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Testimonios
-              </a>
+              </Link>
 
               {/* Mobile Services Accordion */}
               <div className="border-b border-muted">

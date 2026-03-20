@@ -8,6 +8,7 @@ import ServicePage from "@/pages/ServicePage";
 import PoliticaDatos from "@/pages/PoliticaDatos";
 import MedicosEsteticos from "@/pages/MedicosEsteticos";
 import Nosotros from "@/pages/Nosotros";
+import Testimonios from "@/pages/Testimonios";
 import { servicePages } from "@/data/services";
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ function Router() {
       <Route path="/politica-de-datos" component={PoliticaDatos} />
       <Route path="/medicos-esteticos" component={MedicosEsteticos} />
       <Route path="/nosotros" component={Nosotros} />
+      <Route path="/testimonios" component={Testimonios} />
       {servicePages.map((service) => (
         <Route
           key={service.slug}
