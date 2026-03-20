@@ -46,12 +46,12 @@ const servicesData = {
 };
 
 const testimonials = [
-  { name: "María García", text: "Llevo años viniendo a MJ Fisio y nunca me ha decepcionado. Los masajes son increíbles y el trato es excelente. 100% recomendado." },
-  { name: "Laura Martínez", text: "La fisioterapia me ha ayudado muchísimo con mi dolor de espalda. Las chicas son muy profesionales y amables. Me encanta este centro." },
-  { name: "Ana Rodríguez", text: "Vine por primera vez para un tratamiento facial y quedé encantada. La limpieza facial fue espectacular. Ya tengo la siguiente cita reservada." },
-  { name: "Carmen López", text: "El circuito spa es una experiencia de lujo. Todo está muy cuidado y el ambiente es muy relajante. Perfecto para desconectar." },
-  { name: "Isabel Sánchez", text: "Hice el tratamiento de cavitación y los resultados son visibles desde la primera sesión. Muy recomendable y el precio es muy razonable." },
-  { name: "Patricia Fernández", text: "El mejor centro de estética que he conocido. Profesionales, amables y con resultados reales. No cambio este sitio por nada." },
+  { name: "Kattya Brenes", text: "Es un privilegio formar parte de la Familia MJ. Agradezco infinitamente por abrirme las puertas para ser atendida por un equipo de personas profesionales y capacitadas. Me siento muy afortunada de recibir sus servicios." },
+  { name: "Carlos Brenes", text: "Desde que empecé con MJ estética he sentido como mi autoestima ha crecido, en un mes rebajé varios centímetros en mi abdomen y papada. La atención del lugar lo hace a uno sentirse seguro. Los resultados en poco tiempo me hacen sentir agradecido." },
+  { name: "Laura Hernández González", text: "Esos rollitos tan molestos que no podía quitar por más gimnasio, los logré eliminar gracias al tratamiento en MJ estética. Sin lugar a dudas un lugar para chinearte y de paso verte mejor." },
+  { name: "Andrea Salas Portuguez", text: "La atención excelente tanto de Adri como de María, los servicios de primera calidad, mucho orden, puntualidad y precios muy asequibles." },
+  { name: "Marlene Fernández Mora", text: "El servicio brindado y la atención son excelentes, en particular el profesionalismo que demuestran. Los tratamientos complementados con buena alimentación y ejercicio se notan los cambios. Sí los recomendaría a ojos cerrados." },
+  { name: "Catalina Aguilar Madriz", text: "Me he realizado varios tratamientos con MJ teniendo súper buenos resultados, por eso sigo comprando paquetes y recomendando a mis amig@s a que también vayan." },
 ];
 
 // --- SCHEMAS ---
