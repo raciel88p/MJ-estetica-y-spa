@@ -38,7 +38,7 @@ const values = [
 
 const team = [
   {
-    name: "María José",
+    name: "María Jeanneth",
     role: "Directora & Especialista en Estética",
     description:
       "Fundadora de MJ Fisio Estética y Spa, con más de 3 años de experiencia en tratamientos estéticos y bienestar. Su pasión por el cuidado personal la llevó a crear un espacio de referencia en Turrialba.",
