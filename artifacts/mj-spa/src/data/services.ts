@@ -32,6 +32,7 @@ export const tratamientosCorporalesLinks = [
   { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
   { name: "Drenaje Linfático", href: "/servicios/drenaje-linfatico" },
   { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
+  { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
 ];
 
 export const tratamientosFacialesLinks = [
@@ -1376,6 +1377,75 @@ export const servicePages: ServicePageData[] = [
         question: "¿Hay tiempo de recuperación?",
         answer:
           "Pueden aparecer pequeñas ronchas o enrojecimiento en los puntos de infiltración que desaparecen en pocas horas. No impide realizar las actividades habituales.",
+      },
+    ],
+  },
+
+  // ── IRON BEAUTY FITNESS ────────────────────────────
+  {
+    slug: "iron-beauty-fitness",
+    name: "Iron Beauty Fitness",
+    tagline: "Estética especializada para atletas del mundo fitness",
+    heroDescription:
+      "En MJ Fisio Estética y Spa entendemos las necesidades específicas de los atletas de fitness. Nuestros tratamientos están diseñados para complementar tu arduo trabajo en el gimnasio, ayudándote a mejorar tu rendimiento y tu apariencia física para competencias — desde Body Fitness hasta Clásico Físico y Muscular.",
+    benefits: [
+      "Protocolos diseñados exclusivamente para atletas de competencia",
+      "Resultados visibles en la definición muscular y textura de piel",
+      "Tratamientos que complementan tu entrenamiento y dieta",
+      "Atención personalizada según tu categoría de competencia",
+      "Técnicas que aceleran la recuperación muscular post-entrenamiento",
+      "Sin tiempo de recuperación — sigue entrenando al día siguiente",
+    ],
+    items: [
+      {
+        title: "Vendas Frías",
+        description:
+          "Aplicación de vendas con activos reductores, drenantes y tentativos en frío que potencian la pérdida de medidas, reducen la retención de líquidos y marcan la musculatura. Ideal en la fase de definición previa a competencia.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Silicio Orgánico",
+        description:
+          "Tratamiento de aplicación corporal con silicio orgánico que mejora la calidad y elasticidad de la piel, favorece la síntesis de colágeno y da ese acabado de piel tensa y luminosa tan valorado en el escenario.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Tensado Corporal",
+        description:
+          "Protocolo de radiofrecuencia y ultrasonidos focalizado en zonas musculares clave para reafirmar la piel, mejorar la tonicidad y resaltar la definición muscular lograda con el entrenamiento.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Electro-Estimulación Muscular",
+        description:
+          "Corrientes de electro-estimulación aplicadas sobre grupos musculares específicos para potenciar la contracción, mejorar el tono, acelerar la recuperación y complementar el trabajo en el gimnasio.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿En qué momento del proceso de preparación debo empezar?",
+        answer:
+          "Lo ideal es iniciar los tratamientos entre 8 y 12 semanas antes de la competencia, en la fase de definición. Sin embargo, los tratamientos de recuperación y electroestimulación pueden aplicarse durante todo el proceso.",
+      },
+      {
+        question: "¿Puedo entrenar el mismo día del tratamiento?",
+        answer:
+          "Sí. La mayoría de los tratamientos no requieren tiempo de recuperación. En el caso de las vendas frías recomendamos esperar al menos 4 horas antes de una sesión intensa.",
+      },
+      {
+        question: "¿Estos tratamientos son solo para competidores profesionales?",
+        answer:
+          "No. Están diseñados tanto para atletas profesionales como para aficionados al fitness que quieran mejorar su apariencia y sus resultados estéticos. Adaptamos el protocolo a tu nivel y objetivos.",
+      },
+      {
+        question: "¿Cuántas sesiones recomienda para preparar una competencia?",
+        answer:
+          "Generalmente entre 8 y 12 sesiones distribuidas en las semanas previas al evento. Diseñamos un calendario personalizado según la fecha de tu competencia y la categoría en la que participas.",
       },
     ],
   },

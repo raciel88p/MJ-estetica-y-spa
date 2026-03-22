@@ -32,6 +32,7 @@ const sections = [
       { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
       { name: "Drenaje Linfático", href: "/servicios/drenaje-linfatico" },
       { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
+      { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
     ],
   },
   {

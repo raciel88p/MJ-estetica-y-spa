@@ -30,6 +30,7 @@ const serviceCategoryMap: Record<string, { name: string; href: string }> = {
   "tensado-corporal":          { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "drenaje-linfatico":         { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "depilacion-laser":          { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
+  "iron-beauty-fitness":       { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "faciales":                  { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "adn-salmon":                { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "terapias-faciales":         { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
