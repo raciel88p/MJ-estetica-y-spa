@@ -10,6 +10,7 @@ export type ServicePageData = {
   name: string;
   tagline: string;
   heroDescription: string;
+  heroBg?: string;
   benefits: string[];
   items: ServiceItem[];
   faq?: { question: string; answer: string }[];
@@ -1388,6 +1389,7 @@ export const servicePages: ServicePageData[] = [
     tagline: "Estética especializada para atletas del mundo fitness",
     heroDescription:
       "En MJ Fisio Estética y Spa entendemos las necesidades específicas de los atletas de fitness. Nuestros tratamientos están diseñados para complementar tu arduo trabajo en el gimnasio, ayudándote a mejorar tu rendimiento y tu apariencia física para competencias — desde Body Fitness hasta Clásico Físico y Muscular.",
+    heroBg: "iron-beauty-fitness-bg.png",
     benefits: [
       "Protocolos diseñados exclusivamente para atletas de competencia",
       "Resultados visibles en la definición muscular y textura de piel",

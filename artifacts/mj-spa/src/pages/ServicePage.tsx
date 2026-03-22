@@ -100,7 +100,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       <section className="relative min-h-[75vh] flex items-end pb-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${BASE}images/hero-bg.png)` }}
+          style={{ backgroundImage: `url(${BASE}images/${service.heroBg ?? "hero-bg.png"})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/90" />
 
