@@ -133,7 +133,7 @@ export function Footer() {
           <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. Todos los derechos reservados.</p>
           <div className="flex gap-4">
             <Link href="/politica-de-datos" className="hover:text-white">Política de Privacidad</Link>
-            <a href="#" className="hover:text-white">Términos y Condiciones</a>
+            <Link href="/mapa-del-sitio" className="hover:text-white">Mapa del Sitio</Link>
           </div>
         </div>
       </div>
