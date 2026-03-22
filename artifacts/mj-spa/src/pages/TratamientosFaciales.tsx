@@ -56,7 +56,7 @@ export default function TratamientosFaciales() {
             Tratamientos<br />
             <span className="italic font-light text-white/50">Faciales</span>
           </h1>
-          <p className="text-[#7FBCD2]/70 text-lg leading-relaxed max-w-xl">
+          <p className="text-white/75 text-lg leading-relaxed max-w-xl">
             Desde limpiezas profundas hasta tratamientos con láser y radiofrecuencia — cuida tu piel con lo mejor en tecnología estética y cosmetología avanzada.
           </p>
 
@@ -64,7 +64,7 @@ export default function TratamientosFaciales() {
             {highlights.map((h) => (
               <div key={h.n}>
                 <p className="text-3xl font-serif font-bold text-white">{h.n}</p>
-                <p className="text-[#7FBCD2]/60 text-sm mt-1">{h.label}</p>
+                <p className="text-white/65 text-sm mt-1">{h.label}</p>
               </div>
             ))}
           </div>
@@ -119,7 +119,7 @@ export default function TratamientosFaciales() {
                 <h3 className="text-xl font-serif font-bold text-stone-900 mt-3 mb-3 group-hover:text-primary transition-colors">
                   {service.name}
                 </h3>
-                <p className="text-[#7FBCD2]/60 text-sm leading-relaxed mb-6">
+                <p className="text-white/65 text-sm leading-relaxed mb-6">
                   {service.tagline}
                 </p>
                 <Link href={service.href}>
@@ -146,7 +146,7 @@ export default function TratamientosFaciales() {
                 <div className="shrink-0 mt-0.5">{t.icon}</div>
                 <div>
                   <p className="font-serif font-bold text-stone-900 mb-1">{t.title}</p>
-                  <p className="text-[#7FBCD2]/60 text-sm leading-relaxed">{t.desc}</p>
+                  <p className="text-white/65 text-sm leading-relaxed">{t.desc}</p>
                 </div>
               </div>
             ))}
@@ -164,7 +164,7 @@ export default function TratamientosFaciales() {
               <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs font-bold">A</div>
               <div>
                 <p className="text-stone-900 text-sm font-semibold">Andrea P.</p>
-                <p className="text-[#7FBCD2]/70 text-xs">Clienta — Turrialba</p>
+                <p className="text-white/75 text-xs">Clienta — Turrialba</p>
               </div>
             </footer>
           </motion.blockquote>
@@ -180,7 +180,7 @@ export default function TratamientosFaciales() {
               Tu piel merece lo mejor<br />
               <span className="italic font-light text-white/50">empieza hoy</span>
             </h2>
-            <p className="text-[#7FBCD2]/70 text-sm mb-10 max-w-md mx-auto">
+            <p className="text-white/75 text-sm mb-10 max-w-md mx-auto">
               En Turrialba, Ciudadela Jorge de Bravo. Escríbenos y te asesoramos sin compromiso.
             </p>
             <a

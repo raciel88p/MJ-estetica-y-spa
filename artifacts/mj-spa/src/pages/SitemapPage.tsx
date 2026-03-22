@@ -96,7 +96,7 @@ export default function SitemapPage() {
             Mapa del<br />
             <span className="italic font-light text-white/40">Sitio</span>
           </h1>
-          <p className="text-[#7FBCD2]/70 text-lg leading-relaxed max-w-xl mt-6">
+          <p className="text-white/75 text-lg leading-relaxed max-w-xl mt-6">
             Todas las páginas y tratamientos disponibles en MJ Fisio Estética y Spa.
           </p>
         </div>
