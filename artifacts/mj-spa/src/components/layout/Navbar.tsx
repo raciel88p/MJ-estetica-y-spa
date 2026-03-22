@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from "react";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
@@ -28,25 +28,38 @@ const serviceCategoryLinks = [
   },
 ];
 
-const navLinks = [
-  { name: "Inicio", href: "/#inicio", isAnchor: true },
-  { name: "Nosotros", href: "/#nosotros", isAnchor: true },
-  { name: "Testimonios", href: "/#testimonios", isAnchor: true },
-  { name: "Contacto", href: "/#contacto", isAnchor: true },
-];
+type DropdownKey = "nosotros" | "servicios" | "medicos" | null;
+
+function useHoverDropdown(key: DropdownKey, openDropdown: DropdownKey, setOpenDropdown: (k: DropdownKey) => void) {
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+
+  const open = useCallback(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setOpenDropdown(key);
+  }, [key, setOpenDropdown]);
+
+  const scheduleClose = useCallback(() => {
+    timeoutRef.current = setTimeout(() => {
+      setOpenDropdown((prev: DropdownKey) => (prev === key ? null : prev));
+    }, 120);
+  }, [key, setOpenDropdown]);
+
+  const cancelClose = useCallback(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+  }, []);
+
+  useEffect(() => () => { if (timeoutRef.current) clearTimeout(timeoutRef.current); }, []);
+
+  return { open, scheduleClose, cancelClose, isOpen: openDropdown === key };
+}
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
-  const [isMedicosOpen, setIsMedicosOpen] = useState(false);
   const [isMobileMedicosOpen, setIsMobileMedicosOpen] = useState(false);
-  const [isNosotrosOpen, setIsNosotrosOpen] = useState(false);
   const [isMobileNosotrosOpen, setIsMobileNosotrosOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  const medicosDropdownRef = useRef<HTMLDivElement>(null);
-  const nosotrosDropdownRef = useRef<HTMLDivElement>(null);
+  const [openDropdown, setOpenDropdown] = useState<DropdownKey>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -55,24 +68,23 @@ export function Navbar() {
   }, []);
 
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-        setIsServicesOpen(false);
-      }
-      if (medicosDropdownRef.current && !medicosDropdownRef.current.contains(e.target as Node)) {
-        setIsMedicosOpen(false);
-      }
-      if (nosotrosDropdownRef.current && !nosotrosDropdownRef.current.contains(e.target as Node)) {
-        setIsNosotrosOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    const handleClick = () => setOpenDropdown(null);
+    document.addEventListener("click", handleClick);
+    return () => document.removeEventListener("click", handleClick);
   }, []);
 
+  const nosotros = useHoverDropdown("nosotros", openDropdown, setOpenDropdown as any);
+  const servicios = useHoverDropdown("servicios", openDropdown, setOpenDropdown as any);
+  const medicos = useHoverDropdown("medicos", openDropdown, setOpenDropdown as any);
+
   const textClass = isScrolled ? "text-stone-700" : "text-white/90";
-  const hoverClass = "hover:text-primary transition-colors";
-  const linkBase = `text-sm uppercase tracking-widest font-medium ${hoverClass}`;
+  const linkBase = `text-sm uppercase tracking-widest font-medium hover:text-primary transition-colors`;
+
+  const dropdownPanelVariants = {
+    initial: { opacity: 0, y: 8, scale: 0.97 },
+    animate: { opacity: 1, y: 0, scale: 1 },
+    exit: { opacity: 0, y: 8, scale: 0.97 },
+  };
 
   return (
     <header
@@ -98,108 +110,113 @@ export function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {/* Nosotros Dropdown */}
-            <div ref={nosotrosDropdownRef} className="relative">
+
+            {/* ── Nosotros Dropdown ── */}
+            <div
+              className="relative"
+              onMouseEnter={() => { nosotros.cancelClose(); nosotros.open(); }}
+              onMouseLeave={nosotros.scheduleClose}
+            >
               <button
                 className={`flex items-center gap-1 ${linkBase} ${textClass}`}
-                onMouseEnter={() => setIsNosotrosOpen(true)}
-                onClick={() => setIsNosotrosOpen(!isNosotrosOpen)}
+                onClick={(e) => { e.stopPropagation(); setOpenDropdown(nosotros.isOpen ? null : "nosotros"); }}
               >
                 Nosotros
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isNosotrosOpen ? "rotate-180" : ""}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${nosotros.isOpen ? "rotate-180" : ""}`} />
               </button>
               <AnimatePresence>
-                {isNosotrosOpen && (
+                {nosotros.isOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 8, scale: 0.97 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 8, scale: 0.97 }}
-                    transition={{ duration: 0.18, ease: "easeOut" }}
-                    onMouseLeave={() => setIsNosotrosOpen(false)}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-52 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden z-50"
+                    {...dropdownPanelVariants}
+                    transition={{ duration: 0.16, ease: "easeOut" }}
+                    onMouseEnter={nosotros.cancelClose}
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >
-                    <div className="px-3 pt-4 pb-3 flex flex-col gap-1">
-                      <Link
-                        href="/nosotros"
-                        className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
-                        onClick={() => setIsNosotrosOpen(false)}
-                      >
-                        Sobre Nosotros
-                      </Link>
-                      <Link
-                        href="/buzon-sugerencias"
-                        className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
-                        onClick={() => setIsNosotrosOpen(false)}
-                      >
-                        Buzón de Sugerencias
-                      </Link>
+                    <div className="w-52 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
+                      <div className="px-3 pt-4 pb-3 flex flex-col gap-1">
+                        <Link
+                          href="/nosotros"
+                          className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          Sobre Nosotros
+                        </Link>
+                        <Link
+                          href="/buzon-sugerencias"
+                          className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          Buzón de Sugerencias
+                        </Link>
+                      </div>
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
+
             <Link href="/testimonios" className={`${linkBase} ${textClass}`}>
               Testimonios
             </Link>
 
-            {/* Services Dropdown */}
-            <div ref={dropdownRef} className="relative">
+            {/* ── Servicios Dropdown ── */}
+            <div
+              className="relative"
+              onMouseEnter={() => { servicios.cancelClose(); servicios.open(); }}
+              onMouseLeave={servicios.scheduleClose}
+            >
               <button
                 className={`flex items-center gap-1 ${linkBase} ${textClass}`}
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
+                onClick={(e) => { e.stopPropagation(); setOpenDropdown(servicios.isOpen ? null : "servicios"); }}
               >
                 Servicios
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? "rotate-180" : ""}`}
-                />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicios.isOpen ? "rotate-180" : ""}`} />
               </button>
-
               <AnimatePresence>
-                {isServicesOpen && (
+                {servicios.isOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 8, scale: 0.97 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 8, scale: 0.97 }}
-                    transition={{ duration: 0.18, ease: "easeOut" }}
-                    onMouseLeave={() => setIsServicesOpen(false)}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[580px] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden z-50"
+                    {...dropdownPanelVariants}
+                    transition={{ duration: 0.16, ease: "easeOut" }}
+                    onMouseEnter={servicios.cancelClose}
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >
-                    <div className="px-5 pt-4 pb-3">
-                      <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-4">
-                        Nuestros Servicios
-                      </p>
-                      <div className="grid grid-cols-3 gap-x-6 gap-y-0">
-                        {serviceCategoryLinks.map((cat) => (
-                          <div key={cat.category}>
-                            <Link
-                              href={cat.categoryHref}
-                              className="block px-3 py-1.5 text-xs font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded-lg mb-1 transition-colors"
-                              onClick={() => setIsServicesOpen(false)}
-                            >
-                              {cat.category} →
-                            </Link>
-                            {cat.links.map((link) => (
+                    <div className="w-[580px] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
+                      <div className="px-5 pt-4 pb-3">
+                        <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-4">
+                          Nuestros Servicios
+                        </p>
+                        <div className="grid grid-cols-3 gap-x-6 gap-y-0">
+                          {serviceCategoryLinks.map((cat) => (
+                            <div key={cat.category}>
                               <Link
-                                key={link.name}
-                                href={link.href}
-                                className="block px-3 py-1.5 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
-                                onClick={() => setIsServicesOpen(false)}
+                                href={cat.categoryHref}
+                                className="block px-3 py-1.5 text-xs font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded-lg mb-1 transition-colors"
+                                onClick={() => setOpenDropdown(null)}
                               >
-                                {link.name}
+                                {cat.category} →
                               </Link>
-                            ))}
-                          </div>
-                        ))}
-                      </div>
-                      <div className="border-t border-border mt-3 pt-3 pb-1">
-                        <a
-                          href="/#servicios"
-                          className="block px-3 py-1.5 text-sm text-primary font-semibold hover:bg-secondary/40 transition-colors rounded-lg"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          Ver todos los servicios →
-                        </a>
+                              {cat.links.map((link) => (
+                                <Link
+                                  key={link.name}
+                                  href={link.href}
+                                  className="block px-3 py-1.5 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
+                                  onClick={() => setOpenDropdown(null)}
+                                >
+                                  {link.name}
+                                </Link>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                        <div className="border-t border-border mt-3 pt-3 pb-1">
+                          <a
+                            href="/#servicios"
+                            className="block px-3 py-1.5 text-sm text-primary font-semibold hover:bg-secondary/40 transition-colors rounded-lg"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            Ver todos los servicios →
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -207,52 +224,53 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            {/* Médicos y Estéticos Dropdown */}
-            <div ref={medicosDropdownRef} className="relative">
+            {/* ── Médicos y Estéticos Dropdown ── */}
+            <div
+              className="relative"
+              onMouseEnter={() => { medicos.cancelClose(); medicos.open(); }}
+              onMouseLeave={medicos.scheduleClose}
+            >
               <button
                 className={`flex items-center gap-1 ${linkBase} ${textClass}`}
-                onMouseEnter={() => setIsMedicosOpen(true)}
-                onClick={() => setIsMedicosOpen(!isMedicosOpen)}
+                onClick={(e) => { e.stopPropagation(); setOpenDropdown(medicos.isOpen ? null : "medicos"); }}
               >
                 Médicos y Estéticos
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-200 ${isMedicosOpen ? "rotate-180" : ""}`}
-                />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${medicos.isOpen ? "rotate-180" : ""}`} />
               </button>
               <AnimatePresence>
-                {isMedicosOpen && (
+                {medicos.isOpen && (
                   <motion.div
-                    initial={{ opacity: 0, y: 8, scale: 0.97 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 8, scale: 0.97 }}
-                    transition={{ duration: 0.18, ease: "easeOut" }}
-                    onMouseLeave={() => setIsMedicosOpen(false)}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-56 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden z-50"
+                    {...dropdownPanelVariants}
+                    transition={{ duration: 0.16, ease: "easeOut" }}
+                    onMouseEnter={medicos.cancelClose}
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >
-                    <div className="px-3 pt-4 pb-3">
-                      <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-3 px-2">
-                        Especialidades
-                      </p>
-                      <div className="flex flex-col gap-1">
-                        {medicoEsteticosLinks.map((link) => (
+                    <div className="w-56 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
+                      <div className="px-3 pt-4 pb-3">
+                        <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-3 px-2">
+                          Especialidades
+                        </p>
+                        <div className="flex flex-col gap-1">
+                          {medicoEsteticosLinks.map((link) => (
+                            <Link
+                              key={link.name}
+                              href={link.href}
+                              className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
+                              onClick={() => setOpenDropdown(null)}
+                            >
+                              {link.name}
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="border-t border-border mt-2 pt-2 pb-1">
                           <Link
-                            key={link.name}
-                            href={link.href}
-                            className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
-                            onClick={() => setIsMedicosOpen(false)}
+                            href="/medicos-esteticos"
+                            className="block px-3 py-1.5 text-sm text-primary font-semibold hover:bg-secondary/40 transition-colors rounded-lg"
+                            onClick={() => setOpenDropdown(null)}
                           >
-                            {link.name}
+                            Ver todos →
                           </Link>
-                        ))}
-                      </div>
-                      <div className="border-t border-border mt-2 pt-2 pb-1">
-                        <Link
-                          href="/medicos-esteticos"
-                          className="block px-3 py-1.5 text-sm text-primary font-semibold hover:bg-secondary/40 transition-colors rounded-lg"
-                          onClick={() => setIsMedicosOpen(false)}
-                        >
-                          Ver todos →
-                        </Link>
+                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -335,6 +353,7 @@ export function Navbar() {
                   )}
                 </AnimatePresence>
               </div>
+
               <Link
                 href="/testimonios"
                 className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
@@ -350,9 +369,7 @@ export function Navbar() {
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
                 >
                   Servicios
-                  <ChevronDown
-                    className={`w-5 h-5 transition-transform ${isMobileServicesOpen ? "rotate-180" : ""}`}
-                  />
+                  <ChevronDown className={`w-5 h-5 transition-transform ${isMobileServicesOpen ? "rotate-180" : ""}`} />
                 </button>
                 <AnimatePresence>
                   {isMobileServicesOpen && (
@@ -397,9 +414,7 @@ export function Navbar() {
                   onClick={() => setIsMobileMedicosOpen(!isMobileMedicosOpen)}
                 >
                   Médicos y Estéticos
-                  <ChevronDown
-                    className={`w-5 h-5 transition-transform ${isMobileMedicosOpen ? "rotate-180" : ""}`}
-                  />
+                  <ChevronDown className={`w-5 h-5 transition-transform ${isMobileMedicosOpen ? "rotate-180" : ""}`} />
                 </button>
                 <AnimatePresence>
                   {isMobileMedicosOpen && (
@@ -415,10 +430,7 @@ export function Navbar() {
                             key={link.name}
                             href={link.href}
                             className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
-                            onClick={() => {
-                              setIsMobileMenuOpen(false);
-                              setIsMobileMedicosOpen(false);
-                            }}
+                            onClick={() => { setIsMobileMenuOpen(false); setIsMobileMedicosOpen(false); }}
                           >
                             {link.name}
                           </Link>
@@ -436,6 +448,7 @@ export function Navbar() {
               >
                 Contacto
               </a>
+
               <Button className="mt-4 w-full rounded-full bg-primary text-white hover:bg-primary/90" asChild>
                 <a id="cta-nav-reserva-mobile" href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
                   Reserva tu cita
