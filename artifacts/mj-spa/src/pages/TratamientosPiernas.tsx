@@ -39,7 +39,7 @@ export default function TratamientosPiernas() {
       <FloatingWhatsApp />
 
       {/* Hero */}
-      <section className="relative pt-36 pb-24 bg-[#0c3e5a] overflow-hidden">
+      <section className="relative pt-36 pb-24 bg-[#071e2e] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/spa-texture.png)` }}
@@ -202,7 +202,7 @@ export default function TratamientosPiernas() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-[#0c3e5a]">
+      <section className="py-20 bg-[#071e2e]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
             <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">PIDE TU CITA</p>

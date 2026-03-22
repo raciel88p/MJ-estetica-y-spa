@@ -82,7 +82,7 @@ export default function SitemapPage() {
       <Navbar />
       <FloatingWhatsApp />
 
-      <section className="relative pt-36 pb-20 bg-[#0c3e5a] overflow-hidden">
+      <section className="relative pt-36 pb-20 bg-[#071e2e] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-15"
           style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/hero-bg.png)` }}

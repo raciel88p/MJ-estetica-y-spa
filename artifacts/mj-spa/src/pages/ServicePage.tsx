@@ -148,7 +148,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       </section>
 
       {/* ── TRUST BAR ────────────────────────────────── */}
-      <section className="bg-[#08293c] py-5 border-b border-white/5">
+      <section className="bg-[#040f19] py-5 border-b border-white/5">
         <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { icon: <Star className="w-4 h-4 fill-primary text-primary" />, text: "5★ en Google" },
@@ -309,7 +309,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
             {/* Inline WhatsApp after FAQ */}
             <motion.div
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-              className="mt-12 p-8 bg-[#08293c] flex flex-col md:flex-row items-center justify-between gap-6"
+              className="mt-12 p-8 bg-[#040f19] flex flex-col md:flex-row items-center justify-between gap-6"
             >
               <div>
                 <p className="text-white font-serif text-xl font-bold mb-1">¿Tienes más dudas?</p>

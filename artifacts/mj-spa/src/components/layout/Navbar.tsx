@@ -289,7 +289,7 @@ export function Navbar() {
             <Button
               className={`rounded-none px-6 py-2.5 text-sm font-semibold tracking-wide transition-all ${
                 isScrolled
-                  ? "bg-[#0c3e5a] text-white hover:bg-primary"
+                  ? "bg-[#071e2e] text-white hover:bg-primary"
                   : "bg-white text-stone-900 hover:bg-primary hover:text-white"
               }`}
               asChild

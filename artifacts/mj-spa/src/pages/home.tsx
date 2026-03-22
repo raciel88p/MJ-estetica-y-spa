@@ -343,7 +343,7 @@ export default function Home() {
       </section>
 
       {/* ══ SERVICE CATEGORIES ═════════════════════════ */}
-      <section id="servicios" className="bg-[#08293c]">
+      <section id="servicios" className="bg-[#040f19]">
         {/* Section header */}
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-20 md:pt-28 pb-14">
           <motion.div
@@ -447,7 +447,7 @@ export default function Home() {
       </section>
 
       {/* ══ FEATURED TREATMENTS LIST ═══════════════════ */}
-      <section className="bg-[#08293c]">
+      <section className="bg-[#040f19]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-20 md:py-28">
           {/* Header */}
           <motion.div
@@ -582,7 +582,7 @@ export default function Home() {
         className="relative py-36 overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: `url(${BASE}images/spa-texture.png)` }}
       >
-        <div className="absolute inset-0 bg-[#0c3e5a]/90" />
+        <div className="absolute inset-0 bg-[#071e2e]/92" />
         {/* Decorative lines */}
         <div className="absolute left-0 top-0 bottom-0 w-px bg-white/5 ml-16 hidden lg:block" />
         <div className="absolute right-0 top-0 bottom-0 w-px bg-white/5 mr-16 hidden lg:block" />
@@ -642,7 +642,7 @@ export default function Home() {
           {/* Featured testimonial */}
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-            className="relative bg-[#08293c] p-10 md:p-14 mb-1 overflow-hidden"
+            className="relative bg-[#040f19] p-10 md:p-14 mb-1 overflow-hidden"
           >
             {/* Brand accent stripe */}
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary" />
@@ -700,7 +700,7 @@ export default function Home() {
       </section>
 
       {/* ══ LOCATION + GOOGLE MAPS ═════════════════════ */}
-      <section id="ubicacion" className="bg-[#0c3e5a]">
+      <section id="ubicacion" className="bg-[#071e2e]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2">
 
@@ -953,7 +953,7 @@ export default function Home() {
                   <Button
                     id="cta-contacto-enviar"
                     type="submit"
-                    className="w-full rounded-none bg-[#0c3e5a] hover:bg-primary text-white text-xs font-bold tracking-[0.2em] uppercase py-5 transition-colors flex items-center justify-center gap-2"
+                    className="w-full rounded-none bg-[#071e2e] hover:bg-primary text-white text-xs font-bold tracking-[0.2em] uppercase py-5 transition-colors flex items-center justify-center gap-2"
                   >
                     <MessageCircle className="w-4 h-4" />
                     Enviar mensaje por WhatsApp

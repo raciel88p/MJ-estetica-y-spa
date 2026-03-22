@@ -84,7 +84,7 @@ export default function Paquetes() {
       <FloatingWhatsApp />
 
       {/* Hero */}
-      <section className="relative pt-36 pb-24 bg-[#0c3e5a] overflow-hidden">
+      <section className="relative pt-36 pb-24 bg-[#071e2e] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/hero-bg.png)` }}
@@ -180,7 +180,7 @@ export default function Paquetes() {
                       className={`inline-flex items-center justify-center gap-2 w-full py-3 text-sm font-semibold tracking-wide transition-colors ${
                         pkg.highlight
                           ? "bg-primary text-white hover:bg-primary/90"
-                          : "bg-[#0c3e5a] text-white hover:bg-primary"
+                          : "bg-[#071e2e] text-white hover:bg-primary"
                       }`}
                     >
                       <MessageCircle className="w-4 h-4" />
@@ -195,7 +195,7 @@ export default function Paquetes() {
       </section>
 
       {/* CTA urgency */}
-      <section className="py-16 bg-[#08293c]">
+      <section className="py-16 bg-[#040f19]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">VALORACIÓN GRATUITA</p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
