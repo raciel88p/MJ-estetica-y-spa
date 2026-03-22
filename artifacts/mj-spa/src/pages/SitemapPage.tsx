@@ -33,6 +33,12 @@ const sections = [
       { name: "Drenaje Linfático", href: "/servicios/drenaje-linfatico" },
       { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
       { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
+      { name: "Carboxiterapia", href: "/servicios/carboxiterapia" },
+      { name: "Levantamiento de Glúteo", href: "/servicios/levantamiento-gluteo" },
+      { name: "Levantamiento de Busto", href: "/servicios/levantamiento-busto" },
+      { name: "Vendas Frías", href: "/servicios/vendas-frias" },
+      { name: "Maderoterapia", href: "/servicios/maderoterapia" },
+      { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
     ],
   },
   {

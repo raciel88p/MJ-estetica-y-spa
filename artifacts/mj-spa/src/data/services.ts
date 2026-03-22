@@ -34,6 +34,12 @@ export const tratamientosCorporalesLinks = [
   { name: "Drenaje Linfático", href: "/servicios/drenaje-linfatico" },
   { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
   { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
+  { name: "Carboxiterapia", href: "/servicios/carboxiterapia" },
+  { name: "Levantamiento de Glúteo", href: "/servicios/levantamiento-gluteo" },
+  { name: "Levantamiento de Busto", href: "/servicios/levantamiento-busto" },
+  { name: "Vendas Frías", href: "/servicios/vendas-frias" },
+  { name: "Maderoterapia", href: "/servicios/maderoterapia" },
+  { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
 ];
 
 export const tratamientosFacialesLinks = [
@@ -1378,6 +1384,354 @@ export const servicePages: ServicePageData[] = [
         question: "¿Hay tiempo de recuperación?",
         answer:
           "Pueden aparecer pequeñas ronchas o enrojecimiento en los puntos de infiltración que desaparecen en pocas horas. No impide realizar las actividades habituales.",
+      },
+    ],
+  },
+
+  // ── CARBOXITERAPIA ─────────────────────────────────
+  {
+    slug: "carboxiterapia",
+    name: "Carboxiterapia",
+    tagline: "La potencia del CO₂ para renovar y rejuvenecer tu cuerpo",
+    heroBg: "carboxiterapia-bg.png",
+    heroDescription:
+      "La carboxiterapia es una de las técnicas más eficaces de la medicina estética moderna. Mediante microinyecciones de CO₂ medicinal, activamos la circulación sanguínea, estimulamos la producción de colágeno y eliminamos la celulitis y la grasa localizada. Resultados visibles, seguros y sin tiempo de recuperación.",
+    benefits: [
+      "Elimina la celulitis y la grasa localizada de forma eficaz",
+      "Estimula la producción natural de colágeno y elastina",
+      "Mejora la circulación y oxigenación del tejido",
+      "Reafirma y tensa la piel de forma duradera",
+      "Tratamiento corporal y facial: cara, cuello, abdomen, muslos",
+      "Sin anestesia general ni tiempo de inactividad",
+    ],
+    items: [
+      {
+        title: "Carboxiterapia Corporal",
+        description:
+          "Aplicación de CO₂ en zonas corporales (abdomen, flancos, muslos, glúteos) para reducir la celulitis, afinar la silueta y mejorar la textura de la piel. Protocolo intensivo con resultados progresivos y acumulativos.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Carboxiterapia Facial y de Cuello",
+        description:
+          "Inyecciones superficiales de CO₂ en rostro, cuello y escote para estimular la renovación celular, mejorar el tono y reducir ojeras y surcos. Efecto lifting inmediato y mejora progresiva de la calidad de la piel.",
+        duration: "35 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Carboxiterapia para Estrias",
+        description:
+          "Protocolo específico con microinyecciones de CO₂ en la zona de estrías para estimular la síntesis de colágeno, mejorar la vascularización y reducir la visibilidad de estrías tanto blancas como rojas.",
+        duration: "40 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Duele la carboxiterapia?",
+        answer:
+          "Las microinyecciones producen una ligera sensación de presión o calor que desaparece en segundos. La mayoría de las clientas lo describen como completamente tolerable. No se requiere anestesia.",
+      },
+      {
+        question: "¿Cuántas sesiones son necesarias?",
+        answer:
+          "Para resultados óptimos recomendamos entre 8 y 12 sesiones (2 por semana). Los cambios en circulación y textura de piel se notan desde las primeras 3-4 sesiones. Posteriormente se realizan sesiones de mantenimiento mensuales.",
+      },
+      {
+        question: "¿Tiene contraindicaciones?",
+        answer:
+          "No es apta para personas con enfermedades cardiovasculares graves, embarazo o epilepsia. En la valoración inicial revisamos tu historial para garantizar que el tratamiento sea seguro y adecuado para ti.",
+      },
+    ],
+  },
+
+  // ── LEVANTAMIENTO DE GLÚTEO ─────────────────────────
+  {
+    slug: "levantamiento-gluteo",
+    name: "Levantamiento de Glúteo",
+    tagline: "Glúteos firmes y elevados sin cirugía ni implantes",
+    heroBg: "levantamiento-gluteo-bg.png",
+    heroDescription:
+      "El levantamiento de glúteo no quirúrgico combina las técnicas más avanzadas — radiofrecuencia, electroestimulación y carboxiterapia — para elevar, tensar y dar volumen a los glúteos de forma completamente natural. Sin bisturí, sin recuperación y con resultados que se potencian sesión a sesión.",
+    benefits: [
+      "Elevación visible y duradera sin cirugía ni implantes",
+      "Protocolo que combina varias tecnologías para máximo resultado",
+      "Mejora el tono muscular y la firmeza de la piel simultáneamente",
+      "Sin tiempo de recuperación — vuelves a tus actividades el mismo día",
+      "Resultados naturales que respetan tu anatomía",
+      "Personalizado según tu objetivo: volumen, firmeza o definición",
+    ],
+    items: [
+      {
+        title: "Radiofrecuencia Glútea Focalizada",
+        description:
+          "Calor controlado en profundidad que estimula la síntesis de colágeno y reafirma el tejido cutáneo, consiguiendo un efecto lifting visible y una piel más tersa sobre los glúteos.",
+        duration: "50 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Electroestimulación Muscular Glútea",
+        description:
+          "Corrientes de alta frecuencia que generan contracciones musculares intensas equivalentes a cientos de abdominales. Tonifica, define y da volumen de forma segura y progresiva.",
+        duration: "40 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Protocolo Completo Lifting Glúteo",
+        description:
+          "Combinación de radiofrecuencia + electroestimulación + carboxiterapia en una sola sesión para maximizar el efecto lifting, la firmeza y el volumen. El protocolo estrella de nuestro servicio.",
+        duration: "75 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Se notan resultados desde la primera sesión?",
+        answer:
+          "Sí, especialmente con el protocolo completo. El efecto de lifting inmediato es apreciable al finalizar la sesión y mejora progresivamente con cada tratamiento.",
+      },
+      {
+        question: "¿Cuántas sesiones se recomiendan?",
+        answer:
+          "Recomendamos un ciclo inicial de 10 sesiones (2 por semana) para obtener resultados duraderos. Posteriormente, una sesión de mantenimiento mensual consolida los resultados.",
+      },
+      {
+        question: "¿Puedo combinar este tratamiento con ejercicio?",
+        answer:
+          "Sí, y de hecho se potencian mutuamente. Si entrenas glúteos, los resultados serán aún más marcados. Puedes hacer ejercicio el mismo día del tratamiento sin ningún problema.",
+      },
+    ],
+  },
+
+  // ── LEVANTAMIENTO DE BUSTO ──────────────────────────
+  {
+    slug: "levantamiento-busto",
+    name: "Levantamiento de Busto",
+    tagline: "Busto firme, elevado y reafirmado sin cirugía",
+    heroBg: "levantamiento-busto-bg.png",
+    heroDescription:
+      "Con el paso del tiempo, los cambios de peso o la lactancia, la piel del busto pierde firmeza y elasticidad. Nuestro protocolo no quirúrgico combina radiofrecuencia, ultrasonidos y técnicas de reafirmación avanzadas para devolver la firmeza, elevar el contorno y mejorar la calidad de la piel de forma visible y segura.",
+    benefits: [
+      "Lifting y reafirmación visibles sin cirugía ni implantes",
+      "Mejora la elasticidad y calidad de la piel del escote",
+      "Protocolo adaptado al grado de flacidez y objetivo de cada clienta",
+      "Completamente indoloro y sin tiempo de recuperación",
+      "También mejora la apariencia del escote y la piel de la zona pectoral",
+      "Apto tras lactancia y pérdida de peso",
+    ],
+    items: [
+      {
+        title: "Radiofrecuencia Reafirmante de Busto",
+        description:
+          "Calor profundo con radiofrecuencia que estimula el colágeno y reafirma el tejido conjuntivo del busto y el escote, logrando un efecto lifting progresivo y natural.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Ultrasonidos Focalizados",
+        description:
+          "Tecnología de ultrasonidos que actúa en las capas profundas de la piel para tensar el tejido de soporte del busto, corrigiendo la caída y mejorando el contorno.",
+        duration: "40 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Protocolo Reafirmación Completa Busto y Escote",
+        description:
+          "Sesión combinada de radiofrecuencia + ultrasonidos + masaje reafirmante para tratamiento integral del busto, escote y zona pectoral. Máximo resultado en una sola sesión.",
+        duration: "70 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Funciona si tengo mucha flacidez?",
+        answer:
+          "El tratamiento es eficaz en diferentes grados de flacidez. En casos avanzados, adaptamos el protocolo con más sesiones y combinación de técnicas para obtener el mejor resultado posible sin cirugía.",
+      },
+      {
+        question: "¿Es seguro tras la lactancia?",
+        answer:
+          "Sí, está especialmente indicado para recuperar la firmeza después de la lactancia. Recomendamos esperar al menos 3 meses tras el fin de la lactancia antes de comenzar.",
+      },
+      {
+        question: "¿Cuántas sesiones necesito?",
+        answer:
+          "Para resultados visibles y duraderos recomendamos entre 8 y 10 sesiones, 2 por semana. El mantenimiento mensual ayuda a sostener los resultados a largo plazo.",
+      },
+    ],
+  },
+
+  // ── VENDAS FRÍAS ────────────────────────────────────
+  {
+    slug: "vendas-frias",
+    name: "Vendas Frías",
+    tagline: "Pérdida de centímetros y detox corporal en una sola sesión",
+    heroBg: "vendas-frias-bg.png",
+    heroDescription:
+      "Las vendas frías son uno de los tratamientos más eficaces para perder centímetros, reducir la retención de líquidos y activar la circulación en una sola sesión. Con activos reductores, drenantes y antioxidantes aplicados en frío, el resultado es inmediato: silueta más fina, piel más tersa y sensación de ligereza desde el primer tratamiento.",
+    benefits: [
+      "Pérdida de centímetros medible desde la primera sesión",
+      "Reduce la retención de líquidos y la inflamación",
+      "Activa la circulación y el drenaje linfático",
+      "Mejora la textura y firmeza de la piel",
+      "Efecto detox que elimina toxinas acumuladas",
+      "Ideal para preparar el cuerpo para eventos especiales",
+    ],
+    items: [
+      {
+        title: "Vendas Frías Reductoras",
+        description:
+          "Aplicación de vendas impregnadas con activos reductores y drenantes en abdomen, cintura, flancos y muslos. La compresión progresiva y los principios activos actúan en sinergia para afinar la silueta.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Vendas Frías Anticelulíticas",
+        description:
+          "Fórmula específica con activos anticelulíticos (cafeína, centella asiática, L-carnitina) que mejoran el aspecto de piel de naranja y la microcirculación. Indicadas para muslos y glúteos.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Vendas Frías Detox Full Body",
+        description:
+          "Tratamiento corporal completo con vendas en todo el cuerpo para una sesión de detox intensiva. Elimina toxinas, activa el metabolismo y deja la piel suave y luminosa.",
+        duration: "75 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cuántos centímetros se pierden en una sesión?",
+        answer:
+          "Los resultados varían según cada persona, pero es habitual perder entre 2 y 6 centímetros medibles en la primera sesión. Con el ciclo completo, la reducción acumulada es significativa y duradera.",
+      },
+      {
+        question: "¿Es un tratamiento adecuado antes de un evento?",
+        answer:
+          "Sí, es uno de los más solicitados para preparar el cuerpo antes de bodas, eventos sociales o épocas de playa. Los resultados son visibles el mismo día del tratamiento.",
+      },
+      {
+        question: "¿Hay que seguir alguna dieta o restricción?",
+        answer:
+          "Recomendamos hidratación abundante antes y después de la sesión para potenciar el efecto drenante. No es necesario seguir una dieta especial, aunque combinar el tratamiento con hábitos saludables mejora los resultados.",
+      },
+    ],
+  },
+
+  // ── MADEROTERAPIA ──────────────────────────────────
+  {
+    slug: "maderoterapia",
+    name: "Maderoterapia",
+    tagline: "El poder de la madera para modelar y transformar tu cuerpo",
+    heroBg: "maderoterapia-bg.png",
+    heroDescription:
+      "La maderoterapia es una técnica de origen colombiano que utiliza instrumentos de madera para realizar maniobras específicas sobre el cuerpo, logrando un modelado corporal profundo, reducción de celulitis y una silueta más definida. Un tratamiento 100% natural, intensamente efectivo y completamente libre de sustancias químicas.",
+    benefits: [
+      "Moldea y define la silueta de forma visible y progresiva",
+      "Reduce la celulitis y mejora la textura de la piel",
+      "Activa la circulación y el metabolismo del tejido graso",
+      "Tratamiento 100% natural sin sustancias químicas",
+      "Mejora la tonificación muscular y la firmeza de la piel",
+      "Relajante y estimulante al mismo tiempo",
+    ],
+    items: [
+      {
+        title: "Maderoterapia Modeladora",
+        description:
+          "Sesión de maderoterapia corporal con instrumentos específicos para cada zona — rodillos, ventosas y tablas — que rompen los nódulos de grasa, activan el drenaje linfático y moldean la silueta.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Maderoterapia Anticelulítica",
+        description:
+          "Protocolo intensivo focalizado en las zonas con mayor acumulación de celulitis (muslos, glúteos, abdomen). Las maniobras de percusión y amasamiento profundo descompactan el tejido y suavizan la piel.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Maderoterapia + Drenaje Linfático",
+        description:
+          "Combinación de maderoterapia modeladora con drenaje linfático manual para potenciar la eliminación de líquidos y toxinas. Resultado doble: silueta más fina y piel más luminosa.",
+        duration: "80 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Duele la maderoterapia?",
+        answer:
+          "Las maniobras son intensas pero no dolorosas si se realizan correctamente. Puede haber una sensación de presión o calor en la zona trabajada. Adaptamos la presión a tu umbral de sensibilidad.",
+      },
+      {
+        question: "¿Cada cuánto se recomienda hacerla?",
+        answer:
+          "Para resultados óptimos recomendamos 2 sesiones semanales durante 4-6 semanas, seguidas de mantenimiento semanal o quincenal. El cuerpo responde muy bien a la constancia.",
+      },
+      {
+        question: "¿Puedo hacerla si tengo varices?",
+        answer:
+          "En zonas con varices evidentes no aplicamos maniobras directas. Adaptamos el protocolo para trabajar las zonas cercanas sin afectar las venas. Infórmanos en la valoración inicial.",
+      },
+    ],
+  },
+
+  // ── AURICULOTERAPIA ─────────────────────────────────
+  {
+    slug: "auriculoterapia",
+    name: "Auriculoterapia",
+    tagline: "El equilibrio del cuerpo a través del oído",
+    heroBg: "auriculoterapia-bg.png",
+    heroDescription:
+      "La auriculoterapia es una técnica de medicina tradicional china que trabaja sobre los puntos de energía del pabellón auricular para equilibrar el organismo, reducir la ansiedad, controlar el apetito, aliviar el dolor y potenciar el bienestar general. Una herramienta complementaria poderosa para el control de peso, el estrés y la salud integral.",
+    benefits: [
+      "Reduce la ansiedad y el apetito emocional de forma natural",
+      "Apoya el control de peso y los hábitos alimenticios",
+      "Alivia el estrés crónico y mejora la calidad del sueño",
+      "Técnica indolora y completamente no invasiva",
+      "Equilibra el sistema nervioso y endocrino",
+      "Compatible con cualquier otro tratamiento estético o médico",
+    ],
+    items: [
+      {
+        title: "Auriculoterapia para Control de Peso",
+        description:
+          "Estimulación de los puntos auriculares relacionados con el metabolismo, el apetito y la ansiedad alimentaria. Especialmente indicada como complemento a programas de alimentación y tratamientos reductores.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Auriculoterapia Antiestres y Bienestar",
+        description:
+          "Protocolo de equilibrio emocional y del sistema nervioso para reducir el estrés crónico, la ansiedad y el insomnio. Produce una sensación de calma profunda y bienestar que se mantiene días después.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Auriculoterapia para Control del Dolor",
+        description:
+          "Estimulación de los puntos auriculares analgésicos para el manejo de dolores musculares, articulares o cefaleas tensionales. Un enfoque complementario natural al tratamiento del dolor crónico.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Es dolorosa la auriculoterapia?",
+        answer:
+          "No. Se utilizan semillas de mostaza o pequeñas agujas muy superficiales que producen una leve presión. La mayoría de las clientas lo viven como un tratamiento relajante y agradable.",
+      },
+      {
+        question: "¿En cuántas sesiones se notan los efectos?",
+        answer:
+          "Muchas clientas sienten cambios desde la primera sesión: menor ansiedad, mejor calidad de sueño o reducción del apetito. Para resultados consolidados recomendamos un ciclo de 6 a 10 sesiones semanales.",
+      },
+      {
+        question: "¿Puedo hacerla junto con otros tratamientos?",
+        answer:
+          "Sí, es perfectamente compatible y de hecho se potencia con tratamientos como el drenaje linfático, la nutrición o cualquier programa de reducción de medidas. Es un excelente complemento holístico.",
       },
     ],
   },
