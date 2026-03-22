@@ -1,4 +1,5 @@
 import { SEO } from "@/components/SEO";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
@@ -13,7 +14,14 @@ export default function PoliticaDatos() {
       />
       <Navbar />
 
-      <main className="flex-1 pt-28 pb-20">
+      {/* Breadcrumb strip */}
+      <div className="pt-24 pb-2 bg-foreground/5 border-b border-border">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <Breadcrumb items={[{ label: "Política de Datos" }]} variant="light" />
+        </div>
+      </div>
+
+      <main className="flex-1 pt-8 pb-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

@@ -8,6 +8,7 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Button } from "@/components/ui/button";
 import type { ServicePageData } from "@/data/services";
 import { SEO } from "@/components/SEO";
+import { Breadcrumb } from "@/components/Breadcrumb";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -62,13 +63,8 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
-            <motion.div variants={fadeUp} className="mb-4">
-              <Link href="/#servicios">
-                <span className="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm transition-colors cursor-pointer">
-                  <ArrowLeft className="w-4 h-4" />
-                  Volver a Servicios
-                </span>
-              </Link>
+            <motion.div variants={fadeUp} className="mb-6">
+              <Breadcrumb items={[{ label: "Servicios", href: "/#servicios" }, { label: service.title }]} />
             </motion.div>
             <motion.p
               variants={fadeUp}

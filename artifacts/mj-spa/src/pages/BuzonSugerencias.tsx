@@ -1,4 +1,5 @@
 import { SEO } from "@/components/SEO";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
@@ -51,6 +52,9 @@ export default function BuzonSugerencias() {
       <section className="relative pt-36 pb-20 bg-foreground overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent" />
         <div className="max-w-3xl mx-auto px-4 text-center relative">
+          <div className="flex justify-center mb-6">
+            <Breadcrumb items={[{ label: "Nosotros", href: "/nosotros" }, { label: "Buzón de Sugerencias" }]} />
+          </div>
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-medium tracking-widest uppercase mb-6">
               <MessageSquareHeart className="w-4 h-4" />
