@@ -208,7 +208,7 @@ export default function Testimonios() {
               Lo que dicen nuestras clientas
             </div>
             <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">
-              Testimonios
+              Testimonios Reales
             </h1>
             <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
               La satisfacción de nuestras clientas es nuestra mayor recompensa.
