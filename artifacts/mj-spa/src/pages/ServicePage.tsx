@@ -22,6 +22,32 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.09 } },
 };
 
+const heroBgMap: Record<string, string> = {
+  "masajes-corporales":        "masajes-corporales-bg.png",
+  "masajes-relajantes":        "masajes-relajantes-bg.png",
+  "masajes-post-operatorios":  "masajes-post-operatorios-bg.png",
+  "reduccion-de-medidas":      "reduccion-de-medidas-bg.png",
+  "tensado-corporal":          "tensado-corporal-bg.png",
+  "drenaje-linfatico":         "drenaje-linfatico-bg.png",
+  "depilacion-laser":          "depilacion-laser-bg.png",
+  "iron-beauty-fitness":       "iron-beauty-fitness-bg.png",
+  "faciales":                  "faciales-bg.png",
+  "terapias-faciales":         "terapias-faciales-bg.png",
+  "peeling-quimico":           "peeling-quimico-bg.png",
+  "hollywood-peel":            "hollywood-peel-bg.png",
+  "eliminacion-manchas":       "eliminacion-manchas-bg.png",
+  "radiofrecuencia-facial":    "radiofrecuencia-facial-bg.png",
+  "adn-salmon":                "adn-salmon-bg.png",
+  "varices-aranas-vasculares": "varices-aranas-vasculares-bg.png",
+  "piernas-cansadas":          "piernas-cansadas-bg.png",
+  "nutricion":                 "nutricion-bg.png",
+  "botox-full-face":           "botox-full-face-bg.png",
+  "hilos-tensores":            "hilos-tensores-bg.png",
+  "trasplante-capilar":        "trasplante-capilar-bg.png",
+  "acido-hialuronico":         "acido-hialuronico-bg.png",
+  "biorevitalizacion":         "biorevitalizacion-bg.png",
+};
+
 const serviceCategoryMap: Record<string, { name: string; href: string }> = {
   "masajes-corporales":        { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "masajes-relajantes":        { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
@@ -100,7 +126,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       <section className="relative min-h-[75vh] flex items-end pb-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${BASE}images/${service.heroBg ?? "hero-bg.png"})` }}
+          style={{ backgroundImage: `url(${BASE}images/${heroBgMap[service.slug] ?? service.heroBg ?? "hero-bg.png"})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/90" />
 
