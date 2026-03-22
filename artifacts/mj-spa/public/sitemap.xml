@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+  <!-- Core pages -->
   <url>
     <loc>https://mjfisioesteticayspa.com/</loc>
     <lastmod>2026-03-22</lastmod>
@@ -43,58 +47,111 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Servicios -->
+  <!-- Treatment Category Pages -->
   <url>
-    <loc>https://mjfisioesteticayspa.com/servicios/masajes-corporales</loc>
+    <loc>https://mjfisioesteticayspa.com/tratamientos/corporales</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://mjfisioesteticayspa.com/servicios/faciales</loc>
+    <loc>https://mjfisioesteticayspa.com/tratamientos/faciales</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://mjfisioesteticayspa.com/servicios/masajes-relajantes</loc>
+    <loc>https://mjfisioesteticayspa.com/tratamientos/piernas</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
+  <!-- Tratamientos Corporales -->
   <url>
-    <loc>https://mjfisioesteticayspa.com/servicios/depilacion-laser</loc>
+    <loc>https://mjfisioesteticayspa.com/servicios/reduccion-de-medidas</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://mjfisioesteticayspa.com/servicios/terapias-faciales</loc>
+    <loc>https://mjfisioesteticayspa.com/servicios/emsculpt</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://mjfisioesteticayspa.com/servicios/peeling-quimico</loc>
+    <loc>https://mjfisioesteticayspa.com/servicios/criolipolisis</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://mjfisioesteticayspa.com/servicios/botox-full-face</loc>
+    <loc>https://mjfisioesteticayspa.com/servicios/drenaje-linfatico</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Tratamientos Faciales -->
+  <url>
+    <loc>https://mjfisioesteticayspa.com/servicios/hollywood-peel</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <url>
-    <loc>https://mjfisioesteticayspa.com/servicios/relleno-de-labios</loc>
+    <loc>https://mjfisioesteticayspa.com/servicios/eliminacion-manchas</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://mjfisioesteticayspa.com/servicios/radiofrecuencia-facial</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://mjfisioesteticayspa.com/servicios/acido-hialuronico</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://mjfisioesteticayspa.com/servicios/biorevitalizacion</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Tratamientos de Piernas -->
+  <url>
+    <loc>https://mjfisioesteticayspa.com/servicios/varices-aranas-vasculares</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://mjfisioesteticayspa.com/servicios/piernas-cansadas</loc>
+    <lastmod>2026-03-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Médicos y Estéticos -->
+  <url>
+    <loc>https://mjfisioesteticayspa.com/servicios/botox</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

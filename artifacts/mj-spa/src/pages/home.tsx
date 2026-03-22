@@ -5,13 +5,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import {
   ArrowRight, Star, MapPin, Phone, Clock,
-  ChevronRight, ChevronLeft, CheckCircle2
+  ChevronRight, ChevronLeft
 } from "lucide-react";
 
 import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { GoogleMap, MAPS_LINK, GOOGLE_REVIEW_LINK } from "@/components/GoogleMap";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -611,45 +612,99 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ LOCATION STRIP ═════════════════════════════ */}
-      <section className="bg-stone-900 border-t border-stone-800">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-stone-800">
-            {[
-              {
-                icon: MapPin,
-                title: "UBICACIÓN",
-                lines: ["Turrialba, Costa Rica", "Ciudadela Jorge de Bravo"],
-              },
-              {
-                icon: Phone,
-                title: "TELÉFONO / WHATSAPP",
-                lines: ["+506 86907757"],
-                link: WA,
-              },
-              {
-                icon: Clock,
-                title: "HORARIO",
-                lines: ["Lun, Mar, Jue, Vie: 9:00 – 20:00", "Sábados: 8:00 – 15:00"],
-              },
-            ].map(({ icon: Icon, title, lines, link }) => (
-              <div key={title} className="py-10 px-8 flex items-start gap-5">
-                <div className="w-10 h-10 border border-stone-700 flex items-center justify-center shrink-0 mt-0.5">
-                  <Icon className="w-4 h-4 text-primary" />
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold text-white/50 uppercase tracking-[0.3em] mb-2">{title}</p>
-                  {lines.map((l, i) =>
-                    link ? (
-                      <a key={i} href={link} target="_blank" rel="noopener noreferrer"
-                        className="block text-white text-sm hover:text-primary transition-colors">{l}</a>
-                    ) : (
-                      <p key={i} className="text-white text-sm">{l}</p>
-                    )
-                  )}
+      {/* ══ LOCATION + GOOGLE MAPS ═════════════════════ */}
+      <section id="ubicacion" className="bg-stone-900">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+
+            {/* Google Maps embed */}
+            <div className="relative h-72 lg:h-auto min-h-[360px]">
+              <GoogleMap className="absolute inset-0 w-full h-full" />
+            </div>
+
+            {/* Info panel */}
+            <div className="px-8 sm:px-12 py-12 flex flex-col justify-between gap-8">
+              <div>
+                <p className="text-[10px] font-bold text-primary uppercase tracking-[0.4em] mb-5">
+                  CÓMO LLEGAR
+                </p>
+                <h2 className="text-3xl font-serif font-bold text-white leading-tight mb-8">
+                  Estamos en el corazón<br />
+                  <span className="font-light italic text-white/40">de Turrialba</span>
+                </h2>
+
+                <div className="space-y-6">
+                  {[
+                    {
+                      icon: MapPin,
+                      title: "DIRECCIÓN",
+                      content: "Ciudadela Jorge de Bravo, Turrialba, Cartago, Costa Rica",
+                      href: MAPS_LINK,
+                    },
+                    {
+                      icon: Phone,
+                      title: "TELÉFONO / WHATSAPP",
+                      content: "+506 86907757",
+                      href: WA,
+                    },
+                    {
+                      icon: Clock,
+                      title: "HORARIO DE ATENCIÓN",
+                      content: "Lun, Mar, Jue, Vie: 9:00 – 20:00 · Sáb: 8:00 – 15:00",
+                      href: null,
+                    },
+                  ].map(({ icon: Icon, title, content, href }) => (
+                    <div key={title} className="flex items-start gap-4">
+                      <div className="w-9 h-9 border border-stone-700 flex items-center justify-center shrink-0 mt-0.5">
+                        <Icon className="w-4 h-4 text-primary" />
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-bold text-white/40 uppercase tracking-[0.25em] mb-1">{title}</p>
+                        {href ? (
+                          <a href={href} target="_blank" rel="noopener noreferrer"
+                            className="text-white text-sm hover:text-primary transition-colors leading-relaxed">
+                            {content}
+                          </a>
+                        ) : (
+                          <p className="text-white text-sm leading-relaxed">{content}</p>
+                        )}
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
-            ))}
+
+              {/* Google Business CTAs */}
+              <div className="border-t border-stone-800 pt-8 flex flex-col sm:flex-row gap-3">
+                <a
+                  href={MAPS_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center gap-2 border border-stone-700 py-3 px-4 text-xs font-bold uppercase tracking-widest text-white hover:border-primary hover:text-primary transition-all"
+                >
+                  <MapPin className="w-3.5 h-3.5" />
+                  Ver en Maps
+                </a>
+                <a
+                  href={GOOGLE_REVIEW_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center gap-2 border border-stone-700 py-3 px-4 text-xs font-bold uppercase tracking-widest text-white hover:border-yellow-500 hover:text-yellow-500 transition-all"
+                >
+                  <Star className="w-3.5 h-3.5" />
+                  Dejar reseña en Google
+                </a>
+                <a
+                  href={WA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center gap-2 bg-primary py-3 px-4 text-xs font-bold uppercase tracking-widest text-white hover:bg-primary/90 transition-all"
+                >
+                  <ArrowRight className="w-3.5 h-3.5" />
+                  Reservar cita
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

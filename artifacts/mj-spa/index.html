@@ -4,43 +4,72 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
     <title>MJ Fisio Estética y Spa | Turrialba, Costa Rica</title>
-    <meta name="description" content="Centro de estética, bienestar y tratamientos médicos en Turrialba, Costa Rica. Faciales, masajes, depilación láser, botox, hilos tensores y más." />
+    <meta name="description" content="Centro de estética, bienestar y tratamientos médicos en Turrialba, Costa Rica. Faciales, corporales, varices, botox, hilos tensores y más. Reserva por WhatsApp." />
+    <meta name="keywords" content="estética Turrialba, spa Turrialba, tratamientos faciales Costa Rica, reducción medidas, criolipólisis, drenaje linfático, botox Turrialba, varices Costa Rica" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#c084a0" />
     <link rel="icon" type="image/png" href="/images/logo-mj.png" />
     <link rel="canonical" href="https://mjfisioesteticayspa.com/" />
 
+    <!-- Geo SEO Local -->
+    <meta name="geo.region" content="CR-C" />
+    <meta name="geo.placename" content="Turrialba, Cartago, Costa Rica" />
+    <meta name="geo.position" content="9.9001;-83.6819" />
+    <meta name="ICBM" content="9.9001, -83.6819" />
+
     <!-- Open Graph -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="business.business" />
     <meta property="og:title" content="MJ Fisio Estética y Spa | Turrialba, Costa Rica" />
-    <meta property="og:description" content="Centro de estética, bienestar y tratamientos médicos en Turrialba, Costa Rica." />
+    <meta property="og:description" content="Centro de estética, bienestar y tratamientos médicos en Turrialba, Costa Rica. Faciales, corporales, varices, botox y más." />
     <meta property="og:url" content="https://mjfisioesteticayspa.com/" />
     <meta property="og:image" content="https://mjfisioesteticayspa.com/images/logo-mj.png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
     <meta property="og:locale" content="es_CR" />
+    <meta property="og:site_name" content="MJ Fisio Estética y Spa" />
+    <meta property="business:contact_data:street_address" content="Ciudadela Jorge de Bravo" />
+    <meta property="business:contact_data:locality" content="Turrialba" />
+    <meta property="business:contact_data:country_name" content="Costa Rica" />
+    <meta property="business:contact_data:phone_number" content="+50686907757" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="MJ Fisio Estética y Spa" />
     <meta name="twitter:description" content="Centro de estética y bienestar en Turrialba, Costa Rica." />
+    <meta name="twitter:image" content="https://mjfisioesteticayspa.com/images/logo-mj.png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Structured Data (Local Business) -->
+    <!-- Structured Data: LocalBusiness (MedicalSpa + BeautySalon) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BeautySalon",
+      "@type": ["MedicalSpa", "BeautySalon", "HealthAndBeautyBusiness"],
+      "@id": "https://mjfisioesteticayspa.com/#business",
       "name": "MJ Fisio Estética y Spa",
-      "description": "Centro de estética, bienestar y tratamientos médicos en Turrialba, Costa Rica.",
+      "alternateName": "MJ Fisio Estetica y Spa",
+      "description": "Centro de estética, bienestar y tratamientos médico-estéticos en Turrialba, Costa Rica. Ofrecemos tratamientos corporales, faciales, de piernas, medicina estética y spa.",
       "url": "https://mjfisioesteticayspa.com",
-      "logo": "https://mjfisioesteticayspa.com/images/logo-mj.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mjfisioesteticayspa.com/images/logo-mj.png",
+        "width": 200,
+        "height": 80
+      },
+      "image": "https://mjfisioesteticayspa.com/images/hero-bg.png",
+      "telephone": "+50686907757",
+      "email": "info@mjfisioesteticayspa.com",
+      "priceRange": "$$",
+      "currenciesAccepted": "CRC, USD",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Ciudadela Jorge de Bravo",
         "addressLocality": "Turrialba",
+        "addressRegion": "Cartago",
         "addressCountry": "CR"
       },
       "geo": {
@@ -48,12 +77,132 @@
         "latitude": 9.9001,
         "longitude": -83.6819
       },
+      "hasMap": "https://maps.google.com/maps?q=MJ+Fisio+Estetica+y+Spa+Turrialba+Costa+Rica",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "15:00"
+        }
+      ],
       "sameAs": [
         "https://www.facebook.com/MJFisioEsteticaySpa",
-        "https://www.instagram.com/fisioesteticamj/"
+        "https://www.instagram.com/fisioesteticamj/",
+        "https://www.instagram.com/mjfisioesteticayspa/"
       ],
-      "priceRange": "$$",
-      "openingHours": "Mo-Sa 08:00-18:00"
+      "areaServed": {
+        "@type": "City",
+        "name": "Turrialba",
+        "containedInPlace": {
+          "@type": "State",
+          "name": "Cartago",
+          "containedInPlace": {
+            "@type": "Country",
+            "name": "Costa Rica"
+          }
+        }
+      },
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 9.9001,
+          "longitude": -83.6819
+        },
+        "geoRadius": "30000"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Tratamientos MJ Fisio Estética y Spa",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Tratamientos Corporales",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reducción de Medidas" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emsculpt" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criolipólisis" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Drenaje Linfático" } }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Tratamientos Faciales",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hollywood Peel" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Radiofrecuencia Facial" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Eliminación de Manchas" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ácido Hialurónico" } }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Tratamientos de Piernas",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Varices y Arañas Vasculares" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Piernas Cansadas" } }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Médicos y Estéticos",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Botox (Toxina Botulínica)" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hilos Tensores" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Biorevitalización" } }
+            ]
+          }
+        ]
+      }
+    }
+    </script>
+
+    <!-- FAQ Schema for common local questions -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Dónde está ubicado MJ Fisio Estética y Spa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Estamos en Turrialba, Ciudadela Jorge de Bravo, Cartago, Costa Rica. Puede contactarnos por WhatsApp al +506 86907757 para obtener indicaciones exactas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuál es el horario de MJ Fisio Estética y Spa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Atendemos de lunes, martes, jueves y viernes de 9:00 a 20:00. Los sábados de 8:00 a 15:00. Los miércoles y domingos estamos cerrados."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué tratamientos ofrece MJ Fisio Estética y Spa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ofrecemos tratamientos corporales (reducción de medidas, emsculpt, criolipólisis), tratamientos faciales (Hollywood Peel, radiofrecuencia, ácido hialurónico), tratamientos de piernas (varices, piernas cansadas) y medicina estética (botox, hilos tensores)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo puedo reservar una cita en MJ Fisio Estética y Spa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Puede reservar su cita fácilmente por WhatsApp al +506 86907757. Respondemos de manera inmediata y le asesoramos sobre el tratamiento más adecuado para usted."
+          }
+        }
+      ]
     }
     </script>
   </head>
