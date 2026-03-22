@@ -182,7 +182,7 @@ export function Navbar() {
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
-                              Corporales →
+                              Corporales
                             </Link>
                             {corporalesHalf1.map((link) => (
                               <Link
@@ -215,7 +215,7 @@ export function Navbar() {
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
-                              Faciales →
+                              Faciales
                             </Link>
                             {tratamientosFacialesLinks.map((link) => (
                               <Link
@@ -235,7 +235,7 @@ export function Navbar() {
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
-                              Piernas →
+                              Piernas
                             </Link>
                             {tratamientosPiernasLinks.map((link) => (
                               <Link
@@ -418,7 +418,7 @@ export function Navbar() {
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
-                            Corporales →
+                            Corporales
                           </Link>
                           {tratamientosCorporalesLinks.map((link) => (
                             <Link
@@ -438,7 +438,7 @@ export function Navbar() {
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
-                            Faciales →
+                            Faciales
                           </Link>
                           {tratamientosFacialesLinks.map((link) => (
                             <Link
@@ -458,7 +458,7 @@ export function Navbar() {
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
-                            Piernas →
+                            Piernas
                           </Link>
                           {tratamientosPiernasLinks.map((link) => (
                             <Link
