@@ -38,6 +38,7 @@ const heroBgMap: Record<string, string> = {
   "eliminacion-manchas":       "eliminacion-manchas-bg.png",
   "radiofrecuencia-facial":    "radiofrecuencia-facial-bg.png",
   "adn-salmon":                "adn-salmon-bg.png",
+  "tratamiento-anticelulitis": "anticelulitis-bg.png",
   "varices-aranas-vasculares": "varices-aranas-vasculares-bg.png",
   "piernas-cansadas":          "piernas-cansadas-bg.png",
   "nutricion":                 "nutricion-bg.png",
@@ -64,6 +65,7 @@ const serviceCategoryMap: Record<string, { name: string; href: string }> = {
   "hollywood-peel":            { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "eliminacion-manchas":       { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "radiofrecuencia-facial":    { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
+  "tratamiento-anticelulitis": { name: "Tratamientos de Piernas", href: "/tratamientos/piernas"    },
   "varices-aranas-vasculares": { name: "Tratamientos de Piernas", href: "/tratamientos/piernas"    },
   "piernas-cansadas":          { name: "Tratamientos de Piernas", href: "/tratamientos/piernas"    },
 };

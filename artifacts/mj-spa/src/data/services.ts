@@ -49,7 +49,7 @@ export const tratamientosFacialesLinks = [
 export const tratamientosPiernasLinks = [
   { name: "Varices y Arañas Vasculares", href: "/servicios/varices-aranas-vasculares" },
   { name: "Cuidado de Piernas Cansadas", href: "/servicios/piernas-cansadas" },
-  { name: "Tratamiento Anticelulitis", href: "/servicios/reduccion-medidas" },
+  { name: "Tratamiento Anticelulitis", href: "/servicios/tratamiento-anticelulitis" },
 ];
 
 export const servicePages: ServicePageData[] = [
@@ -1378,6 +1378,81 @@ export const servicePages: ServicePageData[] = [
         question: "¿Hay tiempo de recuperación?",
         answer:
           "Pueden aparecer pequeñas ronchas o enrojecimiento en los puntos de infiltración que desaparecen en pocas horas. No impide realizar las actividades habituales.",
+      },
+    ],
+  },
+
+  // ── TRATAMIENTO ANTICELULITIS ──────────────────────
+  {
+    slug: "tratamiento-anticelulitis",
+    name: "Tratamiento Anticelulitis",
+    tagline: "Elimina la celulitis de forma definitiva y sin cirugía",
+    heroBg: "anticelulitis-bg.png",
+    heroDescription:
+      "La celulitis no es un problema cosmético — es una condición tratable. En MJ Fisio Estética y Spa combinamos las tecnologías más avanzadas con protocolos clínicamente probados para reducir la celulitis, afinar la silueta y devolverte la piel lisa y firme que mereces. Resultados visibles desde la primera sesión.",
+    benefits: [
+      "Reducción visible de la celulitis desde la primera sesión",
+      "Tecnología de radiofrecuencia + drenaje para resultados duraderos",
+      "Protocolo personalizado según tu tipo y grado de celulitis",
+      "Sin cirugía, sin anestesia, sin tiempo de recuperación",
+      "Mejora la circulación y elimina toxinas acumuladas",
+      "Piel más firme, lisa y uniforme en pocas semanas",
+    ],
+    items: [
+      {
+        title: "Drenaje Linfático Anticelulítico",
+        description:
+          "Técnica manual especializada que activa el sistema linfático, elimina la retención de líquidos y reduce el aspecto de piel de naranja desde las primeras sesiones. Ideal como tratamiento de base para preparar el tejido.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Radiofrecuencia Corporal Focalizada",
+        description:
+          "Aplicamos calor controlado en profundidad para romper los nódulos de grasa, estimular la producción de colágeno y reafirmar la piel de muslos, glúteos y abdomen. Resultado: piel más tersa y visible reducción de medidas.",
+        duration: "50 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Vendas Frías Anticelulíticas",
+        description:
+          "Vendas impregnadas con activos reductores, drenantes y reafirmantes en frío que potencian la pérdida de centímetros y mejoran la textura de la piel en una sola sesión. Efecto inmediato y acumulativo.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Presoterapia + Ultrasonidos",
+        description:
+          "Combinación de presoterapia para drenar y desinflamar, junto con ultrasonidos focalizados que destruyen las células de grasa localizadas. Protocolo de alta eficacia para casos de celulitis resistente.",
+        duration: "55 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿En cuántas sesiones veré resultados reales?",
+        answer:
+          "La mayoría de nuestras clientas notan una mejora visible en textura y firmeza desde la primera sesión. Para resultados duraderos y profundos, recomendamos un ciclo de 8 a 12 sesiones, 2 veces por semana. Al finalizar el ciclo, la reducción de la celulitis es significativa y medible.",
+      },
+      {
+        question: "¿Funciona para todos los tipos y grados de celulitis?",
+        answer:
+          "Sí. Nuestros protocolos están adaptados a los 4 grados de celulitis. Realizamos una valoración inicial gratuita donde evaluamos tu caso y diseñamos el plan de tratamiento más efectivo para ti, combinando las técnicas adecuadas según tu tipo de piel y zona a tratar.",
+      },
+      {
+        question: "¿Necesito dieta o ejercicio para que funcione?",
+        answer:
+          "No es un requisito, pero sí potencia los resultados. Los tratamientos son efectivos por sí solos, y combinados con hidratación adecuada y algo de actividad física los resultados se multiplican y duran más tiempo.",
+      },
+      {
+        question: "¿Es doloroso? ¿Hay tiempo de recuperación?",
+        answer:
+          "Los tratamientos son indoloros o producen una sensación de calor agradable en el caso de la radiofrecuencia. No hay tiempo de recuperación — puedes retomar tus actividades normales inmediatamente después de cada sesión.",
+      },
+      {
+        question: "¿Cuánto duran los resultados?",
+        answer:
+          "Con mantenimiento mensual los resultados se sostienen en el tiempo. Te recomendamos sesiones de mantenimiento cada 3-4 semanas una vez completado el ciclo inicial, especialmente si combinas el tratamiento con hábitos saludables.",
       },
     ],
   },
