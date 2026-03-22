@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle, ShieldCheck, Award, Clock4 } from "lucide-react";
 import { Link } from "wouter";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -7,6 +7,8 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { tratamientosFacialesLinks, servicePages } from "@/data/services";
+
+const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -73,15 +75,16 @@ export default function TratamientosFaciales() {
       <section className="py-5 bg-primary">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white text-center sm:text-left text-sm font-medium">
-            Cada piel es única — diseñamos tu tratamiento personalizado
+            Cada piel es única — <strong>valoración gratuita</strong> y protocolo personalizado
           </p>
           <a
-            href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
+            href={WA}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 text-white text-sm font-semibold tracking-widest uppercase border border-white/50 px-6 py-2 hover:bg-white hover:text-primary transition-all"
+            className="shrink-0 inline-flex items-center gap-2 text-white text-xs font-bold tracking-[0.2em] uppercase border border-white/60 px-6 py-2.5 hover:bg-white hover:text-primary transition-all"
           >
-            Contactar
+            <MessageCircle className="w-3.5 h-3.5" />
+            Reservar valoración gratuita
           </a>
         </div>
       </section>
@@ -130,6 +133,44 @@ export default function TratamientosFaciales() {
         </div>
       </section>
 
+      {/* Trust + Testimonial */}
+      <section className="bg-stone-50 py-16 border-t border-stone-100">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+            {[
+              { icon: <ShieldCheck className="w-6 h-6 text-primary" />, title: "Cosmetología avanzada", desc: "Tratamientos con ingredientes activos de alta concentración y tecnología de última generación." },
+              { icon: <Award className="w-6 h-6 text-primary" />, title: "Diagnóstico personalizado", desc: "Evaluamos tu tipo de piel antes de cada protocolo para garantizar los mejores resultados." },
+              { icon: <Clock4 className="w-6 h-6 text-primary" />, title: "Sin tiempo de recuperación", desc: "La mayoría de tratamientos faciales permiten retomar tu rutina el mismo día." },
+            ].map((t) => (
+              <div key={t.title} className="flex gap-4">
+                <div className="shrink-0 mt-0.5">{t.icon}</div>
+                <div>
+                  <p className="font-serif font-bold text-stone-900 mb-1">{t.title}</p>
+                  <p className="text-stone-500 text-sm leading-relaxed">{t.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Testimonial */}
+          <motion.blockquote
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+            className="border-l-4 border-primary pl-8 py-2"
+          >
+            <p className="text-stone-700 font-serif text-xl italic leading-relaxed mb-4">
+              "Vine por el Hollywood Peel y quedé enamorada de los resultados. Mi piel nunca había estado tan luminosa y uniforme. El equipo es muy profesional y el ambiente del spa es relajante."
+            </p>
+            <footer className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs font-bold">A</div>
+              <div>
+                <p className="text-stone-900 text-sm font-semibold">Andrea P.</p>
+                <p className="text-stone-400 text-xs">Clienta — Turrialba</p>
+              </div>
+            </footer>
+          </motion.blockquote>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-stone-900">
         <div className="max-w-3xl mx-auto px-6 text-center">
@@ -143,13 +184,14 @@ export default function TratamientosFaciales() {
               En Turrialba, Ciudadela Jorge de Bravo. Escríbenos y te asesoramos sin compromiso.
             </p>
             <a
-              href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
+              href={WA}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-primary text-white text-sm font-semibold tracking-widest uppercase px-10 py-4 hover:bg-primary/90 transition-all group"
+              className="inline-flex items-center gap-3 bg-primary text-white text-sm font-bold tracking-[0.15em] uppercase px-10 py-4 hover:bg-primary/90 transition-all group"
             >
+              <MessageCircle className="w-4 h-4" />
               Reservar por WhatsApp
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
         </div>

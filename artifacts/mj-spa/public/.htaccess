@@ -1,0 +1,45 @@
+Options -MultiViews
+RewriteEngine On
+
+# ── HTTPS redirect ─────────────────────────────────
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ── www → non-www ──────────────────────────────────
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# ── Old / alternate slug redirects ─────────────────
+RewriteRule ^servicios/masaje-relajante$ /servicios/masajes-relajantes [R=301,L]
+RewriteRule ^servicios/masaje-corporal$  /servicios/masajes-corporales  [R=301,L]
+RewriteRule ^servicios/drenaje$          /servicios/drenaje-linfatico   [R=301,L]
+RewriteRule ^servicios/criolipo$         /servicios/criolipolisis        [R=301,L]
+RewriteRule ^servicios/varices$          /servicios/varices-aranas-vasculares [R=301,L]
+RewriteRule ^servicios/botox$            /servicios/botox-y-toxina       [R=301,L]
+RewriteRule ^tratamientos$               /tratamientos/corporales        [R=301,L]
+RewriteRule ^servicios$                  /#servicios                     [R=301,L]
+
+# ── SPA fallback — all 404 → index.html ────────────
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /index.html [L]
+
+# ── Security headers ───────────────────────────────
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ── Cache static assets ────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp        "access plus 1 year"
+  ExpiresByType image/jpeg        "access plus 1 year"
+  ExpiresByType image/png         "access plus 1 year"
+  ExpiresByType image/svg+xml     "access plus 1 year"
+  ExpiresByType text/css          "access plus 6 months"
+  ExpiresByType application/javascript "access plus 6 months"
+  ExpiresByType font/woff2        "access plus 1 year"
+</IfModule>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle, ShieldCheck, Award, Clock4 } from "lucide-react";
 import { Link } from "wouter";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -7,6 +7,8 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { tratamientosPiernasLinks, servicePages } from "@/data/services";
+
+const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -73,15 +75,16 @@ export default function TratamientosPiernas() {
       <section className="py-5 bg-primary">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white text-center sm:text-left text-sm font-medium">
-            ¿Sufres de varices o piernas pesadas? Solicita tu valoración sin compromiso
+            ¿Varices o piernas pesadas? Solicita tu <strong>valoración gratuita</strong> hoy
           </p>
           <a
-            href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
+            href={WA}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 text-white text-sm font-semibold tracking-widest uppercase border border-white/50 px-6 py-2 hover:bg-white hover:text-primary transition-all"
+            className="shrink-0 inline-flex items-center gap-2 text-white text-xs font-bold tracking-[0.2em] uppercase border border-white/60 px-6 py-2.5 hover:bg-white hover:text-primary transition-all"
           >
-            Contactar
+            <MessageCircle className="w-3.5 h-3.5" />
+            Reservar valoración gratuita
           </a>
         </div>
       </section>
@@ -130,6 +133,44 @@ export default function TratamientosPiernas() {
         </div>
       </section>
 
+      {/* Trust + Testimonial */}
+      <section className="bg-stone-50 py-16 border-t border-stone-100">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+            {[
+              { icon: <ShieldCheck className="w-6 h-6 text-primary" />, title: "100% No invasivo", desc: "Sin cirugía ni recuperación. Técnicas no agresivas que respetan tu cuerpo." },
+              { icon: <Award className="w-6 h-6 text-primary" />, title: "Equipo especializado", desc: "Fisioterapeutas con formación específica en patología venosa y circulación." },
+              { icon: <Clock4 className="w-6 h-6 text-primary" />, title: "Mejora desde la 1ª sesión", desc: "Reducción de pesadez y molestias desde las primeras sesiones de tratamiento." },
+            ].map((t) => (
+              <div key={t.title} className="flex gap-4">
+                <div className="shrink-0 mt-0.5">{t.icon}</div>
+                <div>
+                  <p className="font-serif font-bold text-stone-900 mb-1">{t.title}</p>
+                  <p className="text-stone-500 text-sm leading-relaxed">{t.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Testimonial */}
+          <motion.blockquote
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+            className="border-l-4 border-primary pl-8 py-2"
+          >
+            <p className="text-stone-700 font-serif text-xl italic leading-relaxed mb-4">
+              "Tenía varices desde hace años y no me animaba a tratarlas. En MJ me explicaron todo el proceso con mucha paciencia. Después de 4 sesiones las arañas vasculares han desaparecido casi por completo."
+            </p>
+            <footer className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs font-bold">C</div>
+              <div>
+                <p className="text-stone-900 text-sm font-semibold">Carmen R.</p>
+                <p className="text-stone-400 text-xs">Clienta — Turrialba</p>
+              </div>
+            </footer>
+          </motion.blockquote>
+        </div>
+      </section>
+
       {/* Info callout */}
       <section className="py-16 bg-stone-50">
         <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16">
@@ -170,13 +211,14 @@ export default function TratamientosPiernas() {
               <span className="italic font-light text-white/50">sanas y ligeras</span>
             </h2>
             <a
-              href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
+              href={WA}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-primary text-white text-sm font-semibold tracking-widest uppercase px-10 py-4 hover:bg-primary/90 transition-all group"
+              className="inline-flex items-center gap-3 bg-primary text-white text-sm font-bold tracking-[0.15em] uppercase px-10 py-4 hover:bg-primary/90 transition-all group"
             >
+              <MessageCircle className="w-4 h-4" />
               Reservar por WhatsApp
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
         </div>

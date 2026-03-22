@@ -1,164 +1,248 @@
-import { motion } from "framer-motion";
-import { CheckCircle2, Clock, ChevronDown, ChevronRight, ArrowLeft, Phone } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { CheckCircle2, Clock, ChevronDown, ArrowRight, MessageCircle, Star, ShieldCheck, Award } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
-import { Button } from "@/components/ui/button";
 import type { ServicePageData } from "@/data/services";
+import { servicePages } from "@/data/services";
 import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
 
+const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
+
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  hidden: { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
 };
 
 const stagger = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.09 } },
+};
+
+const serviceCategoryMap: Record<string, { name: string; href: string }> = {
+  "masajes-corporales":        { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
+  "masajes-relajantes":        { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
+  "reduccion-de-medidas":      { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
+  "criolipolisis":             { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
+  "drenaje-linfatico":         { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
+  "depilacion-laser":          { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
+  "faciales":                  { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
+  "terapias-faciales":         { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
+  "peeling-quimico":           { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
+  "hollywood-peel":            { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
+  "eliminacion-manchas":       { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
+  "radiofrecuencia-facial":    { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
+  "varices-aranas-vasculares": { name: "Tratamientos de Piernas", href: "/tratamientos/piernas"    },
+  "piernas-cansadas":          { name: "Tratamientos de Piernas", href: "/tratamientos/piernas"    },
 };
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border border-border rounded-2xl overflow-hidden">
+    <div className="border-b border-stone-200 last:border-0">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex justify-between items-center p-5 text-left bg-card hover:bg-muted/40 transition-colors"
+        className="w-full flex justify-between items-center py-5 text-left gap-4 group"
       >
-        <span className="font-serif text-lg text-foreground pr-4">{question}</span>
-        {open ? (
-          <ChevronDown className="w-5 h-5 text-primary shrink-0" />
-        ) : (
-          <ChevronRight className="w-5 h-5 text-primary shrink-0" />
-        )}
+        <span className="font-serif text-lg text-stone-900 group-hover:text-primary transition-colors">{question}</span>
+        <ChevronDown className={`w-5 h-5 text-primary shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
       </button>
-      {open && (
-        <div className="px-5 pb-5 pt-0 text-muted-foreground leading-relaxed bg-card">
-          {answer}
-        </div>
-      )}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="overflow-hidden"
+          >
+            <p className="text-stone-500 leading-relaxed pb-6 text-sm">{answer}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
 
 export default function ServicePage({ service }: { service: ServicePageData }) {
+  const category = serviceCategoryMap[service.slug];
+  const BASE = import.meta.env.BASE_URL;
+
+  const breadcrumbItems = category
+    ? [{ label: category.name, href: category.href }, { label: service.name }]
+    : [{ label: service.name }];
+
+  const related = servicePages
+    .filter((s) => {
+      if (s.slug === service.slug) return false;
+      if (!category) return false;
+      const cat = serviceCategoryMap[s.slug];
+      return cat?.href === category.href;
+    })
+    .slice(0, 3);
+
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <SEO
-        title={service.title}
-        description={`${service.tagline} — Tratamiento especializado en MJ Fisio Estética y Spa, Turrialba, Costa Rica.`}
+        title={service.name}
+        description={`${service.tagline} — ${service.heroDescription.slice(0, 120)}. MJ Fisio Estética y Spa, Turrialba, Costa Rica.`}
         canonical={`/servicios/${service.slug}`}
       />
       <Navbar />
 
-      {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-end pb-16 overflow-hidden">
+      {/* ── HERO ─────────────────────────────────────── */}
+      <section className="relative min-h-[75vh] flex items-end pb-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/hero-bg.png')" }}
+          style={{ backgroundImage: `url(${BASE}images/hero-bg.png)` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/90" />
+
+        <div className="relative w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-36 pb-16">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
-            <motion.div variants={fadeUp} className="mb-6">
-              <Breadcrumb items={[{ label: "Servicios", href: "/#servicios" }, { label: service.title }]} />
+            <motion.div variants={fadeUp} className="mb-8">
+              <Breadcrumb items={breadcrumbItems} variant="dark" />
             </motion.div>
-            <motion.p
-              variants={fadeUp}
-              className="text-primary text-sm uppercase tracking-widest font-medium mb-3"
-            >
+
+            <motion.p variants={fadeUp} className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">
               {service.tagline}
             </motion.p>
-            <motion.h1
-              variants={fadeUp}
-              className="text-4xl md:text-6xl font-serif text-white mb-4 leading-tight"
-            >
+
+            <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-serif font-bold text-white leading-tight mb-6 max-w-3xl">
               {service.name}
             </motion.h1>
-            <motion.p
-              variants={fadeUp}
-              className="text-white/80 text-lg md:text-xl max-w-2xl leading-relaxed"
-            >
+
+            <motion.p variants={fadeUp} className="text-white/65 text-base md:text-lg max-w-2xl leading-relaxed mb-10">
               {service.heroDescription}
             </motion.p>
+
+            {/* Hero CTAs */}
+            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 items-start">
+              <a
+                id={`cta-hero-${service.slug}`}
+                href={WA}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-primary text-white text-sm font-bold tracking-[0.15em] uppercase px-8 py-4 hover:bg-primary/90 transition-all group"
+              >
+                <MessageCircle className="w-4 h-4" />
+                Reservar por WhatsApp
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+              </a>
+              {category && (
+                <Link href={category.href}>
+                  <span className="inline-flex items-center gap-2 text-white/60 text-sm font-medium border-b border-white/20 pb-0.5 hover:text-white hover:border-white transition-colors cursor-pointer">
+                    Ver todos los {category.name.toLowerCase()}
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              )}
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="py-16 bg-secondary/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ── TRUST BAR ────────────────────────────────── */}
+      <section className="bg-stone-950 py-5 border-b border-white/5">
+        <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {[
+            { icon: <Star className="w-4 h-4 fill-primary text-primary" />, text: "5★ en Google" },
+            { icon: <ShieldCheck className="w-4 h-4 text-primary" />,       text: "100% no invasivo" },
+            { icon: <Award className="w-4 h-4 text-primary" />,             text: "Profesionales certificados" },
+            { icon: <MessageCircle className="w-4 h-4 text-primary" />,     text: "Valoración gratuita" },
+          ].map((t) => (
+            <div key={t.text} className="flex items-center justify-center gap-2">
+              {t.icon}
+              <span className="text-white/60 text-xs font-medium tracking-wide">{t.text}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── BENEFITS ─────────────────────────────────── */}
+      <section className="py-16 bg-stone-50">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+            className="text-center mb-10"
+          >
+            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">Beneficios</p>
+            <h2 className="text-3xl font-serif font-bold text-stone-900">
+              ¿Por qué elegir este tratamiento?
+            </h2>
+          </motion.div>
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
           >
             {service.benefits.map((benefit, i) => (
               <motion.div
-                key={i}
-                variants={fadeUp}
-                className="flex items-start gap-3 bg-background rounded-2xl p-4 shadow-sm border border-border"
+                key={i} variants={fadeUp}
+                className="flex items-start gap-3 bg-white p-5 border border-stone-100 hover:border-primary/30 hover:shadow-sm transition-all"
               >
                 <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-sm text-foreground font-medium leading-snug">{benefit}</span>
+                <span className="text-sm text-stone-700 font-medium leading-snug">{benefit}</span>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
 
-      {/* Service Items */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ── SERVICE ITEMS ─────────────────────────────── */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={fadeUp}
-            className="text-center mb-14"
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+            className="mb-14"
           >
-            <h2 className="text-primary font-medium tracking-widest uppercase text-sm mb-3">
-              Nuestros Tratamientos
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-8 h-0.5 bg-primary" />
+              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">Nuestros Tratamientos</p>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight">
+              ¿Qué incluye<br />
+              <span className="font-light italic text-stone-400">este servicio?</span>
             </h2>
-            <h3 className="text-4xl md:text-5xl font-serif text-foreground">
-              ¿Qué incluye este servicio?
-            </h3>
           </motion.div>
 
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
+            className="grid grid-cols-1 md:grid-cols-2 gap-px bg-stone-100"
           >
             {service.items.map((item, i) => (
               <motion.div
-                key={i}
-                variants={fadeUp}
-                className="bg-card border border-border rounded-3xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                key={i} variants={fadeUp}
+                className="group bg-white p-8 md:p-10 hover:bg-stone-50 transition-colors"
               >
                 <div className="flex items-start justify-between mb-4 gap-4">
-                  <h4 className="text-2xl font-serif text-foreground">{item.title}</h4>
+                  <div>
+                    <span className="text-stone-200 text-sm font-serif font-bold mr-3">{String(i + 1).padStart(2, "0")}</span>
+                    <h3 className="text-xl md:text-2xl font-serif font-bold text-stone-900 group-hover:text-primary transition-colors inline">{item.title}</h3>
+                  </div>
                   {item.duration && (
-                    <span className="flex items-center gap-1.5 text-muted-foreground text-sm shrink-0 bg-secondary/30 px-3 py-1 rounded-full">
+                    <span className="flex items-center gap-1.5 text-stone-400 text-xs shrink-0 border border-stone-200 px-3 py-1">
                       <Clock className="w-3.5 h-3.5" />
                       {item.duration}
                     </span>
                   )}
                 </div>
-                <p className="text-muted-foreground leading-relaxed mb-5">{item.description}</p>
+                <p className="text-stone-500 leading-relaxed mb-6 text-sm">{item.description}</p>
+                {item.price && (
+                  <p className="text-stone-300 text-xs tracking-widest uppercase mb-5">{item.price}</p>
+                )}
                 <a
-                  id={`cta-servicio-item-${item.title.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")}`}
-                  href="/#contacto"
-                  className="inline-flex items-center gap-1.5 text-primary font-medium text-sm hover:underline"
+                  id={`cta-item-${service.slug}-${i}`}
+                  href={WA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-white bg-primary px-5 py-2.5 hover:bg-primary/90 transition-colors group/btn"
                 >
-                  Reservar cita <ChevronRight className="w-4 h-4" />
+                  <MessageCircle className="w-3.5 h-3.5" />
+                  Reservar sesión
+                  <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
                 </a>
               </motion.div>
             ))}
@@ -166,65 +250,52 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
         </div>
       </section>
 
-      {/* CTA Band */}
-      <section className="py-16 bg-primary text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={stagger}
-          >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-serif mb-4">
-              ¿Lista para tu primera sesión?
-            </motion.h2>
-            <motion.p variants={fadeUp} className="text-white/80 text-lg mb-8">
-              Contacta con nosotras y te asesoramos de forma personalizada sin compromiso.
-            </motion.p>
-            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                className="bg-white text-primary hover:bg-white/90 rounded-full px-8 py-5 text-base font-semibold shadow-lg"
-                asChild
-              >
-                <a id="cta-servicio-reserva-cta" href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
-                  <Phone className="w-4 h-4 mr-2" />
-                  Reserva tu cita ahora
-                </a>
-              </Button>
-              <Button
-                variant="outline"
-                className="border-white text-white bg-transparent hover:bg-white/10 rounded-full px-8 py-5 text-base"
-                asChild
-              >
-                <a id="cta-servicio-ver-todos" href="/#servicios">Ver todos los servicios</a>
-              </Button>
-            </motion.div>
+      {/* ── URGENCY CTA BAND ──────────────────────────── */}
+      <section className="bg-primary py-12">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+            <p className="text-white/70 text-xs font-bold tracking-[0.4em] uppercase mb-3">Valoración Sin Compromiso</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+              Reserva hoy — plazas limitadas
+            </h2>
+            <p className="text-white/75 text-sm mb-8 max-w-md mx-auto leading-relaxed">
+              Escríbenos por WhatsApp y te asesoramos sin costo. Diseñamos el protocolo ideal para tu caso.
+            </p>
+            <a
+              id={`cta-urgency-${service.slug}`}
+              href={WA}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-white text-primary text-sm font-bold tracking-[0.15em] uppercase px-10 py-4 hover:bg-stone-100 transition-colors group"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Escribir por WhatsApp
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+            </a>
           </motion.div>
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* ── FAQ ───────────────────────────────────────── */}
       {service.faq && service.faq.length > 0 && (
-        <section className="py-20 bg-muted/20">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 md:py-28">
+          <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeUp}
-              className="text-center mb-12"
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+              className="mb-12"
             >
-              <h2 className="text-primary font-medium tracking-widest uppercase text-sm mb-3">
-                Preguntas Frecuentes
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-8 h-0.5 bg-primary" />
+                <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">Preguntas Frecuentes</p>
+              </div>
+              <h2 className="text-4xl font-serif font-bold text-stone-900">
+                Todo lo que necesitas<br />
+                <span className="font-light italic text-stone-400">saber antes de tu cita</span>
               </h2>
-              <h3 className="text-4xl font-serif text-foreground">Todo lo que necesitas saber</h3>
             </motion.div>
             <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={stagger}
-              className="space-y-4"
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
+              className="border-t border-stone-200"
             >
               {service.faq.map((item, i) => (
                 <motion.div key={i} variants={fadeUp}>
@@ -232,6 +303,71 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 </motion.div>
               ))}
             </motion.div>
+
+            {/* Inline WhatsApp after FAQ */}
+            <motion.div
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+              className="mt-12 p-8 bg-stone-950 flex flex-col md:flex-row items-center justify-between gap-6"
+            >
+              <div>
+                <p className="text-white font-serif text-xl font-bold mb-1">¿Tienes más dudas?</p>
+                <p className="text-stone-400 text-sm">Escríbenos y te respondemos al instante.</p>
+              </div>
+              <a
+                href={WA}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center gap-2 border border-primary text-primary text-xs font-bold tracking-[0.2em] uppercase px-6 py-3 hover:bg-primary hover:text-white transition-all"
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                Preguntar ahora
+              </a>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* ── RELATED SERVICES ──────────────────────────── */}
+      {related.length > 0 && (
+        <section className="py-16 bg-stone-50 border-t border-stone-100">
+          <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+            <motion.div
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+              className="mb-10"
+            >
+              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">También te puede interesar</p>
+              <h2 className="text-3xl font-serif font-bold text-stone-900">Servicios relacionados</h2>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-stone-200">
+              {related.map((rel, i) => (
+                <motion.div
+                  key={rel.slug}
+                  initial="hidden" whileInView="visible" viewport={{ once: true }}
+                  variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.5, delay: i * 0.08 } } }}
+                  className="bg-white p-8 group hover:bg-stone-50 transition-colors"
+                >
+                  <p className="text-xs font-serif font-bold text-stone-200 mb-3">{String(i + 1).padStart(2, "0")}</p>
+                  <h3 className="text-xl font-serif font-bold text-stone-900 mb-2 group-hover:text-primary transition-colors">
+                    {rel.name}
+                  </h3>
+                  <p className="text-stone-500 text-sm leading-relaxed mb-5">{rel.tagline}</p>
+                  <Link href={`/servicios/${rel.slug}`}>
+                    <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-primary border-b border-primary/30 pb-0.5 hover:border-primary transition-colors cursor-pointer">
+                      Ver tratamiento <ArrowRight className="w-3 h-3" />
+                    </span>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+            {category && (
+              <div className="mt-8 text-center">
+                <Link href={category.href}>
+                  <span className="inline-flex items-center gap-2 text-sm font-bold text-stone-500 border-b border-stone-300 pb-0.5 hover:text-primary hover:border-primary transition-colors cursor-pointer tracking-wide uppercase text-xs">
+                    Ver todos los {category.name.toLowerCase()} <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </Link>
+              </div>
+            )}
           </div>
         </section>
       )}
