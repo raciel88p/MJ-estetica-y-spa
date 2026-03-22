@@ -45,32 +45,32 @@
   /* Warm cream background */
   --background: 36 33% 97%;
   /* Deep espresso foreground */
-  --foreground: 20 14% 20%;
+  --foreground: 20 14% 12%;
   
   --card: 0 0% 100%;
-  --card-foreground: 20 14% 20%;
+  --card-foreground: 20 14% 12%;
   --card-border: 36 20% 92%;
   
-  /* Dusty rose / Mauve */
-  --primary: 346 25% 55%;
+  /* MJ Brand Rose — vivid, rich, high contrast */
+  --primary: 346 55% 42%;
   --primary-foreground: 0 0% 100%;
   
-  /* Champagne / Gold accent */
-  --secondary: 34 44% 82%;
-  --secondary-foreground: 20 14% 20%;
+  /* Warm gold accent */
+  --secondary: 34 44% 80%;
+  --secondary-foreground: 20 14% 12%;
   
   --muted: 36 20% 92%;
-  --muted-foreground: 20 10% 45%;
+  --muted-foreground: 20 10% 40%;
   
-  --accent: 34 44% 82%;
-  --accent-foreground: 20 14% 20%;
+  --accent: 34 44% 80%;
+  --accent-foreground: 20 14% 12%;
   
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
-  --border: 36 20% 88%;
-  --input: 36 20% 88%;
-  --ring: 346 25% 55%;
+  --border: 36 20% 85%;
+  --input: 36 20% 85%;
+  --ring: 346 55% 42%;
 
   --radius: 0.75rem;
 }

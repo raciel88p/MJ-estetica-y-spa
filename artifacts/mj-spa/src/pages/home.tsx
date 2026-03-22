@@ -270,7 +270,7 @@ export default function Home() {
         </div>
 
         {/* Stats bar */}
-        <div className="absolute bottom-0 left-0 right-0 bg-black/30 backdrop-blur-sm border-t border-white/10 z-20">
+        <div className="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur-sm border-t border-white/10 z-20">
           <div className="max-w-3xl mx-auto px-6 py-5 grid grid-cols-3 divide-x divide-white/15">
             {[
               { n: "2335+", label: "Clientes atendidas" },
@@ -278,8 +278,8 @@ export default function Home() {
               { n: "3+", label: "Años de experiencia" },
             ].map((s) => (
               <div key={s.n} className="text-center px-4">
-                <p className="text-white text-2xl font-serif font-bold">{s.n}</p>
-                <p className="text-white/50 text-[11px] tracking-widest uppercase mt-0.5">{s.label}</p>
+                <p className="text-primary text-2xl font-serif font-bold">{s.n}</p>
+                <p className="text-white/60 text-[11px] tracking-widest uppercase mt-0.5">{s.label}</p>
               </div>
             ))}
           </div>
@@ -348,7 +348,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Number */}
-                <div className="absolute top-6 left-6 text-white/20 text-7xl font-serif font-bold leading-none select-none group-hover:text-white/30 transition-colors duration-500">
+                <div className="absolute top-6 left-6 text-primary/40 text-7xl font-serif font-bold leading-none select-none group-hover:text-primary/70 transition-colors duration-500">
                   {cat.index}
                 </div>
 
@@ -379,52 +379,62 @@ export default function Home() {
       </section>
 
       {/* ══ FEATURED TREATMENTS LIST ═══════════════════ */}
-      <section className="border-t border-stone-100">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="py-16">
-            <motion.p
-              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-              className="text-[10px] font-bold tracking-[0.4em] uppercase text-primary mb-10"
-            >
-              Tratamientos destacados
-            </motion.p>
-            <div className="grid grid-cols-1 md:grid-cols-2">
-              {featuredTreatments.map((t, i) => (
-                <motion.div
-                  key={t.name}
-                  initial={{ opacity: 0, x: -12 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.45, delay: i * 0.06 }}
-                >
-                  <Link href={t.href}>
-                    <div className="group flex items-center justify-between border-b border-stone-100 py-5 hover:pl-2 transition-all duration-200 cursor-pointer">
-                      <div className="flex items-center gap-6">
-                        <span className="text-stone-200 text-sm font-serif font-bold w-6 shrink-0">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                        <span className="text-stone-800 font-medium text-base group-hover:text-primary transition-colors">
-                          {t.name}
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <span className="text-stone-300 text-xs tracking-widest uppercase hidden sm:block">{t.cat}</span>
-                        <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-primary group-hover:translate-x-1 transition-all" />
+      <section className="bg-stone-950">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-20 md:py-28">
+          {/* Header */}
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+            className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14"
+          >
+            <div>
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-8 h-0.5 bg-primary" />
+                <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">
+                  Tratamientos Destacados
+                </p>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
+                Nuestros tratamientos<br />
+                <span className="font-light italic text-white/30">más populares</span>
+              </h2>
+            </div>
+            <a href={WA} target="_blank" rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center gap-2 bg-primary text-white text-xs font-bold tracking-[0.2em] uppercase px-6 py-3 hover:bg-primary/90 transition-colors whitespace-nowrap">
+              Reservar cita <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </motion.div>
+
+          {/* Treatment rows */}
+          <div className="grid grid-cols-1 md:grid-cols-2 border-t border-white/8">
+            {featuredTreatments.map((t, i) => (
+              <motion.div
+                key={t.name}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: i * 0.06 }}
+                className={i % 2 === 0 ? "md:border-r border-white/8" : ""}
+              >
+                <Link href={t.href}>
+                  <div className="group flex items-center justify-between border-b border-white/8 py-6 px-2 hover:bg-primary/10 hover:px-5 transition-all duration-300 cursor-pointer">
+                    <div className="flex items-center gap-5">
+                      <span className="text-primary text-xl font-serif font-bold w-8 shrink-0 leading-none">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="text-white font-medium text-base md:text-lg group-hover:text-primary transition-colors">
+                        {t.name}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-3 shrink-0">
+                      <span className="text-white/25 text-[10px] tracking-[0.25em] uppercase hidden sm:block">{t.cat}</span>
+                      <div className="w-8 h-8 border border-white/10 group-hover:border-primary group-hover:bg-primary flex items-center justify-center transition-all duration-300">
+                        <ArrowRight className="w-3.5 h-3.5 text-white/30 group-hover:text-white transition-colors" />
                       </div>
                     </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-            <motion.div
-              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-              className="mt-10"
-            >
-              <a href={WA} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-primary border-b border-primary/40 pb-0.5 hover:border-primary transition-colors">
-                Ver todos los tratamientos <ArrowRight className="w-3.5 h-3.5" />
-              </a>
-            </motion.div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -478,12 +488,12 @@ export default function Home() {
               <div className="space-y-7 mb-10">
                 {features.map((f) => (
                   <div key={f.n} className="flex items-start gap-5">
-                    <span className="text-4xl font-serif font-bold text-stone-100 leading-none shrink-0 w-10 mt-1">
+                    <span className="text-3xl font-serif font-bold text-primary/30 leading-none shrink-0 w-10 mt-1">
                       {f.n}
                     </span>
                     <div>
                       <p className="text-stone-900 font-semibold text-sm mb-1">{f.title}</p>
-                      <p className="text-stone-400 text-sm leading-relaxed">{f.desc}</p>
+                      <p className="text-stone-500 text-sm leading-relaxed">{f.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -564,22 +574,28 @@ export default function Home() {
           {/* Featured testimonial */}
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-            className="bg-stone-900 p-10 md:p-14 mb-6"
+            className="relative bg-stone-950 p-10 md:p-14 mb-1 overflow-hidden"
           >
-            <div className="max-w-3xl">
-              <div className="flex gap-1 mb-6">
+            {/* Brand accent stripe */}
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary" />
+            {/* Decorative quote */}
+            <div className="absolute top-6 right-8 text-primary/10 text-[120px] font-serif leading-none select-none pointer-events-none">
+              "
+            </div>
+            <div className="max-w-3xl relative z-10">
+              <div className="flex gap-1 mb-7">
                 {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 fill-primary text-primary" />)}
               </div>
               <p className="text-white text-xl md:text-2xl font-serif font-light italic leading-relaxed mb-8">
                 "{testimonials[0].text}"
               </p>
               <div className="flex items-center gap-4">
-                <div className="w-10 h-10 bg-primary/20 flex items-center justify-center shrink-0">
-                  <span className="text-primary font-bold text-base">{testimonials[0].name[0]}</span>
+                <div className="w-11 h-11 bg-primary flex items-center justify-center shrink-0">
+                  <span className="text-white font-bold text-base">{testimonials[0].name[0]}</span>
                 </div>
                 <div>
                   <p className="text-white font-bold text-sm">{testimonials[0].name}</p>
-                  <p className="text-white/40 text-xs tracking-widest uppercase mt-0.5">Cliente verificada</p>
+                  <p className="text-primary/60 text-xs tracking-widest uppercase mt-0.5">Cliente verificada</p>
                 </div>
               </div>
             </div>
@@ -594,17 +610,20 @@ export default function Home() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.55, delay: i * 0.08 } } }}
-                className="bg-stone-50 p-8 border-b-2 border-transparent hover:border-primary hover:bg-white hover:shadow-sm transition-all duration-300"
+                className="relative bg-stone-50 p-8 border-l-2 border-primary/20 hover:border-primary hover:bg-white hover:shadow-md transition-all duration-300 group"
               >
-                <div className="flex gap-0.5 mb-4">
-                  {[1,2,3,4,5].map(s => <Star key={s} className="w-3 h-3 fill-primary text-primary" />)}
+                <div className="flex gap-0.5 mb-5">
+                  {[1,2,3,4,5].map(s => <Star key={s} className="w-3.5 h-3.5 fill-primary text-primary" />)}
                 </div>
                 <p className="text-stone-600 text-sm leading-relaxed mb-6 italic">"{t.text}"</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 bg-primary/10 flex items-center justify-center shrink-0">
-                    <span className="text-primary font-bold text-xs">{t.name[0]}</span>
+                  <div className="w-9 h-9 bg-primary/15 group-hover:bg-primary flex items-center justify-center shrink-0 transition-colors duration-300">
+                    <span className="text-primary group-hover:text-white font-bold text-sm transition-colors duration-300">{t.name[0]}</span>
                   </div>
-                  <p className="text-stone-900 text-sm font-bold">{t.name}</p>
+                  <div>
+                    <p className="text-stone-900 text-sm font-bold">{t.name}</p>
+                    <p className="text-stone-400 text-xs tracking-widest uppercase mt-0.5">Clienta</p>
+                  </div>
                 </div>
               </motion.div>
             ))}
