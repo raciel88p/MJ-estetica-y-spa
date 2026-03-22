@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import {
   ArrowRight, Star, MapPin, Phone, Clock,
-  ChevronRight, ChevronLeft
+  ChevronRight, ChevronLeft, MessageCircle
 } from "lucide-react";
 
 import { SEO } from "@/components/SEO";
@@ -146,8 +146,39 @@ export default function Home() {
     defaultValues: { name: "", email: "", phone: "", service: "", message: "" }
   });
 
-  const onSubmit = (_data: ContactFormValues) => {
-    toast({ title: "¡Mensaje enviado!", description: "Nos pondremos en contacto contigo pronto." });
+  const serviceLabels: Record<string, string> = {
+    "reduccion-medidas": "Reducción de Medidas",
+    "tensado-corporal": "Tensado Corporal",
+    "drenaje-linfatico": "Drenaje Linfático",
+    "hollywood-peel": "Hollywood Peel",
+    "radiofrecuencia-facial": "Radiofrecuencia Facial",
+    "eliminacion-manchas": "Eliminación de Manchas",
+    "peeling-quimico": "Peeling Químico",
+    "faciales": "Tratamientos Faciales",
+    "varices": "Varices y Arañas Vasculares",
+    "piernas-cansadas": "Piernas Cansadas",
+    "botox": "Bótox y Toxina Botulínica",
+    "acido-hialuronico": "Ácido Hialurónico",
+    "hilos-tensores": "Hilos Tensores",
+  };
+
+  const onSubmit = (data: ContactFormValues) => {
+    const serviceLabel = serviceLabels[data.service] || data.service;
+    const text = [
+      `Hola MJ Fisio Estética y Spa 👋`,
+      ``,
+      `*Nombre:* ${data.name}`,
+      `*Servicio:* ${serviceLabel}`,
+      `*Teléfono:* ${data.phone}`,
+      `*Email:* ${data.email}`,
+      ``,
+      `*Mensaje:* ${data.message}`,
+    ].join("\n");
+
+    const waUrl = `https://wa.me/50686907757?text=${encodeURIComponent(text)}`;
+    window.open(waUrl, "_blank", "noopener,noreferrer");
+
+    toast({ title: "¡Abriendo WhatsApp!", description: "Tu mensaje está listo — solo confirma el envío." });
     form.reset();
   };
 
@@ -916,12 +947,15 @@ export default function Home() {
                 <div className="pt-2">
                   <Button
                     id="cta-contacto-enviar"
-                    type="button"
-                    className="w-full rounded-none bg-stone-900 hover:bg-primary text-white text-xs font-bold tracking-[0.2em] uppercase py-5 transition-colors"
-                    onClick={() => window.open(WA, "_blank")}
+                    type="submit"
+                    className="w-full rounded-none bg-stone-900 hover:bg-primary text-white text-xs font-bold tracking-[0.2em] uppercase py-5 transition-colors flex items-center justify-center gap-2"
                   >
-                    Enviar por WhatsApp
+                    <MessageCircle className="w-4 h-4" />
+                    Enviar mensaje por WhatsApp
                   </Button>
+                  <p className="text-stone-400 text-[10px] text-center mt-3 leading-relaxed">
+                    Al enviar, se abre WhatsApp con tu mensaje prellenado — solo confirma el envío.
+                  </p>
                 </div>
               </form>
             </motion.div>
