@@ -20,6 +20,33 @@ export const medicoEsteticosLinks = [
   { name: "Botox Full Face", href: "/servicios/botox-full-face" },
   { name: "Hilos Tensores", href: "/servicios/hilos-tensores" },
   { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
+  { name: "Ácido Hialurónico", href: "/servicios/acido-hialuronico" },
+  { name: "Biorevitalización", href: "/servicios/biorevitalizacion" },
+];
+
+export const tratamientosCorporalesLinks = [
+  { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
+  { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
+  { name: "Reducción de Medidas", href: "/servicios/reduccion-de-medidas" },
+  { name: "Emsculpt", href: "/servicios/emsculpt" },
+  { name: "Criolipólisis", href: "/servicios/criolipolisis" },
+  { name: "Drenaje Linfático", href: "/servicios/drenaje-linfatico" },
+  { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
+];
+
+export const tratamientosFacialesLinks = [
+  { name: "Tratamientos Faciales", href: "/servicios/faciales" },
+  { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
+  { name: "Peeling Químico", href: "/servicios/peeling-quimico" },
+  { name: "Hollywood Peel", href: "/servicios/hollywood-peel" },
+  { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
+  { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
+];
+
+export const tratamientosPiernasLinks = [
+  { name: "Varices y Arañas Vasculares", href: "/servicios/varices-aranas-vasculares" },
+  { name: "Cuidado de Piernas Cansadas", href: "/servicios/piernas-cansadas" },
+  { name: "Depilación Láser en Piernas", href: "/servicios/depilacion-laser" },
 ];
 
 export const servicePages: ServicePageData[] = [
@@ -666,6 +693,604 @@ export const servicePages: ServicePageData[] = [
         question: "¿Quién es buen candidato para los hilos tensores?",
         answer:
           "Personas entre 35 y 65 años con flacidez leve-moderada que quieren un resultado notable sin recurrir a la cirugía.",
+      },
+    ],
+  },
+
+  // ── CORPORALES NUEVOS ──────────────────────────────
+  {
+    slug: "reduccion-de-medidas",
+    name: "Reducción de Medidas",
+    tagline: "Moldea tu figura con tecnología de vanguardia",
+    heroDescription:
+      "En MJ Fisio Estética y Spa ofrecemos técnicas no invasivas de reducción de medidas y moldeamiento corporal para eliminar la adiposidad localizada y combatir la celulitis, sin importar tu edad.",
+    benefits: [
+      "Eliminación de grasa localizada sin cirugía",
+      "Reducción visible de la celulitis",
+      "Mejoría en la textura y firmeza de la piel",
+      "Sin tiempo de recuperación",
+      "Resultados progresivos y duraderos",
+    ],
+    items: [
+      {
+        title: "Tratamiento Reductor Integral",
+        description:
+          "Protocolo combinado de ultrasonidos, radiofrecuencia y drenaje linfático para reducir medidas y remodelar la silueta en zonas como abdomen, caderas y muslos.",
+        duration: "75 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Masaje Anticelulítico Intensivo",
+        description:
+          "Técnica de amasamiento profundo sobre las zonas de celulitis para mejorar la circulación local, la textura de la piel y la apariencia de la piel de naranja.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Vendas Frías Reductoras",
+        description:
+          "Aplicación de vendas con activos reductores y drenantes que potencian la pérdida de medidas en una sola sesión.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Electro-estimulación Corporal",
+        description:
+          "Combinación de corrientes musculares para tonificar, reducir y modelar distintas zonas del cuerpo de forma simultánea.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cuántas sesiones necesito para ver resultados?",
+        answer:
+          "Lo habitual es notar cambios desde la 3ª–4ª sesión. Para resultados óptimos se recomienda un protocolo de 10 a 15 sesiones, combinado con alimentación saludable.",
+      },
+      {
+        question: "¿El tratamiento es doloroso?",
+        answer:
+          "No, en general son tratamientos cómodos. Algunos pueden producir una sensación de calor o presión tolerable.",
+      },
+    ],
+  },
+  {
+    slug: "emsculpt",
+    name: "Emsculpt",
+    tagline: "Tonifica y esculpe sin esfuerzo",
+    heroDescription:
+      "Emsculpt utiliza energía radiomagnética de alta intensidad para estimular contracciones musculares supramáximas, quemando grasa y construyendo músculo de forma simultánea sin cirugía ni recuperación.",
+    benefits: [
+      "Quema grasa y tonifica músculo al mismo tiempo",
+      "Sin anestesia, sin agujas, sin recuperación",
+      "Resultados equivalentes a miles de contracciones por sesión",
+      "Aprobado y avalado por estudios clínicos",
+      "Apto para hombres y mujeres",
+    ],
+    items: [
+      {
+        title: "Emsculpt Abdominal",
+        description:
+          "Tratamiento enfocado en el core: endurece el abdomen y reduce la grasa abdominal localizada mediante impulsos electromagnéticos.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Emsculpt Glúteos",
+        description:
+          "Levanta, define y tonifica los glúteos de forma no invasiva. Equivalente a miles de sentadillas por sesión.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Emsculpt Brazos",
+        description:
+          "Tonifica bíceps y tríceps para marcar y definir los brazos sin ejercicio convencional.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Emsculpt Muslos",
+        description:
+          "Define la cara anterior y posterior del muslo, mejorando el contorno corporal general.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cuántas sesiones se recomiendan?",
+        answer:
+          "El protocolo estándar es de 4 sesiones en 2 semanas. Los resultados siguen mejorando durante semanas después del tratamiento.",
+      },
+      {
+        question: "¿Es seguro para todo el mundo?",
+        answer:
+          "Está contraindicado en personas con marcapasos, implantes metálicos en la zona de tratamiento, embarazo o enfermedades cardíacas. En la valoración previa evaluamos tu idoneidad.",
+      },
+    ],
+  },
+  {
+    slug: "criolipolisis",
+    name: "Criolipólisis",
+    tagline: "Elimina la grasa rebelde con frío controlado",
+    heroDescription:
+      "La criolipólisis es un tratamiento no invasivo que utiliza frío controlado para cristalizar y eliminar de forma definitiva las células grasas en zonas específicas del cuerpo, sin dañar la piel ni los tejidos circundantes.",
+    benefits: [
+      "Eliminación definitiva de células grasas",
+      "Sin cirugía, sin anestesia, sin cicatrices",
+      "Resultados visibles desde la 4ª–8ª semana",
+      "Tratamiento cómodo; puedes volver a tu rutina de inmediato",
+      "Reducción de hasta un 25% de grasa en la zona tratada",
+    ],
+    items: [
+      {
+        title: "Criolipólisis Abdominal",
+        description:
+          "Aplicación de frío controlado en la zona del abdomen para eliminar rolls y flotadores que no responden al ejercicio.",
+        duration: "60 min por zona",
+        price: "Consultar precio",
+      },
+      {
+        title: "Criolipólisis Flancos",
+        description:
+          "Tratamiento sobre los costados para eliminar la grasa acumulada en la zona del cinturón y reducir el contorno corporal.",
+        duration: "60 min por zona",
+        price: "Consultar precio",
+      },
+      {
+        title: "Criolipólisis Muslos Internos/Externos",
+        description:
+          "Elimina la grasa rebelde en la cara interna y externa de los muslos para mejorar el contorno de las piernas.",
+        duration: "60 min por zona",
+        price: "Consultar precio",
+      },
+      {
+        title: "Criolipólisis de Papada",
+        description:
+          "Tratamiento específico para reducir la papada y definir el óvalo facial sin procedimientos invasivos.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Duele el tratamiento?",
+        answer:
+          "Durante los primeros minutos se siente una intensa sensación de frío que desaparece rápidamente al adormecerse la zona. La sesión es muy cómoda una vez transcurridos los primeros minutos.",
+      },
+      {
+        question: "¿Cuándo se ven los resultados?",
+        answer:
+          "El cuerpo elimina las células tratadas de forma gradual. Los resultados empiezan a notarse entre 4 y 8 semanas, y el máximo efecto se alcanza a los 3 meses.",
+      },
+    ],
+  },
+  {
+    slug: "drenaje-linfatico",
+    name: "Drenaje Linfático",
+    tagline: "Elimina toxinas, activa tu circulación y reduce la retención",
+    heroDescription:
+      "El drenaje linfático manual y mecánico (presoterapia) estimula el sistema linfático para evacuar toxinas, líquidos retenidos y metabolitos, dejando el cuerpo más ligero, desinflamado y con mayor bienestar.",
+    benefits: [
+      "Reducción inmediata de la retención de líquidos",
+      "Mejora la circulación venosa y linfática",
+      "Disminuye la inflamación y la pesadez en piernas",
+      "Favorece la eliminación de toxinas",
+      "Refuerza el sistema inmunológico",
+    ],
+    items: [
+      {
+        title: "Drenaje Linfático Manual",
+        description:
+          "Técnica de masaje suave y rítmico sobre los ganglios linfáticos para activar el sistema de drenaje natural del cuerpo.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Presoterapia",
+        description:
+          "Tratamiento mediante botas o traje de presión que aplica una compresión neumática progresiva para drenar el exceso de líquido linfático.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Drenaje Linfático Post-operatorio",
+        description:
+          "Protocolo específico para acelerar la recuperación tras intervenciones estéticas o quirúrgicas, reduciendo edema, moretones y fibrosis.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cada cuánto se recomienda el drenaje linfático?",
+        answer:
+          "Para mantenimiento general, una vez al mes. Para recuperación post-quirúrgica o problemas de retención severa, puede indicarse 2–3 veces por semana inicialmente.",
+      },
+      {
+        question: "¿Tiene contraindicaciones?",
+        answer:
+          "Sí. Está contraindicado en infecciones agudas, trombosis, insuficiencia cardíaca y algunos tipos de cáncer. En la valoración previa evaluamos tu caso.",
+      },
+    ],
+  },
+
+  // ── FACIALES NUEVOS ────────────────────────────────
+  {
+    slug: "hollywood-peel",
+    name: "Hollywood Peel",
+    tagline: "Piel luminosa, uniforme y rejuvenecida en una sola sesión",
+    heroDescription:
+      "El Hollywood Peel, también conocido como Carbon Laser Peel, es un tratamiento láser no invasivo que revitaliza la piel, unifica el tono, reduce manchas y estimula la producción de colágeno para un aspecto más joven y radiante.",
+    benefits: [
+      "Unificación del tono de la piel desde la primera sesión",
+      "Reducción de manchas, líneas finas y cicatrices de acné",
+      "Estimulación del colágeno para una piel más joven",
+      "Sin tiempo de recuperación ni efectos secundarios",
+      "Apto para todos los tipos de piel",
+    ],
+    items: [
+      {
+        title: "Hollywood Peel Facial",
+        description:
+          "Aplicación de carbono líquido sobre el rostro y posterior tratamiento con láser para exfoliar, unificar el tono y estimular la renovación celular.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Hollywood Peel Cuello y Escote",
+        description:
+          "Extensión del tratamiento al cuello y escote para tratar manchas solares, envejecimiento y mejorar la textura en estas zonas.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Hollywood Peel + Radiofrecuencia",
+        description:
+          "Protocolo combinado para máximos resultados: exfoliación y rejuvenecimiento láser más radiofrecuencia para efecto tensor profundo.",
+        duration: "75 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Duele el Hollywood Peel?",
+        answer:
+          "No, el tratamiento es prácticamente indoloro. Puede notarse una ligera sensación de calor durante la aplicación del láser.",
+      },
+      {
+        question: "¿Con qué frecuencia se puede realizar?",
+        answer:
+          "Se recomienda una sesión mensual para mantenimiento. Para resultados más intensivos, se puede hacer cada 2–3 semanas.",
+      },
+    ],
+  },
+  {
+    slug: "eliminacion-manchas",
+    name: "Eliminación de Manchas",
+    tagline: "Recupera un tono de piel uniforme y luminoso",
+    heroDescription:
+      "Las manchas en la piel (melasma, manchas solares, hiperpigmentación) son tratadas con métodos de última generación que eliminan la pigmentación de forma segura y efectiva, devolviendo la uniformidad y luminosidad natural de tu piel.",
+    benefits: [
+      "Eliminación definitiva de manchas solares y melasma",
+      "Unificación del tono cutáneo",
+      "Piel más luminosa y uniforme",
+      "Tratamientos seguros y eficaces",
+      "Sin cicatrices ni efectos secundarios severos",
+    ],
+    items: [
+      {
+        title: "Tratamiento con Luz Pulsada (IPL)",
+        description:
+          "La luz pulsada intensa destruye selectivamente las células pigmentadas sin dañar los tejidos circundantes. Ideal para manchas solares y rojeces.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Peeling Despigmentante",
+        description:
+          "Combinación de ácidos específicos que actúan sobre la melanina para aclarar manchas y unificar progresivamente el tono de la piel.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Mesoterapia Despigmentante",
+        description:
+          "Microinfiltración de activos despigmentantes directamente en la zona afectada para resultados más rápidos y precisos.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Protocolo Antimelasma Completo",
+        description:
+          "Programa personalizado de varias sesiones que combina tratamientos en cabina con protocolo domiciliario para combatir el melasma de forma integral.",
+        duration: "Según protocolo",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cuántas sesiones son necesarias?",
+        answer:
+          "Depende del tipo y profundidad de la mancha. Las manchas superficiales pueden aclararse en 3–5 sesiones; el melasma requiere un tratamiento más prolongado y constante.",
+      },
+      {
+        question: "¿Debo usar protector solar?",
+        answer:
+          "Sí, es imprescindible. El uso de SPF 50+ a diario es parte fundamental del tratamiento y garantiza que no aparezcan nuevas manchas ni reaparezcan las tratadas.",
+      },
+    ],
+  },
+  {
+    slug: "radiofrecuencia-facial",
+    name: "Radiofrecuencia Facial",
+    tagline: "Reafirmación y rejuvenecimiento sin cirugía",
+    heroDescription:
+      "La radiofrecuencia facial es un tratamiento no invasivo que utiliza energía electromagnética para calentar las capas profundas de la piel, estimulando la producción de colágeno y elastina para un efecto tensor, reafirmante y rejuvenecedor visible.",
+    benefits: [
+      "Reafirmación y efecto lifting visible",
+      "Estimulación natural del colágeno y elastina",
+      "Reducción de arrugas y líneas de expresión",
+      "Sin cirugía, sin agujas, sin recuperación",
+      "Resultados que mejoran progresivamente",
+    ],
+    items: [
+      {
+        title: "Radiofrecuencia Facial Completa",
+        description:
+          "Tratamiento de todo el rostro para mejorar la firmeza, reducir la flacidez y atenuar arrugas de forma global.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Radiofrecuencia de Contorno",
+        description:
+          "Tratamiento focalizado en el óvalo facial, papada y cuello para definir y tensar la línea mandibular.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Radiofrecuencia Ocular",
+        description:
+          "Tratamiento específico para el contorno de ojos: suaviza las patas de gallo, reduce bolsas y ojeras y levanta el párpado caído.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Radiofrecuencia + Mesoterapia",
+        description:
+          "Protocolo combinado de máxima eficacia: la radiofrecuencia abre canales en la piel que potencian la absorción de activos de la mesoterapia.",
+        duration: "75 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cuándo se notan los resultados?",
+        answer:
+          "Se aprecia una mejoría inmediata tras la primera sesión. Los mejores resultados se obtienen a partir de la 4ª–6ª sesión y siguen mejorando semanas después.",
+      },
+      {
+        question: "¿Es dolorosa?",
+        answer:
+          "No. La sensación es de calor agradable y confortable. Es un tratamiento muy relajante que muchas clientas comparan con un masaje cálido.",
+      },
+    ],
+  },
+
+  // ── PIERNAS ────────────────────────────────────────
+  {
+    slug: "varices-aranas-vasculares",
+    name: "Varices y Arañas Vasculares",
+    tagline: "Recupera unas piernas sanas, ligeras y estéticas",
+    heroDescription:
+      "Las varices y arañas vasculares son dilataciones de los vasos sanguíneos que afectan la estética y, en algunos casos, la salud de las piernas. En MJ Fisio Estética y Spa ofrecemos tratamientos efectivos para eliminarlas o reducirlas de forma segura.",
+    benefits: [
+      "Eliminación o reducción visible de varices y telangiectasias",
+      "Mejoría de la circulación y la pesadez en piernas",
+      "Procedimientos mínimamente invasivos",
+      "Sin tiempo de recuperación prolongado",
+      "Resultados estéticos y funcionales",
+    ],
+    items: [
+      {
+        title: "Escleroterapia",
+        description:
+          "Técnica estándar para el tratamiento de varices y arañas vasculares: se inyecta un agente esclerosante que provoca la fibro-obliteración del vaso afectado.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Tratamiento con Luz Pulsada (IPL) Vascular",
+        description:
+          "La luz pulsada intensa actúa sobre los vasos dilatados destruyendo selectivamente la hemoglobina para cerrar las arañas vasculares superficiales.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Mesoterapia Vascular",
+        description:
+          "Microinyecciones de activos vasoprotectores y circulatorios para mejorar la microcirculación y reducir la fragilidad capilar.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Drenaje Linfático + Presoterapia",
+        description:
+          "Combinación de técnicas de drenaje para aliviar la pesadez, la hinchazón y la mala circulación asociada a varices y piernas cansadas.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿La escleroterapia es dolorosa?",
+        answer:
+          "El pinchazo es leve. Puede notarse una pequeña quemazón momentánea al aplicar el esclerosante. En general es un procedimiento muy bien tolerado.",
+      },
+      {
+        question: "¿Cuántas sesiones necesito?",
+        answer:
+          "Depende de la extensión y el tipo de varices. Las arañas vasculares suelen necesitar 2–4 sesiones; las varices más pronunciadas pueden requerir más sesiones o complementarse con otros tratamientos.",
+      },
+    ],
+  },
+  {
+    slug: "piernas-cansadas",
+    name: "Cuidado de Piernas Cansadas",
+    tagline: "Piernas ligeras, activas y sin pesadez",
+    heroDescription:
+      "La sensación de pesadez, hinchazón y cansancio en las piernas es muy frecuente y puede mejorar significativamente con tratamientos especializados que activan la circulación y el drenaje linfático.",
+    benefits: [
+      "Alivio inmediato de la pesadez y el dolor",
+      "Reducción de la hinchazón en piernas y tobillos",
+      "Mejora de la circulación venosa y linfática",
+      "Tratamientos relajantes y no invasivos",
+      "Prevención de varices y retención de líquidos",
+    ],
+    items: [
+      {
+        title: "Masaje Circulatorio de Piernas",
+        description:
+          "Masaje específico que activa la circulación venosa de retorno y favorece el drenaje de toxinas acumuladas en las piernas.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Presoterapia de Piernas",
+        description:
+          "Botas de presión neumática que comprimen y descomprimen las piernas de forma progresiva para estimular el drenaje linfático y venoso.",
+        duration: "40 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Electro-estimulación Circulatoria",
+        description:
+          "Corrientes de baja frecuencia que activan los músculos de la pantorrilla, mejorando el retorno venoso y reduciendo la sensación de pesadez.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Protocolo Completo Piernas Cansadas",
+        description:
+          "Sesión combinada de presoterapia, masaje circulatorio y aplicación de activos vasotónicos para un resultado global y duradero.",
+        duration: "90 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Con qué frecuencia debo hacer el tratamiento?",
+        answer:
+          "Para mantenimiento, una sesión semanal o quincenal. En épocas de mayor estrés circulatorio (verano, trabajo de pie) se puede intensificar la frecuencia.",
+      },
+    ],
+  },
+
+  // ── MÉDICOS ESTÉTICOS NUEVOS ───────────────────────
+  {
+    slug: "acido-hialuronico",
+    name: "Ácido Hialurónico",
+    tagline: "Volumen, hidratación y relleno natural",
+    heroDescription:
+      "El ácido hialurónico es un componente natural de la piel que se reduce con la edad. Su aplicación mediante infiltración restituye el volumen perdido, rellena arrugas profundas y mejora la hidratación cutánea de forma natural y duradera.",
+    benefits: [
+      "Resultados inmediatos y de aspecto completamente natural",
+      "Relleno de arrugas y recuperación de volúmenes faciales",
+      "Sin cirugía; procedimiento mínimamente invasivo",
+      "Producto biodegradable y reabsorbible",
+      "Efecto hidratante profundo desde dentro",
+    ],
+    items: [
+      {
+        title: "Relleno de Surcos Nasogenianos",
+        description:
+          "Suavizado de los pliegues entre nariz y comisuras labiales (arrugas de amargura) para un aspecto más descansado y joven.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Relleno de Ojeras",
+        description:
+          "Corrección del surco lagrimal y la ojera hundida para eliminar el aspecto de cansancio y oscurecer la zona periocular.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Hidratación Profunda con Bioestimuladores",
+        description:
+          "Ácido hialurónico de baja densidad infiltrado en múltiples puntos para mejorar la hidratación, luminosidad y calidad de la piel.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Remodelación del Óvalo Facial",
+        description:
+          "Aumento y definición de pómulos, mentón y mandíbula mediante rellenos estratégicos para un efecto lifting no quirúrgico.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cuánto dura el ácido hialurónico?",
+        answer:
+          "Depende de la zona y el producto utilizado. Por norma general dura entre 9 y 18 meses en zonas estáticas como los pómulos, y algo menos en zonas con mayor movimiento como los labios.",
+      },
+      {
+        question: "¿El resultado es natural?",
+        answer:
+          "Sí, cuando es aplicado por un profesional capacitado. El objetivo es realzar los rasgos propios sin alterar la expresión natural.",
+      },
+    ],
+  },
+  {
+    slug: "biorevitalizacion",
+    name: "Biorevitalización",
+    tagline: "Revitaliza tu piel desde dentro",
+    heroDescription:
+      "La biorevitalización es un tratamiento médico estético que consiste en la infiltración de vitaminas, aminoácidos, oligoelementos y ácido hialurónico no reticulado directamente en la dermis para restaurar la vitalidad, elasticidad y luminosidad de la piel.",
+    benefits: [
+      "Mejora visible de la calidad y textura de la piel",
+      "Aumento de la luminosidad y el tono cutáneo",
+      "Hidratación profunda y duradera",
+      "Estimulación natural del colágeno",
+      "Apto para cara, cuello, escote y manos",
+    ],
+    items: [
+      {
+        title: "Biorevitalización Facial",
+        description:
+          "Infiltración de cocktail vitamínico y ácido hialurónico no reticulado en cara y cuello para restaurar la luminosidad y vitalidad de la piel.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Biorevitalización de Cuello y Escote",
+        description:
+          "Tratamiento específico para rejuvenecer y mejorar la calidad de la piel del cuello y el escote, zonas que suelen envejecer antes.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Biorevitalización de Manos",
+        description:
+          "Las manos son una de las zonas que más delatan la edad. Este tratamiento restaura la hidratación, el volumen y la textura de la piel de las manos.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cuántas sesiones son necesarias?",
+        answer:
+          "Para resultados óptimos se recomiendan 3–4 sesiones con 2–3 semanas de separación, seguidas de sesiones de mantenimiento cada 3–6 meses.",
+      },
+      {
+        question: "¿Hay tiempo de recuperación?",
+        answer:
+          "Pueden aparecer pequeñas ronchas o enrojecimiento en los puntos de infiltración que desaparecen en pocas horas. No impide realizar las actividades habituales.",
       },
     ],
   },

@@ -10,6 +10,9 @@ import MedicosEsteticos from "@/pages/MedicosEsteticos";
 import Nosotros from "@/pages/Nosotros";
 import Testimonios from "@/pages/Testimonios";
 import BuzonSugerencias from "@/pages/BuzonSugerencias";
+import TratamientosCorporales from "@/pages/TratamientosCorporales";
+import TratamientosFaciales from "@/pages/TratamientosFaciales";
+import TratamientosPiernas from "@/pages/TratamientosPiernas";
 import { servicePages } from "@/data/services";
 
 const queryClient = new QueryClient();
@@ -23,6 +26,9 @@ function Router() {
       <Route path="/nosotros" component={Nosotros} />
       <Route path="/testimonios" component={Testimonios} />
       <Route path="/buzon-sugerencias" component={BuzonSugerencias} />
+      <Route path="/tratamientos/corporales" component={TratamientosCorporales} />
+      <Route path="/tratamientos/faciales" component={TratamientosFaciales} />
+      <Route path="/tratamientos/piernas" component={TratamientosPiernas} />
       {servicePages.map((service) => (
         <Route
           key={service.slug}

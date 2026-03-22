@@ -3,18 +3,29 @@ import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
-import { medicoEsteticosLinks } from "@/data/services";
+import {
+  medicoEsteticosLinks,
+  tratamientosCorporalesLinks,
+  tratamientosFacialesLinks,
+  tratamientosPiernasLinks,
+} from "@/data/services";
 
-const serviceLinks = [
-  { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
-  { name: "Faciales", href: "/servicios/faciales" },
-  { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
-  { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
-  { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
-  { name: "Peeling Químico", href: "/servicios/peeling-quimico" },
-  { name: "Botox Full Face", href: "/servicios/botox-full-face" },
-  { name: "Relleno de Labios", href: "/servicios/relleno-de-labios" },
-  { name: "Hilos Tensores", href: "/servicios/hilos-tensores" },
+const serviceCategoryLinks = [
+  {
+    category: "Corporales",
+    categoryHref: "/tratamientos/corporales",
+    links: tratamientosCorporalesLinks.slice(0, 5),
+  },
+  {
+    category: "Faciales",
+    categoryHref: "/tratamientos/faciales",
+    links: tratamientosFacialesLinks.slice(0, 4),
+  },
+  {
+    category: "Piernas",
+    categoryHref: "/tratamientos/piernas",
+    links: tratamientosPiernasLinks,
+  },
 ];
 
 const navLinks = [
@@ -152,22 +163,33 @@ export function Navbar() {
                     exit={{ opacity: 0, y: 8, scale: 0.97 }}
                     transition={{ duration: 0.18, ease: "easeOut" }}
                     onMouseLeave={() => setIsServicesOpen(false)}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[520px] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden z-50"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[580px] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden z-50"
                   >
-                    <div className="px-5 pt-4 pb-2">
-                      <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-3">
+                    <div className="px-5 pt-4 pb-3">
+                      <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-4">
                         Nuestros Servicios
                       </p>
-                      <div className="grid grid-cols-3 gap-x-4 gap-y-1">
-                        {serviceLinks.map((link) => (
-                          <Link
-                            key={link.name}
-                            href={link.href}
-                            className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
-                            onClick={() => setIsServicesOpen(false)}
-                          >
-                            {link.name}
-                          </Link>
+                      <div className="grid grid-cols-3 gap-x-6 gap-y-0">
+                        {serviceCategoryLinks.map((cat) => (
+                          <div key={cat.category}>
+                            <Link
+                              href={cat.categoryHref}
+                              className="block px-3 py-1.5 text-xs font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded-lg mb-1 transition-colors"
+                              onClick={() => setIsServicesOpen(false)}
+                            >
+                              {cat.category} →
+                            </Link>
+                            {cat.links.map((link) => (
+                              <Link
+                                key={link.name}
+                                href={link.href}
+                                className="block px-3 py-1.5 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
+                                onClick={() => setIsServicesOpen(false)}
+                              >
+                                {link.name}
+                              </Link>
+                            ))}
+                          </div>
                         ))}
                       </div>
                       <div className="border-t border-border mt-3 pt-3 pb-1">
@@ -341,26 +363,27 @@ export function Navbar() {
                       className="overflow-hidden"
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
-                        {serviceLinks.map((link) => (
-                          <Link
-                            key={link.name}
-                            href={link.href}
-                            className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
-                            onClick={() => {
-                              setIsMobileMenuOpen(false);
-                              setIsMobileServicesOpen(false);
-                            }}
-                          >
-                            {link.name}
-                          </Link>
+                        {serviceCategoryLinks.map((cat) => (
+                          <div key={cat.category} className="mb-2">
+                            <Link
+                              href={cat.categoryHref}
+                              className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
+                              onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
+                            >
+                              {cat.category} →
+                            </Link>
+                            {cat.links.slice(0, 3).map((link) => (
+                              <Link
+                                key={link.name}
+                                href={link.href}
+                                className="block py-1.5 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
+                                onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
+                              >
+                                {link.name}
+                              </Link>
+                            ))}
+                          </div>
                         ))}
-                        <a
-                          href="/#servicios"
-                          className="block py-2 text-base text-primary font-semibold"
-                          onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                          Ver todos →
-                        </a>
                       </div>
                     </motion.div>
                   )}

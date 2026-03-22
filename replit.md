@@ -94,3 +94,36 @@ Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHea
 ### `scripts` (`@workspace/scripts`)
 
 Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.
+
+### `artifacts/mj-spa` (`@workspace/mj-spa`)
+
+React + Vite frontend-only website for **MJ Fisio Estética y Spa** (Turrialba, Costa Rica). No backend — all booking via WhatsApp.
+
+**Design:** Bold serif typography, dark hero sections, alternating light/dark sections, primary rose/mauve color, inspired by consultoriocardenas.com and wellclinicleon.com.
+
+**WhatsApp CTA:** `https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0`
+
+**Key pages:**
+- `/` — Home with 3-slide auto-advancing hero, stats bar, intro banner, services preview, testimonials
+- `/nosotros` — About page
+- `/testimonios` — 25 testimonials
+- `/contacto` — Contact page
+- `/buzon-sugerencias` — Suggestions form
+- `/tratamientos/corporales` — Category page: corporal treatments (7+)
+- `/tratamientos/faciales` — Category page: facial treatments (6+)
+- `/tratamientos/piernas` — Category page: leg treatments (3)
+- `/medicos-esteticos` — Medical aesthetics page (Botox, fillers, nutrition, etc.)
+- `/servicios/:slug` — Individual service pages (generated from `services.ts`)
+
+**Navbar structure:**
+- Servicios dropdown: 3-column layout (Corporales / Faciales / Piernas) with category links + service sub-links
+- Médicos y Estéticos dropdown: 6 medical/aesthetic services
+
+**Key files:**
+- `src/data/services.ts` — All service definitions + category link arrays (`serviceCategoryLinks`, `medicoEsteticosLinks`)
+- `src/pages/ServicePage.tsx` — Generic service detail page template
+- `src/pages/TratamientosCorporales|Faciales|Piernas.tsx` — Category hub pages
+- `src/components/layout/Navbar.tsx` — Transparent-on-hero, white-on-scroll with dropdown menus
+- `src/components/Breadcrumb.tsx` — Auto-prepends "Inicio" home link
+- `public/sitemap.xml`, `public/robots.txt` — SEO files
+- `index.html` — Schema.org JSON-LD for the business
