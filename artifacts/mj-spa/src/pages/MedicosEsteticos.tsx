@@ -18,6 +18,12 @@ const descriptions: Record<string, string> = {
     "Lifting no quirúrgico con hilos reabsorbibles que devuelven firmeza y tensión a la piel estimulando la producción de colágeno.",
   "trasplante-capilar":
     "Solución definitiva para la alopecia con técnicas mínimamente invasivas, resultados permanentes y aspecto completamente natural.",
+  "implante-barba":
+    "Técnica de trasplante capilar facial para obtener una barba densa, uniforme y completamente natural adaptada a tu estructura facial.",
+  "mesoterapia-capilar":
+    "Microinyecciones de vitaminas, minerales y factores de crecimiento directamente en el cuero cabelludo para frenar la caída y estimular el crecimiento.",
+  "rellenos-labios":
+    "Relleno con ácido hialurónico para dar volumen, definir el contorno y rejuvenecer los labios con un resultado natural y duradero.",
 };
 
 const icons: Record<string, string> = {
@@ -25,6 +31,9 @@ const icons: Record<string, string> = {
   "botox-full-face": "💉",
   "hilos-tensores": "✨",
   "trasplante-capilar": "💆",
+  "implante-barba": "🧔",
+  "mesoterapia-capilar": "💊",
+  "rellenos-labios": "👄",
 };
 
 export default function MedicosEsteticos() {

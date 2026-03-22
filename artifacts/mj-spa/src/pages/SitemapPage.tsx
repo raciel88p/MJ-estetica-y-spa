@@ -75,6 +75,9 @@ const sections = [
       { name: "Hilos Tensores", href: "/servicios/hilos-tensores" },
       { name: "Nutrición", href: "/servicios/nutricion" },
       { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
+      { name: "Implante de Barba", href: "/servicios/implante-barba" },
+      { name: "Mesoterapia Capilar", href: "/servicios/mesoterapia-capilar" },
+      { name: "Rellenos de Labios", href: "/servicios/rellenos-labios" },
     ],
   },
 ];

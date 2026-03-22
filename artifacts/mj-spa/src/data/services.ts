@@ -23,6 +23,9 @@ export const medicoEsteticosLinks = [
   { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
   { name: "Ácido Hialurónico", href: "/servicios/acido-hialuronico" },
   { name: "Biorevitalización", href: "/servicios/biorevitalizacion" },
+  { name: "Implante de Barba", href: "/servicios/implante-barba" },
+  { name: "Mesoterapia Capilar", href: "/servicios/mesoterapia-capilar" },
+  { name: "Rellenos de Labios", href: "/servicios/rellenos-labios" },
 ];
 
 export const tratamientosCorporalesLinks = [
@@ -1877,6 +1880,177 @@ export const servicePages: ServicePageData[] = [
         question: "¿Cuántas sesiones recomienda para preparar una competencia?",
         answer:
           "Generalmente entre 8 y 12 sesiones distribuidas en las semanas previas al evento. Diseñamos un calendario personalizado según la fecha de tu competencia y la categoría en la que participas.",
+      },
+    ],
+  },
+
+  // ── IMPLANTE DE BARBA ───────────────────────────────
+  {
+    slug: "implante-barba",
+    name: "Implante de Barba",
+    tagline: "Barba densa, uniforme y completamente natural sin cirugía agresiva",
+    heroDescription:
+      "El implante de barba es la solución definitiva para hombres que desean una barba completa, uniforme y con aspecto 100% natural. Mediante técnicas de trasplante capilar facial de última generación, redistribuimos folículos de zonas donantes hacia las áreas con escasez de vello para crear una barba permanente y de diseño personalizado.",
+    benefits: [
+      "Barba densa y uniforme de por vida, sin mantenimiento especial",
+      "Diseño personalizado adaptado a tu estructura facial y preferencias",
+      "Técnica mínimamente invasiva con recuperación rápida",
+      "Resultados completamente naturales e imperceptibles",
+      "Solución permanente para alopecia barba y zonas irregulares",
+      "Procedimiento ambulatorio realizado por especialistas certificados",
+    ],
+    items: [
+      {
+        title: "Implante de Barba Completa",
+        description:
+          "Trasplante de folículos capilares en toda la zona de la barba — mentón, mandíbula, mejillas y bigote — para conseguir un aspecto completo y uniforme. Diseñamos la forma y densidad ideal según tu fisonomía.",
+        duration: "4-6 h",
+        price: "Consultar precio",
+      },
+      {
+        title: "Relleno de Zonas Específicas",
+        description:
+          "Intervención focalizada en áreas concretas con escasez de vello — entradas del bigote, calvas en mejillas o zonas irregulares — para uniformar y completar la barba existente.",
+        duration: "2-3 h",
+        price: "Consultar precio",
+      },
+      {
+        title: "Diseño y Definición de Contorno",
+        description:
+          "Implante preciso en el contorno de la barba y la perilla para crear líneas definidas, simétricas y con el aspecto que deseas. Ideal para quienes tienen barba pero sin definición de bordes.",
+        duration: "2 h",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿El implante de barba es permanente?",
+        answer:
+          "Sí. Los folículos trasplantados son de zonas donantes resistentes y crecen de por vida. A los 3-4 meses empiezas a ver el crecimiento definitivo y a los 12 meses el resultado es completo y permanente.",
+      },
+      {
+        question: "¿Cuánto tiempo tarda la recuperación?",
+        answer:
+          "La zona tratada puede presentar pequeñas costras durante 7-10 días. La mayoría de los pacientes retoman su actividad normal en 3-5 días. Se deben evitar actividades de alto impacto durante la primera semana.",
+      },
+      {
+        question: "¿Se nota que es un implante?",
+        answer:
+          "No. Los folículos se implantan uno a uno con ángulos y direcciones que imitan el crecimiento natural del vello. El resultado es completamente indistinguible de una barba natural.",
+      },
+    ],
+  },
+
+  // ── MESOTERAPIA CAPILAR ─────────────────────────────
+  {
+    slug: "mesoterapia-capilar",
+    name: "Mesoterapia Capilar",
+    tagline: "Frena la caída y activa el crecimiento del cabello desde la raíz",
+    heroDescription:
+      "La mesoterapia capilar es uno de los tratamientos más eficaces y seguros para combatir la caída del cabello y estimular su crecimiento. Mediante microinyecciones de vitaminas, minerales, aminoácidos y factores de crecimiento directamente en el cuero cabelludo, nutrimos los folículos y reactivamos su función de forma natural y sin efectos secundarios.",
+    benefits: [
+      "Frena la caída del cabello desde las primeras sesiones",
+      "Estimula el crecimiento de cabello nuevo y refuerza el existente",
+      "Nutre directamente los folículos capilares desde la raíz",
+      "Mejora la circulación del cuero cabelludo y oxigenación folicular",
+      "Sin efectos secundarios sistémicos — acción local y precisa",
+      "Compatible con otros tratamientos capilares y medicamentos",
+    ],
+    items: [
+      {
+        title: "Mesoterapia con Vitaminas y Minerales",
+        description:
+          "Microinyecciones de un cóctel rico en biotina, zinc, silicio, vitaminas del grupo B y aminoácidos esenciales que nutren los folículos debilitados y mejoran la calidad del cabello existente.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Mesoterapia con PRP (Plasma Rico en Plaquetas)",
+        description:
+          "Combinación de mesoterapia con tu propio plasma sanguíneo enriquecido en factores de crecimiento. Estimulación biológica máxima de los folículos capilares para resultados acelerados.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Protocolo Intensivo Anticaída",
+        description:
+          "Ciclo completo de 8 sesiones de mesoterapia capilar con seguimiento fotográfico y ajuste de la fórmula según la respuesta. El protocolo más completo para casos de caída intensa o alopecia incipiente.",
+        duration: "30 min/sesión",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cuántas sesiones son necesarias para ver resultados?",
+        answer:
+          "La reducción de caída se nota ya en las primeras 3-4 sesiones. El crecimiento de cabello nuevo es visible a partir de la sesión 6-8. Recomendamos un ciclo inicial de 8-10 sesiones semanales, seguido de mantenimiento mensual.",
+      },
+      {
+        question: "¿Es dolorosa la mesoterapia capilar?",
+        answer:
+          "Las microinyecciones producen una sensación mínima comparable a pequeños pellizcos. Aplicamos anestesia tópica si el paciente lo prefiere para garantizar la mayor comodidad posible.",
+      },
+      {
+        question: "¿Para qué tipos de alopecia es eficaz?",
+        answer:
+          "Es especialmente eficaz para la alopecia androgénica incipiente, alopecia difusa por estrés o carencias nutricionales, y cabello debilitado. No sustituye al trasplante capilar en casos de alopecia avanzada, pero puede complementarlo.",
+      },
+    ],
+  },
+
+  // ── RELLENOS DE LABIOS ──────────────────────────────
+  {
+    slug: "rellenos-labios",
+    name: "Rellenos de Labios",
+    tagline: "Labios con volumen, contorno definido y aspecto completamente natural",
+    heroDescription:
+      "Los rellenos de labios con ácido hialurónico son el tratamiento estrella para conseguir labios con más volumen, mejor definición y un aspecto rejuvenecido. Utilizamos las mejores marcas de ácido hialurónico de alta densidad para lograr resultados naturales, duraderos y completamente seguros. El resultado habla por sí solo: labios de ensueño sin exageraciones.",
+    benefits: [
+      "Volumen natural y proporcional adaptado a tu rostro",
+      "Contorno labial perfectamente definido y simétrico",
+      "Hidratación profunda y labios más suaves desde el primer día",
+      "Resultado visible inmediato y duradero hasta 12 meses",
+      "Técnica precisa que evita el efecto exagerado o artificial",
+      "Producto biocompatible y reabsorbible — completamente seguro",
+    ],
+    items: [
+      {
+        title: "Relleno de Volumen Labial",
+        description:
+          "Aplicación de ácido hialurónico en el cuerpo de los labios para aumentar el volumen de forma natural y proporcional. Diseñamos el aumento según tus proporciones faciales para un resultado armonioso.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Definición de Contorno Labial",
+        description:
+          "Relleno preciso en el vermillón y el borde labial para crear un contorno nítido, simétrico y perfectamente definido. Ideal si tus labios tienen buen volumen pero falta de definición o asimetría.",
+        duration: "25 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Tratamiento Completo Volumen + Contorno",
+        description:
+          "Diseño labial integral que combina el relleno de volumen con la definición del contorno para conseguir el resultado más completo. Incluye la corrección de asimetrías y la proyección del arco de cupido.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cuánto dura el efecto del relleno de labios?",
+        answer:
+          "Dependiendo del tipo de ácido hialurónico utilizado y el metabolismo de cada persona, el efecto dura entre 6 y 12 meses. Se recomienda una sesión de retoque para mantener el resultado óptimo.",
+      },
+      {
+        question: "¿Es doloroso el tratamiento?",
+        answer:
+          "Aplicamos crema anestésica tópica antes del procedimiento para minimizar las molestias. La mayoría de las pacientes lo describen como muy tolerable — solo una pequeña presión durante las inyecciones.",
+      },
+      {
+        question: "¿Se puede ver el resultado inmediatamente?",
+        answer:
+          "Sí, el resultado es visible desde el momento del tratamiento. Los labios pueden presentar una leve inflamación durante 24-48 horas que potencia inicialmente el volumen. El resultado definitivo se aprecia a los 7-10 días.",
       },
     ],
   },

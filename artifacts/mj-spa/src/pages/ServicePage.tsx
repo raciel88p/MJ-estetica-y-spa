@@ -43,6 +43,9 @@ const beforeDescMap: Record<string, string[]> = {
   "trasplante-capilar":        ["Alopecia progresiva con zonas sin densidad capilar", "Pérdida de confianza y autoestima por la caída del cabello", "Entradas, coronilla visible y frente que retrocede con el tiempo"],
   "acido-hialuronico":         ["Pérdida de volumen facial y surcos nasogeniacos profundos", "Labios finos y asimétricos que proyectan vejez", "Ojeras profundas y pómulos hundidos que envejecen el rostro"],
   "biorevitalizacion":         ["Piel deshidratada, sin luminosidad y con pérdida de firmeza difusa", "Arrugas finas y textura irregular que cremas no corrigen", "Aspecto apagado y sin vitalidad que no mejora con cosmética habitual"],
+  "implante-barba":            ["Barba irregular, con calvas y sin densidad uniforme", "Incapacidad de conseguir un aspecto masculino definido con barba natural", "Falta de confianza por una barba escasa que no crece en zonas clave"],
+  "mesoterapia-capilar":       ["Caída de cabello progresiva y difusa que no se detiene", "Cabello sin densidad, fino y sin vitalidad", "Cuero cabelludo con poca circulación y folículos debilitados"],
+  "rellenos-labios":           ["Labios finos, asimétricos o con pérdida de volumen por la edad", "Contorno labial difuminado que envejece el tercio inferior del rostro", "Inseguridad al hablar o sonreír por la apariencia de los labios"],
 };
 
 const fadeUp = {
@@ -86,6 +89,9 @@ const heroBgMap: Record<string, string> = {
   "trasplante-capilar":        "trasplante-capilar-bg.png",
   "acido-hialuronico":         "acido-hialuronico-bg.png",
   "biorevitalizacion":         "biorevitalizacion-bg.png",
+  "implante-barba":            "trasplante-capilar-bg.png",
+  "mesoterapia-capilar":       "trasplante-capilar-bg.png",
+  "rellenos-labios":           "acido-hialuronico-bg.png",
 };
 
 const serviceCategoryMap: Record<string, { name: string; href: string }> = {
@@ -113,6 +119,9 @@ const serviceCategoryMap: Record<string, { name: string; href: string }> = {
   "tratamiento-anticelulitis": { name: "Tratamientos de Piernas", href: "/tratamientos/piernas"    },
   "varices-aranas-vasculares": { name: "Tratamientos de Piernas", href: "/tratamientos/piernas"    },
   "piernas-cansadas":          { name: "Tratamientos de Piernas", href: "/tratamientos/piernas"    },
+  "implante-barba":            { name: "Médicos y Estéticos",     href: "/medicos-esteticos"        },
+  "mesoterapia-capilar":       { name: "Médicos y Estéticos",     href: "/medicos-esteticos"        },
+  "rellenos-labios":           { name: "Médicos y Estéticos",     href: "/medicos-esteticos"        },
 };
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {
