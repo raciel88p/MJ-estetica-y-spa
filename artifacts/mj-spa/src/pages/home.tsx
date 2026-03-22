@@ -343,7 +343,7 @@ export default function Home() {
       </section>
 
       {/* ══ SERVICE CATEGORIES ═════════════════════════ */}
-      <section id="servicios" className="bg-stone-950">
+      <section id="servicios" className="bg-[#08293c]">
         {/* Section header */}
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-20 md:pt-28 pb-14">
           <motion.div
@@ -447,7 +447,7 @@ export default function Home() {
       </section>
 
       {/* ══ FEATURED TREATMENTS LIST ═══════════════════ */}
-      <section className="bg-stone-950">
+      <section className="bg-[#08293c]">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-20 md:py-28">
           {/* Header */}
           <motion.div
@@ -546,7 +546,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-serif font-light italic text-stone-300 leading-tight mb-9">
                 y Spa
               </h2>
-              <p className="text-stone-500 text-sm leading-relaxed mb-10">
+              <p className="text-[#7FBCD2]/60 text-sm leading-relaxed mb-10">
                 En MJ Fisio Estética y Spa hemos creado un espacio donde la salud, la belleza
                 y el bienestar se unen. Combinamos la calidez de un trato cercano con la excelencia
                 de profesionales altamente cualificados y tecnología de vanguardia, en el corazón
@@ -561,7 +561,7 @@ export default function Home() {
                     </span>
                     <div>
                       <p className="text-stone-900 font-semibold text-sm mb-1">{f.title}</p>
-                      <p className="text-stone-500 text-sm leading-relaxed">{f.desc}</p>
+                      <p className="text-[#7FBCD2]/60 text-sm leading-relaxed">{f.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -582,7 +582,7 @@ export default function Home() {
         className="relative py-36 overflow-hidden bg-cover bg-center"
         style={{ backgroundImage: `url(${BASE}images/spa-texture.png)` }}
       >
-        <div className="absolute inset-0 bg-stone-900/90" />
+        <div className="absolute inset-0 bg-[#0c3e5a]/90" />
         {/* Decorative lines */}
         <div className="absolute left-0 top-0 bottom-0 w-px bg-white/5 ml-16 hidden lg:block" />
         <div className="absolute right-0 top-0 bottom-0 w-px bg-white/5 mr-16 hidden lg:block" />
@@ -602,7 +602,7 @@ export default function Home() {
             <h2 className="text-5xl md:text-7xl font-serif font-light italic text-white/40 leading-none mb-10">
               Transformación
             </h2>
-            <p className="text-stone-400 text-sm mb-12 leading-relaxed max-w-md mx-auto">
+            <p className="text-[#7FBCD2]/70 text-sm mb-12 leading-relaxed max-w-md mx-auto">
               Estamos en Turrialba, Ciudadela Jorge de Bravo. Escríbenos por WhatsApp y agendamos tu cita sin compromiso.
             </p>
             <a
@@ -629,11 +629,11 @@ export default function Home() {
               <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">TESTIMONIOS</p>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight">
                 Lo que dicen<br />
-                <span className="font-light italic text-stone-400">nuestras clientas</span>
+                <span className="font-light italic text-[#7FBCD2]/70">nuestras clientas</span>
               </h2>
             </div>
             <Link href="/testimonios">
-              <span className="text-xs font-bold text-stone-400 hover:text-primary transition-colors cursor-pointer tracking-[0.2em] uppercase whitespace-nowrap">
+              <span className="text-xs font-bold text-[#7FBCD2]/70 hover:text-primary transition-colors cursor-pointer tracking-[0.2em] uppercase whitespace-nowrap">
                 Ver todos →
               </span>
             </Link>
@@ -642,7 +642,7 @@ export default function Home() {
           {/* Featured testimonial */}
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-            className="relative bg-stone-950 p-10 md:p-14 mb-1 overflow-hidden"
+            className="relative bg-[#08293c] p-10 md:p-14 mb-1 overflow-hidden"
           >
             {/* Brand accent stripe */}
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-primary" />
@@ -690,7 +690,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-stone-900 text-sm font-bold">{t.name}</p>
-                    <p className="text-stone-400 text-xs tracking-widest uppercase mt-0.5">Clienta</p>
+                    <p className="text-[#7FBCD2]/70 text-xs tracking-widest uppercase mt-0.5">Clienta</p>
                   </div>
                 </div>
               </motion.div>
@@ -700,7 +700,7 @@ export default function Home() {
       </section>
 
       {/* ══ LOCATION + GOOGLE MAPS ═════════════════════ */}
-      <section id="ubicacion" className="bg-stone-900">
+      <section id="ubicacion" className="bg-[#0c3e5a]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2">
 
@@ -762,7 +762,7 @@ export default function Home() {
               </div>
 
               {/* Google Business CTAs */}
-              <div className="border-t border-stone-800 pt-8 flex flex-col sm:flex-row gap-3">
+              <div className="border-t border-[#1a4f6e] pt-8 flex flex-col sm:flex-row gap-3">
                 <a
                   href={MAPS_LINK}
                   target="_blank"
@@ -812,7 +812,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-serif font-light italic text-stone-300 leading-tight mb-10">
                 de bienestar
               </h2>
-              <p className="text-stone-400 text-sm leading-relaxed mb-12">
+              <p className="text-[#7FBCD2]/70 text-sm leading-relaxed mb-12">
                 Contáctanos directamente por WhatsApp o completa el formulario y te respondemos a la brevedad.
               </p>
 
@@ -831,7 +831,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-stone-700 group-hover:text-primary">Escribir por WhatsApp</p>
-                    <p className="text-stone-400 text-xs mt-0.5">Respuesta inmediata</p>
+                    <p className="text-[#7FBCD2]/70 text-xs mt-0.5">Respuesta inmediata</p>
                   </div>
                   <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-primary ml-auto group-hover:translate-x-1 transition-all" />
                 </a>
@@ -844,7 +844,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-stone-700 group-hover:text-primary">Llamar ahora</p>
-                    <p className="text-stone-400 text-xs mt-0.5">+506 86907757</p>
+                    <p className="text-[#7FBCD2]/70 text-xs mt-0.5">+506 86907757</p>
                   </div>
                   <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-primary ml-auto group-hover:translate-x-1 transition-all" />
                 </a>
@@ -852,7 +852,7 @@ export default function Home() {
 
               {/* Social */}
               <div className="border-t border-stone-100 pt-8">
-                <p className="text-[10px] font-bold text-stone-400 tracking-[0.3em] uppercase mb-5">SÍGUENOS</p>
+                <p className="text-[10px] font-bold text-[#7FBCD2]/70 tracking-[0.3em] uppercase mb-5">SÍGUENOS</p>
                 <div className="flex gap-3">
                   {[
                     { label: "IG", href: "https://www.instagram.com/mjfisioesteticayspa/" },
@@ -860,7 +860,7 @@ export default function Home() {
                     { label: "TK", href: "#" },
                   ].map(s => (
                     <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                      className="w-10 h-10 border border-stone-200 flex items-center justify-center text-xs font-bold text-stone-400 hover:border-primary hover:text-primary transition-all">
+                      className="w-10 h-10 border border-stone-200 flex items-center justify-center text-xs font-bold text-[#7FBCD2]/70 hover:border-primary hover:text-primary transition-all">
                       {s.label}
                     </a>
                   ))}
@@ -874,10 +874,10 @@ export default function Home() {
               className="bg-stone-50 p-8 md:p-10"
             >
               <h3 className="text-xl font-serif font-bold text-stone-900 mb-2">Envíanos un mensaje</h3>
-              <p className="text-stone-400 text-sm mb-8">Te contactaremos a la brevedad posible.</p>
+              <p className="text-[#7FBCD2]/70 text-sm mb-8">Te contactaremos a la brevedad posible.</p>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div>
-                  <label className="block text-[10px] font-bold text-stone-500 uppercase tracking-[0.25em] mb-2">Nombre completo</label>
+                  <label className="block text-[10px] font-bold text-[#7FBCD2]/60 uppercase tracking-[0.25em] mb-2">Nombre completo</label>
                   <Input
                     {...form.register("name")}
                     placeholder="Tu nombre"
@@ -888,7 +888,7 @@ export default function Home() {
 
                 <div className="grid grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-[10px] font-bold text-stone-500 uppercase tracking-[0.25em] mb-2">Email</label>
+                    <label className="block text-[10px] font-bold text-[#7FBCD2]/60 uppercase tracking-[0.25em] mb-2">Email</label>
                     <Input
                       {...form.register("email")}
                       placeholder="tu@email.com"
@@ -897,7 +897,7 @@ export default function Home() {
                     {form.formState.errors.email && <p className="text-red-500 text-xs mt-1">{form.formState.errors.email.message}</p>}
                   </div>
                   <div>
-                    <label className="block text-[10px] font-bold text-stone-500 uppercase tracking-[0.25em] mb-2">Teléfono</label>
+                    <label className="block text-[10px] font-bold text-[#7FBCD2]/60 uppercase tracking-[0.25em] mb-2">Teléfono</label>
                     <Input
                       {...form.register("phone")}
                       placeholder="+506..."
@@ -908,7 +908,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold text-stone-500 uppercase tracking-[0.25em] mb-2">Servicio de interés</label>
+                  <label className="block text-[10px] font-bold text-[#7FBCD2]/60 uppercase tracking-[0.25em] mb-2">Servicio de interés</label>
                   <select
                     {...form.register("service")}
                     className="w-full border-0 border-b border-stone-200 bg-transparent py-3 text-sm text-stone-700 focus:outline-none focus:border-primary transition-colors appearance-none"
@@ -940,7 +940,7 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold text-stone-500 uppercase tracking-[0.25em] mb-2">Mensaje</label>
+                  <label className="block text-[10px] font-bold text-[#7FBCD2]/60 uppercase tracking-[0.25em] mb-2">Mensaje</label>
                   <Textarea
                     {...form.register("message")}
                     placeholder="¿En qué podemos ayudarte?"
@@ -953,12 +953,12 @@ export default function Home() {
                   <Button
                     id="cta-contacto-enviar"
                     type="submit"
-                    className="w-full rounded-none bg-stone-900 hover:bg-primary text-white text-xs font-bold tracking-[0.2em] uppercase py-5 transition-colors flex items-center justify-center gap-2"
+                    className="w-full rounded-none bg-[#0c3e5a] hover:bg-primary text-white text-xs font-bold tracking-[0.2em] uppercase py-5 transition-colors flex items-center justify-center gap-2"
                   >
                     <MessageCircle className="w-4 h-4" />
                     Enviar mensaje por WhatsApp
                   </Button>
-                  <p className="text-stone-400 text-[10px] text-center mt-3 leading-relaxed">
+                  <p className="text-[#7FBCD2]/70 text-[10px] text-center mt-3 leading-relaxed">
                     Al enviar, se abre WhatsApp con tu mensaje prellenado — solo confirma el envío.
                   </p>
                 </div>

@@ -82,7 +82,7 @@ export default function SitemapPage() {
       <Navbar />
       <FloatingWhatsApp />
 
-      <section className="relative pt-36 pb-20 bg-stone-900 overflow-hidden">
+      <section className="relative pt-36 pb-20 bg-[#0c3e5a] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-15"
           style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/hero-bg.png)` }}
@@ -96,7 +96,7 @@ export default function SitemapPage() {
             Mapa del<br />
             <span className="italic font-light text-white/40">Sitio</span>
           </h1>
-          <p className="text-stone-400 text-lg leading-relaxed max-w-xl mt-6">
+          <p className="text-[#7FBCD2]/70 text-lg leading-relaxed max-w-xl mt-6">
             Todas las páginas y tratamientos disponibles en MJ Fisio Estética y Spa.
           </p>
         </div>

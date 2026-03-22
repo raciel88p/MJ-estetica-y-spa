@@ -77,7 +77,7 @@ export function Navbar() {
   const servicios = useHoverDropdown("servicios", openDropdown, setOpenDropdown as any);
   const medicos = useHoverDropdown("medicos", openDropdown, setOpenDropdown as any);
 
-  const textClass = isScrolled ? "text-stone-700" : "text-white/90";
+  const textClass = isScrolled ? "text-[#0c3e5a]" : "text-white/90";
   const linkBase = `text-sm uppercase tracking-widest font-medium hover:text-primary transition-colors`;
 
   const dropdownPanelVariants = {
@@ -289,7 +289,7 @@ export function Navbar() {
             <Button
               className={`rounded-none px-6 py-2.5 text-sm font-semibold tracking-wide transition-all ${
                 isScrolled
-                  ? "bg-stone-900 text-white hover:bg-primary"
+                  ? "bg-[#0c3e5a] text-white hover:bg-primary"
                   : "bg-white text-stone-900 hover:bg-primary hover:text-white"
               }`}
               asChild

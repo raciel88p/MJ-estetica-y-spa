@@ -61,7 +61,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
             transition={{ duration: 0.25 }}
             className="overflow-hidden"
           >
-            <p className="text-stone-500 leading-relaxed pb-6 text-sm">{answer}</p>
+            <p className="text-[#7FBCD2]/60 leading-relaxed pb-6 text-sm">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -148,7 +148,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       </section>
 
       {/* ── TRUST BAR ────────────────────────────────── */}
-      <section className="bg-stone-950 py-5 border-b border-white/5">
+      <section className="bg-[#08293c] py-5 border-b border-white/5">
         <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
             { icon: <Star className="w-4 h-4 fill-primary text-primary" />, text: "5★ en Google" },
@@ -206,7 +206,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
             </div>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight">
               ¿Qué incluye<br />
-              <span className="font-light italic text-stone-400">este servicio?</span>
+              <span className="font-light italic text-[#7FBCD2]/70">este servicio?</span>
             </h2>
           </motion.div>
 
@@ -225,13 +225,13 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                     <h3 className="text-xl md:text-2xl font-serif font-bold text-stone-900 group-hover:text-primary transition-colors inline">{item.title}</h3>
                   </div>
                   {item.duration && (
-                    <span className="flex items-center gap-1.5 text-stone-400 text-xs shrink-0 border border-stone-200 px-3 py-1">
+                    <span className="flex items-center gap-1.5 text-[#7FBCD2]/70 text-xs shrink-0 border border-stone-200 px-3 py-1">
                       <Clock className="w-3.5 h-3.5" />
                       {item.duration}
                     </span>
                   )}
                 </div>
-                <p className="text-stone-500 leading-relaxed mb-6 text-sm">{item.description}</p>
+                <p className="text-[#7FBCD2]/60 leading-relaxed mb-6 text-sm">{item.description}</p>
                 {item.price && (
                   <p className="text-stone-300 text-xs tracking-widest uppercase mb-5">{item.price}</p>
                 )}
@@ -292,7 +292,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
               </div>
               <h2 className="text-4xl font-serif font-bold text-stone-900">
                 Todo lo que necesitas<br />
-                <span className="font-light italic text-stone-400">saber antes de tu cita</span>
+                <span className="font-light italic text-[#7FBCD2]/70">saber antes de tu cita</span>
               </h2>
             </motion.div>
             <motion.div
@@ -309,11 +309,11 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
             {/* Inline WhatsApp after FAQ */}
             <motion.div
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-              className="mt-12 p-8 bg-stone-950 flex flex-col md:flex-row items-center justify-between gap-6"
+              className="mt-12 p-8 bg-[#08293c] flex flex-col md:flex-row items-center justify-between gap-6"
             >
               <div>
                 <p className="text-white font-serif text-xl font-bold mb-1">¿Tienes más dudas?</p>
-                <p className="text-stone-400 text-sm">Escríbenos y te respondemos al instante.</p>
+                <p className="text-[#7FBCD2]/70 text-sm">Escríbenos y te respondemos al instante.</p>
               </div>
               <a
                 href={WA}
@@ -352,7 +352,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                   <h3 className="text-xl font-serif font-bold text-stone-900 mb-2 group-hover:text-primary transition-colors">
                     {rel.name}
                   </h3>
-                  <p className="text-stone-500 text-sm leading-relaxed mb-5">{rel.tagline}</p>
+                  <p className="text-[#7FBCD2]/60 text-sm leading-relaxed mb-5">{rel.tagline}</p>
                   <Link href={`/servicios/${rel.slug}`}>
                     <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-primary border-b border-primary/30 pb-0.5 hover:border-primary transition-colors cursor-pointer">
                       Ver tratamiento <ArrowRight className="w-3 h-3" />
@@ -364,7 +364,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
             {category && (
               <div className="mt-8 text-center">
                 <Link href={category.href}>
-                  <span className="inline-flex items-center gap-2 text-sm font-bold text-stone-500 border-b border-stone-300 pb-0.5 hover:text-primary hover:border-primary transition-colors cursor-pointer tracking-wide uppercase text-xs">
+                  <span className="inline-flex items-center gap-2 text-sm font-bold text-[#7FBCD2]/60 border-b border-stone-300 pb-0.5 hover:text-primary hover:border-primary transition-colors cursor-pointer tracking-wide uppercase text-xs">
                     Ver todos los {category.name.toLowerCase()} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </Link>

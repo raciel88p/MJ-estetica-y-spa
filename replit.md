@@ -99,7 +99,7 @@ Utility scripts package. Each script is a `.ts` file in `src/` with a correspond
 
 React + Vite frontend-only website for **MJ Fisio Estética y Spa** (Turrialba, Costa Rica). No backend — all booking via WhatsApp.
 
-**Design:** Bold serif typography, dark hero sections, alternating light/dark sections, primary rose/mauve color, inspired by consultoriocardenas.com and wellclinicleon.com.
+**Design:** Bold serif typography, dark hero sections, alternating light/dark sections. Brand palette: primary `#1378A2` (deep teal-blue, HSL 200 79% 35%), secondary `#7FBCD2` (sky blue, HSL 196 48% 66%), dark sections navy `#0c3e5a`/`#08293c`. Inspired by consultoriocardenas.com and wellclinicleon.com.
 
 **WhatsApp CTA:** `https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0`
 

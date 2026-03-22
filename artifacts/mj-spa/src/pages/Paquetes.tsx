@@ -84,7 +84,7 @@ export default function Paquetes() {
       <FloatingWhatsApp />
 
       {/* Hero */}
-      <section className="relative pt-36 pb-24 bg-stone-900 overflow-hidden">
+      <section className="relative pt-36 pb-24 bg-[#0c3e5a] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/hero-bg.png)` }}
@@ -98,7 +98,7 @@ export default function Paquetes() {
             Paquetes de<br />
             <span className="italic font-light text-white/40">Tratamientos</span>
           </h1>
-          <p className="text-stone-400 text-lg leading-relaxed max-w-xl">
+          <p className="text-[#7FBCD2]/70 text-lg leading-relaxed max-w-xl">
             Protocolos completos diseñados para maximizar tus resultados. Combina los mejores tratamientos y transforma tu bienestar.
           </p>
           <div className="mt-10">
@@ -155,14 +155,14 @@ export default function Paquetes() {
                       <div>
                         <span className="text-xs font-semibold uppercase tracking-widest text-primary/70">{pkg.tag}</span>
                         <h2 className="text-xl font-serif font-bold text-foreground leading-tight">{pkg.name}</h2>
-                        <p className="text-sm text-stone-500 mt-0.5">{pkg.tagline}</p>
+                        <p className="text-sm text-[#7FBCD2]/60 mt-0.5">{pkg.tagline}</p>
                       </div>
                     </div>
 
                     <p className="text-stone-600 text-sm leading-relaxed mb-6">{pkg.description}</p>
 
                     <div className="mb-8 flex-1">
-                      <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-3">Incluye</p>
+                      <p className="text-xs font-bold uppercase tracking-widest text-[#7FBCD2]/70 mb-3">Incluye</p>
                       <ul className="space-y-2">
                         {pkg.includes.map((item) => (
                           <li key={item} className="flex items-start gap-2.5 text-sm text-stone-700">
@@ -180,7 +180,7 @@ export default function Paquetes() {
                       className={`inline-flex items-center justify-center gap-2 w-full py-3 text-sm font-semibold tracking-wide transition-colors ${
                         pkg.highlight
                           ? "bg-primary text-white hover:bg-primary/90"
-                          : "bg-stone-900 text-white hover:bg-primary"
+                          : "bg-[#0c3e5a] text-white hover:bg-primary"
                       }`}
                     >
                       <MessageCircle className="w-4 h-4" />
@@ -195,13 +195,13 @@ export default function Paquetes() {
       </section>
 
       {/* CTA urgency */}
-      <section className="py-16 bg-stone-950">
+      <section className="py-16 bg-[#08293c]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">VALORACIÓN GRATUITA</p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
             ¿No sabes cuál paquete es para ti?
           </h2>
-          <p className="text-stone-400 mb-8 leading-relaxed">
+          <p className="text-[#7FBCD2]/70 mb-8 leading-relaxed">
             Agenda tu valoración gratuita y nuestras especialistas diseñarán el protocolo ideal según tus objetivos, tu historial y tu estilo de vida.
           </p>
           <a
