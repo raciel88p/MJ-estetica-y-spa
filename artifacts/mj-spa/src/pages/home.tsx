@@ -363,7 +363,7 @@ export default function Home() {
                 <span className="font-light italic text-white/25">de tratamiento</span>
               </h2>
             </div>
-            <p className="text-white/30 text-sm leading-relaxed max-w-xs md:text-right">
+            <p className="text-white text-sm leading-relaxed max-w-xs md:text-right">
               Tres especialidades, un solo lugar. Tratamientos médico-estéticos en el corazón de Turrialba.
             </p>
           </motion.div>
