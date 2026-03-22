@@ -28,7 +28,7 @@ export const tratamientosCorporalesLinks = [
   { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
   { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
   { name: "Reducción de Medidas", href: "/servicios/reduccion-de-medidas" },
-  { name: "Criolipólisis", href: "/servicios/criolipolisis" },
+  { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
   { name: "Drenaje Linfático", href: "/servicios/drenaje-linfatico" },
   { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
 ];
@@ -754,58 +754,63 @@ export const servicePages: ServicePageData[] = [
     ],
   },
   {
-    slug: "criolipolisis",
-    name: "Criolipólisis",
-    tagline: "Elimina la grasa rebelde con frío controlado",
+    slug: "tensado-corporal",
+    name: "Tensado Corporal",
+    tagline: "Reafirma y esculpe tu silueta sin cirugía",
     heroDescription:
-      "La criolipólisis es un tratamiento no invasivo que utiliza frío controlado para cristalizar y eliminar de forma definitiva las células grasas en zonas específicas del cuerpo, sin dañar la piel ni los tejidos circundantes.",
+      "El tensado corporal utiliza tecnología de radiofrecuencia y ultrasonidos para estimular la producción de colágeno, reafirmar la piel flácida y esculpir la silueta de forma natural y no invasiva.",
     benefits: [
-      "Eliminación definitiva de células grasas",
-      "Sin cirugía, sin anestesia, sin cicatrices",
-      "Resultados visibles desde la 4ª–8ª semana",
-      "Tratamiento cómodo; puedes volver a tu rutina de inmediato",
-      "Reducción de hasta un 25% de grasa en la zona tratada",
+      "Reafirmación visible de la piel desde las primeras sesiones",
+      "Estimula la producción de colágeno y elastina",
+      "Sin cirugía, sin anestesia, sin recuperación",
+      "Resultados naturales y progresivos",
+      "Efectivo en abdomen, muslos, brazos y glúteos",
     ],
     items: [
       {
-        title: "Criolipólisis Abdominal",
+        title: "Tensado Abdominal",
         description:
-          "Aplicación de frío controlado en la zona del abdomen para eliminar rolls y flotadores que no responden al ejercicio.",
-        duration: "60 min por zona",
+          "Protocolo específico para reafirmar la piel del abdomen y reducir la flacidez postparto o por pérdida de peso, con tecnología de radiofrecuencia multipolar.",
+        duration: "50 min",
         price: "Consultar precio",
       },
       {
-        title: "Criolipólisis Flancos",
+        title: "Tensado de Muslos y Glúteos",
         description:
-          "Tratamiento sobre los costados para eliminar la grasa acumulada en la zona del cinturón y reducir el contorno corporal.",
-        duration: "60 min por zona",
+          "Tratamiento enfocado en las zonas de mayor pérdida de firmeza, devolviendo elasticidad y definición a los glúteos y la cara interna y externa de los muslos.",
+        duration: "60 min",
         price: "Consultar precio",
       },
       {
-        title: "Criolipólisis Muslos Internos/Externos",
+        title: "Tensado de Brazos",
         description:
-          "Elimina la grasa rebelde en la cara interna y externa de los muslos para mejorar el contorno de las piernas.",
-        duration: "60 min por zona",
+          "Protocolo para la zona del tríceps y la cara interna del brazo, ideal para recuperar firmeza y combatir la piel colgante sin cirugía.",
+        duration: "40 min",
         price: "Consultar precio",
       },
       {
-        title: "Criolipólisis de Papada",
+        title: "Tensado Corporal Integral",
         description:
-          "Tratamiento específico para reducir la papada y definir el óvalo facial sin procedimientos invasivos.",
-        duration: "45 min",
+          "Sesión combinada que trabaja varias zonas en un mismo tratamiento, diseñando un protocolo integral adaptado a las necesidades de cada clienta.",
+        duration: "80 min",
         price: "Consultar precio",
       },
     ],
     faq: [
       {
-        question: "¿Duele el tratamiento?",
+        question: "¿Cuántas sesiones necesito?",
         answer:
-          "Durante los primeros minutos se siente una intensa sensación de frío que desaparece rápidamente al adormecerse la zona. La sesión es muy cómoda una vez transcurridos los primeros minutos.",
+          "Para resultados óptimos recomendamos entre 6 y 10 sesiones, con frecuencia semanal o bisemanal. En la valoración gratuita te indicamos el número exacto según tu caso.",
       },
       {
-        question: "¿Cuándo se ven los resultados?",
+        question: "¿Es doloroso el tratamiento?",
         answer:
-          "El cuerpo elimina las células tratadas de forma gradual. Los resultados empiezan a notarse entre 4 y 8 semanas, y el máximo efecto se alcanza a los 3 meses.",
+          "No. La sensación es de calor agradable en la zona tratada. Es un procedimiento completamente cómodo y relajante que no requiere ningún tiempo de recuperación.",
+      },
+      {
+        question: "¿Cuándo se notan los resultados?",
+        answer:
+          "Muchas clientas notan mayor firmeza desde las primeras sesiones. Los resultados más significativos se aprecian a partir de la 4ª–6ª sesión y continúan mejorando semanas después del tratamiento.",
       },
     ],
   },

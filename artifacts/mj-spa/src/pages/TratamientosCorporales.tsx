@@ -32,7 +32,7 @@ export default function TratamientosCorporales() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Tratamientos Corporales"
-        description="Tratamientos corporales en MJ Fisio Estética y Spa: reducción de medidas, criolipólisis, drenaje linfático, masajes y más en Turrialba, Costa Rica."
+        description="Tratamientos corporales en MJ Fisio Estética y Spa: reducción de medidas, tensado corporal, drenaje linfático, masajes y más en Turrialba, Costa Rica."
         canonical="/tratamientos/corporales"
       />
       <Navbar />
@@ -158,7 +158,7 @@ export default function TratamientosCorporales() {
             className="border-l-4 border-primary pl-8 py-2"
           >
             <p className="text-stone-700 font-serif text-xl italic leading-relaxed mb-4">
-              "Llevaba meses buscando algo que realmente funcionara para mis medidas. Con la criolipólisis y el drenaje noté resultados desde la segunda sesión. El trato es excelente y el lugar está muy bien equipado."
+              "Llevaba meses buscando algo que realmente funcionara para mi flacidez. Con el tensado corporal y el drenaje noté resultados desde la segunda sesión. El trato es excelente y el lugar está muy bien equipado."
             </p>
             <footer className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs font-bold">V</div>

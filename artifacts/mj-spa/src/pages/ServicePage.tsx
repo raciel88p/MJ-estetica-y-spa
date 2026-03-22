@@ -26,7 +26,7 @@ const serviceCategoryMap: Record<string, { name: string; href: string }> = {
   "masajes-corporales":        { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "masajes-relajantes":        { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "reduccion-de-medidas":      { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
-  "criolipolisis":             { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
+  "tensado-corporal":          { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "drenaje-linfatico":         { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "depilacion-laser":          { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "faciales":                  { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
