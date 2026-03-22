@@ -874,44 +874,44 @@ export default function Home() {
               className="bg-stone-50 p-8 md:p-10"
             >
               <h3 className="text-xl font-serif font-bold text-stone-900 mb-2">Envíanos un mensaje</h3>
-              <p className="text-white/75 text-sm mb-8">Te contactaremos a la brevedad posible.</p>
+              <p className="text-stone-500 text-sm mb-8">Te contactaremos a la brevedad posible.</p>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                 <div>
-                  <label className="block text-[10px] font-bold text-white/65 uppercase tracking-[0.25em] mb-2">Nombre completo</label>
+                  <label className="block text-[10px] font-bold text-stone-600 uppercase tracking-[0.25em] mb-2">Nombre completo</label>
                   <Input
                     {...form.register("name")}
                     placeholder="Tu nombre"
-                    className="rounded-none border-0 border-b border-stone-200 bg-transparent px-0 py-3 focus-visible:ring-0 focus-visible:border-primary placeholder:text-stone-300 text-sm"
+                    className="rounded-none border-0 border-b border-stone-300 bg-transparent px-0 py-3 focus-visible:ring-0 focus-visible:border-primary placeholder:text-stone-400 text-stone-900 text-sm"
                   />
                   {form.formState.errors.name && <p className="text-red-500 text-xs mt-1">{form.formState.errors.name.message}</p>}
                 </div>
 
                 <div className="grid grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-[10px] font-bold text-white/65 uppercase tracking-[0.25em] mb-2">Email</label>
+                    <label className="block text-[10px] font-bold text-stone-600 uppercase tracking-[0.25em] mb-2">Email</label>
                     <Input
                       {...form.register("email")}
                       placeholder="tu@email.com"
-                      className="rounded-none border-0 border-b border-stone-200 bg-transparent px-0 py-3 focus-visible:ring-0 focus-visible:border-primary placeholder:text-stone-300 text-sm"
+                      className="rounded-none border-0 border-b border-stone-300 bg-transparent px-0 py-3 focus-visible:ring-0 focus-visible:border-primary placeholder:text-stone-400 text-stone-900 text-sm"
                     />
                     {form.formState.errors.email && <p className="text-red-500 text-xs mt-1">{form.formState.errors.email.message}</p>}
                   </div>
                   <div>
-                    <label className="block text-[10px] font-bold text-white/65 uppercase tracking-[0.25em] mb-2">Teléfono</label>
+                    <label className="block text-[10px] font-bold text-stone-600 uppercase tracking-[0.25em] mb-2">Teléfono</label>
                     <Input
                       {...form.register("phone")}
                       placeholder="+506..."
-                      className="rounded-none border-0 border-b border-stone-200 bg-transparent px-0 py-3 focus-visible:ring-0 focus-visible:border-primary placeholder:text-stone-300 text-sm"
+                      className="rounded-none border-0 border-b border-stone-300 bg-transparent px-0 py-3 focus-visible:ring-0 focus-visible:border-primary placeholder:text-stone-400 text-stone-900 text-sm"
                     />
                     {form.formState.errors.phone && <p className="text-red-500 text-xs mt-1">{form.formState.errors.phone.message}</p>}
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold text-white/65 uppercase tracking-[0.25em] mb-2">Servicio de interés</label>
+                  <label className="block text-[10px] font-bold text-stone-600 uppercase tracking-[0.25em] mb-2">Servicio de interés</label>
                   <select
                     {...form.register("service")}
-                    className="w-full border-0 border-b border-stone-200 bg-transparent py-3 text-sm text-stone-700 focus:outline-none focus:border-primary transition-colors appearance-none"
+                    className="w-full border-0 border-b border-stone-300 bg-transparent py-3 text-sm text-stone-900 focus:outline-none focus:border-primary transition-colors appearance-none"
                   >
                     <option value="">Selecciona un servicio</option>
                     <optgroup label="Tratamientos Corporales">
@@ -940,11 +940,11 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <label className="block text-[10px] font-bold text-white/65 uppercase tracking-[0.25em] mb-2">Mensaje</label>
+                  <label className="block text-[10px] font-bold text-stone-600 uppercase tracking-[0.25em] mb-2">Mensaje</label>
                   <Textarea
                     {...form.register("message")}
                     placeholder="¿En qué podemos ayudarte?"
-                    className="rounded-none border-0 border-b border-stone-200 bg-transparent px-0 py-3 focus-visible:ring-0 focus-visible:border-primary placeholder:text-stone-300 text-sm min-h-[90px] resize-none"
+                    className="rounded-none border-0 border-b border-stone-300 bg-transparent px-0 py-3 focus-visible:ring-0 focus-visible:border-primary placeholder:text-stone-400 text-stone-900 text-sm min-h-[90px] resize-none"
                   />
                   {form.formState.errors.message && <p className="text-red-500 text-xs mt-1">{form.formState.errors.message.message}</p>}
                 </div>
