@@ -27,6 +27,7 @@ export const medicoEsteticosLinks = [
 export const tratamientosCorporalesLinks = [
   { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
   { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
+  { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios" },
   { name: "Reducción de Medidas", href: "/servicios/reduccion-de-medidas" },
   { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
   { name: "Drenaje Linfático", href: "/servicios/drenaje-linfatico" },
@@ -214,6 +215,73 @@ export const servicePages: ServicePageData[] = [
         question: "¿Puedo pedir una intensidad específica?",
         answer:
           "Por supuesto. Antes de comenzar, nuestra terapeuta hablará contigo para adaptar la presión y las técnicas a tus preferencias y necesidades.",
+      },
+    ],
+  },
+  {
+    slug: "masajes-post-operatorios",
+    name: "Masajes Post Operatorios",
+    tagline: "Recuperación más rápida, resultados más visibles",
+    heroDescription:
+      "El masaje post operatorio es un pilar fundamental en la recuperación tras cualquier cirugía estética o funcional. Acelera la cicatrización, elimina la fibrosis y reduce la inflamación para que tu resultado quirúrgico sea el mejor posible.",
+    benefits: [
+      "Reduce la inflamación y el edema post quirúrgico",
+      "Previene y trata la fibrosis (dureza post cirugía)",
+      "Mejora la cicatrización y la calidad de la piel",
+      "Acelera la reabsorción de líquidos y hematomas",
+      "Mejora los resultados finales de la cirugía",
+      "Alivia el dolor y la sensación de tensión",
+    ],
+    items: [
+      {
+        title: "Drenaje Linfático Post Operatorio",
+        description:
+          "Técnica de masaje suave y especializada que activa el sistema linfático para eliminar el exceso de líquidos, reducir la hinchazón y acelerar la recuperación. Indicado desde las primeras 48–72 horas post cirugía.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Tratamiento Anti-Fibrosis",
+        description:
+          "Protocolo específico con maniobras de desfibrosis manual y herramientas profesionales para ablandar las zonas duras que se forman bajo la piel tras liposucciones, abdominoplastias u otras cirugías.",
+        duration: "60–75 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Masaje de Recuperación Facial",
+        description:
+          "Protocolo suave diseñado para intervenciones como rinoplastia, bichectomía, lifting facial o cirugía de párpados. Descongestiona el área, reduce moretones y mejora la calidad de la cicatrización.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Protocolo Integral Post Operatorio",
+        description:
+          "Sesión completa que combina drenaje linfático, trabajo anti-fibrosis y aplicación de ultrasonido terapéutico en un solo tratamiento. Ideal para optimizar la recuperación en todas las etapas.",
+        duration: "90 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cuándo puedo empezar los masajes tras la cirugía?",
+        answer:
+          "En general, el drenaje linfático suave puede iniciarse a partir de las 48–72 horas post operatorio, previa autorización del cirujano. El trabajo anti-fibrosis se recomienda a partir de la 3ª–4ª semana. En tu primera valoración te indicamos el protocolo exacto según tu caso.",
+      },
+      {
+        question: "¿Cuántas sesiones necesito?",
+        answer:
+          "El número varía según el tipo de cirugía y tu evolución personal. En casos de liposucción o abdominoplastia se recomiendan entre 10 y 15 sesiones. Para cirugías más pequeñas, entre 5 y 8 pueden ser suficientes.",
+      },
+      {
+        question: "¿Es doloroso el masaje post operatorio?",
+        answer:
+          "El drenaje linfático es una técnica muy suave y no debe causar dolor. El trabajo anti-fibrosis puede generar algo de molestia en zonas muy endurecidas, pero siempre adaptamos la presión a tu tolerancia.",
+      },
+      {
+        question: "¿Para qué cirugías está indicado?",
+        answer:
+          "Liposucción, abdominoplastia, mamoplastia, rinoplastia, bichectomía, lifting, cirugía bariátrica y cualquier intervención que genere inflamación o fibrosis. Si tienes dudas sobre tu caso específico, consúltanos.",
       },
     ],
   },

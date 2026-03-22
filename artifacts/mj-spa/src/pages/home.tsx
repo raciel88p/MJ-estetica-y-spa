@@ -148,6 +148,7 @@ export default function Home() {
 
   const serviceLabels: Record<string, string> = {
     "reduccion-medidas": "Reducción de Medidas",
+    "masajes-post-operatorios": "Masajes Post Operatorios",
     "tensado-corporal": "Tensado Corporal",
     "drenaje-linfatico": "Drenaje Linfático",
     "hollywood-peel": "Hollywood Peel",
@@ -913,6 +914,7 @@ export default function Home() {
                     <option value="">Selecciona un servicio</option>
                     <optgroup label="Tratamientos Corporales">
                       <option value="reduccion-medidas">Reducción de Medidas</option>
+                      <option value="masajes-post-operatorios">Masajes Post Operatorios</option>
                       <option value="tensado-corporal">Tensado Corporal</option>
                       <option value="drenaje-linfatico">Drenaje Linfático</option>
                     </optgroup>
