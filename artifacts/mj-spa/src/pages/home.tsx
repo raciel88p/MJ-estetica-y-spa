@@ -416,7 +416,7 @@ export default function Home() {
                       <h3 className="text-2xl md:text-3xl font-serif font-bold text-white leading-tight mb-3">
                         {cat.title}
                       </h3>
-                      <p className="text-white/45 text-sm leading-relaxed mb-6">
+                      <p className="text-white/70 text-sm leading-relaxed mb-6">
                         {cat.desc}
                       </p>
 
@@ -809,10 +809,10 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight mb-3">
                 Reserva tu momento
               </h2>
-              <h2 className="text-4xl md:text-5xl font-serif font-light italic text-stone-300 leading-tight mb-10">
+              <h2 className="text-4xl md:text-5xl font-serif font-light italic text-stone-400 leading-tight mb-10">
                 de bienestar
               </h2>
-              <p className="text-white/75 text-sm leading-relaxed mb-12">
+              <p className="text-stone-500 text-sm leading-relaxed mb-12">
                 Contáctanos directamente por WhatsApp o completa el formulario y te respondemos a la brevedad.
               </p>
 
@@ -831,9 +831,9 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-stone-700 group-hover:text-primary">Escribir por WhatsApp</p>
-                    <p className="text-white/75 text-xs mt-0.5">Respuesta inmediata</p>
+                    <p className="text-stone-500 text-xs mt-0.5">Respuesta inmediata</p>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-primary ml-auto group-hover:translate-x-1 transition-all" />
+                  <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-primary ml-auto group-hover:translate-x-1 transition-all" />
                 </a>
                 <a
                   href="tel:+50686907757"
@@ -844,24 +844,25 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-widest text-stone-700 group-hover:text-primary">Llamar ahora</p>
-                    <p className="text-white/75 text-xs mt-0.5">+506 86907757</p>
+                    <p className="text-stone-500 text-xs mt-0.5">+506 86907757</p>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-stone-300 group-hover:text-primary ml-auto group-hover:translate-x-1 transition-all" />
+                  <ArrowRight className="w-4 h-4 text-stone-400 group-hover:text-primary ml-auto group-hover:translate-x-1 transition-all" />
                 </a>
               </div>
 
               {/* Social */}
-              <div className="border-t border-stone-100 pt-8">
-                <p className="text-[10px] font-bold text-white/75 tracking-[0.3em] uppercase mb-5">SÍGUENOS</p>
+              <div className="border-t border-stone-200 pt-8">
+                <p className="text-[10px] font-bold text-stone-500 tracking-[0.3em] uppercase mb-5">SÍGUENOS</p>
                 <div className="flex gap-3">
                   {[
-                    { label: "IG", href: "https://www.instagram.com/mjfisioesteticayspa/" },
-                    { label: "FB", href: "https://www.facebook.com/mjfisioestetica" },
-                    { label: "TK", href: "#" },
+                    { label: "Instagram", short: "IG", href: "https://www.instagram.com/mjfisioesteticayspa/" },
+                    { label: "Facebook", short: "FB", href: "https://www.facebook.com/mjfisioestetica" },
+                    { label: "TikTok", short: "TK", href: "#" },
                   ].map(s => (
                     <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                      className="w-10 h-10 border border-stone-200 flex items-center justify-center text-xs font-bold text-white/75 hover:border-primary hover:text-primary transition-all">
-                      {s.label}
+                      title={s.label}
+                      className="w-11 h-11 bg-stone-100 border border-stone-200 flex items-center justify-center text-xs font-bold text-stone-700 hover:bg-primary hover:border-primary hover:text-white transition-all">
+                      {s.short}
                     </a>
                   ))}
                 </div>
