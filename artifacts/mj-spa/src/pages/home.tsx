@@ -56,7 +56,7 @@ const serviceCategories = [
     index: "01",
     title: "Moldea y reafirma tu silueta",
     desc: "Tecnología de vanguardia para resultados reales sin cirugía.",
-    services: ["Cavitación Ultrasónica", "Emsculpt", "Criolipólisis", "Drenaje Linfático", "Reducción de Medidas"],
+    services: ["Cavitación Ultrasónica", "Criolipólisis", "Drenaje Linfático", "Reducción de Medidas", "Depilación Láser"],
     bg: "about-us.png",
     accent: "from-rose-900/90",
   },
@@ -85,7 +85,6 @@ const serviceCategories = [
 /* ── FEATURED TREATMENTS ──────────────────────────── */
 const featuredTreatments = [
   { name: "Reducción de Medidas", href: "/servicios/reduccion-de-medidas", cat: "Corporal" },
-  { name: "Emsculpt", href: "/servicios/emsculpt", cat: "Corporal" },
   { name: "Criolipólisis", href: "/servicios/criolipolisis", cat: "Corporal" },
   { name: "Hollywood Peel", href: "/servicios/hollywood-peel", cat: "Facial" },
   { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial", cat: "Facial" },
@@ -883,7 +882,6 @@ export default function Home() {
                     <option value="">Selecciona un servicio</option>
                     <optgroup label="Tratamientos Corporales">
                       <option value="reduccion-medidas">Reducción de Medidas</option>
-                      <option value="emsculpt">Emsculpt</option>
                       <option value="criolipolisis">Criolipólisis</option>
                       <option value="drenaje-linfatico">Drenaje Linfático</option>
                     </optgroup>

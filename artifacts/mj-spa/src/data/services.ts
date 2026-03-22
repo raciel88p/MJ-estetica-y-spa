@@ -28,7 +28,6 @@ export const tratamientosCorporalesLinks = [
   { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
   { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
   { name: "Reducción de Medidas", href: "/servicios/reduccion-de-medidas" },
-  { name: "Emsculpt", href: "/servicios/emsculpt" },
   { name: "Criolipólisis", href: "/servicios/criolipolisis" },
   { name: "Drenaje Linfático", href: "/servicios/drenaje-linfatico" },
   { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
@@ -751,62 +750,6 @@ export const servicePages: ServicePageData[] = [
         question: "¿El tratamiento es doloroso?",
         answer:
           "No, en general son tratamientos cómodos. Algunos pueden producir una sensación de calor o presión tolerable.",
-      },
-    ],
-  },
-  {
-    slug: "emsculpt",
-    name: "Emsculpt",
-    tagline: "Tonifica y esculpe sin esfuerzo",
-    heroDescription:
-      "Emsculpt utiliza energía radiomagnética de alta intensidad para estimular contracciones musculares supramáximas, quemando grasa y construyendo músculo de forma simultánea sin cirugía ni recuperación.",
-    benefits: [
-      "Quema grasa y tonifica músculo al mismo tiempo",
-      "Sin anestesia, sin agujas, sin recuperación",
-      "Resultados equivalentes a miles de contracciones por sesión",
-      "Aprobado y avalado por estudios clínicos",
-      "Apto para hombres y mujeres",
-    ],
-    items: [
-      {
-        title: "Emsculpt Abdominal",
-        description:
-          "Tratamiento enfocado en el core: endurece el abdomen y reduce la grasa abdominal localizada mediante impulsos electromagnéticos.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Emsculpt Glúteos",
-        description:
-          "Levanta, define y tonifica los glúteos de forma no invasiva. Equivalente a miles de sentadillas por sesión.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Emsculpt Brazos",
-        description:
-          "Tonifica bíceps y tríceps para marcar y definir los brazos sin ejercicio convencional.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Emsculpt Muslos",
-        description:
-          "Define la cara anterior y posterior del muslo, mejorando el contorno corporal general.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuántas sesiones se recomiendan?",
-        answer:
-          "El protocolo estándar es de 4 sesiones en 2 semanas. Los resultados siguen mejorando durante semanas después del tratamiento.",
-      },
-      {
-        question: "¿Es seguro para todo el mundo?",
-        answer:
-          "Está contraindicado en personas con marcapasos, implantes metálicos en la zona de tratamiento, embarazo o enfermedades cardíacas. En la valoración previa evaluamos tu idoneidad.",
       },
     ],
   },
