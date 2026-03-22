@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 export function FloatingWhatsApp() {
   return (
     <motion.a
+      id="cta-flotante-whatsapp"
       href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
       target="_blank"
       rel="noopener noreferrer"

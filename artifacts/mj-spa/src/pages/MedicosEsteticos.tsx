@@ -117,6 +117,7 @@ export default function MedicosEsteticos() {
             Contáctanos y nuestros especialistas te orientarán para elegir el tratamiento más adecuado según tus objetivos y condición.
           </p>
           <a
+            id="cta-medicos-asesoria"
             href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"

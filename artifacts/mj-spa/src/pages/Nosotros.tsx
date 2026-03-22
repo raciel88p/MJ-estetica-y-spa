@@ -268,6 +268,7 @@ export default function Nosotros() {
             Reserva tu cita y descubre por qué somos el centro de referencia en Turrialba.
           </p>
           <a
+            id="cta-nosotros-reserva"
             href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"

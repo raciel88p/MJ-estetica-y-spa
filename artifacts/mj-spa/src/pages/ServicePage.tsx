@@ -154,6 +154,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-5">{item.description}</p>
                 <a
+                  id={`cta-servicio-item-${item.title.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")}`}
                   href="/#contacto"
                   className="inline-flex items-center gap-1.5 text-primary font-medium text-sm hover:underline"
                 >
@@ -185,7 +186,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 className="bg-white text-primary hover:bg-white/90 rounded-full px-8 py-5 text-base font-semibold shadow-lg"
                 asChild
               >
-                <a href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
+                <a id="cta-servicio-reserva-cta" href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
                   <Phone className="w-4 h-4 mr-2" />
                   Reserva tu cita ahora
                 </a>
@@ -195,7 +196,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 className="border-white text-white bg-transparent hover:bg-white/10 rounded-full px-8 py-5 text-base"
                 asChild
               >
-                <a href="/#servicios">Ver todos los servicios</a>
+                <a id="cta-servicio-ver-todos" href="/#servicios">Ver todos los servicios</a>
               </Button>
             </motion.div>
           </motion.div>

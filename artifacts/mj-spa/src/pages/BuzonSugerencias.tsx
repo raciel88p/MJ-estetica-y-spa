@@ -136,6 +136,7 @@ export default function BuzonSugerencias() {
                 </div>
 
                 <button
+                  id="cta-buzon-enviar"
                   type="submit"
                   className="w-full inline-flex items-center justify-center gap-2 bg-primary text-white rounded-full px-8 py-4 text-base font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-primary/30"
                 >

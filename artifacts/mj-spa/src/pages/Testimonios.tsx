@@ -280,6 +280,7 @@ export default function Testimonios() {
             Reserva tu cita hoy y descubre por qué tantas clientas confían en nosotras.
           </p>
           <a
+            id="cta-testimonios-reserva"
             href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
             target="_blank"
             rel="noopener noreferrer"
