@@ -110,7 +110,7 @@ export default function Home() {
       {/* --- HERO SECTION --- */}
       <section id="inicio" className="relative min-h-screen flex items-center justify-center pt-20">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/40 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/35 to-black/20 z-10" />
           <img
             src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
             alt="MJ Fisio Estética y Spa - Centro de bienestar en Turrialba"
