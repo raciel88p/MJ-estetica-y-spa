@@ -169,8 +169,8 @@ export function Navbar() {
                     onMouseEnter={servicios.cancelClose}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >
-                    <div className="w-[820px] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
-                      <div className="px-5 pt-4 pb-2">
+                    <div className="w-[820px] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden m-[5px]">
+                      <div className="px-5 pt-5 pb-5">
                         <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-4">
                           Nuestros Servicios
                         </p>
