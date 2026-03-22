@@ -28,7 +28,7 @@ const serviceCategoryLinks = [
   },
 ];
 
-type DropdownKey = "nosotros" | "servicios" | "medicos" | null;
+type DropdownKey = "nosotros" | "servicios" | "medicos" | "paquetes" | null;
 
 function useHoverDropdown(key: DropdownKey, openDropdown: DropdownKey, setOpenDropdown: (k: DropdownKey) => void) {
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
@@ -157,6 +157,10 @@ export function Navbar() {
 
             <Link href="/testimonios" className={`${linkBase} ${textClass}`}>
               Testimonios
+            </Link>
+
+            <Link href="/paquetes" className={`${linkBase} ${textClass}`}>
+              Paquetes
             </Link>
 
             {/* ── Servicios Dropdown ── */}
@@ -360,6 +364,14 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Testimonios
+              </Link>
+
+              <Link
+                href="/paquetes"
+                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Paquetes
               </Link>
 
               {/* Mobile Services Accordion */}

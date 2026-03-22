@@ -14,6 +14,7 @@ import TratamientosCorporales from "@/pages/TratamientosCorporales";
 import TratamientosFaciales from "@/pages/TratamientosFaciales";
 import TratamientosPiernas from "@/pages/TratamientosPiernas";
 import SitemapPage from "@/pages/SitemapPage";
+import Paquetes from "@/pages/Paquetes";
 import { servicePages } from "@/data/services";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/testimonios" component={Testimonios} />
       <Route path="/buzon-sugerencias" component={BuzonSugerencias} />
       <Route path="/mapa-del-sitio" component={SitemapPage} />
+      <Route path="/paquetes" component={Paquetes} />
       <Route path="/tratamientos/corporales" component={TratamientosCorporales} />
       <Route path="/tratamientos/faciales" component={TratamientosFaciales} />
       <Route path="/tratamientos/piernas" component={TratamientosPiernas} />

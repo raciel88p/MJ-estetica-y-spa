@@ -13,6 +13,7 @@ const sections = [
     links: [
       { name: "Inicio", href: "/" },
       { name: "Sobre Nosotros", href: "/nosotros" },
+      { name: "Paquetes", href: "/paquetes" },
       { name: "Testimonios", href: "/testimonios" },
       { name: "Médicos y Estéticos", href: "/medicos-esteticos" },
       { name: "Buzón de Sugerencias", href: "/buzon-sugerencias" },
