@@ -47,7 +47,7 @@ export const tratamientosFacialesLinks = [
 export const tratamientosPiernasLinks = [
   { name: "Varices y Arañas Vasculares", href: "/servicios/varices-aranas-vasculares" },
   { name: "Cuidado de Piernas Cansadas", href: "/servicios/piernas-cansadas" },
-  { name: "Depilación Láser en Piernas", href: "/servicios/depilacion-laser" },
+  { name: "Tratamiento Anticelulitis", href: "/servicios/reduccion-medidas" },
 ];
 
 export const servicePages: ServicePageData[] = [

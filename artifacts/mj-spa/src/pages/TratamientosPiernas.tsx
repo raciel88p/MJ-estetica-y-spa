@@ -32,7 +32,7 @@ export default function TratamientosPiernas() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Tratamientos de Piernas"
-        description="Tratamientos de piernas en MJ Fisio Estética y Spa: varices, arañas vasculares, piernas cansadas, depilación láser y más en Turrialba, Costa Rica."
+        description="Tratamientos de piernas en MJ Fisio Estética y Spa: varices, arañas vasculares, piernas cansadas, anticelulitis y más en Turrialba, Costa Rica."
         canonical="/tratamientos/piernas"
       />
       <Navbar />

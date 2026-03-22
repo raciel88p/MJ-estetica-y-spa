@@ -76,7 +76,7 @@ const serviceCategories = [
     index: "03",
     title: "Piernas sanas, ligeras y estéticas",
     desc: "Técnicas no invasivas con resultados duraderos.",
-    services: ["Varices y Arañas Vasculares", "Presoterapia", "Drenaje Circulatorio", "Depilación Láser", "Piernas Cansadas"],
+    services: ["Varices y Arañas Vasculares", "Presoterapia", "Drenaje Circulatorio", "Tratamiento Anticelulitis", "Piernas Cansadas"],
     bg: "spa-texture.png",
     accent: "from-stone-900/95",
   },
