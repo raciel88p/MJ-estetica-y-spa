@@ -31,6 +31,7 @@ const serviceCategoryMap: Record<string, { name: string; href: string }> = {
   "drenaje-linfatico":         { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "depilacion-laser":          { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "faciales":                  { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
+  "adn-salmon":                { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "terapias-faciales":         { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "peeling-quimico":           { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "hollywood-peel":            { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },

@@ -41,6 +41,7 @@ export const tratamientosFacialesLinks = [
   { name: "Hollywood Peel", href: "/servicios/hollywood-peel" },
   { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
   { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
+  { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
 ];
 
 export const tratamientosPiernasLinks = [
@@ -1091,6 +1092,74 @@ export const servicePages: ServicePageData[] = [
         question: "¿Es dolorosa?",
         answer:
           "No. La sensación es de calor agradable y confortable. Es un tratamiento muy relajante que muchas clientas comparan con un masaje cálido.",
+      },
+    ],
+  },
+
+  {
+    slug: "adn-salmon",
+    name: "ADN de Salmón",
+    tagline: "Regeneración celular profunda para una piel radiante",
+    heroDescription:
+      "El ADN de Salmón (PDRN — polidesoxirribonucleótido) es uno de los tratamientos más innovadores en medicina estética regenerativa. Estimula la regeneración celular desde las capas más profundas de la piel, mejorando la hidratación, la elasticidad y el tono de forma natural y duradera.",
+    benefits: [
+      "Regeneración celular profunda y duradera",
+      "Hidratación intensa desde el interior de la piel",
+      "Reducción visible de arrugas finas y líneas de expresión",
+      "Mejora del tono y la luminosidad de la piel",
+      "Tratamiento de ojeras y pérdida de volumen",
+      "Compatible con otros tratamientos estéticos",
+    ],
+    items: [
+      {
+        title: "ADN de Salmón Facial",
+        description:
+          "Microinyecciones de PDRN en todo el rostro para estimular la producción de colágeno, mejorar la hidratación y recuperar el aspecto joven y luminoso de la piel. Indicado para pieles apagadas, con falta de firmeza o deshidratadas.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "ADN de Salmón Ocular",
+        description:
+          "Protocolo específico para el contorno de ojos: reduce ojeras, bolsas, patas de gallo y la apariencia de cansancio. Una de las zonas que más se beneficia de la regeneración con PDRN.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "ADN de Salmón + Mesoterapia",
+        description:
+          "Combinación de PDRN con cóctel de vitaminas y ácido hialurónico no reticulado para una regeneración máxima. Resultados más visibles y duraderos desde la primera sesión.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "ADN de Salmón Capilar",
+        description:
+          "Aplicación en cuero cabelludo para estimular los folículos pilosos, frenar la caída del cabello y mejorar la densidad y calidad capilar. Ideal como complemento a tratamientos de alopecia.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Es doloroso el tratamiento?",
+        answer:
+          "Se utilizan agujas muy finas y podemos aplicar crema anestésica tópica previamente. La molestia es mínima — la mayoría de las pacientes lo describen como pequeños pellizcos rápidos que se toleran sin problema.",
+      },
+      {
+        question: "¿Cuántas sesiones necesito?",
+        answer:
+          "Para resultados óptimos recomendamos entre 3 y 4 sesiones, con una separación de 2 a 3 semanas entre cada una. Posteriormente, una sesión de mantenimiento cada 3–6 meses es suficiente.",
+      },
+      {
+        question: "¿Cuándo se notan los resultados?",
+        answer:
+          "Desde la primera sesión se aprecia mayor luminosidad e hidratación. Los cambios más significativos en textura, firmeza y arrugas finas se observan a partir de la 2ª–3ª sesión.",
+      },
+      {
+        question: "¿En qué se diferencia del ácido hialurónico?",
+        answer:
+          "El ácido hialurónico rellena y volumiza. El ADN de Salmón actúa a nivel celular regenerando los tejidos y estimulando tu propio colágeno. Son tratamientos complementarios que con frecuencia se combinan para resultados superiores.",
       },
     ],
   },

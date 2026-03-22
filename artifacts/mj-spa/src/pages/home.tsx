@@ -87,6 +87,7 @@ const featuredTreatments = [
   { name: "Reducción de Medidas", href: "/servicios/reduccion-de-medidas", cat: "Corporal" },
   { name: "Tensado Corporal", href: "/servicios/tensado-corporal", cat: "Corporal" },
   { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios", cat: "Corporal" },
+  { name: "ADN de Salmón", href: "/servicios/adn-salmon", cat: "Facial" },
   { name: "Hollywood Peel", href: "/servicios/hollywood-peel", cat: "Facial" },
   { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial", cat: "Facial" },
   { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas", cat: "Facial" },
@@ -152,6 +153,7 @@ export default function Home() {
     "masajes-post-operatorios": "Masajes Post Operatorios",
     "tensado-corporal": "Tensado Corporal",
     "drenaje-linfatico": "Drenaje Linfático",
+    "adn-salmon": "ADN de Salmón",
     "hollywood-peel": "Hollywood Peel",
     "radiofrecuencia-facial": "Radiofrecuencia Facial",
     "eliminacion-manchas": "Eliminación de Manchas",
@@ -920,6 +922,7 @@ export default function Home() {
                       <option value="drenaje-linfatico">Drenaje Linfático</option>
                     </optgroup>
                     <optgroup label="Tratamientos Faciales">
+                      <option value="adn-salmon">ADN de Salmón</option>
                       <option value="hollywood-peel">Hollywood Peel</option>
                       <option value="radiofrecuencia-facial">Radiofrecuencia Facial</option>
                       <option value="eliminacion-manchas">Eliminación de Manchas</option>
