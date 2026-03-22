@@ -96,7 +96,7 @@ export default function Nosotros() {
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <p className="text-primary/80 tracking-widest uppercase text-sm font-medium mb-4">Quiénes somos</p>
             <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">
-              El Arte de Cuidar <span className="italic text-white/60">de Ti</span>
+              El Arte de Cuidar <span className="italic text-white/85">de Ti</span>
             </h1>
             <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
               En MJ Fisio Estética y Spa hemos creado un espacio donde la salud, la belleza y el bienestar
@@ -264,7 +264,7 @@ export default function Nosotros() {
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent" />
         <div className="max-w-2xl mx-auto px-4 text-center relative">
           <h2 className="text-4xl font-serif text-white mb-4">¿Lista para tu primera visita?</h2>
-          <p className="text-white/60 mb-8 text-lg">
+          <p className="text-white/80 mb-8 text-lg">
             Reserva tu cita y descubre por qué somos el centro de referencia en Turrialba.
           </p>
           <a

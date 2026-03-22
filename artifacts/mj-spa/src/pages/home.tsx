@@ -242,7 +242,7 @@ export default function Home() {
               {/* Eyebrow */}
               <div className="flex items-center justify-center gap-4 mb-7">
                 <div className="w-12 h-px bg-white/30" />
-                <p className="text-white/60 tracking-[0.35em] uppercase text-xs font-medium">
+                <p className="text-white/85 tracking-[0.35em] uppercase text-xs font-medium">
                   {slide.label}
                 </p>
                 <div className="w-12 h-px bg-white/30" />
@@ -318,7 +318,7 @@ export default function Home() {
             ].map((s) => (
               <div key={s.n} className="text-center px-4">
                 <p className="text-primary text-2xl font-serif font-bold">{s.n}</p>
-                <p className="text-white/60 text-[11px] tracking-widest uppercase mt-0.5">{s.label}</p>
+                <p className="text-white/85 text-[11px] tracking-widest uppercase mt-0.5">{s.label}</p>
               </div>
             ))}
           </div>
@@ -423,7 +423,7 @@ export default function Home() {
                       {/* Key services list */}
                       <ul className="space-y-2 mb-8">
                         {cat.services.map((s) => (
-                          <li key={s} className="flex items-center gap-2.5 text-xs text-white/50 group-hover:text-white/65 transition-colors">
+                          <li key={s} className="flex items-center gap-2.5 text-xs text-white/80 group-hover:text-white transition-colors">
                             <div className="w-1 h-1 rounded-full bg-primary shrink-0" />
                             {s}
                           </li>
@@ -599,7 +599,7 @@ export default function Home() {
             <h2 className="text-5xl md:text-7xl font-serif font-bold text-white leading-none mb-4">
               COMIENZA TU
             </h2>
-            <h2 className="text-5xl md:text-7xl font-serif font-light italic text-white/40 leading-none mb-10">
+            <h2 className="text-5xl md:text-7xl font-serif font-light italic text-white/70 leading-none mb-10">
               Transformación
             </h2>
             <p className="text-white/75 text-sm mb-12 leading-relaxed max-w-md mx-auto">
@@ -663,7 +663,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-white font-bold text-sm">{testimonials[0].name}</p>
-                  <p className="text-primary/60 text-xs tracking-widest uppercase mt-0.5">Cliente verificada</p>
+                  <p className="text-white/70 text-xs tracking-widest uppercase mt-0.5">Cliente verificada</p>
                 </div>
               </div>
             </div>
@@ -717,7 +717,7 @@ export default function Home() {
                 </p>
                 <h2 className="text-3xl font-serif font-bold text-white leading-tight mb-8">
                   Estamos en el corazón<br />
-                  <span className="font-light italic text-white/40">de Turrialba</span>
+                  <span className="font-light italic text-white/70">de Turrialba</span>
                 </h2>
 
                 <div className="space-y-6">
@@ -746,7 +746,7 @@ export default function Home() {
                         <Icon className="w-4 h-4 text-primary" />
                       </div>
                       <div>
-                        <p className="text-[10px] font-bold text-white/40 uppercase tracking-[0.25em] mb-1">{title}</p>
+                        <p className="text-[10px] font-bold text-white/65 uppercase tracking-[0.25em] mb-1">{title}</p>
                         {href ? (
                           <a href={href} target="_blank" rel="noopener noreferrer"
                             className="text-white text-sm hover:text-primary transition-colors leading-relaxed">
