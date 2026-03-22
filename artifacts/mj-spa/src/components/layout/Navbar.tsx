@@ -294,15 +294,6 @@ export function Navbar() {
                             </Link>
                           ))}
                         </div>
-                        <div className="border-t border-border mt-2 pt-2 pb-1">
-                          <Link
-                            href="/medicos-esteticos"
-                            className="block px-3 py-1.5 text-sm text-primary font-semibold hover:bg-secondary/40 transition-colors rounded-lg"
-                            onClick={() => setOpenDropdown(null)}
-                          >
-                            Ver todos →
-                          </Link>
-                        </div>
                       </div>
                     </div>
                   </motion.div>
