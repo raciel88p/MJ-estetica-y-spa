@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { 
-  Heart, Activity, Sparkles, Smile, Zap, Waves, 
-  Droplets, Coffee, Flower, ArrowRight, Star, Quote, CheckCircle2,
-  MapPin, Phone, Clock
+import {
+  Heart, Activity, Sparkles, Smile, Zap, Waves,
+  Droplets, Coffee, Flower, ArrowRight, Star,
+  MapPin, Phone, Clock, ChevronRight
 } from "lucide-react";
 
 import { SEO } from "@/components/SEO";
@@ -17,8 +17,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "wouter";
 
-// --- DATA ---
 const servicesData = {
   "Estética Facial": [
     { title: "Limpieza Facial Profunda", desc: "Limpieza y purificación profunda de la piel.", icon: Sparkles },
@@ -31,7 +31,7 @@ const servicesData = {
   "Estética Corporal": [
     { title: "Masaje Relajante", desc: "Masaje para la relajación total del cuerpo.", icon: Heart },
     { title: "Masaje Anticelulítico", desc: "Tratamiento específico para la celulitis.", icon: Waves },
-    { title: "Presoterapia", desc: "Tratamiento de drenaje con presión para mejorar la circulación.", icon: Activity },
+    { title: "Presoterapia", desc: "Drenaje con presión para mejorar la circulación.", icon: Activity },
     { title: "Cavitación", desc: "Reducción de grasa localizada mediante ultrasonidos.", icon: Zap },
     { title: "Radiofrecuencia Corporal", desc: "Reafirmación y remodelación corporal.", icon: Waves },
     { title: "Tratamiento Reductor", desc: "Tratamiento integral para la reducción de medidas.", icon: Activity },
@@ -42,20 +42,19 @@ const servicesData = {
     { title: "Aromaterapia", desc: "Tratamiento con aceites esenciales para bienestar total.", icon: Flower },
     { title: "Baño de Sales", desc: "Tratamiento relajante con sales minerales.", icon: Droplets },
     { title: "Piedras Calientes", desc: "Técnica de termoterapia con piedras volcánicas.", icon: Zap },
-    { title: "Envoltura Corporal", desc: "Tratamiento de envoltura para nutrir e hidratar la piel.", icon: Sparkles },
+    { title: "Envoltura Corporal", desc: "Envoltura para nutrir e hidratar la piel.", icon: Sparkles },
   ]
 };
 
 const testimonials = [
-  { name: "Kattya Brenes", text: "Es un privilegio formar parte de la Familia MJ. Agradezco infinitamente por abrirme las puertas para ser atendida por un equipo de personas profesionales y capacitadas. Me siento muy afortunada de recibir sus servicios." },
-  { name: "Carlos Brenes", text: "Desde que empecé con MJ estética he sentido como mi autoestima ha crecido, en un mes rebajé varios centímetros en mi abdomen y papada. La atención del lugar lo hace a uno sentirse seguro. Los resultados en poco tiempo me hacen sentir agradecido." },
+  { name: "Kattya Brenes", text: "Es un privilegio formar parte de la Familia MJ. Agradezco infinitamente por abrirme las puertas para ser atendida por un equipo de personas profesionales y capacitadas." },
+  { name: "Carlos Brenes", text: "Desde que empecé con MJ estética he sentido como mi autoestima ha crecido, en un mes rebajé varios centímetros en mi abdomen y papada. Los resultados en poco tiempo me hacen sentir agradecido." },
   { name: "Laura Hernández González", text: "Esos rollitos tan molestos que no podía quitar por más gimnasio, los logré eliminar gracias al tratamiento en MJ estética. Sin lugar a dudas un lugar para chinearte y de paso verte mejor." },
   { name: "Andrea Salas Portuguez", text: "La atención excelente tanto de Adri como de María, los servicios de primera calidad, mucho orden, puntualidad y precios muy asequibles." },
-  { name: "Marlene Fernández Mora", text: "El servicio brindado y la atención son excelentes, en particular el profesionalismo que demuestran. Los tratamientos complementados con buena alimentación y ejercicio se notan los cambios. Sí los recomendaría a ojos cerrados." },
+  { name: "Marlene Fernández Mora", text: "El servicio brindado y la atención son excelentes, en particular el profesionalismo que demuestran. Sí los recomendaría a ojos cerrados." },
   { name: "Catalina Aguilar Madriz", text: "Me he realizado varios tratamientos con MJ teniendo súper buenos resultados, por eso sigo comprando paquetes y recomendando a mis amig@s a que también vayan." },
 ];
 
-// --- SCHEMAS ---
 const contactFormSchema = z.object({
   name: z.string().min(2, "El nombre es muy corto"),
   email: z.string().email("Email inválido"),
@@ -66,15 +65,14 @@ const contactFormSchema = z.object({
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
-// --- ANIMATION VARIANTS ---
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } }
 };
 
 const staggerContainer = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+  visible: { opacity: 1, transition: { staggerChildren: 0.08 } }
 };
 
 export default function Home() {
@@ -83,22 +81,17 @@ export default function Home() {
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
-    defaultValues: {
-      name: "", email: "", phone: "", service: "", message: ""
-    }
+    defaultValues: { name: "", email: "", phone: "", service: "", message: "" }
   });
 
   const onSubmit = (data: ContactFormValues) => {
     console.log("Form data:", data);
-    toast({
-      title: "¡Mensaje enviado con éxito!",
-      description: "Nos pondremos en contacto contigo lo antes posible.",
-    });
+    toast({ title: "¡Mensaje enviado!", description: "Nos pondremos en contacto contigo pronto." });
     form.reset();
   };
 
   return (
-    <div className="min-h-screen bg-background font-sans overflow-x-hidden">
+    <div className="min-h-screen bg-white font-sans overflow-x-hidden">
       <SEO
         title="Centro de Estética y Spa en Turrialba"
         description="MJ Fisio Estética y Spa en Turrialba, Costa Rica. Tratamientos faciales, masajes, depilación láser, botox, hilos tensores, nutrición y más. Reserva tu cita hoy."
@@ -107,10 +100,9 @@ export default function Home() {
       <Navbar />
       <FloatingWhatsApp />
 
-      {/* --- HERO SECTION --- */}
-      <section id="inicio" className="relative min-h-screen flex items-center justify-center pt-20">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/35 to-black/20 z-10" />
+      {/* ── HERO ── */}
+      <section id="inicio" className="relative h-screen flex items-end pb-20 md:pb-28 overflow-hidden">
+        <div className="absolute inset-0">
           <img
             src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
             alt="MJ Fisio Estética y Spa - Centro de bienestar en Turrialba"
@@ -118,171 +110,133 @@ export default function Home() {
             loading="eager"
             fetchPriority="high"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/40" />
         </div>
-        
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full">
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            className="max-w-2xl"
           >
-            <span className="inline-block py-1 px-4 rounded-full bg-white/20 backdrop-blur-md text-sm uppercase tracking-widest mb-6 font-medium border border-white/30">
-              Cuidado Integral
-            </span>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 drop-shadow-lg leading-tight">
-              <span className="text-white">Tu bienestar es</span><br />
-              <span className="text-secondary italic font-light">nuestra prioridad</span>
-            </h1>
-            <p className="text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto text-white/90 drop-shadow-md">
-              Descubre un oasis de paz en Turrialba. Especialistas en estética avanzada, 
-              tratamientos médicos y spa para revitalizar tu cuerpo y alma.
+            <p className="text-white/60 tracking-[0.25em] uppercase text-xs font-medium mb-5">
+              Turrialba · Costa Rica
             </p>
-            <Button 
-              size="lg" 
-              className="rounded-full px-8 py-6 text-lg bg-primary hover:bg-primary/90 text-white shadow-xl hover:shadow-primary/30 transition-all hover:-translate-y-1"
-              asChild
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-white leading-tight mb-6">
+              Tu bienestar,<br />
+              <span className="italic font-light text-white/80">nuestra prioridad</span>
+            </h1>
+            <p className="text-white/70 text-base md:text-lg mb-10 max-w-lg leading-relaxed">
+              Estética avanzada, tratamientos médicos y spa en el corazón de Turrialba.
+            </p>
+            <a
+              id="cta-hero-reserva"
+              href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-white text-stone-900 text-sm font-semibold tracking-wide px-8 py-4 hover:bg-primary hover:text-white transition-all duration-300 group"
             >
-              <a id="cta-hero-reserva" href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
-                Reserva tu Experiencia <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-            </Button>
+              Reservar cita
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
           </motion.div>
         </div>
-      </section>
 
-      {/* --- SOCIAL MEDIA STRIP --- */}
-      <section className="bg-foreground py-5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-          <p className="text-white/50 text-sm uppercase tracking-widest font-medium">Síguenos en</p>
-          <div className="flex items-center gap-4">
-            <a href="https://www.instagram.com/fisioesteticamj/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white/70 hover:text-primary transition-colors group">
-              <span className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              </span>
-              <span className="text-sm font-medium hidden sm:inline">Instagram</span>
-            </a>
-            <a href="https://www.facebook.com/MJFisioEsteticaySpa" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white/70 hover:text-primary transition-colors group">
-              <span className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-              </span>
-              <span className="text-sm font-medium hidden sm:inline">Facebook</span>
-            </a>
-            <a id="cta-social-whatsapp" href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white/70 hover:text-primary transition-colors group">
-              <span className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              </span>
-              <span className="text-sm font-medium hidden sm:inline">WhatsApp</span>
-            </a>
-            <a href="#" className="flex items-center gap-2 text-white/70 hover:text-primary transition-colors group">
-              <span className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.75a4.85 4.85 0 01-1.01-.06z"/></svg>
-              </span>
-              <span className="text-sm font-medium hidden sm:inline">TikTok</span>
-            </a>
+        {/* Stats bar */}
+        <div className="absolute bottom-0 left-0 right-0 bg-white/10 backdrop-blur-md border-t border-white/10">
+          <div className="max-w-7xl mx-auto px-6 py-4 grid grid-cols-3 divide-x divide-white/20">
+            {[
+              { n: "2335", label: "Clientes atendidas" },
+              { n: "82+", label: "Tratamientos disponibles" },
+              { n: "3+", label: "Años de experiencia" },
+            ].map((s) => (
+              <div key={s.n} className="text-center px-4">
+                <p className="text-white text-xl font-serif font-bold">{s.n}</p>
+                <p className="text-white/60 text-xs tracking-wide mt-0.5">{s.label}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* --- ABOUT SECTION --- */}
-      <section id="nosotros" className="py-24 bg-white relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            <motion.div 
+      {/* ── INTRO ── */}
+      <section id="nosotros" className="py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-80px" }}
               variants={fadeUp}
-              className="relative"
             >
-              <div className="absolute inset-0 bg-secondary rounded-t-full rounded-b-xl transform -translate-x-4 translate-y-4 -z-10"></div>
               <img
                 src={`${import.meta.env.BASE_URL}images/about-us.png`}
-                alt="Instalaciones de MJ Fisio Estética y Spa en Turrialba"
-                className="rounded-t-full rounded-b-xl shadow-2xl object-cover w-full h-[600px]"
+                alt="Instalaciones de MJ Fisio Estética y Spa"
+                className="w-full h-[520px] object-cover"
                 loading="lazy"
               />
-              {/* Floating badge */}
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-border">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Star className="w-6 h-6 text-primary fill-primary" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-2xl text-foreground">+3 Años</p>
-                    <p className="text-sm text-muted-foreground">de Experiencia</p>
-                  </div>
-                </div>
-              </div>
             </motion.div>
 
             <motion.div
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "-80px" }}
               variants={fadeUp}
+              className="lg:pl-4"
             >
-              <h2 className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Sobre Nosotros</h2>
-              <h3 className="text-4xl md:text-5xl font-serif mb-6 text-foreground">El Arte de Cuidar <br/><span className="italic text-muted-foreground">de Ti</span></h3>
-              <p className="text-muted-foreground leading-relaxed mb-6 text-lg">
-                En MJ Fisio Estética y Spa, hemos creado un espacio dedicado exclusivamente a tu salud, belleza y relajación. 
-                Situados en el corazón de Turrialba, Costa Rica, nuestro centro combina la calidez de un trato cercano con la excelencia de 
-                profesionales altamente cualificados.
+              <p className="text-primary text-xs font-semibold tracking-[0.2em] uppercase mb-4">Sobre nosotros</p>
+              <h2 className="text-3xl md:text-4xl font-serif text-stone-900 leading-tight mb-6">
+                El arte de cuidar<br />
+                <span className="italic font-light text-stone-400">de ti</span>
+              </h2>
+              <p className="text-stone-500 leading-relaxed mb-5">
+                En MJ Fisio Estética y Spa hemos creado un espacio dedicado a tu salud, belleza y relajación.
+                Situados en Turrialba, Costa Rica, combinamos la calidez de un trato cercano con la excelencia
+                de profesionales altamente cualificados.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
-                Nuestro equipo de expertos en estética y bienestar trabaja de manera integral para ofrecerte 
-                tratamientos personalizados que responden a tus necesidades reales, utilizando tecnología de 
-                vanguardia en un ambiente diseñado para desconectar.
+              <p className="text-stone-500 leading-relaxed mb-10">
+                Nuestro equipo trabaja de manera integral para ofrecerte tratamientos personalizados que
+                responden a tus necesidades reales, usando tecnología de vanguardia en un ambiente diseñado para desconectar.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                {[
-                  "Profesionales certificados",
-                  "Tecnología avanzada",
-                  "Ambiente relajante",
-                  "Trato personalizado",
-                  "Paquetes especiales",
-                  "Productos de alta gama"
-                ].map((feature, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
-                    <span className="font-medium text-foreground">{feature}</span>
-                  </div>
+              <ul className="space-y-3 mb-10">
+                {["Profesionales certificados", "Tecnología avanzada", "Trato personalizado", "Productos de alta gama"].map((f) => (
+                  <li key={f} className="flex items-center gap-3 text-stone-700 text-sm">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                    {f}
+                  </li>
                 ))}
-              </div>
-              
-              <Button variant="outline" className="rounded-full px-8 py-6 text-primary border-primary hover:bg-primary hover:text-white transition-all">
-                Conoce a nuestro equipo
-              </Button>
-            </motion.div>
+              </ul>
 
+              <Link href="/nosotros">
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary border-b border-primary/40 pb-0.5 hover:border-primary transition-colors cursor-pointer">
+                  Conoce nuestro equipo <ChevronRight className="w-4 h-4" />
+                </span>
+              </Link>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* --- SERVICES SECTION --- */}
-      <section id="servicios" className="py-24 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Nuestros Servicios</h2>
-            <h3 className="text-4xl md:text-5xl font-serif mb-6">Tratamientos a Medida</h3>
-            <p className="text-muted-foreground text-lg">Explora nuestra amplia gama de servicios diseñados para realzar tu belleza natural y restaurar tu equilibrio físico y mental.</p>
+      {/* ── SERVICES ── */}
+      <section id="servicios" className="py-24 md:py-32 bg-stone-50">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="mb-14">
+            <p className="text-primary text-xs font-semibold tracking-[0.2em] uppercase mb-4">Nuestros servicios</p>
+            <h2 className="text-3xl md:text-4xl font-serif text-stone-900">Tratamientos a medida</h2>
           </div>
 
-          {/* Custom Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
+          {/* Tab nav */}
+          <div className="flex gap-8 mb-10 border-b border-stone-200">
             {(Object.keys(servicesData) as Array<keyof typeof servicesData>).map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3 rounded-full text-sm md:text-base font-medium transition-all duration-300 ${
-                  activeTab === tab 
-                    ? "bg-primary text-white shadow-lg shadow-primary/20" 
-                    : "bg-white text-foreground hover:bg-primary/10 border border-border"
+                className={`pb-3 text-sm font-medium transition-all duration-200 border-b-2 -mb-px ${
+                  activeTab === tab
+                    ? "border-primary text-primary"
+                    : "border-transparent text-stone-400 hover:text-stone-700"
                 }`}
               >
                 {tab}
@@ -290,180 +244,182 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Services Grid */}
-          <motion.div 
-            key={activeTab} // Forces re-render animation on tab change
+          {/* Services list */}
+          <motion.div
+            key={activeTab}
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-stone-200"
           >
-            {servicesData[activeTab].map((service, i) => {
-              const Icon = service.icon;
-              return (
-                <motion.div
-                  key={i}
-                  variants={fadeUp}
-                  className="bg-white rounded-2xl p-8 shadow-sm border border-border/50 hover:shadow-xl hover:border-primary/20 transition-all duration-300 group cursor-default"
-                >
-                  <div className="w-14 h-14 rounded-xl bg-secondary/30 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                    <Icon className="w-7 h-7 text-primary group-hover:text-white transition-colors" />
-                  </div>
-                  <h4 className="text-xl font-serif font-bold mb-3 text-foreground group-hover:text-primary transition-colors">{service.title}</h4>
-                  <p className="text-muted-foreground leading-relaxed">{service.desc}</p>
-                </motion.div>
-              );
-            })}
+            {servicesData[activeTab].map((service, i) => (
+              <motion.div
+                key={i}
+                variants={fadeUp}
+                className="bg-white p-8 group hover:bg-stone-50 transition-colors"
+              >
+                <h4 className="text-base font-semibold text-stone-900 mb-2 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h4>
+                <p className="text-stone-400 text-sm leading-relaxed">{service.desc}</p>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </section>
 
-      {/* --- TESTIMONIALS SECTION --- */}
-      <section id="testimonios" className="py-24 relative">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-background/80 backdrop-blur-sm z-10" />
-          <img
-            src={`${import.meta.env.BASE_URL}images/spa-texture.png`}
-            alt="Textura decorativa spa"
-            className="w-full h-full object-cover opacity-60"
-            loading="lazy"
-          />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Testimonios</h2>
-            <h3 className="text-4xl md:text-5xl font-serif mb-6">Lo Que Dicen Nuestros Clientes</h3>
+      {/* ── TESTIMONIALS ── */}
+      <section id="testimonios" className="py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+            <div>
+              <p className="text-primary text-xs font-semibold tracking-[0.2em] uppercase mb-4">Testimonios</p>
+              <h2 className="text-3xl md:text-4xl font-serif text-stone-900">Lo que dicen<br />nuestras clientas</h2>
+            </div>
+            <Link href="/testimonios">
+              <span className="text-sm text-stone-400 hover:text-primary transition-colors cursor-pointer whitespace-nowrap">
+                Ver todos los testimonios →
+              </span>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, i) => (
+            {testimonials.map((t, i) => (
               <motion.div
                 key={i}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
-                className="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-white/50 relative hover:-translate-y-1 transition-transform duration-300"
+                className="border-t border-stone-200 pt-8"
               >
-                <Quote className="absolute top-6 right-6 w-10 h-10 text-secondary/40" />
-                <div className="flex gap-1 mb-6">
-                  {[1,2,3,4,5].map(star => (
-                    <Star key={star} className="w-5 h-5 fill-secondary text-secondary" />
+                <div className="flex gap-0.5 mb-5">
+                  {[1,2,3,4,5].map(s => (
+                    <Star key={s} className="w-3.5 h-3.5 fill-primary text-primary" />
                   ))}
                 </div>
-                <p className="text-foreground/80 italic leading-relaxed mb-6">"{testimonial.text}"</p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-secondary/50 flex items-center justify-center font-serif font-bold text-primary text-xl">
-                    {testimonial.name.charAt(0)}
-                  </div>
-                  <div>
-                    <h5 className="font-bold text-foreground font-serif">{testimonial.name}</h5>
-                    <span className="text-xs text-muted-foreground uppercase tracking-wider">Cliente Verificado</span>
-                  </div>
-                </div>
+                <p className="text-stone-600 text-sm leading-relaxed mb-6">"{t.text}"</p>
+                <p className="text-stone-900 text-sm font-semibold">{t.name}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* --- CONTACT SECTION --- */}
-      <section id="contacto" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            
-            {/* Contact Info */}
+      {/* ── CTA BAND ── */}
+      <section className="py-20 md:py-24 bg-stone-900">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+          >
+            <p className="text-primary text-xs font-semibold tracking-[0.2em] uppercase mb-4">Agenda tu visita</p>
+            <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">
+              Comienza tu experiencia<br />
+              <span className="italic font-light text-white/60">de bienestar hoy</span>
+            </h2>
+            <p className="text-stone-400 mb-10 text-sm leading-relaxed max-w-xl mx-auto">
+              Estamos en Turrialba, Ciudadela Jorge de Bravo. Escríbenos por WhatsApp y agendamos tu cita.
+            </p>
+            <a
+              href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-primary text-white text-sm font-semibold tracking-wide px-10 py-4 hover:bg-primary/90 transition-colors group"
+            >
+              Reservar por WhatsApp
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── CONTACT ── */}
+      <section id="contacto" className="py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeUp}
             >
-              <h2 className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Contacto</h2>
-              <h3 className="text-4xl md:text-5xl font-serif mb-8 text-foreground">Reserva tu Momento <br/><span className="italic text-muted-foreground">de Bienestar</span></h3>
-              <p className="text-muted-foreground text-lg mb-12">
-                Estamos aquí para asesorarte. Rellena el formulario o contáctanos directamente para programar tu visita.
+              <p className="text-primary text-xs font-semibold tracking-[0.2em] uppercase mb-4">Contacto</p>
+              <h2 className="text-3xl md:text-4xl font-serif text-stone-900 mb-8">
+                Reserva tu momento<br />
+                <span className="italic font-light text-stone-400">de bienestar</span>
+              </h2>
+              <p className="text-stone-500 text-sm leading-relaxed mb-12">
+                Estamos aquí para asesorarte. Contáctanos directamente o completa el formulario y te respondemos pronto.
               </p>
 
               <div className="space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-secondary/30 flex items-center justify-center shrink-0">
-                    <MapPin className="w-6 h-6 text-primary" />
+                {[
+                  { icon: MapPin, title: "Ubicación", lines: ["Turrialba, Costa Rica", "Ciudadela Jorge de Bravo"] },
+                  { icon: Phone, title: "Teléfono", lines: ["+506 86907757", "Para reservas o consultas"] },
+                  { icon: Clock, title: "Horario", lines: ["Lun, Mar, Jue, Vie: 9:00 – 20:00", "Sábados: 8:00 – 15:00"] },
+                ].map(({ icon: Icon, title, lines }) => (
+                  <div key={title} className="flex items-start gap-4">
+                    <div className="w-10 h-10 border border-stone-200 flex items-center justify-center shrink-0">
+                      <Icon className="w-4 h-4 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-stone-900 uppercase tracking-widest mb-1">{title}</p>
+                      {lines.map((l, i) => (
+                        <p key={i} className="text-stone-500 text-sm">{l}</p>
+                      ))}
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-serif font-bold text-xl mb-1">Nuestra Ubicación</h4>
-                    <p className="text-muted-foreground">Turrialba<br/>Ciudadela Jorge de Bravo</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-secondary/30 flex items-center justify-center shrink-0">
-                    <Phone className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-serif font-bold text-xl mb-1">Llámanos</h4>
-                    <p className="text-muted-foreground">+506 86907757<br/>Para reservas o consultas</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-full bg-secondary/30 flex items-center justify-center shrink-0">
-                    <Clock className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-serif font-bold text-xl mb-1">Horario</h4>
-                    <p className="text-muted-foreground">Lun, Mar, Jue, Vie: 9:00 - 20:00<br/>Sábados: 8:00 - 15:00</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </motion.div>
 
-            {/* Contact Form */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeUp}
-              className="bg-background rounded-3xl p-8 md:p-10 shadow-xl border border-border"
             >
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Nombre completo</label>
-                  <Input 
-                    {...form.register("name")} 
-                    placeholder="Tu nombre" 
-                    className={`bg-white border-border/50 py-6 px-4 rounded-xl ${form.formState.errors.name ? 'border-destructive' : ''}`}
+                  <label className="block text-xs font-semibold text-stone-700 uppercase tracking-widest mb-2">Nombre</label>
+                  <Input
+                    {...form.register("name")}
+                    placeholder="Tu nombre completo"
+                    className="rounded-none border-0 border-b border-stone-200 bg-transparent px-0 py-3 focus-visible:ring-0 focus-visible:border-primary placeholder:text-stone-300 text-sm"
                   />
-                  {form.formState.errors.name && <p className="text-destructive text-sm mt-1">{form.formState.errors.name.message}</p>}
+                  {form.formState.errors.name && <p className="text-red-500 text-xs mt-1">{form.formState.errors.name.message}</p>}
                 </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <div className="grid grid-cols-2 gap-5">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Email</label>
-                    <Input 
-                      {...form.register("email")} 
-                      placeholder="tu@email.com" 
-                      className={`bg-white border-border/50 py-6 px-4 rounded-xl ${form.formState.errors.email ? 'border-destructive' : ''}`}
+                    <label className="block text-xs font-semibold text-stone-700 uppercase tracking-widest mb-2">Email</label>
+                    <Input
+                      {...form.register("email")}
+                      placeholder="tu@email.com"
+                      className="rounded-none border-0 border-b border-stone-200 bg-transparent px-0 py-3 focus-visible:ring-0 focus-visible:border-primary placeholder:text-stone-300 text-sm"
                     />
-                    {form.formState.errors.email && <p className="text-destructive text-sm mt-1">{form.formState.errors.email.message}</p>}
+                    {form.formState.errors.email && <p className="text-red-500 text-xs mt-1">{form.formState.errors.email.message}</p>}
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Teléfono</label>
-                    <Input 
-                      {...form.register("phone")} 
-                      placeholder="Tu teléfono" 
-                      className={`bg-white border-border/50 py-6 px-4 rounded-xl ${form.formState.errors.phone ? 'border-destructive' : ''}`}
+                    <label className="block text-xs font-semibold text-stone-700 uppercase tracking-widest mb-2">Teléfono</label>
+                    <Input
+                      {...form.register("phone")}
+                      placeholder="Tu teléfono"
+                      className="rounded-none border-0 border-b border-stone-200 bg-transparent px-0 py-3 focus-visible:ring-0 focus-visible:border-primary placeholder:text-stone-300 text-sm"
                     />
-                    {form.formState.errors.phone && <p className="text-destructive text-sm mt-1">{form.formState.errors.phone.message}</p>}
+                    {form.formState.errors.phone && <p className="text-red-500 text-xs mt-1">{form.formState.errors.phone.message}</p>}
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Servicio de interés</label>
-                  <select 
-                    {...form.register("service")} 
-                    className={`w-full bg-white border border-border/50 py-4 px-4 rounded-xl text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all ${form.formState.errors.service ? 'border-destructive' : ''}`}
+                  <label className="block text-xs font-semibold text-stone-700 uppercase tracking-widest mb-2">Servicio</label>
+                  <select
+                    {...form.register("service")}
+                    className="w-full border-0 border-b border-stone-200 bg-transparent py-3 text-sm text-stone-700 focus:outline-none focus:border-primary transition-colors appearance-none"
                   >
                     <option value="">Selecciona un servicio</option>
                     <optgroup label="Estética">
@@ -475,27 +431,29 @@ export default function Home() {
                       <option value="masaje-relajante">Masaje Relajante</option>
                     </optgroup>
                   </select>
-                  {form.formState.errors.service && <p className="text-destructive text-sm mt-1">{form.formState.errors.service.message}</p>}
+                  {form.formState.errors.service && <p className="text-red-500 text-xs mt-1">{form.formState.errors.service.message}</p>}
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Mensaje</label>
-                  <Textarea 
-                    {...form.register("message")} 
-                    placeholder="¿En qué podemos ayudarte?" 
-                    className={`bg-white border-border/50 py-4 px-4 rounded-xl min-h-[120px] resize-none ${form.formState.errors.message ? 'border-destructive' : ''}`}
+                  <label className="block text-xs font-semibold text-stone-700 uppercase tracking-widest mb-2">Mensaje</label>
+                  <Textarea
+                    {...form.register("message")}
+                    placeholder="¿En qué podemos ayudarte?"
+                    className="rounded-none border-0 border-b border-stone-200 bg-transparent px-0 py-3 focus-visible:ring-0 focus-visible:border-primary placeholder:text-stone-300 text-sm min-h-[100px] resize-none"
                   />
-                  {form.formState.errors.message && <p className="text-destructive text-sm mt-1">{form.formState.errors.message.message}</p>}
+                  {form.formState.errors.message && <p className="text-red-500 text-xs mt-1">{form.formState.errors.message.message}</p>}
                 </div>
 
-                <Button 
-                  id="cta-contacto-enviar"
-                  type="button"
-                  className="w-full rounded-xl py-6 text-lg bg-primary hover:bg-primary/90 text-white shadow-lg hover:shadow-primary/30 transition-all hover:-translate-y-0.5"
-                  onClick={() => window.open("https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0", "_blank")}
-                >
-                  Enviar Mensaje
-                </Button>
+                <div className="pt-4">
+                  <Button
+                    id="cta-contacto-enviar"
+                    type="button"
+                    className="w-full rounded-none bg-stone-900 hover:bg-primary text-white text-sm font-semibold tracking-wide py-5 transition-colors"
+                    onClick={() => window.open("https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0", "_blank")}
+                  >
+                    Enviar por WhatsApp
+                  </Button>
+                </div>
               </form>
             </motion.div>
           </div>

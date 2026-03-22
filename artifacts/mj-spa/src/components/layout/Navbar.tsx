@@ -59,16 +59,16 @@ export function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const textClass = isScrolled ? "text-foreground/80" : "text-white/90";
+  const textClass = isScrolled ? "text-stone-700" : "text-white/90";
   const hoverClass = "hover:text-primary transition-colors";
   const linkBase = `text-sm uppercase tracking-widest font-medium ${hoverClass}`;
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/97 backdrop-blur-md shadow-md py-2"
-          : "bg-gradient-to-b from-black/70 via-black/30 to-transparent py-5"
+          ? "bg-white shadow-sm py-3 border-b border-stone-100"
+          : "bg-gradient-to-b from-black/60 via-black/20 to-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -243,16 +243,15 @@ export function Navbar() {
             </a>
 
             <Button
-              className={`rounded-full px-6 py-5 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 ${
+              className={`rounded-none px-6 py-2.5 text-sm font-semibold tracking-wide transition-all ${
                 isScrolled
-                  ? "bg-primary text-white hover:bg-primary/90"
-                  : "bg-white text-primary hover:bg-white/90"
+                  ? "bg-stone-900 text-white hover:bg-primary"
+                  : "bg-white text-stone-900 hover:bg-primary hover:text-white"
               }`}
               asChild
             >
               <a id="cta-nav-reserva-desktop" href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
-                <Phone className="w-4 h-4 mr-2" />
-                Reserva tu cita
+                Reservar cita
               </a>
             </Button>
           </nav>
