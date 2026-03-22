@@ -1,3 +1,4 @@
+import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
@@ -5,6 +6,11 @@ import { motion } from "framer-motion";
 export default function PoliticaDatos() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEO
+        title="Política de Datos"
+        description="Política de privacidad y tratamiento de datos personales de MJ Fisio Estética y Spa, Turrialba, Costa Rica."
+        canonical="/politica-de-datos"
+      />
       <Navbar />
 
       <main className="flex-1 pt-28 pb-20">

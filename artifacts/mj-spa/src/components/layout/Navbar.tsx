@@ -77,6 +77,8 @@ export function Navbar() {
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
               alt="MJ Fisio Estética y Spa"
               className="h-14 md:h-16 w-auto object-contain"
+              width="160"
+              height="64"
             />
           </Link>
 

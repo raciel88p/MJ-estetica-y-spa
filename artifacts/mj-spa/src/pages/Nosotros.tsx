@@ -1,3 +1,4 @@
+import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
@@ -77,6 +78,11 @@ const stats = [
 export default function Nosotros() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEO
+        title="Sobre Nosotros"
+        description="Conoce al equipo de MJ Fisio Estética y Spa en Turrialba. Más de 15 años de experiencia en estética y bienestar, con 2335 clientes satisfechos y 82+ tratamientos disponibles."
+        canonical="/nosotros"
+      />
       <Navbar />
 
       {/* Hero */}
@@ -129,8 +135,9 @@ export default function Nosotros() {
               <div className="absolute inset-0 bg-secondary rounded-t-full rounded-b-xl transform -translate-x-4 translate-y-4 -z-10" />
               <img
                 src={`${import.meta.env.BASE_URL}images/about-us.png`}
-                alt="Instalaciones MJ Fisio Estética y Spa"
+                alt="Equipo de MJ Fisio Estética y Spa en Turrialba"
                 className="rounded-t-full rounded-b-xl shadow-2xl object-cover w-full h-[550px]"
+                loading="lazy"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src =
                     "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=700&q=80";

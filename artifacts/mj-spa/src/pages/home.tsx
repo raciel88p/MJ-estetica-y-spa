@@ -9,6 +9,7 @@ import {
   MapPin, Phone, Clock
 } from "lucide-react";
 
+import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
@@ -98,6 +99,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background font-sans overflow-x-hidden">
+      <SEO
+        title="Centro de Estética y Spa en Turrialba"
+        description="MJ Fisio Estética y Spa en Turrialba, Costa Rica. Tratamientos faciales, masajes, depilación láser, botox, hilos tensores, nutrición y más. Reserva tu cita hoy."
+        canonical="/"
+      />
       <Navbar />
       <FloatingWhatsApp />
 
@@ -105,10 +111,12 @@ export default function Home() {
       <section id="inicio" className="relative min-h-screen flex items-center justify-center pt-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/40 z-10" />
-          <img 
-            src={`${import.meta.env.BASE_URL}images/hero-bg.png`} 
-            alt="Spa Hero Background" 
+          <img
+            src={`${import.meta.env.BASE_URL}images/hero-bg.png`}
+            alt="MJ Fisio Estética y Spa - Centro de bienestar en Turrialba"
             className="w-full h-full object-cover object-center"
+            loading="eager"
+            fetchPriority="high"
           />
         </div>
         
@@ -192,10 +200,11 @@ export default function Home() {
               className="relative"
             >
               <div className="absolute inset-0 bg-secondary rounded-t-full rounded-b-xl transform -translate-x-4 translate-y-4 -z-10"></div>
-              <img 
-                src={`${import.meta.env.BASE_URL}images/about-us.png`} 
-                alt="Instalaciones de MJ Fisio y Spa" 
+              <img
+                src={`${import.meta.env.BASE_URL}images/about-us.png`}
+                alt="Instalaciones de MJ Fisio Estética y Spa en Turrialba"
                 className="rounded-t-full rounded-b-xl shadow-2xl object-cover w-full h-[600px]"
+                loading="lazy"
               />
               {/* Floating badge */}
               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl border border-border">
@@ -313,10 +322,11 @@ export default function Home() {
       <section id="testimonios" className="py-24 relative">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-background/80 backdrop-blur-sm z-10" />
-          <img 
-            src={`${import.meta.env.BASE_URL}images/spa-texture.png`} 
-            alt="Texture background" 
+          <img
+            src={`${import.meta.env.BASE_URL}images/spa-texture.png`}
+            alt="Textura decorativa spa"
             className="w-full h-full object-cover opacity-60"
+            loading="lazy"
           />
         </div>
 

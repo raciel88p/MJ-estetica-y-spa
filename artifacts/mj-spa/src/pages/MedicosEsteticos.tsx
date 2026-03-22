@@ -1,3 +1,4 @@
+import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
@@ -34,6 +35,11 @@ export default function MedicosEsteticos() {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEO
+        title="Tratamientos Médicos Estéticos"
+        description="Tratamientos médicos estéticos en Turrialba: botox, rellenos, hilos tensores, trasplante capilar y nutrición. Especialistas certificados en MJ Fisio Estética y Spa."
+        canonical="/medicos-esteticos"
+      />
       <Navbar />
 
       {/* Hero */}

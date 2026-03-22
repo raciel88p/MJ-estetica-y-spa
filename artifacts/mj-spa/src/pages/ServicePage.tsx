@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { Button } from "@/components/ui/button";
 import type { ServicePageData } from "@/data/services";
+import { SEO } from "@/components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -45,6 +46,11 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 export default function ServicePage({ service }: { service: ServicePageData }) {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title={service.title}
+        description={`${service.tagline} — Tratamiento especializado en MJ Fisio Estética y Spa, Turrialba, Costa Rica.`}
+        canonical={`/servicios/${service.slug}`}
+      />
       <Navbar />
 
       {/* Hero */}

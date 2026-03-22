@@ -13,6 +13,9 @@ export function Footer() {
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
               alt="MJ Fisio Estética y Spa"
               className="h-16 w-auto object-contain mb-6"
+              loading="lazy"
+              width="160"
+              height="64"
             />
             <p className="text-white/60 font-light leading-relaxed">
               Tu centro de confianza en Turrialba para cuidar de tu cuerpo, mente y bienestar con los mejores profesionales.

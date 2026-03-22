@@ -1,3 +1,4 @@
+import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
@@ -186,6 +187,11 @@ function StarRating({ rating }: { rating: number }) {
 export default function Testimonios() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <SEO
+        title="Testimonios de Clientes"
+        description="Lee las opiniones y testimonios reales de clientes de MJ Fisio Estética y Spa en Turrialba, Costa Rica. Más de 2335 clientes satisfechos con valoración 4.9/5."
+        canonical="/testimonios"
+      />
       <Navbar />
 
       {/* Hero */}
