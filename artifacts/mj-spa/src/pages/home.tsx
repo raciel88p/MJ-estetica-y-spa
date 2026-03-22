@@ -546,7 +546,7 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-serif font-light italic text-stone-300 leading-tight mb-9">
                 y Spa
               </h2>
-              <p className="text-white/65 text-sm leading-relaxed mb-10">
+              <p className="text-primary text-sm leading-relaxed mb-10">
                 En MJ Fisio Estética y Spa hemos creado un espacio donde la salud, la belleza
                 y el bienestar se unen. Combinamos la calidez de un trato cercano con la excelencia
                 de profesionales altamente cualificados y tecnología de vanguardia, en el corazón
@@ -561,7 +561,7 @@ export default function Home() {
                     </span>
                     <div>
                       <p className="text-stone-900 font-semibold text-sm mb-1">{f.title}</p>
-                      <p className="text-white/65 text-sm leading-relaxed">{f.desc}</p>
+                      <p className="text-primary text-sm leading-relaxed">{f.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -629,11 +629,11 @@ export default function Home() {
               <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">TESTIMONIOS</p>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight">
                 Lo que dicen<br />
-                <span className="font-light italic text-white/75">nuestras clientas</span>
+                <span className="font-light italic text-primary">nuestras clientas</span>
               </h2>
             </div>
             <Link href="/testimonios">
-              <span className="text-xs font-bold text-white/75 hover:text-primary transition-colors cursor-pointer tracking-[0.2em] uppercase whitespace-nowrap">
+              <span className="text-xs font-bold text-stone-500 hover:text-primary transition-colors cursor-pointer tracking-[0.2em] uppercase whitespace-nowrap">
                 Ver todos →
               </span>
             </Link>

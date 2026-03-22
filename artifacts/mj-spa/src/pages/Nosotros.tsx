@@ -98,7 +98,7 @@ export default function Nosotros() {
             <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">
               El Arte de Cuidar <span className="italic text-white/85">de Ti</span>
             </h1>
-            <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-primary/90 max-w-2xl mx-auto leading-relaxed">
               En MJ Fisio Estética y Spa hemos creado un espacio donde la salud, la belleza y el bienestar
               se unen para ofrecerte una experiencia única en el corazón de Turrialba, Costa Rica.
             </p>
