@@ -88,7 +88,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
             transition={{ duration: 0.25 }}
             className="overflow-hidden"
           >
-            <p className="text-white/65 leading-relaxed pb-6 text-sm">{answer}</p>
+            <p className="text-primary/80 leading-relaxed pb-6 text-sm">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -233,7 +233,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
             </div>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight">
               ¿Qué incluye<br />
-              <span className="font-light italic text-white/75">este servicio?</span>
+              <span className="font-light italic text-primary">este servicio?</span>
             </h2>
           </motion.div>
 
@@ -248,19 +248,19 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
               >
                 <div className="flex items-start justify-between mb-4 gap-4">
                   <div>
-                    <span className="text-stone-200 text-sm font-serif font-bold mr-3">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="text-stone-400 text-sm font-serif font-bold mr-3">{String(i + 1).padStart(2, "0")}</span>
                     <h3 className="text-xl md:text-2xl font-serif font-bold text-stone-900 group-hover:text-primary transition-colors inline">{item.title}</h3>
                   </div>
                   {item.duration && (
-                    <span className="flex items-center gap-1.5 text-white/75 text-xs shrink-0 border border-stone-200 px-3 py-1">
+                    <span className="flex items-center gap-1.5 text-stone-500 text-xs shrink-0 border border-stone-200 px-3 py-1">
                       <Clock className="w-3.5 h-3.5" />
                       {item.duration}
                     </span>
                   )}
                 </div>
-                <p className="text-white/65 leading-relaxed mb-6 text-sm">{item.description}</p>
+                <p className="text-stone-600 leading-relaxed mb-6 text-sm">{item.description}</p>
                 {item.price && (
-                  <p className="text-stone-300 text-xs tracking-widest uppercase mb-5">{item.price}</p>
+                  <p className="text-stone-500 text-xs tracking-widest uppercase mb-5">{item.price}</p>
                 )}
                 <a
                   id={`cta-item-${service.slug}-${i}`}
@@ -319,7 +319,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
               </div>
               <h2 className="text-4xl font-serif font-bold text-stone-900">
                 Todo lo que necesitas<br />
-                <span className="font-light italic text-white/75">saber antes de tu cita</span>
+                <span className="font-light italic text-primary">saber antes de tu cita</span>
               </h2>
             </motion.div>
             <motion.div
@@ -375,11 +375,11 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                   variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.5, delay: i * 0.08 } } }}
                   className="bg-white p-8 group hover:bg-stone-50 transition-colors"
                 >
-                  <p className="text-xs font-serif font-bold text-stone-200 mb-3">{String(i + 1).padStart(2, "0")}</p>
+                  <p className="text-xs font-serif font-bold text-stone-400 mb-3">{String(i + 1).padStart(2, "0")}</p>
                   <h3 className="text-xl font-serif font-bold text-stone-900 mb-2 group-hover:text-primary transition-colors">
                     {rel.name}
                   </h3>
-                  <p className="text-white/65 text-sm leading-relaxed mb-5">{rel.tagline}</p>
+                  <p className="text-stone-600 text-sm leading-relaxed mb-5">{rel.tagline}</p>
                   <Link href={`/servicios/${rel.slug}`}>
                     <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-primary border-b border-primary/30 pb-0.5 hover:border-primary transition-colors cursor-pointer">
                       Ver tratamiento <ArrowRight className="w-3 h-3" />
@@ -391,7 +391,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
             {category && (
               <div className="mt-8 text-center">
                 <Link href={category.href}>
-                  <span className="inline-flex items-center gap-2 text-sm font-bold text-white/65 border-b border-stone-300 pb-0.5 hover:text-primary hover:border-primary transition-colors cursor-pointer tracking-wide uppercase text-xs">
+                  <span className="inline-flex items-center gap-2 text-sm font-bold text-stone-600 border-b border-stone-300 pb-0.5 hover:text-primary hover:border-primary transition-colors cursor-pointer tracking-wide uppercase text-xs">
                     Ver todos los {category.name.toLowerCase()} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </Link>
