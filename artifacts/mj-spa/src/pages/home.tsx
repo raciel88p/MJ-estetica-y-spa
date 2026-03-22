@@ -86,6 +86,7 @@ const serviceCategories = [
 const featuredTreatments = [
   { name: "Reducción de Medidas", href: "/servicios/reduccion-de-medidas", cat: "Corporal" },
   { name: "Tensado Corporal", href: "/servicios/tensado-corporal", cat: "Corporal" },
+  { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios", cat: "Corporal" },
   { name: "Hollywood Peel", href: "/servicios/hollywood-peel", cat: "Facial" },
   { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial", cat: "Facial" },
   { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas", cat: "Facial" },
