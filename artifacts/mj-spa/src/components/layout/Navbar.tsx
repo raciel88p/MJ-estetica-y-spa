@@ -249,15 +249,6 @@ export function Navbar() {
                             ))}
                           </div>
                         </div>
-                        <div className="border-t border-border mt-3 pt-2 pb-1">
-                          <a
-                            href="/#servicios"
-                            className="block px-2 py-1.5 text-xs text-primary font-semibold hover:bg-secondary/40 transition-colors rounded"
-                            onClick={() => setOpenDropdown(null)}
-                          >
-                            Ver todos los servicios →
-                          </a>
-                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -489,14 +480,6 @@ export function Navbar() {
                             </Link>
                           ))}
                         </div>
-                        {/* Ver todos */}
-                        <a
-                          href="/#servicios"
-                          className="block py-1.5 text-xs font-bold text-primary border-t border-muted pt-3 mt-1"
-                          onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
-                        >
-                          Ver todos los servicios →
-                        </a>
                       </div>
                     </motion.div>
                   )}
