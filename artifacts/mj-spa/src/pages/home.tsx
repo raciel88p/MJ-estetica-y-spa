@@ -91,7 +91,6 @@ const featuredTreatments = [
   { name: "Hollywood Peel", href: "/servicios/hollywood-peel", cat: "Facial" },
   { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial", cat: "Facial" },
   { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas", cat: "Facial" },
-  { name: "Varices y Arañas Vasculares", href: "/servicios/varices-aranas-vasculares", cat: "Piernas" },
   { name: "Drenaje Linfático", href: "/servicios/drenaje-linfatico", cat: "Corporal" },
 ];
 
