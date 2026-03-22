@@ -55,24 +55,30 @@ const serviceCategories = [
     label: "CORPORALES",
     index: "01",
     title: "Moldea y reafirma tu silueta",
-    desc: "Cavitación, Emsculpt, criolipólisis, drenaje linfático y más. Tecnología de vanguardia para resultados reales sin cirugía.",
+    desc: "Tecnología de vanguardia para resultados reales sin cirugía.",
+    services: ["Cavitación Ultrasónica", "Emsculpt", "Criolipólisis", "Drenaje Linfático", "Reducción de Medidas"],
     bg: "about-us.png",
+    accent: "from-rose-900/90",
   },
   {
     href: "/tratamientos/faciales",
     label: "FACIALES",
     index: "02",
     title: "Rejuvenece y luminiza tu rostro",
-    desc: "Limpieza profunda, Hollywood Peel, radiofrecuencia, ácido hialurónico y biorevitalización. Un rostro luminoso y joven.",
+    desc: "Un rostro luminoso, joven y sin imperfecciones.",
+    services: ["Hollywood Peel", "Radiofrecuencia Facial", "Ácido Hialurónico", "Biorevitalización", "Eliminación de Manchas"],
     bg: "hero-bg.png",
+    accent: "from-stone-900/90",
   },
   {
     href: "/tratamientos/piernas",
     label: "PIERNAS",
     index: "03",
     title: "Piernas sanas, ligeras y estéticas",
-    desc: "Varices, arañas vasculares, piernas cansadas o hinchadas — técnicas no invasivas con resultados duraderos.",
+    desc: "Técnicas no invasivas con resultados duraderos.",
+    services: ["Varices y Arañas Vasculares", "Presoterapia", "Drenaje Circulatorio", "Depilación Láser", "Piernas Cansadas"],
     bg: "spa-texture.png",
+    accent: "from-stone-900/95",
   },
 ];
 
@@ -304,77 +310,106 @@ export default function Home() {
       </section>
 
       {/* ══ SERVICE CATEGORIES ═════════════════════════ */}
-      <section id="servicios" className="py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+      <section id="servicios" className="bg-stone-950">
+        {/* Section header */}
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-20 md:pt-28 pb-14">
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true }}
             variants={fadeUp}
-            className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16"
+            className="flex flex-col md:flex-row md:items-end justify-between gap-6"
           >
             <div>
-              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">
-                MJ FISIO ESTÉTICA Y SPA
-              </p>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-8 h-0.5 bg-primary" />
+                <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">
+                  MJ FISIO ESTÉTICA Y SPA
+                </p>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
                 Nuestras áreas<br />
-                <span className="font-light italic text-stone-400">de tratamiento</span>
+                <span className="font-light italic text-white/25">de tratamiento</span>
               </h2>
             </div>
-            <a href={WA} target="_blank" rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center gap-2 text-xs font-bold text-stone-400 hover:text-primary transition-colors tracking-[0.2em] uppercase whitespace-nowrap">
-              Reservar cita <ArrowRight className="w-3.5 h-3.5" />
-            </a>
+            <p className="text-white/30 text-sm leading-relaxed max-w-xs md:text-right">
+              Tres especialidades, un solo lugar. Tratamientos médico-estéticos en el corazón de Turrialba.
+            </p>
           </motion.div>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
-            {serviceCategories.map((cat, i) => (
-              <motion.div
-                key={cat.href}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={{ hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65, delay: i * 0.1 } } }}
-                className="group relative h-[480px] md:h-[560px] overflow-hidden cursor-pointer"
-              >
+        {/* Cards grid — full bleed */}
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          {serviceCategories.map((cat, i) => (
+            <motion.div
+              key={cat.href}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{ hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65, delay: i * 0.12 } } }}
+              className="group relative overflow-hidden cursor-pointer"
+            >
+              <Link href={cat.href}>
                 {/* Background image */}
-                <img
-                  src={`${BASE}images/${cat.bg}`}
-                  alt={cat.label}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/95 via-stone-900/50 to-stone-900/10 transition-opacity duration-500" />
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative h-[520px] md:h-[620px]">
+                  <img
+                    src={`${BASE}images/${cat.bg}`}
+                    alt={cat.label}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 scale-100"
+                  />
+                  {/* Strong dark overlay — ensures readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/97 via-black/70 to-black/20" />
+                  {/* Primary brand tint on hover */}
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/12 transition-all duration-600" />
+                  {/* Left border accent */}
+                  {i > 0 && <div className="absolute top-0 left-0 bottom-0 w-px bg-white/6" />}
+                  {/* Top brand stripe that grows on hover */}
+                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
-                {/* Number */}
-                <div className="absolute top-6 left-6 text-primary/40 text-7xl font-serif font-bold leading-none select-none group-hover:text-primary/70 transition-colors duration-500">
-                  {cat.index}
+                  {/* ── CONTENT ── */}
+                  <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-10">
+                    {/* Top: index badge */}
+                    <div className="flex items-start justify-between">
+                      <span className="text-[80px] md:text-[100px] font-serif font-bold text-white/4 leading-none select-none">
+                        {cat.index}
+                      </span>
+                      <div className="border border-primary/40 group-hover:border-primary group-hover:bg-primary transition-all duration-300 px-3 py-1.5">
+                        <span className="text-primary group-hover:text-white text-[9px] font-bold tracking-[0.4em] uppercase transition-colors duration-300">
+                          {cat.label}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Bottom: main content */}
+                    <div>
+                      <h3 className="text-2xl md:text-3xl font-serif font-bold text-white leading-tight mb-3">
+                        {cat.title}
+                      </h3>
+                      <p className="text-white/45 text-sm leading-relaxed mb-6">
+                        {cat.desc}
+                      </p>
+
+                      {/* Key services list */}
+                      <ul className="space-y-2 mb-8">
+                        {cat.services.map((s) => (
+                          <li key={s} className="flex items-center gap-2.5 text-xs text-white/50 group-hover:text-white/65 transition-colors">
+                            <div className="w-1 h-1 rounded-full bg-primary shrink-0" />
+                            {s}
+                          </li>
+                        ))}
+                      </ul>
+
+                      {/* CTA */}
+                      <div className="inline-flex items-center gap-2 bg-primary/0 border border-white/20 group-hover:border-primary group-hover:bg-primary px-5 py-3 transition-all duration-300">
+                        <span className="text-white text-[10px] font-bold tracking-[0.25em] uppercase">
+                          Ver tratamientos
+                        </span>
+                        <ArrowRight className="w-3.5 h-3.5 text-white group-hover:translate-x-0.5 transition-transform duration-200" />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-
-                {/* Bottom accent line on hover */}
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-
-                {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-8 text-white">
-                  <p className="text-primary text-[10px] font-bold tracking-[0.35em] uppercase mb-3">
-                    {cat.label}
-                  </p>
-                  <h3 className="text-2xl md:text-3xl font-serif font-bold leading-tight mb-4">
-                    {cat.title}
-                  </h3>
-                  <p className="text-white/60 text-sm leading-relaxed mb-7 max-w-xs">
-                    {cat.desc}
-                  </p>
-                  <Link href={cat.href}>
-                    <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-white border-b border-white/30 pb-0.5 group-hover:border-white transition-colors">
-                      Ver tratamientos <ArrowRight className="w-3.5 h-3.5" />
-                    </span>
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+              </Link>
+            </motion.div>
+          ))}
         </div>
       </section>
 
