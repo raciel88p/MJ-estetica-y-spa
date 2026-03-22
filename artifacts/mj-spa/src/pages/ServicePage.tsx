@@ -12,6 +12,39 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
+const beforeDescMap: Record<string, string[]> = {
+  "masajes-corporales":        ["Tensión muscular acumulada y contracturas dolorosas", "Circulación deficiente y sensación de pesadez corporal", "Estrés físico que afecta el descanso y el bienestar"],
+  "masajes-relajantes":        ["Ansiedad y estrés crónico que no cede", "Insomnio y dificultad para desconectarse", "Tensión acumulada en cuello, espalda y hombros"],
+  "masajes-post-operatorios":  ["Inflamación y fibrosis tras la cirugía", "Cicatrización lenta y adherencias subcutáneas", "Acumulación de líquidos y dolor postoperatorio"],
+  "reduccion-de-medidas":      ["Grasa localizada resistente a dieta y ejercicio", "Volumen excesivo en abdomen, flancos y muslos", "Pérdida de definición y contorno corporal"],
+  "tensado-corporal":          ["Flacidez visible en piel de brazos, abdomen y muslos", "Pérdida de firmeza y elasticidad por la edad o cambios de peso", "Piel sin tono que no responde al ejercicio"],
+  "drenaje-linfatico":         ["Retención de líquidos e hinchazón persistente", "Sensación de pesadez y piernas cansadas", "Toxinas acumuladas y sistema linfático bloqueado"],
+  "depilacion-laser":          ["Vello no deseado que reaparece constantemente", "Irritación, foliculitis y marcas por depilación frecuente", "Pérdida de tiempo y dinero en métodos temporales"],
+  "iron-beauty-fitness":       ["Pérdida de masa muscular y tono corporal", "Dificultad para combinar estética y fitness eficazmente", "Resultados lentos con el entrenamiento convencional"],
+  "carboxiterapia":            ["Celulitis visible y grasa localizada resistente", "Piel sin luminosidad y con pérdida de firmeza", "Estrías y signos de envejecimiento prematuro"],
+  "levantamiento-gluteo":      ["Glúteos caídos y sin volumen ni definición", "Flacidez en la zona glútea por la edad o cambios de peso", "Pérdida de curvatura y proyección natural"],
+  "levantamiento-busto":       ["Busto caído y sin firmeza tras lactancia o cambios de peso", "Pérdida de volumen y contorno en el escote", "Flacidez en piel pectoral que genera inseguridad"],
+  "vendas-frias":              ["Retención severa de líquidos y silueta hinchada", "Celulitis avanzada y piel de naranja visible", "Sensación de pesadez y falta de definición corporal"],
+  "maderoterapia":             ["Acumulación de grasa y nódulos de celulitis enquistados", "Piel irregular, sin tono y con textura de naranja", "Silueta indefinida y poco modelada"],
+  "auriculoterapia":           ["Ansiedad alimentaria y picoteo emocional fuera de control", "Estrés crónico que impide perder peso o dormir bien", "Desequilibrio del sistema nervioso y metabolismo lento"],
+  "faciales":                  ["Piel opaca, con manchas y sin luminosidad", "Poros dilatados, imperfecciones y falta de hidratación", "Envejecimiento prematuro y pérdida de uniformidad"],
+  "terapias-faciales":         ["Piel deshidratada, tensa y sin vitalidad", "Manchas, rojeces y textura irregular", "Arrugas finas y pérdida de elasticidad visible"],
+  "peeling-quimico":           ["Manchas superficiales, piel apagada y textura irregular", "Cicatrices de acné y marcas post-inflamatorias", "Exceso de células muertas que bloquea la renovación celular"],
+  "hollywood-peel":            ["Piel sin brillo, gris y con poros visibles", "Acné, comedones y textura rugosa", "Aspecto cansado y falta de luminosidad en el rostro"],
+  "eliminacion-manchas":       ["Manchas solares, melasma y discromías visibles", "Tono irregular y falta de uniformidad en el rostro", "Hiperpigmentación que no responde a cremas convencionales"],
+  "radiofrecuencia-facial":    ["Flacidez facial incipiente y pérdida del óvalo", "Arrugas de expresión y surcos marcados", "Piel sin firmeza que envejece el aspecto general"],
+  "adn-salmon":                ["Piel envejecida, sin hidratación profunda ni luminosidad", "Arrugas, flacidez y pérdida de densidad cutánea", "Aspecto apagado y sin vitalidad que no mejora con cremas"],
+  "tratamiento-anticelulitis": ["Celulitis en muslos, glúteos y abdomen muy visible", "Piel de naranja resistente y textura irregular", "Mala circulación y sensación de pesadez en piernas"],
+  "varices-aranas-vasculares": ["Varices y arañas vasculares visibles en piernas y rostro", "Dolor, pesadez y calambres nocturnos frecuentes", "Inseguridad para mostrar las piernas por la apariencia vascular"],
+  "piernas-cansadas":          ["Piernas pesadas, hinchadas y con sensación de fatiga al final del día", "Circulación deficiente y retención de líquidos en extremidades", "Calambres, hormigueos y piel sin tono en pantorrillas"],
+  "nutricion":                 ["Alimentación desordenada y objetivos sin resultados", "Metabolismo lento y sensación de bloqueo permanente", "Déficits nutricionales que afectan energía, piel y bienestar"],
+  "botox-full-face":           ["Arrugas de expresión marcadas en frente, entrecejo y patas de gallo", "Aspecto cansado y envejecido que no refleja cómo te sientes", "Pérdida de armonía facial y rasgos sin suavidad"],
+  "hilos-tensores":            ["Flacidez facial pronunciada y pérdida del óvalo", "Caída de mejillas, jowls marcados y cuello flácido", "Envejecimiento visible que los tratamientos tópicos no corrigen"],
+  "trasplante-capilar":        ["Alopecia progresiva con zonas sin densidad capilar", "Pérdida de confianza y autoestima por la caída del cabello", "Entradas, coronilla visible y frente que retrocede con el tiempo"],
+  "acido-hialuronico":         ["Pérdida de volumen facial y surcos nasogeniacos profundos", "Labios finos y asimétricos que proyectan vejez", "Ojeras profundas y pómulos hundidos que envejecen el rostro"],
+  "biorevitalizacion":         ["Piel deshidratada, sin luminosidad y con pérdida de firmeza difusa", "Arrugas finas y textura irregular que cremas no corrigen", "Aspecto apagado y sin vitalidad que no mejora con cosmética habitual"],
+};
+
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
@@ -318,6 +351,116 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           </motion.div>
         </div>
       </section>
+
+      {/* ── ANTES Y DESPUÉS ──────────────────────────── */}
+      {(() => {
+        const heroBg = `${BASE}images/${heroBgMap[service.slug] ?? service.heroBg ?? "hero-bg.png"}`;
+        const beforeItems = beforeDescMap[service.slug] ?? [
+          "Problema visible que afecta tu bienestar y confianza",
+          "Resultados lentos o nulos con métodos convencionales",
+          "Sensación de no encontrar la solución adecuada",
+        ];
+        const afterItems = service.benefits.slice(0, 3);
+        return (
+          <section className="py-20 md:py-28 bg-[#040f19] overflow-hidden">
+            <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+              <motion.div
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+                className="text-center mb-14"
+              >
+                <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">Transformación Real</p>
+                <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
+                  Antes y <span className="text-primary font-light italic">después</span>
+                </h2>
+                <p className="text-white/45 text-sm max-w-sm mx-auto leading-relaxed">
+                  Así cambia la vida de nuestras clientas con {service.name.toLowerCase()}.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
+                className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5"
+              >
+                {/* ANTES */}
+                <motion.div variants={fadeUp} className="relative group overflow-hidden">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                    style={{ backgroundImage: `url(${heroBg})`, filter: "grayscale(1) brightness(0.45)" }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/30" />
+                  <div className="relative px-8 pt-8 pb-10 min-h-[400px] flex flex-col justify-between">
+                    <div>
+                      <span className="inline-block bg-stone-700/80 text-white/60 text-[10px] font-bold tracking-[0.35em] uppercase px-4 py-2 mb-6">
+                        Antes
+                      </span>
+                      <p className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-3">Sin tratamiento</p>
+                      <h3 className="text-2xl font-serif font-bold text-white/70 leading-tight mb-6">
+                        La situación<br />que queremos cambiar
+                      </h3>
+                    </div>
+                    <ul className="space-y-3">
+                      {beforeItems.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <span className="w-4 h-4 rounded-full border border-stone-600 flex items-center justify-center shrink-0 mt-0.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-stone-500" />
+                          </span>
+                          <span className="text-white/50 text-sm leading-snug">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+
+                {/* DESPUÉS */}
+                <motion.div variants={fadeUp} className="relative group overflow-hidden">
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                    style={{ backgroundImage: `url(${heroBg})` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071e2e]/95 via-primary/10 to-black/20" />
+                  <div className="relative px-8 pt-8 pb-10 min-h-[400px] flex flex-col justify-between">
+                    <div>
+                      <span className="inline-block bg-primary text-white text-[10px] font-bold tracking-[0.35em] uppercase px-4 py-2 mb-6">
+                        Después
+                      </span>
+                      <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-3">Con nuestro tratamiento</p>
+                      <h3 className="text-2xl font-serif font-bold text-white leading-tight mb-6">
+                        La transformación<br />que te mereces
+                      </h3>
+                    </div>
+                    <ul className="space-y-3">
+                      {afterItems.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                          <span className="text-white/85 text-sm leading-snug">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              </motion.div>
+
+              {/* CTA under the panel */}
+              <motion.div
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+                className="mt-10 text-center"
+              >
+                <p className="text-white/40 text-xs mb-5 uppercase tracking-widest">¿Lista para tu transformación?</p>
+                <a
+                  href={WA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 border border-primary text-primary text-xs font-bold tracking-[0.2em] uppercase px-8 py-3.5 hover:bg-primary hover:text-white transition-all"
+                >
+                  <MessageCircle className="w-3.5 h-3.5" />
+                  Reservar mi sesión
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </a>
+              </motion.div>
+            </div>
+          </section>
+        );
+      })()}
 
       {/* ── FAQ ───────────────────────────────────────── */}
       {service.faq && service.faq.length > 0 && (
