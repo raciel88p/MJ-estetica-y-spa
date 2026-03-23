@@ -249,7 +249,8 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
 
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
       {(() => {
-        const doctorMap: Record<string, { name: string; code: string; specialty: string; photo: string; bio: string }> = {
+        const doctorMap: Record<string, { name: string; code: string; specialty: string; photo?: string; bio: string }> = {
+          "nutricion":           { name: "Dr. Johan",                  code: "0070",   specialty: "Nutricionista Deportivo",                                        bio: "Especialista en nutrición clínica y deportiva. Diseña planes alimentarios personalizados orientados a objetivos de salud, rendimiento y composición corporal." },
           "trasplante-capilar":  { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.png",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
           "implante-barba":      { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.png",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
           "mesoterapia-capilar": { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.png",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
@@ -280,11 +281,17 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 </div>
                 <div className="px-8 py-10 flex flex-col md:flex-row items-center md:items-start gap-8">
                   <div className="shrink-0 w-24 h-24 rounded-full overflow-hidden border-2 border-primary/30 shadow-md">
-                    <img
-                      src={`${BASE}images/${doctor.photo}`}
-                      alt={doctor.name}
-                      className="w-full h-full object-cover object-top"
-                    />
+                    {doctor.photo ? (
+                      <img
+                        src={`${BASE}images/${doctor.photo}`}
+                        alt={doctor.name}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-primary/10 flex items-center justify-center">
+                        <UserCheck className="w-10 h-10 text-primary" />
+                      </div>
+                    )}
                   </div>
                   <div className="flex-1 text-center md:text-left">
                     <h3 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-1">
