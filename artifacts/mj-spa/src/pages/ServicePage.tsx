@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, Clock, ChevronDown, ArrowRight, MessageCircle, Star, ShieldCheck, Award } from "lucide-react";
+import { CheckCircle2, Clock, ChevronDown, ArrowRight, MessageCircle, Star, ShieldCheck, Award, UserCheck, GraduationCap, BadgeCheck } from "lucide-react";
 import { useState } from "react";
 import { Link } from "wouter";
 import { Navbar } from "@/components/layout/Navbar";
@@ -334,6 +334,57 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           </motion.div>
         </div>
       </section>
+
+      {/* ── MÉDICO ESPECIALISTA (solo servicios capilares) ─ */}
+      {["trasplante-capilar", "implante-barba", "mesoterapia-capilar"].includes(service.slug) && (
+        <section className="py-16 bg-stone-50 border-y border-stone-100">
+          <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
+            <motion.div
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+              className="text-center mb-10"
+            >
+              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">Especialista a cargo</p>
+              <h2 className="text-3xl font-serif font-bold text-stone-900">Tu procedimiento en manos expertas</h2>
+            </motion.div>
+            <motion.div
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+              className="bg-white border border-stone-200 shadow-sm rounded-sm overflow-hidden"
+            >
+              <div className="bg-[#071e2e] px-8 py-5 flex items-center gap-3">
+                <UserCheck className="w-5 h-5 text-primary shrink-0" />
+                <span className="text-white/70 text-xs font-bold tracking-[0.35em] uppercase">Médico Certificado</span>
+              </div>
+              <div className="px-8 py-10 flex flex-col md:flex-row items-center md:items-start gap-8">
+                <div className="shrink-0 w-20 h-20 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center">
+                  <UserCheck className="w-9 h-9 text-primary" />
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-1">
+                    Dr. Ruddy Jiménez Montero
+                  </h3>
+                  <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-4">
+                    <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
+                      <BadgeCheck className="w-3.5 h-3.5" />
+                      Código Médico: 13583
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
+                      <GraduationCap className="w-3.5 h-3.5" />
+                      Master en Cirugía Capilar
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
+                      <ShieldCheck className="w-3.5 h-3.5 text-primary" />
+                      Registro CCSS verificado
+                    </span>
+                  </div>
+                  <p className="text-stone-500 text-sm leading-relaxed mt-5 max-w-xl">
+                    Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* ── URGENCY CTA BAND ──────────────────────────── */}
       <section className="bg-primary py-12">
