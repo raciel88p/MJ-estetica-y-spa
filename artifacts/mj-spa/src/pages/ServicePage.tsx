@@ -355,8 +355,12 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 <span className="text-white/70 text-xs font-bold tracking-[0.35em] uppercase">Médico Certificado</span>
               </div>
               <div className="px-8 py-10 flex flex-col md:flex-row items-center md:items-start gap-8">
-                <div className="shrink-0 w-20 h-20 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center">
-                  <UserCheck className="w-9 h-9 text-primary" />
+                <div className="shrink-0 w-24 h-24 rounded-full overflow-hidden border-2 border-primary/30 shadow-md">
+                  <img
+                    src={`${BASE}images/dr-ruddy-jimenez.png`}
+                    alt="Dr. Ruddy Jiménez Montero"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-1">
