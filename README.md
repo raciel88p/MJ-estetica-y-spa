@@ -23,7 +23,7 @@ The system is designed not just as a website, but as a **scalable growth engine*
 ### 🔹 Programmatic SEO
 - Dynamic generation of service pages (treatments, locations, professionals)
 - Scalable URL structure designed to expand to hundreds of pages
-- Automated metadata (titles, descriptions, headings)
+- Automated metadata (titles, descriptions, headings, rel=canonical, base on search intent)
 
 ### 🔹 CRO & UX/UI Optimization
 - Conversion-focused page layouts based on real market benchmarks
