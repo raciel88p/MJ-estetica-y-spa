@@ -1,8 +1,5 @@
 attached_assets
 artifacts/api-server
 artifacts/mockup-sandbox
-lib
-scripts
-dist
 .local
 *.log
