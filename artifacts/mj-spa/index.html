@@ -7,9 +7,17 @@
     <meta name="description" content="Centro de estética, bienestar y tratamientos médicos en Turrialba, Costa Rica. Faciales, corporales, varices, botox, hilos tensores y más. Reserva por WhatsApp." />
     <meta name="keywords" content="estética Turrialba, spa Turrialba, tratamientos faciales Costa Rica, reducción medidas, tensado corporal, drenaje linfático, botox Turrialba, varices Costa Rica" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#c084a0" />
+    <meta name="theme-color" content="#1378A2" />
     <link rel="icon" type="image/png" href="/images/logo-mj.png" />
     <link rel="canonical" href="https://mjfisioesteticayspa.com/" />
+
+    <!-- Preload LCP image (hero) -->
+    <link rel="preload" as="image" href="/images/hero-bg.png" fetchpriority="high" />
+
+    <!-- DNS hints for third-party origins -->
+    <link rel="dns-prefetch" href="//api.whatsapp.com" />
+    <link rel="dns-prefetch" href="//wa.me" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
 
     <!-- Geo SEO Local -->
     <meta name="geo.region" content="CR-C" />
@@ -38,10 +46,14 @@
     <meta name="twitter:description" content="Centro de estética y bienestar en Turrialba, Costa Rica." />
     <meta name="twitter:image" content="https://mjfisioesteticayspa.com/images/logo-mj.png" />
 
-    <!-- Fonts -->
+    <!-- Fonts: non-blocking (avoids render-blocking request) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    </noscript>
 
     <!-- Structured Data: LocalBusiness (MedicalSpa + BeautySalon) -->
     <script type="application/ld+json">
