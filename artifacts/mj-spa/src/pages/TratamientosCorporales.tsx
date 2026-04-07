@@ -42,7 +42,7 @@ export default function TratamientosCorporales() {
       <section className="relative pt-36 pb-24 bg-[#071e2e] overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/about-us.png)` }}
+          style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/about-us.webp)` }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumb

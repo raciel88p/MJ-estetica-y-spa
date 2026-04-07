@@ -64,7 +64,7 @@ export default function NotFound() {
       <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-[#071e2e]">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: `url(${BASE}images/hero-bg.png)` }}
+          style={{ backgroundImage: `url(${BASE}images/hero-bg.webp)` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#071e2e]/60 via-[#071e2e]/80 to-[#071e2e]" />
 

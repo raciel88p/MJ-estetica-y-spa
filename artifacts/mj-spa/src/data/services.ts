@@ -1398,7 +1398,7 @@ export const servicePages: ServicePageData[] = [
     slug: "carboxiterapia",
     name: "Carboxiterapia",
     tagline: "La potencia del CO₂ para renovar y rejuvenecer tu cuerpo",
-    heroBg: "carboxiterapia-bg.png",
+    heroBg: "carboxiterapia-bg.webp",
     heroDescription:
       "La carboxiterapia es una de las técnicas más eficaces de la medicina estética moderna. Mediante microinyecciones de CO₂ medicinal, activamos la circulación sanguínea, estimulamos la producción de colágeno y eliminamos la celulitis y la grasa localizada. Resultados visibles, seguros y sin tiempo de recuperación.",
     benefits: [
@@ -1456,7 +1456,7 @@ export const servicePages: ServicePageData[] = [
     slug: "levantamiento-gluteo",
     name: "Levantamiento de Glúteo",
     tagline: "Glúteos firmes y elevados sin cirugía ni implantes",
-    heroBg: "levantamiento-gluteo-bg.png",
+    heroBg: "levantamiento-gluteo-bg.webp",
     heroDescription:
       "El levantamiento de glúteo no quirúrgico combina las técnicas más avanzadas — radiofrecuencia, electroestimulación y carboxiterapia — para elevar, tensar y dar volumen a los glúteos de forma completamente natural. Sin bisturí, sin recuperación y con resultados que se potencian sesión a sesión.",
     benefits: [
@@ -1514,7 +1514,7 @@ export const servicePages: ServicePageData[] = [
     slug: "levantamiento-busto",
     name: "Levantamiento de Busto",
     tagline: "Busto firme, elevado y reafirmado sin cirugía",
-    heroBg: "levantamiento-busto-bg.png",
+    heroBg: "levantamiento-busto-bg.webp",
     heroDescription:
       "Con el paso del tiempo, los cambios de peso o la lactancia, la piel del busto pierde firmeza y elasticidad. Nuestro protocolo no quirúrgico combina radiofrecuencia, ultrasonidos y técnicas de reafirmación avanzadas para devolver la firmeza, elevar el contorno y mejorar la calidad de la piel de forma visible y segura.",
     benefits: [
@@ -1572,7 +1572,7 @@ export const servicePages: ServicePageData[] = [
     slug: "vendas-frias",
     name: "Vendas Frías",
     tagline: "Pérdida de centímetros y detox corporal en una sola sesión",
-    heroBg: "vendas-frias-bg.png",
+    heroBg: "vendas-frias-bg.webp",
     heroDescription:
       "Las vendas frías son uno de los tratamientos más eficaces para perder centímetros, reducir la retención de líquidos y activar la circulación en una sola sesión. Con activos reductores, drenantes y antioxidantes aplicados en frío, el resultado es inmediato: silueta más fina, piel más tersa y sensación de ligereza desde el primer tratamiento.",
     benefits: [
@@ -1630,7 +1630,7 @@ export const servicePages: ServicePageData[] = [
     slug: "maderoterapia",
     name: "Maderoterapia",
     tagline: "El poder de la madera para modelar y transformar tu cuerpo",
-    heroBg: "maderoterapia-bg.png",
+    heroBg: "maderoterapia-bg.webp",
     heroDescription:
       "La maderoterapia es una técnica de origen colombiano que utiliza instrumentos de madera para realizar maniobras específicas sobre el cuerpo, logrando un modelado corporal profundo, reducción de celulitis y una silueta más definida. Un tratamiento 100% natural, intensamente efectivo y completamente libre de sustancias químicas.",
     benefits: [
@@ -1688,7 +1688,7 @@ export const servicePages: ServicePageData[] = [
     slug: "auriculoterapia",
     name: "Auriculoterapia",
     tagline: "El equilibrio del cuerpo a través del oído",
-    heroBg: "auriculoterapia-bg.png",
+    heroBg: "auriculoterapia-bg.webp",
     heroDescription:
       "La auriculoterapia es una técnica de medicina tradicional china que trabaja sobre los puntos de energía del pabellón auricular para equilibrar el organismo, reducir la ansiedad, controlar el apetito, aliviar el dolor y potenciar el bienestar general. Una herramienta complementaria poderosa para el control de peso, el estrés y la salud integral.",
     benefits: [
@@ -1746,7 +1746,7 @@ export const servicePages: ServicePageData[] = [
     slug: "tratamiento-anticelulitis",
     name: "Tratamiento Anticelulitis",
     tagline: "Elimina la celulitis de forma definitiva y sin cirugía",
-    heroBg: "anticelulitis-bg.png",
+    heroBg: "anticelulitis-bg.webp",
     heroDescription:
       "La celulitis no es un problema cosmético — es una condición tratable. En MJ Fisio Estética y Spa combinamos las tecnologías más avanzadas con protocolos clínicamente probados para reducir la celulitis, afinar la silueta y devolverte la piel lisa y firme que mereces. Resultados visibles desde la primera sesión.",
     benefits: [
@@ -1823,7 +1823,7 @@ export const servicePages: ServicePageData[] = [
     tagline: "Estética especializada para atletas del mundo fitness",
     heroDescription:
       "En MJ Fisio Estética y Spa entendemos las necesidades específicas de los atletas de fitness. Nuestros tratamientos están diseñados para complementar tu arduo trabajo en el gimnasio, ayudándote a mejorar tu rendimiento y tu apariencia física para competencias — desde Body Fitness hasta Clásico Físico y Muscular.",
-    heroBg: "iron-beauty-fitness-bg.png",
+    heroBg: "iron-beauty-fitness-bg.webp",
     benefits: [
       "Protocolos diseñados exclusivamente para atletas de competencia",
       "Resultados visibles en la definición muscular y textura de piel",

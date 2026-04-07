@@ -61,41 +61,41 @@ const stagger = {
 };
 
 const heroBgMap: Record<string, string> = {
-  "masajes-corporales":        "masajes-corporales-bg.png",
-  "masajes-relajantes":        "masajes-relajantes-bg.png",
-  "masajes-post-operatorios":  "masajes-post-operatorios-bg.png",
-  "reduccion-de-medidas":      "reduccion-de-medidas-bg.png",
-  "tensado-corporal":          "tensado-corporal-bg.png",
-  "drenaje-linfatico":         "drenaje-linfatico-bg.png",
-  "depilacion-laser":          "depilacion-laser-bg.png",
-  "iron-beauty-fitness":       "iron-beauty-fitness-bg.png",
-  "faciales":                  "faciales-bg.png",
-  "terapias-faciales":         "terapias-faciales-bg.png",
-  "peeling-quimico":           "peeling-quimico-bg.png",
-  "hollywood-peel":            "hollywood-peel-bg.png",
-  "eliminacion-manchas":       "eliminacion-manchas-bg.png",
-  "radiofrecuencia-facial":    "radiofrecuencia-facial-bg.png",
-  "adn-salmon":                "adn-salmon-bg.png",
-  "tratamiento-anticelulitis": "anticelulitis-bg.png",
-  "carboxiterapia":            "carboxiterapia-bg.png",
-  "levantamiento-gluteo":      "levantamiento-gluteo-bg.png",
-  "levantamiento-busto":       "levantamiento-busto-bg.png",
-  "vendas-frias":              "vendas-frias-bg.png",
-  "maderoterapia":             "maderoterapia-bg.png",
-  "auriculoterapia":           "auriculoterapia-bg.png",
-  "varices-aranas-vasculares": "varices-aranas-vasculares-bg.png",
-  "piernas-cansadas":          "piernas-cansadas-bg.png",
-  "nutricion":                 "nutricion-bg.png",
-  "botox-full-face":           "botox-full-face-bg.png",
-  "hilos-tensores":            "hilos-tensores-bg.png",
-  "trasplante-capilar":        "trasplante-capilar-bg.png",
-  "acido-hialuronico":         "acido-hialuronico-bg.png",
-  "biorevitalizacion":         "biorevitalizacion-bg.png",
-  "tratamiento-ojeras":        "acido-hialuronico-bg.png",
-  "blanqueamiento-zona-intima":"depilacion-laser-bg.png",
-  "implante-barba":            "trasplante-capilar-bg.png",
-  "mesoterapia-capilar":       "trasplante-capilar-bg.png",
-  "rellenos-labios":           "acido-hialuronico-bg.png",
+  "masajes-corporales":        "masajes-corporales-bg.webp",
+  "masajes-relajantes":        "masajes-relajantes-bg.webp",
+  "masajes-post-operatorios":  "masajes-post-operatorios-bg.webp",
+  "reduccion-de-medidas":      "reduccion-de-medidas-bg.webp",
+  "tensado-corporal":          "tensado-corporal-bg.webp",
+  "drenaje-linfatico":         "drenaje-linfatico-bg.webp",
+  "depilacion-laser":          "depilacion-laser-bg.webp",
+  "iron-beauty-fitness":       "iron-beauty-fitness-bg.webp",
+  "faciales":                  "faciales-bg.webp",
+  "terapias-faciales":         "terapias-faciales-bg.webp",
+  "peeling-quimico":           "peeling-quimico-bg.webp",
+  "hollywood-peel":            "hollywood-peel-bg.webp",
+  "eliminacion-manchas":       "eliminacion-manchas-bg.webp",
+  "radiofrecuencia-facial":    "radiofrecuencia-facial-bg.webp",
+  "adn-salmon":                "adn-salmon-bg.webp",
+  "tratamiento-anticelulitis": "anticelulitis-bg.webp",
+  "carboxiterapia":            "carboxiterapia-bg.webp",
+  "levantamiento-gluteo":      "levantamiento-gluteo-bg.webp",
+  "levantamiento-busto":       "levantamiento-busto-bg.webp",
+  "vendas-frias":              "vendas-frias-bg.webp",
+  "maderoterapia":             "maderoterapia-bg.webp",
+  "auriculoterapia":           "auriculoterapia-bg.webp",
+  "varices-aranas-vasculares": "varices-aranas-vasculares-bg.webp",
+  "piernas-cansadas":          "piernas-cansadas-bg.webp",
+  "nutricion":                 "nutricion-bg.webp",
+  "botox-full-face":           "botox-full-face-bg.webp",
+  "hilos-tensores":            "hilos-tensores-bg.webp",
+  "trasplante-capilar":        "trasplante-capilar-bg.webp",
+  "acido-hialuronico":         "acido-hialuronico-bg.webp",
+  "biorevitalizacion":         "biorevitalizacion-bg.webp",
+  "tratamiento-ojeras":        "acido-hialuronico-bg.webp",
+  "blanqueamiento-zona-intima":"depilacion-laser-bg.webp",
+  "implante-barba":            "trasplante-capilar-bg.webp",
+  "mesoterapia-capilar":       "trasplante-capilar-bg.webp",
+  "rellenos-labios":           "acido-hialuronico-bg.webp",
 };
 
 const serviceCategoryMap: Record<string, { name: string; href: string }> = {
@@ -188,7 +188,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       <section className="relative min-h-[75vh] flex items-end pb-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${BASE}images/${heroBgMap[service.slug] ?? service.heroBg ?? "hero-bg.png"})` }}
+          style={{ backgroundImage: `url(${BASE}images/${heroBgMap[service.slug] ?? service.heroBg ?? "hero-bg.webp"})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/90" />
 
@@ -256,14 +256,14 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
       {(() => {
         const doctorMap: Record<string, { name: string; code: string; specialty: string; photo?: string; bio: string }> = {
-          "nutricion":           { name: "Dr. Johan",                  code: "3667-25",   specialty: "Nutricionista Deportivo",  photo: "dr-johan.png",               bio: "Especialista en nutrición clínica y deportiva. Diseña planes alimentarios personalizados orientados a objetivos de salud, rendimiento y composición corporal." },
-          "trasplante-capilar":  { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.png",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
-          "implante-barba":      { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.png",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
-          "mesoterapia-capilar": { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.png",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
-          "botox-full-face":     { name: "Dr. Ricard Araya",           code: "323106", specialty: "Armonizador Facial",  photo: "dr-ricard-araya.jpg",   bio: "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales." },
-          "acido-hialuronico":   { name: "Dr. Ricard Araya",           code: "323106", specialty: "Armonizador Facial",  photo: "dr-ricard-araya.jpg",   bio: "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales." },
-          "hilos-tensores":      { name: "Dr. Ricard Araya",           code: "323106", specialty: "Armonizador Facial",  photo: "dr-ricard-araya.jpg",   bio: "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales." },
-          "rellenos-labios":     { name: "Dr. Ricard Araya",           code: "323106", specialty: "Armonizador Facial",  photo: "dr-ricard-araya.jpg",   bio: "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales." },
+          "nutricion":           { name: "Dr. Johan",                  code: "3667-25",   specialty: "Nutricionista Deportivo",  photo: "dr-johan.webp",               bio: "Especialista en nutrición clínica y deportiva. Diseña planes alimentarios personalizados orientados a objetivos de salud, rendimiento y composición corporal." },
+          "trasplante-capilar":  { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.webp",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
+          "implante-barba":      { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.webp",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
+          "mesoterapia-capilar": { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.webp",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
+          "botox-full-face":     { name: "Dr. Ricard Araya",           code: "323106", specialty: "Armonizador Facial",  photo: "dr-ricard-araya.webp",   bio: "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales." },
+          "acido-hialuronico":   { name: "Dr. Ricard Araya",           code: "323106", specialty: "Armonizador Facial",  photo: "dr-ricard-araya.webp",   bio: "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales." },
+          "hilos-tensores":      { name: "Dr. Ricard Araya",           code: "323106", specialty: "Armonizador Facial",  photo: "dr-ricard-araya.webp",   bio: "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales." },
+          "rellenos-labios":     { name: "Dr. Ricard Araya",           code: "323106", specialty: "Armonizador Facial",  photo: "dr-ricard-araya.webp",   bio: "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales." },
         };
         const doctor = doctorMap[service.slug];
         if (!doctor) return null;
@@ -292,6 +292,10 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                         src={`${BASE}images/${doctor.photo}`}
                         alt={doctor.name}
                         className="w-full h-full object-cover object-top"
+                        loading="lazy"
+                        decoding="async"
+                        width={96}
+                        height={96}
                       />
                     ) : (
                       <div className="w-full h-full bg-primary/10 flex items-center justify-center">
@@ -444,7 +448,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
 
       {/* ── ANTES Y DESPUÉS ──────────────────────────── */}
       {(() => {
-        const heroBg = `${BASE}images/${heroBgMap[service.slug] ?? service.heroBg ?? "hero-bg.png"}`;
+        const heroBg = `${BASE}images/${heroBgMap[service.slug] ?? service.heroBg ?? "hero-bg.webp"}`;
         const beforeItems = beforeDescMap[service.slug] ?? [
           "Problema visible que afecta tu bienestar y confianza",
           "Resultados lentos o nulos con métodos convencionales",

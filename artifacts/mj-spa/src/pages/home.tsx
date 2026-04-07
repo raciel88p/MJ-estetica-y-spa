@@ -22,7 +22,7 @@ import { Link } from "wouter";
 /* ── HERO SLIDES ──────────────────────────────────── */
 const heroSlides = [
   {
-    bg: "hero-bg.png",
+    bg: "hero-bg.webp",
     label: "Estética Avanzada",
     title: "DESCUBRE TU\nMEJOR VERSIÓN",
     sub: "Los mejores profesionales y la mejor tecnología, exclusivamente para ti.",
@@ -30,7 +30,7 @@ const heroSlides = [
     ctaHref: "#servicios",
   },
   {
-    bg: "spa-texture.png",
+    bg: "spa-texture.webp",
     label: "Spa & Bienestar",
     title: "RELÁJATE Y\nRECUPERA TU ENERGÍA",
     sub: "Circuitos de spa, masajes y tratamientos corporales diseñados para tu bienestar total.",
@@ -39,7 +39,7 @@ const heroSlides = [
     ctaExternal: true,
   },
   {
-    bg: "about-us.png",
+    bg: "about-us.webp",
     label: "Medicina Estética",
     title: "TECNOLOGÍA DE\nVANGUARDIA PARA TI",
     sub: "Tratamientos médico-estéticos con resultados visibles desde la primera sesión.",
@@ -57,7 +57,7 @@ const serviceCategories = [
     title: "Moldea y reafirma tu silueta",
     desc: "Tecnología de vanguardia para resultados reales sin cirugía.",
     services: ["Cavitación Ultrasónica", "Tensado Corporal", "Drenaje Linfático", "Reducción de Medidas", "Depilación Láser"],
-    bg: "about-us.png",
+    bg: "about-us.webp",
     accent: "from-rose-900/90",
   },
   {
@@ -67,7 +67,7 @@ const serviceCategories = [
     title: "Rejuvenece y luminiza tu rostro",
     desc: "Un rostro luminoso, joven y sin imperfecciones.",
     services: ["Hollywood Peel", "Radiofrecuencia Facial", "Ácido Hialurónico", "Biorevitalización", "Eliminación de Manchas"],
-    bg: "hero-bg.png",
+    bg: "hero-bg.webp",
     accent: "from-stone-900/90",
   },
   {
@@ -77,7 +77,7 @@ const serviceCategories = [
     title: "Piernas sanas, ligeras y estéticas",
     desc: "Técnicas no invasivas con resultados duraderos.",
     services: ["Varices y Arañas Vasculares", "Presoterapia", "Drenaje Circulatorio", "Tratamiento Anticelulitis", "Piernas Cansadas"],
-    bg: "spa-texture.png",
+    bg: "spa-texture.webp",
     accent: "from-stone-900/95",
   },
 ];
@@ -216,6 +216,10 @@ export default function Home() {
               alt="MJ Fisio Estética y Spa"
               className="w-full h-full object-cover object-center"
               loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              width={1920}
+              height={1080}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
           </motion.div>
@@ -390,6 +394,10 @@ export default function Home() {
                     src={`${BASE}images/${cat.bg}`}
                     alt={cat.label}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 scale-100"
+                    loading="lazy"
+                    decoding="async"
+                    width={800}
+                    height={620}
                   />
                   {/* Strong dark overlay — ensures readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/97 via-black/70 to-black/20" />
@@ -521,10 +529,13 @@ export default function Home() {
               className="relative"
             >
               <img
-                src={`${BASE}images/about-us.png`}
+                src={`${BASE}images/about-us.webp`}
                 alt="Instalaciones MJ Fisio Estética y Spa"
                 className="w-full h-[580px] object-cover"
                 loading="lazy"
+                decoding="async"
+                width={900}
+                height={580}
               />
               {/* Floating stat */}
               <div className="absolute -bottom-6 -right-0 md:-right-8 bg-primary text-white px-8 py-7 text-center">
@@ -583,7 +594,7 @@ export default function Home() {
       {/* ══ DARK CTA BAND ══════════════════════════════ */}
       <section
         className="relative py-36 overflow-hidden bg-cover bg-center"
-        style={{ backgroundImage: `url(${BASE}images/spa-texture.png)` }}
+        style={{ backgroundImage: `url(${BASE}images/spa-texture.webp)` }}
       >
         <div className="absolute inset-0 bg-[#071e2e]/92" />
         {/* Decorative lines */}
