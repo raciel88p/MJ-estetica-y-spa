@@ -16,19 +16,34 @@ const basePath = process.env.BASE_PATH ?? "/";
 
 export default defineConfig({
   base: basePath,
+
+  // ── esbuild transform options (applied to EVERY file, not just minifier) ──
+  esbuild: {
+    // Drop console.* and debugger statements in production
+    drop: isDev ? [] : ["console", "debugger"],
+    legalComments: "none",
+  },
+
   plugins: [
     react(),
     tailwindcss(),
 
-    // Pre-compress assets with Brotli (served by Vercel/nginx/caddy directly)
+    // Pre-compress JS/CSS assets with Brotli + Gzip
+    // Exclude HTML so Vercel serves index.html natively (it does edge compression)
     ...(!isDev
       ? [
-          compression({ algorithm: "brotliCompress", exclude: /\.(br|gz|png|jpg|jpeg|gif|webp|ico|woff2)$/ }),
-          compression({ algorithm: "gzip",           exclude: /\.(br|gz|png|jpg|jpeg|gif|webp|ico|woff2)$/ }),
+          compression({
+            algorithm: "brotliCompress",
+            exclude: /\.(br|gz|html|png|jpg|jpeg|gif|webp|ico|woff2|svg|xml|txt)$/,
+          }),
+          compression({
+            algorithm: "gzip",
+            exclude: /\.(br|gz|html|png|jpg|jpeg|gif|webp|ico|woff2|svg|xml|txt)$/,
+          }),
         ]
       : []),
 
-    // Replit-only dev plugins
+    // Replit-only dev plugins (not loaded on Vercel — REPL_ID is absent there)
     ...(isDev && isReplit
       ? [
           await import("@replit/vite-plugin-runtime-error-modal").then((m) => m.default()),
@@ -39,6 +54,7 @@ export default defineConfig({
         ]
       : []),
   ],
+
   resolve: {
     alias: {
       "@":       path.resolve(import.meta.dirname, "src"),
@@ -46,37 +62,35 @@ export default defineConfig({
     },
     dedupe: ["react", "react-dom"],
   },
+
   root: path.resolve(import.meta.dirname),
+
   build: {
-    outDir:              path.resolve(import.meta.dirname, "dist/public"),
-    emptyOutDir:         true,
-    cssCodeSplit:        true,
-    reportCompressedSize:false,
+    outDir:               path.resolve(import.meta.dirname, "dist/public"),
+    emptyOutDir:          true,
+    cssCodeSplit:         true,
+    reportCompressedSize: false,
     chunkSizeWarningLimit: 600,
-    // Target modern browsers only — no legacy polyfills, smaller output
     target: "es2020",
+    minify: "esbuild",
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes("node_modules/react/") || id.includes("node_modules/react-dom/")) return "vendor-react";
+          if (id.includes("node_modules/react/") || id.includes("node_modules/react-dom/"))
+            return "vendor-react";
           if (id.includes("node_modules/framer-motion"))  return "vendor-motion";
           if (id.includes("node_modules/@radix-ui"))      return "vendor-radix";
           if (id.includes("node_modules/wouter"))         return "vendor-router";
           if (id.includes("node_modules/@tanstack"))      return "vendor-query";
-          if (id.includes("node_modules/zod") || id.includes("node_modules/react-hook-form")) return "vendor-forms";
-          if (id.includes("node_modules/"))               return "vendor-misc";
+          if (id.includes("node_modules/zod") || id.includes("node_modules/react-hook-form"))
+            return "vendor-forms";
+          if (id.includes("node_modules/")) return "vendor-misc";
         },
       },
-      // Strip console.* calls from production build
       treeshake: { preset: "recommended" },
     },
-    minify: "esbuild",
-    // Remove console.log / console.debug in production
-    esbuildOptions: {
-      drop: isDev ? [] : ["console", "debugger"],
-      legalComments: "none",
-    },
   },
+
   server: {
     port,
     host:         "0.0.0.0",
@@ -86,6 +100,7 @@ export default defineConfig({
       deny:   ["**/.*"],
     },
   },
+
   preview: {
     port,
     host:         "0.0.0.0",
