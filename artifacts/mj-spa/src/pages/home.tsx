@@ -312,9 +312,10 @@ export default function Home() {
 
         {/* Stats bar */}
         <div className="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur-sm border-t border-white/10 z-20">
-          <div className="max-w-3xl mx-auto px-6 py-5 grid grid-cols-3 divide-x divide-white/15">
+          <div className="max-w-4xl mx-auto px-6 py-5 grid grid-cols-4 divide-x divide-white/15">
             {[
               { n: "2335+", label: "Clientes atendidas" },
+              { n: "85%", label: "Clientes satisfechos" },
               { n: "82+", label: "Tratamientos disponibles" },
               { n: "3+", label: "Años de experiencia" },
             ].map((s) => (
