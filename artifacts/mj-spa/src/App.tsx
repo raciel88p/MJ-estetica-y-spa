@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Switch, Route, Router as WouterRouter } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -59,7 +59,28 @@ function Router() {
   );
 }
 
+// Prefetch the most-visited secondary pages during browser idle time
+function usePrefetchRoutes() {
+  useEffect(() => {
+    const prefetch = () => {
+      // Trigger lazy imports so browsers download chunks in the background
+      void import("@/pages/ServicePage");
+      void import("@/pages/MedicosEsteticos");
+      void import("@/pages/TratamientosCorporales");
+      void import("@/pages/TratamientosFaciales");
+    };
+    if ("requestIdleCallback" in window) {
+      const id = requestIdleCallback(prefetch, { timeout: 4000 });
+      return () => cancelIdleCallback(id);
+    } else {
+      const t = setTimeout(prefetch, 3000);
+      return () => clearTimeout(t);
+    }
+  }, []);
+}
+
 function App() {
+  usePrefetchRoutes();
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
