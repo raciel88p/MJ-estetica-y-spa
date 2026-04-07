@@ -61,7 +61,9 @@ export default defineConfig({
   root: path.resolve(__dirname),
 
   build: {
-    outDir:                path.resolve(__dirname, "dist"),
+    // Output to the monorepo root /dist — Vercel auto-detects this location
+    // regardless of how the project dashboard is configured.
+    outDir:                path.resolve(__dirname, "../../dist"),
     emptyOutDir:           true,
     cssCodeSplit:          true,
     reportCompressedSize:  false,
