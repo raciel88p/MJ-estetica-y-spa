@@ -2,7 +2,7 @@ import express, { type Express } from "express";
 import cors from "cors";
 import compression from "compression";
 import helmet from "helmet";
-import { pinoHttp } from "pino-http";
+import pinoHttp from "pino-http";
 import router from "./routes";
 import { logger } from "./lib/logger";
 
@@ -61,10 +61,6 @@ app.use(
 
 app.use(express.json({ limit: "1mb" }));
 app.use(express.urlencoded({ extended: true, limit: "1mb" }));
-
-// ── Keep-alive timeout: longer than the default 5 s ──────────────────
-app.keepAliveTimeout = 65_000;
-app.headersTimeout   = 70_000;
 
 // ── Routes ────────────────────────────────────────────────────────────
 app.use("/api", router);

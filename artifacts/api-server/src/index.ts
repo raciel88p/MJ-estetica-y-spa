@@ -15,6 +15,10 @@ if (Number.isNaN(port) || port <= 0) {
   throw new Error(`Invalid PORT value: "${rawPort}"`);
 }
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   logger.info({ port }, "Server listening");
 });
+
+// Keep connections alive longer than the load-balancer's idle timeout (60 s)
+server.keepAliveTimeout = 65_000;
+server.headersTimeout   = 70_000;
