@@ -1,61 +1,53 @@
-import express, { type Express } from "express";
+import express, { type Express, type Request, type Response, type NextFunction } from "express";
 import cors from "cors";
 import compression from "compression";
 import helmet from "helmet";
-import pinoHttp from "pino-http";
 import router from "./routes";
 import { logger } from "./lib/logger";
 
 const app: Express = express();
 
-// ── Security headers (reduces attack surface + removes X-Powered-By) ──
+// ── Security headers ──────────────────────────────────────────────────
 app.use(
   helmet({
-    contentSecurityPolicy: false, // SPA handles CSP via meta tags
-    crossOriginEmbedderPolicy: false,
+    contentSecurityPolicy:      false,
+    crossOriginEmbedderPolicy:  false,
   }),
 );
 
-// ── Gzip/Brotli compression for all responses ────────────────────────
+// ── Gzip compression ─────────────────────────────────────────────────
 app.use(
   compression({
-    level: 6,            // balanced speed / compression ratio
-    threshold: 1024,     // only compress responses > 1KB
-    filter(req, res) {
+    level:     6,
+    threshold: 1024,
+    filter(req: Request, res: Response) {
       if (req.headers["x-no-compression"]) return false;
       return compression.filter(req, res);
     },
   }),
 );
 
-// ── Request logging ───────────────────────────────────────────────────
-app.use(
-  pinoHttp({
-    logger,
-    serializers: {
-      req(req: { id: unknown; method: string; url?: string }) {
-        return {
-          id: req.id,
-          method: req.method,
-          url: req.url?.split("?")[0],
-        };
-      },
-      res(res: { statusCode: number }) {
-        return {
-          statusCode: res.statusCode,
-        };
-      },
-    },
-  }),
-);
+// ── Request logger (inline — avoids pino-http CJS/ESM type issues) ───
+app.use((req: Request, res: Response, next: NextFunction) => {
+  const start = Date.now();
+  res.on("finish", () => {
+    logger.info({
+      method:     req.method,
+      url:        (req.url ?? "").split("?")[0],
+      statusCode: res.statusCode,
+      ms:         Date.now() - start,
+    });
+  });
+  next();
+});
 
 // ── CORS ──────────────────────────────────────────────────────────────
 app.use(
   cors({
-    origin: process.env.ALLOWED_ORIGIN ?? "*",
-    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    origin:         process.env.ALLOWED_ORIGIN ?? "*",
+    methods:        ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
-    maxAge: 86400, // preflight cache: 24 h
+    maxAge:         86400,
   }),
 );
 
