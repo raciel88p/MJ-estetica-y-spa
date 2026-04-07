@@ -28,6 +28,17 @@ export default defineConfig({
   },
 
   plugins: [
+    // Strip "use client" / "use server" RSC directives from all files.
+    // These are Next.js / React Server Components annotations — meaningless
+    // in a Vite SPA and cause Rollup sourcemap resolution failures.
+    {
+      name: "strip-rsc-directives",
+      transform(code: string) {
+        const cleaned = code.replace(/^["']use (client|server)["'];?\r?\n?/m, "");
+        return cleaned !== code ? { code: cleaned, map: null } : null;
+      },
+    },
+
     react(),
     tailwindcss(),
 
