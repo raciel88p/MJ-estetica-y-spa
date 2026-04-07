@@ -29,7 +29,9 @@ export default defineConfig({
     {
       name: "strip-rsc-directives",
       transform(code: string) {
-        const cleaned = code.replace(/^["']use (client|server)["'];?\r?\n?/m, "");
+        // Replace directive text only — keep the newline so line numbers
+        // don't shift and the Rollup sourcemap stays valid.
+        const cleaned = code.replace(/^["']use (client|server)["'];?/gm, "");
         return cleaned !== code ? { code: cleaned, map: null } : null;
       },
     },
