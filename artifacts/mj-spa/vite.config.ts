@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, createLogger } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import path from "path";
@@ -14,7 +14,19 @@ const port    = rawPort ? Number(rawPort) : 3000;
 
 const basePath = process.env.BASE_PATH ?? "/";
 
+// Suppress the "Can't resolve original location" sourcemap warning that
+// Radix UI (and other RSC-aware libs) trigger when their "use client"
+// directive is processed by Rollup. The warning is harmless — the bundle
+// is correct — but it pollutes build output and can confuse CI systems.
+const logger = createLogger();
+const _warn   = logger.warn.bind(logger);
+logger.warn   = (msg, opts) => {
+  if (msg.includes("Can't resolve original location of error")) return;
+  _warn(msg, opts);
+};
+
 export default defineConfig({
+  customLogger: logger,
   base: basePath,
 
   esbuild: {
@@ -58,8 +70,6 @@ export default defineConfig({
     minify: "esbuild",
     rollupOptions: {
       onwarn(warning, defaultHandler) {
-        // "use client" / "use server" directives in node_modules (e.g. Radix UI)
-        // produce a harmless sourcemap warning — suppress it.
         if (
           warning.code === "SOURCEMAP_ERROR" ||
           warning.message?.includes("Can't resolve original location")
@@ -68,9 +78,6 @@ export default defineConfig({
       },
       output: {
         manualChunks(id) {
-          // Keep React runtime + its internal deps in one chunk to avoid
-          // circular references (scheduler, use-sync-external-store are
-          // imported by react-dom but would otherwise land in vendor-misc).
           if (
             id.includes("node_modules/react/") ||
             id.includes("node_modules/react-dom/") ||
