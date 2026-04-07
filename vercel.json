@@ -1,6 +1,6 @@
 {
   "installCommand": "npm install -g pnpm@10.26.1 && pnpm install --force",
-  "buildCommand": "pnpm --filter @workspace/mj-spa run build",
+  "buildCommand": "cd artifacts/mj-spa && pnpm run build",
   "outputDirectory": "dist",
   "framework": null,
   "cleanUrls": false,
