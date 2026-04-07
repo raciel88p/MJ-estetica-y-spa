@@ -81,3 +81,8 @@ This system is designed to scale from an initial set of pages to **hundreds of p
 ## Goal
 
 To build a **high-performance, scalable SEO system** that drives consistent organic growth, Local SEO, improves conversion rates, and positions MJ Estética & SPA as a leading authority in the medical aesthetic industry.
+
+Next Actions:
+- Add server-side tracking
+- WhatsApp + AI
+- Improve conversión of the page
