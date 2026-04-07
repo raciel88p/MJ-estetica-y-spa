@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
-import compression from "vite-plugin-compression2";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -10,27 +9,23 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const isReplit = process.env.REPL_ID !== undefined;
 const isDev    = process.env.NODE_ENV !== "production";
 
-// PORT is only required for the dev/preview server, not for `vite build`
 const rawPort = process.env.PORT;
 const port    = rawPort ? Number(rawPort) : 3000;
 
-// BASE_PATH defaults to "/" for Vercel and other CI environments
 const basePath = process.env.BASE_PATH ?? "/";
 
 export default defineConfig({
   base: basePath,
 
-  // ── esbuild transform options (applied to EVERY file, not just minifier) ──
   esbuild: {
-    // Drop console.* and debugger statements in production
     drop: isDev ? [] : ["console", "debugger"],
     legalComments: "none",
   },
 
   plugins: [
-    // Strip "use client" / "use server" RSC directives from all files.
-    // These are Next.js / React Server Components annotations — meaningless
-    // in a Vite SPA and cause Rollup sourcemap resolution failures.
+    // Strip "use client" / "use server" RSC directives.
+    // These are Next.js annotations — meaningless in Vite and cause
+    // Rollup sourcemap resolution failures when present in node_modules.
     {
       name: "strip-rsc-directives",
       transform(code: string) {
@@ -42,22 +37,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
 
-    // Pre-compress JS/CSS assets with Brotli + Gzip
-    // Exclude HTML so Vercel serves index.html natively (it does edge compression)
-    ...(!isDev
-      ? [
-          compression({
-            algorithm: "brotliCompress",
-            exclude: /\.(br|gz|html|png|jpg|jpeg|gif|webp|ico|woff2|svg|xml|txt)$/,
-          }),
-          compression({
-            algorithm: "gzip",
-            exclude: /\.(br|gz|html|png|jpg|jpeg|gif|webp|ico|woff2|svg|xml|txt)$/,
-          }),
-        ]
-      : []),
-
-    // Replit-only dev plugins (not loaded on Vercel — REPL_ID is absent there)
+    // Replit-only dev plugins (absent on Vercel — REPL_ID is not set there)
     ...(isDev && isReplit
       ? [
           await import("@replit/vite-plugin-runtime-error-modal").then((m) => m.default()),
@@ -80,24 +60,35 @@ export default defineConfig({
   root: path.resolve(__dirname),
 
   build: {
-    outDir:               path.resolve(__dirname, "dist"),
-    emptyOutDir:          true,
-    cssCodeSplit:         true,
-    reportCompressedSize: false,
+    outDir:                path.resolve(__dirname, "dist"),
+    emptyOutDir:           true,
+    cssCodeSplit:          true,
+    reportCompressedSize:  false,
     chunkSizeWarningLimit: 600,
     target: "es2020",
     minify: "esbuild",
     rollupOptions: {
       output: {
         manualChunks(id) {
-          if (id.includes("node_modules/react/") || id.includes("node_modules/react-dom/"))
-            return "vendor-react";
+          // Keep React runtime + its internal deps in one chunk to avoid
+          // circular references (scheduler, use-sync-external-store are
+          // imported by react-dom but would otherwise land in vendor-misc).
+          if (
+            id.includes("node_modules/react/") ||
+            id.includes("node_modules/react-dom/") ||
+            id.includes("node_modules/scheduler/") ||
+            id.includes("node_modules/use-sync-external-store/")
+          ) return "vendor-react";
+
           if (id.includes("node_modules/framer-motion"))  return "vendor-motion";
           if (id.includes("node_modules/@radix-ui"))      return "vendor-radix";
           if (id.includes("node_modules/wouter"))         return "vendor-router";
           if (id.includes("node_modules/@tanstack"))      return "vendor-query";
-          if (id.includes("node_modules/zod") || id.includes("node_modules/react-hook-form"))
-            return "vendor-forms";
+          if (
+            id.includes("node_modules/zod") ||
+            id.includes("node_modules/react-hook-form")
+          ) return "vendor-forms";
+
           if (id.includes("node_modules/")) return "vendor-misc";
         },
       },
