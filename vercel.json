@@ -1,7 +1,7 @@
 {
   "installCommand": "pnpm install --force",
   "buildCommand": "pnpm --filter @workspace/mj-spa run build",
-  "outputDirectory": "artifacts/mj-spa/dist/public",
+  "outputDirectory": "artifacts/mj-spa/dist",
   "framework": null,
 
   "env": {
