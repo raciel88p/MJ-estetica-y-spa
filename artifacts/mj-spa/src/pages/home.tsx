@@ -153,6 +153,8 @@ export default function Home() {
     "tensado-corporal": "Tensado Corporal",
     "drenaje-linfatico": "Drenaje Linfático",
     "adn-salmon": "ADN de Salmón",
+    "tratamiento-ojeras": "Tratamiento de Ojeras",
+    "blanqueamiento-zona-intima": "Blanqueamiento Zona Íntima",
     "hollywood-peel": "Hollywood Peel",
     "radiofrecuencia-facial": "Radiofrecuencia Facial",
     "eliminacion-manchas": "Eliminación de Manchas",
@@ -920,6 +922,7 @@ export default function Home() {
                       <option value="masajes-post-operatorios">Masajes Post Operatorios</option>
                       <option value="tensado-corporal">Tensado Corporal</option>
                       <option value="drenaje-linfatico">Drenaje Linfático</option>
+                      <option value="blanqueamiento-zona-intima">Blanqueamiento Zona Íntima</option>
                     </optgroup>
                     <optgroup label="Tratamientos Faciales">
                       <option value="adn-salmon">ADN de Salmón</option>
@@ -927,6 +930,7 @@ export default function Home() {
                       <option value="radiofrecuencia-facial">Radiofrecuencia Facial</option>
                       <option value="eliminacion-manchas">Eliminación de Manchas</option>
                       <option value="acido-hialuronico">Ácido Hialurónico</option>
+                      <option value="tratamiento-ojeras">Tratamiento de Ojeras</option>
                     </optgroup>
                     <optgroup label="Tratamientos de Piernas">
                       <option value="varices">Varices y Arañas Vasculares</option>
@@ -965,6 +969,27 @@ export default function Home() {
                 </div>
               </form>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── MARCAS QUE NOS RESPALDAN ──────────────────── */}
+      <section className="py-14 bg-stone-50 border-t border-stone-100">
+        <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 text-center">
+          <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-10">Marcas que nos respaldan</p>
+          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
+            {[
+              { name: "Produes", detail: "Dermocosmética profesional" },
+              { name: "doTERRA", detail: "Aceites esenciales certificados" },
+              { name: "Farmacy", detail: "Cosmética limpia y activos naturales" },
+            ].map((brand) => (
+              <div key={brand.name} className="flex flex-col items-center gap-1 group">
+                <span className="text-2xl md:text-3xl font-serif font-bold text-stone-800 group-hover:text-primary transition-colors tracking-tight">
+                  {brand.name}
+                </span>
+                <span className="text-xs text-stone-400 tracking-wide">{brand.detail}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

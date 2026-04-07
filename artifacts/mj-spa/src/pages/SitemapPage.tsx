@@ -39,6 +39,7 @@ const sections = [
       { name: "Vendas Frías", href: "/servicios/vendas-frias" },
       { name: "Maderoterapia", href: "/servicios/maderoterapia" },
       { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
+      { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
     ],
   },
   {
@@ -52,6 +53,7 @@ const sections = [
       { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
       { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
       { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
+      { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
     ],
   },
   {

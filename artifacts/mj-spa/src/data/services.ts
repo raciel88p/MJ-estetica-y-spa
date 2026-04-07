@@ -43,6 +43,7 @@ export const tratamientosCorporalesLinks = [
   { name: "Vendas Frías", href: "/servicios/vendas-frias" },
   { name: "Maderoterapia", href: "/servicios/maderoterapia" },
   { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
+  { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
 ];
 
 export const tratamientosFacialesLinks = [
@@ -53,6 +54,7 @@ export const tratamientosFacialesLinks = [
   { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
   { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
   { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
+  { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
 ];
 
 export const tratamientosPiernasLinks = [
@@ -2051,6 +2053,120 @@ export const servicePages: ServicePageData[] = [
         question: "¿Se puede ver el resultado inmediatamente?",
         answer:
           "Sí, el resultado es visible desde el momento del tratamiento. Los labios pueden presentar una leve inflamación durante 24-48 horas que potencia inicialmente el volumen. El resultado definitivo se aprecia a los 7-10 días.",
+      },
+    ],
+  },
+
+  // ── TRATAMIENTO DE OJERAS ───────────────────────────
+  {
+    slug: "tratamiento-ojeras",
+    name: "Tratamiento de Ojeras",
+    tagline: "Elimina las ojeras y recupera una mirada luminosa y descansada",
+    heroDescription:
+      "Las ojeras son uno de los problemas estéticos más comunes y difíciles de disimular con maquillaje. En MJ Fisio Estética y Spa combinamos las técnicas más avanzadas — ácido hialurónico, biorevitalización y peelings específicos — para reducir el color, el volumen y la textura de las ojeras de forma segura, natural y duradera.",
+    benefits: [
+      "Mirada más luminosa, descansada y juvenil desde la primera sesión",
+      "Reducción del color oscuro y las sombras bajo los ojos",
+      "Relleno de surcos lagrimales que proyectan cansancio",
+      "Tratamientos no quirúrgicos con recuperación inmediata",
+      "Protocolos personalizados según el tipo y causa de tu ojera",
+      "Resultados visibles y duraderos sin cirugía",
+    ],
+    items: [
+      {
+        title: "Relleno de Surco Lagrimal con Ácido Hialurónico",
+        description:
+          "Microinyecciones de ácido hialurónico en el surco lagrimal para rellenar la depresión que genera sombra y aspecto de cansancio. Resultado inmediato, natural y de larga duración.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Biorevitalización Periocular",
+        description:
+          "Infiltración de vitaminas, aminoácidos y ácido hialurónico no reticulado en la zona del contorno de ojos para mejorar la hidratación, luminosidad y reducir el color oscuro.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Protocolo Completo Antiojeras",
+        description:
+          "Combinación de relleno, biorevitalización y cuidado tópico especializado para resultados máximos en ojeras mixtas (vasculares + estructurales). Incluye seguimiento y retoque.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Cuántas sesiones necesito para ver resultados?",
+        answer:
+          "Para ojeras vasculares (de color) se recomiendan 3-4 sesiones de biorevitalización. Para ojeras estructurales (surco lagrimal hundido), el relleno con ácido hialurónico muestra resultado inmediato desde la primera sesión.",
+      },
+      {
+        question: "¿Es un tratamiento doloroso?",
+        answer:
+          "Aplicamos crema anestésica antes del procedimiento. La mayoría de las pacientes lo describen como muy tolerable. La zona periocular es sensible pero el procedimiento completo dura muy pocos minutos.",
+      },
+      {
+        question: "¿Cuánto dura el efecto?",
+        answer:
+          "El relleno con ácido hialurónico tiene una duración de 9 a 12 meses en la zona periocular. La biorevitalización se mantiene con sesiones de mantenimiento cada 3-4 meses.",
+      },
+    ],
+  },
+
+  // ── BLANQUEAMIENTO ZONA ÍNTIMA ──────────────────────
+  {
+    slug: "blanqueamiento-zona-intima",
+    name: "Blanqueamiento Zona Íntima",
+    tagline: "Recupera la luminosidad y uniformidad de tu piel íntima de forma segura",
+    heroDescription:
+      "El blanqueamiento de zona íntima es un tratamiento estético especializado para aclarar y unificar el tono de la piel en áreas como la ingle, zona bikini, axilas e ingle. Utilizamos productos y técnicas dermatológicamente seguros que respetan la delicada piel de estas zonas, logrando resultados visibles sin irritación ni efectos secundarios.",
+    benefits: [
+      "Unificación del tono de piel en zonas de hiperpigmentación",
+      "Tratamiento 100% seguro y respetuoso con la piel íntima",
+      "Reducción de manchas por fricción, hormonales o post-depilación",
+      "Mayor confianza y comodidad con tu cuerpo",
+      "Sin tiempo de inactividad — retomas tu rutina al instante",
+      "Protocolos personalizados según tu tipo de piel y grado de pigmentación",
+    ],
+    items: [
+      {
+        title: "Blanqueamiento con Peeling Enzimático",
+        description:
+          "Aplicación de enzimas despigmentantes específicas para zonas íntimas que exfolian y aclaran progresivamente la piel sin irritación. Ideal para pieles sensibles.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Tratamiento con Ácidos Despigmentantes",
+        description:
+          "Protocolo con ácidos dérmicos a baja concentración (kójico, mandélico, azelaico) diseñados para aclarar la piel de zonas íntimas de forma segura y eficaz.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Protocolo Intensivo de Luminosidad",
+        description:
+          "Ciclo completo de 6 sesiones que combina exfoliación enzimática, despigmentación ácida y tratamiento antioxidante para resultados óptimos y duraderos en hiperpigmentaciones moderadas o intensas.",
+        duration: "45 min/sesión",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿El blanqueamiento de zona íntima es seguro?",
+        answer:
+          "Sí. Usamos productos específicamente formulados para zonas íntimas, con ingredientes aprobados dermatológicamente. El tratamiento no daña la piel ni las mucosas cuando se aplica correctamente por profesionales.",
+      },
+      {
+        question: "¿Cuántas sesiones son necesarias?",
+        answer:
+          "Para pigmentaciones leves, 3-4 sesiones son suficientes. Para casos moderados o intensos, recomendamos un ciclo completo de 6 sesiones. Los resultados son progresivos y se potencian con cada sesión.",
+      },
+      {
+        question: "¿Hay alguna contraindicación?",
+        answer:
+          "Se recomienda no realizarlo durante el embarazo o lactancia. Tampoco en pieles con heridas, dermatitis activa o infección en la zona. En la consulta previa evaluamos tu caso y adaptamos el protocolo a tu condición.",
       },
     ],
   },
