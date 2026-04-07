@@ -23,19 +23,6 @@ export default defineConfig({
   },
 
   plugins: [
-    // Strip "use client" / "use server" RSC directives.
-    // These are Next.js annotations — meaningless in Vite and cause
-    // Rollup sourcemap resolution failures when present in node_modules.
-    {
-      name: "strip-rsc-directives",
-      transform(code: string) {
-        // Replace directive text only — keep the newline so line numbers
-        // don't shift and the Rollup sourcemap stays valid.
-        const cleaned = code.replace(/^["']use (client|server)["'];?/gm, "");
-        return cleaned !== code ? { code: cleaned, map: null } : null;
-      },
-    },
-
     react(),
     tailwindcss(),
 
@@ -70,6 +57,15 @@ export default defineConfig({
     target: "es2020",
     minify: "esbuild",
     rollupOptions: {
+      onwarn(warning, defaultHandler) {
+        // "use client" / "use server" directives in node_modules (e.g. Radix UI)
+        // produce a harmless sourcemap warning — suppress it.
+        if (
+          warning.code === "SOURCEMAP_ERROR" ||
+          warning.message?.includes("Can't resolve original location")
+        ) return;
+        defaultHandler(warning);
+      },
       output: {
         manualChunks(id) {
           // Keep React runtime + its internal deps in one chunk to avoid
