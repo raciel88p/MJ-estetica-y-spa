@@ -1,7 +1,7 @@
 {
-  "installCommand": "npm install -g pnpm@10.26.1 && pnpm install --force",
-  "buildCommand": "cd artifacts/mj-spa && pnpm run build",
-  "outputDirectory": "dist",
+  "installCommand": "npx --yes pnpm@10.26.1 install --force",
+  "buildCommand": "npx --yes pnpm@10.26.1 --filter @workspace/mj-spa run build",
+  "outputDirectory": "artifacts/mj-spa/dist",
   "framework": null,
   "cleanUrls": false,
   "trailingSlash": false,
