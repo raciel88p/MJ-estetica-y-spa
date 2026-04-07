@@ -1,9 +1,9 @@
 {
-  "installCommand": "corepack enable pnpm && pnpm install --force",
+  "installCommand": "npm install -g pnpm@10.26.1 && pnpm install --force",
   "buildCommand": "pnpm --filter @workspace/mj-spa run build",
   "outputDirectory": "dist",
   "framework": null,
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false,
 
   "env": {
