@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, type Dispatch, type SetStateAction } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -15,8 +15,8 @@ const corporalesHalf2 = tratamientosCorporalesLinks.slice(7);
 
 type DropdownKey = "nosotros" | "servicios" | "medicos" | "paquetes" | null;
 
-function useHoverDropdown(key: DropdownKey, openDropdown: DropdownKey, setOpenDropdown: (k: DropdownKey) => void) {
-  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
+function useHoverDropdown(key: DropdownKey, openDropdown: DropdownKey, setOpenDropdown: Dispatch<SetStateAction<DropdownKey>>) {
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   const open = useCallback(() => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);

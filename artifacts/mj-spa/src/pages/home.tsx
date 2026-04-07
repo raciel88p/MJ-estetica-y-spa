@@ -125,7 +125,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 /* ── ANIMATION PRESETS ────────────────────────────── */
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: "easeOut" as const } }
 };
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
