@@ -13,6 +13,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { GoogleMap, MAPS_LINK, GOOGLE_REVIEW_LINK } from "@/components/GoogleMap";
+import { StatsBar } from "@/components/StatsBar";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -314,23 +315,9 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Stats bar */}
-        <div className="absolute bottom-0 left-0 right-0 bg-black/40 backdrop-blur-sm border-t border-white/10 z-20">
-          <div className="max-w-4xl mx-auto px-6 py-5 grid grid-cols-4 divide-x divide-white/15">
-            {[
-              { n: "2335+", label: "Clientes atendidas" },
-              { n: "85%", label: "Clientes satisfechos" },
-              { n: "82+", label: "Tratamientos disponibles" },
-              { n: "3+", label: "Años de experiencia" },
-            ].map((s) => (
-              <div key={s.n} className="text-center px-4">
-                <p className="text-primary text-2xl font-serif font-bold">{s.n}</p>
-                <p className="text-white/85 text-[11px] tracking-widest uppercase mt-0.5">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
+
+      <StatsBar />
 
       {/* ══ INTRO BANNER ═══════════════════════════════ */}
       <section className="py-5 bg-primary">
