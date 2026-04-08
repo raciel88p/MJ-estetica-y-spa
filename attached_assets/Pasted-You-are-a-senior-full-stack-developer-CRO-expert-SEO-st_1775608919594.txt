@@ -1,0 +1,196 @@
+You are a senior full-stack developer + CRO expert + SEO strategist.
+
+Build a high-converting website for a beauty spa in Costa Rica called "MJ Estética & Spa".
+
+The goal is NOT just a website — it must be a conversion-focused funnel designed to generate WhatsApp leads and booked appointments.
+
+-----------------------------------
+⚙️ TECH STACK
+-----------------------------------
+- Framework: Next.js (App Router)
+- Styling: Tailwind CSS
+- Deployment: Vercel-ready
+- CMS: Headless-ready (simulate with JSON/local data structured for future Strapi integration)
+- Analytics ready (Google Tag Manager placeholders)
+
+-----------------------------------
+🎯 BUSINESS CONTEXT
+-----------------------------------
+Location: Turrialba, Costa Rica
+Target: Women 25–55
+Services:
+- Body reduction treatments
+- Maderotherapy
+- Lymphatic drainage
+- Facial treatments
+
+-----------------------------------
+🔥 MAIN GOAL
+-----------------------------------
+Drive conversions:
+1. Click to WhatsApp
+2. Book appointments
+3. Capture leads
+
+-----------------------------------
+📄 REQUIRED PAGES
+-----------------------------------
+1. Homepage
+2. Landing Page: /reductivos-turrialba (HIGH CONVERSION)
+3. Landing Page: /faciales
+4. Testimonials Page
+5. Promotions Page
+
+-----------------------------------
+🧠 CRO STRUCTURE (VERY IMPORTANT)
+-----------------------------------
+Each landing page MUST follow:
+
+1. HERO (result-driven headline + CTA)
+2. PROBLEM (pain points)
+3. SOLUTION (treatment explanation)
+4. RESULTS (visual proof)
+5. TESTIMONIALS (HIGH PRIORITY)
+6. OFFER (package + pricing)
+7. FAQ (objections)
+8. FINAL CTA (urgency + WhatsApp)
+
+-----------------------------------
+📲 WHATSAPP INTEGRATION
+-----------------------------------
+- Floating button (fixed bottom right)
+- Pre-filled message:
+"Hola, quiero agendar mi valoración GRATIS para reducir medidas"
+
+-----------------------------------
+🔥 TESTIMONIAL SYSTEM (CRITICAL FEATURE)
+-----------------------------------
+
+IMPORTANT:
+Clients DO NOT want to show their faces.
+Design a HIGH-CONVERTING testimonial system WITHOUT showing faces.
+
+-----------------------------------
+✅ TESTIMONIAL TYPES TO IMPLEMENT
+-----------------------------------
+
+1. BEFORE/AFTER (NO FACE)
+- Show only body areas (abdomen, legs, arms)
+- Use image placeholders
+- Label clearly:
+  "Resultado en 4 semanas"
+
+2. ANONYMOUS TESTIMONIALS
+Instead of names, use:
+- "Cliente de Turrialba, 34 años"
+- "Paciente real MJ Estética"
+
+3. STRUCTURED DATA PER TESTIMONIAL:
+Each testimonial must include:
+- Age
+- Location (Turrialba)
+- Treated area
+- Duration (weeks)
+- Treatment type
+- Result (example: "reducción de 2 tallas")
+
+4. TESTIMONIAL COPY (REALISTIC, NOT GENERIC)
+Example:
+"Logré bajar 2 tallas en abdomen en solo 1 mes. Me siento mucho más segura con mi cuerpo."
+
+5. WHATSAPP / CHAT SCREENSHOTS (UI COMPONENT)
+Create a component that simulates:
+- WhatsApp messages
+- Instagram DMs
+
+Example text:
+"De verdad me funcionó demasiado 😍"
+
+-----------------------------------
+🧩 COMPONENTS TO BUILD
+-----------------------------------
+
+- TestimonialCard.tsx
+- BeforeAfterCard.tsx
+- TestimonialGrid.tsx
+- ChatProof.tsx (WhatsApp-style messages)
+
+-----------------------------------
+🎯 TRUST BOOSTERS (MANDATORY)
+-----------------------------------
+
+Add sections with:
+
+- "+100 clientas atendidas en Turrialba"
+- "Resultados reales sin filtros"
+- "Testimonios verificados de clientas reales"
+
+-----------------------------------
+🎨 DESIGN RULES FOR TESTIMONIALS
+-----------------------------------
+
+- Clean cards
+- Rounded corners
+- Soft shadows
+- Highlight results (bold text)
+- Use badges like:
+  ✔ "Resultado real"
+  ✔ "Caso verificado"
+
+-----------------------------------
+📊 TRACKING
+-----------------------------------
+
+Track:
+- click_whatsapp
+- testimonial_view
+- cta_click
+
+-----------------------------------
+🔍 SEO
+-----------------------------------
+
+Optimize testimonial pages with:
+- "resultados maderoterapia turrialba"
+- "antes y después reductivos costa rica"
+
+-----------------------------------
+📦 DATA STRUCTURE (IMPORTANT)
+-----------------------------------
+
+Create a testimonials JSON like:
+
+[
+  {
+    "age": 36,
+    "location": "Turrialba",
+    "area": "abdomen",
+    "duration": "4 semanas",
+    "treatment": "Reductivo + drenaje",
+    "result": "2 tallas menos",
+    "text": "Logré bajar 2 tallas en abdomen en solo 1 mes."
+  }
+]
+
+-----------------------------------
+🚀 OUTPUT
+-----------------------------------
+
+Generate a FULL working project:
+- Pages
+- Components
+- Tailwind styling
+- CRO-optimized Spanish copy
+
+Make everything modular and reusable.
+
+-----------------------------------
+💰 FINAL RULE
+-----------------------------------
+
+Every section must push the user to:
+👉 Click WhatsApp
+👉 Trust results
+👉 Book appointment
+
+Build the full project now.

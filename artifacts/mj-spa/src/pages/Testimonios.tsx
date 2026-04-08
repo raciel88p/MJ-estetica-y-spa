@@ -3,6 +3,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { TestimonialGrid } from "@/components/testimonials/TestimonialGrid";
 import { motion } from "framer-motion";
 import { Star, Quote, ArrowRight } from "lucide-react";
 
@@ -234,6 +235,25 @@ export default function Testimonios() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* CRO Testimonial System */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-stone-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+              <Star className="w-4 h-4 fill-primary" />
+              Casos verificados
+            </div>
+            <h2 className="text-3xl md:text-4xl font-serif text-foreground mb-3">
+              Resultados, mensajes y transformaciones
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto text-sm">
+              Explora testimonios detallados, resultados antes y después, y mensajes reales de nuestras clientas.
+            </p>
+          </div>
+          <TestimonialGrid />
         </div>
       </section>
 

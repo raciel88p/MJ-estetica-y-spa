@@ -17,6 +17,9 @@ const TratamientosFaciales   = lazy(() => import("@/pages/TratamientosFaciales")
 const TratamientosPiernas    = lazy(() => import("@/pages/TratamientosPiernas"));
 const SitemapPage       = lazy(() => import("@/pages/SitemapPage"));
 const Paquetes          = lazy(() => import("@/pages/Paquetes"));
+const LandingReductivos = lazy(() => import("@/pages/LandingReductivos"));
+const LandingFaciales   = lazy(() => import("@/pages/LandingFaciales"));
+const Promociones       = lazy(() => import("@/pages/Promociones"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -45,6 +48,9 @@ function Router() {
         <Route path="/tratamientos/corporales" component={TratamientosCorporales} />
         <Route path="/tratamientos/faciales" component={TratamientosFaciales} />
         <Route path="/tratamientos/piernas" component={TratamientosPiernas} />
+        <Route path="/reductivos-turrialba" component={LandingReductivos} />
+        <Route path="/faciales" component={LandingFaciales} />
+        <Route path="/promociones" component={Promociones} />
         {servicePages.map((service) => (
           <Route
             key={service.slug}

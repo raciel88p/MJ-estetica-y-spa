@@ -106,7 +106,7 @@ React + Vite frontend-only website for **MJ Fisio Estética y Spa** (Turrialba, 
 **Key pages:**
 - `/` — Home with 3-slide auto-advancing hero, stats bar, intro banner, services preview, testimonials
 - `/nosotros` — About page
-- `/testimonios` — 25 testimonials
+- `/testimonios` — 25 testimonials + TestimonialGrid (tabs: testimonios / antes-después / chat)
 - `/contacto` — Contact page
 - `/buzon-sugerencias` — Suggestions form
 - `/tratamientos/corporales` — Category page: corporal treatments (7+)
@@ -114,6 +114,17 @@ React + Vite frontend-only website for **MJ Fisio Estética y Spa** (Turrialba, 
 - `/tratamientos/piernas` — Category page: leg treatments (3)
 - `/medicos-esteticos` — Medical aesthetics page (Botox, fillers, nutrition, etc.)
 - `/servicios/:slug` — Individual service pages (generated from `services.ts`)
+- `/reductivos-turrialba` — CRO landing page (reductivos): Hero→Problem→Solution→Results→Testimonials→Pricing→FAQ→CTA
+- `/faciales` — CRO landing page (faciales): same CRO funnel for facial treatments
+- `/promociones` — Promotions page: 4 packages with discounts (up to 40%), urgency bar
+
+**Phase 2 — CRO & Testimonial System:**
+- `src/data/testimonials.ts` — Structured testimonial data (Testimonial, BeforeAfterItem, ChatMessage types + WA URL constants)
+- `src/components/testimonials/TestimonialCard.tsx` — Anonymous testimonial card (age shown, no face, verified badge, result highlight)
+- `src/components/testimonials/BeforeAfterCard.tsx` — Before/after visual card (no face, body area icon, result badge)
+- `src/components/testimonials/ChatProof.tsx` — WhatsApp-style chat simulation with real client messages
+- `src/components/testimonials/TestimonialGrid.tsx` — Tabbed grid (Testimonios / Antes & Después / Mensajes reales)
+- GTM tracking: `window.dataLayer.push()` on all WhatsApp CTA clicks with `event: "click_whatsapp"` + label
 
 **Navbar structure:**
 - Servicios dropdown: 3-column layout (Corporales / Faciales / Piernas) with category links + service sub-links
