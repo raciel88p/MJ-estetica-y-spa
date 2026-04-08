@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "_DCVw3X9_ghjM54Nr_5pe"
+uri = "file://artifacts/mj-spa/public/gtm/mj-gtm-config.json"
+type = "unspecified"
+title = "GTM Config — MJ Fisio AB Testing"

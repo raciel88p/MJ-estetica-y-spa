@@ -1,0 +1,196 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2026-04-08 10:00:00",
+  "containerVersion": {
+    "path": "accounts/0/containers/0/versions/0",
+    "accountId": "0",
+    "containerId": "0",
+    "containerVersionId": "0",
+    "container": {
+      "path": "accounts/0/containers/0",
+      "accountId": "0",
+      "containerId": "0",
+      "name": "MJ Fisio AB Testing",
+      "publicId": "GTM-MH5ZQCZP",
+      "usageContext": ["WEB"],
+      "fingerprint": "0"
+    },
+    "variable": [
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "1",
+        "name": "DLV - ab_test_name",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "false" },
+          { "type": "TEMPLATE", "key": "name", "value": "ab_test_name" }
+        ],
+        "fingerprint": "0"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "2",
+        "name": "DLV - ab_test_variant",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "false" },
+          { "type": "TEMPLATE", "key": "name", "value": "ab_test_variant" }
+        ],
+        "fingerprint": "0"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "3",
+        "name": "DLV - ab_test_label",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "false" },
+          { "type": "TEMPLATE", "key": "name", "value": "ab_test_label" }
+        ],
+        "fingerprint": "0"
+      }
+    ],
+    "trigger": [
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "10",
+        "name": "CE - ab_test_assigned",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              { "type": "TEMPLATE", "key": "arg0", "value": "{{_event}}" },
+              { "type": "TEMPLATE", "key": "arg1", "value": "ab_test_assigned" }
+            ]
+          }
+        ],
+        "fingerprint": "0"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "11",
+        "name": "CE - ab_test_conversion",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              { "type": "TEMPLATE", "key": "arg0", "value": "{{_event}}" },
+              { "type": "TEMPLATE", "key": "arg1", "value": "ab_test_conversion" }
+            ]
+          }
+        ],
+        "fingerprint": "0"
+      }
+    ],
+    "tag": [
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "20",
+        "name": "GA4 - Configuración",
+        "type": "gaawc",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "measurementId", "value": "G-XXXXXXXXXX" },
+          { "type": "BOOLEAN", "key": "sendPageView", "value": "true" }
+        ],
+        "firingTriggerId": ["2147483646"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "fingerprint": "0",
+        "monitoringMetadata": {
+          "type": "MAP"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "21",
+        "name": "GA4 - AB Test Assigned",
+        "type": "gaawe",
+        "parameter": [
+          { "type": "TAG_REFERENCE", "key": "measurementId", "value": "GA4 - Configuración" },
+          { "type": "TEMPLATE", "key": "eventName", "value": "ab_test_assigned" },
+          {
+            "type": "LIST",
+            "key": "eventParameters",
+            "list": [
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "name", "value": "test_name" },
+                  { "type": "TEMPLATE", "key": "value", "value": "{{DLV - ab_test_name}}" }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "name", "value": "variant" },
+                  { "type": "TEMPLATE", "key": "value", "value": "{{DLV - ab_test_variant}}" }
+                ]
+              }
+            ]
+          }
+        ],
+        "firingTriggerId": ["10"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "fingerprint": "0",
+        "monitoringMetadata": {
+          "type": "MAP"
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "22",
+        "name": "GA4 - AB Test Conversion",
+        "type": "gaawe",
+        "parameter": [
+          { "type": "TAG_REFERENCE", "key": "measurementId", "value": "GA4 - Configuración" },
+          { "type": "TEMPLATE", "key": "eventName", "value": "ab_test_conversion" },
+          {
+            "type": "LIST",
+            "key": "eventParameters",
+            "list": [
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "name", "value": "test_name" },
+                  { "type": "TEMPLATE", "key": "value", "value": "{{DLV - ab_test_name}}" }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "name", "value": "variant" },
+                  { "type": "TEMPLATE", "key": "value", "value": "{{DLV - ab_test_variant}}" }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "name", "value": "label" },
+                  { "type": "TEMPLATE", "key": "value", "value": "{{DLV - ab_test_label}}" }
+                ]
+              }
+            ]
+          }
+        ],
+        "firingTriggerId": ["11"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "fingerprint": "0",
+        "monitoringMetadata": {
+          "type": "MAP"
+        }
+      }
+    ]
+  }
+}
