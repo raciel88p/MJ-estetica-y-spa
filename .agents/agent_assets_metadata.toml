@@ -1,5 +1,10 @@
 uploads = []
-generated = []
+
+[[generated]]
+id = "QndUo9EKf1WImrC2DfRQz"
+uri = "file://artifacts/mj-spa/public/images/levantamiento-gluteo-bg.png"
+type = "image"
+title = "gluteo lifting treatment hero"
 
 [[outputs]]
 id = "_DCVw3X9_ghjM54Nr_5pe"
