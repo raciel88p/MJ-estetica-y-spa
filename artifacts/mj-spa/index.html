@@ -6,26 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
 
     <!-- ══════════════════════════════════════════════
-         GOOGLE TAG (gtag.js) — Analytics + Google Ads
-         Reemplaza G-XXXXXXXXXX con tu Measurement ID de GA4
-         Reemplaza AW-XXXXXXXXXX con tu Google Ads Conversion ID
+         GOOGLE TAG MANAGER — GTM-MH5ZQCZP
     ══════════════════════════════════════════════ -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      // Google Analytics 4
-      gtag('config', 'G-XXXXXXXXXX', {
-        page_title: document.title,
-        page_location: window.location.href,
-        send_page_view: true
-      });
-
-      // Google Ads — descomentar cuando tengas tu Conversion ID
-      // gtag('config', 'AW-XXXXXXXXXX');
-    </script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MH5ZQCZP');</script>
 
     <!-- ══════════════════════════════════════════════
          SEO PRIMARIO
@@ -319,6 +306,11 @@
   </head>
 
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH5ZQCZP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- Fallback para usuarios sin JavaScript (SEO + accesibilidad) -->
     <noscript>
       <style>
