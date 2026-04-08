@@ -526,29 +526,33 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5"
               >
                 {/* ANTES */}
-                <motion.div variants={fadeUp} className="relative group overflow-hidden min-h-[540px]">
-                  <img
-                    src={beforeBg}
-                    alt="Antes del tratamiento"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    style={{ objectPosition: "50% 15%", filter: "grayscale(1) brightness(0.62)" }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-transparent" style={{ top: "35%" }} />
-                  <div className="absolute top-5 left-5">
-                    <span className="bg-black/55 backdrop-blur-sm text-white/75 text-[10px] font-bold tracking-[0.35em] uppercase px-4 py-2">
+                <motion.div variants={fadeUp} className="bg-[#040f19] overflow-hidden flex flex-col">
+                  {/* Photo contained naturally — no stretch */}
+                  <div className="relative overflow-hidden" style={{ height: "320px" }}>
+                    <img
+                      src={beforeBg}
+                      alt="Antes del tratamiento"
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                      style={{ filter: "grayscale(1) brightness(0.7)" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
+                    <span className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white/80 text-[10px] font-bold tracking-[0.35em] uppercase px-3 py-1.5">
                       Antes
                     </span>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 px-8 pb-10">
-                    <p className="text-white/50 text-xs font-bold tracking-[0.3em] uppercase mb-2">Sin tratamiento</p>
-                    <h3 className="text-xl font-serif font-bold text-white/80 leading-tight mb-5">
-                      La situación que queremos cambiar
-                    </h3>
-                    <ul className="space-y-2.5">
+                  {/* Text below image */}
+                  <div className="px-8 py-8 flex-1 flex flex-col justify-between">
+                    <div>
+                      <p className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-2">Sin tratamiento</p>
+                      <h3 className="text-xl font-serif font-bold text-white/80 leading-tight mb-6">
+                        La situación que queremos cambiar
+                      </h3>
+                    </div>
+                    <ul className="space-y-3">
                       {beforeItems.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <span className="w-3.5 h-3.5 rounded-full border border-stone-500 flex items-center justify-center shrink-0 mt-0.5">
-                            <span className="w-1 h-1 rounded-full bg-stone-400" />
+                          <span className="w-3.5 h-3.5 rounded-full border border-stone-600 flex items-center justify-center shrink-0 mt-0.5">
+                            <span className="w-1 h-1 rounded-full bg-stone-500" />
                           </span>
                           <span className="text-white/55 text-sm leading-snug">{item}</span>
                         </li>
@@ -558,25 +562,28 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 </motion.div>
 
                 {/* DESPUÉS */}
-                <motion.div variants={fadeUp} className="relative group overflow-hidden min-h-[540px]">
-                  <img
-                    src={afterBg}
-                    alt="Después del tratamiento"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    style={{ objectPosition: "50% 10%" }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071e2e] via-[#071e2e]/60 to-transparent" style={{ top: "35%" }} />
-                  <div className="absolute top-5 left-5">
-                    <span className="bg-primary text-white text-[10px] font-bold tracking-[0.35em] uppercase px-4 py-2">
+                <motion.div variants={fadeUp} className="bg-[#040f19] overflow-hidden flex flex-col">
+                  {/* Photo contained naturally — no stretch */}
+                  <div className="relative overflow-hidden" style={{ height: "320px" }}>
+                    <img
+                      src={afterBg}
+                      alt="Después del tratamiento"
+                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
+                    <span className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold tracking-[0.35em] uppercase px-3 py-1.5">
                       Después
                     </span>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 px-8 pb-10">
-                    <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-2">Con nuestro tratamiento</p>
-                    <h3 className="text-xl font-serif font-bold text-white leading-tight mb-5">
-                      La transformación que te mereces
-                    </h3>
-                    <ul className="space-y-2.5">
+                  {/* Text below image */}
+                  <div className="px-8 py-8 flex-1 flex flex-col justify-between">
+                    <div>
+                      <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-2">Con nuestro tratamiento</p>
+                      <h3 className="text-xl font-serif font-bold text-white leading-tight mb-6">
+                        La transformación que te mereces
+                      </h3>
+                    </div>
+                    <ul className="space-y-3">
                       {afterItems.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
                           <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
