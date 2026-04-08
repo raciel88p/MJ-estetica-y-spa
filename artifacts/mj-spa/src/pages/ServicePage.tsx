@@ -267,8 +267,8 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
               <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">Profesional responsable</span>
             </div>
             <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
-              <div className="shrink-0 w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
-                <UserCheck className="w-7 h-7 text-primary" />
+              <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
+                <img src="/images/janneth-molina.webp" alt="Janneth Maria Molina Madrigal" className="w-full h-full object-cover object-top" />
               </div>
               <div className="flex-1 text-center sm:text-left">
                 <h3 className="text-xl font-serif font-bold text-stone-900 mb-1">
