@@ -6,6 +6,7 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { TestimonialCard } from "@/components/testimonials/TestimonialCard";
 import { BeforeAfterCard } from "@/components/testimonials/BeforeAfterCard";
 import { ChatProof } from "@/components/testimonials/ChatProof";
+import { StatsBar } from "@/components/StatsBar";
 import { testimonials, beforeAfterItems, chatProofs, WA_BASE } from "@/data/testimonials";
 import {
   CheckCircle2,
@@ -198,6 +199,8 @@ export default function LandingReductivos() {
           </div>
         </div>
       </section>
+
+      <StatsBar />
 
       {/* ───── 2. PROBLEM ───── */}
       <section className="py-24 px-4 sm:px-6 bg-stone-50">

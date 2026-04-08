@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { motion } from "framer-motion";
 import { CheckCircle2, Star, Heart, Award, Users, Sparkles, ArrowRight } from "lucide-react";
+import { StatsBar } from "@/components/StatsBar";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -69,13 +70,6 @@ const team = [
   },
 ];
 
-const stats = [
-  { value: "+3", label: "Años de experiencia" },
-  { value: "2335", label: "Clientes satisfechos" },
-  { value: "82+", label: "Tratamientos disponibles" },
-  { value: "100%", label: "Atención personalizada" },
-];
-
 export default function Nosotros() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -106,24 +100,7 @@ export default function Nosotros() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-12 bg-primary">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-              >
-                <p className="text-4xl font-serif font-bold text-white">{stat.value}</p>
-                <p className="text-white/70 text-sm mt-1">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <StatsBar />
 
       {/* Historia */}
       <section className="py-24 bg-white">

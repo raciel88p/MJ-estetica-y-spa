@@ -9,6 +9,7 @@ import type { ServicePageData } from "@/data/services";
 import { servicePages } from "@/data/services";
 import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { StatsBar } from "@/components/StatsBar";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
@@ -291,6 +292,8 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           </motion.div>
         </div>
       </section>
+
+      <StatsBar />
 
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
       {(() => {

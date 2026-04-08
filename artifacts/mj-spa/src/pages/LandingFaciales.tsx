@@ -6,6 +6,7 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { TestimonialCard } from "@/components/testimonials/TestimonialCard";
 import { ChatProof } from "@/components/testimonials/ChatProof";
 import { WA_BASE, chatProofs } from "@/data/testimonials";
+import { StatsBar } from "@/components/StatsBar";
 import {
   CheckCircle2,
   ArrowRight,
@@ -221,6 +222,8 @@ export default function LandingFaciales() {
           </div>
         </div>
       </section>
+
+      <StatsBar />
 
       {/* ───── 2. PROBLEM ───── */}
       <section className="py-24 px-4 sm:px-6 bg-stone-50">

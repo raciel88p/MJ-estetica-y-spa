@@ -6,6 +6,7 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, Stethoscope } from "lucide-react";
+import { StatsBar } from "@/components/StatsBar";
 import { medicoEsteticosLinks } from "@/data/services";
 import { servicePages } from "@/data/services";
 
@@ -78,6 +79,8 @@ export default function MedicosEsteticos() {
           </motion.div>
         </div>
       </section>
+
+      <StatsBar />
 
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

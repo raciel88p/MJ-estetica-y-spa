@@ -6,6 +6,7 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { TestimonialGrid } from "@/components/testimonials/TestimonialGrid";
 import { motion } from "framer-motion";
 import { Star, Quote, ArrowRight } from "lucide-react";
+import { StatsBar } from "@/components/StatsBar";
 
 const testimonials = [
   {
@@ -218,6 +219,8 @@ export default function Testimonios() {
           </motion.div>
         </div>
       </section>
+
+      <StatsBar />
 
       {/* Stats */}
       <section className="py-12 bg-primary">

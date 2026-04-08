@@ -7,6 +7,7 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { tratamientosFacialesLinks, servicePages } from "@/data/services";
+import { StatsBar } from "@/components/StatsBar";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
@@ -70,6 +71,8 @@ export default function TratamientosFaciales() {
           </div>
         </div>
       </section>
+
+      <StatsBar />
 
       {/* Intro Banner */}
       <section className="py-5 bg-primary">

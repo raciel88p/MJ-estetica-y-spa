@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { StatsBar } from "@/components/StatsBar";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
@@ -114,6 +115,8 @@ export default function Paquetes() {
           </div>
         </div>
       </section>
+
+      <StatsBar />
 
       {/* Intro band */}
       <section className="py-4 bg-primary">

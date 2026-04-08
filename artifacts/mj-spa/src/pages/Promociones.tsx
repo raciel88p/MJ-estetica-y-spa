@@ -3,6 +3,7 @@ import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { StatsBar } from "@/components/StatsBar";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { WA_BASE } from "@/data/testimonials";
 import { Tag, Clock, ArrowRight, Sparkles, Star, Gift, Zap } from "lucide-react";
@@ -153,6 +154,8 @@ export default function Promociones() {
           </motion.div>
         </div>
       </section>
+
+      <StatsBar />
 
       {/* Urgency bar */}
       <div className="bg-yellow-400 py-3 px-4">
