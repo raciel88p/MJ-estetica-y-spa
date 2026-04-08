@@ -493,8 +493,8 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
         </div>
       </section>
 
-      {/* ── ANTES Y DESPUÉS — solo masajes-corporales ─── */}
-      {service.slug === "masajes-corporales" && (() => {
+      {/* ── ANTES Y DESPUÉS — servicios corporales seleccionados ─── */}
+      {["masajes-corporales", "reduccion-de-medidas", "drenaje-linfatico", "carboxiterapia"].includes(service.slug) && (() => {
         const beforeBg = `${BASE}images/corporales-antes-bg.webp`;
         const afterBg  = `${BASE}images/corporales-despues-bg.webp`;
         const beforeItems = beforeDescMap[service.slug] ?? [
