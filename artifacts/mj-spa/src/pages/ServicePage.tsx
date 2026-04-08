@@ -526,29 +526,32 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5"
               >
                 {/* ANTES */}
-                <motion.div variants={fadeUp} className="relative group overflow-hidden">
+                <motion.div variants={fadeUp} className="relative group overflow-hidden min-h-[540px]">
                   <div
                     className="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
-                    style={{ backgroundImage: `url(${beforeBg})`, filter: "grayscale(1) brightness(0.55)" }}
+                    style={{ backgroundImage: `url(${beforeBg})`, filter: "grayscale(1) brightness(0.65)" }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/10" />
-                  <div className="relative px-8 pt-8 pb-10 min-h-[400px] flex flex-col justify-between">
-                    <div>
-                      <span className="inline-block bg-stone-700/80 text-white/60 text-[10px] font-bold tracking-[0.35em] uppercase px-4 py-2 mb-6">
-                        Antes
-                      </span>
-                      <p className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-3">Sin tratamiento</p>
-                      <h3 className="text-2xl font-serif font-bold text-white/70 leading-tight mb-6">
-                        La situación<br />que queremos cambiar
-                      </h3>
-                    </div>
-                    <ul className="space-y-3">
+                  {/* gradient only on the bottom half */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/98 via-black/70 to-transparent" style={{ top: "40%" }} />
+                  {/* label top-left */}
+                  <div className="absolute top-5 left-5">
+                    <span className="bg-black/60 backdrop-blur-sm text-white/70 text-[10px] font-bold tracking-[0.35em] uppercase px-4 py-2">
+                      Antes
+                    </span>
+                  </div>
+                  {/* all text at the bottom */}
+                  <div className="absolute bottom-0 left-0 right-0 px-8 pb-10">
+                    <p className="text-white/50 text-xs font-bold tracking-[0.3em] uppercase mb-2">Sin tratamiento</p>
+                    <h3 className="text-xl font-serif font-bold text-white/80 leading-tight mb-5">
+                      La situación que queremos cambiar
+                    </h3>
+                    <ul className="space-y-2.5">
                       {beforeItems.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <span className="w-4 h-4 rounded-full border border-stone-600 flex items-center justify-center shrink-0 mt-0.5">
-                            <span className="w-1.5 h-1.5 rounded-full bg-stone-500" />
+                          <span className="w-3.5 h-3.5 rounded-full border border-stone-500 flex items-center justify-center shrink-0 mt-0.5">
+                            <span className="w-1 h-1 rounded-full bg-stone-400" />
                           </span>
-                          <span className="text-white/50 text-sm leading-snug">{item}</span>
+                          <span className="text-white/55 text-sm leading-snug">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -556,23 +559,26 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 </motion.div>
 
                 {/* DESPUÉS */}
-                <motion.div variants={fadeUp} className="relative group overflow-hidden">
+                <motion.div variants={fadeUp} className="relative group overflow-hidden min-h-[540px]">
                   <div
                     className="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
                     style={{ backgroundImage: `url(${afterBg})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071e2e]/95 via-primary/15 to-transparent" />
-                  <div className="relative px-8 pt-8 pb-10 min-h-[400px] flex flex-col justify-between">
-                    <div>
-                      <span className="inline-block bg-primary text-white text-[10px] font-bold tracking-[0.35em] uppercase px-4 py-2 mb-6">
-                        Después
-                      </span>
-                      <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-3">Con nuestro tratamiento</p>
-                      <h3 className="text-2xl font-serif font-bold text-white leading-tight mb-6">
-                        La transformación<br />que te mereces
-                      </h3>
-                    </div>
-                    <ul className="space-y-3">
+                  {/* gradient only on the bottom half */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071e2e]/98 via-[#071e2e]/65 to-transparent" style={{ top: "40%" }} />
+                  {/* label top-left */}
+                  <div className="absolute top-5 left-5">
+                    <span className="bg-primary text-white text-[10px] font-bold tracking-[0.35em] uppercase px-4 py-2">
+                      Después
+                    </span>
+                  </div>
+                  {/* all text at the bottom */}
+                  <div className="absolute bottom-0 left-0 right-0 px-8 pb-10">
+                    <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-2">Con nuestro tratamiento</p>
+                    <h3 className="text-xl font-serif font-bold text-white leading-tight mb-5">
+                      La transformación que te mereces
+                    </h3>
+                    <ul className="space-y-2.5">
                       {afterItems.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
                           <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
