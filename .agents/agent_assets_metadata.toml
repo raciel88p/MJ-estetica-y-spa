@@ -6,6 +6,12 @@ uri = "file://artifacts/mj-spa/public/images/levantamiento-gluteo-bg.png"
 type = "image"
 title = "gluteo lifting treatment hero"
 
+[[generated]]
+id = "cc31dBm1Rgo2r4VgA734e"
+uri = "file://artifacts/mj-spa/public/images/carboxiterapia-bg.png"
+type = "image"
+title = "carboxytherapy stomach injection hero"
+
 [[outputs]]
 id = "_DCVw3X9_ghjM54Nr_5pe"
 uri = "file://artifacts/mj-spa/public/gtm/mj-gtm-config.json"
