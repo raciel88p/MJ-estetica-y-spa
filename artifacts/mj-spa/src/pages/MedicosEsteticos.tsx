@@ -5,10 +5,42 @@ import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { ArrowRight, Stethoscope } from "lucide-react";
+import { ArrowRight, Stethoscope, BadgeCheck } from "lucide-react";
 import { StatsBar } from "@/components/StatsBar";
 import { medicoEsteticosLinks } from "@/data/services";
 import { servicePages } from "@/data/services";
+
+const BASE = import.meta.env.BASE_URL;
+
+const doctors = [
+  {
+    name: "Dr. Ricard Araya",
+    linc: "323106",
+    specialty: "Armonizador Facial",
+    photo: "dr-ricard-araya.webp",
+    bio: "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales.",
+    services: ["/servicios/botox-full-face", "/servicios/hilos-tensores", "/servicios/acido-hialuronico", "/servicios/rellenos-labios"],
+    serviceLabels: ["Botox", "Hilos Tensores", "Ácido Hialurónico", "Rellenos de Labios"],
+  },
+  {
+    name: "Dr. Ruddy Jiménez Montero",
+    linc: "13583",
+    specialty: "Master en Cirugía Capilar",
+    photo: "dr-ruddy-jimenez.webp",
+    bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes.",
+    services: ["/servicios/trasplante-capilar", "/servicios/implante-barba", "/servicios/mesoterapia-capilar"],
+    serviceLabels: ["Trasplante Capilar", "Implante de Barba", "Mesoterapia Capilar"],
+  },
+  {
+    name: "Dr. Johan",
+    linc: "3667-25",
+    specialty: "Nutricionista Deportivo",
+    photo: "dr-johan.webp",
+    bio: "Especialista en nutrición clínica y deportiva. Diseña planes alimentarios personalizados orientados a objetivos de salud, rendimiento y composición corporal.",
+    services: ["/servicios/nutricion"],
+    serviceLabels: ["Nutrición Clínica"],
+  },
+];
 
 const descriptions: Record<string, string> = {
   nutricion:
@@ -81,6 +113,74 @@ export default function MedicosEsteticos() {
       </section>
 
       <StatsBar />
+
+      {/* ── Nuestros Especialistas ── */}
+      <section className="py-20 bg-[#071e2e]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-14"
+          >
+            <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-3">Equipo Médico</p>
+            <h2 className="text-4xl font-serif text-white">Nuestros Especialistas</h2>
+            <p className="text-white/60 mt-3 max-w-xl mx-auto text-sm">
+              Profesionales certificados con años de experiencia en medicina estética y bienestar.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {doctors.map((doc, i) => (
+              <motion.div
+                key={doc.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.12 }}
+                className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-primary/40 transition-colors"
+              >
+                {/* Photo */}
+                <div className="relative h-64 bg-[#0a2a3d] overflow-hidden">
+                  <img
+                    src={`${BASE}images/${doc.photo}`}
+                    alt={doc.name}
+                    className="w-full h-full object-cover object-top"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071e2e]/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <span className="inline-flex items-center gap-1.5 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full tracking-wider uppercase">
+                      <BadgeCheck className="w-3 h-3" />
+                      {doc.specialty}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Info */}
+                <div className="p-6">
+                  <h3 className="text-lg font-serif font-bold text-white mb-1">{doc.name}</h3>
+                  <p className="text-primary/80 text-xs font-medium tracking-widest uppercase mb-4">
+                    Linc {doc.linc}
+                  </p>
+                  <p className="text-white/60 text-sm leading-relaxed mb-5">{doc.bio}</p>
+
+                  {/* Service tags */}
+                  <div className="flex flex-wrap gap-2">
+                    {doc.serviceLabels.map((label, j) => (
+                      <Link key={j} href={doc.services[j]}>
+                        <span className="inline-block bg-white/8 border border-white/10 text-white/70 text-[11px] font-medium px-3 py-1 rounded-full hover:bg-primary/20 hover:text-white hover:border-primary/30 transition-colors cursor-pointer">
+                          {label}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
