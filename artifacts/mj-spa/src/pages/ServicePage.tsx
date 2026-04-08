@@ -527,19 +527,18 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
               >
                 {/* ANTES */}
                 <motion.div variants={fadeUp} className="relative group overflow-hidden min-h-[540px]">
-                  <div
-                    className="absolute inset-0 bg-cover transition-transform duration-700 group-hover:scale-105"
-                    style={{ backgroundImage: `url(${beforeBg})`, backgroundPosition: "50% 10%", filter: "grayscale(1) brightness(0.65)" }}
+                  <img
+                    src={beforeBg}
+                    alt="Antes del tratamiento"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    style={{ objectPosition: "50% 15%", filter: "grayscale(1) brightness(0.62)" }}
                   />
-                  {/* gradient only on the bottom half */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/98 via-black/70 to-transparent" style={{ top: "40%" }} />
-                  {/* label top-left */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-transparent" style={{ top: "35%" }} />
                   <div className="absolute top-5 left-5">
-                    <span className="bg-black/60 backdrop-blur-sm text-white/70 text-[10px] font-bold tracking-[0.35em] uppercase px-4 py-2">
+                    <span className="bg-black/55 backdrop-blur-sm text-white/75 text-[10px] font-bold tracking-[0.35em] uppercase px-4 py-2">
                       Antes
                     </span>
                   </div>
-                  {/* all text at the bottom */}
                   <div className="absolute bottom-0 left-0 right-0 px-8 pb-10">
                     <p className="text-white/50 text-xs font-bold tracking-[0.3em] uppercase mb-2">Sin tratamiento</p>
                     <h3 className="text-xl font-serif font-bold text-white/80 leading-tight mb-5">
@@ -560,19 +559,18 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
 
                 {/* DESPUÉS */}
                 <motion.div variants={fadeUp} className="relative group overflow-hidden min-h-[540px]">
-                  <div
-                    className="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
-                    style={{ backgroundImage: `url(${afterBg})` }}
+                  <img
+                    src={afterBg}
+                    alt="Después del tratamiento"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    style={{ objectPosition: "50% 10%" }}
                   />
-                  {/* gradient only on the bottom half */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071e2e]/98 via-[#071e2e]/65 to-transparent" style={{ top: "40%" }} />
-                  {/* label top-left */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071e2e] via-[#071e2e]/60 to-transparent" style={{ top: "35%" }} />
                   <div className="absolute top-5 left-5">
                     <span className="bg-primary text-white text-[10px] font-bold tracking-[0.35em] uppercase px-4 py-2">
                       Después
                     </span>
                   </div>
-                  {/* all text at the bottom */}
                   <div className="absolute bottom-0 left-0 right-0 px-8 pb-10">
                     <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-2">Con nuestro tratamiento</p>
                     <h3 className="text-xl font-serif font-bold text-white leading-tight mb-5">
