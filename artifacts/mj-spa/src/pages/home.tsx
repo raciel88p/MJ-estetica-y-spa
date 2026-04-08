@@ -8,6 +8,7 @@ import {
   ChevronRight, ChevronLeft, MessageCircle
 } from "lucide-react";
 
+import { useABTest } from "@/hooks/useABTest";
 import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -138,6 +139,14 @@ export default function Home() {
   const [slideIndex, setSlideIndex] = useState(0);
   const { toast } = useToast();
 
+  const heroCTA = useABTest({
+    testName: "hero_cta_text",
+    variants: {
+      A: "Reservar cita",
+      B: "Quiero mi cita gratis",
+    },
+  });
+
   useEffect(() => {
     const t = setInterval(() => setSlideIndex(i => (i + 1) % heroSlides.length), 6000);
     return () => clearInterval(t);
@@ -265,7 +274,7 @@ export default function Home() {
                 {slide.sub}
               </p>
 
-              {/* CTA */}
+              {/* CTA — A/B test: hero_cta_text */}
               {slide.ctaExternal ? (
                 <a
                   id="cta-hero-reserva"
@@ -273,8 +282,9 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 bg-primary text-white text-xs font-bold tracking-[0.2em] uppercase px-10 py-4 hover:bg-primary/90 transition-all group"
+                  onClick={() => heroCTA.trackConversion("hero_whatsapp_click")}
                 >
-                  {slide.cta}
+                  {heroCTA.value}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               ) : (
