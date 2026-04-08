@@ -496,6 +496,8 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       {/* ── ANTES Y DESPUÉS ──────────────────────────── */}
       {(() => {
         const heroBg = `${BASE}images/${heroBgMap[service.slug] ?? service.heroBg ?? "hero-bg.webp"}`;
+        const isCorporal = serviceCategoryMap[service.slug]?.href === "/tratamientos/corporales";
+        const beforeBg = isCorporal ? `${BASE}images/corporales-antes-bg.webp` : heroBg;
         const beforeItems = beforeDescMap[service.slug] ?? [
           "Problema visible que afecta tu bienestar y confianza",
           "Resultados lentos o nulos con métodos convencionales",
@@ -526,7 +528,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 <motion.div variants={fadeUp} className="relative group overflow-hidden">
                   <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                    style={{ backgroundImage: `url(${heroBg})`, filter: "grayscale(1) brightness(0.45)" }}
+                    style={{ backgroundImage: `url(${beforeBg})`, filter: "grayscale(1) brightness(0.45)" }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/30" />
                   <div className="relative px-8 pt-8 pb-10 min-h-[400px] flex flex-col justify-between">
