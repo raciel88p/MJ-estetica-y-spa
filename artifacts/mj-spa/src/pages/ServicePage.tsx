@@ -528,8 +528,8 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 {/* ANTES */}
                 <motion.div variants={fadeUp} className="relative group overflow-hidden min-h-[540px]">
                   <div
-                    className="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
-                    style={{ backgroundImage: `url(${beforeBg})`, filter: "grayscale(1) brightness(0.65)" }}
+                    className="absolute inset-0 bg-cover transition-transform duration-700 group-hover:scale-105"
+                    style={{ backgroundImage: `url(${beforeBg})`, backgroundPosition: "50% 10%", filter: "grayscale(1) brightness(0.65)" }}
                   />
                   {/* gradient only on the bottom half */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/98 via-black/70 to-transparent" style={{ top: "40%" }} />
