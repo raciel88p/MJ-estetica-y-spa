@@ -533,7 +533,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                       src={beforeBg}
                       alt="Antes del tratamiento"
                       className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
-                      style={{ filter: "grayscale(1) brightness(0.7)" }}
+                      style={{ filter: "grayscale(1) brightness(0.88)" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
                     <span className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white/80 text-[10px] font-bold tracking-[0.35em] uppercase px-3 py-1.5">
