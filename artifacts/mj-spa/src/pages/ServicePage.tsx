@@ -264,7 +264,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           >
             <div className="bg-primary px-6 py-3 flex items-center gap-2">
               <UserCheck className="w-4 h-4 text-white shrink-0" />
-              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">Linc Fisio Terapia · Profesional Responsable</span>
+              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">Profesional responsable</span>
             </div>
             <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="shrink-0 w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
