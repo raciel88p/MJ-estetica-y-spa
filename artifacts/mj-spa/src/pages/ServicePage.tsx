@@ -528,10 +528,10 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 {/* ANTES */}
                 <motion.div variants={fadeUp} className="relative group overflow-hidden">
                   <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                    style={{ backgroundImage: `url(${beforeBg})`, filter: "grayscale(1) brightness(0.45)" }}
+                    className="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
+                    style={{ backgroundImage: `url(${beforeBg})`, filter: "grayscale(1) brightness(0.55)" }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-black/30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/10" />
                   <div className="relative px-8 pt-8 pb-10 min-h-[400px] flex flex-col justify-between">
                     <div>
                       <span className="inline-block bg-stone-700/80 text-white/60 text-[10px] font-bold tracking-[0.35em] uppercase px-4 py-2 mb-6">
@@ -558,10 +558,10 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 {/* DESPUÉS */}
                 <motion.div variants={fadeUp} className="relative group overflow-hidden">
                   <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                    className="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
                     style={{ backgroundImage: `url(${afterBg})` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#071e2e]/95 via-primary/10 to-black/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071e2e]/95 via-primary/15 to-transparent" />
                   <div className="relative px-8 pt-8 pb-10 min-h-[400px] flex flex-col justify-between">
                     <div>
                       <span className="inline-block bg-primary text-white text-[10px] font-bold tracking-[0.35em] uppercase px-4 py-2 mb-6">
