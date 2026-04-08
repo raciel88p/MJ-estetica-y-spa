@@ -167,12 +167,6 @@ const testimonials = [
   },
 ];
 
-const stats = [
-  { value: "2335", label: "Clientes satisfechos" },
-  { value: "4.9/5", label: "Valoración promedio" },
-  { value: "98%", label: "Recomendarían el centro" },
-  { value: "+3", label: "Años de confianza" },
-];
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -222,24 +216,6 @@ export default function Testimonios() {
 
       <StatsBar />
 
-      {/* Stats */}
-      <section className="py-12 bg-primary">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-              >
-                <p className="text-4xl font-serif font-bold text-white">{stat.value}</p>
-                <p className="text-white/70 text-sm mt-1">{stat.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CRO Testimonial System */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-stone-50">
