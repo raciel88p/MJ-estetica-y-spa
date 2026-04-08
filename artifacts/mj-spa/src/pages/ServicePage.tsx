@@ -255,6 +255,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       </section>
 
       {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
+      {!["botox-full-face","hilos-tensores","rellenos-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar"].includes(service.slug) && (
       <section className="py-10 bg-white border-b border-stone-100">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -295,6 +296,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           </motion.div>
         </div>
       </section>
+      )}
 
       <StatsBar />
 
