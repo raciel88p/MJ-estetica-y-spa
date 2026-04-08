@@ -287,6 +287,9 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                     Laboró Hospital la Católica
                   </span>
                 </div>
+                <p className="text-stone-500 text-sm leading-relaxed mt-4 max-w-xl">
+                  La estética es una pasión que ha formado parte de mi vida desde siempre. Me inspira la belleza en todas sus formas y me dedico a realzar la belleza natural de cada persona, ayudándoles a sentirse seguras y radiantes.
+                </p>
               </div>
             </div>
           </motion.div>
@@ -352,19 +355,11 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                     <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-4">
                       <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
                         <BadgeCheck className="w-3.5 h-3.5" />
-                        Linc: {doctor.code}
+                        Código Médico: {doctor.code}
                       </span>
                       <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                         <GraduationCap className="w-3.5 h-3.5" />
                         {doctor.specialty}
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
-                        <GraduationCap className="w-3.5 h-3.5" />
-                        Especialista en Estética
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
-                        <Award className="w-3.5 h-3.5 text-primary" />
-                        Laboró Hospital la Católica
                       </span>
                       <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                         <ShieldCheck className="w-3.5 h-3.5 text-primary" />
