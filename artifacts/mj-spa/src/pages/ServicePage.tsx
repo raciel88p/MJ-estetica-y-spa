@@ -253,6 +253,45 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
         </div>
       </section>
 
+      {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
+      <section className="py-10 bg-white border-b border-stone-100">
+        <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+            className="bg-stone-50 border border-stone-200 rounded-sm overflow-hidden"
+          >
+            <div className="bg-primary px-6 py-3 flex items-center gap-2">
+              <UserCheck className="w-4 h-4 text-white shrink-0" />
+              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">Linc Fisio Terapia · Profesional Responsable</span>
+            </div>
+            <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
+              <div className="shrink-0 w-16 h-16 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center">
+                <UserCheck className="w-7 h-7 text-primary" />
+              </div>
+              <div className="flex-1 text-center sm:text-left">
+                <h3 className="text-xl font-serif font-bold text-stone-900 mb-1">
+                  Janneth Maria Molina Madrigal
+                </h3>
+                <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
+                  <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
+                    <BadgeCheck className="w-3.5 h-3.5" />
+                    Linc Fisio Terapia
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
+                    <GraduationCap className="w-3.5 h-3.5" />
+                    Especialista en Estética
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
+                    <Award className="w-3.5 h-3.5 text-primary" />
+                    Laboró Hospital la Católica
+                  </span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
       {(() => {
         const doctorMap: Record<string, { name: string; code: string; specialty: string; photo?: string; bio: string }> = {
@@ -310,11 +349,19 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                     <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-4">
                       <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
                         <BadgeCheck className="w-3.5 h-3.5" />
-                        Código Médico: {doctor.code}
+                        Linc: {doctor.code}
                       </span>
                       <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                         <GraduationCap className="w-3.5 h-3.5" />
                         {doctor.specialty}
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
+                        <GraduationCap className="w-3.5 h-3.5" />
+                        Especialista en Estética
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
+                        <Award className="w-3.5 h-3.5 text-primary" />
+                        Laboró Hospital la Católica
                       </span>
                       <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                         <ShieldCheck className="w-3.5 h-3.5 text-primary" />
