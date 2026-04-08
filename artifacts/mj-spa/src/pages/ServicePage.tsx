@@ -493,12 +493,10 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
         </div>
       </section>
 
-      {/* ── ANTES Y DESPUÉS ──────────────────────────── */}
-      {(() => {
-        const heroBg = `${BASE}images/${heroBgMap[service.slug] ?? service.heroBg ?? "hero-bg.webp"}`;
-        const isCorporal = serviceCategoryMap[service.slug]?.href === "/tratamientos/corporales";
-        const beforeBg = isCorporal ? `${BASE}images/corporales-antes-bg.webp` : heroBg;
-        const afterBg  = isCorporal ? `${BASE}images/corporales-despues-bg.webp` : heroBg;
+      {/* ── ANTES Y DESPUÉS — solo masajes-corporales ─── */}
+      {service.slug === "masajes-corporales" && (() => {
+        const beforeBg = `${BASE}images/corporales-antes-bg.webp`;
+        const afterBg  = `${BASE}images/corporales-despues-bg.webp`;
         const beforeItems = beforeDescMap[service.slug] ?? [
           "Problema visible que afecta tu bienestar y confianza",
           "Resultados lentos o nulos con métodos convencionales",
