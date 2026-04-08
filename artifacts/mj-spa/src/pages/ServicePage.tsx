@@ -527,12 +527,12 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
               >
                 {/* ANTES */}
                 <motion.div variants={fadeUp} className="bg-[#040f19] overflow-hidden flex flex-col">
-                  {/* Photo contained naturally — no stretch */}
-                  <div className="relative overflow-hidden" style={{ height: "320px" }}>
+                  {/* Photo shown in full rectangular shape — no cropping */}
+                  <div className="relative overflow-hidden bg-[#040f19] flex items-center justify-center" style={{ height: "440px" }}>
                     <img
                       src={beforeBg}
                       alt="Antes del tratamiento"
-                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                      className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
                       style={{ filter: "grayscale(1) brightness(0.7)" }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
@@ -563,12 +563,12 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
 
                 {/* DESPUÉS */}
                 <motion.div variants={fadeUp} className="bg-[#040f19] overflow-hidden flex flex-col">
-                  {/* Photo contained naturally — no stretch */}
-                  <div className="relative overflow-hidden" style={{ height: "320px" }}>
+                  {/* Photo shown in full rectangular shape — no cropping */}
+                  <div className="relative overflow-hidden bg-[#040f19] flex items-center justify-center" style={{ height: "440px" }}>
                     <img
                       src={afterBg}
                       alt="Después del tratamiento"
-                      className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                      className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
                     <span className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold tracking-[0.35em] uppercase px-3 py-1.5">
