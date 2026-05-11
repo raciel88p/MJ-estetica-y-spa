@@ -90,7 +90,7 @@ export function Navbar() {
               style={isScrolled ? {} : { filter: "drop-shadow(0 0 10px rgba(255,255,255,0.5)) brightness(1.15)" }}
               width="160"
               height="64"
-            />
+             loading="lazy" decoding="async" />
           </a>
 
           {/* Desktop Nav */}

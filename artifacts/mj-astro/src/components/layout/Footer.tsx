@@ -16,7 +16,7 @@ export function Footer() {
               loading="lazy"
               width="160"
               height="64"
-            />
+             decoding="async" />
             <p className="text-white/60 font-light leading-relaxed">
               Tu centro de confianza en Turrialba para cuidar de tu cuerpo, mente y bienestar con los mejores profesionales.
             </p>

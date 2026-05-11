@@ -95,7 +95,7 @@ export default function Promociones() {
                   key={index}
                   className="relative group rounded-xl overflow-hidden shadow-md aspect-square"
                 >
-                  <img src={img} alt={`Promoción ${index + 1}`} className="w-full h-full object-cover" />
+                  <img src={img} alt={`Promoción ${index + 1}`} className="w-full h-full object-cover"  loading="lazy" decoding="async" />
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                     <button
                       onClick={() => removeImage(index)}

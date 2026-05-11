@@ -1,6 +1,6 @@
 import { withAppProviders } from "@/components/ReactAppWrapper";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, Clock, ChevronDown, ArrowRight, MessageCircle, Star, ShieldCheck, Award, UserCheck, GraduationCap, BadgeCheck } from "lucide-react";
+import { CheckCircle2, Clock, ChevronDown, ArrowRight, MessageCircle, Star, ShieldCheck, Award, UserCheck, GraduationCap, BadgeCheck , Clock4} from "lucide-react";
 import { useState } from "react";
 
 import { Navbar } from "@/components/layout/Navbar";
@@ -269,7 +269,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
             </div>
             <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
-                <img src="/images/janneth-molina.webp" alt="Janneth Maria Molina Madrigal" className="w-full h-full object-cover object-top" />
+                <img src="/images/janneth-molina.webp" alt="Janneth Maria Molina Madrigal" className="w-full h-full object-cover object-top"  loading="lazy" decoding="async" />
               </div>
               <div className="flex-1 text-center sm:text-left">
                 <h3 className="text-xl font-serif font-bold text-stone-900 mb-1">
@@ -533,7 +533,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                       alt="Antes del tratamiento"
                       className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
                       style={{ filter: "grayscale(1) brightness(0.88)" }}
-                    />
+                     loading="lazy" decoding="async" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
                     <span className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white/80 text-[10px] font-bold tracking-[0.35em] uppercase px-3 py-1.5">
                       Antes
@@ -568,7 +568,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                       src={afterBg}
                       alt="Después del tratamiento"
                       className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
-                    />
+                     loading="lazy" decoding="async" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
                     <span className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold tracking-[0.35em] uppercase px-3 py-1.5">
                       Después
@@ -628,7 +628,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                 src="/images/janeth-molina.png"
                 alt="Lic Terapiafísca Janeth Maria Molina Madrigal"
                 className="w-full h-auto aspect-square object-cover rounded-full relative z-10 border-4 border-stone-800 shadow-md grayscale-[0.1] group-hover:grayscale-0 transition-all duration-500"
-              />
+               loading="lazy" decoding="async" />
             </div>
 
             <div className="flex-1 text-center md:text-left">
@@ -669,7 +669,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                 src="/images/janeth-molina.png"
                 alt="Lic Terapiafísca Janeth Maria Molina Madrigal"
                 className="w-full h-auto aspect-square object-cover rounded-full relative z-10 border-4 border-white shadow-md grayscale-[0.2] group-hover:grayscale-0 transition-all duration-500"
-              />
+               loading="lazy" decoding="async" />
             </div>
 
             <div className="flex-1">

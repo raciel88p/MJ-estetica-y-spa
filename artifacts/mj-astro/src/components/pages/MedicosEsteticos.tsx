@@ -148,7 +148,7 @@ function MedicosEsteticos() {
                     src={`${BASE}images/${doc.photo}`}
                     alt={doc.name}
                     className="w-full h-full object-cover object-top"
-                  />
+                   loading="lazy" decoding="async" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#071e2e]/80 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <span className="inline-flex items-center gap-1.5 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full tracking-wider uppercase">
