@@ -47,3 +47,5 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+artifacts/mj-astro/dist/
+artifacts/mj-astro/.astro/
