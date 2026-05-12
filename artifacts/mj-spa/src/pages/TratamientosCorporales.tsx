@@ -33,7 +33,7 @@ export default function TratamientosCorporales() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Tratamientos Corporales"
-        description="Tratamientos corporales en MJ Fisio Estética y Spa: reducción de medidas, tensado corporal, drenaje linfático, masajes y más en Turrialba, Costa Rica."
+        description="Tratamientos corporales en MJ Estética Wellness Center: reducción de medidas, tensado corporal, drenaje linfático, masajes y más en Turrialba, Costa Rica."
         canonical="/tratamientos/corporales"
       />
       <Navbar />

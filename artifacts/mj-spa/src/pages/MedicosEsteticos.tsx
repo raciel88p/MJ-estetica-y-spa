@@ -80,7 +80,7 @@ export default function MedicosEsteticos() {
     <div className="min-h-screen flex flex-col bg-background">
       <SEO
         title="Tratamientos Médicos Estéticos"
-        description="Tratamientos médicos estéticos en Turrialba: botox, rellenos, hilos tensores, trasplante capilar y nutrición. Especialistas certificados en MJ Fisio Estética y Spa."
+        description="Tratamientos médicos estéticos en Turrialba: botox, rellenos, hilos tensores, trasplante capilar y nutrición. Especialistas certificados en MJ Estética Wellness Center."
         canonical="/medicos-esteticos"
       />
       <Navbar />
@@ -145,7 +145,9 @@ export default function MedicosEsteticos() {
                 <div className="relative h-64 bg-[#0a2a3d] overflow-hidden">
                   <img
                     src={`${BASE}images/${doc.photo}`}
-                    alt={doc.name}
+                    alt={`${doc.name} - Equipo Médico de MJ Estética Wellness Center`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#071e2e]/80 via-transparent to-transparent" />

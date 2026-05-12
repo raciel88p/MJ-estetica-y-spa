@@ -186,7 +186,7 @@ export default function Testimonios() {
     <div className="min-h-screen flex flex-col bg-background">
       <SEO
         title="Testimonios de Clientes"
-        description="Lee las opiniones y testimonios reales de clientes de MJ Fisio Estética y Spa en Turrialba, Costa Rica. Más de 2335 clientes satisfechos con valoración 4.9/5."
+        description="Lee las opiniones y testimonios reales de clientes de MJ Estética Wellness Center en Turrialba, Costa Rica. Más de 2335 clientes satisfechos con valoración 4.9/5."
         canonical="/testimonios"
       />
       <Navbar />
@@ -208,7 +208,7 @@ export default function Testimonios() {
             </h1>
             <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
               La satisfacción de nuestras clientas es nuestra mayor recompensa.
-              Estas son sus experiencias reales en MJ Fisio Estética y Spa.
+              Estas son sus experiencias reales en MJ Estética Wellness Center.
             </p>
           </motion.div>
         </div>

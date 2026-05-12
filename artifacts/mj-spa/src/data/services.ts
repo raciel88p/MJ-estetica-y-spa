@@ -784,7 +784,7 @@ export const servicePages: ServicePageData[] = [
     name: "Reducción de Medidas",
     tagline: "Moldea tu figura con tecnología de vanguardia",
     heroDescription:
-      "En MJ Fisio Estética y Spa ofrecemos técnicas no invasivas de reducción de medidas y moldeamiento corporal para eliminar la adiposidad localizada y combatir la celulitis, sin importar tu edad.",
+      "En MJ Estética Wellness Center ofrecemos técnicas no invasivas de reducción de medidas y moldeamiento corporal para eliminar la adiposidad localizada y combatir la celulitis, sin importar tu edad.",
     benefits: [
       "Eliminación de grasa localizada sin cirugía",
       "Reducción visible de la celulitis",
@@ -1183,7 +1183,7 @@ export const servicePages: ServicePageData[] = [
     name: "Varices y Arañas Vasculares",
     tagline: "Recupera unas piernas sanas, ligeras y estéticas",
     heroDescription:
-      "Las varices y arañas vasculares son dilataciones de los vasos sanguíneos que afectan la estética y, en algunos casos, la salud de las piernas. En MJ Fisio Estética y Spa ofrecemos tratamientos efectivos para eliminarlas o reducirlas de forma segura.",
+      "Las varices y arañas vasculares son dilataciones de los vasos sanguíneos que afectan la estética y, en algunos casos, la salud de las piernas. En MJ Estética Wellness Center ofrecemos tratamientos efectivos para eliminarlas o reducirlas de forma segura.",
     benefits: [
       "Eliminación o reducción visible de varices y telangiectasias",
       "Mejoría de la circulación y la pesadez en piernas",
@@ -1748,7 +1748,7 @@ export const servicePages: ServicePageData[] = [
     tagline: "Elimina la celulitis de forma definitiva y sin cirugía",
     heroBg: "anticelulitis-bg.webp",
     heroDescription:
-      "La celulitis no es un problema cosmético — es una condición tratable. En MJ Fisio Estética y Spa combinamos las tecnologías más avanzadas con protocolos clínicamente probados para reducir la celulitis, afinar la silueta y devolverte la piel lisa y firme que mereces. Resultados visibles desde la primera sesión.",
+      "La celulitis no es un problema cosmético — es una condición tratable. En MJ Estética Wellness Center combinamos las tecnologías más avanzadas con protocolos clínicamente probados para reducir la celulitis, afinar la silueta y devolverte la piel lisa y firme que mereces. Resultados visibles desde la primera sesión.",
     benefits: [
       "Reducción visible de la celulitis desde la primera sesión",
       "Tecnología de radiofrecuencia + drenaje para resultados duraderos",
@@ -1822,7 +1822,7 @@ export const servicePages: ServicePageData[] = [
     name: "Iron Beauty Fitness",
     tagline: "Estética especializada para atletas del mundo fitness",
     heroDescription:
-      "En MJ Fisio Estética y Spa entendemos las necesidades específicas de los atletas de fitness. Nuestros tratamientos están diseñados para complementar tu arduo trabajo en el gimnasio, ayudándote a mejorar tu rendimiento y tu apariencia física para competencias — desde Body Fitness hasta Clásico Físico y Muscular.",
+      "En MJ Estética Wellness Center entendemos las necesidades específicas de los atletas de fitness. Nuestros tratamientos están diseñados para complementar tu arduo trabajo en el gimnasio, ayudándote a mejorar tu rendimiento y tu apariencia física para competencias — desde Body Fitness hasta Clásico Físico y Muscular.",
     heroBg: "iron-beauty-fitness-bg.webp",
     benefits: [
       "Protocolos diseñados exclusivamente para atletas de competencia",
@@ -2063,7 +2063,7 @@ export const servicePages: ServicePageData[] = [
     name: "Tratamiento de Ojeras",
     tagline: "Elimina las ojeras y recupera una mirada luminosa y descansada",
     heroDescription:
-      "Las ojeras son uno de los problemas estéticos más comunes y difíciles de disimular con maquillaje. En MJ Fisio Estética y Spa combinamos las técnicas más avanzadas — ácido hialurónico, biorevitalización y peelings específicos — para reducir el color, el volumen y la textura de las ojeras de forma segura, natural y duradera.",
+      "Las ojeras son uno de los problemas estéticos más comunes y difíciles de disimular con maquillaje. En MJ Estética Wellness Center combinamos las técnicas más avanzadas — ácido hialurónico, biorevitalización y peelings específicos — para reducir el color, el volumen y la textura de las ojeras de forma segura, natural y duradera.",
     benefits: [
       "Mirada más luminosa, descansada y juvenil desde la primera sesión",
       "Reducción del color oscuro y las sombras bajo los ojos",
