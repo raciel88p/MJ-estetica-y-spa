@@ -1,6 +1,6 @@
 import { withAppProviders } from "@/components/ReactAppWrapper";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, Clock, ChevronDown, ArrowRight, MessageCircle, Star, ShieldCheck, Award, UserCheck, GraduationCap, BadgeCheck } from "lucide-react";
+import { CheckCircle2, Clock, Clock4, ChevronDown, ArrowRight, MessageCircle, Star, ShieldCheck, Award, UserCheck, GraduationCap, BadgeCheck } from "lucide-react";
 import { useState } from "react";
 
 import { Navbar } from "@/components/layout/Navbar";
