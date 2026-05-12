@@ -85,11 +85,12 @@ export function Navbar() {
           <Link href="/" className="flex items-center cursor-pointer group">
             <img
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
-              alt="MJ Fisio Estética y Spa"
+              alt="Logo de MJ Estética Wellness Center"
               className="h-14 md:h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
               style={isScrolled ? {} : { filter: "drop-shadow(0 0 10px rgba(255,255,255,0.5)) brightness(1.15)" }}
               width="160"
               height="64"
+              loading="eager"
             />
           </Link>
 

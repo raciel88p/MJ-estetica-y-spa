@@ -390,7 +390,7 @@ function Home() {
                 <div className="relative h-[520px] md:h-[620px]">
                   <img
                     src={`${BASE}images/${cat.bg}`}
-                    alt={cat.label}
+                    alt={`${cat.title} - MJ Estética Wellness Center`}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 scale-100"
                     loading="lazy"
                     decoding="async"
@@ -528,7 +528,7 @@ function Home() {
             >
               <img
                 src={`${BASE}images/about-us.webp`}
-                alt="Instalaciones MJ Fisio Estética y Spa"
+                alt="Instalaciones MJ Estética Wellness Center - Spa y Clínica"
                 className="w-full h-[580px] object-cover"
                 loading="lazy"
                 decoding="async"

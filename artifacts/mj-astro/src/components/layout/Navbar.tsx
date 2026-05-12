@@ -85,11 +85,12 @@ export function Navbar() {
           <a href="/" className="flex items-center cursor-pointer group">
             <img
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
-              alt="MJ Fisio Estética y Spa"
+              alt="Logo de MJ Estética Wellness Center"
               className="h-14 md:h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
               style={isScrolled ? {} : { filter: "drop-shadow(0 0 10px rgba(255,255,255,0.5)) brightness(1.15)" }}
               width="160"
               height="64"
+              loading="eager"
             />
           </a>
 
@@ -144,6 +145,10 @@ export function Navbar() {
 
             <a href="/paquetes" className={`${linkBase} ${textClass}`}>
               Paquetes
+            </a>
+
+            <a href="/blog" className={`${linkBase} ${textClass}`}>
+              Blog
             </a>
 
             {/* ── Servicios Dropdown ── */}
@@ -382,6 +387,13 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Paquetes
+              </a>
+
+              <a href="/blog"
+                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Blog
               </a>
 
               {/* Mobile Services Accordion */}

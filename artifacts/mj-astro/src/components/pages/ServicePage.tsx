@@ -256,7 +256,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       </section>
 
       {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
-      {!["botox-full-face","hilos-tensores","rellenos-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar"].includes(service.slug) && (
+      {!["nutricion", "botox-full-face","hilos-tensores","rellenos-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar"].includes(service.slug) && (
       <section className="py-10 bg-white border-b border-stone-100">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -269,7 +269,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
             </div>
             <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
-                <img src="/images/janneth-molina.webp" alt="Janneth Maria Molina Madrigal" className="w-full h-full object-cover object-top" />
+                <img src="/images/janneth-molina.webp" alt="Janneth Maria Molina Madrigal - Especialista en Estética" loading="lazy" decoding="async" className="w-full h-full object-cover object-top" />
               </div>
               <div className="flex-1 text-center sm:text-left">
                 <h3 className="text-xl font-serif font-bold text-stone-900 mb-1">
@@ -530,7 +530,9 @@ function ServicePage({ service }: { service: ServicePageData }) {
                   <div className="relative overflow-hidden bg-[#040f19] flex items-center justify-center" style={{ height: "440px" }}>
                     <img
                       src={beforeBg}
-                      alt="Antes del tratamiento"
+                      alt={`Antes del tratamiento - ${service.name}`}
+                      loading="lazy"
+                      decoding="async"
                       className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
                       style={{ filter: "grayscale(1) brightness(0.88)" }}
                     />
@@ -566,7 +568,9 @@ function ServicePage({ service }: { service: ServicePageData }) {
                   <div className="relative overflow-hidden bg-[#040f19] flex items-center justify-center" style={{ height: "440px" }}>
                     <img
                       src={afterBg}
-                      alt="Después del tratamiento"
+                      alt={`Después del tratamiento - ${service.name}`}
+                      loading="lazy"
+                      decoding="async"
                       className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
@@ -627,6 +631,8 @@ function ServicePage({ service }: { service: ServicePageData }) {
               <img
                 src="/images/janeth-molina.png"
                 alt="Lic Terapiafísca Janeth Maria Molina Madrigal"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto aspect-square object-cover rounded-full relative z-10 border-4 border-stone-800 shadow-md grayscale-[0.1] group-hover:grayscale-0 transition-all duration-500"
               />
             </div>
@@ -668,6 +674,8 @@ function ServicePage({ service }: { service: ServicePageData }) {
               <img
                 src="/images/janeth-molina.png"
                 alt="Lic Terapiafísca Janeth Maria Molina Madrigal"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto aspect-square object-cover rounded-full relative z-10 border-4 border-white shadow-md grayscale-[0.2] group-hover:grayscale-0 transition-all duration-500"
               />
             </div>

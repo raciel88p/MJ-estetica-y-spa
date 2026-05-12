@@ -18,7 +18,7 @@ export function GoogleMap({ className = "" }: GoogleMapProps) {
   return (
     <div className={`relative ${className}`}>
       <iframe
-        title="MJ Fisio Estética y Spa — Google Maps"
+        title="MJ Estética Wellness Center — Google Maps"
         src={MAPS_EMBED_URL}
         width="100%"
         height="100%"
@@ -26,7 +26,7 @@ export function GoogleMap({ className = "" }: GoogleMapProps) {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        aria-label="Mapa de ubicación de MJ Fisio Estética y Spa en Turrialba, Costa Rica"
+        aria-label="Mapa de ubicación de MJ Estética Wellness Center en Turrialba, Costa Rica"
       />
       {/* Overlay action buttons */}
       <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-t border-stone-100 flex flex-col sm:flex-row gap-0 divide-y sm:divide-y-0 sm:divide-x divide-stone-100">

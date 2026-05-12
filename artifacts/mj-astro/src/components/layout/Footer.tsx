@@ -11,9 +11,10 @@ export function Footer() {
           <div className="space-y-4">
             <img
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
-              alt="MJ Fisio Estética y Spa"
+              alt="Logo de MJ Estética Wellness Center"
               className="h-16 w-auto object-contain mb-6"
               loading="lazy"
+              decoding="async"
               width="160"
               height="64"
             />
