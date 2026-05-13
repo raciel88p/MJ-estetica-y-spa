@@ -147,10 +147,6 @@ export function Navbar() {
               Paquetes
             </a>
 
-            <a href="/blog" className={`${linkBase} ${textClass}`}>
-              Blog
-            </a>
-
             {/* ── Servicios Dropdown ── */}
             <div
               className="relative"
@@ -301,6 +297,10 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
+            <a href="/blog" className={`${linkBase} ${textClass}`}>
+              Blog
+            </a>
+
             <a href="/#contacto" className={`${linkBase} ${textClass}`}>
               Contacto
             </a>
@@ -387,13 +387,6 @@ export function Navbar() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Paquetes
-              </a>
-
-              <a href="/blog"
-                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Blog
               </a>
 
               {/* Mobile Services Accordion */}
@@ -510,6 +503,13 @@ export function Navbar() {
                   )}
                 </AnimatePresence>
               </div>
+
+              <a href="/blog"
+                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Blog
+              </a>
 
               <a
                 href="/#contacto"
