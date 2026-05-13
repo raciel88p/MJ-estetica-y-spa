@@ -63,7 +63,7 @@ export function Navbar() {
   const medicos = useHoverDropdown("medicos", openDropdown, setOpenDropdown as any);
 
   const textClass = isScrolled ? "text-[#0c3e5a]" : "text-white/90";
-  const linkBase = `text-sm uppercase tracking-widest font-medium hover:text-primary transition-colors`;
+  const linkBase = `text-base uppercase tracking-widest font-medium hover:text-primary transition-colors`;
 
   const dropdownPanelVariants = {
     initial: { opacity: 0, y: 8, scale: 0.97 },
@@ -302,6 +302,10 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
+            <a href="/blog" className={`${linkBase} ${textClass}`}>
+              Blog
+            </a>
+
             <a href="/#contacto" className={`${linkBase} ${textClass}`}>
               Contacto
             </a>
@@ -511,6 +515,13 @@ export function Navbar() {
                   )}
                 </AnimatePresence>
               </div>
+
+              <a href="/blog"
+                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Blog
+              </a>
 
               <a
                 href="/#contacto"
