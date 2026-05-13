@@ -7,11 +7,11 @@ import { SEO } from "@/components/SEO";
 const mockPosts = {
   "mi-primer-post": {
     title: "Mi primer post",
-    description: "Bienvenidos a nuestro nuevo blog",
+    description: "Conoce nuestro blog en MJ Wellness Center",
     date: new Date("2024-05-13"),
     tags: ["noticias", "spa"],
-    content: `<h1>Bienvenidos a MJ Estética Wellness Center</h1>
-<p>Este es nuestro primer artículo en el blog. Muy pronto conectaremos esto con <strong>Notion</strong> para poder publicar artículos directamente desde allí.</p>`
+    content: `<h1>Bienvenidos al Blog de MJ</h1>
+<p>El blog se genera estáticamente mediante Astro y Notion, si estás viendo esto estás en la versión SPA de respaldo y no hay conexión dinámica disponible.</p>`
   }
 };
 
