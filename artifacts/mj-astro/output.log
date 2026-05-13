@@ -1,8 +1,22 @@
 
-> @workspace/mj-astro@0.0.1 preview /app/artifacts/mj-astro
-> astro preview --port 4321
+> @workspace/mj-astro@0.0.1 dev
+> astro dev
 
- astro  v6.3.1 ready in 39 ms
+[vite] connected.
+03:25:32 [types] Generated 2ms
+03:25:32 [vite] Re-optimizing dependencies because vite config has changed
+ astro  v6.3.1 ready in 3833 ms
 ┃ Local    http://localhost:4321/
 ┃ Network  use --host to expose
- ELIFECYCLE  Command failed with exit code 143.
+03:25:32 watching for file changes...
+03:26:30 [200] / 126ms
+04:00:12 Configuration file updated. Restarting...
+[vite] connected.
+04:00:21 [vite] Re-optimizing dependencies because lockfile has changed
+04:00:21 [vite] server restarted.
+[vite] connected.
+04:06:28 Configuration file updated. Restarting...
+[vite] connected.
+04:06:31 [vite] Re-optimizing dependencies because lockfile has changed
+04:06:31 [vite] server restarted.
+[vite] connected.

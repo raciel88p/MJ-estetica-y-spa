@@ -1,0 +1,75 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Navbar } from "../../components/layout/Navbar";
+import { Footer } from "../../components/layout/Footer";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("blog");
+// Sort by date if available
+const posts = allPosts.sort((a, b) => {
+  const dateA = a.data.date ? new Date(a.data.date).getTime() : 0;
+  const dateB = b.data.date ? new Date(b.data.date).getTime() : 0;
+  return dateB - dateA;
+});
+---
+
+<Layout title="Blog | MJ Fisio Estética y Spa" description="Noticias, consejos y artículos sobre estética, masajes y bienestar.">
+  <Navbar client:load />
+
+  <main class="min-h-screen pt-24 pb-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Nuestro Blog</h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Consejos, novedades y todo lo que necesitas saber sobre bienestar y estética.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100">
+            <div class="p-6">
+              <div class="flex gap-2 mb-3">
+                {post.data.tags?.map((tag) => (
+                  <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-primary/10 text-primary">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              <a href={`/blog/${post.id}`}>
+                <h2 class="text-2xl font-semibold text-gray-900 mb-2 hover:text-primary transition-colors">
+                  {post.data.title}
+                </h2>
+              </a>
+              {post.data.date && (
+                <time class="text-sm text-gray-500 mb-4 block" datetime={post.data.date.toISOString()}>
+                  {post.data.date.toLocaleDateString("es-CR", { year: "numeric", month: "long", day: "numeric" })}
+                </time>
+              )}
+              {post.data.description && (
+                <p class="text-gray-600 line-clamp-3">
+                  {post.data.description}
+                </p>
+              )}
+              <div class="mt-4">
+                <a href={`/blog/${post.id}`} class="text-primary font-medium hover:text-primary/80 transition-colors inline-flex items-center">
+                  Leer más
+                  <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+        {posts.length === 0 && (
+          <div class="col-span-full text-center py-12">
+            <p class="text-gray-500 text-lg">Próximamente publicaremos nuevos artículos. ¡Mantente atento!</p>
+          </div>
+        )}
+      </div>
+    </div>
+  </main>
+
+  <Footer client:load />
+</Layout>
