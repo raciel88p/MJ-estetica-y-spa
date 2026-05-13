@@ -8,23 +8,31 @@ import { marked } from "marked";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
+  const authors = await getCollection("autores");
+
   return posts.map((post) => {
-    // Attempt to use Slug property from Notion, fallback to id if missing
     let slug = post.id;
     const slugRaw = getPlainText(post.data.properties.Slug);
     if (slugRaw) {
-        // Simple slugify just in case Notion field is dirty
         slug = slugRaw.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    }
+
+    // Find author via relation
+    let postAuthor = null;
+    const autorProp = post.data.properties.Autor;
+    if (autorProp && autorProp.type === 'relation' && autorProp.relation.length > 0) {
+        const relatedId = autorProp.relation[0].id;
+        postAuthor = authors.find(a => a.id === relatedId);
     }
 
     return {
       params: { slug },
-      props: { post },
+      props: { post, author: postAuthor },
     }
   });
 }
 
-const { post } = Astro.props;
+const { post, author } = Astro.props;
 
 const title = getPlainText(post.data.properties.Name) || post.id;
 const description = getPlainText(post.data.properties.Description) || "";
@@ -32,6 +40,22 @@ const date = post.data.properties.Date?.date?.start;
 const tags = getMultiSelect(post.data.properties.Tags).map(t => t.name);
 
 const htmlContent = marked.parse(post.data.markdown || "");
+
+let authorName = "Autor Anónimo";
+let authorSlug = "";
+let authorPhotoUrl = "/images/mj-logo.png";
+let authorRole = "";
+
+if (author) {
+    authorName = getPlainText(author.data.properties.Name) || authorName;
+    authorRole = getPlainText(author.data.properties.Role) || "";
+    const rawSlug = getPlainText(author.data.properties.Slug);
+    authorSlug = rawSlug ? rawSlug.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '') : author.id;
+    if (author.data.properties.Foto && author.data.properties.Foto.files && author.data.properties.Foto.files.length > 0) {
+        const file = author.data.properties.Foto.files[0];
+        authorPhotoUrl = file.file ? file.file.url : (file.external ? file.external.url : authorPhotoUrl);
+    }
+}
 ---
 
 <Layout title={`${title} | MJ Estética Wellness Center`} description={description}>
@@ -52,19 +76,45 @@ const htmlContent = marked.parse(post.data.markdown || "");
         <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
           {title}
         </h1>
-        {date && (
-          <time class="text-gray-500 block" datetime={date}>
-            {new Date(date).toLocaleDateString("es-CR", { year: "numeric", month: "long", day: "numeric" })}
-          </time>
-        )}
+
+        <div class="flex items-center justify-center gap-4 mt-6">
+           {author && (
+             <a href={`/autores/${authorSlug}`} class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+               <img src={authorPhotoUrl} alt={authorName} class="w-12 h-12 rounded-full object-cover border-2 border-primary/20" />
+               <div class="text-left">
+                 <p class="font-semibold text-gray-900 text-sm">{authorName}</p>
+                 {authorRole && <p class="text-xs text-primary">{authorRole}</p>}
+               </div>
+             </a>
+           )}
+
+           {date && (
+             <div class="flex items-center text-gray-500 pl-4 border-l border-gray-200">
+               <time datetime={date}>
+                 {new Date(date).toLocaleDateString("es-CR", { year: "numeric", month: "long", day: "numeric" })}
+               </time>
+             </div>
+           )}
+        </div>
       </header>
 
       <div class="prose prose-lg prose-primary max-w-none prose-headings:font-semibold prose-a:text-primary hover:prose-a:text-primary/80" set:html={htmlContent} />
 
-      <div class="mt-16 pt-8 border-t border-gray-100">
-        <a href="/blog" class="inline-flex items-center text-gray-600 hover:text-primary transition-colors font-medium">
+      <div class="mt-16 pt-8 border-t border-gray-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+        {author && (
+            <div class="bg-gray-50 rounded-xl p-6 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto flex-grow">
+               <img src={authorPhotoUrl} alt={authorName} class="w-16 h-16 rounded-full object-cover shadow-sm" />
+               <div class="text-center sm:text-left">
+                  <p class="text-sm text-gray-500 mb-1">Escrito por</p>
+                  <a href={`/autores/${authorSlug}`} class="font-bold text-lg text-gray-900 hover:text-primary transition-colors">{authorName}</a>
+                  {authorRole && <p class="text-sm text-primary font-medium">{authorRole}</p>}
+               </div>
+            </div>
+        )}
+
+        <a href="/blog" class="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-lg text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors font-medium shrink-0">
           <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
           Volver al blog
         </a>
