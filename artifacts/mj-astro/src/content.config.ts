@@ -1,14 +1,31 @@
 import { defineCollection, z } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { loader, notroProperties, pageWithMarkdownSchema } from "notro-loader";
 
-// Fallback simple markdown blog config for now while we wait for tokens
 const blogCollection = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string().optional(),
-    date: z.date().optional(),
-    tags: z.array(z.string()).optional(),
+  loader: loader({
+    queryParameters: {
+      data_source_id: process.env.NOTION_DATASOURCE_ID || import.meta.env.NOTION_DATASOURCE_ID,
+      sorts: [
+        {
+          timestamp: "last_edited_time",
+          direction: "descending",
+        },
+      ],
+      // REMOVED Public Filter temporarily to fetch unpublished posts if necessary, but actually let's remove filter to see if it works
+    },
+    clientOptions: {
+      auth: process.env.NOTION_TOKEN || import.meta.env.NOTION_TOKEN,
+    },
+  }),
+  schema: pageWithMarkdownSchema.extend({
+    properties: z.object({
+      Name: notroProperties.title,
+      Description: notroProperties.richText,
+      Public: notroProperties.checkbox,
+      Slug: notroProperties.richText,
+      Tags: notroProperties.multiSelect,
+      Date: notroProperties.date,
+    }),
   }),
 });
 

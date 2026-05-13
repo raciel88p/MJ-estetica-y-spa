@@ -3,17 +3,28 @@ import Layout from "../../layouts/Layout.astro";
 import { Navbar } from "../../components/layout/Navbar";
 import { Footer } from "../../components/layout/Footer";
 import { getCollection } from "astro:content";
+import { getPlainText, getMultiSelect } from "notro-loader";
 
 const allPosts = await getCollection("blog");
-// Sort by date if available
+
+// Sort by Notion's Date property
 const posts = allPosts.sort((a, b) => {
-  const dateA = a.data.date ? new Date(a.data.date).getTime() : 0;
-  const dateB = b.data.date ? new Date(b.data.date).getTime() : 0;
+  const dateA = a.data.properties.Date?.date?.start ? new Date(a.data.properties.Date.date.start).getTime() : 0;
+  const dateB = b.data.properties.Date?.date?.start ? new Date(b.data.properties.Date.date.start).getTime() : 0;
   return dateB - dateA;
 });
+
+function getSlug(post: any) {
+    let slug = post.id;
+    const slugRaw = getPlainText(post.data.properties.Slug);
+    if (slugRaw) {
+        slug = slugRaw.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    }
+    return slug;
+}
 ---
 
-<Layout title="Blog | MJ Fisio Estética y Spa" description="Noticias, consejos y artículos sobre estética, masajes y bienestar.">
+<Layout title="Blog | MJ Estética Wellness Center" description="Noticias, consejos y artículos sobre estética, masajes y bienestar.">
   <Navbar client:load />
 
   <main class="min-h-screen pt-24 pb-16 bg-gray-50">
@@ -26,42 +37,50 @@ const posts = allPosts.sort((a, b) => {
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {posts.map((post) => (
-          <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100">
-            <div class="p-6">
-              <div class="flex gap-2 mb-3">
-                {post.data.tags?.map((tag) => (
-                  <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-primary/10 text-primary">
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <a href={`/blog/${post.id}`}>
-                <h2 class="text-2xl font-semibold text-gray-900 mb-2 hover:text-primary transition-colors">
-                  {post.data.title}
-                </h2>
-              </a>
-              {post.data.date && (
-                <time class="text-sm text-gray-500 mb-4 block" datetime={post.data.date.toISOString()}>
-                  {post.data.date.toLocaleDateString("es-CR", { year: "numeric", month: "long", day: "numeric" })}
-                </time>
-              )}
-              {post.data.description && (
-                <p class="text-gray-600 line-clamp-3">
-                  {post.data.description}
-                </p>
-              )}
-              <div class="mt-4">
-                <a href={`/blog/${post.id}`} class="text-primary font-medium hover:text-primary/80 transition-colors inline-flex items-center">
-                  Leer más
-                  <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
+        {posts.map((post) => {
+          const title = getPlainText(post.data.properties.Name) || post.id;
+          const description = getPlainText(post.data.properties.Description) || "";
+          const date = post.data.properties.Date?.date?.start;
+          const tags = getMultiSelect(post.data.properties.Tags).map(t => t.name);
+          const slug = getSlug(post);
+
+          return (
+            <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col h-full">
+              <div class="p-6 flex flex-col flex-grow">
+                <div class="flex gap-2 mb-3">
+                  {tags.map((tag) => (
+                    <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-primary/10 text-primary">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a href={`/blog/${slug}`}>
+                  <h2 class="text-2xl font-semibold text-gray-900 mb-2 hover:text-primary transition-colors">
+                    {title}
+                  </h2>
                 </a>
+                {date && (
+                  <time class="text-sm text-gray-500 mb-4 block" datetime={date}>
+                    {new Date(date).toLocaleDateString("es-CR", { year: "numeric", month: "long", day: "numeric" })}
+                  </time>
+                )}
+                {description && (
+                  <p class="text-gray-600 line-clamp-3 mb-4 flex-grow">
+                    {description}
+                  </p>
+                )}
+                <div class="mt-auto">
+                  <a href={`/blog/${slug}`} class="text-primary font-medium hover:text-primary/80 transition-colors inline-flex items-center">
+                    Leer más
+                    <svg class="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
               </div>
-            </div>
-          </article>
-        ))}
+            </article>
+          );
+        })}
         {posts.length === 0 && (
           <div class="col-span-full text-center py-12">
             <p class="text-gray-500 text-lg">Próximamente publicaremos nuevos artículos. ¡Mantente atento!</p>

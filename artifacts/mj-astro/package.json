@@ -57,6 +57,7 @@
     "framer-motion": "catalog:",
     "input-otp": "^1.4.2",
     "lucide-react": "catalog:",
+    "marked": "^18.0.3",
     "next-themes": "^0.4.6",
     "notro-loader": "^0.2.0",
     "react": "^19.2.6",
