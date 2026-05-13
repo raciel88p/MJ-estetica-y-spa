@@ -20,6 +20,8 @@ const Paquetes          = lazy(() => import("@/pages/Paquetes"));
 const LandingReductivos = lazy(() => import("@/pages/LandingReductivos"));
 const LandingFaciales   = lazy(() => import("@/pages/LandingFaciales"));
 const Promociones       = lazy(() => import("@/pages/Promociones"));
+const BlogList          = lazy(() => import("@/pages/blog/BlogList"));
+const BlogPost          = lazy(() => import("@/pages/blog/BlogPost"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -51,6 +53,8 @@ function Router() {
         <Route path="/reductivos-turrialba" component={LandingReductivos} />
         <Route path="/faciales" component={LandingFaciales} />
         <Route path="/promociones" component={Promociones} />
+        <Route path="/blog" component={BlogList} />
+        <Route path="/blog/:id" component={BlogPost} />
         {servicePages.map((service) => (
           <Route
             key={service.slug}

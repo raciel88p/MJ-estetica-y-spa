@@ -1,0 +1,116 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Navbar } from "../../components/layout/Navbar";
+import { Footer } from "../../components/layout/Footer";
+import { getCollection } from "astro:content";
+import { getPlainText, getMultiSelect } from "notro-loader";
+
+const allPosts = await getCollection("blog");
+const authors = await getCollection("autores");
+
+// Sort by Notion's Date property
+const posts = allPosts.sort((a, b) => {
+  const dateA = a.data.properties.Date?.date?.start ? new Date(a.data.properties.Date.date.start).getTime() : 0;
+  const dateB = b.data.properties.Date?.date?.start ? new Date(b.data.properties.Date.date.start).getTime() : 0;
+  return dateB - dateA;
+});
+
+function getSlug(post: any) {
+    let slug = post.id;
+    const slugRaw = getPlainText(post.data.properties.Slug);
+    if (slugRaw) {
+        slug = slugRaw.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    }
+    return slug;
+}
+---
+
+<Layout title="Blog | MJ Estética Wellness Center" description="Noticias, consejos y artículos sobre estética, masajes y bienestar.">
+  <Navbar client:load />
+
+  <main class="min-h-screen pt-24 pb-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Nuestro Blog</h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Consejos, novedades y todo lo que necesitas saber sobre bienestar y estética.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => {
+          const title = getPlainText(post.data.properties.Name) || post.id;
+          const description = getPlainText(post.data.properties.Description) || "";
+          const date = post.data.properties.Date?.date?.start;
+          const tags = getMultiSelect(post.data.properties.Tags).map(t => t.name);
+          const slug = getSlug(post);
+
+          let author = null;
+          let authorName = "";
+          let authorPhotoUrl = "/images/mj-logo.png";
+
+          const autorProp = post.data.properties.Autor;
+          if (autorProp && autorProp.type === 'relation' && autorProp.relation.length > 0) {
+              const relatedId = autorProp.relation[0].id;
+              author = authors.find(a => a.id === relatedId);
+              if (author) {
+                  authorName = getPlainText(author.data.properties.Name) || "Autor Anónimo";
+                  if (author.data.properties.Foto && author.data.properties.Foto.files && author.data.properties.Foto.files.length > 0) {
+                      const file = author.data.properties.Foto.files[0];
+                      authorPhotoUrl = file.file ? file.file.url : (file.external ? file.external.url : authorPhotoUrl);
+                  }
+              }
+          }
+
+          return (
+            <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col h-full">
+              <div class="p-6 flex flex-col flex-grow">
+                <div class="flex gap-2 mb-3">
+                  {tags.map((tag) => (
+                    <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-primary/10 text-primary">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a href={`/blog/${slug}`}>
+                  <h2 class="text-2xl font-semibold text-gray-900 mb-2 hover:text-primary transition-colors">
+                    {title}
+                  </h2>
+                </a>
+
+                {description && (
+                  <p class="text-gray-600 line-clamp-3 mb-4 flex-grow">
+                    {description}
+                  </p>
+                )}
+
+                <div class="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between">
+                  {author ? (
+                     <div class="flex items-center gap-2">
+                       <img src={authorPhotoUrl} alt={authorName} class="w-8 h-8 rounded-full object-cover border border-gray-200" />
+                       <span class="text-sm font-medium text-gray-900">{authorName}</span>
+                     </div>
+                  ) : (
+                     <span />
+                  )}
+                  {date && (
+                    <time class="text-xs text-gray-500" datetime={date}>
+                      {new Date(date).toLocaleDateString("es-CR", { year: "numeric", month: "short", day: "numeric" })}
+                    </time>
+                  )}
+                </div>
+              </div>
+            </article>
+          );
+        })}
+        {posts.length === 0 && (
+          <div class="col-span-full text-center py-12">
+            <p class="text-gray-500 text-lg">Próximamente publicaremos nuevos artículos. ¡Mantente atento!</p>
+          </div>
+        )}
+      </div>
+    </div>
+  </main>
+
+  <Footer client:load />
+</Layout>
