@@ -4,16 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
 
 // Placeholder mock data
-const mockPosts = {
-  "mi-primer-post": {
-    title: "Próximamente: Nuestro Nuevo Blog",
-    description: "Conoce el nuevo blog en MJ Wellness Center",
-    date: new Date(),
-    tags: ["novedades", "spa"],
-    content: `<h1>Nuestro Nuevo Blog</h1>
-<p>El blog de MJ se genera de forma estática con Astro y Notion. Si estás viendo este mensaje, te encuentras en la versión de vista previa (SPA) donde los artículos dinámicos no están disponibles. ¡Visita nuestra web en vivo para leer todo nuestro contenido!</p>`
-  }
-};
+const mockPosts: Record<string, any> = {};
 
 export default function BlogPost() {
   const [, params] = useRoute("/blog/:id");

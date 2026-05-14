@@ -4,15 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
 
 // Placeholder mock data until we fetch from an API (or Notion in SPA context)
-const mockPosts = [
-  {
-    id: "mi-primer-post",
-    title: "Próximamente: Nuestro Nuevo Blog",
-    description: "Estamos preparando artículos sobre estética, masajes y bienestar. Muy pronto conectaremos esta sección para poder publicar contenido directamente.",
-    date: new Date(),
-    tags: ["novedades", "spa"]
-  }
-];
+const mockPosts: Array<{ id: string, title: string, description: string, date: Date, tags: string[] }> = [];
 
 export default function BlogList() {
   return (
