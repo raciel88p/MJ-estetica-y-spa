@@ -25,8 +25,8 @@ export async function getStaticPaths() {
 const { author } = Astro.props;
 
 const name = getPlainText(author.data.properties.Name) || "Autor Anónimo";
-const role = getPlainText(author.data.properties.Role) || "";
-const bio = getPlainText(author.data.properties.Bio) || "";
+const role = author.data.properties.Role ? getPlainText(author.data.properties.Role) || "" : "";
+const bio = author.data.properties.Bio ? getPlainText(author.data.properties.Bio) || "" : "";
 
 let photoUrl = "/images/mj-logo.png";
 if (author.data.properties.Foto && author.data.properties.Foto.files && author.data.properties.Foto.files.length > 0) {

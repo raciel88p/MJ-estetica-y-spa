@@ -34,8 +34,8 @@ function getSlug(author: any) {
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {authors.map((author) => {
           const name = getPlainText(author.data.properties.Name) || "Autor Anónimo";
-          const role = getPlainText(author.data.properties.Role) || "";
-          const bio = getPlainText(author.data.properties.Bio) || "";
+          const role = author.data.properties.Role ? getPlainText(author.data.properties.Role) || "" : "";
+          const bio = author.data.properties.Bio ? getPlainText(author.data.properties.Bio) || "" : "";
           const slug = getSlug(author);
 
           let photoUrl = "/images/mj-logo.png"; // fallback
