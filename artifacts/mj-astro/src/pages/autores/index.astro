@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { Navbar } from "../../components/layout/Navbar";
 import { Footer } from "../../components/layout/Footer";
 import { getCollection } from "astro:content";
-import { getPlainText } from "notro-loader";
+import { getPlainText } from "../../lib/notion-helpers";
 
 const allAuthors = await getCollection("autores");
 

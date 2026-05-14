@@ -13,6 +13,7 @@
     "typecheck": "astro check"
   },
   "dependencies": {
+    "@astro-notion/loader": "^1.1.2",
     "@astrojs/react": "^5.0.4",
     "@hookform/resolvers": "^3.10.0",
     "@notionhq/client": "^5.21.0",
@@ -64,7 +65,7 @@
     "lucide-react": "catalog:",
     "marked": "^18.0.3",
     "next-themes": "^0.4.6",
-    "notro-loader": "^0.2.0",
+    "notion-to-md": "^3.1.9",
     "react": "^19.2.6",
     "react-day-picker": "^9.14.0",
     "react-dom": "^19.2.6",

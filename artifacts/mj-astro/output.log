@@ -43,3 +43,11 @@
 [vite] program reload
 ⚠️ NOTION_TOKEN is missing. The build may fail if Notion Content Collections are queried.
 ⚠️ NOTION_TOKEN is missing. The build may fail if Notion Content Collections are queried.
+⚠️ NOTION_TOKEN is missing. The build may fail if Notion Content Collections are queried.
+⚠️ NOTION_TOKEN is missing. The build may fail if Notion Content Collections are queried.
+18:01:41 [watch] src/content.config.ts
+[vite] program reload
+⚠️ NOTION_DATASOURCE_ID is missing.
+⚠️ NOTION_TOKEN is missing. The build may fail if Notion Content Collections are queried.
+⚠️ NOTION_AUTHORS_ID is missing.
+⚠️ NOTION_TOKEN is missing. The build may fail if Notion Content Collections are queried.
