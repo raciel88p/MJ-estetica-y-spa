@@ -1,5 +1,5 @@
 import { defineCollection, z } from 'astro:content';
-import { loader, notroProperties, pageWithMarkdownSchema } from "notro-loader";
+import { notionLoader } from "@astro-notion/loader";
 
 // Helper to get env vars safely in both Node and Vite environments
 const getNotionToken = () => {
@@ -8,56 +8,37 @@ const getNotionToken = () => {
   return token;
 };
 
-const getBlogDbId = () => process.env.NOTION_DATASOURCE_ID || import.meta.env.NOTION_DATASOURCE_ID || "";
-const getAuthorsDbId = () => process.env.NOTION_AUTHORS_ID || import.meta.env.NOTION_AUTHORS_ID || "35faf7d8cb3980d4a548d08b6bd84089";
+const getBlogDbId = () => {
+  const rawId = process.env.NOTION_DATASOURCE_ID || import.meta.env.NOTION_DATASOURCE_ID;
+  if (!rawId) console.warn("⚠️ NOTION_DATASOURCE_ID is missing.");
+  const cleanId = (rawId || "default-blog-id-missing").replace(/-/g, "");
+  if (cleanId.length === 32) {
+    return `${cleanId.slice(0,8)}-${cleanId.slice(8,12)}-${cleanId.slice(12,16)}-${cleanId.slice(16,20)}-${cleanId.slice(20)}`;
+  }
+  return cleanId;
+};
+
+const getAuthorsDbId = () => {
+  const rawId = process.env.NOTION_AUTHORS_ID || import.meta.env.NOTION_AUTHORS_ID;
+  if (!rawId) console.warn("⚠️ NOTION_AUTHORS_ID is missing.");
+  const cleanId = (rawId || "default-authors-id-missing").replace(/-/g, "");
+  if (cleanId.length === 32) {
+    return `${cleanId.slice(0,8)}-${cleanId.slice(8,12)}-${cleanId.slice(12,16)}-${cleanId.slice(16,20)}-${cleanId.slice(20)}`;
+  }
+  return cleanId;
+};
 
 const blogCollection = defineCollection({
-  loader: loader({
-    queryParameters: {
-      data_source_id: getBlogDbId(),
-      sorts: [
-        {
-          timestamp: "last_edited_time",
-          direction: "descending",
-        },
-      ],
-    },
-    clientOptions: {
-      auth: getNotionToken(),
-    },
-  }),
-  schema: pageWithMarkdownSchema.extend({
-    properties: z.object({
-      Name: notroProperties.title,
-      Description: notroProperties.richText,
-      Public: notroProperties.checkbox,
-      Slug: notroProperties.richText,
-      Tags: notroProperties.multiSelect,
-      Date: notroProperties.date,
-      // We will allow Autor to be either a relation or people to prevent crashes depending on how the user sets it up
-      Autor: z.any().optional(),
-    }),
+  loader: notionLoader({
+    auth: getNotionToken(),
+    database_id: getBlogDbId(),
   }),
 });
 
 const authorsCollection = defineCollection({
-  loader: loader({
-    queryParameters: {
-      data_source_id: getAuthorsDbId(),
-    },
-    clientOptions: {
-      auth: getNotionToken(),
-    },
-  }),
-  schema: pageWithMarkdownSchema.extend({
-    properties: z.object({
-      Name: notroProperties.title,
-      Slug: notroProperties.richText,
-      Bio: notroProperties.richText.optional(),
-      Role: notroProperties.richText.optional(),
-      Public: notroProperties.checkbox.optional(),
-      Foto: z.any().optional(), // Using any for files array
-    }),
+  loader: notionLoader({
+    auth: getNotionToken(),
+    database_id: getAuthorsDbId(),
   }),
 });
 
