@@ -1,10 +1,20 @@
 import { defineCollection, z } from 'astro:content';
 import { loader, notroProperties, pageWithMarkdownSchema } from "notro-loader";
 
+// Helper to get env vars safely in both Node and Vite environments
+const getNotionToken = () => {
+  const token = process.env.NOTION_TOKEN || import.meta.env.NOTION_TOKEN;
+  if (!token) console.warn("⚠️ NOTION_TOKEN is missing. The build may fail if Notion Content Collections are queried.");
+  return token;
+};
+
+const getBlogDbId = () => process.env.NOTION_DATASOURCE_ID || import.meta.env.NOTION_DATASOURCE_ID || "";
+const getAuthorsDbId = () => process.env.NOTION_AUTHORS_ID || import.meta.env.NOTION_AUTHORS_ID || "35faf7d8cb3980d4a548d08b6bd84089";
+
 const blogCollection = defineCollection({
   loader: loader({
     queryParameters: {
-      data_source_id: process.env.NOTION_DATASOURCE_ID || import.meta.env.NOTION_DATASOURCE_ID,
+      data_source_id: getBlogDbId(),
       sorts: [
         {
           timestamp: "last_edited_time",
@@ -13,7 +23,7 @@ const blogCollection = defineCollection({
       ],
     },
     clientOptions: {
-      auth: process.env.NOTION_TOKEN || import.meta.env.NOTION_TOKEN,
+      auth: getNotionToken(),
     },
   }),
   schema: pageWithMarkdownSchema.extend({
@@ -33,11 +43,10 @@ const blogCollection = defineCollection({
 const authorsCollection = defineCollection({
   loader: loader({
     queryParameters: {
-      // Re-resolving ID if it's a data source, otherwise it handles DBs. We tested earlier, and we can fetch it if we know it.
-      data_source_id: process.env.NOTION_AUTHORS_ID || import.meta.env.NOTION_AUTHORS_ID || "35faf7d8cb3980d4a548d08b6bd84089",
+      data_source_id: getAuthorsDbId(),
     },
     clientOptions: {
-      auth: process.env.NOTION_TOKEN || import.meta.env.NOTION_TOKEN,
+      auth: getNotionToken(),
     },
   }),
   schema: pageWithMarkdownSchema.extend({

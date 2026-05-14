@@ -39,3 +39,7 @@
 [vite] connected.
 22:25:51 [vite] server restarted.
 [vite] connected.
+14:46:27 [watch] src/content.config.ts
+[vite] program reload
+⚠️ NOTION_TOKEN is missing. The build may fail if Notion Content Collections are queried.
+⚠️ NOTION_TOKEN is missing. The build may fail if Notion Content Collections are queried.
