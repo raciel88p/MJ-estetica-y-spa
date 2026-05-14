@@ -1,20 +1,14 @@
 {
   "installCommand": "npx --yes pnpm@10.26.1 install --no-frozen-lockfile --force",
-  "buildCommand": "npx --yes pnpm@10.26.1 --filter @workspace/mj-spa run build",
-  "outputDirectory": "artifacts/mj-spa/dist",
-  "framework": null,
-  "cleanUrls": false,
+  "buildCommand": "npx --yes pnpm@10.26.1 --filter @workspace/mj-astro run build",
+  "outputDirectory": "artifacts/mj-astro/dist",
+  "framework": "astro",
+  "cleanUrls": true,
   "trailingSlash": false,
   "env": {
     "BASE_PATH": "/",
     "NODE_ENV": "production"
   },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
   "headers": [
     {
       "source": "/assets/(.*)",
