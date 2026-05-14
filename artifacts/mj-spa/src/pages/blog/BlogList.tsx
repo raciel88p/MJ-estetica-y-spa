@@ -7,10 +7,10 @@ import { SEO } from "@/components/SEO";
 const mockPosts = [
   {
     id: "mi-primer-post",
-    title: "Mi primer post",
-    description: "Bienvenidos a nuestro nuevo blog. Muy pronto conectaremos esto con Notion para poder publicar artículos directamente desde allí.",
-    date: new Date("2024-05-13"),
-    tags: ["noticias", "spa"]
+    title: "Próximamente: Nuestro Nuevo Blog",
+    description: "Estamos preparando artículos sobre estética, masajes y bienestar. Muy pronto conectaremos esta sección para poder publicar contenido directamente.",
+    date: new Date(),
+    tags: ["novedades", "spa"]
   }
 ];
 

@@ -6,12 +6,12 @@ import { SEO } from "@/components/SEO";
 // Placeholder mock data
 const mockPosts = {
   "mi-primer-post": {
-    title: "Mi primer post",
-    description: "Conoce nuestro blog en MJ Wellness Center",
-    date: new Date("2024-05-13"),
-    tags: ["noticias", "spa"],
-    content: `<h1>Bienvenidos al Blog de MJ</h1>
-<p>El blog se genera estáticamente mediante Astro y Notion, si estás viendo esto estás en la versión SPA de respaldo y no hay conexión dinámica disponible.</p>`
+    title: "Próximamente: Nuestro Nuevo Blog",
+    description: "Conoce el nuevo blog en MJ Wellness Center",
+    date: new Date(),
+    tags: ["novedades", "spa"],
+    content: `<h1>Nuestro Nuevo Blog</h1>
+<p>El blog de MJ se genera de forma estática con Astro y Notion. Si estás viendo este mensaje, te encuentras en la versión de vista previa (SPA) donde los artículos dinámicos no están disponibles. ¡Visita nuestra web en vivo para leer todo nuestro contenido!</p>`
   }
 };
 

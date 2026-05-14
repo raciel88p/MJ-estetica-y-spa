@@ -1,0 +1,14 @@
+
+> @workspace/mj-spa@0.0.0 dev /app/artifacts/mj-spa
+> vite --config vite.config.ts --host 0.0.0.0
+
+12:34:14 AM [vite] (client) Re-optimizing dependencies because lockfile has changed
+Port 3000 is in use, trying another one...
+
+  VITE v7.3.1  ready in 904 ms
+
+  ➜  Local:   http://localhost:3001/
+  ➜  Network: http://192.168.0.2:3001/
+12:43:15 AM [vite] (client) hmr update /src/index.css
+12:44:47 AM [vite] (client) hmr update /src/index.css
+ ELIFECYCLE  Command failed with exit code 143.
