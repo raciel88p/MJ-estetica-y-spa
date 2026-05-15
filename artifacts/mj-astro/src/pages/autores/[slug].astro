@@ -1,5 +1,6 @@
 ---
 import { getCollection } from "astro:content";
+import { getPlainText, getMultiSelect } from "../../lib/notion-helpers";
 import Layout from "../../layouts/Layout.astro";
 import { Navbar } from "../../components/layout/Navbar";
 import { Footer } from "../../components/layout/Footer";
@@ -9,6 +10,10 @@ export async function getStaticPaths() {
 
   return allAuthors.map((author) => {
     let slug = author.id;
+    const slugRaw = getPlainText(author.data.properties.Slug);
+    if (slugRaw) {
+        slug = slugRaw.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    }
 
     return {
       params: { slug },
@@ -19,19 +24,46 @@ export async function getStaticPaths() {
 
 const { author } = Astro.props;
 
-const name = author.data.name;
-const role = author.data.role || "";
-const bio = author.data.bio || "";
-let photoUrl = author.data.photoUrl || "/images/mj-logo.png";
+const name = getPlainText(author.data.properties.Name) || "Autor Anónimo";
+const role = author.data.properties.Role ? getPlainText(author.data.properties.Role) || "" : "";
+const bio = author.data.properties.Bio ? getPlainText(author.data.properties.Bio) || "" : "";
+
+let photoUrl = "/images/mj-logo.png";
+if (author.data.properties.Foto && author.data.properties.Foto.files && author.data.properties.Foto.files.length > 0) {
+    const file = author.data.properties.Foto.files[0];
+    photoUrl = file.file ? file.file.url : (file.external ? file.external.url : photoUrl);
+}
 
 // Fetch posts by this author
 const allPosts = await getCollection("blog");
 const authorPosts = allPosts.filter(post => {
-    return post.data.authorId === author.id;
-}).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+    // Determine if this post has a relation to this author
+    const postAutor = post.data.properties.Autor;
+    if (!postAutor) return false;
+
+    // It can be a Relation array
+    if (postAutor.type === 'relation') {
+        return postAutor.relation.some((rel: any) => rel.id === author.id);
+    }
+    // Or if it was mapped via people property temporarily
+    if (postAutor.type === 'people') {
+        // Fallback for names if no relation is established
+        return false;
+    }
+    return false;
+}).sort((a, b) => {
+  const dateA = a.data.properties.Date?.date?.start ? new Date(a.data.properties.Date.date.start).getTime() : 0;
+  const dateB = b.data.properties.Date?.date?.start ? new Date(b.data.properties.Date.date.start).getTime() : 0;
+  return dateB - dateA;
+});
 
 function getPostSlug(post: any) {
-    return post.id;
+    let slug = post.id;
+    const slugRaw = getPlainText(post.data.properties.Slug);
+    if (slugRaw) {
+        slug = slugRaw.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    }
+    return slug;
 }
 ---
 
@@ -72,10 +104,10 @@ function getPostSlug(post: any) {
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {authorPosts.map((post) => {
-          const postTitle = post.data.title;
-          const postDescription = post.data.description || "";
-          const postDate = post.data.pubDate;
-          const tags = post.data.tags || [];
+          const postTitle = getPlainText(post.data.properties.Name) || post.id;
+          const postDescription = getPlainText(post.data.properties.Description) || "";
+          const postDate = post.data.properties.Date?.date?.start;
+          const tags = getMultiSelect(post.data.properties.Tags).map(t => t.name);
           const postSlug = getPostSlug(post);
 
           return (
@@ -93,8 +125,8 @@ function getPostSlug(post: any) {
                 </h3>
               </a>
               {postDate && (
-                <time class="text-sm text-gray-500 mb-3 block" datetime={postDate.toISOString()}>
-                  {postDate.toLocaleDateString("es-CR", { year: "numeric", month: "long", day: "numeric" })}
+                <time class="text-sm text-gray-500 mb-3 block" datetime={postDate}>
+                  {new Date(postDate).toLocaleDateString("es-CR", { year: "numeric", month: "long", day: "numeric" })}
                 </time>
               )}
               {postDescription && (

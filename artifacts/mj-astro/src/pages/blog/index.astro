@@ -3,15 +3,25 @@ import Layout from "../../layouts/Layout.astro";
 import { Navbar } from "../../components/layout/Navbar";
 import { Footer } from "../../components/layout/Footer";
 import { getCollection } from "astro:content";
+import { getPlainText, getMultiSelect } from "../../lib/notion-helpers";
 
 const allPosts = await getCollection("blog");
 const authors = await getCollection("autores");
 
-// Sort by date
-const posts = allPosts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+// Sort by Notion's Date property
+const posts = allPosts.sort((a, b) => {
+  const dateA = a.data.properties.Date?.date?.start ? new Date(a.data.properties.Date.date.start).getTime() : 0;
+  const dateB = b.data.properties.Date?.date?.start ? new Date(b.data.properties.Date.date.start).getTime() : 0;
+  return dateB - dateA;
+});
 
 function getSlug(post: any) {
-    return post.id;
+    let slug = post.id;
+    const slugRaw = getPlainText(post.data.properties.Slug);
+    if (slugRaw) {
+        slug = slugRaw.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+    }
+    return slug;
 }
 ---
 
@@ -29,21 +39,26 @@ function getSlug(post: any) {
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => {
-          const title = post.data.title;
-          const description = post.data.description || "";
-          const date = post.data.pubDate;
-          const tags = post.data.tags || [];
+          const title = getPlainText(post.data.properties.Name) || post.id;
+          const description = getPlainText(post.data.properties.Description) || "";
+          const date = post.data.properties.Date?.date?.start;
+          const tags = getMultiSelect(post.data.properties.Tags).map(t => t.name);
           const slug = getSlug(post);
 
           let author = null;
           let authorName = "";
           let authorPhotoUrl = "/images/mj-logo.png";
 
-          if (post.data.authorId) {
-              author = authors.find(a => a.id === post.data.authorId);
+          const autorProp = post.data.properties.Autor;
+          if (autorProp && autorProp.type === 'relation' && autorProp.relation.length > 0) {
+              const relatedId = autorProp.relation[0].id;
+              author = authors.find(a => a.id === relatedId);
               if (author) {
-                  authorName = author.data.name;
-                  authorPhotoUrl = author.data.photoUrl || authorPhotoUrl;
+                  authorName = getPlainText(author.data.properties.Name) || "Autor Anónimo";
+                  if (author.data.properties.Foto && author.data.properties.Foto.files && author.data.properties.Foto.files.length > 0) {
+                      const file = author.data.properties.Foto.files[0];
+                      authorPhotoUrl = file.file ? file.file.url : (file.external ? file.external.url : authorPhotoUrl);
+                  }
               }
           }
 
@@ -79,8 +94,8 @@ function getSlug(post: any) {
                      <span />
                   )}
                   {date && (
-                    <time class="text-xs text-gray-500" datetime={date.toISOString()}>
-                      {date.toLocaleDateString("es-CR", { year: "numeric", month: "short", day: "numeric" })}
+                    <time class="text-xs text-gray-500" datetime={date}>
+                      {new Date(date).toLocaleDateString("es-CR", { year: "numeric", month: "short", day: "numeric" })}
                     </time>
                   )}
                 </div>
