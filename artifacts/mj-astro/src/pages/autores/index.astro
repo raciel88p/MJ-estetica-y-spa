@@ -3,19 +3,13 @@ import Layout from "../../layouts/Layout.astro";
 import { Navbar } from "../../components/layout/Navbar";
 import { Footer } from "../../components/layout/Footer";
 import { getCollection } from "astro:content";
-import { getPlainText } from "../../lib/notion-helpers";
 
 const allAuthors = await getCollection("autores");
 
-const authors = allAuthors.filter(a => a.data.properties.Public?.checkbox !== false);
+const authors = allAuthors.filter(a => a.data.public !== false);
 
 function getSlug(author: any) {
-    let slug = author.id;
-    const slugRaw = getPlainText(author.data.properties.Slug);
-    if (slugRaw) {
-        slug = slugRaw.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-    }
-    return slug;
+    return author.id;
 }
 ---
 
@@ -33,16 +27,12 @@ function getSlug(author: any) {
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {authors.map((author) => {
-          const name = getPlainText(author.data.properties.Name) || "Autor Anónimo";
-          const role = author.data.properties.Role ? getPlainText(author.data.properties.Role) || "" : "";
-          const bio = author.data.properties.Bio ? getPlainText(author.data.properties.Bio) || "" : "";
+          const name = author.data.name;
+          const role = author.data.role || "";
+          const bio = author.data.bio || "";
           const slug = getSlug(author);
 
-          let photoUrl = "/images/mj-logo.png"; // fallback
-          if (author.data.properties.Foto && author.data.properties.Foto.files && author.data.properties.Foto.files.length > 0) {
-             const file = author.data.properties.Foto.files[0];
-             photoUrl = file.file ? file.file.url : (file.external ? file.external.url : photoUrl);
-          }
+          let photoUrl = author.data.photoUrl || "/images/mj-logo.png"; // fallback
 
           return (
             <article class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100 flex flex-col h-full text-center">
