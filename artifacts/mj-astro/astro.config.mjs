@@ -5,7 +5,6 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
 import sitemap from 'astro-sitemap';
-import compress from '@playform/compress';
 import indexnow from 'astro-indexnow';
 import cookieconsent from 'astro-consent';
 import htaccessManager from 'astro-htaccess-manager';
@@ -16,7 +15,6 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap(),
-    compress(),
     indexnow({ key: process.env.INDEXNOW_KEY || '8c35d9f0910048e9a250325bdfce0ef4' }),
     cookieconsent(),
     htaccessManager({ manualFiles: {} })
