@@ -150,7 +150,7 @@ function Home() {
 
   useEffect(() => {
     const t = setInterval(() => setSlideIndex(i => (i + 1) % heroSlides.length), 6000);
-    return () => clearInterval(t);
+    return () => clearInterval(t as unknown as number);
   }, []);
 
   const form = useForm<ContactFormValues>({
