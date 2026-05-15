@@ -35,7 +35,7 @@ export default function BlogPost() {
           <header className="mb-10 text-center">
             {post.tags && post.tags.length > 0 && (
               <div className="flex justify-center gap-2 mb-4">
-                {post.tags.map((tag: string) => (
+                {post.tags.map((tag) => (
                   <span key={tag} className="text-xs font-medium px-3 py-1 rounded-full bg-primary/10 text-primary">
                     {tag}
                   </span>
