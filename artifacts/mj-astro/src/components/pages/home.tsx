@@ -52,7 +52,8 @@ const formSchema = z.object({
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [mounted, setMounted] = useState(false);
-  const abVariant = useABTest({testName: 'hero_cta_color', variants: {A: 'primary', B: 'accent'}}).value;
+  const abTestResult = useABTest({testName: 'hero_cta_color', variants: {A: 'primary', B: 'accent'}});
+  const abVariant = abTestResult ? abTestResult.value : 'primary';
   const { toast } = useToast();
 
   useEffect(() => {
