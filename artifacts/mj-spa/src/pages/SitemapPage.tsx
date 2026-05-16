@@ -13,8 +13,6 @@ const sections = [
     links: [
       { name: "Inicio", href: "/" },
       { name: "Sobre Nosotros", href: "/nosotros" },
-      { name: "Blog", href: "/blog" },
-      { name: "Autores", href: "/autores" },
       { name: "Paquetes", href: "/paquetes" },
       { name: "Testimonios", href: "/testimonios" },
       { name: "Médicos y Estéticos", href: "/medicos-esteticos" },
@@ -91,7 +89,7 @@ export default function SitemapPage() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Mapa del Sitio"
-        description="Todas las páginas y tratamientos de MJ Estética Wellness Center en Turrialba, Costa Rica."
+        description="Todas las páginas y tratamientos de MJ Fisio Estética y Spa en Turrialba, Costa Rica."
         canonical="/mapa-del-sitio"
       />
       <Navbar />
@@ -112,7 +110,7 @@ export default function SitemapPage() {
             <span className="italic font-light text-white/40">Sitio</span>
           </h1>
           <p className="text-white/75 text-lg leading-relaxed max-w-xl mt-6">
-            Todas las páginas y tratamientos disponibles en MJ Estética Wellness Center.
+            Todas las páginas y tratamientos disponibles en MJ Fisio Estética y Spa.
           </p>
         </div>
       </section>

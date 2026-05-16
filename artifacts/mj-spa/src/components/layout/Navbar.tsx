@@ -63,7 +63,7 @@ export function Navbar() {
   const medicos = useHoverDropdown("medicos", openDropdown, setOpenDropdown as any);
 
   const textClass = isScrolled ? "text-[#0c3e5a]" : "text-white/90";
-  const linkBase = `text-base uppercase tracking-widest font-medium hover:text-primary transition-colors`;
+  const linkBase = `text-sm uppercase tracking-widest font-medium hover:text-primary transition-colors`;
 
   const dropdownPanelVariants = {
     initial: { opacity: 0, y: 8, scale: 0.97 },
@@ -85,12 +85,11 @@ export function Navbar() {
           <Link href="/" className="flex items-center cursor-pointer group">
             <img
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
-              alt="Logo de MJ Estética Wellness Center"
+              alt="MJ Fisio Estética y Spa"
               className="h-14 md:h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
               style={isScrolled ? {} : { filter: "drop-shadow(0 0 10px rgba(255,255,255,0.5)) brightness(1.15)" }}
               width="160"
               height="64"
-              loading="eager"
             />
           </Link>
 
@@ -302,10 +301,6 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            <a href="/blog" className={`${linkBase} ${textClass}`}>
-              Blog
-            </a>
-
             <a href="/#contacto" className={`${linkBase} ${textClass}`}>
               Contacto
             </a>
@@ -515,13 +510,6 @@ export function Navbar() {
                   )}
                 </AnimatePresence>
               </div>
-
-              <a href="/blog"
-                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Blog
-              </a>
 
               <a
                 href="/#contacto"

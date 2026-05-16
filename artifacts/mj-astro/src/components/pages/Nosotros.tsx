@@ -117,7 +117,7 @@ function Nosotros() {
               <div className="absolute inset-0 bg-secondary rounded-t-full rounded-b-xl transform -translate-x-4 translate-y-4 -z-10" />
               <img
                 src={`${import.meta.env.BASE_URL}images/about-us.webp`}
-                alt="Equipo de MJ Estética Wellness Center en Turrialba"
+                alt="Equipo de MJ Fisio Estética y Spa en Turrialba"
                 className="rounded-t-full rounded-b-xl shadow-2xl object-cover w-full h-[550px]"
                 loading="lazy"
                 decoding="async"

@@ -180,7 +180,7 @@ export default function Home() {
   const onSubmit = (data: ContactFormValues) => {
     const serviceLabel = serviceLabels[data.service] || data.service;
     const text = [
-      `Hola MJ Estética Wellness Center 👋`,
+      `Hola MJ Fisio Estética y Spa 👋`,
       ``,
       `*Nombre:* ${data.name}`,
       `*Servicio:* ${serviceLabel}`,
@@ -204,7 +204,7 @@ export default function Home() {
     <div className="min-h-screen bg-white overflow-x-hidden">
       <SEO
         title="Centro de Estética y Spa en Turrialba"
-        description="MJ Estética Wellness Center en Turrialba, Costa Rica. Tratamientos faciales, corporales, varices, botox, hilos tensores y más. Reserva tu cita hoy."
+        description="MJ Fisio Estética y Spa en Turrialba, Costa Rica. Tratamientos faciales, corporales, varices, botox, hilos tensores y más. Reserva tu cita hoy."
         canonical="/"
       />
       <Navbar />
@@ -223,7 +223,7 @@ export default function Home() {
           >
             <img
               src={`${BASE}images/${slide.bg}`}
-              alt="MJ Estética Wellness Center"
+              alt="MJ Fisio Estética y Spa"
               className="w-full h-full object-cover object-center"
               loading="eager"
               fetchPriority="high"
@@ -333,7 +333,7 @@ export default function Home() {
       <section className="py-5 bg-primary">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white text-center sm:text-left text-sm font-light tracking-wide">
-            En MJ Estética Wellness Center queremos que tu visita sea toda una experiencia
+            En MJ Fisio Estética y Spa queremos que tu visita sea toda una experiencia
           </p>
           <a
             href={WA}
@@ -389,7 +389,7 @@ export default function Home() {
                 <div className="relative h-[520px] md:h-[620px]">
                   <img
                     src={`${BASE}images/${cat.bg}`}
-                    alt={`${cat.title} - MJ Estética Wellness Center`}
+                    alt={cat.label}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-108 scale-100"
                     loading="lazy"
                     decoding="async"
@@ -527,7 +527,7 @@ export default function Home() {
             >
               <img
                 src={`${BASE}images/about-us.webp`}
-                alt="Instalaciones MJ Estética Wellness Center - Spa y Clínica"
+                alt="Instalaciones MJ Fisio Estética y Spa"
                 className="w-full h-[580px] object-cover"
                 loading="lazy"
                 decoding="async"
@@ -552,13 +552,13 @@ export default function Home() {
                 NUESTRA EXPERIENCIA
               </p>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight mb-2">
-                MJ Estética Wellness Center
+                MJ Fisio Estética
               </h2>
               <h2 className="text-4xl md:text-5xl font-serif font-light italic text-stone-300 leading-tight mb-9">
                 y Spa
               </h2>
               <p className="text-primary text-sm leading-relaxed mb-10">
-                En MJ Estética Wellness Center hemos creado un espacio donde la salud, la belleza
+                En MJ Fisio Estética y Spa hemos creado un espacio donde la salud, la belleza
                 y el bienestar se unen. Combinamos la calidez de un trato cercano con la excelencia
                 de profesionales altamente cualificados y tecnología de vanguardia, en el corazón
                 de Turrialba.

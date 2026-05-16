@@ -8,7 +8,7 @@ interface SEOProps {
   type?: "website" | "article";
 }
 
-const SITE_NAME = "MJ Estética Wellness Center";
+const SITE_NAME = "MJ Fisio Estética y Spa";
 const BASE_URL = "https://mjfisioesteticayspa.com";
 const DEFAULT_DESC =
   "Centro de estética, bienestar y tratamientos médico-estéticos en Turrialba, Costa Rica. Faciales, corporales, varices, botox, hilos tensores y más. Reserva por WhatsApp.";

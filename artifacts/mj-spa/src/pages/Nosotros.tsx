@@ -44,7 +44,7 @@ const team = [
     name: "María Jeanneth",
     role: "Directora & Especialista en Estética",
     description:
-      "Fundadora de MJ Estética Wellness Center, con más de 15 años de experiencia en tratamientos estéticos y bienestar. Su pasión por el cuidado personal la llevó a crear un espacio de referencia en Turrialba.",
+      "Fundadora de MJ Fisio Estética y Spa, con más de 15 años de experiencia en tratamientos estéticos y bienestar. Su pasión por el cuidado personal la llevó a crear un espacio de referencia en Turrialba.",
     emoji: "👩‍⚕️",
   },
   {
@@ -75,7 +75,7 @@ export default function Nosotros() {
     <div className="min-h-screen flex flex-col bg-background">
       <SEO
         title="Sobre Nosotros"
-        description="Conoce al equipo de MJ Estética Wellness Center en Turrialba. Más de 15 años de experiencia en estética y bienestar, con 2335 clientes satisfechos y 82+ tratamientos disponibles."
+        description="Conoce al equipo de MJ Fisio Estética y Spa en Turrialba. Más de 15 años de experiencia en estética y bienestar, con 2335 clientes satisfechos y 82+ tratamientos disponibles."
         canonical="/nosotros"
       />
       <Navbar />
@@ -93,7 +93,7 @@ export default function Nosotros() {
               El Arte de Cuidar <span className="italic text-white/85">de Ti</span>
             </h1>
             <p className="text-lg text-primary/90 max-w-2xl mx-auto leading-relaxed">
-              En MJ Estética Wellness Center hemos creado un espacio donde la salud, la belleza y el bienestar
+              En MJ Fisio Estética y Spa hemos creado un espacio donde la salud, la belleza y el bienestar
               se unen para ofrecerte una experiencia única en el corazón de Turrialba, Costa Rica.
             </p>
           </motion.div>
@@ -116,7 +116,7 @@ export default function Nosotros() {
               <div className="absolute inset-0 bg-secondary rounded-t-full rounded-b-xl transform -translate-x-4 translate-y-4 -z-10" />
               <img
                 src={`${import.meta.env.BASE_URL}images/about-us.webp`}
-                alt="Equipo de MJ Estética Wellness Center en Turrialba"
+                alt="Equipo de MJ Fisio Estética y Spa en Turrialba"
                 className="rounded-t-full rounded-b-xl shadow-2xl object-cover w-full h-[550px]"
                 loading="lazy"
                 decoding="async"
@@ -151,7 +151,7 @@ export default function Nosotros() {
                 Nació de una <span className="italic text-muted-foreground">pasión</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-5 text-lg">
-                MJ Estética Wellness Center nació del sueño de crear un lugar donde cada persona pudiera sentirse
+                MJ Fisio Estética y Spa nació del sueño de crear un lugar donde cada persona pudiera sentirse
                 cuidada, escuchada y renovada. Ubicados en Turrialba, Ciudadela Jorge de Bravo, Costa Rica,
                 combinamos la calidez de un trato cercano con la excelencia de profesionales altamente cualificados.
               </p>

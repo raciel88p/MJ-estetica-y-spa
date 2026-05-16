@@ -43,7 +43,7 @@ export default function BuzonSugerencias() {
     <div className="min-h-screen flex flex-col bg-background">
       <SEO
         title="Buzón de Sugerencias"
-        description="Comparte tus sugerencias, ideas o comentarios con el equipo de MJ Estética Wellness Center. Tu opinión nos ayuda a mejorar cada día."
+        description="Comparte tus sugerencias, ideas o comentarios con el equipo de MJ Fisio Estética y Spa. Tu opinión nos ayuda a mejorar cada día."
         canonical="/buzon-sugerencias"
       />
       <Navbar />

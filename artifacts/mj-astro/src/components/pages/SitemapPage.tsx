@@ -14,8 +14,6 @@ const sections = [
     links: [
       { name: "Inicio", href: "/" },
       { name: "Sobre Nosotros", href: "/nosotros" },
-      { name: "Blog", href: "/blog" },
-      { name: "Autores", href: "/autores" },
       { name: "Paquetes", href: "/paquetes" },
       { name: "Testimonios", href: "/testimonios" },
       { name: "Médicos y Estéticos", href: "/medicos-esteticos" },
