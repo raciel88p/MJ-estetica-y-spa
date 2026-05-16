@@ -1,0 +1,53 @@
+name: Playwright Tests
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: pnpm/action-setup@v3
+      with:
+        version: 8
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Install Playwright Browsers
+      run: cd artifacts/mj-astro && npx playwright install --with-deps chromium
+
+    - name: Build and Test Astro project
+      env:
+        NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        NOTION_DATASOURCE_ID: ${{ secrets.NOTION_DATASOURCE_ID }}
+        NOTION_AUTHORS_ID: ${{ secrets.NOTION_AUTHORS_ID }}
+      run: |
+        cd artifacts/mj-astro
+        if [ -z "$NOTION_TOKEN" ]; then
+          echo "No Notion secrets available. Skipping Playwright build test to avoid Notion API unauthorized error."
+          # using true so the step succeeds
+          true
+        else
+          echo "NOTION_TOKEN=${NOTION_TOKEN}" > .env
+          echo "NOTION_DATASOURCE_ID=${NOTION_DATASOURCE_ID}" >> .env
+          echo "NOTION_AUTHORS_ID=${NOTION_AUTHORS_ID}" >> .env
+          pnpm run build
+          npx playwright test
+        fi
+
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: playwright-report
+        path: artifacts/mj-astro/playwright-report/
+        retention-days: 7
