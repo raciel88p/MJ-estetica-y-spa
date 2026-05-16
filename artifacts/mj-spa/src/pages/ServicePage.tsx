@@ -180,7 +180,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
     <div className="min-h-screen bg-white">
       <SEO
         title={service.name}
-        description={`${service.tagline} — ${service.heroDescription.slice(0, 120)}. MJ Estética Wellness Center, Turrialba, Costa Rica.`}
+        description={`${service.tagline} — ${service.heroDescription.slice(0, 120)}. MJ Fisio Estética y Spa, Turrialba, Costa Rica.`}
         canonical={`/servicios/${service.slug}`}
       />
       <Navbar />
@@ -253,6 +253,50 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           ))}
         </div>
       </section>
+
+      {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
+      {!["botox-full-face","hilos-tensores","rellenos-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar"].includes(service.slug) && (
+      <section className="py-10 bg-white border-b border-stone-100">
+        <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+            className="bg-stone-50 border border-stone-200 rounded-sm overflow-hidden"
+          >
+            <div className="bg-primary px-6 py-3 flex items-center gap-2">
+              <UserCheck className="w-4 h-4 text-white shrink-0" />
+              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">Profesional responsable</span>
+            </div>
+            <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
+              <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
+                <img src="/images/janneth-molina.webp" alt="Janneth Maria Molina Madrigal" className="w-full h-full object-cover object-top" />
+              </div>
+              <div className="flex-1 text-center sm:text-left">
+                <h3 className="text-xl font-serif font-bold text-stone-900 mb-1">
+                  Janneth Maria Molina Madrigal
+                </h3>
+                <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
+                  <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
+                    <BadgeCheck className="w-3.5 h-3.5" />
+                    Linc Fisio Terapia
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
+                    <GraduationCap className="w-3.5 h-3.5" />
+                    Especialista en Estética
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
+                    <Award className="w-3.5 h-3.5 text-primary" />
+                    Laboró Hospital la Católica
+                  </span>
+                </div>
+                <p className="text-stone-500 text-sm leading-relaxed mt-4 max-w-xl">
+                  La estética es una pasión que ha formado parte de mi vida desde siempre. Me inspira la belleza en todas sus formas y me dedico a realzar la belleza natural de cada persona, ayudándoles a sentirse seguras y radiantes.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      )}
 
       <StatsBar />
 
@@ -334,50 +378,6 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           </section>
         );
       })()}
-
-      {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
-      {!["nutricion", "botox-full-face","hilos-tensores","rellenos-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar"].includes(service.slug) && (
-      <section className="py-10 bg-white border-b border-stone-100">
-        <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
-          <motion.div
-            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-            className="bg-stone-50 border border-stone-200 rounded-sm overflow-hidden"
-          >
-            <div className="bg-primary px-6 py-3 flex items-center gap-2">
-              <UserCheck className="w-4 h-4 text-white shrink-0" />
-              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">Profesional responsable</span>
-            </div>
-            <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
-              <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
-                <img src="/images/janneth-molina.webp" alt="Janneth Maria Molina Madrigal" loading="lazy" decoding="async" className="w-full h-full object-cover object-top" />
-              </div>
-              <div className="flex-1 text-center sm:text-left">
-                <h3 className="text-xl font-serif font-bold text-stone-900 mb-1">
-                  Janneth Maria Molina Madrigal
-                </h3>
-                <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
-                  <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
-                    <BadgeCheck className="w-3.5 h-3.5" />
-                    Linc Fisio Terapia
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
-                    <GraduationCap className="w-3.5 h-3.5" />
-                    Especialista en Estética
-                  </span>
-                  <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
-                    <Award className="w-3.5 h-3.5 text-primary" />
-                    Laboró Hospital la Católica
-                  </span>
-                </div>
-                <p className="text-stone-500 text-sm leading-relaxed mt-4 max-w-xl">
-                  La estética es una pasión que ha formado parte de mi vida desde siempre. Me inspira la belleza en todas sus formas y me dedico a realzar la belleza natural de cada persona, ayudándoles a sentirse seguras y radiantes.
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
       <section className="py-16 bg-stone-50">
@@ -530,8 +530,6 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                     <img
                       src={beforeBg}
                       alt="Antes del tratamiento"
-                      loading="lazy"
-                      decoding="async"
                       className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
                       style={{ filter: "grayscale(1) brightness(0.88)" }}
                     />
@@ -568,8 +566,6 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                     <img
                       src={afterBg}
                       alt="Después del tratamiento"
-                      loading="lazy"
-                      decoding="async"
                       className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />

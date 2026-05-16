@@ -9,7 +9,7 @@ export default function PoliticaDatos() {
     <div className="min-h-screen flex flex-col bg-background">
       <SEO
         title="Política de Datos"
-        description="Política de privacidad y tratamiento de datos personales de MJ Estética Wellness Center, Turrialba, Costa Rica."
+        description="Política de privacidad y tratamiento de datos personales de MJ Fisio Estética y Spa, Turrialba, Costa Rica."
         canonical="/politica-de-datos"
       />
       <Navbar />

@@ -78,7 +78,7 @@ export default function Paquetes() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Paquetes de Tratamientos"
-        description="Paquetes especiales de tratamientos estéticos en MJ Estética Wellness Center, Turrialba. Anti-edad, reafirmante corporal, post operatorio y más. Reserva tu valoración gratuita."
+        description="Paquetes especiales de tratamientos estéticos en MJ Fisio Estética y Spa, Turrialba. Anti-edad, reafirmante corporal, post operatorio y más. Reserva tu valoración gratuita."
         canonical="/paquetes"
       />
       <Navbar />

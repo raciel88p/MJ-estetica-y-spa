@@ -11,10 +11,9 @@ export function Footer() {
           <div className="space-y-4">
             <img
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
-              alt="Logo de MJ Estética Wellness Center"
+              alt="MJ Fisio Estética y Spa"
               className="h-16 w-auto object-contain mb-6"
               loading="lazy"
-              decoding="async"
               width="160"
               height="64"
             />
@@ -129,7 +128,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-          <p>© {new Date().getFullYear()} MJ Estética Wellness Center. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. Todos los derechos reservados.</p>
           <div className="flex gap-4">
             <Link href="/politica-de-datos" className="hover:text-white">Política de Privacidad</Link>
             <Link href="/mapa-del-sitio" className="hover:text-white">Mapa del Sitio</Link>

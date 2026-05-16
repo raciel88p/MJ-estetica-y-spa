@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { TestimonialGrid } from "@/components/testimonials/TestimonialGrid";
 import { motion } from "framer-motion";
-import { Star, ArrowRight, MapPin } from "lucide-react";
+import { Star, Quote, ArrowRight } from "lucide-react";
 import { StatsBar } from "@/components/StatsBar";
 
 const testimonials = [
@@ -171,14 +171,14 @@ const testimonials = [
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <>
+    <div className="flex gap-0.5">
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
           className={`w-4 h-4 ${i < rating ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}`}
         />
       ))}
-    </>
+    </div>
   );
 }
 
@@ -240,7 +240,7 @@ function Testimonios() {
       {/* Testimonials Grid */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
               <motion.div
                 key={i}
@@ -248,26 +248,20 @@ function Testimonios() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: (i % 3) * 0.1, duration: 0.5 }}
-                className="bg-white rounded-2xl p-6 shadow-sm border border-stone-100 hover:shadow-lg transition-all duration-300 flex flex-col gap-4"
+                className="bg-white rounded-2xl p-8 shadow-sm border border-border hover:shadow-lg transition-shadow flex flex-col"
               >
-                <p className="text-stone-600 italic leading-relaxed flex-1 text-sm">
+                <Quote className="w-8 h-8 text-primary/20 mb-4 shrink-0" />
+                <p className="text-foreground/80 italic leading-relaxed mb-6 flex-1">
                   "{t.text}"
                 </p>
-                <div className="flex gap-0.5 mb-1">
-                  <StarRating rating={t.rating} />
-                </div>
-                <div className="flex items-center gap-3 pt-3 border-t border-stone-100">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-serif text-lg shrink-0">
+                <div className="flex items-center gap-4 pt-4 border-t border-border">
+                  <div className="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-serif text-lg shrink-0">
                     {t.name.charAt(0)}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-stone-800">
-                      {t.name}
-                    </p>
-                    <div className="flex items-center gap-1 text-xs text-stone-500">
-                      <MapPin className="w-3 h-3" />
-                      <span>MJ Estética {t.service ? `· ${t.service}` : ''}</span>
-                    </div>
+                    <p className="font-bold text-foreground font-serif">{t.name}</p>
+                    {t.service && <p className="text-xs text-muted-foreground mb-1">{t.service}</p>}
+                    <StarRating rating={t.rating} />
                   </div>
                 </div>
               </motion.div>
