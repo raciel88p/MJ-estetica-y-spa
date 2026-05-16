@@ -209,7 +209,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
             </motion.h1>
 
             <motion.p variants={fadeUp} className="text-white/65 text-base md:text-lg max-w-2xl leading-relaxed mb-10">
-              {service.heroDescription}
+              <div dangerouslySetInnerHTML={{ __html: service.heroDescription.replace(/\n/g, "<br/>") }} />
             </motion.p>
 
             {/* Hero CTAs */}
@@ -256,7 +256,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       </section>
 
       {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
-      {!["botox-full-face","hilos-tensores","rellenos-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar"].includes(service.slug) && (
+      {!["botox-full-face","hilos-tensores","rellenos-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar","nutricion"].includes(service.slug) && (
       <section className="py-10 bg-white border-b border-stone-100">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
