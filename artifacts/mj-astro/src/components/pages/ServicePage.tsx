@@ -665,8 +665,10 @@ function ServicePage({ service }: { service: ServicePageData }) {
         </div>
       </section>
 
-          {/* Lic Terapiafísca Janeth Maria Molina Madrigal */}
-          <motion.div variants={fadeUp} className="bg-white rounded-lg p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-stone-100 flex flex-col md:flex-row gap-8 sm:gap-12 md:gap-16 items-start relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow">
+          {!["nutricion", "botox-full-face", "hilos-tensores", "rellenos-labios", "acido-hialuronico", "trasplante-capilar", "implante-barba", "mesoterapia-capilar"].includes(service.slug) && (
+            <>
+              {/* Lic Terapiafísca Janeth Maria Molina Madrigal */}
+              <motion.div variants={fadeUp} className="bg-white rounded-lg p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-stone-100 flex flex-col md:flex-row gap-8 sm:gap-12 md:gap-16 items-start relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow">
             <div className="absolute top-0 right-0 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-primary/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-700" />
 
             <div className="w-32 sm:w-40 md:w-56 shrink-0 relative">
@@ -711,7 +713,8 @@ function ServicePage({ service }: { service: ServicePageData }) {
               </a>
             </div>
           </motion.div>
-
+            </>
+          )}
       {/* ── FAQ ───────────────────────────────────────── */}
       {service.faq && service.faq.length > 0 && (
         <section className="py-20 md:py-28">
