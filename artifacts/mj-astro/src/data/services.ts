@@ -2271,4 +2271,97 @@ Rejuvenecimiento facial avanzado con resultados naturales.`,
       },
     ],
   },
+
+  // ── NUEVOS SERVICIOS (PLANTILLAS VACÍAS) ────────────
+  {
+    slug: "nuevo-servicio-1",
+    name: "Nuevo Servicio 1 (Plantilla)",
+    tagline: "Descripción corta y atractiva del nuevo servicio 1",
+    heroDescription:
+      "Esta es una plantilla de prueba para el Nuevo Servicio 1. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
+    benefits: [
+      "Beneficio destacado número 1 del servicio",
+      "Beneficio destacado número 2 del servicio",
+      "Beneficio destacado número 3 del servicio",
+      "Beneficio destacado número 4 del servicio",
+    ],
+    items: [
+      {
+        title: "Opción de Tratamiento 1",
+        description: "Breve descripción sobre esta variante específica del servicio.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Opción de Tratamiento 2",
+        description: "Breve descripción sobre esta variante específica del servicio.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Pregunta frecuente de ejemplo 1?",
+        answer: "Respuesta detallada a la pregunta frecuente número 1.",
+      },
+      {
+        question: "¿Pregunta frecuente de ejemplo 2?",
+        answer: "Respuesta detallada a la pregunta frecuente número 2.",
+      },
+    ],
+  },
+  {
+    slug: "nuevo-servicio-2",
+    name: "Nuevo Servicio 2 (Plantilla)",
+    tagline: "Descripción corta y atractiva del nuevo servicio 2",
+    heroDescription:
+      "Esta es una plantilla de prueba para el Nuevo Servicio 2. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
+    benefits: [
+      "Beneficio destacado número 1 del servicio",
+      "Beneficio destacado número 2 del servicio",
+      "Beneficio destacado número 3 del servicio",
+      "Beneficio destacado número 4 del servicio",
+    ],
+    items: [
+      {
+        title: "Opción de Tratamiento 1",
+        description: "Breve descripción sobre esta variante específica del servicio.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Pregunta frecuente de ejemplo 1?",
+        answer: "Respuesta detallada a la pregunta frecuente número 1.",
+      },
+    ],
+  },
+  {
+    slug: "nuevo-servicio-3",
+    name: "Nuevo Servicio 3 (Plantilla)",
+    tagline: "Descripción corta y atractiva del nuevo servicio 3",
+    heroDescription:
+      "Esta es una plantilla de prueba para el Nuevo Servicio 3. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
+    benefits: [
+      "Beneficio destacado número 1 del servicio",
+      "Beneficio destacado número 2 del servicio",
+      "Beneficio destacado número 3 del servicio",
+      "Beneficio destacado número 4 del servicio",
+    ],
+    items: [
+      {
+        title: "Opción de Tratamiento 1",
+        description: "Breve descripción sobre esta variante específica del servicio.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Pregunta frecuente de ejemplo 1?",
+        answer: "Respuesta detallada a la pregunta frecuente número 1.",
+      },
+    ],
+  },
 ];

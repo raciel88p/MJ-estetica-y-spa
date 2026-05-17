@@ -1,0 +1,23 @@
+
+> @workspace/mj-astro@0.0.1 dev /app/artifacts/mj-astro
+> astro dev
+
+[vite] connected.
+23:37:15 [types] Generated 1ms
+23:37:15 [vite] Re-optimizing dependencies because vite config has changed
+ astro  v6.3.1 ready in 2350 ms
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+23:37:15 watching for file changes...
+23:37:28 [200] / 102ms
+23:37:28 [200] / 38ms
+23:37:29 [200] / 37ms
+23:37:30 [404] /images/nosotros.webp 219ms
+23:37:30 [404] /images/tratamientos-c.jpg 200ms
+23:37:30 [404] /images/tratamientos-f.jpg 199ms
+23:37:30 [404] /images/tratamientos-p.jpg 198ms
+23:37:30 [404] /images/doctor-raciel.webp 197ms
+23:37:31 [watch] playwright-report/index.html
+/app/artifacts/mj-astro:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @workspace/mj-astro@0.0.1 dev: `astro dev`
+Exit status 143
