@@ -209,7 +209,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
             </motion.h1>
 
             <motion.p variants={fadeUp} className="text-white/65 text-base md:text-lg max-w-2xl leading-relaxed mb-10">
-              <div dangerouslySetInnerHTML={{ __html: service.heroDescription.replace(/\n/g, "<br/>") }} />
+              {service.heroDescription}
             </motion.p>
 
             {/* Hero CTAs */}
@@ -242,8 +242,30 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
 
 
+
+
+      {/* ── TRUST BAR ────────────────────────────────── */}
+      <section className="bg-[#040f19] py-5 border-b border-white/5">
+        <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {[
+            { icon: <Star className="w-4 h-4 fill-primary text-primary" />, text: "5★ en Google" },
+            { icon: <ShieldCheck className="w-4 h-4 text-primary" />,       text: "100% no invasivo" },
+            { icon: <Award className="w-4 h-4 text-primary" />,             text: "Profesionales certificados" },
+            { icon: <MessageCircle className="w-4 h-4 text-primary" />,     text: "Valoración gratuita" },
+          ].map((t) => (
+            <div key={t.text} className="flex items-center justify-center gap-2">
+              {t.icon}
+              <span className="text-white/60 text-xs font-medium tracking-wide">{t.text}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <StatsBar />
+
+
       {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
-      {!["botox-full-face","hilos-tensores","rellenos-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar","nutricion"].includes(service.slug) && (
+      {!["botox-full-face","hilos-tensores","rellenos-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar"].includes(service.slug) && (
       <section className="py-10 bg-white border-b border-stone-100">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -285,25 +307,6 @@ function ServicePage({ service }: { service: ServicePageData }) {
         </div>
       </section>
       )}
-
-{/* ── TRUST BAR ────────────────────────────────── */}
-      <section className="bg-[#040f19] py-5 border-b border-white/5">
-        <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {[
-            { icon: <Star className="w-4 h-4 fill-primary text-primary" />, text: "5★ en Google" },
-            { icon: <ShieldCheck className="w-4 h-4 text-primary" />,       text: "100% no invasivo" },
-            { icon: <Award className="w-4 h-4 text-primary" />,             text: "Profesionales certificados" },
-            { icon: <MessageCircle className="w-4 h-4 text-primary" />,     text: "Valoración gratuita" },
-          ].map((t) => (
-            <div key={t.text} className="flex items-center justify-center gap-2">
-              {t.icon}
-              <span className="text-white/60 text-xs font-medium tracking-wide">{t.text}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <StatsBar />
 
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
       {(() => {
@@ -383,6 +386,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
           </section>
         );
       })()}
+
 
       {/* ── BENEFITS ─────────────────────────────────── */}
       <section className="py-16 bg-stone-50">
@@ -620,7 +624,6 @@ function ServicePage({ service }: { service: ServicePageData }) {
         );
       })()}
 
-
       {/* ── SPECIALIST BOX ─────────────────────────────────── */}
       <section className="py-16 bg-white border-t border-stone-100">
         <div className="max-w-4xl mx-auto px-6 sm:px-10">
@@ -662,9 +665,10 @@ function ServicePage({ service }: { service: ServicePageData }) {
         </div>
       </section>
 
-
-          {/* Lic Terapiafísca Janeth Maria Molina Madrigal */}
-          <motion.div variants={fadeUp} className="bg-white rounded-lg p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-stone-100 flex flex-col md:flex-row gap-8 sm:gap-12 md:gap-16 items-start relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow">
+          {!["nutricion", "botox-full-face", "hilos-tensores", "rellenos-labios", "acido-hialuronico", "trasplante-capilar", "implante-barba", "mesoterapia-capilar"].includes(service.slug) && (
+            <>
+              {/* Lic Terapiafísca Janeth Maria Molina Madrigal */}
+              <motion.div variants={fadeUp} className="bg-white rounded-lg p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-stone-100 flex flex-col md:flex-row gap-8 sm:gap-12 md:gap-16 items-start relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow">
             <div className="absolute top-0 right-0 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-primary/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-700" />
 
             <div className="w-32 sm:w-40 md:w-56 shrink-0 relative">
@@ -709,7 +713,8 @@ function ServicePage({ service }: { service: ServicePageData }) {
               </a>
             </div>
           </motion.div>
-
+            </>
+          )}
       {/* ── FAQ ───────────────────────────────────────── */}
       {service.faq && service.faq.length > 0 && (
         <section className="py-20 md:py-28">

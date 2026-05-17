@@ -241,6 +241,26 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
 
 
 
+      {/* ── TRUST BAR ────────────────────────────────── */}
+      <section className="bg-[#040f19] py-5 border-b border-white/5">
+        <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          {[
+            { icon: <Star className="w-4 h-4 fill-primary text-primary" />, text: "5★ en Google" },
+            { icon: <ShieldCheck className="w-4 h-4 text-primary" />,       text: "100% no invasivo" },
+            { icon: <Award className="w-4 h-4 text-primary" />,             text: "Profesionales certificados" },
+            { icon: <MessageCircle className="w-4 h-4 text-primary" />,     text: "Valoración gratuita" },
+          ].map((t) => (
+            <div key={t.text} className="flex items-center justify-center gap-2">
+              {t.icon}
+              <span className="text-white/60 text-xs font-medium tracking-wide">{t.text}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <StatsBar />
+
+
       {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
       {!["botox-full-face","hilos-tensores","rellenos-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar","nutricion"].includes(service.slug) && (
       <section className="py-10 bg-white border-b border-stone-100">
@@ -284,25 +304,6 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
         </div>
       </section>
       )}
-
-{/* ── TRUST BAR ────────────────────────────────── */}
-      <section className="bg-[#040f19] py-5 border-b border-white/5">
-        <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          {[
-            { icon: <Star className="w-4 h-4 fill-primary text-primary" />, text: "5★ en Google" },
-            { icon: <ShieldCheck className="w-4 h-4 text-primary" />,       text: "100% no invasivo" },
-            { icon: <Award className="w-4 h-4 text-primary" />,             text: "Profesionales certificados" },
-            { icon: <MessageCircle className="w-4 h-4 text-primary" />,     text: "Valoración gratuita" },
-          ].map((t) => (
-            <div key={t.text} className="flex items-center justify-center gap-2">
-              {t.icon}
-              <span className="text-white/60 text-xs font-medium tracking-wide">{t.text}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <StatsBar />
 
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
       {(() => {
@@ -382,6 +383,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           </section>
         );
       })()}
+
 
       {/* ── BENEFITS ─────────────────────────────────── */}
       <section className="py-16 bg-stone-50">
