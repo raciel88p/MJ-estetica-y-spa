@@ -210,7 +210,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
             <motion.p
               variants={fadeUp}
-              className="text-white/65 text-base md:text-lg max-w-2xl leading-relaxed mb-10 whitespace-pre-wrap"
+              className="text-white/65 text-base md:text-lg max-w-2xl leading-relaxed mb-10"
               dangerouslySetInnerHTML={{ __html: service.heroDescription }}
             />
 
