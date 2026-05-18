@@ -481,7 +481,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           >
             <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">Beneficios</p>
             <h2 className="text-3xl font-serif font-bold text-stone-900">
-              {service.slug === "adn-salmon" ? "✨ BENEFICIOS DEL TRATAMIENTO" : "¿Por qué elegir este tratamiento?"}
+              ¿Por qué elegir este tratamiento?
             </h2>
           </motion.div>
 
@@ -494,7 +494,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 key={i} variants={fadeUp}
                 className="flex items-start gap-3 bg-white p-5 border border-stone-100 hover:border-primary/30 hover:shadow-sm transition-all"
               >
-                {service.slug !== "adn-salmon" && <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />}
+                <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-sm text-stone-700 font-medium leading-snug">{benefit}</span>
               </motion.div>
             ))}
