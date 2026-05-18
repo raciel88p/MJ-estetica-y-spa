@@ -423,7 +423,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                 <div className="text-center md:text-left bg-stone-900 p-8 md:p-12 text-white relative overflow-hidden">
                   <div className="relative z-10">
                     <p className="text-primary text-xs font-bold tracking-widest uppercase mb-4">¡Empieza hoy!</p>
-                    <h3 className="text-2xl md:text-3xl font-serif font-bold mb-6">Agenda hoy tu valoración personalizada</h3>
+                    <h3 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6">Agenda hoy tu valoración personalizada</h3>
                     <p className="text-white/60 mb-10 max-w-lg leading-relaxed">
                       Escríbenos por WhatsApp y descubre cuál paquete es ideal para ti.
                     </p>
