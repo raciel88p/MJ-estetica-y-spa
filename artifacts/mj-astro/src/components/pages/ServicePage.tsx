@@ -550,14 +550,14 @@ function ServicePage({ service }: { service: ServicePageData }) {
           <section className="py-20 bg-stone-900 text-white">
             <div className="max-w-4xl mx-auto px-6">
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                <h2 className="text-3xl font-serif font-bold mb-8 flex items-center gap-3">
-                  <span className="text-2xl">🌿</span> ¿CÓMO ES EL PROCEDIMIENTO?
+                <h2 className="text-3xl font-serif font-bold mb-8 flex items-center gap-3 text-white">
+                  <span className="text-2xl">🌿</span> Qué incluye
                 </h2>
                 <p className="text-stone-300 mb-10 leading-relaxed text-lg">
                   En MJ Estética Wellness Center realizamos una valoración personalizada para adaptar el protocolo a las necesidades de tu piel.
                 </p>
                 <div className="space-y-4 mb-10">
-                  <p className="text-primary font-bold uppercase tracking-widest text-xs">Tu sesión puede incluir:</p>
+                  <p className="text-primary font-bold uppercase tracking-widest text-xs">Tu sesión incluye</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[
                       "Limpieza facial profesional", "Aplicación de ADN de Salmón",
@@ -763,21 +763,23 @@ function ServicePage({ service }: { service: ServicePageData }) {
               {service.slug === "adn-salmon" ? "Rejuvenecimiento facial avanzado con resultados naturales." : "Reserva hoy — plazas limitadas"}
             </h2>
             {service.slug !== "adn-salmon" && (
-              <p className="text-white/75 text-sm mb-8 max-w-md mx-auto leading-relaxed">
-                Escríbenos por WhatsApp y te asesoramos sin costo. Diseñamos el protocolo ideal para tu caso.
-              </p>
+              <>
+                <p className="text-white/75 text-sm mb-8 max-w-md mx-auto leading-relaxed">
+                  Escríbenos por WhatsApp y te asesoramos sin costo. Diseñamos el protocolo ideal para tu caso.
+                </p>
+                <a
+                  id={`cta-urgency-${service.slug}`}
+                  href={WA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-white text-primary text-sm font-bold tracking-[0.15em] uppercase px-10 py-4 hover:bg-stone-100 transition-colors group"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Escribir por WhatsApp
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                </a>
+              </>
             )}
-            <a
-              id={`cta-urgency-${service.slug}`}
-              href={WA}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-white text-primary text-sm font-bold tracking-[0.15em] uppercase px-10 py-4 hover:bg-stone-100 transition-colors group"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Escribir por WhatsApp
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-            </a>
           </motion.div>
         </div>
       </section>
