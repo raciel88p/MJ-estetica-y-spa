@@ -469,7 +469,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                   <span className="inline-block px-4 py-1 bg-white/10 rounded-full text-[10px] font-bold tracking-widest uppercase mb-6 border border-white/20">
                     Regalo Especial
                   </span>
-                  <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8">Guía Gratuita de Belleza y Cuidado de la Piel</h2>
+                  <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8">Guía Gratuita de Belleza y <br /> Cuidado de la Piel</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-12 max-w-3xl mx-auto">
                     {[
                       "Cómo cuidar tu piel antes y después",
