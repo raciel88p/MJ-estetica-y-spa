@@ -753,13 +753,17 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       <section className="bg-primary py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <p className="text-white/70 text-xs font-bold tracking-[0.4em] uppercase mb-3">Valoración Sin Compromiso</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
-              Reserva hoy — plazas limitadas
-            </h2>
-            <p className="text-white/75 text-sm mb-8 max-w-md mx-auto leading-relaxed">
-              Escríbenos por WhatsApp y te asesoramos sin costo. Diseñamos el protocolo ideal para tu caso.
+            <p className="text-white/70 text-xs font-bold tracking-[0.4em] uppercase mb-3">
+              {service.slug === "adn-salmon" ? "✨ MJ Estética Wellness Center" : "Valoración Sin Compromiso"}
             </p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+              {service.slug === "adn-salmon" ? "Rejuvenecimiento facial avanzado con resultados naturales." : "Reserva hoy — plazas limitadas"}
+            </h2>
+            {service.slug !== "adn-salmon" && (
+              <p className="text-white/75 text-sm mb-8 max-w-md mx-auto leading-relaxed">
+                Escríbenos por WhatsApp y te asesoramos sin costo. Diseñamos el protocolo ideal para tu caso.
+              </p>
+            )}
             <a
               id={`cta-urgency-${service.slug}`}
               href={WA}
