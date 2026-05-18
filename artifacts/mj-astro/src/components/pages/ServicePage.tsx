@@ -484,7 +484,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
           >
             <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">Beneficios</p>
             <h2 className="text-3xl font-serif font-bold text-stone-900">
-              ¿Por qué elegir este tratamiento?
+              {service.slug === "adn-salmon" ? "✨ BENEFICIOS DEL TRATAMIENTO" : "¿Por qué elegir este tratamiento?"}
             </h2>
           </motion.div>
 
