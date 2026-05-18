@@ -306,57 +306,71 @@ export const servicePages: ServicePageData[] = [
     heroDescription:
       "Depilación Láser en Turrialba | MJ Estética & Wellness Center<br />Despídete del vello… y vuelve a sentirte cómoda con tu piel<br /><br />Reduce progresivamente el crecimiento del vello, evita irritación constante y luce una piel más suave y uniforme con tecnología de depilación láser profesional en MJ Estética & Wellness Center en Turrialba.",
     benefits: [
-      "Eliminación permanente del vello",
-      "Piel suave y sin irritaciones",
-      "Ahorro a largo plazo frente a otros métodos",
-      "Tratamiento rápido y cómodo",
-      "Resultados visibles desde las primeras sesiones",
+      "Menos tiempo rasurándote",
+      "Piel más suave y uniforme",
+      "Menos irritación diaria",
+      "Resultados progresivos visibles",
+      "Mayor comodidad y seguridad personal",
+      "Disminución del vello encarnado",
+      "Rutina de cuidado más práctica",
+      "Sensación de limpieza y frescura constante",
     ],
     items: [
       {
-        title: "Depilación Facial",
+        title: "Pack 3 Zonas",
         description:
-          "Tratamiento para labio superior, mentón, patillas y cuello. Elimina el vello de forma progresiva y definitiva.",
-        duration: "30 min",
+          "Incluye axila, pierna completa y bikini. La combinación ideal para comenzar tu transformación.",
+        price: "Desde ₡56,600",
+      },
+      {
+        title: "Paquetes Personalizados",
+        description:
+          "Diseñamos un plan a medida según las zonas que desees tratar y tus necesidades específicas.",
         price: "Consultar precio",
       },
       {
-        title: "Axila / Zona Bikini",
+        title: "Valoración Previa",
         description:
-          "Zonas delicadas tratadas con máxima precisión y confort. Resultados permanentes con protocolo de 6-8 sesiones.",
-        duration: "30 min",
-        price: "Consultar precio",
+          "Analizamos tu tipo de piel y vello para garantizar los mejores resultados desde la primera sesión.",
+        price: "Incluida",
       },
       {
-        title: "Piernas Completas",
+        title: "Promociones Especiales",
         description:
-          "Tratamiento completo de piernas desde las ingles hasta los tobillos. Incluye rodillas y partes posteriores.",
-        duration: "60-90 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Cuerpo Completo",
-        description:
-          "Protocolo integral para la eliminación del vello en todo el cuerpo. El paquete más completo con mayor ahorro.",
-        duration: "120 min",
-        price: "Consultar precio",
+          "Pregunta por nuestros descuentos vigentes al contratar varias zonas o paquetes de sesiones.",
+        price: "Consultar",
       },
     ],
     faq: [
       {
-        question: "¿Cuántas sesiones son necesarias?",
+        question: "¿La depilación láser duele?",
         answer:
-          "Generalmente entre 6 y 8 sesiones, separadas de 4 a 8 semanas, dependiendo de la zona y el tipo de vello. Algunas personas requieren sesiones de mantenimiento posteriores.",
+          "Generalmente es tolerable y rápida. La sensación suele describirse como pequeños “toques de calor” o “piquetitos leves”. Varía según la sensibilidad de cada persona.",
       },
       {
-        question: "¿El tratamiento es doloroso?",
+        question: "¿Sirve para piel morena?",
         answer:
-          "La sensación es mínima, similar a un ligero picor o calor. Nuestro equipo dispone de sistema de enfriamiento integrado para maximizar el confort durante el tratamiento.",
+          "Sí, dependiendo de la valoración profesional y el protocolo adecuado. Nuestra tecnología es segura para distintos tipos de piel.",
       },
       {
-        question: "¿Hay alguna contraindicación?",
+        question: "¿Puedo rasurarme entre sesiones?",
         answer:
-          "No está indicado durante el embarazo, si se toma fotosensibilizantes o con bronceado activo. En la consulta previa evaluamos tu caso de forma personalizada.",
+          "Sí. De hecho, normalmente se recomienda evitar otros métodos de arranque como cera o pinzas, y mantener el rasurado con cuchilla si es necesario.",
+      },
+      {
+        question: "¿Cuánto duran los resultados?",
+        answer:
+          "Muchas personas experimentan una reducción prolongada y duradera del vello con sesiones de mantenimiento ocasionales.",
+      },
+      {
+        question: "¿Qué zonas funcionan mejor?",
+        answer:
+          "Piernas, axilas, bikini, rostro, espalda y prácticamente cualquier zona del cuerpo donde desees eliminar el vello.",
+      },
+      {
+        question: "¿Puedo hacerme el tratamiento en verano?",
+        answer:
+          "Sí, siempre que se sigan correctamente las recomendaciones de cuidado solar y protección que te indicará nuestra especialista.",
       },
     ],
   },
