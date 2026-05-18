@@ -207,9 +207,11 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
               {service.name}
             </motion.h1>
 
-            <motion.p variants={fadeUp} className="text-white/65 text-base md:text-lg max-w-2xl leading-relaxed mb-10">
-              {service.heroDescription}
-            </motion.p>
+            <motion.p
+              variants={fadeUp}
+              className="text-white/65 text-base md:text-lg max-w-2xl leading-relaxed mb-10 whitespace-pre-wrap"
+              dangerouslySetInnerHTML={{ __html: service.heroDescription }}
+            />
 
             {/* Hero CTAs */}
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 items-start">

@@ -1113,13 +1113,108 @@ export const servicePages: ServicePageData[] = [
     slug: "adn-salmon",
     name: "ADN de Salmón",
     tagline: "Regeneración celular profunda para una piel radiante",
-    heroDescription: `✨ EL SECRETO COREANO QUE ESTÁ REVOLUCIONANDO EL REJUVENECIMIENTO FACIAL YA LLEGÓ A Turrialba ✨
-
+    heroDescription: `✨ EL SECRETO COREANO QUE ESTÁ REVOLUCIONANDO EL REJUVENECIMIENTO FACIAL YA LLEGÓ A TURRIALBA ✨
+<br / >
 ¿Te imaginas despertar con una piel más luminosa, hidratada y rejuvenecida… sin cirugías ni cambios artificiales?
-
+<br / >
 Eso es exactamente lo que muchas personas están logrando gracias al tratamiento de ADN de Salmón, una de las terapias más innovadoras en medicina estética avanzada.
+<br / >
+Y ahora puedes vivirlo en MJ Estética Wellness Center.
+<br / >
+👇
 
-Y ahora puedes vivirlo en MJ Estética Wellness Center.`,
+💧 ¿QUÉ ES EL ADN DE SALMÓN?
+
+El ADN de Salmón es un poderoso bioestimulador dérmico utilizado en protocolos de rejuvenecimiento facial de alta gama alrededor del mundo.
+
+Su función principal es ayudar a regenerar la piel desde el interior, estimulando la producción natural de colágeno, mejorando la hidratación profunda y devolviendo luminosidad al rostro.
+
+No cambia tu expresión.
+No transforma tu rostro.
+Solo mejora la calidad de tu piel de forma natural y progresiva.
+
+✨ El resultado:
+Una piel más sana, fresca, firme y radiante.
+
+—
+
+😔 ¿Sientes que tu piel luce cansada, opaca o deshidratada?
+
+Con el paso del tiempo, el estrés, el sol y la contaminación hacen que la piel pierda:
+
+❌ Elasticidad
+❌ Hidratación
+❌ Luminosidad
+❌ Firmeza
+❌ Uniformidad
+
+Y muchas veces, aunque uses cremas o skincare… la piel ya necesita regeneración profunda.
+
+Ahí es donde el ADN de Salmón marca la diferencia.
+
+—
+
+🌿 ¿CÓMO ES EL PROCEDIMIENTO?
+
+En MJ Estética Wellness Center realizamos una valoración personalizada para adaptar el protocolo a las necesidades de tu piel.
+
+Tu sesión puede incluir:
+
+✨ Limpieza facial profesional
+✨ Aplicación de Polynucleotides
+✨ Microneedling o bioestimulación
+✨ Protocolo calmante e hidratante
+✨ Recomendaciones post tratamiento
+
+Es un procedimiento mínimamente invasivo y la recuperación suele ser rápida.
+
+—
+
+📍 ¿POR QUÉ TANTAS PERSONAS ESTÁN HABLANDO DEL ADN DE SALMÓN?
+
+Porque los resultados se sienten naturales.
+
+La piel comienza a verse más hidratada y luminosa desde las primeras sesiones, mientras que la firmeza y regeneración mejoran progresivamente.
+
+No es un cambio artificial.
+Es una mejor versión de tu piel.
+
+💖 ¿POR QUÉ ELEGIR MJ ESTÉTICA WELLNESS CENTER?
+
+En MJ Estética Wellness Center combinamos bienestar, estética avanzada y protocolos personalizados para ayudarte a lograr resultados reales y naturales.
+
+Nos enfocamos en:
+
+✔ Atención personalizada
+✔ Protocolos modernos de rejuvenecimiento
+✔ Tecnología estética avanzada
+✔ Experiencia wellness integral
+✔ Resultados progresivos y seguros
+
+Tu piel merece más que un tratamiento.
+Merece cuidado profesional y un enfoque pensado para ti.
+
+—
+
+🎁 GUÍA GRATUITA DE BELLEZA
+
+Por comentar la palabra “ADN” o “Salmón”, queremos regalarte nuestra guía exclusiva de cuidado facial y rejuvenecimiento.
+
+Descárgala aquí 👇
+[DESCARGAR GUÍA GRATUITA](https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0)
+
+—
+
+🔥 AGENDA TU VALORACIÓN
+
+Si deseas mejorar la calidad de tu piel, recuperar luminosidad y experimentar uno de los tratamientos más innovadoras de la medicina estética moderna…
+
+Este puede ser el momento perfecto para comenzar.
+
+👉 Reserve su cita el siguiente enlace adentro: [https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0](https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0)
+
+✨ MJ Estética Wellness Center
+Rejuvenecimiento facial avanzado con resultados naturales.`,
     benefits: [
       "Rejuvenece la piel de forma natural",
       "Mejora líneas finas y signos tempranos de envejecimiento",
