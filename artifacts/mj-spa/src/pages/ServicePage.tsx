@@ -387,6 +387,90 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       })()}
 
 
+      {/* ── WHAT IS SALMON DNA? ─────────────────────── */}
+      {service.slug === "adn-salmon" && (
+        <section className="py-20 bg-white overflow-hidden">
+          <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
+            <motion.div
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+              className="relative"
+            >
+              <div className="absolute -left-4 top-0 w-1 h-24 bg-primary/20 rounded-full hidden md:block" />
+              <div className="flex items-center gap-3 mb-8">
+                <div className="w-12 h-px bg-primary/30" />
+                <span className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">Introducción</span>
+              </div>
+
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-10 leading-tight">
+                💧 ¿QUÉ ES EL <br />
+                <span className="text-primary italic font-light">ADN DE SALMÓN?</span>
+              </h2>
+
+              <div className="space-y-6 text-stone-600 text-base md:text-lg leading-relaxed">
+                <p>
+                  El ADN de Salmón es un poderoso bioestimulador dérmico utilizado en protocolos de rejuvenecimiento facial de alta gama alrededor del mundo.
+                </p>
+                <p>
+                  Su función principal es ayudar a regenerar la piel desde el interior, estimulando la producción natural de colágeno, mejorando la hidratación profunda y devolviendo luminosidad al rostro.
+                </p>
+
+                <div className="py-6 border-y border-stone-100 my-8">
+                  <p className="font-serif italic text-stone-800 text-xl">
+                    No cambia tu expresión. <br />
+                    No transforma tu rostro. <br />
+                    <span className="text-primary not-italic font-bold">Solo mejora la calidad de tu piel de forma natural y progresiva.</span>
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-4 bg-stone-50 p-6 rounded-sm border-l-4 border-primary">
+                  <span className="text-2xl">✨</span>
+                  <div>
+                    <p className="text-primary text-xs font-bold tracking-widest uppercase mb-1">El resultado:</p>
+                    <p className="text-stone-900 font-serif font-bold text-xl">Una piel más sana, fresca, firme y radiante.</p>
+                  </div>
+                </div>
+
+                <div className="pt-12">
+                  <h3 className="text-2xl font-serif font-bold text-stone-900 mb-6 flex items-center gap-3">
+                    <span className="text-xl">😔</span> ¿Sientes que tu piel luce cansada, opaca o deshidratada?
+                  </h3>
+                  <p className="mb-6">
+                    Con el paso del tiempo, el estrés, el sol y la contaminación hacen que la piel pierda:
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                    {[
+                      { icon: "❌", text: "Elasticidad" },
+                      { icon: "❌", text: "Hidratación" },
+                      { icon: "❌", text: "Luminosidad" },
+                      { icon: "❌", text: "Firmeza" },
+                      { icon: "❌", text: "Uniformidad" },
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-center gap-3 text-stone-700 font-medium border-b border-stone-50 pb-2">
+                        <span className="text-xs">{item.icon}</span>
+                        <span>{item.text}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="text-stone-600 italic">
+                    Y muchas veces, aunque uses cremas o skincare… la piel ya necesita regeneración profunda.
+                  </p>
+
+                  <div className="mt-8 flex items-center gap-4">
+                    <div className="h-px flex-1 bg-stone-200" />
+                    <p className="text-stone-900 font-serif font-bold text-lg text-center px-4">
+                      Ahí es donde el ADN de Salmón marca la diferencia.
+                    </p>
+                    <div className="h-px flex-1 bg-stone-200" />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* ── BENEFITS ─────────────────────────────────── */}
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
