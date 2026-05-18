@@ -420,8 +420,8 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 <div className="text-center md:text-left bg-stone-900 p-8 md:p-12 text-white relative overflow-hidden">
                   <div className="relative z-10">
                     <p className="text-primary text-xs font-bold tracking-widest uppercase mb-4">¡Empieza hoy!</p>
-                    <h3 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6">Agenda hoy tu valoración personalizada</h3>
-                    <p className="text-white/60 mb-10 max-w-lg leading-relaxed">
+                    <h3 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6">👉 Agenda hoy tu valoración personalizada</h3>
+                    <p className="text-white mb-10 max-w-lg leading-relaxed">
                       Escríbenos por WhatsApp y descubre cuál paquete es ideal para ti.
                     </p>
                     <a
@@ -696,9 +696,14 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-900 p-8 text-white rounded-sm">
                     <p className="text-primary text-xs font-bold tracking-widest uppercase mb-4">Finaliza hoy el rasurado</p>
                     <h3 className="text-2xl font-serif font-bold mb-6 leading-tight">Tu piel puede verse y sentirse diferente</h3>
-                    <p className="text-white/60 text-sm mb-10 leading-relaxed italic">
+                    <p className="text-white mb-8 leading-relaxed italic">
                       Cada día que pospones empezar… es otro día lidiando con irritación, rasurado constante y molestias innecesarias. Hoy puede ser el momento de cambiar eso.
                     </p>
+                    <div className="space-y-2 mb-10 text-sm font-medium text-white">
+                      <p>👉 Agenda tu valoración personalizada ahora</p>
+                      <p>👉 Descubre el paquete ideal para ti</p>
+                      <p>👉 Escríbenos por WhatsApp</p>
+                    </div>
                     <a
                       href={WA}
                       target="_blank"
