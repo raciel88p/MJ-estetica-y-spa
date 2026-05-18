@@ -390,6 +390,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       })()}
 
 
+
       {/* ── WHAT IS SALMON DNA? ─────────────────────── */}
       {service.slug === "adn-salmon" && (
         <section className="py-20 bg-white overflow-hidden">
