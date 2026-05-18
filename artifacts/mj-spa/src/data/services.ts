@@ -1115,13 +1115,13 @@ export const servicePages: ServicePageData[] = [
     tagline: "Regeneración celular profunda para una piel radiante",
     heroDescription: "✨ EL SECRETO COREANO QUE ESTÁ REVOLUCIONANDO EL REJUVENECIMIENTO FACIAL YA LLEGÓ A TURRIALBA ✨<br /><br />¿Te imaginas despertar con una piel más luminosa, hidratada y rejuvenecida… sin cirugías ni cambios artificiales?<br /><br />Eso es exactamente lo que muchas personas están logrando gracias al tratamiento de ADN de Salmón, una de las terapias más innovadoras en medicina estética avanzada.<br /><br />Y ahora puedes vivirlo en MJ Estética Wellness Center.<br /><br />👇",
     benefits: [
-      "Rejuvenece la piel de forma natural",
-      "Mejora líneas finas y signos tempranos de envejecimiento",
-      "Estimula colágeno y elasticidad",
-      "Aporta hidratación profunda",
-      "Mejora textura y luminosidad",
-      "Ayuda a revitalizar piel cansada o estresada",
-      "Efecto “glow” saludable y elegante"
+      "✔ Rejuvenece la piel de forma natural",
+      "✔ Mejora líneas finas y signos tempranos de envejecimiento",
+      "✔ Estimula colágeno y elasticidad",
+      "✔ Aporta hidratación profunda",
+      "✔ Mejora textura y luminosidad",
+      "✔ Ayuda a revitalizar piel cansada o estresada",
+      "✔ Efecto “glow” saludable y elegante"
     ],
     items: [
       {
