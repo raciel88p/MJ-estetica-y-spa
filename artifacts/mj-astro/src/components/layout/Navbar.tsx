@@ -10,8 +10,8 @@ import {
   tratamientosPiernasLinks,
 } from "@/data/services";
 
-const corporalesHalf1 = tratamientosCorporalesLinks.slice(0, 7);
-const corporalesHalf2 = tratamientosCorporalesLinks.slice(7);
+const corporalesHalf1 = tratamientosCorporalesLinks.slice(0, 6);
+const corporalesHalf2 = tratamientosCorporalesLinks.slice(6);
 
 type DropdownKey = "nosotros" | "servicios" | "medicos" | "paquetes" | null;
 
