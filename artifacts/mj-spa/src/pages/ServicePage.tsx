@@ -11,6 +11,7 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { StatsBar } from "@/components/StatsBar";
 import { LaserServiceContent } from "@/components/services/LaserServiceContent";
+import { HydrolipoclasiaContent } from "@/components/services/HydrolipoclasiaContent";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
@@ -245,7 +246,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── TRUST BAR ────────────────────────────────── */}
-      {service.slug !== "depilacion-laser" && (
+      {!["depilacion-laser", "masajes-corporales"].includes(service.slug) && (
       <section className="bg-[#040f19] py-5 border-b border-white/5">
         <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
@@ -263,7 +264,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       </section>
       )}
 
-      {service.slug !== "depilacion-laser" && <StatsBar />}
+      {!["depilacion-laser", "masajes-corporales"].includes(service.slug) && <StatsBar />}
 
 
       {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
@@ -313,6 +314,11 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       {/* ── CUSTOM CONTENT: DEPILACIÓN LÁSER ────────────────── */}
       {service.slug === "depilacion-laser" && (
         <LaserServiceContent service={service} waLink={WA} />
+      )}
+
+      {/* ── CUSTOM CONTENT: HIDROLIPOCLASIA ────────────────── */}
+      {service.slug === "masajes-corporales" && (
+        <HydrolipoclasiaContent waLink={WA} />
       )}
 
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
@@ -572,7 +578,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
-      {service.slug !== "depilacion-laser" && (
+      {!["depilacion-laser", "masajes-corporales"].includes(service.slug) && (
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -619,7 +625,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {service.slug !== "adn-salmon" && (
+      {!["adn-salmon", "masajes-corporales"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -784,6 +790,13 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 <p className="text-white/45 text-sm max-w-sm mx-auto leading-relaxed">
                   Así cambia la vida de nuestras clientas con {service.name.toLowerCase()}.
                 </p>
+                {service.slug === "masajes-corporales" && (
+                  <div className="mt-6 flex flex-col gap-2 text-white/60 text-xs font-bold uppercase tracking-widest">
+                    <p>📸 Resultados reales</p>
+                    <p>📸 Casos personalizados</p>
+                    <p>📸 Seguimiento progresivo</p>
+                  </div>
+                )}
               </motion.div>
 
               <motion.div
@@ -885,7 +898,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && service.slug !== "depilacion-laser" && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div
