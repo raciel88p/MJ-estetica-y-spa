@@ -922,7 +922,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       </section>
       )}
 
-          {!["nutricion", "botox-full-face", "hilos-tensores", "rellenos-labios", "acido-hialuronico", "trasplante-capilar", "implante-barba", "mesoterapia-capilar", "depilacion-laser", "biorevitalizacion"].includes(service.slug) && (
+          {!["nutricion", "botox-full-face", "hilos-tensores", "rellenos-labios", "acido-hialuronico", "trasplante-capilar", "implante-barba", "mesoterapia-capilar", "depilacion-laser", "biorevitalizacion", "masajes-corporales"].includes(service.slug) && (
             <>
               {/* Lic Terapiafísca Janeth Maria Molina Madrigal */}
               <motion.div variants={fadeUp} className="bg-white rounded-lg p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-stone-100 flex flex-col md:flex-row gap-8 sm:gap-12 md:gap-16 items-start relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow">
