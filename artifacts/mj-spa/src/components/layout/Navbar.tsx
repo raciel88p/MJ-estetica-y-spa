@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback, type Dispatch, type SetStateA
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "wouter";
+
 import {
   medicoEsteticosLinks,
   tratamientosCorporalesLinks,
@@ -10,8 +10,8 @@ import {
   tratamientosPiernasLinks,
 } from "@/data/services";
 
-const corporalesHalf1 = tratamientosCorporalesLinks.slice(0, 7);
-const corporalesHalf2 = tratamientosCorporalesLinks.slice(7);
+const corporalesHalf1 = tratamientosCorporalesLinks.slice(0, 6);
+const corporalesHalf2 = tratamientosCorporalesLinks.slice(6);
 
 type DropdownKey = "nosotros" | "servicios" | "medicos" | "paquetes" | null;
 
@@ -82,7 +82,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center cursor-pointer group">
+          <a href="/" className="flex items-center cursor-pointer group">
             <img
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
               alt="MJ Fisio Estética y Spa"
@@ -91,7 +91,7 @@ export function Navbar() {
               width="160"
               height="64"
             />
-          </Link>
+          </a>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
@@ -119,20 +119,18 @@ export function Navbar() {
                   >
                     <div className="w-52 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
                       <div className="px-3 pt-4 pb-3 flex flex-col gap-1">
-                        <Link
-                          href="/nosotros"
+                        <a href="/nosotros"
                           className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                           onClick={() => setOpenDropdown(null)}
                         >
                           Sobre Nosotros
-                        </Link>
-                        <Link
-                          href="/buzon-sugerencias"
+                        </a>
+                        <a href="/buzon-sugerencias"
                           className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                           onClick={() => setOpenDropdown(null)}
                         >
                           Buzón de Sugerencias
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </motion.div>
@@ -140,13 +138,13 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            <Link href="/testimonios" className={`${linkBase} ${textClass}`}>
+            <a href="/testimonios" className={`${linkBase} ${textClass}`}>
               Testimonios
-            </Link>
+            </a>
 
-            <Link href="/paquetes" className={`${linkBase} ${textClass}`}>
+            <a href="/paquetes" className={`${linkBase} ${textClass}`}>
               Paquetes
-            </Link>
+            </a>
 
             {/* ── Servicios Dropdown ── */}
             <div
@@ -177,75 +175,72 @@ export function Navbar() {
                         <div className="grid grid-cols-4 gap-x-4">
                           {/* Corporales col 1 */}
                           <div>
-                            <Link
-                              href="/tratamientos/corporales"
+                            <a href="/tratamientos/corporales"
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
                               Corporales
-                            </Link>
+                            </a>
                             {corporalesHalf1.map((link) => (
-                              <Link
+                              <a
                                 key={link.name}
                                 href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
                                 {link.name}
-                              </Link>
+                              </a>
                             ))}
                           </div>
                           {/* Corporales col 2 (continuation) */}
                           <div className="pt-6">
                             {corporalesHalf2.map((link) => (
-                              <Link
+                              <a
                                 key={link.name}
                                 href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
                                 {link.name}
-                              </Link>
+                              </a>
                             ))}
                           </div>
                           {/* Faciales */}
                           <div>
-                            <Link
-                              href="/tratamientos/faciales"
+                            <a href="/tratamientos/faciales"
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
                               Faciales
-                            </Link>
+                            </a>
                             {tratamientosFacialesLinks.map((link) => (
-                              <Link
+                              <a
                                 key={link.name}
                                 href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
                                 {link.name}
-                              </Link>
+                              </a>
                             ))}
                           </div>
                           {/* Piernas */}
                           <div>
-                            <Link
-                              href="/tratamientos/piernas"
+                            <a href="/tratamientos/piernas"
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
                               Piernas
-                            </Link>
+                            </a>
                             {tratamientosPiernasLinks.map((link) => (
-                              <Link
+                              <a
                                 key={link.name}
                                 href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
                                 {link.name}
-                              </Link>
+                              </a>
                             ))}
                           </div>
                         </div>
@@ -284,14 +279,14 @@ export function Navbar() {
                         </p>
                         <div className="flex flex-col gap-1">
                           {medicoEsteticosLinks.map((link) => (
-                            <Link
+                            <a
                               key={link.name}
                               href={link.href}
                               className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                               onClick={() => setOpenDropdown(null)}
                             >
                               {link.name}
-                            </Link>
+                            </a>
                           ))}
                         </div>
                       </div>
@@ -357,41 +352,37 @@ export function Navbar() {
                       className="overflow-hidden"
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
-                        <Link
-                          href="/nosotros"
+                        <a href="/nosotros"
                           className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                         >
                           Sobre Nosotros
-                        </Link>
-                        <Link
-                          href="/buzon-sugerencias"
+                        </a>
+                        <a href="/buzon-sugerencias"
                           className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                         >
                           Buzón de Sugerencias
-                        </Link>
+                        </a>
                       </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
 
-              <Link
-                href="/testimonios"
+              <a href="/testimonios"
                 className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Testimonios
-              </Link>
+              </a>
 
-              <Link
-                href="/paquetes"
+              <a href="/paquetes"
                 className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Paquetes
-              </Link>
+              </a>
 
               {/* Mobile Services Accordion */}
               <div className="border-b border-muted">
@@ -413,62 +404,59 @@ export function Navbar() {
                       <div className="pb-3 pl-4 flex flex-col gap-1">
                         {/* Corporales */}
                         <div className="mb-2">
-                          <Link
-                            href="/tratamientos/corporales"
+                          <a href="/tratamientos/corporales"
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
                             Corporales
-                          </Link>
+                          </a>
                           {tratamientosCorporalesLinks.map((link) => (
-                            <Link
+                            <a
                               key={link.name}
                               href={link.href}
                               className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
                               onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                             >
                               {link.name}
-                            </Link>
+                            </a>
                           ))}
                         </div>
                         {/* Faciales */}
                         <div className="mb-2">
-                          <Link
-                            href="/tratamientos/faciales"
+                          <a href="/tratamientos/faciales"
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
                             Faciales
-                          </Link>
+                          </a>
                           {tratamientosFacialesLinks.map((link) => (
-                            <Link
+                            <a
                               key={link.name}
                               href={link.href}
                               className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
                               onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                             >
                               {link.name}
-                            </Link>
+                            </a>
                           ))}
                         </div>
                         {/* Piernas */}
                         <div className="mb-2">
-                          <Link
-                            href="/tratamientos/piernas"
+                          <a href="/tratamientos/piernas"
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
                             Piernas
-                          </Link>
+                          </a>
                           {tratamientosPiernasLinks.map((link) => (
-                            <Link
+                            <a
                               key={link.name}
                               href={link.href}
                               className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
                               onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                             >
                               {link.name}
-                            </Link>
+                            </a>
                           ))}
                         </div>
                       </div>
@@ -496,14 +484,14 @@ export function Navbar() {
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
                         {medicoEsteticosLinks.map((link) => (
-                          <Link
+                          <a
                             key={link.name}
                             href={link.href}
                             className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileMedicosOpen(false); }}
                           >
                             {link.name}
-                          </Link>
+                          </a>
                         ))}
                       </div>
                     </motion.div>

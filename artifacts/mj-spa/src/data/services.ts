@@ -32,16 +32,13 @@ export const tratamientosCorporalesLinks = [
   { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
   { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
   { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios" },
-  { name: "Reducción de Medidas", href: "/servicios/reduccion-de-medidas" },
   { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
-  { name: "Drenaje Linfático", href: "/servicios/drenaje-linfatico" },
   { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
   { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
   { name: "Carboxiterapia", href: "/servicios/carboxiterapia" },
   { name: "Levantamiento de Glúteo", href: "/servicios/levantamiento-gluteo" },
   { name: "Levantamiento de Busto", href: "/servicios/levantamiento-busto" },
   { name: "Vendas Frías", href: "/servicios/vendas-frias" },
-  { name: "Maderoterapia", href: "/servicios/maderoterapia" },
   { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
   { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
 ];
@@ -306,71 +303,57 @@ export const servicePages: ServicePageData[] = [
     heroDescription:
       "Depilación Láser en Turrialba | MJ Estética & Wellness Center<br />Despídete del vello… y vuelve a sentirte cómoda con tu piel<br /><br />Reduce progresivamente el crecimiento del vello, evita irritación constante y luce una piel más suave y uniforme con tecnología de depilación láser profesional en MJ Estética & Wellness Center en Turrialba.",
     benefits: [
-      "Menos tiempo rasurándote",
-      "Piel más suave y uniforme",
-      "Menos irritación diaria",
-      "Resultados progresivos visibles",
-      "Mayor comodidad y seguridad personal",
-      "Disminución del vello encarnado",
-      "Rutina de cuidado más práctica",
-      "Sensación de limpieza y frescura constante",
+      "Eliminación permanente del vello",
+      "Piel suave y sin irritaciones",
+      "Ahorro a largo plazo frente a otros métodos",
+      "Tratamiento rápido y cómodo",
+      "Resultados visibles desde las primeras sesiones",
     ],
     items: [
       {
-        title: "✨ Sesiones desde ₡56600",
+        title: "Depilación Facial",
         description:
-          "Con 3 zonas: axila, pierna completa y bikini.",
-        price: "₡56600",
+          "Tratamiento para labio superior, mentón, patillas y cuello. Elimina el vello de forma progresiva y definitiva.",
+        duration: "30 min",
+        price: "Consultar precio",
       },
       {
-        title: "✨ Paquetes personalizados",
+        title: "Axila / Zona Bikini",
         description:
-          "Diseñamos el plan ideal para ti según las zonas que desees tratar.",
-        price: "Consultar",
+          "Zonas delicadas tratadas con máxima precisión y confort. Resultados permanentes con protocolo de 6-8 sesiones.",
+        duration: "30 min",
+        price: "Consultar precio",
       },
       {
-        title: "✨ Valoración previa incluida",
+        title: "Piernas Completas",
         description:
-          "Analizamos tu tipo de piel y vello para garantizar los mejores resultados.",
-        price: "Incluida",
+          "Tratamiento completo de piernas desde las ingles hasta los tobillos. Incluye rodillas y partes posteriores.",
+        duration: "60-90 min",
+        price: "Consultar precio",
       },
       {
-        title: "✨ Promociones especiales por zonas",
+        title: "Cuerpo Completo",
         description:
-          "Pregunta por nuestros descuentos al contratar múltiples áreas.",
-        price: "Consultar",
+          "Protocolo integral para la eliminación del vello en todo el cuerpo. El paquete más completo con mayor ahorro.",
+        duration: "120 min",
+        price: "Consultar precio",
       },
     ],
     faq: [
       {
-        question: "¿La depilación láser duele?",
+        question: "¿Cuántas sesiones son necesarias?",
         answer:
-          "Generalmente es tolerable y rápida. La sensación varía según la sensibilidad de cada persona.",
+          "Generalmente entre 6 y 8 sesiones, separadas de 4 a 8 semanas, dependiendo de la zona y el tipo de vello. Algunas personas requieren sesiones de mantenimiento posteriores.",
       },
       {
-        question: "¿Sirve para piel morena?",
+        question: "¿El tratamiento es doloroso?",
         answer:
-          "Sí, dependiendo de la valoración profesional y el protocolo adecuado.",
+          "La sensación es mínima, similar a un ligero picor o calor. Nuestro equipo dispone de sistema de enfriamiento integrado para maximizar el confort durante el tratamiento.",
       },
       {
-        question: "¿Puedo rasurarme entre sesiones?",
+        question: "¿Hay alguna contraindicación?",
         answer:
-          "Sí. De hecho, normalmente se recomienda evitar otros métodos como cera.",
-      },
-      {
-        question: "¿Cuánto duran los resultados?",
-        answer:
-          "Muchas personas experimentan una reducción prolongada del vello con sesiones de mantenimiento.",
-      },
-      {
-        question: "¿Qué zonas funcionan mejor?",
-        answer:
-          "Piernas, axilas, bikini, rostro, espalda y muchas más.",
-      },
-      {
-        question: "¿Puedo hacerme el tratamiento en verano?",
-        answer:
-          "Sí, siguiendo correctamente las recomendaciones de cuidado solar.",
+          "No está indicado durante el embarazo, si se toma fotosensibilizantes o con bronceado activo. En la consulta previa evaluamos tu caso de forma personalizada.",
       },
     ],
   },
@@ -794,62 +777,6 @@ export const servicePages: ServicePageData[] = [
 
   // ── CORPORALES NUEVOS ──────────────────────────────
   {
-    slug: "reduccion-de-medidas",
-    name: "Reducción de Medidas",
-    tagline: "Moldea tu figura con tecnología de vanguardia",
-    heroDescription:
-      "En MJ Fisio Estética y Spa ofrecemos técnicas no invasivas de reducción de medidas y moldeamiento corporal para eliminar la adiposidad localizada y combatir la celulitis, sin importar tu edad.",
-    benefits: [
-      "Eliminación de grasa localizada sin cirugía",
-      "Reducción visible de la celulitis",
-      "Mejoría en la textura y firmeza de la piel",
-      "Sin tiempo de recuperación",
-      "Resultados progresivos y duraderos",
-    ],
-    items: [
-      {
-        title: "Tratamiento Reductor Integral",
-        description:
-          "Protocolo combinado de ultrasonidos, radiofrecuencia y drenaje linfático para reducir medidas y remodelar la silueta en zonas como abdomen, caderas y muslos.",
-        duration: "75 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Masaje Anticelulítico Intensivo",
-        description:
-          "Técnica de amasamiento profundo sobre las zonas de celulitis para mejorar la circulación local, la textura de la piel y la apariencia de la piel de naranja.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Vendas Frías Reductoras",
-        description:
-          "Aplicación de vendas con activos reductores y drenantes que potencian la pérdida de medidas en una sola sesión.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Electro-estimulación Corporal",
-        description:
-          "Combinación de corrientes musculares para tonificar, reducir y modelar distintas zonas del cuerpo de forma simultánea.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuántas sesiones necesito para ver resultados?",
-        answer:
-          "Lo habitual es notar cambios desde la 3ª–4ª sesión. Para resultados óptimos se recomienda un protocolo de 10 a 15 sesiones, combinado con alimentación saludable.",
-      },
-      {
-        question: "¿El tratamiento es doloroso?",
-        answer:
-          "No, en general son tratamientos cómodos. Algunos pueden producir una sensación de calor o presión tolerable.",
-      },
-    ],
-  },
-  {
     slug: "tensado-corporal",
     name: "Tensado Corporal",
     tagline: "Reafirma y esculpe tu silueta sin cirugía",
@@ -910,56 +837,6 @@ export const servicePages: ServicePageData[] = [
       },
     ],
   },
-  {
-    slug: "drenaje-linfatico",
-    name: "Drenaje Linfático",
-    tagline: "Elimina toxinas, activa tu circulación y reduce la retención",
-    heroDescription:
-      "El drenaje linfático manual y mecánico (presoterapia) estimula el sistema linfático para evacuar toxinas, líquidos retenidos y metabolitos, dejando el cuerpo más ligero, desinflamado y con mayor bienestar.",
-    benefits: [
-      "Reducción inmediata de la retención de líquidos",
-      "Mejora la circulación venosa y linfática",
-      "Disminuye la inflamación y la pesadez en piernas",
-      "Favorece la eliminación de toxinas",
-      "Refuerza el sistema inmunológico",
-    ],
-    items: [
-      {
-        title: "Drenaje Linfático Manual",
-        description:
-          "Técnica de masaje suave y rítmico sobre los ganglios linfáticos para activar el sistema de drenaje natural del cuerpo.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Presoterapia",
-        description:
-          "Tratamiento mediante botas o traje de presión que aplica una compresión neumática progresiva para drenar el exceso de líquido linfático.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Drenaje Linfático Post-operatorio",
-        description:
-          "Protocolo específico para acelerar la recuperación tras intervenciones estéticas o quirúrgicas, reduciendo edema, moretones y fibrosis.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cada cuánto se recomienda el drenaje linfático?",
-        answer:
-          "Para mantenimiento general, una vez al mes. Para recuperación post-quirúrgica o problemas de retención severa, puede indicarse 2–3 veces por semana inicialmente.",
-      },
-      {
-        question: "¿Tiene contraindicaciones?",
-        answer:
-          "Sí. Está contraindicado en infecciones agudas, trombosis, insuficiencia cardíaca y algunos tipos de cáncer. En la valoración previa evaluamos tu caso.",
-      },
-    ],
-  },
-
   // ── FACIALES NUEVOS ────────────────────────────────
   {
     slug: "hollywood-peel",
@@ -1641,64 +1518,8 @@ export const servicePages: ServicePageData[] = [
 
   // ── MADEROTERAPIA ──────────────────────────────────
   {
-    slug: "maderoterapia",
-    name: "Maderoterapia",
-    tagline: "El poder de la madera para modelar y transformar tu cuerpo",
-    heroBg: "maderoterapia-bg.webp",
-    heroDescription:
-      "La maderoterapia es una técnica de origen colombiano que utiliza instrumentos de madera para realizar maniobras específicas sobre el cuerpo, logrando un modelado corporal profundo, reducción de celulitis y una silueta más definida. Un tratamiento 100% natural, intensamente efectivo y completamente libre de sustancias químicas.",
-    benefits: [
-      "Moldea y define la silueta de forma visible y progresiva",
-      "Reduce la celulitis y mejora la textura de la piel",
-      "Activa la circulación y el metabolismo del tejido graso",
-      "Tratamiento 100% natural sin sustancias químicas",
-      "Mejora la tonificación muscular y la firmeza de la piel",
-      "Relajante y estimulante al mismo tiempo",
-    ],
-    items: [
-      {
-        title: "Maderoterapia Modeladora",
-        description:
-          "Sesión de maderoterapia corporal con instrumentos específicos para cada zona — rodillos, ventosas y tablas — que rompen los nódulos de grasa, activan el drenaje linfático y moldean la silueta.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Maderoterapia Anticelulítica",
-        description:
-          "Protocolo intensivo focalizado en las zonas con mayor acumulación de celulitis (muslos, glúteos, abdomen). Las maniobras de percusión y amasamiento profundo descompactan el tejido y suavizan la piel.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Maderoterapia + Drenaje Linfático",
-        description:
-          "Combinación de maderoterapia modeladora con drenaje linfático manual para potenciar la eliminación de líquidos y toxinas. Resultado doble: silueta más fina y piel más luminosa.",
-        duration: "80 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Duele la maderoterapia?",
-        answer:
-          "Las maniobras son intensas pero no dolorosas si se realizan correctamente. Puede haber una sensación de presión o calor en la zona trabajada. Adaptamos la presión a tu umbral de sensibilidad.",
-      },
-      {
-        question: "¿Cada cuánto se recomienda hacerla?",
-        answer:
-          "Para resultados óptimos recomendamos 2 sesiones semanales durante 4-6 semanas, seguidas de mantenimiento semanal o quincenal. El cuerpo responde muy bien a la constancia.",
-      },
-      {
-        question: "¿Puedo hacerla si tengo varices?",
-        answer:
-          "En zonas con varices evidentes no aplicamos maniobras directas. Adaptamos el protocolo para trabajar las zonas cercanas sin afectar las venas. Infórmanos en la valoración inicial.",
-      },
-    ],
-  },
 
   // ── AURICULOTERAPIA ─────────────────────────────────
-  {
     slug: "auriculoterapia",
     name: "Auriculoterapia",
     tagline: "El equilibrio del cuerpo a través del oído",
@@ -2181,6 +2002,99 @@ export const servicePages: ServicePageData[] = [
         question: "¿Hay alguna contraindicación?",
         answer:
           "Se recomienda no realizarlo durante el embarazo o lactancia. Tampoco en pieles con heridas, dermatitis activa o infección en la zona. En la consulta previa evaluamos tu caso y adaptamos el protocolo a tu condición.",
+      },
+    ],
+  },
+
+  // ── NUEVOS SERVICIOS (PLANTILLAS VACÍAS) ────────────
+  {
+    slug: "nuevo-servicio-1",
+    name: "Nuevo Servicio 1 (Plantilla)",
+    tagline: "Descripción corta y atractiva del nuevo servicio 1",
+    heroDescription:
+      "Esta es una plantilla de prueba para el Nuevo Servicio 1. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
+    benefits: [
+      "Beneficio destacado número 1 del servicio",
+      "Beneficio destacado número 2 del servicio",
+      "Beneficio destacado número 3 del servicio",
+      "Beneficio destacado número 4 del servicio",
+    ],
+    items: [
+      {
+        title: "Opción de Tratamiento 1",
+        description: "Breve descripción sobre esta variante específica del servicio.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Opción de Tratamiento 2",
+        description: "Breve descripción sobre esta variante específica del servicio.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Pregunta frecuente de ejemplo 1?",
+        answer: "Respuesta detallada a la pregunta frecuente número 1.",
+      },
+      {
+        question: "¿Pregunta frecuente de ejemplo 2?",
+        answer: "Respuesta detallada a la pregunta frecuente número 2.",
+      },
+    ],
+  },
+  {
+    slug: "nuevo-servicio-2",
+    name: "Nuevo Servicio 2 (Plantilla)",
+    tagline: "Descripción corta y atractiva del nuevo servicio 2",
+    heroDescription:
+      "Esta es una plantilla de prueba para el Nuevo Servicio 2. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
+    benefits: [
+      "Beneficio destacado número 1 del servicio",
+      "Beneficio destacado número 2 del servicio",
+      "Beneficio destacado número 3 del servicio",
+      "Beneficio destacado número 4 del servicio",
+    ],
+    items: [
+      {
+        title: "Opción de Tratamiento 1",
+        description: "Breve descripción sobre esta variante específica del servicio.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Pregunta frecuente de ejemplo 1?",
+        answer: "Respuesta detallada a la pregunta frecuente número 1.",
+      },
+    ],
+  },
+  {
+    slug: "nuevo-servicio-3",
+    name: "Nuevo Servicio 3 (Plantilla)",
+    tagline: "Descripción corta y atractiva del nuevo servicio 3",
+    heroDescription:
+      "Esta es una plantilla de prueba para el Nuevo Servicio 3. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
+    benefits: [
+      "Beneficio destacado número 1 del servicio",
+      "Beneficio destacado número 2 del servicio",
+      "Beneficio destacado número 3 del servicio",
+      "Beneficio destacado número 4 del servicio",
+    ],
+    items: [
+      {
+        title: "Opción de Tratamiento 1",
+        description: "Breve descripción sobre esta variante específica del servicio.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Pregunta frecuente de ejemplo 1?",
+        answer: "Respuesta detallada a la pregunta frecuente número 1.",
       },
     ],
   },
