@@ -880,7 +880,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       })()}
 
       {/* ── SPECIALIST BOX ─────────────────────────────────── */}
-      {!["depilacion-laser", "hilos-tensores", "trasplante-capilar", "acido-hialuronico", "biorevitalizacion", "implante-barba", "mesoterapia-capilar", "botox-full-face", "rellenos-labios", "nutricion"].includes(service.slug) && (
+      {!["depilacion-laser", "hilos-tensores", "trasplante-capilar", "acido-hialuronico", "biorevitalizacion", "implante-barba", "mesoterapia-capilar", "botox-full-face", "rellenos-labios", "nutricion", "masajes-corporales"].includes(service.slug) && (
       <section className="py-16 bg-white border-t border-stone-100">
         <div className="max-w-4xl mx-auto px-6 sm:px-10">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-stone-900 rounded-lg p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex flex-col md:flex-row gap-8 sm:gap-12 items-center md:items-start relative overflow-hidden group transition-shadow">
