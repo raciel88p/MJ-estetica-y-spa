@@ -63,10 +63,10 @@ export const tratamientosPiernasLinks = [
 export const servicePages: ServicePageData[] = [
   {
     slug: "masajes-corporales",
-    name: "Masajes Corporales",
+    name: "Masajes Reductor con Hidrolicoplasia Turrialba",
     tagline: "Libera la tensión, renueva tu energía",
     heroDescription:
-      "Nuestros masajes corporales combinan técnicas profesionales para aliviar el estrés, reducir tensiones musculares y promover una sensación de bienestar total.",
+      "Nuestros masajes corporales combinan técnicas profesionales para aliviar el estrés, reducir tensiones musculares y promover una sensación de bienestar total. Reduce grasa localizada y redefine tu contorno corporal sin cirugía",
     benefits: [
       "Reducción del estrés y la ansiedad",
       "Alivio de dolores musculares",
