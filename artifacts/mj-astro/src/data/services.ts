@@ -317,27 +317,27 @@ export const servicePages: ServicePageData[] = [
     ],
     items: [
       {
-        title: "Pack 3 Zonas",
+        title: "✨ Sesiones desde ₡56600",
         description:
-          "Incluye axila, pierna completa y bikini. La combinación ideal para comenzar tu transformación.",
-        price: "Desde ₡56,600",
+          "Con 3 zonas: axila, pierna completa y bikini.",
+        price: "₡56600",
       },
       {
-        title: "Paquetes Personalizados",
+        title: "✨ Paquetes personalizados",
         description:
-          "Diseñamos un plan a medida según las zonas que desees tratar y tus necesidades específicas.",
-        price: "Consultar precio",
+          "Diseñamos el plan ideal para ti según las zonas que desees tratar.",
+        price: "Consultar",
       },
       {
-        title: "Valoración Previa",
+        title: "✨ Valoración previa incluida",
         description:
-          "Analizamos tu tipo de piel y vello para garantizar los mejores resultados desde la primera sesión.",
+          "Analizamos tu tipo de piel y vello para garantizar los mejores resultados.",
         price: "Incluida",
       },
       {
-        title: "Promociones Especiales",
+        title: "✨ Promociones especiales por zonas",
         description:
-          "Pregunta por nuestros descuentos vigentes al contratar varias zonas o paquetes de sesiones.",
+          "Pregunta por nuestros descuentos al contratar múltiples áreas.",
         price: "Consultar",
       },
     ],
@@ -345,32 +345,32 @@ export const servicePages: ServicePageData[] = [
       {
         question: "¿La depilación láser duele?",
         answer:
-          "Generalmente es tolerable y rápida. La sensación suele describirse como pequeños “toques de calor” o “piquetitos leves”. Varía según la sensibilidad de cada persona.",
+          "Generalmente es tolerable y rápida. La sensación varía según la sensibilidad de cada persona.",
       },
       {
         question: "¿Sirve para piel morena?",
         answer:
-          "Sí, dependiendo de la valoración profesional y el protocolo adecuado. Nuestra tecnología es segura para distintos tipos de piel.",
+          "Sí, dependiendo de la valoración profesional y el protocolo adecuado.",
       },
       {
         question: "¿Puedo rasurarme entre sesiones?",
         answer:
-          "Sí. De hecho, normalmente se recomienda evitar otros métodos de arranque como cera o pinzas, y mantener el rasurado con cuchilla si es necesario.",
+          "Sí. De hecho, normalmente se recomienda evitar otros métodos como cera.",
       },
       {
         question: "¿Cuánto duran los resultados?",
         answer:
-          "Muchas personas experimentan una reducción prolongada y duradera del vello con sesiones de mantenimiento ocasionales.",
+          "Muchas personas experimentan una reducción prolongada del vello con sesiones de mantenimiento.",
       },
       {
         question: "¿Qué zonas funcionan mejor?",
         answer:
-          "Piernas, axilas, bikini, rostro, espalda y prácticamente cualquier zona del cuerpo donde desees eliminar el vello.",
+          "Piernas, axilas, bikini, rostro, espalda y muchas más.",
       },
       {
         question: "¿Puedo hacerme el tratamiento en verano?",
         answer:
-          "Sí, siempre que se sigan correctamente las recomendaciones de cuidado solar y protección que te indicará nuestra especialista.",
+          "Sí, siguiendo correctamente las recomendaciones de cuidado solar.",
       },
     ],
   },

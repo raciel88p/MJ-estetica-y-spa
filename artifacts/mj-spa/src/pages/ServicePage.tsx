@@ -10,23 +10,24 @@ import { servicePages } from "@/data/services";
 import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { StatsBar } from "@/components/StatsBar";
+import { LaserServiceContent } from "@/components/services/LaserServiceContent";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
 const beforeDescMap: Record<string, string[]> = {
   "masajes-corporales":        ["Tensión muscular acumulada y contracturas dolorosas", "Circulación deficiente y sensación de pesadez corporal", "Estrés físico que afecta el descanso y el bienestar"],
-  "masajes-relajantes":        ["Ansiedad y estrés crónico que no cede", "Insomnio y dificultad para desconectarse", "Tensión acumulada en cuello, espalda y hombros"],
+  "masajes-relajantes":        ["Ansiedad y estrés crónico que no cede", "Insomnio y devicultad para desconectarse", "Tensión acumulada en cuello, espalda y hombros"],
   "masajes-post-operatorios":  ["Inflamación y fibrosis tras la cirugía", "Cicatrización lenta y adherencias subcutáneas", "Acumulación de líquidos y dolor postoperatorio"],
   "reduccion-de-medidas":      ["Grasa localizada resistente a dieta y ejercicio", "Volumen excesivo en abdomen, flancos y muslos", "Pérdida de definición y contorno corporal"],
   "tensado-corporal":          ["Flacidez visible en piel de brazos, abdomen y muslos", "Pérdida de firmeza y elasticidad por la edad o cambios de peso", "Piel sin tono que no responde al ejercicio"],
   "drenaje-linfatico":         ["Retención de líquidos e hinchazón persistente", "Sensación de pesadez y piernas cansadas", "Toxinas acumuladas y sistema linfático bloqueado"],
   "depilacion-laser":          ["Vello no deseado que reaparece constantemente", "Irritación, foliculitis y marcas por depilación frecuente", "Pérdida de tiempo y dinero en métodos temporales"],
-  "iron-beauty-fitness":       ["Pérdida de masa muscular y tono corporal", "Dificultad para combinar estética y fitness eficazmente", "Resultados lentos con el entrenamiento convencional"],
+  "iron-beauty-fitness":       ["Pérdida de masa muscular y tono corporal", "Devicultad para combinar estética y fitness eficazmente", "Resultados lentos con el entrenamiento convencional"],
   "carboxiterapia":            ["Celulitis visible y grasa localizada resistente", "Piel sin luminosidad y con pérdida de firmeza", "Estrías y signos de envejecimiento prematuro"],
   "levantamiento-gluteo":      ["Glúteos caídos y sin volumen ni definición", "Flacidez en la zona glútea por la edad o cambios de peso", "Pérdida de curvatura y proyección natural"],
   "levantamiento-busto":       ["Busto caído y sin firmeza tras lactancia o cambios de peso", "Pérdida de volumen y contorno en el escote", "Flacidez en piel pectoral que genera inseguridad"],
   "vendas-frias":              ["Retención severa de líquidos y silueta hinchada", "Celulitis avanzada y piel de naranja visible", "Sensación de pesadez y falta de definición corporal"],
-  "maderoterapia":             ["Acumulación de grasa y nódulos de celulitis enquistados", "Piel irregular, sin tono y con textura de naranja", "Silueta indefinida y poco modelada"],
+  "maderoterapia":             ["Acumulación de grasa y nódulos de celulitis enquistados", "Piel irregular, sin tono y con textura de naranja", "Silueta indevinida y poco modelada"],
   "auriculoterapia":           ["Ansiedad alimentaria y picoteo emocional fuera de control", "Estrés crónico que impide perder peso o dormir bien", "Desequilibrio del sistema nervioso y metabolismo lento"],
   "faciales":                  ["Piel opaca, con manchas y sin luminosidad", "Poros dilatados, imperfecciones y falta de hidratación", "Envejecimiento prematuro y pérdida de uniformidad"],
   "terapias-faciales":         ["Piel deshidratada, tensa y sin vitalidad", "Manchas, rojeces y textura irregular", "Arrugas finas y pérdida de elasticidad visible"],
@@ -244,6 +245,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── TRUST BAR ────────────────────────────────── */}
+      {service.slug !== "depilacion-laser" && (
       <section className="bg-[#040f19] py-5 border-b border-white/5">
         <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
@@ -259,8 +261,9 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           ))}
         </div>
       </section>
+      )}
 
-      <StatsBar />
+      {service.slug !== "depilacion-laser" && <StatsBar />}
 
 
       {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
@@ -305,6 +308,11 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           </motion.div>
         </div>
       </section>
+      )}
+
+      {/* ── CUSTOM CONTENT: DEPILACIÓN LÁSER ────────────────── */}
+      {service.slug === "depilacion-laser" && (
+        <LaserServiceContent service={service} waLink={WA} />
       )}
 
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
@@ -385,463 +393,6 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           </section>
         );
       })()}
-
-
-
-      {/* ── CUSTOM CONTENT: DEPILACIÓN LÁSER ────────────────── */}
-      {service.slug === "depilacion-laser" && (
-        <>
-          {/* Qué nos diferencia */}
-          <section className="py-20 bg-white overflow-hidden">
-            <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                <div className="flex items-center gap-3 mb-8">
-                  <div className="w-12 h-px bg-primary/30" />
-                  <span className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">Diferencial</span>
-                </div>
-                <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-10 leading-tight">
-                  Qué nos <br />
-                  <span className="text-primary italic font-light">diferencia</span>
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                  {[
-                    "Valoración personalizada",
-                    "Tecnología segura para distintos tipos de piel",
-                    "Tratamientos corporales y faciales",
-                    "Resultados progresivos visibles",
-                    "Atención profesional y humana"
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 bg-stone-50 p-4 border border-stone-100 group hover:border-primary/20 transition-all">
-                      <CheckCircle2 className="w-5 h-5 text-primary" />
-                      <span className="text-stone-700 font-medium">{item}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="text-center md:text-left bg-stone-900 p-8 md:p-12 text-white relative overflow-hidden">
-                  <div className="relative z-10">
-                    <p className="text-primary text-xs font-bold tracking-widest uppercase mb-4">¡Empieza hoy!</p>
-                    <h3 className="text-2xl md:text-3xl font-serif font-bold text-white mb-6">👉 Agenda hoy tu valoración personalizada</h3>
-                    <p className="text-white mb-10 max-w-lg leading-relaxed">
-                      Escríbenos por WhatsApp y descubre cuál paquete es ideal para ti.
-                    </p>
-                    <a
-                      href={WA}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 font-bold tracking-[0.15em] uppercase hover:bg-primary/90 transition-all"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                      Consultar por WhatsApp
-                    </a>
-                  </div>
-                  <Star className="absolute -right-8 -bottom-8 w-48 h-48 text-white/5 rotate-12" />
-                </div>
-              </motion.div>
-            </div>
-          </section>
-
-          {/* Problemas del vello & Guía Gratuita */}
-          <section className="py-24 bg-stone-50 border-y border-stone-100">
-            <div className="max-w-4xl mx-auto px-6">
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-20">
-                <h3 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 mb-8 text-center">
-                  Sabemos que muchas veces el vello <br className="hidden md:block" />
-                  <span className="text-primary">no es solo estética…</span>
-                </h3>
-                <p className="text-stone-500 text-center mb-12">También puede causar:</p>
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                  {[
-                    "Irritación constante", "Foliculitis", "Manchas",
-                    "Inseguridad", "Tiempo perdido rasurándote", "Dolor con métodos tradicionales"
-                  ].map((item, i) => (
-                    <div key={i} className="bg-white p-5 text-center border border-stone-200 text-stone-700 text-sm font-medium shadow-sm">
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-primary p-10 md:p-16 text-white text-center rounded-sm shadow-2xl relative overflow-hidden">
-                <div className="relative z-10">
-                  <span className="inline-block px-4 py-1 bg-white/10 rounded-full text-[10px] font-bold tracking-widest uppercase mb-6 border border-white/20">
-                    Regalo Especial
-                  </span>
-                  <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8">Guía Gratuita de Belleza y <br /> Cuidado de la Piel</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left mb-12 max-w-3xl mx-auto">
-                    {[
-                      "Cómo cuidar tu piel antes y después",
-                      "Errores que aumentan manchas",
-                      "Logra mejores resultados en menos sesiones",
-                      "Tips para piel suave y uniforme"
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-start gap-3">
-                        <Star className="w-5 h-5 text-white/40 shrink-0 mt-0.5" />
-                        <span className="text-sm md:text-base text-white/90">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <p className="text-white/60 mb-8 font-medium italic">👉 Descarga tu guía gratuita aquí</p>
-                  <a
-                    href={WA}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 bg-white text-primary px-10 py-5 font-bold tracking-[0.2em] uppercase hover:bg-stone-100 transition-all shadow-xl"
-                  >
-                    <MessageCircle className="w-5 h-5" />
-                    QUIERO MI GUÍA
-                  </a>
-                </div>
-              </motion.div>
-            </div>
-          </section>
-
-          {/* Qué es & Para quién */}
-          <section className="py-24 bg-white">
-            <div className="max-w-4xl mx-auto px-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                  <h2 className="text-3xl font-serif font-bold text-stone-900 mb-8">¿Qué es la Depilación Láser?</h2>
-                  <div className="space-y-6 text-stone-600 leading-relaxed">
-                    <p>
-                      La depilación láser es un tratamiento estético que ayuda a reducir progresivamente el crecimiento del vello utilizando tecnología especializada que actúa directamente sobre el folículo piloso.
-                    </p>
-                    <p>
-                      En MJ Estética & Wellness Center trabajamos con protocolos personalizados para diferentes zonas y tipos de piel, brindando una experiencia más cómoda, segura y efectiva en Turrialba.
-                    </p>
-                  </div>
-                </motion.div>
-                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                  <h2 className="text-3xl font-serif font-bold text-stone-900 mb-8">¿Para quién es ideal?</h2>
-                  <ul className="space-y-4">
-                    {[
-                      "Te rasuras constantemente", "Sufres de vellos encarnados",
-                      "Tienes foliculitis", "Tu piel se irrita con facilidad",
-                      "La cera te causa dolor o manchas", "Quieres ahorrar tiempo en tu rutina",
-                      "Deseas una piel más uniforme y suave"
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-center gap-3 text-stone-600 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              </div>
-            </div>
-          </section>
-
-          {/* Qué problemas ayuda a mejorar */}
-          <section className="py-24 bg-stone-900 text-white">
-            <div className="max-w-4xl mx-auto px-6">
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-16 text-center">
-                <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">¿Qué problemas ayuda a mejorar?</h2>
-                <p className="text-white/40 uppercase tracking-widest text-[10px] font-bold">Resultados progresivos y reales</p>
-              </motion.div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">
-                {[
-                  { t: "Irritación constante", d: "Reduce el roce frecuente y el daño continuo sobre la piel." },
-                  { t: "Vellos encarnados", d: "Ayuda a disminuir el crecimiento irregular del vello." },
-                  { t: "Foliculitis", d: "Muchas personas notan una mejora progresiva en la apariencia de la piel." },
-                  { t: "Oscurecimiento de zonas", d: "Puede ayudar visualmente a mejorar la uniformidad de la piel." },
-                  { t: "Crecimiento rápido", d: "Olvídate de rasurarte constantemente." }
-                ].map((item, i) => (
-                  <div key={i} className="bg-stone-900 p-8 hover:bg-stone-800 transition-colors">
-                    <h4 className="text-primary font-bold mb-3">{item.t}</h4>
-                    <p className="text-stone-400 text-sm leading-relaxed">{item.d}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-8 text-center text-white/40 text-xs italic">
-                📍 Las sesiones y resultados pueden variar según cada persona.
-              </p>
-            </div>
-          </section>
-
-          {/* Cómo funciona (Pasos) */}
-          <section className="py-24 bg-white">
-            <div className="max-w-5xl mx-auto px-6">
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-                <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-6 text-center">
-                   Así funciona tu <span className="text-primary italic font-light">tratamiento</span>
-                </h2>
-              </motion.div>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-                {[
-                  { s: "Paso 1", t: "Valoración", d: "Analizamos tu tipo de piel, zona y necesidades." },
-                  { s: "Paso 2", t: "Preparación", d: "Te explicamos cuidados previos y recomendaciones." },
-                  { s: "Paso 3", t: "Aplicación", d: "La sesión dura entre 15 y 60 min dependiendo de la zona." },
-                  { s: "Paso 4", t: "Cuidados", d: "Recibes indicaciones para proteger tu piel." }
-                ].map((step, i) => (
-                  <div key={i} className="relative">
-                    <span className="text-[10px] font-bold tracking-widest text-primary uppercase mb-2 block">{step.s}</span>
-                    <h4 className="text-xl font-serif font-bold text-stone-900 mb-4">{step.t}</h4>
-                    <p className="text-stone-500 text-sm leading-relaxed">{step.d}</p>
-                    {i < 3 && <ArrowRight className="hidden md:block absolute -right-4 top-8 w-4 h-4 text-stone-200" />}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* FAQ Corta / Detalles extras */}
-          <section className="py-24 bg-white border-t border-stone-100">
-            <div className="max-w-4xl mx-auto px-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                  <h3 className="text-2xl font-serif font-bold text-stone-900 mb-4">¿Duele?</h3>
-                  <p className="text-stone-600 leading-relaxed">
-                    La sensación suele describirse como pequeños “toques de calor” o “piquetitos leves”. Es un tratamiento rápido y tolerable.
-                  </p>
-                </motion.div>
-                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                  <h3 className="text-2xl font-serif font-bold text-stone-900 mb-4">¿Cuántas sesiones necesito?</h3>
-                  <p className="text-stone-600 leading-relaxed">
-                    Depende del tipo de vello y zona, pero muchas personas comienzan a notar cambios progresivos desde las primeras sesiones.
-                  </p>
-                </motion.div>
-              </div>
-            </div>
-          </section>
-
-          {/* Imagina esto... */}
-          <section className="py-24 bg-stone-50 overflow-hidden relative">
-            <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
-               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-10 uppercase tracking-tight">Imagina esto…</h2>
-                 <div className="space-y-4 mb-12 text-xl md:text-2xl font-serif italic text-stone-600">
-                    <p>Despertarte…</p>
-                    <p>Ponerte la ropa que te gusta…</p>
-                    <p>Ir a la playa, al gimnasio o salir sin preocuparte por rasurarte a última hora.</p>
-                 </div>
-                 <div className="bg-white p-10 shadow-sm border border-stone-200 inline-block text-left max-w-2xl">
-                   <p className="text-stone-800 font-medium mb-6">Eso es lo que muchas personas buscan cuando empiezan depilación láser:</p>
-                   <div className="space-y-4">
-                     {["✨ Más comodidad", "✨ Más confianza", "✨ Más tranquilidad con su piel"].map((t, i) => (
-                       <p key={i} className="text-stone-900 font-bold text-xl">{t}</p>
-                     ))}
-                   </div>
-                 </div>
-               </motion.div>
-            </div>
-          </section>
-
-          {/* Testimonios */}
-          <section className="py-24 bg-white">
-            <div className="max-w-4xl mx-auto px-6">
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-                <h2 className="text-3xl font-serif font-bold text-stone-900">Testimonios de clientes</h2>
-              </motion.div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {[
-                  "Antes me irritaba muchísimo al rasurarme. Después de varias sesiones he notado mi piel mucho más tranquila.",
-                  "Ya no tengo que preocuparme por rasurarme cada pocos días.",
-                  "Me encanta sentir la piel más suave y uniforme."
-                ].map((test, i) => (
-                  <div key={i} className="bg-stone-50 p-8 rounded-sm border border-stone-100 italic text-stone-600 text-sm leading-relaxed relative">
-                    <span className="absolute top-4 left-4 text-primary text-4xl leading-none opacity-20">“</span>
-                    {test}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Por qué elegir MJ */}
-          <section className="py-24 bg-stone-50">
-            <div className="max-w-4xl mx-auto px-6">
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white p-10 md:p-16 shadow-sm border border-stone-100">
-                <h2 className="text-3xl font-serif font-bold text-stone-900 mb-8 flex items-center gap-3">
-                  <span className="text-2xl text-primary">💖</span> ¿Por qué elegir MJ Estética & Wellness Center?
-                </h2>
-                <p className="text-stone-600 mb-10 leading-relaxed font-serif text-lg italic">
-                  Buscamos ayudarte a sentirte mejor contigo misma.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12">
-                  {[
-                    "Atención personalizada", "Protocolos profesionales",
-                    "Tecnología segura", "Ambiente cómodo y privado",
-                    "Seguimiento profesional", "Ubicación accesible en Turrialba",
-                    "Experiencia real en estética y wellness"
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 border-b border-stone-50 pb-3">
-                      <span className="text-primary font-bold">✔</span>
-                      <span className="font-medium text-stone-800 text-sm">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-          </section>
-
-          {/* Ubicación y contacto */}
-          <section className="py-24 bg-white">
-            <div className="max-w-4xl mx-auto px-6">
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                   <h2 className="text-3xl font-serif font-bold text-stone-900 mb-8">Ubicación y contacto</h2>
-                   <ul className="space-y-6">
-                     {[
-                       { i: "📍", t: "Turrialba, Cartago" },
-                       { i: "📲", t: "Atención por WhatsApp" },
-                       { i: "🕒", t: "Horarios flexibles" },
-                       { i: "🚗", t: "Fácil acceso y parqueo cercano" }
-                     ].map((item, i) => (
-                       <li key={i} className="flex items-center gap-4 text-stone-700 font-medium">
-                         <span className="text-xl">{item.i}</span>
-                         {item.t}
-                       </li>
-                     ))}
-                   </ul>
-                 </motion.div>
-                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-900 p-8 text-white rounded-sm">
-                    <p className="text-primary text-xs font-bold tracking-widest uppercase mb-4">Finaliza hoy el rasurado</p>
-                    <h3 className="text-2xl font-serif font-bold mb-6 leading-tight">Tu piel puede verse y sentirse diferente</h3>
-                    <p className="text-white mb-8 leading-relaxed italic">
-                      Cada día que pospones empezar… es otro día lidiando con irritación, rasurado constante y molestias innecesarias. Hoy puede ser el momento de cambiar eso.
-                    </p>
-                    <div className="space-y-2 mb-10 text-sm font-medium text-white">
-                      <p>👉 Agenda tu valoración personalizada ahora</p>
-                      <p>👉 Descubre el paquete ideal para ti</p>
-                      <p>👉 Escríbenos por WhatsApp</p>
-                    </div>
-                    <a
-                      href={WA}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full inline-flex justify-center items-center gap-3 bg-primary text-white py-4 font-bold tracking-[0.15em] uppercase hover:bg-primary/90 transition-all"
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                      RESERVAR AHORA
-                    </a>
-                 </motion.div>
-               </div>
-            </div>
-          </section>
-        </>
-      )}
-
-      {/* ── WHAT IS SALMON DNA? ─────────────────────── */}
-      {service.slug === "adn-salmon" && (
-        <section className="py-20 bg-white overflow-hidden">
-          <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
-            <motion.div
-              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-              className="relative"
-            >
-              <div className="absolute -left-4 top-0 w-1 h-24 bg-primary/20 rounded-full hidden md:block" />
-              <div className="flex items-center gap-3 mb-8">
-                <div className="w-12 h-px bg-primary/30" />
-                <span className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">Introducción</span>
-              </div>
-
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-10 leading-tight">
-                💧 ¿QUÉ ES EL <br />
-                <span className="text-primary italic font-light">ADN DE SALMÓN?</span>
-              </h2>
-
-              <div className="space-y-6 text-stone-600 text-base md:text-lg leading-relaxed">
-                <p>
-                  El ADN de Salmón es un poderoso bioestimulador dérmico utilizado en protocolos de rejuvenecimiento facial de alta gama alrededor del mundo.
-                </p>
-                <p>
-                  Su función principal es ayudar a regenerar la piel desde el interior, estimulando la producción natural de colágeno, mejorando la hidratación profunda y devolviendo luminosidad al rostro.
-                </p>
-
-                <div className="py-6 border-y border-stone-100 my-8">
-                  <p className="font-serif italic text-stone-800 text-xl">
-                    No cambia tu expresión. <br />
-                    No transforma tu rostro. <br />
-                    <span className="text-primary not-italic font-bold">Solo mejora la calidad de tu piel de forma natural y progresiva.</span>
-                  </p>
-                </div>
-
-                <div className="flex items-center gap-4 bg-stone-50 p-6 rounded-sm border-l-4 border-primary">
-                  <span className="text-2xl">✨</span>
-                  <div>
-                    <p className="text-primary text-xs font-bold tracking-widest uppercase mb-1">El resultado:</p>
-                    <p className="text-stone-900 font-serif font-bold text-xl">Una piel más sana, fresca, firme y radiante.</p>
-                  </div>
-                </div>
-
-                <div className="pt-12">
-                  <h3 className="text-2xl font-serif font-bold text-stone-900 mb-6 flex items-center gap-3">
-                    <span className="text-xl">😔</span> ¿Sientes que tu piel luce cansada, opaca o deshidratada?
-                  </h3>
-                  <p className="mb-6">
-                    Con el paso del tiempo, el estrés, el sol y la contaminación hacen que la piel pierda:
-                  </p>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-                    {[
-                      { icon: "❌", text: "Elasticidad" },
-                      { icon: "❌", text: "Hidratación" },
-                      { icon: "❌", text: "Luminosidad" },
-                      { icon: "❌", text: "Firmeza" },
-                      { icon: "❌", text: "Uniformidad" },
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3 text-stone-700 font-medium border-b border-stone-50 pb-2">
-                        <span className="text-xs">{item.icon}</span>
-                        <span>{item.text}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <p className="text-stone-600 italic">
-                    Y muchas veces, aunque uses cremas o skincare… la piel ya necesita regeneración profunda.
-                  </p>
-
-                  <div className="mt-8 flex items-center gap-4">
-                    <div className="h-px flex-1 bg-stone-200" />
-                    <p className="text-stone-900 font-serif font-bold text-lg text-center px-4">
-                      Ahí es donde el ADN de Salmón marca la diferencia.
-                    </p>
-                    <div className="h-px flex-1 bg-stone-200" />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      )}
-
-      {/* ── BENEFITS ─────────────────────────────────── */}
-      <section className="py-16 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-          <motion.div
-            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-            className="text-center mb-10"
-          >
-            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">Beneficios</p>
-            <h2 className="text-3xl font-serif font-bold text-stone-900">
-              {service.slug === "adn-salmon" ? "✨ BENEFICIOS DEL TRATAMIENTO" : "¿Por qué elegir este tratamiento?"}
-            </h2>
-          </motion.div>
-
-          <motion.div
-            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-          >
-            {service.benefits.map((benefit, i) => (
-              <motion.div
-                key={i} variants={fadeUp}
-                className="flex items-start gap-3 bg-white p-5 border border-stone-100 hover:border-primary/30 hover:shadow-sm transition-all"
-              >
-                <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span className="text-sm text-stone-700 font-medium leading-snug">{benefit}</span>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {service.slug === "adn-salmon" && (
-            <motion.p
-              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-              className="mt-10 text-center text-stone-600 font-medium italic max-w-2xl mx-auto"
-            >
-              Este tratamiento es ideal si deseas verte más fresca, descansada y saludable sin perder naturalidad.
-            </motion.p>
-          )}
-        </div>
-      </section>
 
       {/* ── ADN SALMON CUSTOM SECTIONS ────────────────── */}
       {service.slug === "adn-salmon" && (
@@ -1020,68 +571,163 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
         </>
       )}
 
+      {/* ── BENEFITS ─────────────────────────────────── */}
+      {service.slug !== "depilacion-laser" && (
+      <section className="py-16 bg-stone-50">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+            className="text-center mb-10"
+          >
+            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">Beneficios</p>
+            <h2 className="text-3xl font-serif font-bold text-stone-900">
+              {service.slug === "adn-salmon" ? "✨ BENEFICIOS DEL TRATAMIENTO" :
+               service.slug === "depilacion-laser" ? "Beneficios reales que notarás" :
+               "¿Por qué elegir este tratamiento?"}
+            </h2>
+          </motion.div>
+
+          <motion.div
+            initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+          >
+            {service.benefits.map((benefit, i) => (
+              <motion.div
+                key={i} variants={fadeUp}
+                className="flex items-start gap-3 bg-white p-5 border border-stone-100 hover:border-primary/30 hover:shadow-sm transition-all"
+              >
+                {service.slug === "depilacion-laser" ? (
+                  <span className="shrink-0 mt-0.5 text-sm">✅</span>
+                ) : (
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                )}
+                <span className="text-sm text-stone-700 font-medium leading-snug">{benefit}</span>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {service.slug === "adn-salmon" && (
+            <motion.p
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+              className="mt-10 text-center text-stone-600 font-medium italic max-w-2xl mx-auto"
+            >
+              Este tratamiento es ideal si deseas verte más fresca, descansada y saludable sin perder naturalidad.
+            </motion.p>
+          )}
+        </div>
+      </section>
+      )}
+
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
       {service.slug !== "adn-salmon" && (
-        <section className="py-20 md:py-28">
+        <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
-              className="mb-14"
+              className="mb-16"
             >
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-8 h-0.5 bg-primary" />
-                <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">Nuestros Tratamientos</p>
+                <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">
+                  {service.slug === "depilacion-laser" ? "Inversión y Paquetes" : "Nuestros Tratamientos"}
+                </p>
               </div>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight">
-                ¿Qué incluye<br />
-                <span className="font-light italic text-primary">este servicio?</span>
+                {service.slug === "depilacion-laser" ? (
+                  <>Elige tu plan de <span className="font-light italic text-primary">transformación</span></>
+                ) : (
+                  <>¿Qué incluye<br /><span className="font-light italic text-primary">este servicio?</span></>
+                )}
               </h2>
+              {service.slug === "depilacion-laser" && (
+                <p className="text-primary font-bold mt-4">👉 Consulta disponibilidad y valoración personalizada hoy mismo</p>
+              )}
             </motion.div>
 
-            <motion.div
-              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
-              className="grid grid-cols-1 md:grid-cols-2 gap-px bg-stone-100"
-            >
-              {service.items.map((item, i) => (
-                <motion.div
-                  key={i} variants={fadeUp}
-                  className="group bg-white p-8 md:p-10 hover:bg-stone-50 transition-colors"
-                >
-                  <div className="flex items-start justify-between mb-4 gap-4">
-                    <div>
-                      <span className="text-stone-400 text-sm font-serif font-bold mr-3">{String(i + 1).padStart(2, "0")}</span>
-                      <h3 className="text-xl md:text-2xl font-serif font-bold text-stone-900 group-hover:text-primary transition-colors inline">{item.title}</h3>
-                    </div>
-                    {item.duration && (
-                      <span className="flex items-center gap-1.5 text-stone-500 text-xs shrink-0 border border-stone-200 px-3 py-1">
-                        <Clock className="w-3.5 h-3.5" />
-                        {item.duration}
-                      </span>
-                    )}
-                  </div>
-                  <p className="text-stone-600 leading-relaxed mb-6 text-sm">{item.description}</p>
-                  {item.price && (
-                    <p className="text-stone-500 text-xs tracking-widest uppercase mb-5">{item.price}</p>
-                  )}
-                  <a
-                    id={`cta-item-${service.slug}-${i}`}
-                    href={WA}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-white bg-primary px-5 py-2.5 hover:bg-primary/90 transition-colors group/btn"
+            {service.slug === "depilacion-laser" ? (
+              /* Premium Table-like Layout for Laser */
+              <motion.div
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+              >
+                {service.items.map((item, i) => (
+                  <motion.div
+                    key={i} variants={fadeUp}
+                    className="relative bg-stone-50 border border-stone-200 p-8 flex flex-col group hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                   >
-                    <MessageCircle className="w-3.5 h-3.5" />
-                    Reservar sesión
-                    <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
-                  </a>
-                </motion.div>
-              ))}
-            </motion.div>
+                    <div className="mb-6">
+                       <span className="text-primary text-[10px] font-bold tracking-widest uppercase mb-2 block">Opción {i+1}</span>
+                       <h3 className="text-xl font-serif font-bold text-stone-900 leading-tight min-h-[3rem] flex items-center">{item.title.replace("✨ ", "")}</h3>
+                    </div>
+                    <div className="flex-1">
+                       <p className="text-stone-500 text-sm leading-relaxed mb-8">{item.description}</p>
+                    </div>
+                    <div className="mt-auto pt-6 border-t border-stone-200/60">
+                       <div className="mb-6">
+                          <p className="text-stone-400 text-[10px] uppercase tracking-widest mb-1">Inversión</p>
+                          <p className="text-2xl font-serif font-bold text-primary">{item.price}</p>
+                       </div>
+                       <a
+                        href={WA}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full inline-flex justify-center items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-white bg-primary py-3.5 hover:bg-stone-900 transition-colors"
+                      >
+                        <MessageCircle className="w-3.5 h-3.5" />
+                        LO QUIERO
+                      </a>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            ) : (
+              /* Standard Layout for other services */
+              <motion.div
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
+                className="grid grid-cols-1 md:grid-cols-2 gap-px bg-stone-100"
+              >
+                {service.items.map((item, i) => (
+                  <motion.div
+                    key={i} variants={fadeUp}
+                    className="group bg-white p-8 md:p-10 hover:bg-stone-50 transition-colors"
+                  >
+                    <div className="flex items-start justify-between mb-4 gap-4">
+                      <div>
+                        <span className="text-stone-400 text-sm font-serif font-bold mr-3">{String(i + 1).padStart(2, "0")}</span>
+                        <h3 className="text-xl md:text-2xl font-serif font-bold text-stone-900 group-hover:text-primary transition-colors inline">{item.title}</h3>
+                      </div>
+                      {item.duration && (
+                        <span className="flex items-center gap-1.5 text-stone-500 text-xs shrink-0 border border-stone-200 px-3 py-1">
+                          <Clock className="w-3.5 h-3.5" />
+                          {item.duration}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-stone-600 leading-relaxed mb-6 text-sm">{item.description}</p>
+                    {item.price && (
+                      <p className="text-stone-500 text-xs tracking-widest uppercase mb-5">{item.price}</p>
+                    )}
+                    <a
+                      id={`cta-item-${service.slug}-${i}`}
+                      href={WA}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-white bg-primary px-5 py-2.5 hover:bg-primary/90 transition-colors group/btn"
+                    >
+                      <MessageCircle className="w-3.5 h-3.5" />
+                      Reservar sesión
+                      <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
+                    </a>
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
           </div>
         </section>
       )}
 
       {/* ── URGENCY CTA BAND ──────────────────────────── */}
+      {service.slug !== "depilacion-laser" && (
       <section className="bg-primary py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -1112,6 +758,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           </motion.div>
         </div>
       </section>
+      )}
 
       {/* ── ANTES Y DESPUÉS — servicios corporales seleccionados ─── */}
       {["masajes-corporales", "reduccion-de-medidas", "drenaje-linfatico", "carboxiterapia"].includes(service.slug) && (() => {
@@ -1235,8 +882,104 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
         );
       })()}
 
+      {/* ── SPECIALIST BOX ─────────────────────────────────── */}
+      {service.slug !== "depilacion-laser" && (
+      <section className="py-16 bg-white border-t border-stone-100">
+        <div className="max-w-4xl mx-auto px-6 sm:px-10">
+          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-stone-900 rounded-lg p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex flex-col md:flex-row gap-8 sm:gap-12 items-center md:items-start relative overflow-hidden group transition-shadow">
+
+            <div className="w-32 sm:w-40 md:w-48 shrink-0 relative">
+              <div className="absolute inset-0 bg-primary/20 rounded-full translate-x-2 sm:translate-x-3 translate-y-2 sm:translate-y-3" />
+              <img
+                src="/images/janeth-molina.png"
+                alt="Lic Terapiafísca Janeth Maria Molina Madrigal"
+                className="w-full h-auto aspect-square object-cover rounded-full relative z-10 border-4 border-stone-800 shadow-md grayscale-[0.1] group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+
+            <div className="flex-1 text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                <ShieldCheck className="w-4 sm:w-5 h-4 sm:h-5 text-primary" />
+                <span className="text-primary text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase">Especialista Certificada</span>
+              </div>
+
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-4">Lic. Terapia Física Janeth Maria Molina Madrigal</h2>
+
+              <div className="flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3 mb-6">
+                <span className="inline-flex items-center gap-2 bg-stone-800 px-3 py-1.5 rounded-full text-xs font-medium text-stone-300">
+                  <Award className="w-3.5 h-3.5" />
+                  Especialista Estética
+                </span>
+                <span className="inline-flex items-center gap-2 bg-stone-800 px-3 py-1.5 rounded-full text-xs font-medium text-stone-300">
+                  <Clock4 className="w-3.5 h-3.5" />
+                  15 Años de Experiencia
+                </span>
+              </div>
+
+              <p className="text-stone-400 text-sm leading-relaxed max-w-xl mx-auto md:mx-0">
+                Especialista en el campo estético, cuenta con 15 años trabajando en el campo clínico médico-estético de referencia.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      )}
+
+          {!["nutricion", "botox-full-face", "hilos-tensores", "rellenos-labios", "acido-hialuronico", "trasplante-capilar", "implante-barba", "mesoterapia-capilar", "depilacion-laser"].includes(service.slug) && (
+            <>
+              {/* Lic Terapiafísca Janeth Maria Molina Madrigal */}
+              <div className="max-w-4xl mx-auto px-6 sm:px-10 pb-16">
+              <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white rounded-lg p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-stone-100 flex flex-col md:flex-row gap-8 sm:gap-12 md:gap-16 items-start relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow">
+            <div className="absolute top-0 right-0 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-primary/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-700" />
+
+            <div className="w-32 sm:w-40 md:w-56 shrink-0 relative">
+              <div className="absolute inset-0 bg-primary/10 rounded-full translate-x-2 sm:translate-x-3 md:translate-x-4 translate-y-2 sm:translate-y-3 md:translate-y-4" />
+              <img
+                src="/images/janeth-molina.png"
+                alt="Lic Terapiafísca Janeth Maria Molina Madrigal"
+                className="w-full h-auto aspect-square object-cover rounded-full relative z-10 border-4 border-white shadow-md grayscale-[0.2] group-hover:grayscale-0 transition-all duration-500"
+              />
+            </div>
+
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-2 sm:mb-3">
+                <ShieldCheck className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 text-primary" />
+                <span className="text-primary text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase">Especialista Certificada</span>
+              </div>
+
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-4 sm:mb-6">Lic. Janeth Maria Molina Madrigal</h2>
+
+              <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
+                <span className="inline-flex items-center gap-2 bg-stone-100 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-stone-600">
+                  <Award className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
+                  Especialista Estética
+                </span>
+                <span className="inline-flex items-center gap-2 bg-stone-100 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-stone-600">
+                  <Clock4 className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
+                  15 Años de Experiencia
+                </span>
+              </div>
+
+              <p className="text-stone-600 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-2xl">
+                Especialista en el campo estético, cuenta con 15 años trabajando el campo clínico médico-estético de referencia. Su amplia trayectoria garantiza resultados óptimos, seguros y vanguardistas en terapias físicas y estéticas para el bienestar integral.
+              </p>
+
+              <a
+                href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-primary border-b border-primary/30 pb-0.5 hover:border-primary transition-colors cursor-pointer group/link"
+              >
+                Agendar con la especialista <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </motion.div>
+          </div>
+            </>
+          )}
+
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && (
+      {service.faq && service.faq.length > 0 && service.slug !== "depilacion-laser" && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div
@@ -1330,100 +1073,6 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           </div>
         </section>
       )}
-
-      {/* ── SPECIALIST BOX ─────────────────────────────────── */}
-      <section className="py-16 bg-white border-t border-stone-100">
-        <div className="max-w-4xl mx-auto px-6 sm:px-10">
-          <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-stone-900 rounded-lg p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex flex-col md:flex-row gap-8 sm:gap-12 items-center md:items-start relative overflow-hidden group transition-shadow">
-
-            <div className="w-32 sm:w-40 md:w-48 shrink-0 relative">
-              <div className="absolute inset-0 bg-primary/20 rounded-full translate-x-2 sm:translate-x-3 translate-y-2 sm:translate-y-3" />
-              <img
-                src="/images/janeth-molina.png"
-                alt="Lic Terapiafísca Janeth Maria Molina Madrigal"
-                className="w-full h-auto aspect-square object-cover rounded-full relative z-10 border-4 border-stone-800 shadow-md grayscale-[0.1] group-hover:grayscale-0 transition-all duration-500"
-              />
-            </div>
-
-            <div className="flex-1 text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-                <ShieldCheck className="w-4 sm:w-5 h-4 sm:h-5 text-primary" />
-                <span className="text-primary text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase">Especialista Certificada</span>
-              </div>
-
-              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white mb-4">Lic. Terapia Física Janeth Maria Molina Madrigal</h2>
-
-              <div className="flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3 mb-6">
-                <span className="inline-flex items-center gap-2 bg-stone-800 px-3 py-1.5 rounded-full text-xs font-medium text-stone-300">
-                  <Award className="w-3.5 h-3.5" />
-                  Especialista Estética
-                </span>
-                <span className="inline-flex items-center gap-2 bg-stone-800 px-3 py-1.5 rounded-full text-xs font-medium text-stone-300">
-                  <Clock4 className="w-3.5 h-3.5" />
-                  15 Años de Experiencia
-                </span>
-              </div>
-
-              <p className="text-stone-400 text-sm leading-relaxed max-w-xl mx-auto md:mx-0">
-                Especialista en el campo estético, cuenta con 15 años trabajando en el campo clínico médico-estético de referencia.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-          {!["nutricion", "botox-full-face", "hilos-tensores", "rellenos-labios", "acido-hialuronico", "trasplante-capilar", "implante-barba", "mesoterapia-capilar"].includes(service.slug) && (
-            <>
-              {/* Lic Terapiafísca Janeth Maria Molina Madrigal */}
-              <div className="max-w-4xl mx-auto px-6 sm:px-10 pb-16">
-              <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-white rounded-lg p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-stone-100 flex flex-col md:flex-row gap-8 sm:gap-12 md:gap-16 items-start relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow">
-            <div className="absolute top-0 right-0 w-32 sm:w-48 md:w-64 h-32 sm:h-48 md:h-64 bg-primary/5 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-700" />
-
-            <div className="w-32 sm:w-40 md:w-56 shrink-0 relative">
-              <div className="absolute inset-0 bg-primary/10 rounded-full translate-x-2 sm:translate-x-3 md:translate-x-4 translate-y-2 sm:translate-y-3 md:translate-y-4" />
-              <img
-                src="/images/janeth-molina.png"
-                alt="Lic Terapiafísca Janeth Maria Molina Madrigal"
-                className="w-full h-auto aspect-square object-cover rounded-full relative z-10 border-4 border-white shadow-md grayscale-[0.2] group-hover:grayscale-0 transition-all duration-500"
-              />
-            </div>
-
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-2 sm:mb-3">
-                <ShieldCheck className="w-4 sm:w-5 md:w-6 h-4 sm:h-5 md:h-6 text-primary" />
-                <span className="text-primary text-[10px] sm:text-xs font-bold tracking-[0.25em] uppercase">Especialista Certificada</span>
-              </div>
-
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-4 sm:mb-6">Lic. Janeth Maria Molina Madrigal</h2>
-
-              <div className="flex flex-wrap gap-2 sm:gap-3 mb-6 sm:mb-8">
-                <span className="inline-flex items-center gap-2 bg-stone-100 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-stone-600">
-                  <Award className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
-                  Especialista Estética
-                </span>
-                <span className="inline-flex items-center gap-2 bg-stone-100 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium text-stone-600">
-                  <Clock4 className="w-3.5 sm:w-4 h-3.5 sm:h-4" />
-                  15 Años de Experiencia
-                </span>
-              </div>
-
-              <p className="text-stone-600 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-2xl">
-                Especialista en el campo estético, cuenta con 15 años trabajando el campo clínico médico-estético de referencia. Su amplia trayectoria garantiza resultados óptimos, seguros y vanguardistas en terapias físicas y estéticas para el bienestar integral.
-              </p>
-
-              <a
-                href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-primary border-b border-primary/30 pb-0.5 hover:border-primary transition-colors cursor-pointer group/link"
-              >
-                Agendar con la especialista <ArrowRight className="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform" />
-              </a>
-            </div>
-          </motion.div>
-          </div>
-            </>
-          )}
 
       <Footer />
       <FloatingWhatsApp />
