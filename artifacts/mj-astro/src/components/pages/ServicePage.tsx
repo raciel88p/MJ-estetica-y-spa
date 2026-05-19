@@ -264,7 +264,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
-      {!["botox-full-face","hilos-tensores","rellenos-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar"].includes(service.slug) && (
+      {!["botox-full-face","hilos-tensores","rellenos-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar","biorevitalizacion"].includes(service.slug) && (
       <section className="py-10 bg-white border-b border-stone-100">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -880,7 +880,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       })()}
 
       {/* ── SPECIALIST BOX ─────────────────────────────────── */}
-      {service.slug !== "depilacion-laser" && (
+      {!["depilacion-laser", "hilos-tensores", "trasplante-capilar", "acido-hialuronico", "biorevitalizacion", "implante-barba", "mesoterapia-capilar", "botox-full-face", "rellenos-labios", "nutricion"].includes(service.slug) && (
       <section className="py-16 bg-white border-t border-stone-100">
         <div className="max-w-4xl mx-auto px-6 sm:px-10">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="bg-stone-900 rounded-lg p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] flex flex-col md:flex-row gap-8 sm:gap-12 items-center md:items-start relative overflow-hidden group transition-shadow">
@@ -922,7 +922,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       </section>
       )}
 
-          {!["nutricion", "botox-full-face", "hilos-tensores", "rellenos-labios", "acido-hialuronico", "trasplante-capilar", "implante-barba", "mesoterapia-capilar", "depilacion-laser"].includes(service.slug) && (
+          {!["nutricion", "botox-full-face", "hilos-tensores", "rellenos-labios", "acido-hialuronico", "trasplante-capilar", "implante-barba", "mesoterapia-capilar", "depilacion-laser", "biorevitalizacion"].includes(service.slug) && (
             <>
               {/* Lic Terapiafísca Janeth Maria Molina Madrigal */}
               <motion.div variants={fadeUp} className="bg-white rounded-lg p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-stone-100 flex flex-col md:flex-row gap-8 sm:gap-12 md:gap-16 items-start relative overflow-hidden group hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow">
