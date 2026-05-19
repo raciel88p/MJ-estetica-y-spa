@@ -98,13 +98,14 @@ export function LaserServiceContent({ service, waLink }: { service: ServicePageD
               <span className="text-primary">no es solo estética…</span>
             </h3>
             <p className="text-stone-500 text-center mb-12">También puede causar:</p>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 "Irritación constante", "Foliculitis", "Manchas",
                 "Inseguridad", "Tiempo perdido rasurándote", "Dolor con cera o métodos tradicionales"
               ].map((item, i) => (
-                <div key={i} className="bg-white p-5 text-center border border-stone-200 text-stone-700 text-sm font-medium shadow-sm">
-                  {item}
+                <div key={i} className="flex items-start gap-3 bg-white p-5 border border-stone-100 hover:border-primary/30 hover:shadow-sm transition-all">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                  <span className="text-sm text-stone-700 font-medium leading-snug">{item}</span>
                 </div>
               ))}
             </div>
