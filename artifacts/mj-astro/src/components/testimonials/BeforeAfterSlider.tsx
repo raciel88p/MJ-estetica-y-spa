@@ -69,7 +69,6 @@ export function BeforeAfterSlider({
           src={beforeImage}
           alt="Antes"
           className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: "grayscale(1) brightness(0.9)" }}
           draggable={false}
         />
       </div>
