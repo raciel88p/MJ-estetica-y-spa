@@ -48,7 +48,7 @@ export function BeforeAfterSlider({
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-[4/3] max-h-[600px] overflow-hidden rounded-xl border-4 border-white shadow-2xl cursor-col-resize select-none"
+      className="relative w-full aspect-[4/3] md:aspect-[3/2] max-h-[700px] overflow-hidden rounded-xl border-4 border-white shadow-2xl cursor-col-resize select-none bg-[#040f19]"
       onMouseDown={() => setIsResizing(true)}
       onTouchStart={() => setIsResizing(true)}
     >
@@ -56,7 +56,7 @@ export function BeforeAfterSlider({
       <img
         src={afterImage}
         alt="Después"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain"
         draggable={false}
       />
 
@@ -68,7 +68,7 @@ export function BeforeAfterSlider({
         <img
           src={beforeImage}
           alt="Antes"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-contain"
           draggable={false}
         />
       </div>
