@@ -729,40 +729,6 @@ function ServicePage({ service }: { service: ServicePageData }) {
         </section>
       )}
 
-      {/* ── URGENCY CTA BAND ──────────────────────────── */}
-      {service.slug !== "depilacion-laser" && (
-      <section className="bg-primary py-12">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <p className="text-white/70 text-xs font-bold tracking-[0.4em] uppercase mb-3">
-              {service.slug === "adn-salmon" ? "✨ MJ Estética Wellness Center" : "Valoración Sin Compromiso"}
-            </p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
-              {service.slug === "adn-salmon" ? "Rejuvenecimiento facial avanzado con resultados naturales." : "Reserva hoy — plazas limitadas"}
-            </h2>
-            {service.slug !== "adn-salmon" && (
-              <>
-                <p className="text-white/75 text-sm mb-8 max-w-md mx-auto leading-relaxed">
-                  Escríbenos por WhatsApp y te asesoramos sin costo. Diseñamos el protocolo ideal para tu caso.
-                </p>
-                <a
-                  id={`cta-urgency-${service.slug}`}
-                  href={WA}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-white text-primary text-sm font-bold tracking-[0.15em] uppercase px-10 py-4 hover:bg-stone-100 transition-colors group"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  Escribir por WhatsApp
-                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-                </a>
-              </>
-            )}
-          </motion.div>
-        </div>
-      </section>
-      )}
-
       {/* ── ANTES Y DESPUÉS — servicios corporales seleccionados ─── */}
       {["masajes-corporales", "reduccion-de-medidas", "drenaje-linfatico", "carboxiterapia"].includes(service.slug) && (() => {
         const beforeBg = `${BASE}images/corporales-antes-bg.webp`;
@@ -891,6 +857,40 @@ function ServicePage({ service }: { service: ServicePageData }) {
           </section>
         );
       })()}
+
+      {/* ── URGENCY CTA BAND ──────────────────────────── */}
+      {service.slug !== "depilacion-laser" && (
+      <section className="bg-primary py-12">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+            <p className="text-white/70 text-xs font-bold tracking-[0.4em] uppercase mb-3">
+              {service.slug === "adn-salmon" ? "✨ MJ Estética Wellness Center" : "Valoración Sin Compromiso"}
+            </p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+              {service.slug === "adn-salmon" ? "Rejuvenecimiento facial avanzado con resultados naturales." : "Reserva hoy — plazas limitadas"}
+            </h2>
+            {service.slug !== "adn-salmon" && (
+              <>
+                <p className="text-white/75 text-sm mb-8 max-w-md mx-auto leading-relaxed">
+                  Escríbenos por WhatsApp y te asesoramos sin costo. Diseñamos el protocolo ideal para tu caso.
+                </p>
+                <a
+                  id={`cta-urgency-${service.slug}`}
+                  href={WA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-white text-primary text-sm font-bold tracking-[0.15em] uppercase px-10 py-4 hover:bg-stone-100 transition-colors group"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Escribir por WhatsApp
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
+                </a>
+              </>
+            )}
+          </motion.div>
+        </div>
+      </section>
+      )}
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
