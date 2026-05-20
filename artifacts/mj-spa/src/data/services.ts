@@ -29,7 +29,7 @@ export const medicoEsteticosLinks = [
 ];
 
 export const tratamientosCorporalesLinks = [
-  { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
+  { name: "Masajes Reductor con Hidrolicoplasia Turrialba", href: "/servicios/masajes-corporales" },
   { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
   { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios" },
   { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },

@@ -26,7 +26,7 @@ const sections = [
     color: "text-primary",
     links: [
       { name: "Todos los Tratamientos Corporales", href: "/tratamientos/corporales" },
-      { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
+      { name: "Masajes Reductor con Hidrolicoplasia Turrialba", href: "/servicios/masajes-corporales" },
       { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
       { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios" },
       { name: "Reducción de Medidas", href: "/servicios/reduccion-de-medidas" },
