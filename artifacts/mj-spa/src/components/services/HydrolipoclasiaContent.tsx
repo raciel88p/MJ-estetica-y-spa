@@ -9,67 +9,6 @@ const fadeUp = {
 export function HydrolipoclasiaContent({ waLink }: { waLink: string }) {
   return (
     <>
-      {/* ── INTRO & CHECKLIST ────────────────────────── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6 sm:px-10">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-px bg-primary/30" />
-              <span className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">Protocolo Especializado</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-10 leading-tight">
-              Recupera la confianza <br />
-              <span className="text-primary italic font-light">en tu cuerpo</span>
-            </h2>
-            <p className="text-stone-600 text-lg leading-relaxed mb-10">
-              En MJ Estética & Wellness Center combinamos protocolos corporales especializados, atención personalizada y tecnología estética avanzada para ayudarte a mejorar la apariencia de zonas con grasa localizada y recuperar confianza en tu cuerpo.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-              {[
-                "Tratamiento no invasivo",
-                "Protocolos seguros y personalizados",
-                "Resultados progresivos y naturales",
-                "Atención profesional en Turrialba",
-                "Sesiones rápidas y cómodas"
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-stone-50 p-4 border border-stone-100">
-                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-                  <span className="text-stone-700 font-medium text-sm">{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="bg-stone-900 p-8 md:p-12 text-white relative overflow-hidden rounded-sm">
-              <div className="relative z-10">
-                <h3 className="text-2xl font-serif font-bold text-white mb-6">¿Te gustaría saber si este tratamiento es ideal para ti?</h3>
-                <ul className="space-y-4 mb-10">
-                  {[
-                    "Agenda hoy tu valoración corporal personalizada",
-                    "Consulta paquetes y promociones activas",
-                    "Escríbenos por WhatsApp y recibe atención inmediata"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="text-primary">👉</span>
-                      <span className="text-white/90 font-medium">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <a
-                  href={waLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 font-bold tracking-[0.15em] uppercase hover:bg-primary/90 transition-all shadow-xl"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  Consultar por WhatsApp
-                </a>
-              </div>
-              <Star className="absolute -right-8 -bottom-8 w-48 h-48 text-white/5 rotate-12" />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* ── QUÉ ES & ZONAS ────────────────────────────── */}
       <section className="py-24 bg-stone-50 border-y border-stone-100">
         <div className="max-w-4xl mx-auto px-6">
@@ -158,38 +97,6 @@ export function HydrolipoclasiaContent({ waLink }: { waLink: string }) {
                 Y precisamente ahí es donde una valoración profesional puede ayudarte a descubrir el protocolo correcto para tu cuerpo.
               </p>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── BENEFICIOS ────────────────────────────────── */}
-      <section className="py-24 bg-stone-50 overflow-hidden">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-4">Beneficios reales de la hidrolipoclasia</h2>
-              <p className="text-stone-500 italic">En MJ creemos en expectativas reales y resultados honestos.</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
-              {[
-                "Mejorar el contorno corporal",
-                "Reducir visualmente volumen localizado",
-                "Complementar hábitos saludables",
-                "Mejorar la apariencia de ciertas zonas",
-                "Sentirte más cómodo(a) con tu cuerpo",
-                "Obtener sesiones rápidas con mínima recuperación"
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 bg-white p-5 border border-stone-200">
-                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-                  <span className="text-stone-700 font-medium">{item}</span>
-                </div>
-              ))}
-            </div>
-
-            <p className="text-center font-serif text-2xl text-stone-900 font-bold">
-              Lo más importante: buscamos resultados naturales y progresivos, no promesas irreales.
-            </p>
           </motion.div>
         </div>
       </section>
@@ -304,35 +211,6 @@ export function HydrolipoclasiaContent({ waLink }: { waLink: string }) {
         </div>
       </section>
 
-      {/* ── RESULTADOS REALES ─────────────────────────── */}
-      <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-10">Resultados reales y progresivos</h2>
-            <div className="space-y-6 text-xl md:text-2xl font-serif italic text-stone-600 mb-16">
-              <p>Imagina volver a sentirte cómodo(a) usando la ropa que te gusta.</p>
-              <p>Mirarte al espejo y notar cambios reales.</p>
-              <p>No buscar perfección… sino sentirte mejor contigo mismo(a).</p>
-            </div>
-            <p className="text-stone-800 font-medium leading-relaxed max-w-2xl mx-auto mb-16">
-              En MJ Estética & Wellness Center creemos que el bienestar corporal también impacta tu seguridad, energía y autoestima.
-            </p>
-
-            <div className="flex flex-col md:flex-row justify-center gap-8 mb-12">
-              {[
-                "📸 Resultados reales",
-                "📸 Casos personalizados",
-                "📸 Seguimiento progresivo"
-              ].map((item, i) => (
-                <div key={i} className="text-stone-900 font-bold uppercase tracking-widest text-sm">
-                  {item}
-                </div>
-              ))}
-            </div>
-            <p className="text-primary font-bold animate-bounce uppercase tracking-tighter">Desliza para ver la transformación 👇</p>
-          </motion.div>
-        </div>
-      </section>
     </>
   );
 }

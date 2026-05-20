@@ -12,6 +12,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { StatsBar } from "@/components/StatsBar";
 import { LaserServiceContent } from "@/components/services/LaserServiceContent";
 import { HydrolipoclasiaContent } from "@/components/services/HydrolipoclasiaContent";
+import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
@@ -753,91 +754,93 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                 <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
                   Antes y <span className="text-primary font-light italic">después</span>
                 </h2>
-                <p className="text-white/45 text-sm max-w-sm mx-auto leading-relaxed">
+                <p className="text-white/45 text-sm max-w-sm mx-auto leading-relaxed mb-8">
                   Así cambia la vida de nuestras clientas con {service.name.toLowerCase()}.
                 </p>
-                {service.slug === "masajes-corporales" && (
-                  <div className="mt-6 flex flex-col gap-2 text-white/60 text-xs font-bold uppercase tracking-widest">
-                    <p>📸 Resultados reales</p>
-                    <p>📸 Casos personalizados</p>
-                    <p>📸 Seguimiento progresivo</p>
-                  </div>
-                )}
               </motion.div>
 
-              <motion.div
-                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
-                className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5"
-              >
-                {/* ANTES */}
-                <motion.div variants={fadeUp} className="bg-[#040f19] overflow-hidden flex flex-col">
-                  {/* Photo shown in full rectangular shape — no cropping */}
-                  <div className="relative overflow-hidden bg-[#040f19] flex items-center justify-center" style={{ height: "440px" }}>
-                    <img
-                      src={beforeBg}
-                      alt="Antes del tratamiento"
-                      className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
-                      style={{ filter: "grayscale(1) brightness(0.88)" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
-                    <span className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white/80 text-[10px] font-bold tracking-[0.35em] uppercase px-3 py-1.5">
-                      Antes
-                    </span>
-                  </div>
-                  {/* Text below image */}
-                  <div className="px-8 py-8 flex-1 flex flex-col justify-between">
-                    <div>
-                      <p className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-2">Sin tratamiento</p>
-                      <h3 className="text-xl font-serif font-bold text-white/80 leading-tight mb-6">
-                        La situación que queremos cambiar
-                      </h3>
+              {service.slug === "masajes-corporales" ? (
+                <div className="max-w-4xl mx-auto">
+                   <BeforeAfterSlider
+                    beforeImage={beforeBg}
+                    afterImage={afterBg}
+                   />
+                </div>
+              ) : (
+                <motion.div
+                  initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
+                  className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5"
+                >
+                  {/* ANTES */}
+                  <motion.div variants={fadeUp} className="bg-[#040f19] overflow-hidden flex flex-col">
+                    {/* Photo shown in full rectangular shape — no cropping */}
+                    <div className="relative overflow-hidden bg-[#040f19] flex items-center justify-center" style={{ height: "440px" }}>
+                      <img
+                        src={beforeBg}
+                        alt="Antes del tratamiento"
+                        className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                        style={{ filter: "grayscale(1) brightness(0.88)" }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
+                      <span className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white/80 text-[10px] font-bold tracking-[0.35em] uppercase px-3 py-1.5">
+                        Antes
+                      </span>
                     </div>
-                    <ul className="space-y-3">
-                      {beforeItems.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <span className="w-3.5 h-3.5 rounded-full border border-stone-600 flex items-center justify-center shrink-0 mt-0.5">
-                            <span className="w-1 h-1 rounded-full bg-stone-500" />
-                          </span>
-                          <span className="text-white/55 text-sm leading-snug">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </motion.div>
+                    {/* Text below image */}
+                    <div className="px-8 py-8 flex-1 flex flex-col justify-between">
+                      <div>
+                        <p className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-2">Sin tratamiento</p>
+                        <h3 className="text-xl font-serif font-bold text-white/80 leading-tight mb-6">
+                          La situación que queremos cambiar
+                        </h3>
+                      </div>
+                      <ul className="space-y-3">
+                        {beforeItems.map((item, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <span className="w-3.5 h-3.5 rounded-full border border-stone-600 flex items-center justify-center shrink-0 mt-0.5">
+                              <span className="w-1 h-1 rounded-full bg-stone-500" />
+                            </span>
+                            <span className="text-white/55 text-sm leading-snug">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </motion.div>
 
-                {/* DESPUÉS */}
-                <motion.div variants={fadeUp} className="bg-[#040f19] overflow-hidden flex flex-col">
-                  {/* Photo shown in full rectangular shape — no cropping */}
-                  <div className="relative overflow-hidden bg-[#040f19] flex items-center justify-center" style={{ height: "440px" }}>
-                    <img
-                      src={afterBg}
-                      alt="Después del tratamiento"
-                      className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
-                    <span className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold tracking-[0.35em] uppercase px-3 py-1.5">
-                      Después
-                    </span>
-                  </div>
-                  {/* Text below image */}
-                  <div className="px-8 py-8 flex-1 flex flex-col justify-between">
-                    <div>
-                      <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-2">Con nuestro tratamiento</p>
-                      <h3 className="text-xl font-serif font-bold text-white leading-tight mb-6">
-                        La transformación que te mereces
-                      </h3>
+                  {/* DESPUÉS */}
+                  <motion.div variants={fadeUp} className="bg-[#040f19] overflow-hidden flex flex-col">
+                    {/* Photo shown in full rectangular shape — no cropping */}
+                    <div className="relative overflow-hidden bg-[#040f19] flex items-center justify-center" style={{ height: "440px" }}>
+                      <img
+                        src={afterBg}
+                        alt="Después del tratamiento"
+                        className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
+                      <span className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold tracking-[0.35em] uppercase px-3 py-1.5">
+                        Después
+                      </span>
                     </div>
-                    <ul className="space-y-3">
-                      {afterItems.map((item, i) => (
-                        <li key={i} className="flex items-start gap-3">
-                          <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                          <span className="text-white/85 text-sm leading-snug">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    {/* Text below image */}
+                    <div className="px-8 py-8 flex-1 flex flex-col justify-between">
+                      <div>
+                        <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-2">Con nuestro tratamiento</p>
+                        <h3 className="text-xl font-serif font-bold text-white leading-tight mb-6">
+                          La transformación que te mereces
+                        </h3>
+                      </div>
+                      <ul className="space-y-3">
+                        {afterItems.map((item, i) => (
+                          <li key={i} className="flex items-start gap-3">
+                            <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                            <span className="text-white/85 text-sm leading-snug">{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
+              )}
 
               {/* CTA under the panel */}
               <motion.div
