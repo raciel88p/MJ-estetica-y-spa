@@ -143,8 +143,30 @@ export function HydrolipoclasiaContent({ waLink }: { waLink: string }) {
         </div>
       </section>
 
-      {/* ── INFO IMPORTANTE & SESIONES ────────────────── */}
+      {/* ── QUÉ INCLUYE ──────────────────────────────── */}
       <section className="py-24 bg-stone-900 text-white overflow-hidden relative">
+        <div className="max-w-4xl mx-auto px-6 mb-16 border-b border-white/10 pb-16">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+            <h2 className="text-3xl font-serif font-bold mb-8 text-white">Qué incluye</h2>
+            <p className="text-white/70 mb-8">Tu sesión incluye:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                "Valoración corporal inicial",
+                "Protocolo de Hidrolipoclasia especializado",
+                "Drenaje linfático o ultrasonido (según caso)",
+                "Recomendaciones post-sesión"
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 bg-white/5 p-4 border border-white/10">
+                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-8 text-white/50 text-xs italic">
+              * Los resultados y la cantidad de sesiones varían según cada individuo.
+            </p>
+          </motion.div>
+        </div>
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
