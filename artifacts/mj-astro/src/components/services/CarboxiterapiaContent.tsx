@@ -8,11 +8,6 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
 };
 
-const stagger = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.09 } },
-};
-
 function FaqItem({ question, answer }: { question: string; answer: string }) {
   const [open, setOpen] = useState(false);
   return (

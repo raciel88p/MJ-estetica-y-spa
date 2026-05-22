@@ -1291,7 +1291,7 @@ export const servicePages: ServicePageData[] = [
     tagline: "La potencia del CO₂ para renovar y rejuvenecer tu cuerpo",
     heroBg: "carboxiterapia-bg.webp",
     heroDescription:
-      "La carboxiterapia es una de las técnicas más eficaces de la medicina estética moderna. Mediante microinyecciones de CO₂ medicinal, activamos la circulación sanguínea, estimulamos la producción de colágeno y eliminamos la celulitis y la grasa localizada. Resultados visibles, seguros y sin tiempo de recuperación.",
+      "Descubre una piel con apariencia más uniforme y un bienestar corporal más integral <br /> La carboxiterapia es uno de los tratamientos wellness y médico-estéticos más buscados por personas que desean complementar sus objetivos corporales y faciales con protocolos personalizados, naturales y progresivos.",
     benefits: [
       "Elimina la celulitis y la grasa localizada de forma eficaz",
       "Estimula la producción natural de colágeno y elastina",
