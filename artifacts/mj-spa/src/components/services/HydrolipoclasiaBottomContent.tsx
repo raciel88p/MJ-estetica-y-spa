@@ -142,7 +142,7 @@ export function HydrolipoclasiaBottomContent({ waLink }: { waLink: string }) {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/5 mb-8 border border-white/10">
               <Gift className="w-8 h-8 text-primary" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Promoción especial</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-white">Promoción especial</h2>
             <p className="text-primary font-bold text-lg mb-8 uppercase tracking-[0.2em]">🎁 Solicita tu valoración y recibe una guía gratuita:</p>
             <p className="text-2xl font-serif italic mb-10 text-white/90">“Cómo bajar de peso y mejorar tu bienestar corporal”</p>
 
