@@ -14,6 +14,7 @@ import { LaserServiceContent } from "@/components/services/LaserServiceContent";
 import { HydrolipoclasiaContent } from "@/components/services/HydrolipoclasiaContent";
 import { HydrolipoclasiaBottomContent } from "@/components/services/HydrolipoclasiaBottomContent";
 import { AdnSalmonContent } from "@/components/services/AdnSalmonContent";
+import { CarboxiterapiaContent } from "@/components/services/CarboxiterapiaContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
@@ -324,6 +325,11 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
         <HydrolipoclasiaContent waLink={WA} />
       )}
 
+      {/* ── CUSTOM CONTENT: CARBOXITERAPIA ────────────────── */}
+      {service.slug === "carboxiterapia" && (
+        <CarboxiterapiaContent service={service} waLink={WA} />
+      )}
+
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
       {(() => {
         const doctorMap: Record<string, { name: string; code: string; specialty: string; photo?: string; bio: string }> = {
@@ -456,7 +462,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {!["adn-salmon", "masajes-corporales"].includes(service.slug) && (
+      {!["adn-salmon", "masajes-corporales", "carboxiterapia"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -738,7 +744,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales"].includes(service.slug) && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div
