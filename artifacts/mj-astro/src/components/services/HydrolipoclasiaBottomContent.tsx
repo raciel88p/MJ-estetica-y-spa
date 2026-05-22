@@ -142,7 +142,7 @@ export function HydrolipoclasiaBottomContent({ waLink }: { waLink: string }) {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/5 mb-8 border border-white/10">
               <Gift className="w-8 h-8 text-primary" />
             </div>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Promoción especial</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-white">Promoción especial</h2>
             <p className="text-primary font-bold text-lg mb-8 uppercase tracking-[0.2em]">🎁 Solicita tu valoración y recibe una guía gratuita:</p>
             <p className="text-2xl font-serif italic mb-10 text-white/90">“Cómo bajar de peso y mejorar tu bienestar corporal”</p>
 
@@ -212,7 +212,7 @@ export function HydrolipoclasiaBottomContent({ waLink }: { waLink: string }) {
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white border border-stone-200 shadow-sm overflow-hidden flex flex-col md:flex-row">
             <div className="bg-[#071e2e] p-10 md:p-16 md:w-1/2 text-white">
-              <h2 className="text-3xl font-serif font-bold mb-8 uppercase tracking-tight">Ubicación y atención</h2>
+              <h2 className="text-3xl font-serif font-bold mb-8 uppercase tracking-tight text-white">Ubicación y atención</h2>
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <MapPin className="w-6 h-6 text-primary shrink-0 mt-1" />
