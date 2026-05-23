@@ -15,6 +15,7 @@ import { HydrolipoclasiaContent } from "@/components/services/HydrolipoclasiaCon
 import { HydrolipoclasiaBottomContent } from "@/components/services/HydrolipoclasiaBottomContent";
 import { AdnSalmonContent } from "@/components/services/AdnSalmonContent";
 import { CarboxiterapiaContent } from "@/components/services/CarboxiterapiaContent";
+import { PostOpServiceContent } from "@/components/services/PostOpServiceContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
@@ -334,6 +335,11 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
         <CarboxiterapiaContent service={service} waLink={WA} />
       )}
 
+      {/* ── CUSTOM CONTENT: POST OPERATORIOS ────────────────── */}
+      {service.slug === "masajes-post-operatorios" && (
+        <PostOpServiceContent waLink={WA} />
+      )}
+
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
       {(() => {
         const doctorMap: Record<string, { name: string; code: string; specialty: string; photo?: string; bio: string }> = {
@@ -419,7 +425,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
-      {!["depilacion-laser", "carboxiterapia"].includes(service.slug) && (
+      {!["depilacion-laser", "carboxiterapia", "masajes-post-operatorios"].includes(service.slug) && (
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -466,7 +472,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {!["adn-salmon", "masajes-corporales", "carboxiterapia"].includes(service.slug) && (
+      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -755,7 +761,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── URGENCY CTA BAND ──────────────────────────── */}
-      {service.slug !== "depilacion-laser" && (
+      {service.slug !== "depilacion-laser" && service.slug !== "masajes-post-operatorios" && (
       <section className="bg-primary py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -791,7 +797,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia"].includes(service.slug) && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div
