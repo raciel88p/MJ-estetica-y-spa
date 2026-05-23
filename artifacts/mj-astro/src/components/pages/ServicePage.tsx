@@ -21,7 +21,7 @@ import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
 const beforeDescMap: Record<string, string[]> = {
-  "masajes-corporales":        ["Tensión muscular acumulada y contracturas dolorosas", "Circulación deficiente y sensación de pesadez corporal", "Estrés físico que afecta el descanso y el bienestar"],
+  "masajes-corporales":        ["Celulitis visible y grasa localizada resistente", "Piel sin luminosidad y con pérdida de firmeza", "Estrías y signos de envejecimiento prematuro"],
   "masajes-relajantes":        ["Ansiedad y estrés crónico que no cede", "Insomnio y dificultad para desconectarse", "Tensión acumulada en cuello, espalda y hombros"],
   "masajes-post-operatorios":  ["Inflamación y fibrosis tras la cirugía", "Cicatrización lenta y adherencias subcutáneas", "Acumulación de líquidos y dolor postoperatorio"],
   "reduccion-de-medidas":      ["Grasa localizada resistente a dieta y ejercicio", "Volumen excesivo en abdomen, flancos y muslos", "Pérdida de definición y contorno corporal"],
@@ -56,6 +56,10 @@ const beforeDescMap: Record<string, string[]> = {
   "implante-barba":            ["Barba irregular, con calvas y sin densidad uniforme", "Incapacidad de conseguir un aspecto masculino definido con barba natural", "Falta de confianza por una barba escasa que no crece en zonas clave"],
   "mesoterapia-capilar":       ["Caída de cabello progresiva y devisa que no se detiene", "Cabello sin densidad, fino y sin vitalidad", "Cuero cabelludo con poca circulación y folículos debilitados"],
   "rellenos-labios":           ["Labios finos, asimétricos o con pérdida de volumen por la edad", "Contorno labial devuminado que envejece el tercio inferior del rostro", "Inseguridad al hablar o sonreír por la apariencia de los labios"],
+};
+
+const afterDescMap: Record<string, string[]> = {
+  "masajes-corporales":        ["Elimina la celulitis y la grasa localizada de forma eficaz", "Estimula la producción natural de colágeno y elastina", "Mejora la circulación y oxigenación del tejido"],
 };
 
 const fadeUp = {
@@ -598,6 +602,49 @@ function ServicePage({ service }: { service: ServicePageData }) {
                     beforeImage={beforeBg}
                     afterImage={afterBg}
                    />
+
+                   <motion.div
+                    initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16"
+                   >
+                     {/* ANTES */}
+                     <motion.div variants={fadeUp} className="flex flex-col">
+                       <div>
+                         <p className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-2">Sin tratamiento</p>
+                         <h3 className="text-xl font-serif font-bold text-white/80 leading-tight mb-6">
+                           La situación que queremos cambiar
+                         </h3>
+                       </div>
+                       <ul className="space-y-4">
+                         {(beforeDescMap[service.slug] ?? []).map((item, i) => (
+                           <li key={i} className="flex items-start gap-3">
+                             <span className="w-3.5 h-3.5 rounded-full border border-stone-600 flex items-center justify-center shrink-0 mt-0.5">
+                               <span className="w-1 h-1 rounded-full bg-stone-500" />
+                             </span>
+                             <span className="text-white/55 text-sm leading-snug">{item}</span>
+                           </li>
+                         ))}
+                       </ul>
+                     </motion.div>
+
+                     {/* DESPUÉS */}
+                     <motion.div variants={fadeUp} className="flex flex-col">
+                       <div>
+                         <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-2">Con nuestro tratamiento</p>
+                         <h3 className="text-xl font-serif font-bold text-white leading-tight mb-6">
+                           La transformación que te mereces
+                         </h3>
+                       </div>
+                       <ul className="space-y-4">
+                         {(afterDescMap[service.slug] ?? []).map((item, i) => (
+                           <li key={i} className="flex items-start gap-3">
+                             <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                             <span className="text-white/85 text-sm leading-snug">{item}</span>
+                           </li>
+                         ))}
+                       </ul>
+                     </motion.div>
+                   </motion.div>
                 </div>
               ) : (
                 <motion.div
