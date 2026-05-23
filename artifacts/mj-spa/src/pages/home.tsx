@@ -252,7 +252,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 36 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.75, ease: "easeOut" as const }}
+              transition={{ duration: 0.75, ease: "easeOut" }}
               className="max-w-5xl mx-auto"
             >
               {/* Eyebrow */}

@@ -113,7 +113,7 @@ export function Navbar() {
                 {nosotros.isOpen && (
                   <motion.div
                     {...dropdownPanelVariants}
-                    transition={{ duration: 0.16, ease: "easeOut" as const }}
+                    transition={{ duration: 0.16, ease: "easeOut" }}
                     onMouseEnter={nosotros.cancelClose}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >
@@ -163,7 +163,7 @@ export function Navbar() {
                 {servicios.isOpen && (
                   <motion.div
                     {...dropdownPanelVariants}
-                    transition={{ duration: 0.16, ease: "easeOut" as const }}
+                    transition={{ duration: 0.16, ease: "easeOut" }}
                     onMouseEnter={servicios.cancelClose}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >
@@ -268,7 +268,7 @@ export function Navbar() {
                 {medicos.isOpen && (
                   <motion.div
                     {...dropdownPanelVariants}
-                    transition={{ duration: 0.16, ease: "easeOut" as const }}
+                    transition={{ duration: 0.16, ease: "easeOut" }}
                     onMouseEnter={medicos.cancelClose}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >

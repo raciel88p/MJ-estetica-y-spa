@@ -234,7 +234,7 @@ export const servicePages: ServicePageData[] = [
     name: "Masajes Post Operatorios en Turrialba",
     tagline: "Recuperación más rápida, resultados más visibles",
     heroDescription:
-      "Recuperación estética con acompañamiento profesional, bienestar y protocolos diseñados para ayudarte a sentirte mejor más rápido<br />Después de una cirugía estética, tu cuerpo necesita mucho más que reposo. Necesita atención especializada, drenaje adecuado y protocolos post operatorios diseñados para favorecer la recuperación, reducir inflamación y ayudarte a mejorar tu proceso de recuperación con mayor comodidad y confianza.",
+      "Recuperación estética con acompañamiento profesional, bienestar y protocolos diseñados para ayudarte a sentirte mejor más rápido<br /><br />Después de una cirugía estética, tu cuerpo necesita mucho más que reposo. Necesita atención especializada, drenaje adecuado y protocolos post operatorios diseñados para favorecer la recuperación, reducir inflamación y ayudarte a mejorar tu proceso de recuperación con mayor comodidad y confianza.",
     benefits: [
       "Reduce la inflamación y el edema post quirúrgico",
       "Previene y trata la fibrosis (dureza post cirugía)",

@@ -332,12 +332,10 @@ function ServicePage({ service }: { service: ServicePageData }) {
         <CarboxiterapiaContent service={service} waLink={WA} />
       )}
 
-      {/* ── CUSTOM CONTENT: POST OPERATORIOS ────────────────── */}
+      {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
       {service.slug === "masajes-post-operatorios" && (
         <PostOpServiceContent waLink={WA} />
       )}
-
-      {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
       {(() => {
         const doctorMap: Record<string, { name: string; code: string; specialty: string; photo?: string; bio: string }> = {
           "nutricion":           { name: "Dr. Johan",                  code: "3667-25",   specialty: "Nutricionista Deportivo",  photo: "dr-johan.webp",               bio: "Especialista en nutrición clínica y deportiva. Diseña planes alimentarios personalizados orientados a objetivos de salud, rendimiento y composición corporal." },
