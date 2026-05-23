@@ -1,0 +1,12 @@
+
+> @workspace/mj-astro@0.0.1 dev /app/artifacts/mj-astro
+> astro dev
+
+[vite] connected.
+13:12:10 [types] Generated 2ms
+13:12:10 [vite] Port 4321 is in use, trying another one...
+ astro  v6.3.1 ready in 2581 ms
+┃ Local    http://localhost:4322/
+┃ Network  use --host to expose
+13:12:10 watching for file changes...
+13:20:00 [watch] playwright-report/index.html
