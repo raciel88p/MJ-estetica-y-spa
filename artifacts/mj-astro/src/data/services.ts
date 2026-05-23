@@ -231,10 +231,10 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "masajes-post-operatorios",
-    name: "Masajes Post Operatorios",
+    name: "Masajes Post Operatorios en Turrialba",
     tagline: "Recuperación más rápida, resultados más visibles",
     heroDescription:
-      "El masaje post operatorio es un pilar fundamental en la recuperación tras cualquier cirugía estética o funcional. Acelera la cicatrización, elimina la fibrosis y reduce la inflamación para que tu resultado quirúrgico sea el mejor posible.",
+      "Recuperación estética con acompañamiento profesional, bienestar y protocolos diseñados para ayudarte a sentirte mejor más rápido<br />Después de una cirugía estética, tu cuerpo necesita mucho más que reposo. Necesita atención especializada, drenaje adecuado y protocolos post operatorios diseñados para favorecer la recuperación, reducir inflamación y ayudarte a mejorar tu proceso de recuperación con mayor comodidad y confianza.",
     benefits: [
       "Reduce la inflamación y el edema post quirúrgico",
       "Previene y trata la fibrosis (dureza post cirugía)",
