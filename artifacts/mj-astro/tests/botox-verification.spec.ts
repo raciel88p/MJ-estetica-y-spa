@@ -5,7 +5,8 @@ test('Botox page renders correctly with custom content and before/after', async 
 
   // Check hero
   await expect(page.getByRole('heading', { name: 'Botox Full Face en Turrialba', exact: true })).toBeVisible();
-  await expect(page.getByText('EL TRATAMIENTO Nº1', { exact: false })).toBeVisible();
+  await expect(page.getByText('Apariencia más fresca, descansada y natural', { exact: false })).toBeVisible();
+  await expect(page.getByText('Tu rostro habla antes que tú', { exact: false })).toBeVisible();
 
   // Check custom content sections
   await expect(page.getByRole('heading', { name: '¿Es para ti el Botox Full Face?' })).toBeVisible();
