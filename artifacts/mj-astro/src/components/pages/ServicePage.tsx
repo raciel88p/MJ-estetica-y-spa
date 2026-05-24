@@ -17,6 +17,7 @@ import { HydrolipoclasiaBottomContent } from "@/components/services/Hydrolipocla
 import { AdnSalmonContent } from "@/components/services/AdnSalmonContent";
 import { CarboxiterapiaContent } from "@/components/services/CarboxiterapiaContent";
 import { PostOpServiceContent } from "@/components/services/PostOpServiceContent";
+import { BotoxServiceContent } from "@/components/services/BotoxServiceContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
@@ -56,11 +57,23 @@ const beforeDescMap: Record<string, string[]> = {
   "blanqueamiento-zona-intima":["Hiperpigmentación y manchas oscuras en zonas íntimas por fricción u hormonas", "Tono irregular en ingle, axilas o zona bikini que genera inseguridad", "Manchas post-depilación resistentes que no mejoran con cremas"],
   "implante-barba":            ["Barba irregular, con calvas y sin densidad uniforme", "Incapacidad de conseguir un aspecto masculino definido con barba natural", "Falta de confianza por una barba escasa que no crece en zonas clave"],
   "mesoterapia-capilar":       ["Caída de cabello progresiva y devisa que no se detiene", "Cabello sin densidad, fino y sin vitalidad", "Cuero cabelludo con poca circulación y folículos debilitados"],
-  "rellenos-labios":           ["Labios finos, asimétricos o con pérdida de volumen por la edad", "Contorno labial devuminado que envejece el tercio inferior del rostro", "Inseguridad al hablar o sonreír por la apariencia de los labios"],
+  "rellenos-labios":           ["Labios finos, asimétricos o con pérdida de volumen por la edad", "Contorno labial difuminado que envejece el tercio inferior del rostro", "Inseguridad al hablar o sonreír por la apariencia de los labios"],
 };
 
 const afterDescMap: Record<string, string[]> = {
   "masajes-corporales":        ["Elimina la celulitis y la grasa localizada de forma eficaz", "Estimula la producción natural de colágeno y elastina", "Mejora la circulación y oxigenación del tejido"],
+  "botox-full-face":           ["Suaviza arrugas de expresión sin perder naturalidad", "Eleva la mirada y refresca el aspecto general", "Previene la formación de arrugas profundas"],
+};
+
+const beforeAfterBgMap: Record<string, { before: string; after: string }> = {
+  "masajes-corporales": {
+    before: "corporales-antes-bg.webp",
+    after: "corporales-despues-bg.webp"
+  },
+  "carboxiterapia": {
+    before: "corporales-antes-bg.webp",
+    after: "corporales-despues-bg.webp"
+  },
 };
 
 const fadeUp = {
@@ -414,13 +427,18 @@ function ServicePage({ service }: { service: ServicePageData }) {
         );
       })()}
 
+      {/* ── BOTOX CUSTOM SECTIONS ────────────────── */}
+      {service.slug === "botox-full-face" && (
+        <BotoxServiceContent waLink={WA} faq={service.faq} />
+      )}
+
       {/* ── ADN SALMON CUSTOM SECTIONS ────────────────── */}
       {service.slug === "adn-salmon" && (
         <AdnSalmonContent waLink={WA} />
       )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
-      {!["depilacion-laser", "carboxiterapia", "masajes-post-operatorios"].includes(service.slug) && (
+      {!["depilacion-laser", "carboxiterapia", "masajes-post-operatorios", "botox-full-face"].includes(service.slug) && (
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -467,7 +485,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios"].includes(service.slug) && (
+      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -576,14 +594,15 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
       {/* ── ANTES Y DESPUÉS — servicios corporales seleccionados ─── */}
       {["masajes-corporales", "reduccion-de-medidas", "drenaje-linfatico", "carboxiterapia"].includes(service.slug) && (() => {
-        const beforeBg = `${BASE}images/corporales-antes-bg.webp`;
-        const afterBg  = `${BASE}images/corporales-despues-bg.webp`;
+        const bgPair = beforeAfterBgMap[service.slug] ?? { before: "corporales-antes-bg.webp", after: "corporales-despues-bg.webp" };
+        const beforeBg = `${BASE}images/${bgPair.before}`;
+        const afterBg  = `${BASE}images/${bgPair.after}`;
         const beforeItems = beforeDescMap[service.slug] ?? [
           "Problema visible que afecta tu bienestar y confianza",
           "Resultados lentos o nulos con métodos convencionales",
           "Sensación de no encontrar la solución adecuada",
         ];
-        const afterItems = service.benefits.slice(0, 3);
+        const afterItems = afterDescMap[service.slug] ?? service.benefits.slice(0, 3);
         return (
           <section className="py-20 md:py-28 bg-[#040f19] overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
@@ -756,7 +775,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── URGENCY CTA BAND ──────────────────────────── */}
-      {service.slug !== "depilacion-laser" && service.slug !== "masajes-post-operatorios" && (
+      {service.slug !== "depilacion-laser" && service.slug !== "masajes-post-operatorios" && service.slug !== "botox-full-face" && (
       <section className="bg-primary py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -791,7 +810,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios"].includes(service.slug) && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div
