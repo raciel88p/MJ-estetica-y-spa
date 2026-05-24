@@ -209,7 +209,7 @@ export function BotoxServiceContent({
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] rounded-full" />
 
             <div className="relative z-10 max-w-2xl">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-10 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-10 leading-tight text-white">
                 Imagina verte descansada… <br />
                 <span className="text-primary italic font-light">incluso en tus días más ocupados</span>
               </h2>
@@ -399,7 +399,7 @@ export function BotoxServiceContent({
       <section className="py-24 bg-[#071e2e] text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8 uppercase tracking-tight">¿El Botox Full Face deja el rostro rígido?</h2>
+             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8 uppercase tracking-tight text-white">¿El Botox Full Face deja el rostro rígido?</h2>
              <div className="max-w-2xl mx-auto space-y-6">
                <p className="text-2xl font-serif italic text-primary">"No necesariamente."</p>
                <p className="text-stone-400 text-lg leading-relaxed">
