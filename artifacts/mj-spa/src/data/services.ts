@@ -518,19 +518,28 @@ export const servicePages: ServicePageData[] = [
     ],
     faq: [
       {
-        question: "¿Cuánto tiempo duran los resultados?",
-        answer:
-          "Los efectos duran entre 4 y 6 meses en función de la zona tratada y del metabolismo de cada paciente. Con tratamientos continuados el efecto tiende a prolongarse.",
+        question: "¿Duele el procedimiento?",
+        answer: "Generalmente las molestias son mínimas y rápidas.",
       },
       {
-        question: "¿El botox es seguro?",
-        answer:
-          "Sí, es un tratamiento aprobado y ampliamente utilizado en medicina estética desde hace décadas. Siempre se realiza por profesionales sanitarios cualificados.",
+        question: "¿Cuánto duran los resultados?",
+        answer: "La duración puede variar según cada persona y hábitos individuales.",
       },
       {
-        question: "¿Cuándo se ven los resultados?",
-        answer:
-          "El efecto empieza a notarse a las 48-72 horas y el resultado definitivo se aprecia a los 15 días.",
+        question: "¿Puedo volver a trabajar el mismo día?",
+        answer: "Muchas personas retoman sus actividades normales rápidamente.",
+      },
+      {
+        question: "¿Ayuda a prevenir líneas de expresión?",
+        answer: "Sí, puede ayudar a disminuir la formación de marcas dinámicas.",
+      },
+      {
+        question: "¿Se puede combinar con otros tratamientos?",
+        answer: "Sí, según valoración profesional personalizada.",
+      },
+      {
+        question: "¿Cuáles cuidados debo tener?",
+        answer: "Evitar ciertas actividades durante las primeras horas y seguir recomendaciones posteriores.",
       },
     ],
   },
