@@ -16,6 +16,7 @@ import { HydrolipoclasiaContent } from "@/components/services/HydrolipoclasiaCon
 import { HydrolipoclasiaBottomContent } from "@/components/services/HydrolipoclasiaBottomContent";
 import { AdnSalmonContent } from "@/components/services/AdnSalmonContent";
 import { CarboxiterapiaContent } from "@/components/services/CarboxiterapiaContent";
+import { GluteoServiceContent } from "@/components/services/GluteoServiceContent";
 import { PostOpServiceContent } from "@/components/services/PostOpServiceContent";
 import { BotoxServiceContent } from "@/components/services/BotoxServiceContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
@@ -63,6 +64,7 @@ const beforeDescMap: Record<string, string[]> = {
 const afterDescMap: Record<string, string[]> = {
   "masajes-corporales":        ["Elimina la celulitis y la grasa localizada de forma eficaz", "Estimula la producción natural de colágeno y elastina", "Mejora la circulación y oxigenación del tejido"],
   "botox-full-face":           ["Suaviza arrugas de expresión sin perder naturalidad", "Eleva la mirada y refresca el aspecto general", "Previene la formación de arrugas profundas"],
+  "levantamiento-gluteo":      ["Elevación visible y duradera de los glúteos", "Mejora significativa del tono muscular", "Piel más firme, tersa y definida"],
 };
 
 const beforeAfterBgMap: Record<string, { before: string; after: string }> = {
@@ -345,6 +347,11 @@ function ServicePage({ service }: { service: ServicePageData }) {
         <CarboxiterapiaContent service={service} waLink={WA} />
       )}
 
+      {/* ── CUSTOM CONTENT: LEVANTAMIENTO DE GLÚTEO ─────────── */}
+      {service.slug === "levantamiento-gluteo" && (
+        <GluteoServiceContent service={service} waLink={WA} />
+      )}
+
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
       {service.slug === "masajes-post-operatorios" && (
         <PostOpServiceContent waLink={WA} />
@@ -438,7 +445,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
-      {!["depilacion-laser", "carboxiterapia", "masajes-post-operatorios", "botox-full-face"].includes(service.slug) && (
+      {!["depilacion-laser", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo"].includes(service.slug) && (
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -485,7 +492,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face"].includes(service.slug) && (
+      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -810,7 +817,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face"].includes(service.slug) && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div
