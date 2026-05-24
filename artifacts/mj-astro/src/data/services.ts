@@ -476,10 +476,9 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "botox-full-face",
-    name: "Botox Full Face",
-    tagline: "Rejuvenece de forma natural y armoniosa",
-    heroDescription:
-      "El tratamiento con toxina botulínica es el más demandado en medicina estética. Con nuestra técnica Full Face consigues una armonía facial completa, con resultados naturales que preservan tu expresividad.",
+    name: "Botox Full Face en Turrialba",
+    tagline: "Recupera la frescura de tu mirada con armonía total",
+    heroDescription: "✨ EL TRATAMIENTO Nº1 PARA UN ROSTRO DESCANSADO Y JUVENIL SIN CIRUGÍA ✨<br /><br />La técnica Full Face con Toxina Botulínica permite suavizar arrugas de expresión en frente, entrecejo y ojos, logrando un efecto de apertura y luminosidad inmediata. <br /><br />En MJ Estética Wellness Center, priorizamos la naturalidad: rejuvenecemos tu rostro preservando tu expresividad única.",
     benefits: [
       "Reducción visible de arrugas de expresión",
       "Aspecto rejuvenecido y natural",
