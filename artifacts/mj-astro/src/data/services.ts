@@ -1357,7 +1357,7 @@ export const servicePages: ServicePageData[] = [
     tagline: "Glúteos firmes y elevados sin cirugía ni implantes",
     heroBg: "levantamiento-gluteo-bg.webp",
     heroDescription:
-      "En MJ Estética & Wellness Center entendemos que sentirte bien con tu cuerpo también impacta tu confianza, seguridad y bienestar. Por eso creamos protocolos de levantamiento de glúteo enfocados en resultados progresivos, naturales y visualmente armónicos.",
+      "Mejora la apariencia, firmeza y proyección de tus glúteos con un enfoque natural, armónico y personalizado",
     benefits: [
       "Apariencia más firme y tonificada",
       "Mejor proyección visual de los glúteos",
