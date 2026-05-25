@@ -350,11 +350,6 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
         <CarboxiterapiaContent service={service} waLink={WA} />
       )}
 
-      {/* ── CUSTOM CONTENT: LEVANTAMIENTO DE GLÚTEO ─────────── */}
-      {service.slug === "levantamiento-gluteo" && (
-        <GluteoServiceContent service={service} waLink={WA} />
-      )}
-
       {/* ── CUSTOM CONTENT: POST OPERATORIOS ────────────────── */}
       {service.slug === "masajes-post-operatorios" && (
         <PostOpServiceContent waLink={WA} />
@@ -438,6 +433,11 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
           </section>
         );
       })()}
+
+      {/* ── CUSTOM CONTENT: LEVANTAMIENTO DE GLÚTEO ─────────── */}
+      {service.slug === "levantamiento-gluteo" && (
+        <GluteoServiceContent service={service} waLink={WA} />
+      )}
 
       {/* ── BOTOX CUSTOM SECTIONS ────────────────── */}
       {service.slug === "botox-full-face" && (

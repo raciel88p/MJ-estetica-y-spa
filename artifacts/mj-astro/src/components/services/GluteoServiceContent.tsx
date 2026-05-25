@@ -40,7 +40,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
         onClick={() => setOpen(!open)}
         className="w-full flex justify-between items-center py-5 text-left gap-4 group"
       >
-        <span className="font-serif text-lg text-stone-900 group-hover:text-primary transition-colors italic">{question}</span>
+        <span className="font-serif text-lg text-stone-900 group-hover:text-primary transition-colors">{question}</span>
         <ChevronDown className={`w-5 h-5 text-primary shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
       </button>
       <AnimatePresence>
@@ -69,9 +69,9 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-px bg-primary" />
-              <span className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase italic">Confianza y Bienestar</span>
+              <span className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">Confianza y Bienestar</span>
             </div>
-            <p className="text-stone-600 text-lg leading-relaxed mb-10 italic">
+            <p className="text-stone-600 text-lg leading-relaxed mb-10">
               En <span className="font-bold text-stone-900">MJ Estética & Wellness Center</span> entendemos que sentirte bien con tu cuerpo también impacta tu confianza, seguridad y bienestar. Por eso creamos protocolos de levantamiento de glúteo enfocados en resultados progresivos, naturales y visualmente armónicos.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -84,12 +84,12 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <Sparkles className="w-4 h-4 text-primary shrink-0" />
-                  <span className="text-stone-700 font-medium italic">{item}</span>
+                  <span className="text-stone-700 font-medium">{item}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-16 p-8 bg-stone-50 border-l-4 border-primary italic">
+            <div className="mt-16 p-8 bg-stone-50 border-l-4 border-primary">
               <p className="text-xl text-stone-900 font-serif leading-tight">
                 🍑 Descubre cómo mejorar la apariencia de tus glúteos sin perder naturalidad
               </p>
@@ -103,7 +103,7 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <h3 className="text-2xl font-serif font-bold mb-8 text-primary italic">Muchas personas desean:</h3>
+              <h3 className="text-2xl font-serif font-bold mb-8 text-primary">Muchas personas desean:</h3>
               <div className="space-y-4">
                 {[
                   "Mejorar firmeza",
@@ -115,22 +115,22 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <Check className="w-5 h-5 text-primary" />
-                    <span className="text-white/80 italic">{item}</span>
+                    <span className="text-white/80">{item}</span>
                   </div>
                 ))}
               </div>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
               <div className="bg-white/5 border border-white/10 p-8 rounded-sm">
-                <p className="text-white/60 text-sm mb-6 leading-relaxed italic">
+                <p className="text-white/60 text-sm mb-6 leading-relaxed">
                   El problema es que no todos los tratamientos ofrecen resultados naturales o personalizados.
                 </p>
-                <h3 className="text-xl font-serif font-bold mb-6 italic text-white">Nuestro enfoque Wellness integral prioriza:</h3>
+                <h3 className="text-xl font-serif font-bold mb-6 text-white">Nuestro enfoque Wellness integral prioriza:</h3>
                 <div className="space-y-3">
                   {["Naturalidad", "Seguridad", "Armonización corporal", "Evaluación individual", "Resultados progresivos"].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-primary" />
-                      <span className="text-white font-medium italic">{item}</span>
+                      <span className="text-white font-medium">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -145,20 +145,20 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8 italic">¿Qué es el levantamiento de glúteo?</h2>
-            <p className="text-stone-600 text-lg leading-relaxed italic">
+            <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8">¿Qué es el levantamiento de glúteo?</h2>
+            <p className="text-stone-600 text-lg leading-relaxed">
               El levantamiento de glúteo es un tratamiento corporal estético diseñado para ayudar a mejorar la apariencia, firmeza y contorno de los glúteos mediante protocolos personalizados orientados a resultados armónicos y naturales.
             </p>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-50 p-10 border border-stone-100 mb-16">
-            <p className="text-stone-700 italic leading-relaxed text-center">
+            <p className="text-stone-700 leading-relaxed text-center">
               Cada cuerpo responde diferente. Por eso en MJ realizamos una <span className="font-bold">valoración corporal previa</span> para diseñar un protocolo adaptado a tus objetivos, hábitos y tipo corporal.
             </p>
           </motion.div>
 
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-             <p className="text-stone-500 mb-8 italic">El enfoque puede incluir distintas técnicas corporales, aparatología estética y protocolos complementarios orientados a:</p>
+             <p className="text-stone-500 mb-8">El enfoque puede incluir distintas técnicas corporales, aparatología estética y protocolos complementarios orientados a:</p>
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                {[
                  "mejorar firmeza de glúteos",
@@ -169,11 +169,11 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
                ].map((item, i) => (
                  <div key={i} className="flex items-center gap-3">
                    <Check className="w-4 h-4 text-primary shrink-0" />
-                   <span className="text-stone-700 font-medium italic">{item}</span>
+                   <span className="text-stone-700 font-medium">{item}</span>
                  </div>
                ))}
              </div>
-             <p className="mt-12 text-center text-primary font-bold italic border-t border-stone-100 pt-8">
+             <p className="mt-12 text-center text-primary font-bold border-t border-stone-100 pt-8">
                Lo más importante: buscamos resultados progresivos y reales, evitando apariencias exageradas o artificiales.
              </p>
           </motion.div>
@@ -184,8 +184,8 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
       <section className="py-24 bg-stone-50">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4 italic">✨ Beneficios</p>
-            <h2 className="text-4xl font-serif font-bold text-stone-900 italic">Beneficios más buscados por nuestras pacientes</h2>
+            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">✨ Beneficios</p>
+            <h2 className="text-4xl font-serif font-bold text-stone-900">Beneficios más buscados por nuestras pacientes</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
@@ -208,12 +208,12 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
                 <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary transition-colors">
                   <CheckCircle2 className="w-4 h-4 text-primary group-hover:text-white transition-colors" />
                 </div>
-                <span className="text-stone-700 font-medium italic text-sm">{item}</span>
+                <span className="text-stone-700 font-medium text-sm">{item}</span>
               </motion.div>
             ))}
           </div>
 
-          <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-16 text-center text-stone-500 italic max-w-2xl mx-auto">
+          <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mt-16 text-center text-stone-500 max-w-2xl mx-auto">
             Muchas pacientes nos buscan porque desean sentirse mejor con su cuerpo sin necesidad de procedimientos invasivos extremos.
           </motion.p>
         </div>
@@ -226,8 +226,8 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
             <div className="flex justify-center mb-6">
               <MessageCircle className="w-12 h-12 text-primary/40" />
             </div>
-            <h2 className="text-3xl font-serif font-bold text-stone-900 italic">💬 ¿Para quién se recomienda?</h2>
-            <p className="text-stone-500 mt-4 italic">El levantamiento de glúteo puede recomendarse para personas que desean:</p>
+            <h2 className="text-3xl font-serif font-bold text-stone-900">💬 ¿Para quién se recomienda?</h2>
+            <p className="text-stone-500 mt-4">El levantamiento de glúteo puede recomendarse para personas que desean:</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -246,9 +246,9 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Check className="w-5 h-5 text-primary" />
-                  <h3 className="font-serif font-bold text-stone-900 italic">{item.t}</h3>
+                  <h3 className="font-serif font-bold text-stone-900">{item.t}</h3>
                 </div>
-                <p className="text-stone-500 text-sm italic leading-relaxed">{item.d}</p>
+                <p className="text-stone-500 text-sm leading-relaxed">{item.d}</p>
               </motion.div>
             ))}
           </div>
@@ -259,8 +259,8 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
       <section className="py-24 bg-stone-900 text-white">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4 italic">🔬 El Proceso</p>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 italic">¿Cómo funciona una sesión de levantamiento de glúteo?</h2>
+            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">🔬 El Proceso</p>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">¿Cómo funciona una sesión de levantamiento de glúteo?</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -270,9 +270,9 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
               { s: "Paso 4", t: "Seguimiento y recomendaciones", d: "Te guiamos con hábitos complementarios para potenciar resultados progresivos y naturales." }
             ].map((step, i) => (
               <div key={i} className="relative bg-white/5 p-8 border border-white/10 hover:border-primary/40 transition-colors group">
-                <span className="text-primary text-[10px] font-bold tracking-[0.3em] uppercase mb-4 block italic">{step.s}</span>
-                <h4 className="text-lg font-serif font-bold text-white mb-4 italic leading-tight">{step.t}</h4>
-                <p className="text-white/50 text-sm leading-relaxed italic">{step.d}</p>
+                <span className="text-primary text-[10px] font-bold tracking-[0.3em] uppercase mb-4 block">{step.s}</span>
+                <h4 className="text-lg font-serif font-bold text-white mb-4 leading-tight">{step.t}</h4>
+                <p className="text-white/50 text-sm leading-relaxed">{step.d}</p>
               </div>
             ))}
           </div>
@@ -285,8 +285,8 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
             ].map((item, i) => (
               <div key={i} className="p-8 flex flex-col items-center text-center">
                  <div className="mb-4">{item.i}</div>
-                 <p className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2 italic">{item.l}</p>
-                 <p className="text-white font-serif font-bold italic text-sm">{item.v}</p>
+                 <p className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-2">{item.l}</p>
+                 <p className="text-white font-serif font-bold text-sm">{item.v}</p>
               </div>
             ))}
           </div>
@@ -299,9 +299,9 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
             <div className="flex items-center gap-3 mb-8">
               <div className="w-10 h-0.5 bg-primary" />
-              <h2 className="text-3xl font-serif font-bold text-stone-900 italic">📈 ¿Cuántas sesiones se recomiendan?</h2>
+              <h2 className="text-3xl font-serif font-bold text-stone-900">📈 ¿Cuántas sesiones se recomiendan?</h2>
             </div>
-            <p className="text-stone-500 mb-10 italic">La cantidad de sesiones depende de:</p>
+            <p className="text-stone-500 mb-10">La cantidad de sesiones depende de:</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-16">
               {[
                 "Objetivos estéticos",
@@ -313,17 +313,17 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <Check className="w-4 h-4 text-primary shrink-0" />
-                  <span className="text-stone-700 italic">{item}</span>
+                  <span className="text-stone-700">{item}</span>
                 </div>
               ))}
             </div>
 
             <div className="bg-stone-50 p-10 rounded-sm border border-stone-100">
-               <p className="text-stone-600 mb-8 italic">Muchas pacientes optan por programas corporales completos para potenciar resultados y mantener la armonización corporal a largo plazo.</p>
-               <p className="text-stone-400 text-[10px] uppercase tracking-widest mb-6 italic">También contamos con:</p>
+               <p className="text-stone-600 mb-8">Muchas pacientes optan por programas corporales completos para potenciar resultados y mantener la armonización corporal a largo plazo.</p>
+               <p className="text-stone-400 text-[10px] uppercase tracking-widest mb-6">También contamos con:</p>
                <div className="grid grid-cols-2 gap-4">
                  {["✨ paquetes corporales", "✨ programas wellness", "✨ protocolos combinados", "✨ seguimiento personalizado"].map((item, i) => (
-                   <span key={i} className="text-stone-900 font-bold italic text-sm">{item}</span>
+                   <span key={i} className="text-stone-900 font-bold text-sm">{item}</span>
                  ))}
                </div>
             </div>
@@ -340,8 +340,8 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
                 <Star className="w-4 h-4 fill-white" />
                 <span className="text-xs font-bold tracking-widest uppercase">Recurso Exclusivo</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 italic">🎁 GUÍA GRATUITA</h2>
-              <p className="text-white/90 text-lg mb-4 leading-relaxed italic">
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">🎁 GUÍA GRATUITA</h2>
+              <p className="text-white/90 text-lg mb-4 leading-relaxed">
                 Cómo mejorar la apariencia y firmeza de los glúteos
               </p>
               <div className="bg-white/10 border border-white/20 p-8 rounded-sm mb-8 backdrop-blur-sm">
@@ -362,13 +362,13 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
                   ))}
                 </ul>
               </div>
-              <p className="text-white font-bold italic mb-8">Además recibirás información sobre nuestros protocolos personalizados de levantamiento de glúteo en Turrialba.</p>
+              <p className="text-white font-bold mb-8">Además recibirás información sobre nuestros protocolos personalizados de levantamiento de glúteo en Turrialba.</p>
             </motion.div>
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white p-8 md:p-12 text-stone-900 shadow-2xl">
-              <h3 className="text-2xl font-serif font-bold mb-8 text-center italic uppercase tracking-tight">Comenta la palabra:</h3>
+              <h3 className="text-2xl font-serif font-bold mb-8 text-center uppercase tracking-tight">Comenta la palabra:</h3>
               <div className="text-center mb-10">
-                 <span className="text-4xl md:text-5xl font-serif font-bold text-primary italic underline underline-offset-8">“GLÚTEO”</span>
+                 <span className="text-4xl md:text-5xl font-serif font-bold text-primary underline underline-offset-8">“GLÚTEO”</span>
               </div>
               <div className="space-y-6">
                 <a
@@ -381,11 +381,11 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
                     <Instagram className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-[10px] font-bold text-primary tracking-widest uppercase mb-1 italic">Instagram Direct</p>
-                    <p className="font-bold text-lg group-hover:text-primary transition-colors italic">📸 Ir a nuestro perfil</p>
+                    <p className="text-[10px] font-bold text-primary tracking-widest uppercase mb-1">Instagram Direct</p>
+                    <p className="font-bold text-lg group-hover:text-primary transition-colors">📸 Ir a nuestro perfil</p>
                   </div>
                 </a>
-                <p className="text-xs text-center text-stone-400 italic">Recibe tu guía al instante vía mensaje directo.</p>
+                <p className="text-xs text-center text-stone-400">Recibe tu guía al instante vía mensaje directo.</p>
               </div>
             </motion.div>
           </div>
@@ -399,16 +399,16 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
                <div className="flex justify-center mb-8">
                  <Search className="w-10 h-10 text-primary/30" />
                </div>
-               <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8 italic">📸 Resultados reales y naturales</h2>
-               <p className="text-stone-500 italic mb-12">En MJ Estética & Wellness Center creemos en:</p>
+               <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8">📸 Resultados reales y naturales</h2>
+               <p className="text-stone-500 mb-12">En MJ Estética & Wellness Center creemos en:</p>
                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
                  {["armonía corporal", "naturalidad", "evolución progresiva", "estética elegante y realista"].map((item, i) => (
-                   <div key={i} className="p-4 border border-stone-100 italic font-medium text-stone-800 text-sm">
+                   <div key={i} className="p-4 border border-stone-100 font-medium text-stone-800 text-sm">
                       ✔ {item}
                    </div>
                  ))}
                </div>
-               <p className="text-lg text-stone-600 italic border-l-4 border-primary/20 pl-8 text-left max-w-2xl mx-auto">
+               <p className="text-lg text-stone-600 border-l-4 border-primary/20 pl-8 text-left max-w-2xl mx-auto">
                  Por eso evitamos resultados exagerados o artificiales. Nuestros protocolos buscan que te sientas cómoda, segura y auténtica con tu cuerpo.
                </p>
             </motion.div>
@@ -419,7 +419,7 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
       <section className="py-24 bg-stone-50 relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl font-serif font-bold text-stone-900 italic">❤️ Historias reales de transformación</h2>
+            <h2 className="text-3xl font-serif font-bold text-stone-900">❤️ Historias reales de transformación</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -435,8 +435,8 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
                 className="bg-white p-8 border border-stone-200 relative group"
               >
                 <Quote className="w-8 h-8 text-primary/10 absolute top-4 right-4" />
-                <p className="text-stone-600 italic mb-6 leading-relaxed">{text}</p>
-                <p className="text-primary text-xs font-bold tracking-widest uppercase italic">— Paciente MJ</p>
+                <p className="text-stone-600 mb-6 leading-relaxed">{text}</p>
+                <p className="text-primary text-xs font-bold tracking-widest uppercase">— Paciente MJ</p>
               </motion.div>
             ))}
           </div>
@@ -451,7 +451,7 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
             className="mb-12 text-center"
           >
-            <h2 className="text-4xl font-serif font-bold text-stone-900 italic">❓ Preguntas frecuentes</h2>
+            <h2 className="text-4xl font-serif font-bold text-stone-900">❓ Preguntas frecuentes</h2>
           </motion.div>
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}
@@ -479,8 +479,8 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
       <section className="py-24 bg-stone-900 text-white overflow-hidden relative">
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-             <h2 className="text-3xl md:text-4xl font-serif font-bold italic mb-6">💎 ¿Por qué elegir MJ Estética & Wellness Center?</h2>
-             <p className="text-primary font-bold italic uppercase tracking-widest text-sm">Porque no trabajamos con soluciones genéricas.</p>
+             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 text-white">💎 ¿Por qué elegir MJ Estética & Wellness Center?</h2>
+             <p className="text-primary font-bold uppercase tracking-widest text-sm">Porque no trabajamos con soluciones genéricas.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -497,13 +497,13 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
-                    <span className="text-white italic font-medium">{item}</span>
+                    <span className="text-white font-medium">{item}</span>
                   </div>
                 ))}
              </motion.div>
              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="flex items-center justify-center">
                 <div className="p-10 border border-primary/30 bg-primary/5 rounded-full">
-                   <p className="text-center text-lg italic leading-relaxed text-white">
+                   <p className="text-center text-lg leading-relaxed text-white">
                      Nuestro objetivo es ayudarte a sentirte mejor contigo misma de manera <span className="text-primary font-bold">natural y segura</span>.
                    </p>
                 </div>
@@ -517,7 +517,7 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
         <div className="max-w-5xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8 italic">📍 Levantamiento de Glúteo en Turrialba</h2>
+              <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8">📍 Levantamiento de Glúteo en Turrialba</h2>
               <div className="space-y-6">
                 {[
                   { t: "Ubicación accesible en Turrialba", i: <MapPin className="w-5 h-5 text-primary" /> },
@@ -526,7 +526,7 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
                   { t: "Horarios flexibles", i: <Clock className="w-5 h-5 text-primary" /> },
                   { t: "Ambiente cómodo y profesional", i: <UserCheck className="w-5 h-5 text-primary" /> }
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4 text-stone-700 italic">
+                  <div key={i} className="flex items-center gap-4 text-stone-700">
                     {item.i}
                     <span className="font-medium">{item.t}</span>
                   </div>
@@ -536,26 +536,26 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-primary p-12 text-white relative overflow-hidden shadow-2xl">
                <div className="relative z-10 text-center">
-                  <p className="text-white/60 text-xs font-bold tracking-[0.4em] uppercase mb-4 italic">🚨 Agenda tu valoración corporal hoy</p>
-                  <h3 className="text-2xl md:text-3xl font-serif font-bold mb-8 italic">Tu cuerpo merece un enfoque personalizado, natural y profesional.</h3>
-                  <p className="text-white/80 italic mb-10 text-sm">🍑 Descubre el protocolo ideal para ti</p>
+                  <p className="text-white/60 text-xs font-bold tracking-[0.4em] uppercase mb-4">🚨 Agenda tu valoración corporal hoy</p>
+                  <h3 className="text-2xl md:text-3xl font-serif font-bold mb-8">Tu cuerpo merece un enfoque personalizado, natural y profesional.</h3>
+                  <p className="text-white/80 mb-10 text-sm">🍑 Descubre el protocolo ideal para ti</p>
                   <a
                     href={waLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 bg-white text-primary px-10 py-5 font-bold tracking-[0.2em] uppercase hover:bg-stone-900 hover:text-white transition-all text-xs italic w-full justify-center"
+                    className="inline-flex items-center gap-3 bg-white text-primary px-10 py-5 font-bold tracking-[0.2em] uppercase hover:bg-stone-900 hover:text-white transition-all text-xs w-full justify-center"
                   >
                     <MessageCircle className="w-5 h-5" />
                     CONSULTAR DISPONIBILIDAD HOY
                   </a>
-                  <p className="mt-8 text-[10px] tracking-widest text-white/50 uppercase font-bold italic">💬 Escríbenos por WhatsApp y agenda tu valoración en MJ</p>
+                  <p className="mt-8 text-[10px] tracking-widest text-white/50 uppercase font-bold">💬 Escríbenos por WhatsApp y agenda tu valoración en MJ</p>
                </div>
                <Sparkles className="absolute -right-10 -top-10 w-48 h-48 text-white/10 rotate-12" />
             </motion.div>
           </div>
 
           <div className="mt-20 pt-10 border-t border-stone-100 text-center">
-             <a href="/" className="text-stone-400 text-xs hover:text-primary transition-colors italic tracking-widest font-bold">👉 VISITA AHORA: MJ ESTÉTICA & WELLNESS CENTER</a>
+             <a href="/" className="text-stone-400 text-xs hover:text-primary transition-colors tracking-widest font-bold">👉 VISITA AHORA: MJ ESTÉTICA & WELLNESS CENTER</a>
           </div>
         </div>
       </section>
