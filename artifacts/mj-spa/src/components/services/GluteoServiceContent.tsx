@@ -67,7 +67,7 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
               Realza tu figura con <span className="text-primary font-light">resultados naturales</span>
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-10 italic">
-              En MJ Estética & Wellness Center, nuestro protocolo de levantamiento de glúteo está diseñado para quienes buscan firmeza, elevación y definición sin recurrir a cirugías. Combinamos tecnología de vanguardia con un enfoque personalizado para potenciar tu belleza natural.
+              En MJ Estética & Wellness Center, nuestro protocolo de <span className="font-bold">levantamiento de glúteo en Turrialba</span> está diseñado para quienes buscan firmeza, elevación y proyección con un enfoque natural, armónico y personalizado. Combinamos tecnología de vanguardia para potenciar tu belleza sin cirugías.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[

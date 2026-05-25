@@ -36,7 +36,7 @@ export const tratamientosCorporalesLinks = [
   { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
   { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
   { name: "Carboxiterapia", href: "/servicios/carboxiterapia" },
-  { name: "Levantamiento de Glúteo", href: "/servicios/levantamiento-gluteo" },
+  { name: "Levantamiento de Glúteo en Turrialba", href: "/servicios/levantamiento-gluteo" },
   { name: "Levantamiento de Busto", href: "/servicios/levantamiento-busto" },
   { name: "Vendas Frías", href: "/servicios/vendas-frias" },
   { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
@@ -1353,11 +1353,11 @@ export const servicePages: ServicePageData[] = [
   // ── LEVANTAMIENTO DE GLÚTEO ─────────────────────────
   {
     slug: "levantamiento-gluteo",
-    name: "Levantamiento de Glúteo",
+    name: "Levantamiento de Glúteo en Turrialba",
     tagline: "Glúteos firmes y elevados sin cirugía ni implantes",
     heroBg: "levantamiento-gluteo-bg.webp",
     heroDescription:
-      "El levantamiento de glúteo no quirúrgico combina las técnicas más avanzadas — radiofrecuencia, electroestimulación y carboxiterapia — para elevar, tensar y dar volumen a los glúteos de forma completamente natural. Sin bisturí, sin recuperación y con resultados que se potencian sesión a sesión.",
+      "Mejora la apariencia, firmeza y proyección de tus glúteos con un enfoque natural, armónico y personalizado",
     benefits: [
       "Elevación visible y duradera sin cirugía ni implantes",
       "Protocolo que combina varias tecnologías para máximo resultado",
