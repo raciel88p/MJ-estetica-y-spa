@@ -1357,14 +1357,16 @@ export const servicePages: ServicePageData[] = [
     tagline: "Glúteos firmes y elevados sin cirugía ni implantes",
     heroBg: "levantamiento-gluteo-bg.webp",
     heroDescription:
-      "Mejora la apariencia, firmeza y proyección de tus glúteos con un enfoque natural, armónico y personalizado",
+      "En MJ Estética & Wellness Center entendemos que sentirte bien con tu cuerpo también impacta tu confianza, seguridad y bienestar. Por eso creamos protocolos de levantamiento de glúteo enfocados en resultados progresivos, naturales y visualmente armónicos.",
     benefits: [
-      "Elevación visible y duradera sin cirugía ni implantes",
-      "Protocolo que combina varias tecnologías para máximo resultado",
-      "Mejora el tono muscular y la firmeza de la piel simultáneamente",
-      "Sin tiempo de recuperación — vuelves a tus actividades el mismo día",
-      "Resultados naturales que respetan tu anatomía",
-      "Personalizado según tu objetivo: volumen, firmeza o definición",
+      "Apariencia más firme y tonificada",
+      "Mejor proyección visual de los glúteos",
+      "Contorno corporal más armónico",
+      "Complemento ideal para ejercicio y wellness corporal",
+      "Resultados progresivos y naturales",
+      "Sensación de mayor seguridad y confianza corporal",
+      "Protocolos personalizados según objetivos",
+      "Mejor armonización estética corporal"
     ],
     items: [
       {
@@ -1391,20 +1393,37 @@ export const servicePages: ServicePageData[] = [
     ],
     faq: [
       {
-        question: "¿Se notan resultados desde la primera sesión?",
-        answer:
-          "Sí, especialmente con el protocolo completo. El efecto de lifting inmediato es apreciable al finalizar la sesión y mejora progresivamente con cada tratamiento.",
+        question: "¿El levantamiento de glúteo es invasivo?",
+        answer: "Depende del protocolo recomendado. Durante la valoración corporal explicamos todas las opciones disponibles y cuál se adapta mejor a tus objetivos."
       },
       {
-        question: "¿Cuántas sesiones se recomiendan?",
-        answer:
-          "Recomendamos un ciclo inicial de 10 sesiones (2 por semana) para obtener resultados duraderos. Posteriormente, una sesión de mantenimiento mensual consolida los resultados.",
+        question: "¿Cuándo se ven resultados?",
+        answer: "Muchas pacientes comienzan a notar cambios progresivos conforme avanzan las sesiones y se complementan hábitos saludables."
       },
       {
-        question: "¿Puedo combinar este tratamiento con ejercicio?",
-        answer:
-          "Sí, y de hecho se potencian mutuamente. Si entrenas glúteos, los resultados serán aún más marcados. Puedes hacer ejercicio el mismo día del tratamiento sin ningún problema.",
+        question: "¿Los resultados son naturales?",
+        answer: "Sí. Nuestro enfoque prioriza armonización corporal y apariencia estética natural."
       },
+      {
+        question: "¿Se puede combinar con ejercicio?",
+        answer: "Sí. De hecho, muchas pacientes utilizan el tratamiento como complemento wellness corporal."
+      },
+      {
+        question: "¿Cuántas sesiones necesito?",
+        answer: "Cada cuerpo es diferente. La cantidad ideal se define durante la evaluación personalizada."
+      },
+      {
+        question: "¿Tiene tiempo de recuperación?",
+        answer: "Muchos protocolos permiten retomar actividades habituales rápidamente."
+      },
+      {
+        question: "¿Ayuda con firmeza?",
+        answer: "Uno de los principales objetivos es contribuir a mejorar la apariencia de firmeza y proyección corporal."
+      },
+      {
+        question: "¿Qué cuidados debo tener?",
+        answer: "Te brindaremos recomendaciones específicas según el protocolo aplicado y tus objetivos corporales."
+      }
     ],
   },
 
