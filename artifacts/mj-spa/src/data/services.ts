@@ -1623,10 +1623,10 @@ export const servicePages: ServicePageData[] = [
   // ── IRON BEAUTY FITNESS ────────────────────────────
   {
     slug: "iron-beauty-fitness",
-    name: "Iron Beauty Fitness",
+    name: "ESTÉTICA PARA FISICOCULTURISTAS Y ATLETAS EN TURRIALBA",
     tagline: "Estética especializada para atletas del mundo fitness",
     heroDescription:
-      "En MJ Fisio Estética y Spa entendemos las necesidades específicas de los atletas de fitness. Nuestros tratamientos están diseñados para complementar tu arduo trabajo en el gimnasio, ayudándote a mejorar tu rendimiento y tu apariencia física para competencias — desde Body Fitness hasta Clásico Físico y Muscular.",
+      "Recuperación, definición corporal y wellness deportivo en un solo protocolo especializado<br /><br />Tu cuerpo entrena fuerte.<br />Tu recuperación también debería hacerlo.",
     heroBg: "iron-beauty-fitness-bg.webp",
     benefits: [
       "Protocolos diseñados exclusivamente para atletas de competencia",
