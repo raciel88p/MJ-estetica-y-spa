@@ -1,0 +1,13 @@
+
+> @workspace/mj-astro@0.0.1 dev /app/artifacts/mj-astro
+> astro dev
+
+[vite] connected.
+22:26:45 [types] Generated 1ms
+22:26:45 [vite] Re-optimizing dependencies because vite config has changed
+ astro  v6.3.1 ready in 2271 ms
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+22:26:45 watching for file changes...
+22:27:21 [200] /medicina-estetica 319ms
+22:27:55 [200] /medicina-estetica 148ms
