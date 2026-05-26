@@ -1087,7 +1087,7 @@ export const servicePages: ServicePageData[] = [
       "Reducción de la hinchazón en piernas y tobillos",
       "Mejora de la circulación venosa y linfática",
       "Tratamientos relajantes y no invasivos",
-      "Prevención de varices y retención de líquidos",
+      "Prevención de retención de líquidos",
     ],
     items: [
       {

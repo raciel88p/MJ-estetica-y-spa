@@ -203,7 +203,7 @@ export default function Home() {
     <div className="min-h-screen bg-white overflow-x-hidden">
       <SEO
         title="Centro de Estética y Spa en Turrialba"
-        description="MJ Fisio Estética y Spa en Turrialba, Costa Rica. Tratamientos faciales, corporales, varices, botox, hilos tensores y más. Reserva tu cita hoy."
+        description="MJ Fisio Estética y Spa en Turrialba, Costa Rica. Tratamientos faciales, corporales, piernas cansadas, botox, hilos tensores y más. Reserva tu cita hoy."
         canonical="/"
       />
       <Navbar />

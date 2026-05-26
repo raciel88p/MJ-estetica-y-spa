@@ -362,7 +362,7 @@ function Home() {
               title: "Piernas",
               img: "tratamientos-p.jpg",
               link: "/tratamientos/piernas",
-              desc: "Tratamiento de varices y mejora circulatoria profunda."
+              desc: "Mejora circulatoria profunda y bienestar para tus piernas."
             }
           ].map((cat, i) => (
             <motion.a

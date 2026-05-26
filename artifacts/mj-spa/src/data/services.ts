@@ -1087,7 +1087,7 @@ export const servicePages: ServicePageData[] = [
       "Reducción de la hinchazón en piernas y tobillos",
       "Mejora de la circulación venosa y linfática",
       "Tratamientos relajantes y no invasivos",
-      "Prevención de varices y retención de líquidos",
+      "Prevención de retención de líquidos",
     ],
     items: [
       {
@@ -1376,7 +1376,7 @@ export const servicePages: ServicePageData[] = [
     name: "Levantamiento de Busto en Turrialba",
     tagline: "Busto firme, elevado y reafirmado sin cirugía",
     heroBg: "levantamiento-busto-bg.webp",
-    heroDescription: 'Recupera armonía, firmeza y confianza con un enfoque wellness femenino.',
+    heroDescription: "Recupera armonía, firmeza y confianza con un enfoque wellness femenino.",
     benefits: [
       "Lifting y reafirmación visibles sin cirugía ni implantes",
       "Mejora la elasticidad y calidad de la piel del escote",
