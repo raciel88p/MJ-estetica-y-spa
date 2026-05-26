@@ -21,6 +21,7 @@ import {
   X
 } from "lucide-react";
 import { useState } from "react";
+import { BeforeAfterSlider } from "../testimonials/BeforeAfterSlider";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -305,8 +306,28 @@ export function IronBeautyServiceContent({ waLink }: { waLink: string }) {
         </div>
       </section>
 
-      {/* ── TESTIMONIALS ─────────────────────────────── */}
+      {/* ── BEFORE & AFTER ────────────────────────────── */}
       <section className="py-24 bg-stone-50 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
+            <h2 className="text-3xl font-serif font-bold text-stone-900 uppercase tracking-widest text-xs mb-4 text-primary">Resultados Reales</h2>
+            <h3 className="text-3xl font-serif font-bold text-stone-900">Nuestros Atletas</h3>
+          </motion.div>
+
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="relative z-10">
+            <BeforeAfterSlider
+              beforeImage="/images/iron-beauty-before.png"
+              afterImage="/images/iron-beauty-after.png"
+              beforeLabel="Preparación"
+              afterLabel="Resultado Final"
+            />
+            <p className="text-center text-stone-400 text-[10px] mt-6 italic">* Los resultados varían según el compromiso y la disciplina de cada individuo.</p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── TESTIMONIALS ─────────────────────────────── */}
+      <section className="py-24 bg-white relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
             <h2 className="text-3xl font-serif font-bold text-stone-900 uppercase tracking-widest text-xs mb-4 text-primary">Testimonios</h2>
