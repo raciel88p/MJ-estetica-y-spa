@@ -211,7 +211,7 @@ function LandingMedicos() {
               variants={fadeUp}
             >
               <p className="text-primary text-sm font-bold uppercase tracking-widest mb-4">Descubre una nueva forma de cuidar tu imagen</p>
-              <h2 className="text-4xl font-serif mb-6">Muchas personas desean verse mejor… pero también tienen miedo de:</h2>
+              <h2 className="text-4xl font-serif mb-6 text-white">Muchas personas desean verse mejor… pero también tienen miedo de:</h2>
               <ul className="space-y-4">
                 {[
                   "Verse artificiales",
@@ -220,7 +220,7 @@ function LandingMedicos() {
                   "Malas experiencias",
                   "Procedimientos poco personalizados",
                 ].map((fear, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white/70">
+                  <li key={i} className="flex items-center gap-3 text-white">
                     <XCircle className="w-5 h-5 text-red-400 shrink-0" />
                     {fear}
                   </li>
@@ -338,7 +338,7 @@ function LandingMedicos() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-primary text-sm font-bold uppercase tracking-widest mb-3">El Proceso</p>
-            <h2 className="text-4xl font-serif">¿Cómo funciona una valoración médico-estética?</h2>
+            <h2 className="text-4xl font-serif text-white">¿Cómo funciona una valoración médico-estética?</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
@@ -364,8 +364,8 @@ function LandingMedicos() {
                   {i + 1}
                 </div>
                 <p className="text-primary text-xs font-bold uppercase tracking-widest mb-2">{step.step}</p>
-                <h3 className="text-xl font-serif mb-4">{step.title}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{step.desc}</p>
+                <h3 className="text-xl font-serif mb-4 text-white">{step.title}</h3>
+                <p className="text-white text-sm leading-relaxed">{step.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -492,7 +492,7 @@ function LandingMedicos() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl font-serif mb-8">Programas y protocolos disponibles</h2>
+              <h2 className="text-3xl font-serif mb-8 text-white">Programas y protocolos disponibles</h2>
               <ul className="grid grid-cols-1 gap-4">
                 {[
                   "Programas wellness premium",
@@ -504,7 +504,7 @@ function LandingMedicos() {
                 ].map((prog, i) => (
                   <li key={i} className="flex items-center gap-3 bg-white/5 border border-white/10 p-4 rounded-xl">
                     <Sparkles className="w-5 h-5 text-primary shrink-0" />
-                    <span className="text-white/80 font-medium text-sm">{prog}</span>
+                    <span className="text-white font-medium text-sm">{prog}</span>
                   </li>
                 ))}
               </ul>
