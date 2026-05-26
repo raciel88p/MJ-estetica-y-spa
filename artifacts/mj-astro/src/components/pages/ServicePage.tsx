@@ -19,6 +19,7 @@ import { CarboxiterapiaContent } from "@/components/services/CarboxiterapiaConte
 import { GluteoServiceContent } from "@/components/services/GluteoServiceContent";
 import { PostOpServiceContent } from "@/components/services/PostOpServiceContent";
 import { BotoxServiceContent } from "@/components/services/BotoxServiceContent";
+import { BustoServiceContent } from "@/components/services/BustoServiceContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
@@ -46,7 +47,6 @@ const beforeDescMap: Record<string, string[]> = {
   "radiofrecuencia-facial":    ["Flacidez facial incipiente y pérdida del óvalo", "Arrugas de expresión y surcos marcados", "Piel sin firmeza que envejece el aspecto general"],
   "adn-salmon":                ["Piel envejecida, sin hidratación profunda ni luminosidad", "Arrugas, flacidez y pérdida de densidad cutánea", "Aspecto apagado y sin vitalidad que no mejora con cremas"],
   "tratamiento-anticelulitis": ["Celulitis en muslos, glúteos y abdomen muy visible", "Piel de naranja resistente y textura irregular", "Mala circulación y sensación de pesadez en piernas"],
-  "varices-aranas-vasculares": ["Varices y arañas vasculares visibles en piernas y rostro", "Dolor, pesadez y calambres nocturnos frecuentes", "Inseguridad para mostrar las piernas por la apariencia vascular"],
   "piernas-cansadas":          ["Piernas pesadas, hinchadas y con sensación de fatiga al final del día", "Circulación deficiente y retención de líquidos en extremidades", "Calambres, hormigueos y piel sin tono en pantorrillas"],
   "nutricion":                 ["Alimentación desordenada y objetivos sin resultados", "Metabolismo lento y sensación de bloqueo permanente", "Déficits nutricionales que afectan energía, piel y bienestar"],
   "botox-full-face":           ["Arrugas de expresión marcadas en frente, entrecejo y patas de gallo", "Aspecto cansado y envejecido que no refleja cómo te sientes", "Pérdida de armonía facial y rasgos sin suavidad"],
@@ -111,7 +111,6 @@ const heroBgMap: Record<string, string> = {
   "vendas-frias":              "vendas-frias-bg.webp",
   "maderoterapia":             "maderoterapia-bg.webp",
   "auriculoterapia":           "auriculoterapia-bg.webp",
-  "varices-aranas-vasculares": "varices-aranas-vasculares-bg.webp",
   "piernas-cansadas":          "piernas-cansadas-bg.webp",
   "nutricion":                 "nutricion-bg.webp",
   "botox-full-face":           "botox-full-face-bg.webp",
@@ -149,7 +148,6 @@ const serviceCategoryMap: Record<string, { name: string; href: string }> = {
   "eliminacion-manchas":       { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "radiofrecuencia-facial":    { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "tratamiento-anticelulitis": { name: "Tratamientos de Piernas", href: "/tratamientos/piernas"    },
-  "varices-aranas-vasculares": { name: "Tratamientos de Piernas", href: "/tratamientos/piernas"    },
   "piernas-cansadas":          { name: "Tratamientos de Piernas", href: "/tratamientos/piernas"    },
   "tratamiento-ojeras":        { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "blanqueamiento-zona-intima":{ name: "Tratamientos Corporales", href: "/tratamientos/corporales"  },
@@ -444,8 +442,13 @@ function ServicePage({ service }: { service: ServicePageData }) {
         <AdnSalmonContent waLink={WA} />
       )}
 
+      {/* ── BUSTO CUSTOM SECTIONS ────────────────── */}
+      {service.slug === "levantamiento-busto" && (
+        <BustoServiceContent service={service} waLink={WA} />
+      )}
+
       {/* ── BENEFITS ─────────────────────────────────── */}
-      {!["depilacion-laser", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo"].includes(service.slug) && (
+      {!["depilacion-laser", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto"].includes(service.slug) && (
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -492,7 +495,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo"].includes(service.slug) && (
+      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -782,7 +785,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── URGENCY CTA BAND ──────────────────────────── */}
-      {service.slug !== "depilacion-laser" && service.slug !== "masajes-post-operatorios" && service.slug !== "botox-full-face" && (
+      {service.slug !== "depilacion-laser" && service.slug !== "masajes-post-operatorios" && service.slug !== "botox-full-face" && service.slug !== "levantamiento-busto" && (
       <section className="bg-primary py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -817,7 +820,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo"].includes(service.slug) && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div

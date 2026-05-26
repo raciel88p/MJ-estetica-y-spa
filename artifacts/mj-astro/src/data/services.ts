@@ -55,7 +55,6 @@ export const tratamientosFacialesLinks = [
 ];
 
 export const tratamientosPiernasLinks = [
-  { name: "Varices y Arañas Vasculares", href: "/servicios/varices-aranas-vasculares" },
   { name: "Cuidado de Piernas Cansadas", href: "/servicios/piernas-cansadas" },
   { name: "Tratamiento Anticelulitis", href: "/servicios/tratamiento-anticelulitis" },
 ];
@@ -1077,62 +1076,6 @@ export const servicePages: ServicePageData[] = [
   },
 
   // ── PIERNAS ────────────────────────────────────────
-  {
-    slug: "varices-aranas-vasculares",
-    name: "Varices y Arañas Vasculares",
-    tagline: "Recupera unas piernas sanas, ligeras y estéticas",
-    heroDescription:
-      "Las varices y arañas vasculares son dilataciones de los vasos sanguíneos que afectan la estética y, en algunos casos, la salud de las piernas. En MJ Fisio Estética y Spa ofrecemos tratamientos efectivos para eliminarlas o reducirlas de forma segura.",
-    benefits: [
-      "Eliminación o reducción visible de varices y telangiectasias",
-      "Mejoría de la circulación y la pesadez en piernas",
-      "Procedimientos mínimamente invasivos",
-      "Sin tiempo de recuperación prolongado",
-      "Resultados estéticos y funcionales",
-    ],
-    items: [
-      {
-        title: "Escleroterapia",
-        description:
-          "Técnica estándar para el tratamiento de varices y arañas vasculares: se inyecta un agente esclerosante que provoca la fibro-obliteración del vaso afectado.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Tratamiento con Luz Pulsada (IPL) Vascular",
-        description:
-          "La luz pulsada intensa actúa sobre los vasos dilatados destruyendo selectivamente la hemoglobina para cerrar las arañas vasculares superficiales.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Mesoterapia Vascular",
-        description:
-          "Microinyecciones de activos vasoprotectores y circulatorios para mejorar la microcirculación y reducir la fragilidad capilar.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Drenaje Linfático + Presoterapia",
-        description:
-          "Combinación de técnicas de drenaje para aliviar la pesadez, la hinchazón y la mala circulación asociada a varices y piernas cansadas.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿La escleroterapia es dolorosa?",
-        answer:
-          "El pinchazo es leve. Puede notarse una pequeña quemazón momentánea al aplicar el esclerosante. En general es un procedimiento muy bien tolerado.",
-      },
-      {
-        question: "¿Cuántas sesiones necesito?",
-        answer:
-          "Depende de la extensión y el tipo de varices. Las arañas vasculares suelen necesitar 2–4 sesiones; las varices más pronunciadas pueden requerir más sesiones o complementarse con otros tratamientos.",
-      },
-    ],
-  },
   {
     slug: "piernas-cansadas",
     name: "Cuidado de Piernas Cansadas",
