@@ -113,7 +113,7 @@ export function Navbar() {
                 {nosotros.isOpen && (
                   <motion.div
                     {...dropdownPanelVariants}
-                    transition={{ duration: 0.16, ease: "easeOut" }}
+                    transition={{ duration: 0.16, ease: "easeOut" as const }}
                     onMouseEnter={nosotros.cancelClose}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >
@@ -163,7 +163,7 @@ export function Navbar() {
                 {servicios.isOpen && (
                   <motion.div
                     {...dropdownPanelVariants}
-                    transition={{ duration: 0.16, ease: "easeOut" }}
+                    transition={{ duration: 0.16, ease: "easeOut" as const }}
                     onMouseEnter={servicios.cancelClose}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >
@@ -268,7 +268,7 @@ export function Navbar() {
                 {medicos.isOpen && (
                   <motion.div
                     {...dropdownPanelVariants}
-                    transition={{ duration: 0.16, ease: "easeOut" }}
+                    transition={{ duration: 0.16, ease: "easeOut" as const }}
                     onMouseEnter={medicos.cancelClose}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >
@@ -278,6 +278,13 @@ export function Navbar() {
                           Especialidades
                         </p>
                         <div className="flex flex-col gap-1">
+                          <a
+                            href="/medicina-estetica"
+                            className="block px-3 py-2 text-sm font-bold text-primary hover:bg-secondary/40 transition-colors rounded-lg"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            Armonización Facial
+                          </a>
                           {medicoEsteticosLinks.map((link) => (
                             <a
                               key={link.name}
@@ -483,6 +490,13 @@ export function Navbar() {
                       className="overflow-hidden"
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
+                          <a
+                            href="/medicina-estetica"
+                            className="block py-2 text-base font-bold text-primary hover:text-primary/80 transition-colors"
+                            onClick={() => { setIsMobileMenuOpen(false); setIsMobileMedicosOpen(false); }}
+                          >
+                            Armonización Facial
+                          </a>
                         {medicoEsteticosLinks.map((link) => (
                           <a
                             key={link.name}

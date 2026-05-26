@@ -13,6 +13,7 @@ const sections = [
     color: "text-primary",
     links: [
       { name: "Inicio", href: "/" },
+      { name: "Armonización Facial (Landing)", href: "/medicina-estetica" },
       { name: "Sobre Nosotros", href: "/nosotros" },
       { name: "Paquetes", href: "/paquetes" },
       { name: "Testimonios", href: "/testimonios" },
