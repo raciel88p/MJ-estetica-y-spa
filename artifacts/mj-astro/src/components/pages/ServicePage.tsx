@@ -20,6 +20,7 @@ import { GluteoServiceContent } from "@/components/services/GluteoServiceContent
 import { PostOpServiceContent } from "@/components/services/PostOpServiceContent";
 import { BotoxServiceContent } from "@/components/services/BotoxServiceContent";
 import { BustoServiceContent } from "@/components/services/BustoServiceContent";
+import { IronBeautyServiceContent } from "@/components/services/IronBeautyServiceContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
@@ -432,6 +433,11 @@ function ServicePage({ service }: { service: ServicePageData }) {
         <GluteoServiceContent service={service} waLink={WA} />
       )}
 
+      {/* ── CUSTOM CONTENT: IRON BEAUTY FITNESS ─────────── */}
+      {service.slug === "iron-beauty-fitness" && (
+        <IronBeautyServiceContent waLink={WA} />
+      )}
+
       {/* ── BOTOX CUSTOM SECTIONS ────────────────── */}
       {service.slug === "botox-full-face" && (
         <BotoxServiceContent waLink={WA} faq={service.faq} />
@@ -448,7 +454,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
-      {!["depilacion-laser", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto"].includes(service.slug) && (
+      {!["depilacion-laser", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness"].includes(service.slug) && (
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -495,7 +501,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto"].includes(service.slug) && (
+      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -785,7 +791,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── URGENCY CTA BAND ──────────────────────────── */}
-      {service.slug !== "depilacion-laser" && service.slug !== "masajes-post-operatorios" && service.slug !== "botox-full-face" && service.slug !== "levantamiento-busto" && (
+      {service.slug !== "depilacion-laser" && service.slug !== "masajes-post-operatorios" && service.slug !== "botox-full-face" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && (
       <section className="bg-primary py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -820,7 +826,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto"].includes(service.slug) && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div
