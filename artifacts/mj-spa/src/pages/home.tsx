@@ -78,7 +78,7 @@ const serviceCategories = [
     index: "03",
     title: "Piernas sanas, ligeras y estéticas",
     desc: "Técnicas no invasivas con resultados duraderos.",
-    services: ["Varices y Arañas Vasculares", "Presoterapia", "Drenaje Circulatorio", "Tratamiento Anticelulitis", "Piernas Cansadas"],
+    services: ["Presoterapia", "Drenaje Circulatorio", "Tratamiento Anticelulitis", "Piernas Cansadas"],
     bg: "spa-texture.webp",
     accent: "from-stone-900/95",
   },
@@ -170,7 +170,6 @@ export default function Home() {
     "eliminacion-manchas": "Eliminación de Manchas",
     "peeling-quimico": "Peeling Químico",
     "faciales": "Tratamientos Faciales",
-    "varices": "Varices y Arañas Vasculares",
     "piernas-cansadas": "Piernas Cansadas",
     "botox": "Bótox y Toxina Botulínica",
     "acido-hialuronico": "Ácido Hialurónico",
@@ -942,7 +941,6 @@ export default function Home() {
                       <option value="tratamiento-ojeras">Tratamiento de Ojeras</option>
                     </optgroup>
                     <optgroup label="Tratamientos de Piernas">
-                      <option value="varices">Varices y Arañas Vasculares</option>
                       <option value="piernas-cansadas">Piernas Cansadas</option>
                     </optgroup>
                     <optgroup label="Médicos y Estéticos">

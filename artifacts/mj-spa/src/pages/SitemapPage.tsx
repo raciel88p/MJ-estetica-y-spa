@@ -62,7 +62,6 @@ const sections = [
     links: [
       { name: "Todos los Tratamientos de Piernas", href: "/tratamientos/piernas" },
       { name: "Tratamiento Anticelulitis", href: "/servicios/tratamiento-anticelulitis" },
-      { name: "Varices y Arañas Vasculares", href: "/servicios/varices-aranas-vasculares" },
       { name: "Cuidado de Piernas Cansadas", href: "/servicios/piernas-cansadas" },
     ],
   },

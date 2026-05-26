@@ -62,9 +62,8 @@ const packages = [
     tag: "Piernas",
     name: "Paquete Piernas Perfectas",
     tagline: "Piernas sanas, ligeras y estéticas",
-    description: "Tratamiento integral para mejorar la circulación, eliminar arañas vasculares y aliviar la pesadez de piernas con resultados visibles y duraderos.",
+    description: "Tratamiento integral para mejorar la circulación y aliviar la pesadez de piernas con resultados visibles y duraderos.",
     includes: [
-      "Tratamiento Varices y Arañas Vasculares (2 sesiones)",
       "Drenaje Linfático en Piernas (2 sesiones)",
       "Valoración circulatoria inicial",
       "Recomendaciones de mantenimiento",
