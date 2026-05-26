@@ -257,13 +257,20 @@ export function Navbar() {
               onMouseEnter={() => { medicos.cancelClose(); medicos.open(); }}
               onMouseLeave={medicos.scheduleClose}
             >
-              <button
-                className={`flex items-center gap-1 ${linkBase} ${textClass}`}
-                onClick={(e) => { e.stopPropagation(); setOpenDropdown(medicos.isOpen ? null : "medicos"); }}
-              >
-                Médicos y Estéticos
-                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${medicos.isOpen ? "rotate-180" : ""}`} />
-              </button>
+              <div className="flex items-center gap-1">
+                <a
+                  href="/medicina-estetica"
+                  className={`${linkBase} ${textClass}`}
+                >
+                  Médicos y Estéticos
+                </a>
+                <button
+                  className={`p-1 ${textClass} hover:text-primary transition-colors`}
+                  onClick={(e) => { e.stopPropagation(); setOpenDropdown(medicos.isOpen ? null : "medicos"); }}
+                >
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${medicos.isOpen ? "rotate-180" : ""}`} />
+                </button>
+              </div>
               <AnimatePresence>
                 {medicos.isOpen && (
                   <motion.div
@@ -474,13 +481,21 @@ export function Navbar() {
 
               {/* Mobile Médicos y Estéticos Accordion */}
               <div className="border-b border-muted">
-                <button
-                  className="w-full flex justify-between items-center text-foreground text-lg py-3 hover:text-primary transition-colors font-serif"
-                  onClick={() => setIsMobileMedicosOpen(!isMobileMedicosOpen)}
-                >
-                  Médicos y Estéticos
-                  <ChevronDown className={`w-5 h-5 transition-transform ${isMobileMedicosOpen ? "rotate-180" : ""}`} />
-                </button>
+                <div className="flex justify-between items-center w-full">
+                  <a
+                    href="/medicina-estetica"
+                    className="flex-grow text-foreground text-lg py-3 hover:text-primary transition-colors font-serif"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Médicos y Estéticos
+                  </a>
+                  <button
+                    className="p-3 text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsMobileMedicosOpen(!isMobileMedicosOpen)}
+                  >
+                    <ChevronDown className={`w-5 h-5 transition-transform ${isMobileMedicosOpen ? "rotate-180" : ""}`} />
+                  </button>
+                </div>
                 <AnimatePresence>
                   {isMobileMedicosOpen && (
                     <motion.div
