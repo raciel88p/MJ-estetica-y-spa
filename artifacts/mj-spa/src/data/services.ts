@@ -1433,8 +1433,7 @@ export const servicePages: ServicePageData[] = [
     name: "Levantamiento de Busto en Turrialba",
     tagline: "Busto firme, elevado y reafirmado sin cirugía",
     heroBg: "levantamiento-busto-bg.webp",
-    heroDescription:
-      "Con el paso del tiempo, los cambios de peso o la lactancia, la piel del busto pierde firmeza y elasticidad. Nuestro protocolo no quirúrgico combina radiofrecuencia, ultrasonidos y técnicas de reafirmación avanzadas para devolver la firmeza, elevar el contorno y mejorar la calidad de la piel de forma visible y segura.",
+    heroDescription: 'Recupera armonía, firmeza y confianza con un enfoque wellness femenino.',
     benefits: [
       "Lifting y reafirmación visibles sin cirugía ni implantes",
       "Mejora la elasticidad y calidad de la piel del escote",
