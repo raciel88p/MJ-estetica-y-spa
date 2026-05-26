@@ -19,6 +19,7 @@ const SitemapPage       = lazy(() => import("@/pages/SitemapPage"));
 const Paquetes          = lazy(() => import("@/pages/Paquetes"));
 const LandingReductivos = lazy(() => import("@/pages/LandingReductivos"));
 const LandingFaciales   = lazy(() => import("@/pages/LandingFaciales"));
+const LandingMedicos    = lazy(() => import("@/pages/LandingMedicos"));
 const Promociones       = lazy(() => import("@/pages/Promociones"));
 
 const queryClient = new QueryClient({
@@ -50,6 +51,7 @@ function Router() {
         <Route path="/tratamientos/piernas" component={TratamientosPiernas} />
         <Route path="/reductivos-turrialba" component={LandingReductivos} />
         <Route path="/faciales" component={LandingFaciales} />
+        <Route path="/medicina-estetica" component={LandingMedicos} />
         <Route path="/promociones" component={Promociones} />
         {servicePages.map((service) => (
           <Route
@@ -71,6 +73,7 @@ function usePrefetchRoutes() {
       // Trigger lazy imports so browsers download chunks in the background
       void import("@/pages/ServicePage");
       void import("@/pages/MedicosEsteticos");
+      void import("@/pages/LandingMedicos");
       void import("@/pages/TratamientosCorporales");
       void import("@/pages/TratamientosFaciales");
     };
