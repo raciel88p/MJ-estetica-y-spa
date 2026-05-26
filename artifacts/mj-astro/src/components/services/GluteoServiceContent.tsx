@@ -260,7 +260,7 @@ export function GluteoServiceContent({ service, waLink }: { service: ServicePage
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
             <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">🔬 El Proceso</p>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">¿Cómo funciona una sesión de levantamiento de glúteo?</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white">¿Cómo funciona una sesión de levantamiento de glúteo?</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[

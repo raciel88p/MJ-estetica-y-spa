@@ -17,7 +17,7 @@ const fadeUp = {
 };
 
 const highlights = [
-  { n: "3+", label: "Tratamientos de piernas" },
+  { n: "2", label: "Tratamientos de piernas" },
   { n: "100%", label: "No invasivos" },
   { n: "Rápido", label: "Sin recuperación" },
 ];
@@ -33,7 +33,7 @@ export default function TratamientosPiernas() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Tratamientos de Piernas"
-        description="Tratamientos de piernas en MJ Fisio Estética y Spa: varices, arañas vasculares, piernas cansadas, anticelulitis y más en Turrialba, Costa Rica."
+        description="Tratamientos de piernas en MJ Fisio Estética y Spa: piernas cansadas, anticelulitis y más en Turrialba, Costa Rica."
         canonical="/tratamientos/piernas"
       />
       <Navbar />
@@ -58,7 +58,7 @@ export default function TratamientosPiernas() {
             <span className="italic font-light text-white/50">de Piernas</span>
           </h1>
           <p className="text-white/75 text-lg leading-relaxed max-w-xl">
-            Varices, arañas vasculares, piernas cansadas o hinchadas — te ayudamos a recuperar unas piernas sanas, ligeras y estéticas con técnicas no invasivas.
+            Piernas cansadas o hinchadas — te ayudamos a recuperar unas piernas sanas, ligeras y estéticas con técnicas no invasivas.
           </p>
 
           <div className="grid grid-cols-3 gap-8 mt-14 pt-10 border-t border-[#1a4f6e]">
@@ -78,7 +78,7 @@ export default function TratamientosPiernas() {
       <section className="py-5 bg-primary">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white text-center sm:text-left text-sm font-medium">
-            ¿Varices o piernas pesadas? Solicita tu <strong>valoración gratuita</strong> hoy
+            ¿Piernas pesadas o cansadas? Solicita tu <strong>valoración gratuita</strong> hoy
           </p>
           <a
             href={WA}
@@ -142,7 +142,7 @@ export default function TratamientosPiernas() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
             {[
               { icon: <ShieldCheck className="w-6 h-6 text-primary" />, title: "100% No invasivo", desc: "Sin cirugía ni recuperación. Técnicas no agresivas que respetan tu cuerpo." },
-              { icon: <Award className="w-6 h-6 text-primary" />, title: "Equipo especializado", desc: "Fisioterapeutas con formación específica en patología venosa y circulación." },
+              { icon: <Award className="w-6 h-6 text-primary" />, title: "Equipo especializado", desc: "Fisioterapeutas con formación específica en bienestar y circulación." },
               { icon: <Clock4 className="w-6 h-6 text-primary" />, title: "Mejora desde la 1ª sesión", desc: "Reducción de pesadez y molestias desde las primeras sesiones de tratamiento." },
             ].map((t) => (
               <div key={t.title} className="flex gap-4">
@@ -161,7 +161,7 @@ export default function TratamientosPiernas() {
             className="border-l-4 border-primary pl-8 py-2"
           >
             <p className="text-stone-700 font-serif text-xl italic leading-relaxed mb-4">
-              "Tenía varices desde hace años y no me animaba a tratarlas. En MJ me explicaron todo el proceso con mucha paciencia. Después de 4 sesiones las arañas vasculares han desaparecido casi por completo."
+              "Sufría de pesadez en las piernas desde hace años y no me animaba a buscar ayuda. En MJ me explicaron todo el proceso con mucha paciencia. Después de 4 sesiones la sensación de alivio es increíble."
             </p>
             <footer className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs font-bold">C</div>
@@ -181,16 +181,16 @@ export default function TratamientosPiernas() {
             <div>
               <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">¿POR QUÉ TRATARLAS?</p>
               <h3 className="text-3xl font-serif font-bold text-stone-900 mb-5">
-                Las varices y piernas cansadas afectan tu calidad de vida
+                Las piernas pesadas y cansadas afectan tu calidad de vida
               </h3>
               <p className="text-white/65 text-sm leading-relaxed">
-                Las venas varicosas y la insuficiencia venosa crónica no solo son un problema estético, sino que pueden generar dolor, pesadez, calambres nocturnos e inflamación. Un tratamiento a tiempo mejora tu calidad de vida y previene complicaciones.
+                La mala circulación y el cansancio acumulado no solo son un problema estético, sino que pueden generar dolor, pesadez y calambres nocturnos. Un tratamiento a tiempo mejora tu calidad de vida y previene complicaciones futuras.
               </p>
             </div>
             <div className="space-y-4">
               {[
                 "Diagnóstico personalizado en primera consulta",
-                "Protocolos adaptados a tu tipo de varices",
+                "Protocolos adaptados a tus necesidades",
                 "Resultados visibles desde las primeras sesiones",
                 "Tratamientos complementarios para potenciar resultados",
               ].map((point) => (

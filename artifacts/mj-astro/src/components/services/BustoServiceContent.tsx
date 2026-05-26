@@ -303,7 +303,7 @@ export function BustoServiceContent({ service, waLink }: { service: ServicePageD
       <section className="py-24 bg-stone-900 text-white">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">¿Cómo funciona una sesión?</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white">¿Cómo funciona una sesión?</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -487,7 +487,7 @@ export function BustoServiceContent({ service, waLink }: { service: ServicePageD
               <p className="text-stone-500 italic mb-10">La mejor forma de conocer el tratamiento ideal para ti es mediante una valoración profesional.</p>
 
               <div className="bg-stone-900 text-white p-10 relative overflow-hidden">
-                <h3 className="text-xl font-serif font-bold mb-6 relative z-10">MJ Estética & Wellness Center — Turrialba</h3>
+                <h3 className="text-xl font-serif font-bold mb-6 relative z-10 text-white">MJ Estética & Wellness Center — Turrialba</h3>
                 <div className="space-y-4 relative z-10">
                   <div className="flex items-center gap-3 text-white/70 text-sm"><MapPin className="w-4 h-4 text-primary" /> Atención en Turrialba</div>
                   <div className="flex items-center gap-3 text-white/70 text-sm"><MessageCircle className="w-4 h-4 text-primary" /> WhatsApp disponible</div>
