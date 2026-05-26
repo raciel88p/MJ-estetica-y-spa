@@ -37,7 +37,7 @@ export const tratamientosCorporalesLinks = [
   { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
   { name: "Carboxiterapia", href: "/servicios/carboxiterapia" },
   { name: "Levantamiento de Glúteo en Turrialba", href: "/servicios/levantamiento-gluteo" },
-  { name: "Levantamiento de Busto", href: "/servicios/levantamiento-busto" },
+  { name: "Levantamiento de Busto en Turrialba", href: "/servicios/levantamiento-busto" },
   { name: "Vendas Frías", href: "/servicios/vendas-frias" },
   { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
   { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
@@ -1430,7 +1430,7 @@ export const servicePages: ServicePageData[] = [
   // ── LEVANTAMIENTO DE BUSTO ──────────────────────────
   {
     slug: "levantamiento-busto",
-    name: "Levantamiento de Busto",
+    name: "Levantamiento de Busto en Turrialba",
     tagline: "Busto firme, elevado y reafirmado sin cirugía",
     heroBg: "levantamiento-busto-bg.webp",
     heroDescription:
