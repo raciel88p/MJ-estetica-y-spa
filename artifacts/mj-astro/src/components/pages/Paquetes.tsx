@@ -20,6 +20,19 @@ function Paquetes() {
   const [isDragging, setIsDragging] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
 
+  const handleAdminToggle = () => {
+    if (!isAdmin) {
+      const pass = window.prompt("Ingrese la clave de administrador:");
+      if (pass === ADMIN_KEY) {
+        setIsAdmin(true);
+      } else {
+        toast.error("Clave incorrecta");
+      }
+    } else {
+      setIsAdmin(false);
+    }
+  };
+
   const { data: promotions = [], isLoading, refetch } = useListPromotions();
 
   const createPromotion = useCreatePromotion({
@@ -113,12 +126,14 @@ function Paquetes() {
           <div className="flex justify-between items-start">
             <Breadcrumb items={[{ label: "Promociones" }]} variant="dark" />
             <button
-              onClick={() => setIsAdmin(!isAdmin)}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all ${
-                isAdmin ? "bg-primary text-white" : "bg-white/10 text-white/40 hover:bg-white/20"
+              onClick={handleAdminToggle}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-[11px] font-bold uppercase tracking-widest transition-all shadow-lg ${
+                isAdmin
+                  ? "bg-primary text-white scale-105"
+                  : "bg-white text-stone-900 hover:bg-primary hover:text-white"
               }`}
             >
-              <Lock className="w-3 h-3" />
+              <Lock className="w-3.5 h-3.5" />
               {isAdmin ? "Admin Activo" : "Modo Admin"}
             </button>
           </div>

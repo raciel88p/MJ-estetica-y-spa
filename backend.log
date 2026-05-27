@@ -1,0 +1,6 @@
+
+> @workspace/api-server@0.0.0 dev /app/artifacts/api-server
+> NODE_ENV=development tsx ./src/index.ts
+
+[05:13:42.182] [32mINFO[39m (1384181): [36mServer listening[39m
+    [35mport[39m: 5000
