@@ -48,7 +48,11 @@ export default function Promociones() {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO title="Promociones - MJ Fisio Estética y Spa" description="Descubre las promociones exclusivas en tratamientos estéticos y bienestar." />
+      <SEO
+        title="Promociones - MJ Fisio Estética y Spa"
+        description="Descubre las promociones exclusivas en tratamientos estéticos y bienestar."
+        canonical="/promociones"
+      />
       <Navbar />
 
       <main className="pt-32 pb-20 max-w-6xl mx-auto px-4 sm:px-6">
