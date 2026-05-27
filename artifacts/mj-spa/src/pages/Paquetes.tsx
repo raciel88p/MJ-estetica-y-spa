@@ -1,83 +1,102 @@
-import { motion } from "framer-motion";
-import { MessageCircle, CheckCircle2, Star, Sparkles, Zap, Heart } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { MessageCircle, Upload, Trash2, Image as ImageIcon, Sparkles, Loader2, Lock } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { StatsBar } from "@/components/StatsBar";
+import { toast } from "sonner";
+import { useListPromotions, useCreatePromotion, useDeletePromotion } from "@workspace/api-client-react";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
-  visible: (i: number) => ({ opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as const, delay: i * 0.1 } }),
-};
-
-const packages = [
-  {
-    icon: Sparkles,
-    tag: "Más popular",
-    name: "Paquete Anti-Edad",
-    tagline: "Rejuvenecimiento facial completo",
-    description: "Combinación de nuestros tratamientos faciales más potentes para combatir el envejecimiento y recuperar una piel firme, luminosa y rejuvenecida.",
-    includes: [
-      "Radiofrecuencia Facial (2 sesiones)",
-      "ADN de Salmón Facial (2 sesiones)",
-      "Valoración y seguimiento personalizado",
-      "Protocolo de cuidado en casa",
-    ],
-    highlight: true,
-  },
-  {
-    icon: Zap,
-    tag: "Corporal",
-    name: "Paquete Reafirmante",
-    tagline: "Moldea y tonifica tu figura",
-    description: "Protocolo completo de remodelación corporal que combina reducción de medidas y tensado para resultados visibles desde las primeras sesiones.",
-    includes: [
-      "Reducción de Medidas (3 sesiones)",
-      "Tensado Corporal (2 sesiones)",
-      "Drenaje Linfático (1 sesión)",
-      "Seguimiento de medidas incluido",
-    ],
-    highlight: false,
-  },
-  {
-    icon: Heart,
-    tag: "Post Operatorio",
-    name: "Paquete Recuperación",
-    tagline: "Recuperación segura y efectiva",
-    description: "Diseñado para acompañarte en tu proceso de recuperación post quirúrgica, reduciendo inflamación, previniendo fibrosis y acelerando la sanación.",
-    includes: [
-      "Drenaje Post Operatorio (4 sesiones)",
-      "Masaje Anti-Fibrosis (2 sesiones)",
-      "Protocolo personalizado según procedimiento",
-      "Atención y seguimiento continuo",
-    ],
-    highlight: false,
-  },
-  {
-    icon: Star,
-    tag: "Piernas",
-    name: "Paquete Piernas Perfectas",
-    tagline: "Piernas sanas, ligeras y estéticas",
-    description: "Tratamiento integral para mejorar la circulación y aliviar la pesadez de piernas con resultados visibles y duraderos.",
-    includes: [
-      "Drenaje Linfático en Piernas (2 sesiones)",
-      "Valoración circulatoria inicial",
-      "Recomendaciones de mantenimiento",
-    ],
-    highlight: false,
-  },
-];
+// Admin Key for demonstration - In production this should be handled by a proper Auth system
+const ADMIN_KEY = "mj-admin-secret-2025";
 
 export default function Paquetes() {
+  const [isDragging, setIsDragging] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  const { data: promotions = [], isLoading, refetch } = useListPromotions();
+
+  const createPromotion = useCreatePromotion({
+    request: { headers: { "x-admin-key": ADMIN_KEY } },
+    mutation: {
+      onSuccess: () => {
+        refetch();
+        toast.success("Promoción subida con éxito");
+      },
+      onError: (error: any) => {
+        toast.error(error.message || "Error al subir promoción");
+      }
+    }
+  });
+
+  const deletePromotion = useDeletePromotion({
+    request: { headers: { "x-admin-key": ADMIN_KEY } },
+    mutation: {
+      onSuccess: () => {
+        refetch();
+        toast.success("Promoción eliminada");
+      },
+      onError: (error: any) => {
+        toast.error(error.message || "Error al eliminar promoción");
+      }
+    }
+  });
+
+  const handleFileUpload = async (files: FileList | null) => {
+    if (!files || files.length === 0) return;
+
+    const fileArray = Array.from(files);
+
+    for (const file of fileArray) {
+      if (!file.type.startsWith("image/")) {
+        toast.error(`El archivo ${file.name} no es una imagen válida.`);
+        continue;
+      }
+
+      try {
+        const reader = new FileReader();
+        const base64Promise = new Promise<string>((resolve) => {
+          reader.onload = (e) => resolve(e.target?.result as string);
+        });
+        reader.readAsDataURL(file);
+        const imageUrl = await base64Promise;
+
+        await createPromotion.mutateAsync({ data: { imageUrl } });
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  };
+
+  const onDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  };
+
+  const onDragLeave = () => {
+    setIsDragging(false);
+  };
+
+  const onDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+    if (isAdmin) {
+      handleFileUpload(e.dataTransfer.files);
+    } else {
+      toast.error("Acceso denegado. Activa el modo administrador para subir archivos.");
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Paquetes de Tratamientos"
-        description="Paquetes especiales de tratamientos estéticos en MJ Fisio Estética y Spa, Turrialba. Anti-edad, reafirmante corporal, post operatorio y más. Reserva tu valoración gratuita."
+        title="Promociones Especiales"
+        description="Gestiona y visualiza nuestras promociones vigentes en MJ Fisio Estética y Spa, Turrialba. Sube tus propias promociones aquí."
         canonical="/paquetes"
       />
       <Navbar />
@@ -90,108 +109,145 @@ export default function Paquetes() {
           style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/hero-bg.webp)` }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
-          <Breadcrumb items={[{ label: "Paquetes" }]} variant="dark" />
+          <div className="flex justify-between items-start">
+            <Breadcrumb items={[{ label: "Promociones" }]} variant="dark" />
+            <button
+              onClick={() => setIsAdmin(!isAdmin)}
+              className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest transition-all ${
+                isAdmin ? "bg-primary text-white" : "bg-white/10 text-white/40 hover:bg-white/20"
+              }`}
+            >
+              <Lock className="w-3 h-3" />
+              {isAdmin ? "Admin Activo" : "Modo Admin"}
+            </button>
+          </div>
           <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mt-8 mb-4">
-            OFERTAS ESPECIALES
+            GESTIÓN DE OFERTAS
           </p>
           <h1 className="text-5xl md:text-6xl font-serif font-bold text-white leading-tight mb-6">
-            Paquetes de<br />
-            <span className="italic font-light text-white/40">Tratamientos</span>
+            Nuestras<br />
+            <span className="italic font-light text-white/40">Promociones</span>
           </h1>
           <p className="text-white/80 text-lg leading-relaxed max-w-xl">
-            Protocolos completos diseñados para maximizar tus resultados. Combina los mejores tratamientos y transforma tu bienestar.
+            Sube o elimina las imágenes de promociones vigentes para mantener a tus clientes informados de las mejores ofertas.
           </p>
-          <div className="mt-10">
-            <a
-              href={WA}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary text-white px-8 py-3.5 font-semibold text-sm tracking-wide hover:bg-primary/90 transition-colors"
-            >
-              <MessageCircle className="w-4 h-4" />
-              Consultar paquetes por WhatsApp
-            </a>
-          </div>
         </div>
       </section>
 
       <StatsBar />
 
-      {/* Intro band */}
-      <section className="py-4 bg-primary">
-        <p className="text-center text-white text-sm font-medium">
-          Todos los paquetes incluyen <strong>valoración gratuita</strong> y protocolo personalizado según tu caso
-        </p>
-      </section>
-
-      {/* Packages grid */}
+      {/* Drag & Drop Section - Only visible/active for Admin */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {packages.map((pkg, i) => {
-              const Icon = pkg.icon;
-              return (
+
+          <AnimatePresence>
+            {isAdmin && (
+              <motion.div
+                initial={{ opacity: 0, height: 0, marginBottom: 0 }}
+                animate={{ opacity: 1, height: "auto", marginBottom: 64 }}
+                exit={{ opacity: 0, height: 0, marginBottom: 0 }}
+                className="overflow-hidden"
+              >
                 <motion.div
-                  key={pkg.name}
-                  custom={i}
-                  variants={fadeUp}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  className={`relative flex flex-col border rounded-2xl overflow-hidden ${
-                    pkg.highlight
-                      ? "border-primary shadow-xl shadow-primary/10"
-                      : "border-stone-200 shadow-sm"
-                  }`}
+                  className={`relative border-2 border-dashed rounded-3xl p-12 text-center transition-all ${
+                    isDragging
+                      ? "border-primary bg-primary/5 scale-[1.01]"
+                      : "border-stone-200 bg-stone-50 hover:border-primary/50"
+                  } ${createPromotion.isPending ? "opacity-50 pointer-events-none" : ""}`}
+                  onDragOver={onDragOver}
+                  onDragLeave={onDragLeave}
+                  onDrop={onDrop}
                 >
-                  {pkg.highlight && (
-                    <div className="bg-primary text-white text-xs font-bold uppercase tracking-widest text-center py-2">
-                      ★ Más Solicitado
+                  <input
+                    type="file"
+                    multiple
+                    accept="image/*"
+                    className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+                    onChange={(e) => handleFileUpload(e.target.files)}
+                    disabled={createPromotion.isPending}
+                  />
+                  <div className="flex flex-col items-center">
+                    <div className="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-4 text-primary">
+                      {createPromotion.isPending ? <Loader2 className="w-8 h-8 animate-spin" /> : <Upload className="w-8 h-8" />}
                     </div>
-                  )}
-                  <div className="p-8 flex flex-col flex-1">
-                    <div className="flex items-start gap-4 mb-5">
-                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 ${pkg.highlight ? "bg-primary/10" : "bg-stone-100"}`}>
-                        <Icon className={`w-6 h-6 ${pkg.highlight ? "text-primary" : "text-stone-600"}`} />
-                      </div>
-                      <div>
-                        <span className="text-xs font-semibold uppercase tracking-widest text-primary/70">{pkg.tag}</span>
-                        <h2 className="text-xl font-serif font-bold text-foreground leading-tight">{pkg.name}</h2>
-                        <p className="text-sm text-stone-500 mt-0.5">{pkg.tagline}</p>
-                      </div>
+                    <h3 className="text-xl font-serif font-bold text-stone-800 mb-2">
+                      {createPromotion.isPending ? "Subiendo promociones..." : "Sube nuevas promociones"}
+                    </h3>
+                    <p className="text-stone-500 max-w-xs mx-auto text-sm">
+                      Arrastra y suelta tus imágenes aquí o haz clic para explorar tus archivos
+                    </p>
+                    <div className="mt-6 flex gap-4 text-xs font-medium text-stone-400 uppercase tracking-widest">
+                      <span className="flex items-center gap-1.5"><ImageIcon className="w-3.5 h-3.5" /> JPG / PNG</span>
+                      <span className="flex items-center gap-1.5"><Sparkles className="w-3.5 h-3.5" /> Calidad HD</span>
                     </div>
-
-                    <p className="text-stone-600 text-sm leading-relaxed mb-6">{pkg.description}</p>
-
-                    <div className="mb-8 flex-1">
-                      <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-3">Incluye</p>
-                      <ul className="space-y-2">
-                        {pkg.includes.map((item) => (
-                          <li key={item} className="flex items-start gap-2.5 text-sm text-stone-700">
-                            <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <a
-                      href={WA}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`inline-flex items-center justify-center gap-2 w-full py-3 text-sm font-semibold tracking-wide transition-colors ${
-                        pkg.highlight
-                          ? "bg-primary text-white hover:bg-primary/90"
-                          : "bg-[#071e2e] text-white hover:bg-primary"
-                      }`}
-                    >
-                      <MessageCircle className="w-4 h-4" />
-                      Consultar este paquete
-                    </a>
                   </div>
                 </motion.div>
-              );
-            })}
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Promotions Grid */}
+          <div className="space-y-8">
+            <div className="flex items-center justify-between border-b border-stone-100 pb-4">
+              <h2 className="text-2xl font-serif font-bold text-stone-900 flex items-center gap-2">
+                Promociones Activas
+                {!isLoading && (
+                  <span className="bg-primary/10 text-primary text-xs px-2 py-0.5 rounded-full">{promotions.length}</span>
+                )}
+              </h2>
+              {isAdmin && promotions.length > 0 && (
+                <p className="text-sm text-stone-400">Haz clic en el ícono de eliminar para quitar una promoción</p>
+              )}
+            </div>
+
+            {isLoading ? (
+              <div className="py-20 flex flex-col items-center justify-center">
+                <Loader2 className="w-10 h-10 text-primary animate-spin mb-4" />
+                <p className="text-stone-400 italic">Cargando promociones...</p>
+              </div>
+            ) : promotions.length === 0 ? (
+              <div className="py-20 text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-stone-50 text-stone-300 mb-4">
+                  <ImageIcon className="w-8 h-8" />
+                </div>
+                <p className="text-stone-400 italic">No hay promociones subidas actualmente.</p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <AnimatePresence mode="popLayout">
+                  {promotions.map((promo) => (
+                    <motion.div
+                      key={promo.id}
+                      layout
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.2 } }}
+                      className="group relative aspect-[4/5] rounded-2xl overflow-hidden shadow-lg bg-stone-100"
+                    >
+                      <img
+                        src={promo.imageUrl}
+                        alt={`Promoción ${promo.id}`}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                      {isAdmin && (
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                          <button
+                            onClick={() => deletePromotion.mutate({ id: promo.id })}
+                            disabled={deletePromotion.isPending}
+                            className="bg-red-500 text-white p-3 rounded-full hover:bg-red-600 transition-colors shadow-xl transform translate-y-4 group-hover:translate-y-0 duration-300 disabled:opacity-50"
+                          >
+                            {deletePromotion.isPending ? <Loader2 className="w-6 h-6 animate-spin" /> : <Trash2 className="w-6 h-6" />}
+                          </button>
+                        </div>
+                      )}
+                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-stone-900 text-[10px] font-bold uppercase tracking-tighter px-2 py-1 rounded shadow-sm">
+                        PROMO #{promo.id}
+                      </div>
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -201,10 +257,10 @@ export default function Paquetes() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">VALORACIÓN GRATUITA</p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
-            ¿No sabes cuál paquete es para ti?
+            ¿Viste algo que te gustó?
           </h2>
           <p className="text-white/75 mb-8 leading-relaxed">
-            Agenda tu valoración gratuita y nuestras especialistas diseñarán el protocolo ideal según tus objetivos, tu historial y tu estilo de vida.
+            Agenda tu valoración gratuita y nuestras especialistas te asesorarán sobre la mejor promoción para tus necesidades.
           </p>
           <a
             href={WA}

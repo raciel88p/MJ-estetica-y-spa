@@ -14,3 +14,27 @@ import * as zod from "zod";
 export const HealthCheckResponse = zod.object({
   status: zod.string(),
 });
+
+/**
+ * @summary List promotions
+ */
+export const ListPromotionsResponseItem = zod.object({
+  id: zod.number(),
+  imageUrl: zod.string(),
+  createdAt: zod.date(),
+});
+export const ListPromotionsResponse = zod.array(ListPromotionsResponseItem);
+
+/**
+ * @summary Create a promotion
+ */
+export const CreatePromotionBody = zod.object({
+  imageUrl: zod.string(),
+});
+
+/**
+ * @summary Delete a promotion
+ */
+export const DeletePromotionParams = zod.object({
+  id: zod.coerce.number(),
+});
