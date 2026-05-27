@@ -49,6 +49,7 @@ export function Footer() {
               <li><a href="/tratamientos/faciales" className="hover:text-secondary transition-colors">Tratamientos Faciales</a></li>
               <li><a href="/tratamientos/piernas" className="hover:text-secondary transition-colors">Tratamientos de Piernas</a></li>
               <li><a href="/paquetes" className="hover:text-secondary transition-colors">Paquetes</a></li>
+              <li><a href="/promociones" className="hover:text-secondary transition-colors">Promociones</a></li>
               <li><a href="/medicos-esteticos" className="hover:text-secondary transition-colors">Médicos y Estéticos</a></li>
               <li><a href="/testimonios" className="hover:text-secondary transition-colors">Testimonios</a></li>
               <li><a href="/mapa-del-sitio" className="hover:text-secondary transition-colors">Mapa del Sitio</a></li>

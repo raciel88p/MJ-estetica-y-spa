@@ -15,6 +15,7 @@ const sections = [
       { name: "Armonización Facial (Landing)", href: "/medicina-estetica" },
       { name: "Sobre Nosotros", href: "/nosotros" },
       { name: "Paquetes", href: "/paquetes" },
+      { name: "Promociones", href: "/promociones" },
       { name: "Testimonios", href: "/testimonios" },
       { name: "Médicos y Estéticos", href: "/medicos-esteticos" },
       { name: "Buzón de Sugerencias", href: "/buzon-sugerencias" },

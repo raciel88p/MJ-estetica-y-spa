@@ -49,6 +49,22 @@ export default defineConfig(async () => {
       ...replitPlugins,
     ],
 
+    server: {
+      port,
+      host:         "0.0.0.0",
+      allowedHosts: true,
+      fs: {
+        strict: true,
+        deny:   ["**/.*"],
+      },
+      proxy: {
+        "/api": {
+          target: "http://localhost:5000",
+          changeOrigin: true,
+        },
+      },
+    },
+
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "src"),
