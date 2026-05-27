@@ -12,7 +12,8 @@
     "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@workspace/api-client-react": ["../../lib/api-client-react/src/index.ts"]
     }
   }
 }
