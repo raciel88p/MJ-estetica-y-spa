@@ -18,15 +18,32 @@ export function SEO({ title, description, canonical, image, type = "website" }: 
   const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Turrialba, Costa Rica`;
   const desc = description ?? DEFAULT_DESC;
 
+  // Try to get current URL if available
+  let currentPath = '';
+  if (typeof window !== 'undefined') {
+    currentPath = window.location.pathname;
+  }
+
   // Ensure canonical URL is absolute
+  // Priority: 1. canonical prop, 2. currentPath, 3. BASE_URL
+  let finalPath = canonical ?? currentPath;
+
+  // Normalize the path: remove trailing slash unless it's just "/"
+  if (finalPath !== '/' && finalPath.endsWith('/')) {
+    finalPath = finalPath.slice(0, -1);
+  }
+  if (finalPath !== '' && !finalPath.startsWith('/') && !finalPath.startsWith('http')) {
+    finalPath = '/' + finalPath;
+  }
+
   let canonicalUrl = BASE_URL;
-  if (canonical) {
-    if (canonical.startsWith('http')) {
-      canonicalUrl = canonical;
+  if (finalPath) {
+    if (finalPath.startsWith('http')) {
+      canonicalUrl = finalPath;
+    } else if (finalPath === '/') {
+      canonicalUrl = BASE_URL + '/';
     } else {
-      // Ensure it starts with /
-      const path = canonical.startsWith('/') ? canonical : `/${canonical}`;
-      canonicalUrl = `${BASE_URL}${path}`;
+      canonicalUrl = `${BASE_URL}${finalPath}`;
     }
   }
 

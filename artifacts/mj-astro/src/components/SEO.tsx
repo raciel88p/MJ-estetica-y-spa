@@ -18,16 +18,30 @@ export function SEO({ title, description, canonical, image, type = "website" }: 
   const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Turrialba, Costa Rica`;
   const desc = description ?? DEFAULT_DESC;
 
+  // Try to get current URL if available (Astro context)
+  let currentPath = '';
+  if (typeof window !== 'undefined') {
+    currentPath = window.location.pathname;
+  }
+
   // Ensure canonical URL is absolute
+  // Priority: 1. canonical prop, 2. currentPath, 3. BASE_URL
+  const finalPath = canonical ?? currentPath;
   let canonicalUrl = BASE_URL;
-  if (canonical) {
-    if (canonical.startsWith('http')) {
-      canonicalUrl = canonical;
+
+  if (finalPath) {
+    if (finalPath.startsWith('http')) {
+      canonicalUrl = finalPath;
     } else {
       // Ensure it starts with /
-      const path = canonical.startsWith('/') ? canonical : `/${canonical}`;
+      const path = finalPath.startsWith('/') ? finalPath : `/${finalPath}`;
       canonicalUrl = `${BASE_URL}${path}`;
     }
+  }
+
+  // Remove trailing slash if not root
+  if (canonicalUrl.length > BASE_URL.length && canonicalUrl.endsWith('/')) {
+    canonicalUrl = canonicalUrl.slice(0, -1);
   }
 
   const ogImage = image ?? DEFAULT_IMAGE;
@@ -37,7 +51,6 @@ export function SEO({ title, description, canonical, image, type = "website" }: 
       <html lang="es" />
       <title>{fullTitle}</title>
       <meta name="description" content={desc} />
-      <link rel="canonical" href={canonicalUrl} />
 
       {/* Geo meta tags for local SEO */}
       <meta name="geo.region" content="CR-C" />
