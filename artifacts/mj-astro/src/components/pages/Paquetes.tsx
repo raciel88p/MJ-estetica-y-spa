@@ -14,7 +14,7 @@ import { useListPromotions, useCreatePromotion, useDeletePromotion } from "@work
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
 // Admin Key for demonstration - In production this should be handled by a proper Auth system
-const ADMIN_KEY = "mj-admin-secret-2025";
+const ADMIN_KEY = (import.meta as any).env?.VITE_ADMIN_KEY || "mj-admin-secret-2025";
 
 function Paquetes() {
   const [isDragging, setIsDragging] = useState(false);
