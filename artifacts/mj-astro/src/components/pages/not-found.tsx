@@ -2,6 +2,7 @@ import { withAppProviders } from "@/components/ReactAppWrapper";
 
 import { motion } from "framer-motion";
 import { MessageCircle, ArrowRight, Home } from "lucide-react";
+import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
@@ -59,6 +60,11 @@ const popularTreatments = [
 function NotFound() {
   return (
     <div className="min-h-screen bg-white font-sans">
+      <SEO
+        title="Página no encontrada"
+        description="La página que buscas no está disponible en MJ Fisio Estética y Spa."
+        canonical="/404"
+      />
       <Navbar />
 
       {/* ── HERO ─────────────────────────────────────── */}

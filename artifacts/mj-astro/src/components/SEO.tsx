@@ -17,7 +17,19 @@ const DEFAULT_IMAGE = `${BASE_URL}/images/logo-mj.png`;
 export function SEO({ title, description, canonical, image, type = "website" }: SEOProps) {
   const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Turrialba, Costa Rica`;
   const desc = description ?? DEFAULT_DESC;
-  const canonicalUrl = canonical ? `${BASE_URL}${canonical}` : BASE_URL;
+
+  // Ensure canonical URL is absolute
+  let canonicalUrl = BASE_URL;
+  if (canonical) {
+    if (canonical.startsWith('http')) {
+      canonicalUrl = canonical;
+    } else {
+      // Ensure it starts with /
+      const path = canonical.startsWith('/') ? canonical : `/${canonical}`;
+      canonicalUrl = `${BASE_URL}${path}`;
+    }
+  }
+
   const ogImage = image ?? DEFAULT_IMAGE;
 
   return (
