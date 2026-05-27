@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
-import { UploadCloud, FileImage, X, Image as ImageIcon, Loader2 } from "lucide-react";
+import { UploadCloud, FileImage, X, Image as ImageIcon, Loader2, Lock, Unlock } from "lucide-react";
 import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -19,6 +19,8 @@ export default function PaquetesContent() {
   const [isDragging, setIsDragging] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [isUploading, setIsUploading] = useState(false);
+  const [adminKey, setAdminKey] = useState("");
+  const [isKeyVisible, setIsKeyVisible] = useState(false);
 
   const fetchPromotions = useCallback(async () => {
     try {
@@ -45,7 +47,6 @@ export default function PaquetesContent() {
     fetchPromotions();
   }, [fetchPromotions]);
 
-  // Sync with LocalStorage as backup
   useEffect(() => {
     if (!isLoading) {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(images));
@@ -79,6 +80,11 @@ export default function PaquetesContent() {
   };
 
   const handleFiles = async (files: File[]) => {
+    if (!adminKey) {
+      alert("Por favor, ingresa la clave de administrador para subir imágenes.");
+      return;
+    }
+
     const validFiles = files.filter(f => f.type.startsWith('image/'));
     if (validFiles.length === 0) return;
 
@@ -92,26 +98,35 @@ export default function PaquetesContent() {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
-              "x-admin-key": "mj-admin-secret-2025"
+              "x-admin-key": adminKey
             },
             body: JSON.stringify({ imageUrl: base64 }),
           });
+
+          if (response.status === 401) {
+            alert("Clave de administrador incorrecta.");
+            setIsUploading(false);
+            return;
+          }
+
           if (response.ok) {
             const newPromo = await response.json();
             setImages(prev => [newPromo, ...prev]);
             continue;
           }
         } catch (apiErr) {
-          console.warn("API Upload failed, using LocalStorage only");
+          console.warn("API Upload failed");
         }
 
-        // Fallback for demo/dev if API fails
+        // Optional: Local only if intentional dev mode
+        /*
         const localPromo = {
           id: Date.now() + Math.random(),
           imageUrl: base64,
           createdAt: new Date().toISOString()
         };
         setImages(prev => [localPromo, ...prev]);
+        */
 
       } catch (error) {
         console.error("Error uploading file:", error);
@@ -130,36 +145,65 @@ export default function PaquetesContent() {
   };
 
   const removeImage = async (id: number) => {
+    if (!adminKey) {
+      alert("Por favor, ingresa la clave de administrador para eliminar imágenes.");
+      return;
+    }
+
     try {
       const response = await fetch(`/api/promotions/${id}`, {
         method: "DELETE",
         headers: {
-          "x-admin-key": "mj-admin-secret-2025"
+          "x-admin-key": adminKey
         }
       });
-      if (response.ok) {
-        setImages(prev => prev.filter(img => img.id !== id));
+
+      if (response.status === 401) {
+        alert("Clave de administrador incorrecta.");
         return;
       }
+
+      if (response.ok) {
+        setImages(prev => prev.filter(img => img.id !== id));
+      }
     } catch (error) {
-      console.warn("API Delete failed, removing from state only");
+      console.warn("API Delete failed");
     }
-    setImages(prev => prev.filter(img => img.id !== id));
   };
 
   return (
     <div className="min-h-screen bg-white">
       <SEO
         title="Paquetes - MJ Fisio Estética y Spa"
-        description="Descubre los paquetes exclusivos en tratamientos estéticos y bienestar."
+        description="Gestiona los paquetes exclusivos de MJ Fisio Estética y Spa."
         canonical="/paquetes"
       />
       <Navbar />
 
       <main className="pt-32 pb-20 max-w-6xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-900 mb-4">Paquetes y Promociones</h1>
-          <p className="text-stone-600 max-w-2xl mx-auto">Sube y visualiza los paquetes del mes. Arrastra las imágenes a la zona de abajo.</p>
+          <h1 className="text-4xl sm:text-5xl font-serif font-bold text-stone-900 mb-4">Gestión de Paquetes</h1>
+          <p className="text-stone-600 max-w-2xl mx-auto mb-8">Administra las promociones visuales de la clínica.</p>
+
+          {/* Admin Key Input */}
+          <div className="max-w-xs mx-auto relative">
+            <div className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400">
+              {adminKey ? <Unlock className="w-4 h-4" /> : <Lock className="w-4 h-4" />}
+            </div>
+            <input
+              type={isKeyVisible ? "text" : "password"}
+              value={adminKey}
+              onChange={(e) => setAdminKey(e.target.value)}
+              placeholder="Clave de administrador"
+              className="w-full pl-10 pr-10 py-2 border border-stone-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/20"
+            />
+            <button
+              onClick={() => setIsKeyVisible(!isKeyVisible)}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-stone-600"
+            >
+              {isKeyVisible ? <X className="w-4 h-4" /> : <ImageIcon className="w-4 h-4" />}
+            </button>
+          </div>
         </div>
 
         {/* Drag and Drop Zone */}
@@ -202,7 +246,7 @@ export default function PaquetesContent() {
           <div className="mt-16">
             <h2 className="text-2xl font-serif font-bold text-stone-900 mb-6 flex items-center gap-2">
               <ImageIcon className="w-5 h-5 text-primary" />
-              Tus Paquetes
+              Paquetes Activos
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {images.map((promo) => (
@@ -229,7 +273,7 @@ export default function PaquetesContent() {
         ) : (
           <div className="mt-16 text-center py-12 border border-stone-100 rounded-xl bg-white shadow-sm">
             <FileImage className="w-10 h-10 text-stone-300 mx-auto mb-3" />
-            <p className="text-stone-500">Aún no has subido ningún paquete.</p>
+            <p className="text-stone-500">No hay paquetes subidos actualmente.</p>
           </div>
         )}
       </main>
