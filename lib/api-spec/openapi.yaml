@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: promotions
+    description: Promotion image operations
 paths:
   /healthz:
     get:
@@ -24,6 +26,51 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /promotions:
+    get:
+      operationId: listPromotions
+      tags: [promotions]
+      summary: List promotions
+      responses:
+        "200":
+          description: A list of promotions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Promotion"
+    post:
+      operationId: createPromotion
+      tags: [promotions]
+      summary: Create a promotion
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreatePromotion"
+      responses:
+        "201":
+          description: Promotion created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Promotion"
+  /promotions/{id}:
+    delete:
+      operationId: deletePromotion
+      tags: [promotions]
+      summary: Delete a promotion
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "204":
+          description: Promotion deleted
 components:
   schemas:
     HealthStatus:
@@ -33,4 +80,24 @@ components:
           type: string
       required:
         - status
-
+    Promotion:
+      type: object
+      properties:
+        id:
+          type: integer
+        imageUrl:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - imageUrl
+        - createdAt
+    CreatePromotion:
+      type: object
+      properties:
+        imageUrl:
+          type: string
+      required:
+        - imageUrl

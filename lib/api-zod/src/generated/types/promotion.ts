@@ -5,16 +5,9 @@
  * API specification
  * OpenAPI spec version: 0.1.0
  */
-export interface HealthStatus {
-  status: string;
-}
 
 export interface Promotion {
   id: number;
   imageUrl: string;
-  createdAt: string;
-}
-
-export interface CreatePromotion {
-  imageUrl: string;
+  createdAt: Date;
 }
