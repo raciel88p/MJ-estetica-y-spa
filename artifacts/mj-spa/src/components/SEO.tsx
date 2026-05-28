@@ -18,37 +18,27 @@ export function SEO({ title, description, canonical, image, type = "website" }: 
   const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Turrialba, Costa Rica`;
   const desc = description ?? DEFAULT_DESC;
 
-  // Try to get current URL if available
-  let currentPath = '';
-  if (typeof window !== 'undefined') {
+  let currentPath = "";
+  if (typeof window !== "undefined") {
     currentPath = window.location.pathname;
   }
 
-  // Ensure canonical URL is absolute
-  // Priority: 1. canonical prop, 2. currentPath, 3. BASE_URL
-  let finalPath = canonical ?? currentPath;
-
-  // Normalize the path: remove trailing slash unless it's just "/"
-  if (finalPath.length > 1 && finalPath.endsWith('/')) {
-    finalPath = finalPath.slice(0, -1);
-  }
-  if (finalPath !== '' && !finalPath.startsWith('/') && !finalPath.startsWith('http')) {
-    finalPath = '/' + finalPath;
-  }
-
+  const finalPath = canonical ?? currentPath;
   let canonicalUrl = BASE_URL;
+
   if (finalPath) {
-    if (finalPath.startsWith('http')) {
+    if (finalPath.startsWith("http")) {
       canonicalUrl = finalPath;
-    } else if (finalPath === '/') {
-      canonicalUrl = BASE_URL + '/';
     } else {
-      canonicalUrl = `${BASE_URL}${finalPath}`;
+      let path = finalPath.startsWith("/") ? finalPath : `/${finalPath}`;
+      if (path.length > 1 && path.endsWith("/")) {
+        path = path.slice(0, -1);
+      }
+      canonicalUrl = `${BASE_URL}${path}`;
     }
   }
 
-  // Final check: Remove trailing slash if not root
-  if (canonicalUrl.length > BASE_URL.length + 1 && canonicalUrl.endsWith('/')) {
+  if (canonicalUrl.length > BASE_URL.length + 1 && canonicalUrl.endsWith("/")) {
     canonicalUrl = canonicalUrl.slice(0, -1);
   }
 
@@ -61,13 +51,11 @@ export function SEO({ title, description, canonical, image, type = "website" }: 
       <meta name="description" content={desc} />
       <link rel="canonical" href={canonicalUrl} />
 
-      {/* Geo meta tags for local SEO */}
       <meta name="geo.region" content="CR-C" />
       <meta name="geo.placename" content="Turrialba, Cartago, Costa Rica" />
       <meta name="geo.position" content="9.9001;-83.6819" />
       <meta name="ICBM" content="9.9001, -83.6819" />
 
-      {/* Open Graph */}
       <meta property="og:type" content={type} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={desc} />
@@ -78,13 +66,11 @@ export function SEO({ title, description, canonical, image, type = "website" }: 
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content="es_CR" />
 
-      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={desc} />
       <meta name="twitter:image" content={ogImage} />
 
-      {/* Extra SEO */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content={SITE_NAME} />
       <meta name="language" content="Spanish" />
