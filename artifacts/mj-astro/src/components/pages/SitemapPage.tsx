@@ -17,7 +17,7 @@ const sections = [
       { name: "Sobre Nosotros", href: "/nosotros" },
       { name: "Paquetes", href: "/paquetes" },
       { name: "Testimonios", href: "/testimonios" },
-      { name: "Médicos y Estéticos", href: "/medicos-esteticos" },
+      { name: "Médico Estético", href: "/medicos-esteticos" },
       { name: "Buzón de Sugerencias", href: "/buzon-sugerencias" },
       { name: "Política de Privacidad", href: "/politica-de-datos" },
     ],

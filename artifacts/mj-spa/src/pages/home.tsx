@@ -943,7 +943,7 @@ export default function Home() {
                     <optgroup label="Tratamientos de Piernas">
                       <option value="piernas-cansadas">Piernas Cansadas</option>
                     </optgroup>
-                    <optgroup label="Médicos y Estéticos">
+                    <optgroup label="Médico Estético">
                       <option value="botox">Botox</option>
                       <option value="hilos-tensores">Hilos Tensores</option>
                     </optgroup>

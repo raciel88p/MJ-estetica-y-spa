@@ -152,9 +152,9 @@ const serviceCategoryMap: Record<string, { name: string; href: string }> = {
   "piernas-cansadas":          { name: "Tratamientos de Piernas", href: "/tratamientos/piernas"    },
   "tratamiento-ojeras":        { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "blanqueamiento-zona-intima":{ name: "Tratamientos Corporales", href: "/tratamientos/corporales"  },
-  "implante-barba":            { name: "Médicos y Estéticos",     href: "/medicos-esteticos"        },
-  "mesoterapia-capilar":       { name: "Médicos y Estéticos",     href: "/medicos-esteticos"        },
-  "rellenos-labios":           { name: "Médicos y Estéticos",     href: "/medicos-esteticos"        },
+  "implante-barba":            { name: "Médico Estético",     href: "/medicos-esteticos"        },
+  "mesoterapia-capilar":       { name: "Médico Estético",     href: "/medicos-esteticos"        },
+  "rellenos-labios":           { name: "Médico Estético",     href: "/medicos-esteticos"        },
 };
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {

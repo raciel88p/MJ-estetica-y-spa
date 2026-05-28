@@ -253,7 +253,7 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            {/* ── Médicos y Estéticos Dropdown ── */}
+            {/* ── Médico Estético Dropdown ── */}
             <div
               className="relative"
               onMouseEnter={() => { medicos.cancelClose(); medicos.open(); }}
@@ -264,7 +264,7 @@ export function Navbar() {
                   href="/medicina-estetica"
                   className={`${linkBase} ${textClass}`}
                 >
-                  Médicos y Estéticos
+                  Médico Estético
                 </a>
                 <button
                   className={`p-1 ${textClass} hover:text-primary transition-colors`}
@@ -483,7 +483,7 @@ export function Navbar() {
                 </AnimatePresence>
               </div>
 
-              {/* Mobile Médicos y Estéticos Accordion */}
+              {/* Mobile Médico Estético Accordion */}
               <div className="border-b border-muted">
                 <div className="flex justify-between items-center w-full">
                   <a
@@ -491,7 +491,7 @@ export function Navbar() {
                     className="flex-grow text-foreground text-lg py-3 hover:text-primary transition-colors font-serif"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Médicos y Estéticos
+                    Médico Estético
                   </a>
                   <button
                     className="p-3 text-foreground hover:text-primary transition-colors"

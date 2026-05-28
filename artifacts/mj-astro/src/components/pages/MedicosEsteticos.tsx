@@ -91,7 +91,7 @@ function MedicosEsteticos() {
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <div className="flex justify-center mb-6">
-            <Breadcrumb items={[{ label: "Médicos y Estéticos" }]} />
+            <Breadcrumb items={[{ label: "Médico Estético" }]} />
           </div>
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -103,7 +103,7 @@ function MedicosEsteticos() {
               Especialidades
             </div>
             <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">
-              Médicos y Estéticos
+              Médico Estético
             </h1>
             <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
               Tratamientos médico-estéticos de vanguardia realizados por profesionales especializados.
