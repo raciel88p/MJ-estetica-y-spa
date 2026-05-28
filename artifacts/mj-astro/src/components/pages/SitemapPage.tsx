@@ -31,7 +31,7 @@ const sections = [
       { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
       { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios" },
       { name: "Reducción de Medidas", href: "/servicios/reduccion-de-medidas" },
-      { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
+      { name: "Tensado Corporal en Turrialba", href: "/servicios/tensado-corporal" },
       { name: "Drenaje Linfático", href: "/servicios/drenaje-linfatico" },
       { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
       { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
