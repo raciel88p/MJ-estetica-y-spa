@@ -23,5 +23,42 @@
   ],
   "categories": ["health", "beauty", "lifestyle"],
   "related_applications": [],
-  "prefer_related_applications": false
+  "prefer_related_applications": false,
+  "tools": [
+    {
+      "name": "listar-servicios",
+      "description": "Lista todos los servicios y tratamientos disponibles en MJ Estética.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
+    },
+    {
+      "name": "buscar-tratamientos",
+      "description": "Busca tratamientos específicos basados en palabras clave o necesidades del usuario.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "description": "Palabra clave para buscar (ej: 'facial', 'masaje', 'laser')."
+          }
+        },
+        "required": ["keyword"]
+      }
+    },
+    {
+      "name": "enviar-sugerencia",
+      "description": "Envía una sugerencia, idea o comentario al equipo de MJ Estética.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "nombre": { "type": "string", "description": "Tu nombre completo." },
+          "tipo": { "type": "string", "description": "Categoría de la sugerencia." },
+          "mensaje": { "type": "string", "description": "Detalle del comentario." }
+        },
+        "required": ["nombre", "tipo", "mensaje"]
+      }
+    }
+  ]
 }
