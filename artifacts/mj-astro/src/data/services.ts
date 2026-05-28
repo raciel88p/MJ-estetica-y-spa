@@ -798,7 +798,7 @@ export const servicePages: ServicePageData[] = [
     ],
     items: [
       {
-        title: "Tensado Abdominal",
+        title: "Tensado Abdominal en Turrialba",
         description:
           "Protocolo específico para reafirmar la piel del abdomen y reducir la flacidez postparto o por pérdida de peso, con tecnología de radiofrecuencia multipolar.",
         duration: "50 min",

@@ -1,7 +1,7 @@
 import { withAppProviders } from "@/components/ReactAppWrapper";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, Clock, Clock4, ChevronDown, ArrowRight, MessageCircle, Star, ShieldCheck, Award, UserCheck, GraduationCap, BadgeCheck } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -187,6 +187,41 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 
 function ServicePage({ service }: { service: ServicePageData }) {
   const category = serviceCategoryMap[service.slug];
+
+  // WebMCP Integration: Register service details tool
+  useEffect(() => {
+    // @ts-ignore
+    if (typeof window !== "undefined" && "navigator" in window && "modelContext" in window.navigator) {
+      const controller = new AbortController();
+      const tool = {
+        name: `detalles-servicio-${service.slug}`,
+        description: `Obtiene información detallada sobre el tratamiento de ${service.name} en MJ Estética.`,
+        inputSchema: {
+          type: "object",
+          properties: {},
+          required: []
+        },
+        execute: () => {
+          return {
+            content: [{
+              type: "text",
+              text: `Servicio: ${service.name}\nEslogan: ${service.tagline}\nDescripción: ${service.heroDescription.replace(/<br \/>/g, '\n')}\nBeneficios: ${service.benefits.join(', ')}\n\n¿Deseas reservar una valoración gratuita para este tratamiento?`
+            }]
+          };
+        }
+      };
+
+      try {
+        // @ts-ignore
+        window.navigator.modelContext.registerTool(tool, { signal: controller.signal });
+      } catch (e) {
+        console.warn("WebMCP tool registration failed", e);
+      }
+
+      return () => controller.abort();
+    }
+  }, [service.slug, service.name]);
+
   const BASE = import.meta.env.BASE_URL;
 
   const breadcrumbItems = category
