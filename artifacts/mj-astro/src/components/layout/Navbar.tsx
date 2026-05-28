@@ -146,9 +146,6 @@ export function Navbar() {
               Paquetes
             </a>
 
-            <a href="/promociones" className={`${linkBase} ${textClass}`}>
-              Promociones
-            </a>
 
 
             {/* ── Servicios Dropdown ── */}
@@ -403,12 +400,6 @@ export function Navbar() {
                 Paquetes
               </a>
 
-              <a href="/promociones"
-                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Promociones
-              </a>
 
 
               {/* Mobile Services Accordion */}
