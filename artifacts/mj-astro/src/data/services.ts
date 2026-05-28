@@ -32,7 +32,7 @@ export const tratamientosCorporalesLinks = [
   { name: "Masajes Reductor con Hidrolicoplasia Turrialba", href: "/servicios/masajes-corporales" },
   { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
   { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios" },
-  { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
+  { name: "Tensado Corporal en Turrialba", href: "/servicios/tensado-corporal" },
   { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
   { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
   { name: "Carboxiterapia", href: "/servicios/carboxiterapia" },
@@ -785,10 +785,10 @@ export const servicePages: ServicePageData[] = [
   // ── CORPORALES NUEVOS ──────────────────────────────
   {
     slug: "tensado-corporal",
-    name: "Tensado Corporal",
+    name: "Tensado Corporal en Turrialba",
     tagline: "Reafirma y esculpe tu silueta sin cirugía",
     heroDescription:
-      "El tensado corporal utiliza tecnología de radiofrecuencia y ultrasonidos para estimular la producción de colágeno, reafirmar la piel flácida y esculpir la silueta de forma natural y no invasiva.",
+      "Firmeza, bienestar y remodelación corporal progresiva en un solo protocolo",
     benefits: [
       "Reafirmación visible de la piel desde las primeras sesiones",
       "Estimula la producción de colágeno y elastina",
