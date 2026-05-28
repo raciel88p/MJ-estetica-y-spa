@@ -29,7 +29,7 @@ export function SEO({ title, description, canonical, image, type = "website" }: 
   let finalPath = canonical ?? currentPath;
 
   // Normalize the path: remove trailing slash unless it's just "/"
-  if (finalPath !== '/' && finalPath.endsWith('/')) {
+  if (finalPath.length > 1 && finalPath.endsWith('/')) {
     finalPath = finalPath.slice(0, -1);
   }
   if (finalPath !== '' && !finalPath.startsWith('/') && !finalPath.startsWith('http')) {
@@ -45,6 +45,11 @@ export function SEO({ title, description, canonical, image, type = "website" }: 
     } else {
       canonicalUrl = `${BASE_URL}${finalPath}`;
     }
+  }
+
+  // Final check: Remove trailing slash if not root
+  if (canonicalUrl.length > BASE_URL.length + 1 && canonicalUrl.endsWith('/')) {
+    canonicalUrl = canonicalUrl.slice(0, -1);
   }
 
   const ogImage = image ?? DEFAULT_IMAGE;

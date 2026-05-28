@@ -34,13 +34,17 @@ export function SEO({ title, description, canonical, image, type = "website" }: 
       canonicalUrl = finalPath;
     } else {
       // Ensure it starts with /
-      const path = finalPath.startsWith('/') ? finalPath : `/${finalPath}`;
+      let path = finalPath.startsWith('/') ? finalPath : `/${finalPath}`;
+      // Remove trailing slash if not root
+      if (path.length > 1 && path.endsWith('/')) {
+        path = path.slice(0, -1);
+      }
       canonicalUrl = `${BASE_URL}${path}`;
     }
   }
 
-  // Remove trailing slash if not root
-  if (canonicalUrl.length > BASE_URL.length && canonicalUrl.endsWith('/')) {
+  // Final check: Remove trailing slash if not root (for absolute URLs too)
+  if (canonicalUrl.length > BASE_URL.length + 1 && canonicalUrl.endsWith('/')) {
     canonicalUrl = canonicalUrl.slice(0, -1);
   }
 
@@ -51,6 +55,7 @@ export function SEO({ title, description, canonical, image, type = "website" }: 
       <html lang="es" />
       <title>{fullTitle}</title>
       <meta name="description" content={desc} />
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* Geo meta tags for local SEO */}
       <meta name="geo.region" content="CR-C" />
