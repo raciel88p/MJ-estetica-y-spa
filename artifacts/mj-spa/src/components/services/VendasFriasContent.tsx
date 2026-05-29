@@ -157,7 +157,7 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       <section className="py-24 bg-stone-900 text-white">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold mb-8">¿Qué beneficios pueden aportar las vendas frías?</h2>
+            <h2 className="text-4xl font-serif font-bold mb-8 text-white">¿Qué beneficios pueden aportar las vendas frías?</h2>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
               Las vendas frías se han convertido en uno de los tratamientos wellness corporales favoritos por mujeres que desean desconectarse, relajarse y sentirse mejor física y emocionalmente.
             </p>
@@ -361,7 +361,7 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-900 text-white p-12 relative overflow-hidden">
              <div className="relative z-10">
-               <h2 className="text-3xl font-serif font-bold mb-10 text-center">Paquetes Wellness y Sesiones</h2>
+               <h2 className="text-3xl font-serif font-bold mb-10 text-center text-white">Paquetes Wellness y Sesiones</h2>
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
                  <div className="space-y-4">
                    {["✨ Sesiones individuales", "✨ Programas corporales wellness"].map((item, i) => (
@@ -375,7 +375,7 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
                  </div>
                </div>
                <div className="border-t border-white/10 pt-10 flex flex-col items-center">
-                 <p className="text-2xl font-serif text-primary font-bold mb-2">Planes disponibles desde ₡XX</p>
+                 <p className="text-2xl font-serif text-primary font-bold mb-2">Planes disponibles</p>
                  <p className="text-white/50 text-xs uppercase tracking-widest font-bold">Valoración personalizada incluida</p>
                </div>
              </div>
