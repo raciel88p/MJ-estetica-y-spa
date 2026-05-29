@@ -154,11 +154,11 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       </section>
 
       {/* ── BENEFITS SECTION ─────────────────────────── */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-stone-900 text-white">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold mb-8 text-stone-900">¿Qué beneficios pueden aportar las vendas frías?</h2>
-            <p className="text-stone-500 text-lg leading-relaxed max-w-2xl mx-auto">
+            <h2 className="text-4xl font-serif font-bold mb-8 text-white">¿Qué beneficios pueden aportar las vendas frías?</h2>
+            <p className="text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
               Las vendas frías se han convertido en uno de los tratamientos wellness corporales favoritos por mujeres que desean desconectarse, relajarse y sentirse mejor física y emocionalmente.
             </p>
           </motion.div>
@@ -359,9 +359,9 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       {/* ── PACKAGES & PRICES ────────────────────────── */}
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-50 text-stone-900 p-12 border border-stone-200 relative overflow-hidden">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-900 text-white p-12 relative overflow-hidden">
              <div className="relative z-10">
-               <h2 className="text-3xl font-serif font-bold mb-10 text-center text-stone-900">Paquetes Wellness y Sesiones</h2>
+               <h2 className="text-3xl font-serif font-bold mb-10 text-center text-white">Paquetes Wellness y Sesiones</h2>
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
                  <div className="space-y-4">
                    {["✨ Sesiones individuales", "✨ Programas corporales wellness"].map((item, i) => (

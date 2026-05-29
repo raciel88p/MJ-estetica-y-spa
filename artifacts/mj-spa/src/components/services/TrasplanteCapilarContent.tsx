@@ -149,7 +149,7 @@ export function TrasplanteCapilarContent({ service, waLink }: { service: Service
       <section className="py-24 bg-stone-900 text-white">
         <div className="max-w-4xl mx-auto px-6">
            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8">Lo que más preocupa a quienes consideran un Trasplante Capilar</h2>
+             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8 text-white">Lo que más preocupa a quienes consideran un Trasplante Capilar</h2>
              <p className="text-white/60 text-lg mb-12">La mayoría de personas nos hacen preguntas similares:</p>
            </motion.div>
 
