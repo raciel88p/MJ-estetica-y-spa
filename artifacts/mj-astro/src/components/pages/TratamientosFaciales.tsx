@@ -34,7 +34,7 @@ function TratamientosFaciales() {
     <div className="min-h-screen bg-white">
       <SEO
         title="Tratamientos Faciales"
-        description="Tratamientos faciales en MJ Fisio Estética y Spa: Hollywood Peel, eliminación de manchas, radiofrecuencia, peeling químico, terapias faciales y más en Turrialba, Costa Rica."
+        description="Tratamientos faciales en MJ Fisio Estética y Spa: ✨ Hollywood Peel en Turrialba, eliminación de manchas, radiofrecuencia, peeling químico, terapias faciales y más en Turrialba, Costa Rica."
         canonical="/tratamientos/faciales"
       />
       <Navbar />
@@ -162,7 +162,7 @@ function TratamientosFaciales() {
             className="border-l-4 border-primary pl-8 py-2"
           >
             <p className="text-stone-700 font-serif text-xl italic leading-relaxed mb-4">
-              "Vine por el Hollywood Peel y quedé enamorada de los resultados. Mi piel nunca había estado tan luminosa y uniforme. El equipo es muy profesional y el ambiente del spa es relajante."
+              "Vine por el Hollywood Peel en Turrialba y quedé enamorada de los resultados. Mi piel nunca había estado tan luminosa y uniforme. El equipo es muy profesional y el ambiente del spa es relajante."
             </p>
             <footer className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs font-bold">A</div>

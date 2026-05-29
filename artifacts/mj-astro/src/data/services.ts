@@ -47,7 +47,7 @@ export const tratamientosFacialesLinks = [
   { name: "Tratamientos Faciales", href: "/servicios/faciales" },
   { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
   { name: "Peeling Químico", href: "/servicios/peeling-quimico" },
-  { name: "Hollywood Peel", href: "/servicios/hollywood-peel" },
+  { name: "✨ HOLLYWOOD PEEL EN TURRIALBA", href: "/servicios/hollywood-peel" },
   { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
   { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
   { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
@@ -847,7 +847,7 @@ export const servicePages: ServicePageData[] = [
   // ── FACIALES NUEVOS ────────────────────────────────
   {
     slug: "hollywood-peel",
-    name: "Hollywood Peel",
+    name: "✨ HOLLYWOOD PEEL EN TURRIALBA",
     tagline: "Piel luminosa, uniforme y rejuvenecida en una sola sesión",
     heroDescription:
       "El Hollywood Peel, también conocido como Carbon Laser Peel, es un tratamiento láser no invasivo que revitaliza la piel, unifica el tono, reduce manchas y estimula la producción de colágeno para un aspecto más joven y radiante.",

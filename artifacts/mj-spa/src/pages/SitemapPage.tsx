@@ -50,7 +50,7 @@ const sections = [
       { name: "Todos los Tratamientos Faciales", href: "/tratamientos/faciales" },
       { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
       { name: "Peeling Químico", href: "/servicios/peeling-quimico" },
-      { name: "Hollywood Peel", href: "/servicios/hollywood-peel" },
+      { name: "✨ HOLLYWOOD PEEL EN TURRIALBA", href: "/servicios/hollywood-peel" },
       { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
       { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
       { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
