@@ -163,6 +163,7 @@ export default function Home() {
     "tensado-corporal": "Tensado Corporal en Turrialba",
     "drenaje-linfatico": "Drenaje Linfático",
     "adn-salmon": "ADN de Salmón",
+    "hilos-colageno": "Hilos de Colágeno",
     "tratamiento-ojeras": "Tratamiento de Ojeras",
     "blanqueamiento-zona-intima": "Láser Despigmentante en Turrialba",
     "hollywood-peel": "HOLLYWOOD PEEL EN TURRIALBA",
@@ -938,6 +939,7 @@ export default function Home() {
                       <option value="radiofrecuencia-facial">Radiofrecuencia Facial</option>
                       <option value="eliminacion-manchas">Eliminación de Manchas</option>
                       <option value="acido-hialuronico">Ácido Hialurónico</option>
+                      <option value="hilos-colageno">Hilos de Colágeno</option>
                       <option value="tratamiento-ojeras">Tratamiento de Ojeras</option>
                     </optgroup>
                     <optgroup label="Tratamientos de Piernas">

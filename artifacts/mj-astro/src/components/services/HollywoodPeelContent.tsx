@@ -1,15 +1,9 @@
 import { motion } from "framer-motion";
 import {
-  MessageCircle,
   Sparkles,
   CheckCircle2,
   Instagram,
-  Star,
-  Zap,
-  Globe,
-  ArrowRight,
-  ShieldCheck,
-  Award
+  Star
 } from "lucide-react";
 import type { ServicePageData } from "@/data/services";
 
@@ -225,57 +219,12 @@ export function HollywoodPeelContent({ service, waLink }: { service: ServicePage
         <Sparkles className="absolute -bottom-20 -left-20 w-64 h-64 text-white/5 rotate-12" />
       </section>
 
-      {/* ── URGENCY / BOOKING ────────────────────────── */}
-      <section className="py-24 bg-stone-50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 text-red-600 rounded-full mb-8">
-               <Zap className="w-4 h-4 fill-red-600" />
-               <span className="text-[10px] font-bold tracking-widest uppercase">Cupos Limitados esta semana</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-8">Agenda tu valoración facial hoy</h2>
-            <p className="text-stone-600 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
-              Debido a la alta demanda de valoraciones y sesiones de Hollywood Peel en Turrialba, los espacios disponibles son reducidos. Si deseas aprovechar promociones y paquetes especiales, este es el mejor momento para reservar.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-               <a
-                href={waLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-4 bg-primary text-white p-10 hover:bg-stone-900 transition-all group"
-               >
-                 <MessageCircle className="w-8 h-8" />
-                 <div>
-                   <p className="text-[10px] font-bold tracking-widest uppercase mb-1 opacity-70">Opción 1</p>
-                   <p className="font-serif text-xl font-bold">Reserva por WhatsApp</p>
-                 </div>
-                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-               </a>
-
-               <a
-                href="https://mjesteticayspa.com?utm_source=chatgpt.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-4 bg-white border border-stone-200 text-stone-900 p-10 hover:border-primary transition-all group"
-               >
-                 <Globe className="w-8 h-8 text-primary" />
-                 <div>
-                   <p className="text-[10px] font-bold tracking-widest uppercase mb-1 text-stone-400">Opción 2</p>
-                   <p className="font-serif text-xl font-bold">Visita nuestra web</p>
-                 </div>
-                 <ArrowRight className="w-5 h-5 text-primary group-hover:translate-x-1 transition-transform" />
-               </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* ── FINAL SEO BAND ───────────────────────────── */}
       <section className="py-20 bg-white border-t border-stone-100">
         <div className="max-w-4xl mx-auto px-6 text-center">
            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <h2 className="text-2xl font-serif font-bold text-stone-900 mb-8 uppercase tracking-widest">✨ HOLLYWOOD PEEL EN TURRIALBA COSTA RICA</h2>
+              <h2 className="text-2xl font-serif font-bold text-stone-900 mb-8 uppercase tracking-widest">HOLLYWOOD PEEL EN TURRIALBA COSTA RICA</h2>
               <p className="text-stone-600 leading-relaxed mb-10 max-w-2xl mx-auto">
                 Una piel más limpia, uniforme, luminosa y rejuvenecida sí es posible. Tu glow natural todavía está ahí… solo necesita el tratamiento correcto para volver a brillar.
               </p>
