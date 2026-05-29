@@ -37,7 +37,7 @@ const sections = [
       { name: "Carboxiterapia", href: "/servicios/carboxiterapia" },
       { name: "Levantamiento de Glúteo", href: "/servicios/levantamiento-gluteo" },
       { name: "Levantamiento de Busto en Turrialba", href: "/servicios/levantamiento-busto" },
-      { name: "Vendas Frías", href: "/servicios/vendas-frias" },
+      { name: "Vendas Frías en Turrialba", href: "/servicios/vendas-frias" },
       { name: "Maderoterapia", href: "/servicios/maderoterapia" },
       { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
       { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
