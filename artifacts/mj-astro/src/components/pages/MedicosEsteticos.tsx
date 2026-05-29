@@ -30,7 +30,7 @@ const doctors = [
     photo: "dr-ruddy-jimenez.webp",
     bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes.",
     services: ["/servicios/trasplante-capilar", "/servicios/implante-barba", "/servicios/mesoterapia-capilar"],
-    serviceLabels: ["Trasplante Capilar", "Implante de Barba", "Mesoterapia Capilar"],
+    serviceLabels: ["Trasplante Capilar Natural", "Implante de Barba", "Mesoterapia Capilar"],
   },
   {
     name: "Dr. Johan",
