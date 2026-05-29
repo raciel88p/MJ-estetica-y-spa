@@ -20,7 +20,7 @@ export const medicoEsteticosLinks = [
   { name: "Nutrición", href: "/servicios/nutricion" },
   { name: "Botox Full Face", href: "/servicios/botox-full-face" },
   { name: "Hilos Tensores", href: "/servicios/hilos-tensores" },
-  { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
+  { name: "Recupera tu Confianza con un Trasplante Capilar de Apariencia Natural en Turrialba", href: "/servicios/trasplante-capilar" },
   { name: "Ácido Hialurónico", href: "/servicios/acido-hialuronico" },
   { name: "Biorevitalización", href: "/servicios/biorevitalizacion" },
   { name: "Implante de Barba", href: "/servicios/implante-barba" },
@@ -662,7 +662,7 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "trasplante-capilar",
-    name: "Trasplante Capilar",
+    name: "Recupera tu Confianza con un Trasplante Capilar de Apariencia Natural en Turrialba",
     tagline: "Recupera tu cabello, recupera tu confianza",
     heroDescription:
       "El trasplante capilar es la solución definitiva para la alopecia y la pérdida de cabello. Utilizamos las técnicas más avanzadas para resultados naturales, permanentes y de alta densidad.",
