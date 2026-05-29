@@ -40,7 +40,7 @@ const sections = [
       { name: "Vendas Frías en Turrialba", href: "/servicios/vendas-frias" },
       { name: "Maderoterapia", href: "/servicios/maderoterapia" },
       { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
-      { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
+      { name: "Láser Despigmentante en Turrialba", href: "/servicios/blanqueamiento-zona-intima" },
     ],
   },
   {

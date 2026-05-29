@@ -164,7 +164,7 @@ export default function Home() {
     "drenaje-linfatico": "Drenaje Linfático",
     "adn-salmon": "ADN de Salmón",
     "tratamiento-ojeras": "Tratamiento de Ojeras",
-    "blanqueamiento-zona-intima": "Blanqueamiento Zona Íntima",
+    "blanqueamiento-zona-intima": "Láser Despigmentante en Turrialba",
     "hollywood-peel": "Hollywood Peel",
     "radiofrecuencia-facial": "Radiofrecuencia Facial",
     "eliminacion-manchas": "Eliminación de Manchas",
@@ -930,7 +930,7 @@ export default function Home() {
                       <option value="masajes-post-operatorios">Masajes Post Operatorios</option>
                       <option value="tensado-corporal">Tensado Corporal en Turrialba</option>
                       <option value="drenaje-linfatico">Drenaje Linfático</option>
-                      <option value="blanqueamiento-zona-intima">Blanqueamiento Zona Íntima</option>
+                      <option value="blanqueamiento-zona-intima">Láser Despigmentante en Turrialba</option>
                     </optgroup>
                     <optgroup label="Tratamientos Faciales">
                       <option value="adn-salmon">ADN de Salmón</option>
