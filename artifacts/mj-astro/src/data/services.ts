@@ -38,7 +38,7 @@ export const tratamientosCorporalesLinks = [
   { name: "Carboxiterapia", href: "/servicios/carboxiterapia" },
   { name: "Levantamiento de Glúteo en Turrialba", href: "/servicios/levantamiento-gluteo" },
   { name: "Levantamiento de Busto en Turrialba", href: "/servicios/levantamiento-busto" },
-  { name: "Vendas Frías", href: "/servicios/vendas-frias" },
+  { name: "Vendas Frías en Turrialba", href: "/servicios/vendas-frias" },
   { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
   { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
 ];
@@ -1430,11 +1430,11 @@ export const servicePages: ServicePageData[] = [
   // ── VENDAS FRÍAS ────────────────────────────────────
   {
     slug: "vendas-frias",
-    name: "Vendas Frías",
+    name: "Vendas Frías en Turrialba",
     tagline: "Pérdida de centímetros y detox corporal en una sola sesión",
     heroBg: "vendas-frias-bg.webp",
     heroDescription:
-      "Las vendas frías son uno de los tratamientos más eficaces para perder centímetros, reducir la retención de líquidos y activar la circulación en una sola sesión. Con activos reductores, drenantes y antioxidantes aplicados en frío, el resultado es inmediato: silueta más fina, piel más tersa y sensación de ligereza desde el primer tratamiento.",
+      "Sensación de frescura, relajación y bienestar corporal en una experiencia wellness premium",
     benefits: [
       "Pérdida de centímetros medible desde la primera sesión",
       "Reduce la retención de líquidos y la inflamación",
@@ -1638,7 +1638,7 @@ export const servicePages: ServicePageData[] = [
     ],
     items: [
       {
-        title: "Vendas Frías",
+        title: "Vendas Frías en Turrialba",
         description:
           "Aplicación de vendas con activos reductores, drenantes y tentativos en frío que potencian la pérdida de medidas, reducen la retención de líquidos y marcan la musculatura. Ideal en la fase de definición previa a competencia.",
         duration: "60 min",
