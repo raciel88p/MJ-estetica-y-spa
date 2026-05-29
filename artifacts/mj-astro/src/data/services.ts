@@ -1922,9 +1922,9 @@ export const servicePages: ServicePageData[] = [
   {
     slug: "blanqueamiento-zona-intima",
     name: "Láser Despigmentante en Turrialba",
-    tagline: "Recupera la luminosidad y uniformidad de tu piel íntima de forma segura",
+    tagline: "Piel más luminosa, uniforme y revitalizada con tecnología estética avanzada",
     heroDescription:
-      "El blanqueamiento de zona íntima es un tratamiento estético especializado para aclarar y unificar el tono de la piel en áreas como la ingle, zona bikini, axilas e ingle. Utilizamos productos y técnicas dermatológicamente seguros que respetan la delicada piel de estas zonas, logrando resultados visibles sin irritación ni efectos secundarios.",
+      "Protocolos personalizados de láser despigmentante orientados a mejorar la apariencia de manchas, tono irregular y falta de luminosidad mediante skincare premium y tecnología de vanguardia en Turrialba.",
     benefits: [
       "Unificación del tono de piel en zonas de hiperpigmentación",
       "Tratamiento 100% seguro y respetuoso con la piel íntima",
