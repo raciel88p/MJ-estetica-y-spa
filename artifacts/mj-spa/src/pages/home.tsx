@@ -58,7 +58,7 @@ const serviceCategories = [
     index: "01",
     title: "Moldea y reafirma tu silueta",
     desc: "Tecnología de vanguardia para resultados reales sin cirugía.",
-    services: ["Cavitación Ultrasónica", "Tensado Corporal", "Drenaje Linfático", "Reducción de Medidas", "Depilación Láser"],
+    services: ["Cavitación Ultrasónica", "Tensado Corporal en Turrialba", "Drenaje Linfático", "Reducción de Medidas", "Depilación Láser"],
     bg: "about-us.webp",
     accent: "from-rose-900/90",
   },
@@ -87,7 +87,7 @@ const serviceCategories = [
 /* ── FEATURED TREATMENTS ──────────────────────────── */
 const featuredTreatments = [
   { name: "Reducción de Medidas", href: "/servicios/reduccion-de-medidas", cat: "Corporal" },
-  { name: "Tensado Corporal", href: "/servicios/tensado-corporal", cat: "Corporal" },
+  { name: "Tensado Corporal en Turrialba", href: "/servicios/tensado-corporal", cat: "Corporal" },
   { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios", cat: "Corporal" },
   { name: "ADN de Salmón", href: "/servicios/adn-salmon", cat: "Facial" },
   { name: "Hollywood Peel", href: "/servicios/hollywood-peel", cat: "Facial" },
@@ -160,7 +160,7 @@ export default function Home() {
   const serviceLabels: Record<string, string> = {
     "reduccion-medidas": "Reducción de Medidas",
     "masajes-post-operatorios": "Masajes Post Operatorios",
-    "tensado-corporal": "Tensado Corporal",
+    "tensado-corporal": "Tensado Corporal en Turrialba",
     "drenaje-linfatico": "Drenaje Linfático",
     "adn-salmon": "ADN de Salmón",
     "tratamiento-ojeras": "Tratamiento de Ojeras",
@@ -928,7 +928,7 @@ export default function Home() {
                     <optgroup label="Tratamientos Corporales">
                       <option value="reduccion-medidas">Reducción de Medidas</option>
                       <option value="masajes-post-operatorios">Masajes Post Operatorios</option>
-                      <option value="tensado-corporal">Tensado Corporal</option>
+                      <option value="tensado-corporal">Tensado Corporal en Turrialba</option>
                       <option value="drenaje-linfatico">Drenaje Linfático</option>
                       <option value="blanqueamiento-zona-intima">Blanqueamiento Zona Íntima</option>
                     </optgroup>
