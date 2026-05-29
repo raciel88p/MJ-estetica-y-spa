@@ -40,7 +40,7 @@ export const tratamientosCorporalesLinks = [
   { name: "Levantamiento de Busto en Turrialba", href: "/servicios/levantamiento-busto" },
   { name: "Vendas Frías en Turrialba", href: "/servicios/vendas-frias" },
   { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
-  { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
+  { name: "Láser Despigmentante en Turrialba", href: "/servicios/blanqueamiento-zona-intima" },
 ];
 
 export const tratamientosFacialesLinks = [
@@ -1921,7 +1921,7 @@ export const servicePages: ServicePageData[] = [
   // ── BLANQUEAMIENTO ZONA ÍNTIMA ──────────────────────
   {
     slug: "blanqueamiento-zona-intima",
-    name: "Blanqueamiento Zona Íntima",
+    name: "Láser Despigmentante en Turrialba",
     tagline: "Recupera la luminosidad y uniformidad de tu piel íntima de forma segura",
     heroDescription:
       "El blanqueamiento de zona íntima es un tratamiento estético especializado para aclarar y unificar el tono de la piel en áreas como la ingle, zona bikini, axilas e ingle. Utilizamos productos y técnicas dermatológicamente seguros que respetan la delicada piel de estas zonas, logrando resultados visibles sin irritación ni efectos secundarios.",
