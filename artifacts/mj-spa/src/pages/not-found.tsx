@@ -25,7 +25,7 @@ const popularTreatments = [
     num: "01",
   },
   {
-    name: "Hollywood Peel",
+    name: "✨ HOLLYWOOD PEEL EN TURRIALBA",
     tagline: "Piel radiante y sin imperfecciones desde la primera sesión",
     href: "/servicios/hollywood-peel",
     num: "02",

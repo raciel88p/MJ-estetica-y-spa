@@ -68,7 +68,7 @@ const serviceCategories = [
     index: "02",
     title: "Rejuvenece y luminiza tu rostro",
     desc: "Un rostro luminoso, joven y sin imperfecciones.",
-    services: ["Hollywood Peel", "Radiofrecuencia Facial", "Ácido Hialurónico", "Biorevitalización", "Eliminación de Manchas"],
+    services: ["✨ HOLLYWOOD PEEL EN TURRIALBA", "Radiofrecuencia Facial", "Ácido Hialurónico", "Biorevitalización", "Eliminación de Manchas"],
     bg: "hero-bg.webp",
     accent: "from-stone-900/90",
   },
@@ -90,7 +90,7 @@ const featuredTreatments = [
   { name: "Tensado Corporal en Turrialba", href: "/servicios/tensado-corporal", cat: "Corporal" },
   { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios", cat: "Corporal" },
   { name: "ADN de Salmón", href: "/servicios/adn-salmon", cat: "Facial" },
-  { name: "Hollywood Peel", href: "/servicios/hollywood-peel", cat: "Facial" },
+  { name: "✨ HOLLYWOOD PEEL EN TURRIALBA", href: "/servicios/hollywood-peel", cat: "Facial" },
   { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial", cat: "Facial" },
   { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas", cat: "Facial" },
   { name: "Reducción de Papada", href: "/servicios/tensado-corporal", cat: "Corporal" },
@@ -165,7 +165,7 @@ export default function Home() {
     "adn-salmon": "ADN de Salmón",
     "tratamiento-ojeras": "Tratamiento de Ojeras",
     "blanqueamiento-zona-intima": "Láser Despigmentante en Turrialba",
-    "hollywood-peel": "Hollywood Peel",
+    "hollywood-peel": "✨ HOLLYWOOD PEEL EN TURRIALBA",
     "radiofrecuencia-facial": "Radiofrecuencia Facial",
     "eliminacion-manchas": "Eliminación de Manchas",
     "peeling-quimico": "Peeling Químico",
@@ -934,7 +934,7 @@ export default function Home() {
                     </optgroup>
                     <optgroup label="Tratamientos Faciales">
                       <option value="adn-salmon">ADN de Salmón</option>
-                      <option value="hollywood-peel">Hollywood Peel</option>
+                      <option value="hollywood-peel">✨ HOLLYWOOD PEEL EN TURRIALBA</option>
                       <option value="radiofrecuencia-facial">Radiofrecuencia Facial</option>
                       <option value="eliminacion-manchas">Eliminación de Manchas</option>
                       <option value="acido-hialuronico">Ácido Hialurónico</option>
