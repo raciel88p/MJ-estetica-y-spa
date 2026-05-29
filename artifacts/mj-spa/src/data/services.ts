@@ -51,6 +51,7 @@ export const tratamientosFacialesLinks = [
   { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
   { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
   { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
+  { name: "Hilos de Colágeno", href: "/servicios/hilos-colageno" },
   { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
 ];
 
@@ -1007,6 +1008,37 @@ export const servicePages: ServicePageData[] = [
     ],
   },
 
+  {
+    slug: "hilos-colageno",
+    name: "Hilos de Colágeno en Turrialba",
+    tagline: "Rejuvenecimiento Facial Natural, Firmeza y Glow Premium",
+    heroDescription:
+      "Diseñamos protocolos personalizados con Hilos de Colágeno orientados a rejuvenecimiento progresivo, firmeza facial y armonización estética natural en Turrialba.",
+    benefits: [
+      "Apariencia de firmeza facial",
+      "Rejuvenecimiento progresivo",
+      "Glow y luminosidad natural",
+      "Definición facial elegante",
+      "Armonización estética natural",
+      "Bienestar facial premium",
+      "Apariencia más descansada y fresca",
+      "Protocolos antiaging personalizados",
+    ],
+    items: [
+      {
+        title: "Protocolo Hilos de Colágeno",
+        description: "Sesión personalizada de hilos de colágeno para firmeza y rejuvenecimiento facial.",
+        duration: "45-60 min",
+        price: "Consultar precio",
+      }
+    ],
+    faq: [
+      {
+        question: "¿Qué son los Hilos de Colágeno?",
+        answer: "Son procedimientos estéticos orientados a protocolos de firmeza y rejuvenecimiento facial progresivo."
+      }
+    ]
+  },
   {
     slug: "adn-salmon",
     name: "ADN de Salmón",

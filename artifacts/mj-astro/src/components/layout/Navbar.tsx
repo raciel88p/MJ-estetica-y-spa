@@ -63,7 +63,7 @@ export function Navbar() {
   const medicos = useHoverDropdown("medicos", openDropdown, setOpenDropdown as any);
 
   const textClass = isScrolled ? "text-[#0c3e5a]" : "text-white/90";
-  const linkBase = `text-sm uppercase tracking-widest font-medium hover:text-primary transition-colors`;
+  const linkBase = `text-[15px] uppercase tracking-widest font-medium hover:text-primary transition-colors`;
 
   const dropdownPanelVariants = {
     initial: { opacity: 0, y: 8, scale: 0.97 },

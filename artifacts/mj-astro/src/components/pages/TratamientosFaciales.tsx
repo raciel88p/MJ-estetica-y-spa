@@ -18,7 +18,7 @@ const fadeUp = {
 };
 
 const highlights = [
-  { n: "6+", label: "Tratamientos faciales" },
+  { n: "7+", label: "Tratamientos faciales" },
   { n: "100%", label: "Personalizados" },
   { n: "Alta", label: "Tecnología" },
 ];
