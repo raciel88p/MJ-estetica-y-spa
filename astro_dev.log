@@ -1,0 +1,15 @@
+
+> @workspace/mj-astro@0.0.1 dev /app/artifacts/mj-astro
+> astro dev
+
+[vite] connected.
+16:46:34 [types] Generated 1ms
+ astro  v6.3.1 ready in 2320 ms
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+16:46:34 watching for file changes...
+16:46:38 [200] /servicios/vendas-frias 223ms
+16:46:38 [200] /servicios/vendas-frias 98ms
+16:46:38 [200] /servicios/relleno-de-labios 73ms
+16:46:38 [200] /servicios/relleno-de-labios 60ms
+ ELIFECYCLE  Command failed with exit code 143.
