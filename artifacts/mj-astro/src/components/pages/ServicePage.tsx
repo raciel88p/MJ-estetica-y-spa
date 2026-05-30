@@ -507,7 +507,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
       {/* ── CUSTOM CONTENT: RELLENO DE LABIOS ─────────── */}
       {service.slug === "relleno-de-labios" && (
-        <LipFillerContent service={service} waLink={WA} />
+        <LipFillerContent waLink={WA} />
       )}
 
       {/* ── BOTOX CUSTOM SECTIONS ────────────────── */}
