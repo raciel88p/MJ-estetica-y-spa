@@ -3,10 +3,8 @@
 > astro dev
 
 [vite] connected.
-19:37:30 [types] Generated 1ms
- astro  v6.3.1 ready in 2335 ms
+22:53:12 [types] Generated 3ms
+ astro  v6.3.1 ready in 3236 ms
 ┃ Local    http://localhost:4321/
 ┃ Network  use --host to expose
-19:37:30 watching for file changes...
-19:37:34 [200] /servicios/relleno-de-labios 343ms
- ELIFECYCLE  Command failed with exit code 143.
+22:53:12 watching for file changes...

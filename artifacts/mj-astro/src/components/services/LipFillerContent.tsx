@@ -81,7 +81,7 @@ export const LipFillerContent = ({ waLink }: { waLink: string }) => {
             <span className="inline-block bg-primary/20 text-primary text-[10px] font-bold tracking-[0.3em] uppercase px-4 py-2 rounded-full mb-6 border border-primary/30">
               Obsequio Especial
             </span>
-            <h3 className="text-2xl md:text-3xl font-serif font-bold mb-6">🎁 Reclama tu Guía Gratuita</h3>
+            <h3 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-white">🎁 Reclama tu Guía Gratuita</h3>
             <p className="text-xl md:text-2xl font-serif italic text-stone-300 mb-8 leading-relaxed">
               "Cómo lograr mejores resultados con tu relleno de labios y mantenerlos hermosos por más tiempo"
             </p>
@@ -147,7 +147,7 @@ export const LipFillerContent = ({ waLink }: { waLink: string }) => {
       <section className="py-24 bg-stone-900 text-white overflow-hidden relative">
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8">¿Los resultados se ven naturales?</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8 text-white">¿Los resultados se ven naturales?</h2>
             <p className="text-xl md:text-2xl font-serif text-stone-300 italic mb-12">Esta es una de las preguntas más frecuentes. La respuesta es sí.</p>
             <div className="bg-white/5 border border-white/10 p-10 rounded-sm text-left backdrop-blur-sm max-w-3xl mx-auto">
               <p className="text-stone-300 leading-relaxed mb-10">
@@ -162,7 +162,7 @@ export const LipFillerContent = ({ waLink }: { waLink: string }) => {
                   </div>
                 ))}
               </div>
-              <p className="mt-10 text-primary font-medium border-t border-white/10 pt-8">
+              <p className="mt-10 text-primary font-medium border-t border-white/10 pt-8 text-center">
                 Sin que otras personas noten exactamente qué cambió. Ese es precisamente el enfoque que seguimos en MJ.
               </p>
             </div>
@@ -213,7 +213,7 @@ export const LipFillerContent = ({ waLink }: { waLink: string }) => {
         <div className="max-w-5xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="md:w-1/2">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8">Beneficios del Relleno de Labios</h2>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8 text-white">Beneficios del Relleno de Labios</h2>
               <div className="grid grid-cols-1 gap-4">
                 {[
                   "Aspecto más hidratado", "Perfilado más definido", "Volumen natural personalizado",
@@ -230,7 +230,7 @@ export const LipFillerContent = ({ waLink }: { waLink: string }) => {
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="md:w-1/3">
               <div className="aspect-[4/5] bg-white/5 border border-white/10 rounded-sm relative p-8 flex flex-col justify-center text-center">
                  <p className="text-4xl font-serif mb-6 text-primary">✨</p>
-                 <h4 className="text-2xl font-serif font-bold mb-4">Belleza Personalizada</h4>
+                 <h4 className="text-2xl font-serif font-bold mb-4 text-white">Belleza Personalizada</h4>
                  <p className="text-stone-400 leading-relaxed text-sm italic">
                    Diseñamos el resultado que mejor se adapte a tus rasgos y deseos individuales.
                  </p>
@@ -301,7 +301,7 @@ export const LipFillerContent = ({ waLink }: { waLink: string }) => {
       <section className="py-24 bg-stone-900 text-white">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">¿Cómo Funciona el Procedimiento?</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white">¿Cómo Funciona el Procedimiento?</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
@@ -312,7 +312,7 @@ export const LipFillerContent = ({ waLink }: { waLink: string }) => {
             ].map((step, i) => (
               <div key={i} className="relative group">
                 <span className="text-base font-bold tracking-widest text-primary uppercase mb-2 block">{step.s}</span>
-                <h4 className="text-xl font-serif font-bold mb-4">{step.t}</h4>
+                <h4 className="text-xl font-serif font-bold mb-4 text-white">{step.t}</h4>
                 <p className="text-stone-400 text-sm leading-relaxed">{step.d}</p>
                 {i < 3 && <ArrowRight className="hidden md:block absolute -right-4 top-8 w-4 h-4 text-white/20 group-hover:text-primary transition-colors" />}
               </div>
@@ -420,7 +420,7 @@ export const LipFillerContent = ({ waLink }: { waLink: string }) => {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-900 p-10 md:p-16 shadow-2xl rounded-sm text-white">
-            <h2 className="text-3xl font-serif font-bold mb-8 flex items-center gap-3">
+            <h2 className="text-3xl font-serif font-bold mb-8 flex items-center gap-3 text-white">
               <span className="text-2xl text-primary">✨</span> ¿Por qué elegir MJ Estética & Wellness Center?
             </h2>
             <div className="space-y-6 mb-12">
