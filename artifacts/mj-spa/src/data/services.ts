@@ -8,6 +8,7 @@ export type ServiceItem = {
 export type ServicePageData = {
   slug: string;
   name: string;
+  fullTitle?: string;
   tagline: string;
   heroDescription: string;
   heroBg?: string;
@@ -20,27 +21,27 @@ export const medicoEsteticosLinks = [
   { name: "Nutrición", href: "/servicios/nutricion" },
   { name: "Botox Full Face", href: "/servicios/botox-full-face" },
   { name: "Hilos Tensores", href: "/servicios/hilos-tensores" },
-  { name: "Recupera tu Confianza con un Trasplante Capilar de Apariencia Natural en Turrialba", href: "/servicios/trasplante-capilar" },
+  { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
   { name: "Ácido Hialurónico", href: "/servicios/acido-hialuronico" },
   { name: "Biorevitalización", href: "/servicios/biorevitalizacion" },
   { name: "Implante de Barba", href: "/servicios/implante-barba" },
   { name: "Mesoterapia Capilar", href: "/servicios/mesoterapia-capilar" },
-  { name: "Rellenos de Labios", href: "/servicios/rellenos-labios" },
+  { name: "Relleno de Labios", href: "/servicios/relleno-de-labios" },
 ];
 
 export const tratamientosCorporalesLinks = [
-  { name: "Masajes Reductor con Hidrolicoplasia Turrialba", href: "/servicios/masajes-corporales" },
+  { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
   { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
   { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios" },
-  { name: "Tensado Corporal en Turrialba", href: "/servicios/tensado-corporal" },
+  { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
   { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
   { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
   { name: "Carboxiterapia", href: "/servicios/carboxiterapia" },
-  { name: "Levantamiento de Glúteo en Turrialba", href: "/servicios/levantamiento-gluteo" },
-  { name: "Levantamiento de Busto en Turrialba", href: "/servicios/levantamiento-busto" },
-  { name: "Vendas Frías en Turrialba", href: "/servicios/vendas-frias" },
+  { name: "Levantamiento de Glúteo", href: "/servicios/levantamiento-gluteo" },
+  { name: "Levantamiento de Busto", href: "/servicios/levantamiento-busto" },
+  { name: "Vendas Frías", href: "/servicios/vendas-frias" },
   { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
-  { name: "Láser Despigmentante en Turrialba", href: "/servicios/blanqueamiento-zona-intima" },
+  { name: "Láser Despigmentante", href: "/servicios/blanqueamiento-zona-intima" },
 ];
 
 export const tratamientosFacialesLinks = [
@@ -544,67 +545,6 @@ export const servicePages: ServicePageData[] = [
     ],
   },
   {
-    slug: "relleno-de-labios",
-    name: "Relleno de Labios",
-    tagline: "Labios perfectos, volumen natural y armónico",
-    heroDescription:
-      "Consigue unos labios más voluminosos, definidos y simétricos con nuestros rellenos de ácido hialurónico. Resultados naturales adaptados a la armonía de tu rostro.",
-    benefits: [
-      "Mayor volumen y definición labial",
-      "Hidratación profunda y duradera",
-      "Corrección de asimetrías",
-      "Resultado completamente natural",
-      "Sin tiempo de recuperación significativo",
-    ],
-    items: [
-      {
-        title: "Relleno Voluminizador",
-        description:
-          "Añade volumen de forma controlada y progresiva, respetando la proporción natural de tu rostro para un resultado estético y armónico.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Perfilado Labial",
-        description:
-          "Define el contorno del labio con precisión para corregir bordes difuminados y aportar nitidez y estructura sin añadir volumen excesivo.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Hidratación Profunda",
-        description:
-          "Tratamiento con ácido hialurónico de baja densidad que mejora la calidad y textura de los labios, dándoles hidratación y suavidad.",
-        duration: "20 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Tratamiento Combinado",
-        description:
-          "Combina volumen, perfilado y corrección de arrugas peribucales para un resultado global rejuvenecedor de la zona labial.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Es doloroso el relleno de labios?",
-        answer:
-          "Aplicamos crema anestésica antes del tratamiento para minimizar el discomfort. La molestia es mínima y de muy corta duración.",
-      },
-      {
-        question: "¿Cuánto duran los resultados?",
-        answer:
-          "Entre 8 y 12 meses, dependiendo del tipo de relleno y del metabolismo de cada persona. El ácido hialurónico se reabsorbe de forma natural y segura.",
-      },
-      {
-        question: "¿Puedo hacer vida normal tras el tratamiento?",
-        answer:
-          "Sí, aunque es normal algo de hinchazón y pequeños hematomas los primeros días. El resultado definitivo se aprecia a la semana.",
-      },
-    ],
-  },
-  {
     slug: "nutricion",
     name: "Nutrición",
     tagline: "Alimenta tu cuerpo, transforma tu vida",
@@ -662,7 +602,8 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "trasplante-capilar",
-    name: "Recupera tu Confianza con un Trasplante Capilar de Apariencia Natural en Turrialba",
+    name: "Trasplante Capilar",
+    fullTitle: "Recupera tu Confianza con un Trasplante Capilar de Apariencia Natural en Turrialba",
     tagline: "Recupera tu cabello, recupera tu confianza",
     heroDescription:
       "El trasplante capilar es la solución definitiva para la alopecia y la pérdida de cabello. Utilizamos las técnicas más avanzadas para resultados naturales, permanentes y de alta densidad.",
@@ -848,7 +789,8 @@ export const servicePages: ServicePageData[] = [
   // ── FACIALES NUEVOS ────────────────────────────────
   {
     slug: "hollywood-peel",
-    name: "HOLLYWOOD PEEL EN TURRIALBA",
+    name: "Hollywood Peel",
+    fullTitle: "HOLLYWOOD PEEL EN TURRIALBA",
     tagline: "Piel luminosa, uniforme y rejuvenecida en una sola sesión",
     heroDescription:
       "El Hollywood Peel, también conocido como Carbon Laser Peel, es un tratamiento láser no invasivo que revitaliza la piel, unifica el tono, reduce manchas y estimula la producción de colágeno para un aspecto más joven y radiante.",
@@ -1010,7 +952,8 @@ export const servicePages: ServicePageData[] = [
 
   {
     slug: "hilos-colageno",
-    name: "Hilos de Colágeno en Turrialba",
+    name: "Hilos de Colágeno",
+    fullTitle: "Hilos de Colágeno en Turrialba",
     tagline: "Rejuvenecimiento Facial Natural, Firmeza y Glow Premium",
     heroDescription:
       "Diseñamos protocolos personalizados con Hilos de Colágeno orientados a rejuvenecimiento progresivo, firmeza facial y armonización estética natural en Turrialba.",
@@ -1462,7 +1405,8 @@ export const servicePages: ServicePageData[] = [
   // ── VENDAS FRÍAS ────────────────────────────────────
   {
     slug: "vendas-frias",
-    name: "Vendas Frías en Turrialba",
+    name: "Vendas Frías",
+    fullTitle: "Vendas Frías en Turrialba",
     tagline: "Pérdida de centímetros y detox corporal en una sola sesión",
     heroBg: "vendas-frias-bg.webp",
     heroDescription:
@@ -1838,11 +1782,11 @@ export const servicePages: ServicePageData[] = [
 
   // ── RELLENOS DE LABIOS ──────────────────────────────
   {
-    slug: "rellenos-labios",
-    name: "Rellenos de Labios",
+    slug: "relleno-de-labios",
+    name: "Relleno de Labios en Turrialba",
     tagline: "Labios con volumen, contorno definido y aspecto completamente natural",
     heroDescription:
-      "Los rellenos de labios con ácido hialurónico son el tratamiento estrella para conseguir labios con más volumen, mejor definición y un aspecto rejuvenecido. Utilizamos las mejores marcas de ácido hialurónico de alta densidad para lograr resultados naturales, duraderos y completamente seguros. El resultado habla por sí solo: labios de ensueño sin exageraciones.",
+      "Descubre cómo lograr labios más hidratados, definidos y armoniosos con resultados naturales y personalizados.",
     benefits: [
       "Volumen natural y proporcional adaptado a tu rostro",
       "Contorno labial perfectamente definido y simétrico",
@@ -1953,7 +1897,8 @@ export const servicePages: ServicePageData[] = [
   // ── BLANQUEAMIENTO ZONA ÍNTIMA ──────────────────────
   {
     slug: "blanqueamiento-zona-intima",
-    name: "Láser Despigmentante en Turrialba",
+    name: "Láser Despigmentante",
+    fullTitle: "Láser Despigmentante en Turrialba",
     tagline: "Piel más luminosa, uniforme y revitalizada con tecnología estética avanzada",
     heroDescription:
       "Protocolos personalizados de láser despigmentante orientados a mejorar la apariencia de manchas, tono irregular y falta de luminosidad mediante skincare premium y tecnología de vanguardia en Turrialba.",

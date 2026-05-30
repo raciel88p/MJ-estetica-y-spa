@@ -27,6 +27,7 @@ import { LaserDespigmentanteContent } from "@/components/services/LaserDespigmen
 import { HollywoodPeelContent } from "@/components/services/HollywoodPeelContent";
 import { HilosColagenoContent } from "@/components/services/HilosColagenoContent";
 import { TrasplanteCapilarContent } from "@/components/services/TrasplanteCapilarContent";
+import { LipFillerContent } from "@/components/services/LipFillerContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
@@ -246,7 +247,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title={service.name}
+        title={service.fullTitle ?? service.name}
         description={`${service.tagline} — ${service.heroDescription.slice(0, 120)}. MJ Fisio Estética y Spa, Turrialba, Costa Rica.`}
         canonical={`/servicios/${service.slug}`}
       />
@@ -271,7 +272,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
             </motion.p>
 
             <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-serif font-bold text-white leading-tight mb-6 max-w-3xl">
-              {service.name}
+              {service.fullTitle ?? service.name}
             </motion.h1>
 
             <motion.p
@@ -504,6 +505,11 @@ function ServicePage({ service }: { service: ServicePageData }) {
         <TrasplanteCapilarContent service={service} waLink={WA} />
       )}
 
+      {/* ── CUSTOM CONTENT: RELLENO DE LABIOS ─────────── */}
+      {service.slug === "rellenos-labios" && (
+        <LipFillerContent service={service} waLink={WA} />
+      )}
+
       {/* ── BOTOX CUSTOM SECTIONS ────────────────── */}
       {service.slug === "botox-full-face" && (
         <BotoxServiceContent waLink={WA} faq={service.faq} />
@@ -525,7 +531,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
-      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar"].includes(service.slug) && (
+      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "rellenos-labios"].includes(service.slug) && (
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -572,7 +578,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar"].includes(service.slug) && (
+      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "rellenos-labios"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -862,7 +868,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── URGENCY CTA BAND ──────────────────────────── */}
-      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "botox-full-face" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && (
+      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "botox-full-face" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && service.slug !== "rellenos-labios" && (
       <section className="bg-primary py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -897,7 +903,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar"].includes(service.slug) && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "rellenos-labios"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div
