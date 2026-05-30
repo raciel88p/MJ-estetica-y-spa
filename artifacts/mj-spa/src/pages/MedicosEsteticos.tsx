@@ -19,8 +19,8 @@ const doctors = [
     specialty: "Armonizador Facial",
     photo: "dr-ricard-araya.webp",
     bio: "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales.",
-    services: ["/servicios/botox-full-face", "/servicios/hilos-tensores", "/servicios/acido-hialuronico", "/servicios/rellenos-labios"],
-    serviceLabels: ["Botox", "Hilos Tensores", "Ácido Hialurónico", "Rellenos de Labios"],
+    services: ["/servicios/botox-full-face", "/servicios/hilos-tensores", "/servicios/acido-hialuronico", "/servicios/relleno-de-labios"],
+    serviceLabels: ["Botox Full Face", "Hilos Tensores", "Ácido Hialurónico", "Relleno de Labios"],
   },
   {
     name: "Dr. Ruddy Jiménez Montero",
@@ -56,7 +56,7 @@ const descriptions: Record<string, string> = {
   "mesoterapia-capilar":
     "Microinyecciones de vitaminas, minerales y factores de crecimiento directamente en el cuero cabelludo para frenar la caída y estimular el crecimiento.",
   "rellenos-labios":
-    "Relleno con ácido hialurónico para dar volumen, definir el contorno y rejuvenecer los labios con un resultado natural y duradero.",
+    "Procedimientos especializados de relleno labial con ácido hialurónico orientados a volumen, hidratación y perfilado natural en Turrialba.",
 };
 
 const icons: Record<string, string> = {
