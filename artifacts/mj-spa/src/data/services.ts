@@ -1785,6 +1785,7 @@ export const servicePages: ServicePageData[] = [
     slug: "relleno-de-labios",
     name: "Relleno de Labios en Turrialba",
     tagline: "Labios con volumen, contorno definido y aspecto completamente natural",
+    heroBg: "acido-hialuronico-bg.webp",
     heroDescription:
       "Descubre cómo lograr labios más hidratados, definidos y armoniosos con resultados naturales y personalizados.",
     benefits: [

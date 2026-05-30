@@ -56,7 +56,7 @@ const descriptions: Record<string, string> = {
     "Técnica de trasplante capilar facial para obtener una barba densa, uniforme y completamente natural adaptada a tu estructura facial.",
   "mesoterapia-capilar":
     "Microinyecciones de vitaminas, minerales y factores de crecimiento directamente en el cuero cabelludo para frenar la caída y estimular el crecimiento.",
-  "rellenos-labios":
+  "relleno-de-labios":
     "Procedimientos especializados de relleno labial con ácido hialurónico orientados a volumen, hidratación y perfilado natural en Turrialba.",
 };
 
@@ -67,7 +67,7 @@ const icons: Record<string, string> = {
   "trasplante-capilar": "💆",
   "implante-barba": "🧔",
   "mesoterapia-capilar": "💊",
-  "rellenos-labios": "👄",
+  "relleno-de-labios": "👄",
 };
 
 function MedicosEsteticos() {
