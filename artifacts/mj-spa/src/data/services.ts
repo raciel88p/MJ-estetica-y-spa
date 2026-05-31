@@ -1525,10 +1525,11 @@ export const servicePages: ServicePageData[] = [
   {
     slug: "tratamiento-anticelulitis",
     name: "Tratamiento Anticelulitis",
+    fullTitle: "Tratamientos Anticelulitis en Turrialba",
     tagline: "Elimina la celulitis de forma definitiva y sin cirugía",
     heroBg: "anticelulitis-bg.webp",
     heroDescription:
-      "La celulitis no es un problema cosmético — es una condición tratable. En MJ Fisio Estética y Spa combinamos las tecnologías más avanzadas con protocolos clínicamente probados para reducir la celulitis, afinar la silueta y devolverte la piel lisa y firme que mereces. Resultados visibles desde la primera sesión.",
+      "Una experiencia diseñada para que vuelvas a sentirte bien con tu cuerpo",
     benefits: [
       "Reducción visible de la celulitis desde la primera sesión",
       "Tecnología de radiofrecuencia + drenaje para resultados duraderos",

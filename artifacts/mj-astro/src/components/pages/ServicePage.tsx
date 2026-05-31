@@ -30,6 +30,7 @@ import { TrasplanteCapilarContent } from "@/components/services/TrasplanteCapila
 import { LipFillerContent } from "@/components/services/LipFillerContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 
+import AnticelulitisServiceContent from "@/components/services/AnticelulitisServiceContent";
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
 const beforeDescMap: Record<string, string[]> = {
@@ -387,6 +388,10 @@ function ServicePage({ service }: { service: ServicePageData }) {
       {service.slug === "carboxiterapia" && (
         <CarboxiterapiaContent service={service} waLink={WA} />
       )}
+      {/* ── CUSTOM CONTENT: ANTICELULITIS ──────────────────── */}
+      {service.slug === "tratamiento-anticelulitis" && (
+        <AnticelulitisServiceContent service={service} waLink={WA} />
+      )}
 
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
       {service.slug === "masajes-post-operatorios" && (
@@ -531,7 +536,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
-      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios"].includes(service.slug) && (
+      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis"].includes(service.slug) && (
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -578,7 +583,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios"].includes(service.slug) && (
+      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -697,6 +702,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
         ];
         const afterItems = afterDescMap[service.slug] ?? service.benefits.slice(0, 3);
         return (
+      {!["depilacion-laser", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis"].includes(service.slug) && (
           <section className="py-20 md:py-28 bg-[#040f19] overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
               <motion.div
@@ -863,12 +869,13 @@ function ServicePage({ service }: { service: ServicePageData }) {
       })()}
 
       {/* ── BOTTOM CONTENT: HIDROLIPOCLASIA ────────────────── */}
+)}
       {service.slug === "masajes-corporales" && (
         <HydrolipoclasiaBottomContent waLink={WA} />
       )}
 
       {/* ── URGENCY CTA BAND ──────────────────────────── */}
-      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "botox-full-face" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && service.slug !== "relleno-de-labios" && (
+      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "botox-full-face" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && service.slug !== "relleno-de-labios" && service.slug !== "tratamiento-anticelulitis" && (
       <section className="bg-primary py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -903,7 +910,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios"].includes(service.slug) && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div
