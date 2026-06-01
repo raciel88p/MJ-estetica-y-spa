@@ -362,10 +362,9 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       {/* ── CUSTOM CONTENT: ANTICELULITIS ──────────────────── */}
       {service.slug === "tratamiento-anticelulitis" && (
         <AnticelulitisServiceContent service={service} waLink={WA} />
+      )}
       {service.slug === "auriculoterapia" && (
         <AuriculoterapiaContent waLink={WA} />
-      )}
-
       )}
 
       {/* ── CUSTOM CONTENT: POST OPERATORIOS ────────────────── */}
