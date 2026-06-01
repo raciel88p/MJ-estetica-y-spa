@@ -702,7 +702,6 @@ function ServicePage({ service }: { service: ServicePageData }) {
         ];
         const afterItems = afterDescMap[service.slug] ?? service.benefits.slice(0, 3);
         return (
-      {!["depilacion-laser", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis"].includes(service.slug) && (
           <section className="py-20 md:py-28 bg-[#040f19] overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
               <motion.div
@@ -869,7 +868,6 @@ function ServicePage({ service }: { service: ServicePageData }) {
       })()}
 
       {/* ── BOTTOM CONTENT: HIDROLIPOCLASIA ────────────────── */}
-)}
       {service.slug === "masajes-corporales" && (
         <HydrolipoclasiaBottomContent waLink={WA} />
       )}
