@@ -10,7 +10,7 @@ export type ServicePageData = {
   name: string;
   fullTitle?: string;
   tagline: string;
-  heroDescription: string;
+  heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba", string;
   heroBg?: string;
   benefits: string[];
   items: ServiceItem[];
@@ -66,7 +66,7 @@ export const servicePages: ServicePageData[] = [
     slug: "masajes-corporales",
     name: "Masajes Reductor con Hidrolicoplasia Turrialba",
     tagline: "Libera la tensión, renueva tu energía",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Nuestros masajes corporales combinan técnicas profesionales para aliviar el estrés, reducir tensiones musculares y promover una sensación de bienestar total. Reduce grasa localizada y redefine tu contorno corporal sin cirugía",
     benefits: [
       "Reducción del estrés y la ansiedad",
@@ -122,7 +122,7 @@ export const servicePages: ServicePageData[] = [
     slug: "faciales",
     name: "Tratamientos Faciales",
     tagline: "Luce una piel radiante y rejuvenecida",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Descubre nuestra gama completa de tratamientos faciales diseñados para cada tipo de piel. Técnicas avanzadas y productos de alta gama para resultados visibles.",
     benefits: [
       "Piel más limpia y luminosa",
@@ -178,7 +178,7 @@ export const servicePages: ServicePageData[] = [
     slug: "masajes-relajantes",
     name: "Masajes Relajantes",
     tagline: "Un viaje al bienestar total",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Déjate llevar por nuestros masajes relajantes, diseñados para desconectar mente y cuerpo. Técnicas suaves y profundas combinadas para una experiencia única de paz interior.",
     benefits: [
       "Reducción del cortisol (hormona del estrés)",
@@ -234,7 +234,7 @@ export const servicePages: ServicePageData[] = [
     slug: "masajes-post-operatorios",
     name: "Masajes Post Operatorios en Turrialba",
     tagline: "Recuperación más rápida, resultados más visibles",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Recuperación estética con acompañamiento profesional, bienestar y protocolos diseñados para ayudarte a sentirte mejor más rápido<br /><br />Después de una cirugía estética, tu cuerpo necesita mucho más que reposo. Necesita atención especializada, drenaje adecuado y protocolos post operatorios diseñados para favorecer la recuperación, reducir inflamación y ayudarte a mejorar tu proceso de recuperación con mayor comodidad y confianza.",
     benefits: [
       "Reduce la inflamación y el edema post quirúrgico",
@@ -301,7 +301,7 @@ export const servicePages: ServicePageData[] = [
     slug: "depilacion-laser",
     name: "Depilación Láser",
     tagline: "Piel lisa para siempre, con tecnología avanzada",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Depilación Láser en Turrialba | MJ Estética & Wellness Center<br />Despídete del vello… y vuelve a sentirte cómoda con tu piel<br /><br />Reduce progresivamente el crecimiento del vello, evita irritación constante y luce una piel más suave y uniforme con tecnología de depilación láser profesional en MJ Estética & Wellness Center en Turrialba.",
     benefits: [
       "Eliminación permanente del vello",
@@ -362,7 +362,7 @@ export const servicePages: ServicePageData[] = [
     slug: "terapias-faciales",
     name: "Terapias Faciales",
     tagline: "Tecnología y naturaleza al servicio de tu piel",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Combinamos tecnologías estéticas avanzadas con principios naturales para tratar en profundidad los problemas más comunes de la piel y devolverte un rostro sano y luminoso.",
     benefits: [
       "Resultados visibles y medibles",
@@ -418,7 +418,7 @@ export const servicePages: ServicePageData[] = [
     slug: "peeling-quimico",
     name: "Peeling Químico",
     tagline: "Renueva tu piel, transforma tu confianza",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "El peeling químico es uno de los tratamientos más efectivos para renovar la piel, corregir manchas, reducir arrugas y mejorar la textura cutánea de forma controlada y segura.",
     benefits: [
       "Eliminación de manchas e hiperpigmentación",
@@ -479,7 +479,7 @@ export const servicePages: ServicePageData[] = [
     slug: "botox-full-face",
     name: "Botox Full Face en Turrialba",
     tagline: "Recupera la frescura de tu mirada con armonía total",
-    heroDescription: "Apariencia más fresca, descansada y natural sin perder tu esencia<br /><br />Tu rostro habla antes que tú.<br />Las líneas de expresión, el cansancio facial o la tensión acumulada pueden hacerte lucir agotada incluso cuando te sientes bien.",
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba", "Apariencia más fresca, descansada y natural sin perder tu esencia<br /><br />Tu rostro habla antes que tú.<br />Las líneas de expresión, el cansancio facial o la tensión acumulada pueden hacerte lucir agotada incluso cuando te sientes bien.",
     benefits: [
       "Reducción visible de arrugas de expresión",
       "Aspecto rejuvenecido y natural",
@@ -548,7 +548,7 @@ export const servicePages: ServicePageData[] = [
     slug: "nutricion",
     name: "Nutrición",
     tagline: "Alimenta tu cuerpo, transforma tu vida",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Nuestro servicio de nutrición personalizada te acompaña en el camino hacia una alimentación equilibrada y saludable, adaptada a tus objetivos, estilo de vida y necesidades específicas.",
     benefits: [
       "Plan nutricional completamente personalizado",
@@ -605,7 +605,7 @@ export const servicePages: ServicePageData[] = [
     name: "Trasplante Capilar",
     fullTitle: "Recupera tu Confianza con un Trasplante Capilar de Apariencia Natural en Turrialba",
     tagline: "Recupera tu cabello, recupera tu confianza",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "El trasplante capilar es la solución definitiva para la alopecia y la pérdida de cabello. Utilizamos las técnicas más avanzadas para resultados naturales, permanentes y de alta densidad.",
     benefits: [
       "Resultado permanente y natural",
@@ -667,7 +667,7 @@ export const servicePages: ServicePageData[] = [
     name: "Hilos Tensores Turrialba",
     fullTitle: "Hilos Tensores Turrialba",
     tagline: "El lifting sin bisturí más efectivo del mercado",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Los hilos tensores son la alternativa no quirúrgica al lifting facial. Devuelven la firmeza y tensión perdida de forma inmediata, estimulando la producción natural de colágeno.",
     benefits: [
       "Efecto lifting inmediato y progresivo",
@@ -730,7 +730,7 @@ export const servicePages: ServicePageData[] = [
     slug: "tensado-corporal",
     name: "Tensado Corporal en Turrialba",
     tagline: "Reafirma y esculpe tu silueta sin cirugía",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Firmeza, bienestar y remodelación corporal progresiva en un solo protocolo",
     benefits: [
       "Reafirmación visible de la piel desde las primeras sesiones",
@@ -793,7 +793,7 @@ export const servicePages: ServicePageData[] = [
     name: "Hollywood Peel",
     fullTitle: "HOLLYWOOD PEEL EN TURRIALBA",
     tagline: "Piel luminosa, uniforme y rejuvenecida en una sola sesión",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "El Hollywood Peel, también conocido como Carbon Laser Peel, es un tratamiento láser no invasivo que revitaliza la piel, unifica el tono, reduce manchas y estimula la producción de colágeno para un aspecto más joven y radiante.",
     benefits: [
       "Unificación del tono de la piel desde la primera sesión",
@@ -842,7 +842,7 @@ export const servicePages: ServicePageData[] = [
     slug: "eliminacion-manchas",
     name: "Eliminación de Manchas",
     tagline: "Recupera un tono de piel uniforme y luminoso",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Las manchas en la piel (melasma, manchas solares, hiperpigmentación) son tratadas con métodos de última generación que eliminan la pigmentación de forma segura y efectiva, devolviendo la uniformidad y luminosidad natural de tu piel.",
     benefits: [
       "Eliminación definitiva de manchas solares y melasma",
@@ -898,7 +898,7 @@ export const servicePages: ServicePageData[] = [
     slug: "radiofrecuencia-facial",
     name: "Radiofrecuencia Facial",
     tagline: "Reafirmación y rejuvenecimiento sin cirugía",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "La radiofrecuencia facial es un tratamiento no invasivo que utiliza energía electromagnética para calentar las capas profundas de la piel, estimulando la producción de colágeno y elastina para un efecto tensor, reafirmante y rejuvenecedor visible.",
     benefits: [
       "Reafirmación y efecto lifting visible",
@@ -956,7 +956,7 @@ export const servicePages: ServicePageData[] = [
     name: "Hilos de Colágeno",
     fullTitle: "Hilos de Colágeno en Turrialba",
     tagline: "Rejuvenecimiento Facial Natural, Firmeza y Glow Premium",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Diseñamos protocolos personalizados con Hilos de Colágeno orientados a rejuvenecimiento progresivo, firmeza facial y armonización estética natural en Turrialba.",
     benefits: [
       "Apariencia de firmeza facial",
@@ -987,7 +987,7 @@ export const servicePages: ServicePageData[] = [
     slug: "adn-salmon",
     name: "ADN de Salmón",
     tagline: "Regeneración celular profunda para una piel radiante",
-    heroDescription: "✨ EL SECRETO COREANO QUE ESTÁ REVOLUCIONANDO EL REJUVENECIMIENTO FACIAL YA LLEGÓ A TURRIALBA ✨<br /><br />¿Te imaginas despertar con una piel más luminosa, hidratada y rejuvenecida… sin cirugías ni cambios artificiales?<br /><br />Eso es exactamente lo que muchas personas están logrando gracias al tratamiento de ADN de Salmón, una de las terapias más innovadoras en medicina estética avanzada.<br /><br />Y ahora puedes vivirlo en MJ Estética Wellness Center.<br /><br />👇",
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba", "✨ EL SECRETO COREANO QUE ESTÁ REVOLUCIONANDO EL REJUVENECIMIENTO FACIAL YA LLEGÓ A TURRIALBA ✨<br /><br />¿Te imaginas despertar con una piel más luminosa, hidratada y rejuvenecida… sin cirugías ni cambios artificiales?<br /><br />Eso es exactamente lo que muchas personas están logrando gracias al tratamiento de ADN de Salmón, una de las terapias más innovadoras en medicina estética avanzada.<br /><br />Y ahora puedes vivirlo en MJ Estética Wellness Center.<br /><br />👇",
     benefits: [
       "Rejuvenece la piel de forma natural",
       "Mejora líneas finas y signos tempranos de envejecimiento",
@@ -1056,7 +1056,7 @@ export const servicePages: ServicePageData[] = [
     slug: "piernas-cansadas",
     name: "Cuidado de Piernas Cansadas",
     tagline: "Piernas ligeras, activas y sin pesadez",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "La sensación de pesadez, hinchazón y cansancio en las piernas es muy frecuente y puede mejorar significativamente con tratamientos especializados que activan la circulación y el drenaje linfático.",
     benefits: [
       "Alivio inmediato de la pesadez y el dolor",
@@ -1109,7 +1109,7 @@ export const servicePages: ServicePageData[] = [
     slug: "acido-hialuronico",
     name: "Ácido Hialurónico",
     tagline: "Volumen, hidratación y relleno natural",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "El ácido hialurónico es un componente natural de la piel que se reduce con la edad. Su aplicación mediante infiltración restituye el volumen perdido, rellena arrugas profundas y mejora la hidratación cutánea de forma natural y duradera.",
     benefits: [
       "Resultados inmediatos y de aspecto completamente natural",
@@ -1165,7 +1165,7 @@ export const servicePages: ServicePageData[] = [
     slug: "biorevitalizacion",
     name: "Biorevitalización",
     tagline: "Revitaliza tu piel desde dentro",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "La biorevitalización es un tratamiento médico estético que consiste en la infiltración de vitaminas, aminoácidos, oligoelementos y ácido hialurónico no reticulado directamente en la dermis para restaurar la vitalidad, elasticidad y luminosidad de la piel.",
     benefits: [
       "Mejora visible de la calidad y textura de la piel",
@@ -1217,7 +1217,7 @@ export const servicePages: ServicePageData[] = [
     name: "Carboxiterapia",
     tagline: "La potencia del CO₂ para renovar y rejuvenecer tu cuerpo",
     heroBg: "carboxiterapia-bg.webp",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Descubre una piel con apariencia más uniforme y un bienestar corporal más integral <br /> La carboxiterapia es uno de los tratamientos wellness y médico-estéticos más buscados por personas que desean complementar sus objetivos corporales y faciales con protocolos personalizados, naturales y progresivos.",
     benefits: [
       "Elimina la celulitis y la grasa localizada de forma eficaz",
@@ -1275,7 +1275,7 @@ export const servicePages: ServicePageData[] = [
     name: "Levantamiento de Glúteo en Turrialba",
     tagline: "Glúteos firmes y elevados sin cirugía ni implantes",
     heroBg: "levantamiento-gluteo-bg.webp",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Mejora la apariencia, firmeza y proyección de tus glúteos con un enfoque natural, armónico y personalizado",
     benefits: [
       "Apariencia más firme y tonificada",
@@ -1352,7 +1352,7 @@ export const servicePages: ServicePageData[] = [
     name: "Levantamiento de Busto en Turrialba",
     tagline: "Busto firme, elevado y reafirmado sin cirugía",
     heroBg: "levantamiento-busto-bg.webp",
-    heroDescription: "Recupera armonía, firmeza y confianza con un enfoque wellness femenino.",
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba", "Recupera armonía, firmeza y confianza con un enfoque wellness femenino.",
     benefits: [
       "Lifting y reafirmación visibles sin cirugía ni implantes",
       "Mejora la elasticidad y calidad de la piel del escote",
@@ -1410,7 +1410,7 @@ export const servicePages: ServicePageData[] = [
     fullTitle: "Vendas Frías en Turrialba",
     tagline: "Pérdida de centímetros y detox corporal en una sola sesión",
     heroBg: "vendas-frias-bg.webp",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Sensación de frescura, relajación y bienestar corporal en una experiencia wellness premium",
     benefits: [
       "Pérdida de centímetros medible desde la primera sesión",
@@ -1468,9 +1468,10 @@ export const servicePages: ServicePageData[] = [
   // ── AURICULOTERAPIA ─────────────────────────────────
     slug: "auriculoterapia",
     name: "Auriculoterapia",
+    fullTitle: "Auriculoterapia en Turrialba para Ansiedad, Estrés y Control de Peso",
     tagline: "El equilibrio del cuerpo a través del oído",
     heroBg: "auriculoterapia-bg.webp",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "La auriculoterapia es una técnica de medicina tradicional china que trabaja sobre los puntos de energía del pabellón auricular para equilibrar el organismo, reducir la ansiedad, controlar el apetito, aliviar el dolor y potenciar el bienestar general. Una herramienta complementaria poderosa para el control de peso, el estrés y la salud integral.",
     benefits: [
       "Reduce la ansiedad y el apetito emocional de forma natural",
@@ -1529,7 +1530,7 @@ export const servicePages: ServicePageData[] = [
     fullTitle: "Tratamientos Anticelulitis en Turrialba",
     tagline: "Elimina la celulitis de forma definitiva y sin cirugía",
     heroBg: "anticelulitis-bg.webp",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Una experiencia diseñada para que vuelvas a sentirte bien con tu cuerpo",
     benefits: [
       "Reducción visible de la celulitis desde la primera sesión",
@@ -1603,7 +1604,7 @@ export const servicePages: ServicePageData[] = [
     slug: "iron-beauty-fitness",
     name: "ESTÉTICA PARA FISICOCULTURISTAS Y ATLETAS EN TURRIALBA",
     tagline: "Estética especializada para atletas del mundo fitness",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Recuperación, definición corporal y wellness deportivo en un solo protocolo especializado<br /><br />Tu cuerpo entrena fuerte.<br />Tu recuperación también debería hacerlo.",
     heroBg: "iron-beauty-fitness-bg.webp",
     benefits: [
@@ -1673,7 +1674,7 @@ export const servicePages: ServicePageData[] = [
     slug: "implante-barba",
     name: "Implante de Barba",
     tagline: "Barba densa, uniforme y completamente natural sin cirugía agresiva",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "El implante de barba es la solución definitiva para hombres que desean una barba completa, uniforme y con aspecto 100% natural. Mediante técnicas de trasplante capilar facial de última generación, redistribuimos folículos de zonas donantes hacia las áreas con escasez de vello para crear una barba permanente y de diseño personalizado.",
     benefits: [
       "Barba densa y uniforme de por vida, sin mantenimiento especial",
@@ -1730,7 +1731,7 @@ export const servicePages: ServicePageData[] = [
     slug: "mesoterapia-capilar",
     name: "Mesoterapia Capilar",
     tagline: "Frena la caída y activa el crecimiento del cabello desde la raíz",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "La mesoterapia capilar es uno de los tratamientos más eficaces y seguros para combatir la caída del cabello y estimular su crecimiento. Mediante microinyecciones de vitaminas, minerales, aminoácidos y factores de crecimiento directamente en el cuero cabelludo, nutrimos los folículos y reactivamos su función de forma natural y sin efectos secundarios.",
     benefits: [
       "Frena la caída del cabello desde las primeras sesiones",
@@ -1788,7 +1789,7 @@ export const servicePages: ServicePageData[] = [
     name: "Relleno de Labios en Turrialba",
     tagline: "Labios con volumen, contorno definido y aspecto completamente natural",
     heroBg: "acido-hialuronico-bg.webp",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Descubre cómo lograr labios más hidratados, definidos y armoniosos con resultados naturales y personalizados.",
     benefits: [
       "Volumen natural y proporcional adaptado a tu rostro",
@@ -1845,7 +1846,7 @@ export const servicePages: ServicePageData[] = [
     slug: "tratamiento-ojeras",
     name: "Tratamiento de Ojeras",
     tagline: "Elimina las ojeras y recupera una mirada luminosa y descansada",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Las ojeras son uno de los problemas estéticos más comunes y difíciles de disimular con maquillaje. En MJ Fisio Estética y Spa combinamos las técnicas más avanzadas — ácido hialurónico, biorevitalización y peelings específicos — para reducir el color, el volumen y la textura de las ojeras de forma segura, natural y duradera.",
     benefits: [
       "Mirada más luminosa, descansada y juvenil desde la primera sesión",
@@ -1903,7 +1904,7 @@ export const servicePages: ServicePageData[] = [
     name: "Láser Despigmentante",
     fullTitle: "Láser Despigmentante en Turrialba",
     tagline: "Piel más luminosa, uniforme y revitalizada con tecnología estética avanzada",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Protocolos personalizados de láser despigmentante orientados a mejorar la apariencia de manchas, tono irregular y falta de luminosidad mediante skincare premium y tecnología de vanguardia en Turrialba.",
     benefits: [
       "Unificación del tono de piel en zonas de hiperpigmentación",
@@ -1960,7 +1961,7 @@ export const servicePages: ServicePageData[] = [
     slug: "nuevo-servicio-1",
     name: "Nuevo Servicio 1 (Plantilla)",
     tagline: "Descripción corta y atractiva del nuevo servicio 1",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Esta es una plantilla de prueba para el Nuevo Servicio 1. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
     benefits: [
       "Beneficio destacado número 1 del servicio",
@@ -1997,7 +1998,7 @@ export const servicePages: ServicePageData[] = [
     slug: "nuevo-servicio-2",
     name: "Nuevo Servicio 2 (Plantilla)",
     tagline: "Descripción corta y atractiva del nuevo servicio 2",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Esta es una plantilla de prueba para el Nuevo Servicio 2. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
     benefits: [
       "Beneficio destacado número 1 del servicio",
@@ -2024,7 +2025,7 @@ export const servicePages: ServicePageData[] = [
     slug: "nuevo-servicio-3",
     name: "Nuevo Servicio 3 (Plantilla)",
     tagline: "Descripción corta y atractiva del nuevo servicio 3",
-    heroDescription:
+    heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
       "Esta es una plantilla de prueba para el Nuevo Servicio 3. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
     benefits: [
       "Beneficio destacado número 1 del servicio",

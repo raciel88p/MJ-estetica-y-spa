@@ -159,7 +159,7 @@ export function HilosColagenoContent({ service, waLink }: { service: ServicePage
       <section className="py-24 bg-stone-900 text-white">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold mb-8">Beneficios de los Hilos de Colágeno</h2>
+            <h2 className="text-4xl font-serif font-bold mb-8 text-white">Beneficios de los Hilos de Colágeno</h2>
             <p className="text-white/60 text-lg leading-relaxed max-w-2xl mx-auto">
               En MJ Estética & Wellness Center buscamos resultados naturales y progresivos, evitando cambios exagerados o artificiales.
             </p>
