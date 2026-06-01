@@ -1468,6 +1468,7 @@ export const servicePages: ServicePageData[] = [
   // ── AURICULOTERAPIA ─────────────────────────────────
     slug: "auriculoterapia",
     name: "Auriculoterapia",
+    fullTitle: "Auriculoterapia en Turrialba para Ansiedad, Estrés y Control de Peso",
     tagline: "El equilibrio del cuerpo a través del oído",
     heroBg: "auriculoterapia-bg.webp",
     heroDescription:
