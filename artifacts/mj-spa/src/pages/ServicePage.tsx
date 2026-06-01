@@ -702,7 +702,6 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                      <motion.div variants={fadeUp} className="flex flex-col">
                        <div>
                          <p className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-2">Sin tratamiento</p>
-      {!["depilacion-laser", "carboxiterapia", "masajes-post-operatorios", "botox-full-face", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis"].includes(service.slug) && (
                          <h3 className="text-xl font-serif font-bold text-white/80 leading-tight mb-6">
                            La situación que queremos cambiar
                          </h3>
@@ -869,7 +868,6 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
                   <MessageCircle className="w-4 h-4" />
                   Escribir por WhatsApp
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-)}
                 </a>
               </>
             )}
