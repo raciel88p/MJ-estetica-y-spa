@@ -155,7 +155,7 @@ export default function AnticelulitisServiceContent({ service, waLink }: Props) 
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
             <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">La ciencia del bienestar</p>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-10">¿Qué es nuestro tratamiento anticelulitis?</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-10 text-white">¿Qué es nuestro tratamiento anticelulitis?</h2>
             <div className="space-y-8 text-white/80 text-lg leading-relaxed max-w-3xl">
               <p>
                 Es un protocolo corporal personalizado diseñado para mejorar progresivamente la apariencia de la piel mediante técnicas estéticas no invasivas que buscan favorecer la circulación, estimular tejidos y complementar procesos de remodelación corporal.
@@ -250,7 +250,7 @@ export default function AnticelulitisServiceContent({ service, waLink }: Props) 
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="relative">
               <div className="aspect-[4/5] bg-stone-100 overflow-hidden">
                 <img
-                  src="/images/service-detail-1.webp"
+                  src="/images/about-us.webp"
                   alt="Experiencia MJ"
                   className="w-full h-full object-cover grayscale opacity-80"
                 />
@@ -318,7 +318,7 @@ export default function AnticelulitisServiceContent({ service, waLink }: Props) 
       <section className="py-24 bg-stone-900 text-white">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-10">¿Para quién está recomendado?</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-10 text-white">¿Para quién está recomendado?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
               {[
                 "Personas que desean mejorar la apariencia de la piel.",
