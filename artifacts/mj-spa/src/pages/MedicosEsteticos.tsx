@@ -20,7 +20,7 @@ const doctors = [
     photo: "dr-ricard-araya.webp",
     bio: "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales.",
     services: ["/servicios/botox-full-face", "/servicios/hilos-tensores", "/servicios/acido-hialuronico", "/servicios/relleno-de-labios"],
-    serviceLabels: ["Botox Full Face", "Hilos Tensores Turrialba", "Ácido Hialurónico", "Relleno de Labios"],
+    serviceLabels: ["Botox Full Face", "Hilos Tensores Turrialba", "Ácido Hialurónico", "Relleno de Labios", "Microagujas"],
   },
   {
     name: "Dr. Ruddy Jiménez Montero",
