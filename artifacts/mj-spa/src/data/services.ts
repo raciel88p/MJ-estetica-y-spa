@@ -20,7 +20,7 @@ export type ServicePageData = {
 export const medicoEsteticosLinks = [
   { name: "Nutrición", href: "/servicios/nutricion" },
   { name: "Botox Full Face", href: "/servicios/botox-full-face" },
-  { name: "Hilos Tensores", href: "/servicios/hilos-tensores" },
+  { name: "Hilos Tensores Turrialba", href: "/servicios/hilos-tensores" },
   { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
   { name: "Ácido Hialurónico", href: "/servicios/acido-hialuronico" },
   { name: "Biorevitalización", href: "/servicios/biorevitalizacion" },
@@ -664,7 +664,8 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "hilos-tensores",
-    name: "Hilos Tensores",
+    name: "Hilos Tensores Turrialba",
+    fullTitle: "Hilos Tensores Turrialba",
     tagline: "El lifting sin bisturí más efectivo del mercado",
     heroDescription:
       "Los hilos tensores son la alternativa no quirúrgica al lifting facial. Devuelven la firmeza y tensión perdida de forma inmediata, estimulando la producción natural de colágeno.",

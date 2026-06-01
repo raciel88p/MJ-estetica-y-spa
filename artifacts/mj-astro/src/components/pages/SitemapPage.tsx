@@ -73,7 +73,7 @@ const sections = [
       { name: "Relleno de Labios", href: "/servicios/relleno-de-labios" },
       { name: "Ácido Hialurónico", href: "/servicios/acido-hialuronico" },
       { name: "Biorevitalización", href: "/servicios/biorevitalizacion" },
-      { name: "Hilos Tensores", href: "/servicios/hilos-tensores" },
+      { name: "Hilos Tensores Turrialba", href: "/servicios/hilos-tensores" },
       { name: "Nutrición", href: "/servicios/nutricion" },
       { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
       { name: "Implante de Barba", href: "/servicios/implante-barba" },
