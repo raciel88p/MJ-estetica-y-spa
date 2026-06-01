@@ -124,6 +124,7 @@ const heroBgMap: Record<string, string> = {
   "nutricion":                 "nutricion-bg.webp",
   "botox-full-face":           "botox-full-face-bg.webp",
   "hilos-tensores":            "hilos-tensores-bg.webp",
+  "hilos-colageno":            "hilos-tensores-bg.webp",
   "trasplante-capilar":        "trasplante-capilar-bg.webp",
   "acido-hialuronico":         "acido-hialuronico-bg.webp",
   "biorevitalizacion":         "biorevitalizacion-bg.webp",
