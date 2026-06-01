@@ -174,7 +174,7 @@ export default function Home() {
     "piernas-cansadas": "Piernas Cansadas",
     "botox": "Bótox y Toxina Botulínica",
     "acido-hialuronico": "Ácido Hialurónico",
-    "hilos-tensores": "Hilos Tensores",
+    "hilos-tensores": "Hilos Tensores Turrialba",
   };
 
   const onSubmit = (data: ContactFormValues) => {
@@ -947,7 +947,7 @@ export default function Home() {
                     </optgroup>
                     <optgroup label="Médico Estético">
                       <option value="botox">Botox</option>
-                      <option value="hilos-tensores">Hilos Tensores</option>
+                      <option value="hilos-tensores">Hilos Tensores Turrialba</option>
                     </optgroup>
                   </select>
                   {form.formState.errors.service && <p className="text-red-500 text-xs mt-1">{form.formState.errors.service.message}</p>}
