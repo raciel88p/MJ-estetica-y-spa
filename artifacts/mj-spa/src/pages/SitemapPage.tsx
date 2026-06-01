@@ -52,6 +52,7 @@ const sections = [
       { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
       { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
       { name: "Hilos de Colágeno", href: "/servicios/hilos-colageno" },
+      { name: "Microagujas", href: "/servicios/microagujas" },
       { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
     ],
   },

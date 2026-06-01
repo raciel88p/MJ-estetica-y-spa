@@ -53,6 +53,7 @@ export const tratamientosFacialesLinks = [
   { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
   { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
   { name: "Hilos de Colágeno", href: "/servicios/hilos-colageno" },
+  { name: "Microagujas", href: "/servicios/microagujas" },
   { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
 ];
 
@@ -981,6 +982,35 @@ export const servicePages: ServicePageData[] = [
         answer: "Son procedimientos estéticos orientados a protocolos de firmeza y rejuvenecimiento facial progresivo."
       }
     ]
+  },
+  {
+    slug: "microagujas",
+    name: "Microagujas",
+    fullTitle: "Microagujas en Turrialba",
+    tagline: "Renovación, Glow y Skincare Premium",
+    heroDescription: "Glow Facial, Renovación y Skincare Premium en MJ Estética & Wellness Center",
+    benefits: [
+      "Glow y luminosidad facial",
+      "Apariencia de textura más uniforme",
+      "Sensación de renovación facial",
+      "Bienestar y revitalización de la piel",
+      "Protocolos skincare personalizados",
+      "Rejuvenecimiento facial progresivo",
+    ],
+    items: [
+      {
+        title: "Microneedling Facial Premium",
+        description: "Protocolo orientado a renovación facial progresiva y bienestar de la piel.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Qué son las microagujas?",
+        answer: "Son técnicas avanzadas de microneedling facial utilizadas dentro de protocolos skincare orientados a glow, renovación y bienestar facial.",
+      },
+    ],
   },
   {
     slug: "adn-salmon",
