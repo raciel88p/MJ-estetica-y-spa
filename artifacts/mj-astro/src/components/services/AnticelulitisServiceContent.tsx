@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   CheckCircle2,
   MessageCircle,
@@ -7,14 +7,9 @@ import {
   Instagram,
   Quote,
   Sparkles,
-  Heart,
-  Target,
-  History,
-  ShieldCheck,
-  UserCheck
+  ChevronDown
 } from 'lucide-react';
-import { ServicePageData } from '../../data/services';
-import FaqItem from '../ui/FaqItem';
+import type { ServicePageData } from '../../data/services';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -24,6 +19,34 @@ const fadeUp = {
 const stagger = {
   visible: { transition: { staggerChildren: 0.1 } }
 };
+
+function FaqItem({ question, answer }: { question: string; answer: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-stone-200 last:border-0">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex justify-between items-center py-5 text-left gap-4 group"
+      >
+        <span className="font-serif text-lg text-stone-900 group-hover:text-primary transition-colors">{question}</span>
+        <ChevronDown className={`w-5 h-5 text-primary shrink-0 transition-transform duration-300 ${open ? "rotate-180" : ""}`} />
+      </button>
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="overflow-hidden"
+          >
+            <p className="text-primary/80 leading-relaxed pb-6 text-sm">{answer}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
 
 interface Props {
   service: ServicePageData;
@@ -108,7 +131,7 @@ export default function AnticelulitisServiceContent({ service, waLink }: Props) 
               "Has probado cremas o productos sin notar cambios visibles.",
               "Te incomoda usar vestidos, shorts o ropa ajustada.",
               "Deseas mejorar la textura y apariencia de ciertas zonas corporales.",
-              "Buscas una solución profesional acompañada por especialistas."
+              "Buscas una profesional acompañada por especialistas."
             ].map((item, i) => (
               <motion.div
                 key={i}
