@@ -55,6 +55,7 @@ export const tratamientosFacialesLinks = [
   { name: "Hilos de Colágeno", href: "/servicios/hilos-colageno" },
   { name: "Microagujas", href: "/servicios/microagujas" },
   { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
+  { name: "Microagujas con Vitamina C", href: "/servicios/microagujas-vitamina-c" },
   { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
 ];
 
@@ -1038,6 +1039,34 @@ export const servicePages: ServicePageData[] = [
       {
         question: "¿Qué son las Microagujas con Ginkgo Biloba?",
         answer: "Es un tratamiento que combina microneedling con activos de Ginkgo Biloba para potenciar el glow y la salud de la piel.",
+      },
+    ],
+  },
+  {
+    slug: "microagujas-vitamina-c",
+    name: "Microagujas con Vitamina C",
+    fullTitle: "Microagujas con Vitamina C en Turrialba",
+    tagline: "Glow facial, luminosidad natural y rejuvenecimiento progresivo",
+    heroDescription: "Glow facial, luminosidad natural y rejuvenecimiento progresivo",
+    benefits: [
+      "Glow facial progresivo",
+      "Sensación de renovación",
+      "Apariencia más luminosa",
+      "Textura facial más uniforme",
+      "Rejuvenecimiento natural y gradual",
+    ],
+    items: [
+      {
+        title: "Protocolo Vitamina C Premium",
+        description: "Sesión de microagujas con aplicación de vitamina C para máxima luminosidad.",
+        duration: "75 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Qué son las microagujas con vitamina C?",
+        answer: "Es un protocolo facial que combina microneedling con vitamina C orientado a apoyar glow, textura uniforme y bienestar de la piel.",
       },
     ],
   },

@@ -32,6 +32,7 @@ import { HilosTensoresContent } from "@/components/services/HilosTensoresContent
 import { AuriculoterapiaContent } from "@/components/services/AuriculoterapiaContent";
 import { MicroagujasContent } from "@/components/services/MicroagujasContent";
 import { MicroagujasGinkgoContent } from "@/components/services/MicroagujasGinkgoContent";
+import { MicroagujasVitaminaCContent } from "@/components/services/MicroagujasVitaminaCContent";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 import AnticelulitisServiceContent from "@/components/services/AnticelulitisServiceContent";
@@ -51,8 +52,9 @@ const beforeDescMap: Record<string, string[]> = {
   "vendas-frias":              ["Retención severa de líquidos y silueta hinchada", "Celulitis avanzada y piel de naranja visible", "Sensación de pesadez y falta de definición corporal"],
   "maderoterapia":             ["Acumulación de grasa y nódulos de celulitis enquistados", "Piel irregular, sin tono y con textura de naranja", "Silueta indevinida y poco modelada"],
   "auriculoterapia":           ["Ansiedad alimentaria y picoteo emocional fuera de control", "Estrés crónico que impide perder peso o dormir bien", "Desequilibrio del sistema nervioso y metabolismo lento"],
-  "microagujas": ["Piel opaca y sin brillo (pérdida de glow)", "Textura irregular y poros visibles", "Signos incipientes de envejecimiento facial"],
+  "microagujas":               ["Piel opaca y sin brillo (pérdida de glow)", "Textura irregular y poros visibles", "Signos incipientes de envejecimiento facial"],
   "microagujas-ginkgo-biloba": ["Piel opaca y sin brillo (pérdida de glow)", "Textura irregular y poros visibles", "Signos incipientes de envejecimiento facial"],
+  "microagujas-vitamina-c":    ["Piel opaca y falta de luminosidad", "Textura irregular", "Deseo de rejuvenecimiento natural"],
   "faciales":                  ["Piel opaca, con manchas y sin luminosidad", "Poros dilatados, imperfecciones y falta de hidratación", "Envejecimiento prematuro y pérdida de uniformidad"],
   "terapias-faciales":         ["Piel deshidratada, tensa y sin vitalidad", "Manchas, rojeces y textura irregular", "Arrugas finas y pérdida de elasticidad visible"],
   "peeling-quimico":           ["Manchas superficiales, piel apagada y textura irregular", "Cicatrices de acné y marcas post-inflamatorias", "Exceso de células muertas que bloquea la renovación celular"],
@@ -380,6 +382,9 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       {service.slug === "microagujas-ginkgo-biloba" && (
         <MicroagujasGinkgoContent waLink={WA} />
       )}
+      {service.slug === "microagujas-vitamina-c" && (
+        <MicroagujasVitaminaCContent waLink={WA} />
+      )}
 
       {/* ── CUSTOM CONTENT: POST OPERATORIOS ────────────────── */}
       {service.slug === "masajes-post-operatorios" && (
@@ -531,7 +536,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
-      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba"].includes(service.slug) && (
+      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c"].includes(service.slug) && (
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -578,7 +583,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba"].includes(service.slug) && (
+      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -868,7 +873,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── URGENCY CTA BAND ──────────────────────────── */}
-      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "botox-full-face" && service.slug !== "hilos-tensores" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && service.slug !== "relleno-de-labios" && service.slug !== "tratamiento-anticelulitis" && service.slug !== "auriculoterapia" && service.slug !== "microagujas" && service.slug !== "microagujas-ginkgo-biloba" && (
+      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "botox-full-face" && service.slug !== "hilos-tensores" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && service.slug !== "relleno-de-labios" && service.slug !== "tratamiento-anticelulitis" && service.slug !== "auriculoterapia" && service.slug !== "microagujas" && service.slug !== "microagujas-ginkgo-biloba" && service.slug !== "microagujas-vitamina-c" && (
       <section className="bg-primary py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -904,7 +909,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba"].includes(service.slug) && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div
