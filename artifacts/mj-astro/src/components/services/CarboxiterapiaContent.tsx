@@ -62,7 +62,7 @@ export function CarboxiterapiaContent({ service, waLink }: { service: ServicePag
                 <Star className="w-4 h-4 fill-primary" />
                 <span className="text-xs font-bold tracking-widest uppercase">Regalo Exclusivo</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 italic">🎁 GUÍA GRATUITA</h2>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 italic text-white">🎁 GUÍA GRATUITA</h2>
               <p className="text-white/80 text-lg mb-8 leading-relaxed">
                 Comenta la palabra <span className="text-primary font-bold">“Carbo”</span> en nuestro Instagram y recibe GRATIS nuestra guía:
               </p>
@@ -300,7 +300,7 @@ export function CarboxiterapiaContent({ service, waLink }: { service: ServicePag
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
             <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">Metodología MJ</p>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 italic">Qué incluye tu sesión</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 italic text-white">Qué incluye tu sesión</h2>
             <p className="text-white/70">Tu sesión incluye:</p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
