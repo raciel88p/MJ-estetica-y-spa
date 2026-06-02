@@ -53,6 +53,7 @@ const sections = [
       { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
       { name: "Hilos de Colágeno", href: "/servicios/hilos-colageno" },
       { name: "Microagujas", href: "/servicios/microagujas" },
+      { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
       { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
     ],
   },

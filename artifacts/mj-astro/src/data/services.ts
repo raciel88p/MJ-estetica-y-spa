@@ -54,6 +54,7 @@ export const tratamientosFacialesLinks = [
   { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
   { name: "Hilos de Colágeno", href: "/servicios/hilos-colageno" },
   { name: "Microagujas", href: "/servicios/microagujas" },
+  { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
   { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
 ];
 
@@ -1009,6 +1010,34 @@ export const servicePages: ServicePageData[] = [
       {
         question: "¿Qué son las microagujas?",
         answer: "Son técnicas avanzadas de microneedling facial utilizadas dentro de protocolos skincare orientados a glow, renovación y bienestar facial.",
+      },
+    ],
+  },
+  {
+    slug: "microagujas-ginkgo-biloba",
+    name: "Microagujas con Ginkgo Biloba",
+    fullTitle: "Microagujas con Ginkgo Biloba en Turrialba",
+    tagline: "Glow natural, revitalización facial y skincare avanzado",
+    heroDescription: "Glow natural, revitalización facial y skincare avanzado en un solo protocolo",
+    benefits: [
+      "Glow facial natural",
+      "Apariencia de piel revitalizada",
+      "Textura visualmente más uniforme",
+      "Sensación de hidratación y frescura",
+      "Protocolos adaptados a cada tipo de piel",
+    ],
+    items: [
+      {
+        title: "Protocolo Ginkgo Biloba Premium",
+        description: "Sesión de microagujas combinada con activos de Ginkgo Biloba para revitalización profunda.",
+        duration: "75 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Qué son las Microagujas con Ginkgo Biloba?",
+        answer: "Es un tratamiento que combina microneedling con activos de Ginkgo Biloba para potenciar el glow y la salud de la piel.",
       },
     ],
   },

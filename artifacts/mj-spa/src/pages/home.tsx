@@ -91,6 +91,7 @@ const featuredTreatments = [
   { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios", cat: "Corporal" },
   { name: "ADN de Salmón", href: "/servicios/adn-salmon", cat: "Facial" },
   { name: "Microagujas", href: "/servicios/microagujas", cat: "Facial" },
+  { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba", cat: "Facial" },
   { name: "HOLLYWOOD PEEL EN TURRIALBA", href: "/servicios/hollywood-peel", cat: "Facial" },
   { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial", cat: "Facial" },
   { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas", cat: "Facial" },
@@ -165,6 +166,7 @@ export default function Home() {
     "drenaje-linfatico": "Drenaje Linfático",
     "adn-salmon": "ADN de Salmón",
     "microagujas": "Microagujas",
+    "microagujas-ginkgo-biloba": "Microagujas con Ginkgo Biloba",
     "hilos-colageno": "Hilos de Colágeno",
     "tratamiento-ojeras": "Tratamiento de Ojeras",
     "blanqueamiento-zona-intima": "Láser Despigmentante en Turrialba",
@@ -938,6 +940,7 @@ export default function Home() {
                     <optgroup label="Tratamientos Faciales">
                       <option value="adn-salmon">ADN de Salmón</option>
                       <option value="microagujas">Microagujas</option>
+                      <option value="microagujas-ginkgo-biloba">Microagujas con Ginkgo Biloba</option>
                       <option value="hollywood-peel">HOLLYWOOD PEEL EN TURRIALBA</option>
                       <option value="radiofrecuencia-facial">Radiofrecuencia Facial</option>
                       <option value="eliminacion-manchas">Eliminación de Manchas</option>
