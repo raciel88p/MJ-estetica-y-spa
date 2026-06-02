@@ -35,12 +35,12 @@
   --font-display: 'Cormorant Garamond', serif;
 
   --radius-sm: calc(var(--radius) - 4px);
+  --color-orange-pastel: #FFDAB9;
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-  --color-orange-pastel: #FFDAB9;
 :root {
   /* Cool blue-tinted white background */
   --background: 200 25% 97%;
