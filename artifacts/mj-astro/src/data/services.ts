@@ -1044,6 +1044,7 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "microagujas-vitamina-c",
+    heroBg: "microagujas-vitamina-c-bg.webp",
     name: "Microagujas con Vitamina C",
     fullTitle: "Microagujas con Vitamina C en Turrialba",
     tagline: "Glow facial, luminosidad natural y rejuvenecimiento progresivo",
