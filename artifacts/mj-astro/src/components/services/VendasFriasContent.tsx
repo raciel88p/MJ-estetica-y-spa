@@ -183,7 +183,7 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
                 <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
                 </div>
-                <span className="text-stone-700 font-medium text-sm">{item}</span>
+                <span className="text-orange-pastel font-medium text-sm">{item}</span>
               </motion.div>
             ))}
           </div>
