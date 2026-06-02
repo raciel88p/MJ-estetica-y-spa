@@ -130,7 +130,7 @@ const heroBgMap: Record<string, string> = {
   "auriculoterapia":           "auriculoterapia-bg.webp",
   "microagujas": "faciales-bg.webp",
   "microagujas-ginkgo-biloba": "faciales-bg.webp",
-  "microagujas-vitamina-c": "faciales-bg.webp",
+  "microagujas-vitamina-c": "microagujas-vitamina-c-bg.webp",
   "piernas-cansadas":          "piernas-cansadas-bg.webp",
   "nutricion":                 "nutricion-bg.webp",
   "botox-full-face":           "botox-full-face-bg.webp",
