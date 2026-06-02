@@ -178,7 +178,7 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
                 key={i}
                 initial="hidden" whileInView="visible" viewport={{ once: true }}
                 variants={{...fadeUp, visible: {...fadeUp.visible, transition: {delay: i*0.05}}}}
-                className="flex items-center gap-4 p-4 border-b border-stone-100 group hover:bg-stone-50 transition-colors"
+                className="flex items-center gap-4 p-4 border-b border-stone-100 group hover:bg-stone-800 transition-colors"
               >
                 <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
                   <CheckCircle2 className="w-4 h-4 text-primary" />
