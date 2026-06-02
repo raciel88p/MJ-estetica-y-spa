@@ -126,7 +126,7 @@ export function HollywoodPeelContent({ service, waLink }: { service: ServicePage
       <section className="py-24 bg-stone-900 text-white">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">💎 ¿Para Quién es Ideal Este Tratamiento?</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white">💎 ¿Para Quién es Ideal Este Tratamiento?</h2>
             <p className="text-white/60 text-lg">El Hollywood Peel es perfecto si tienes:</p>
           </motion.div>
 
