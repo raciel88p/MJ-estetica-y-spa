@@ -32,6 +32,7 @@ import { HilosTensoresContent } from "@/components/services/HilosTensoresContent
 import { AuriculoterapiaContent } from "@/components/services/AuriculoterapiaContent";
 import { MicroagujasContent } from "@/components/services/MicroagujasContent";
 import { MicroagujasGinkgoContent } from "@/components/services/MicroagujasGinkgoContent";
+import { MasajeProfundoContent } from "@/components/services/MasajeProfundoContent";
 import { MicroagujasVitaminaCContent } from "@/components/services/MicroagujasVitaminaCContent";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
@@ -40,6 +41,7 @@ import AnticelulitisServiceContent from "@/components/services/AnticelulitisServ
 const beforeDescMap: Record<string, string[]> = {
   "masajes-corporales":        ["Celulitis visible y grasa localizada resistente", "Piel sin luminosidad y con pérdida de firmeza", "Estrías y signos de envejecimiento prematuro"],
   "masajes-relajantes":        ["Ansiedad y estrés crónico que no cede", "Insomnio y devicultad para desconectarse", "Tensión acumulada en cuello, espalda y hombros"],
+  "masajes-profundos":         ["Estrés acumulado y rigidez muscular persistente", "Sensación de cuerpo pesado y falta de descanso", "Necesidad de desconexión profunda y bienestar"],
   "masajes-post-operatorios":  ["Inflamación y fibrosis tras la cirugía", "Cicatrización lenta y adherencias subcutáneas", "Acumulación de líquidos y dolor postoperatorio"],
   "reduccion-de-medidas":      ["Grasa localizada resistente a dieta y ejercicio", "Volumen excesivo en abdomen, flancos y muslos", "Pérdida de definición y contorno corporal"],
   "tensado-corporal":          ["Flacidez visible en piel de brazos, abdomen y muslos", "Pérdida de firmeza y elasticidad por la edad o cambios de peso", "Piel sin tono que no responde al ejercicio"],
@@ -107,6 +109,7 @@ const stagger = {
 const heroBgMap: Record<string, string> = {
   "masajes-corporales":        "masajes-corporales-bg.webp",
   "masajes-relajantes":        "masajes-relajantes-bg.webp",
+  "masajes-profundos":         "masajes-relajantes-bg.webp",
   "masajes-post-operatorios":  "masajes-post-operatorios-bg.webp",
   "reduccion-de-medidas":      "reduccion-de-medidas-bg.webp",
   "tensado-corporal":          "tensado-corporal-bg.webp",
@@ -145,8 +148,8 @@ const heroBgMap: Record<string, string> = {
 };
 
 const serviceCategoryMap: Record<string, { name: string; href: string }> = {
-  "masajes-corporales":        { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "masajes-relajantes":        { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
+  "masajes-profundos":         { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "masajes-post-operatorios":  { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "reduccion-de-medidas":      { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "tensado-corporal":          { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
@@ -364,6 +367,9 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       {service.slug === "masajes-corporales" && (
         <HydrolipoclasiaContent waLink={WA} />
       )}
+      {service.slug === "masajes-profundos" && (
+        <MasajeProfundoContent waLink={WA} />
+      )}
 
       {/* ── CUSTOM CONTENT: CARBOXITERAPIA ────────────────── */}
       {service.slug === "carboxiterapia" && (
@@ -536,7 +542,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
-      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c"].includes(service.slug) && (
+      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c"].includes(service.slug) && (
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -583,7 +589,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {!["adn-salmon", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c"].includes(service.slug) && (
+      {!["adn-salmon", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -871,9 +877,12 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       {service.slug === "masajes-corporales" && (
         <HydrolipoclasiaBottomContent waLink={WA} />
       )}
+      {service.slug === "masajes-profundos" && (
+        <MasajeProfundoContent waLink={WA} />
+      )}
 
       {/* ── URGENCY CTA BAND ──────────────────────────── */}
-      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "botox-full-face" && service.slug !== "hilos-tensores" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && service.slug !== "relleno-de-labios" && service.slug !== "tratamiento-anticelulitis" && service.slug !== "auriculoterapia" && service.slug !== "microagujas" && service.slug !== "microagujas-ginkgo-biloba" && service.slug !== "microagujas-vitamina-c" && (
+      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "masajes-profundos" && service.slug !== "botox-full-face" && service.slug !== "hilos-tensores" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && service.slug !== "relleno-de-labios" && service.slug !== "tratamiento-anticelulitis" && service.slug !== "auriculoterapia" && service.slug !== "microagujas" && service.slug !== "microagujas-ginkgo-biloba" && service.slug !== "microagujas-vitamina-c" && (
       <section className="bg-primary py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -909,7 +918,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c"].includes(service.slug) && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div

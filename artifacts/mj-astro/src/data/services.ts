@@ -32,6 +32,7 @@ export const medicoEsteticosLinks = [
 export const tratamientosCorporalesLinks = [
   { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
   { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
+  { name: "Masajes Profundos", href: "/servicios/masajes-profundos" },
   { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios" },
   { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
   { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
@@ -230,6 +231,35 @@ export const servicePages: ServicePageData[] = [
         question: "¿Puedo pedir una intensidad específica?",
         answer:
           "Por supuesto. Antes de comenzar, nuestra terapeuta hablará contigo para adaptar la presión y las técnicas a tus preferencias y necesidades.",
+      },
+    ],
+  },
+  {
+    slug: "masajes-profundos",
+    name: "Masajes Profundos",
+    fullTitle: "Masajes profundos Turrialba",
+    tagline: "Libera tensión, recupera bienestar",
+    heroDescription: "¿Sientes tu cuerpo cargado, rígido o agotado por el estrés del día a día?",
+    benefits: [
+      "Sensación de relajación muscular",
+      "Bienestar corporal integral",
+      "Descanso físico profundo",
+      "Experiencia wellness premium",
+      "Sensación de alivio corporal",
+      "Complemento ideal para autocuidado",
+    ],
+    items: [
+      {
+        title: "Masaje Profundo Terapéutico",
+        description: "Experiencia corporal orientada a liberar tensión muscular acumulada mediante técnicas personalizadas.",
+        duration: "60-90 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Qué se siente durante el masaje profundo?",
+        answer: "Una sensación progresiva de relajación muscular y bienestar corporal.",
       },
     ],
   },

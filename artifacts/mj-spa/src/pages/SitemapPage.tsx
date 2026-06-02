@@ -28,6 +28,7 @@ const sections = [
       { name: "Todos los Tratamientos Corporales", href: "/tratamientos/corporales" },
       { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
       { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
+      { name: "Masajes Profundos", href: "/servicios/masajes-profundos" },
       { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios" },
       { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
       { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
