@@ -110,6 +110,11 @@ function LandingMedicos() {
 
       {/* ───── 1. HERO ───── */}
       <section className="relative min-h-[85vh] flex items-center justify-center bg-[#071e2e] overflow-hidden pt-20">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/medicina-estetica-hero.jpg')" }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_60%_80%_at_50%_0%,#1378A2,transparent)]" />
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
 
