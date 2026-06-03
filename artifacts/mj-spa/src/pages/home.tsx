@@ -941,6 +941,7 @@ export default function Home() {
                     </optgroup>
                     <optgroup label="Tratamientos Faciales">
                       <option value="adn-salmon">ADN de Salmón</option>
+                      <option value="limpieza-facial-turrialba">Limpieza Facial en Turrialba</option>
                       <option value="microagujas">Microagujas</option>
                       <option value="microagujas-ginkgo-biloba">Microagujas con Ginkgo Biloba</option>
                       <option value="microagujas-vitamina-c">Microagujas con Vitamina C</option>
