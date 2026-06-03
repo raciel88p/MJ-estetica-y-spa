@@ -57,6 +57,7 @@ export const tratamientosFacialesLinks = [
   { name: "Microagujas", href: "/servicios/microagujas" },
   { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
   { name: "Microagujas con Vitamina C", href: "/servicios/microagujas-vitamina-c" },
+  { name: "Rejuvenecimiento Facial", href: "/servicios/rejuvenecimiento-facial" },
   { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
 ];
 
@@ -1072,6 +1073,61 @@ export const servicePages: ServicePageData[] = [
         answer: "Es un tratamiento que combina microneedling con activos de Ginkgo Biloba para potenciar el glow y la salud de la piel.",
       },
     ],
+  },
+  {
+    slug: "rejuvenecimiento-facial",
+    name: "Rejuvenecimiento Facial",
+    fullTitle: "Rejuvenecimiento Facial en Turrialba",
+    tagline: "Glow Natural, Armonización Facial y Bienestar Estético Premium",
+    heroDescription: "Glow Natural, Armonización Facial y Bienestar Estético Premium un espacio, Tu piel cuenta tu historia…<br />pero también puede reflejar luminosidad, frescura y bienestar.",
+    benefits: [
+      "Piel más luminosa y revitalizada",
+      "Glow facial progresivo",
+      "Sensación de rejuvenecimiento natural",
+      "Bienestar facial integral",
+      "Resultados personalizados",
+      "Apariencia más fresca y descansada",
+      "Protocolos skincare premium",
+      "Atención estética profesional",
+    ],
+    items: [
+      {
+        title: "Protocolo Rejuvenecimiento Facial",
+        description: "Experiencia personalizada orientada a glow, armonización y bienestar facial.",
+        duration: "Variable",
+        price: "Consultar precio",
+      }
+    ],
+    faq: [
+      {
+        question: "¿Qué es el rejuvenecimiento facial?",
+        answer: "Son protocolos estéticos orientados a apoyar glow facial, bienestar de la piel y rejuvenecimiento progresivo."
+      },
+      {
+        question: "¿Qué beneficios puede aportar?",
+        answer: "Puede apoyar procesos relacionados con luminosidad facial, sensación de renovación y armonización estética."
+      },
+      {
+        question: "¿Qué protocolos utilizan?",
+        answer: "Dependiendo de la valoración personalizada, pueden utilizarse tecnologías y tratamientos skincare avanzados."
+      },
+      {
+        question: "¿Tiene recuperación?",
+        answer: "Cada protocolo es diferente. Durante la valoración explicamos recomendaciones y cuidados posteriores."
+      },
+      {
+        question: "¿Cuántas sesiones se recomiendan?",
+        answer: "Depende de las necesidades individuales y objetivos faciales de cada persona."
+      },
+      {
+        question: "¿Se puede combinar con otros tratamientos?",
+        answer: "Sí, según valoración profesional y protocolo personalizado."
+      },
+      {
+        question: "¿Cuándo se ven resultados?",
+        answer: "Los resultados pueden percibirse progresivamente dependiendo del tratamiento realizado."
+      }
+    ]
   },
   {
     slug: "microagujas-vitamina-c",
