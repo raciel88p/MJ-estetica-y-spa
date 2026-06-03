@@ -60,6 +60,24 @@ export function HilosTensoresContent({
                 En MJ Estética & Wellness Center ayudamos a personas que desean verse mejor sin perder su esencia.
               </p>
             </div>
+
+            <div className="text-center bg-stone-900 text-white p-10 rounded-sm">
+               <h3 className="text-2xl font-serif font-bold mb-6">Agenda tu valoración facial personalizada</h3>
+               <div className="space-y-4 mb-8">
+                  <p className="flex items-center justify-center gap-2">👉 Escríbenos por WhatsApp</p>
+                  <p className="flex items-center justify-center gap-2">👉 Consulta disponibilidad</p>
+                  <p className="flex items-center justify-center gap-2">👉 Descubre el protocolo ideal para tu piel</p>
+               </div>
+               <a
+                  href={waLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 bg-primary text-white px-10 py-4 font-bold tracking-[0.2em] uppercase hover:bg-white hover:text-stone-900 transition-all shadow-xl"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  RESERVAR AHORA
+                </a>
+            </div>
           </motion.div>
         </div>
       </section>
