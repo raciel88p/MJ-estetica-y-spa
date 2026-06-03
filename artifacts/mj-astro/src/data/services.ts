@@ -698,6 +698,7 @@ export const servicePages: ServicePageData[] = [
   {
     slug: "hilos-tensores",
     name: "Hilos Tensores",
+    fullTitle: "Hilos Tensores Turrialba",
     tagline: "El lifting sin bisturí más efectivo del mercado",
     heroDescription:
       "Los hilos tensores son la alternativa no quirúrgica al lifting facial. Devuelven la firmeza y tensión perdida de forma inmediata, estimulando la producción natural de colágeno.",
