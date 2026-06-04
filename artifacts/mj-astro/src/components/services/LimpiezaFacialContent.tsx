@@ -289,7 +289,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
                 cta: "Descubre el protocolo ideal"
               },
               {
-                title: "Protocolos avanzados",
+                title: "Protocolos skincare avanzados",
                 desc: "Tratamientos personalizados según necesidades específicas evaluadas profesionalmente.",
                 features: ["Valoración individual", "Protocolos personalizados", "Seguimiento profesional"],
                 cta: "Escríbenos por WhatsApp"
@@ -415,9 +415,9 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
               "Personas que buscan limpieza profunda",
               "Quienes desean iniciar una rutina skincare",
               "Personas interesadas en bienestar facial",
-              "Personas que buscan una experiencia premium",
+              "Personas que buscan una experiencia premium de cuidado facial",
               "Rutinas preventivas de cuidado de la piel",
-              "Personas que desean mejorar frescura",
+              "Personas que desean mejorar la sensación de frescura y luminosidad",
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3 bg-white p-5 border border-stone-200">
                 <span className="text-primary text-xl">✨</span>
