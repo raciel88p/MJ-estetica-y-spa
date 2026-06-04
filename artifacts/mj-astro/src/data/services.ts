@@ -398,7 +398,7 @@ export const servicePages: ServicePageData[] = [
     name: "Limpieza Facial",
     fullTitle: "Limpieza Facial en Turrialba",
     tagline: "Glow natural, bienestar facial y skincare premium",
-    heroDescription: "Tu piel merece cuidado profesional, bienestar y una experiencia diseñada especialmente para ti en Turrialba.",
+    heroDescription: "Glow natural, bienestar facial y skincare premium en una experiencia diseñada para tu piel <br /><br /> Tu piel habla antes que tú. <br /> Y cuando se siente apagada, con exceso de grasa, textura irregular o sin luminosidad… también afecta cómo te ves y cómo te sientes.",
     benefits: [
       "Glow y luminosidad facial",
       "Sensación de limpieza profunda",
