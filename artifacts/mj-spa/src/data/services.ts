@@ -47,6 +47,7 @@ export const tratamientosCorporalesLinks = [
 
 export const tratamientosFacialesLinks = [
   { name: "Tratamientos Faciales", href: "/servicios/faciales" },
+  { name: "Limpieza Facial en Turrialba", href: "/servicios/limpieza-facial-turrialba" },
   { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
   { name: "Peeling Químico", href: "/servicios/peeling-quimico" },
   { name: "Hollywood Peel en Turrialba", href: "/servicios/hollywood-peel" },
@@ -389,6 +390,55 @@ export const servicePages: ServicePageData[] = [
         question: "¿Hay alguna contraindicación?",
         answer:
           "No está indicado durante el embarazo, si se toma fotosensibilizantes o con bronceado activo. En la consulta previa evaluamos tu caso de forma personalizada.",
+      },
+    ],
+  },
+  {
+    slug: "limpieza-facial-turrialba",
+    name: "Limpieza Facial",
+    fullTitle: "Limpieza Facial en Turrialba",
+    tagline: "Glow natural, bienestar facial y skincare premium",
+    heroDescription: "Tu piel merece cuidado profesional, bienestar y una experiencia diseñada especialmente para ti en Turrialba.",
+    benefits: [
+      "Glow y luminosidad facial",
+      "Sensación de limpieza profunda",
+      "Bienestar general de la piel",
+      "Apariencia más fresca y revitalizada",
+      "Textura facial más uniforme",
+      "Rutinas de skincare personalizadas",
+    ],
+    items: [
+      {
+        title: "Limpieza facial profunda",
+        description: "Ideal para quienes buscan una sensación de limpieza intensiva y renovación facial.",
+        duration: "75-90 min",
+        price: "Consultar",
+      },
+      {
+        title: "Limpieza facial hidratante",
+        description: "Pensada para pieles que buscan hidratación, suavidad y luminosidad natural.",
+        duration: "60 min",
+        price: "Consultar",
+      },
+      {
+        title: "Facial premium glow",
+        description: "Una experiencia skincare orientada al bienestar, relajación y luminosidad facial.",
+        duration: "90 min",
+        price: "Consultar",
+      },
+    ],
+    faqs: [
+      {
+        question: "¿Qué incluye una limpieza facial?",
+        answer: "Incluye valoración facial, limpieza profesional, protocolo personalizado y recomendaciones posteriores.",
+      },
+      {
+        question: "¿Cada cuánto se recomienda?",
+        answer: "Depende del tipo de piel y objetivos individuales. La frecuencia ideal se define en valoración.",
+      },
+      {
+        question: "¿Tiene recuperación?",
+        answer: "Generalmente las personas continúan sus actividades normales el mismo día.",
       },
     ],
   },
