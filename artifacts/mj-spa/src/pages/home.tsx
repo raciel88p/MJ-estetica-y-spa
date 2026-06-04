@@ -176,6 +176,7 @@ export default function Home() {
     "radiofrecuencia-facial": "Radiofrecuencia Facial",
     "eliminacion-manchas": "Eliminación de Manchas",
     "peeling-quimico": "Peeling Químico",
+    "terapias-faciales": "Limpieza Facial",
     "faciales": "Tratamientos Faciales",
     "piernas-cansadas": "Piernas Cansadas",
     "botox": "Bótox y Toxina Botulínica",
