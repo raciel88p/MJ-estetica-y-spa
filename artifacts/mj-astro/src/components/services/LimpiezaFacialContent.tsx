@@ -2,20 +2,13 @@ import { motion } from "framer-motion";
 import {
   MessageCircle,
   Star,
-  CheckCircle2,
-  Sparkles,
-  Zap,
-  Target,
-  ArrowRight,
-  Clock,
-  ShieldCheck,
-  Heart,
-  ChevronRight,
   Quote,
+  Clock,
 } from "lucide-react";
+import type { ServicePageData } from "@/data/services";
 
 interface Props {
-  service: any;
+  service: ServicePageData;
   waLink: string;
 }
 
@@ -39,12 +32,13 @@ const staggerContainer = {
 };
 
 export function LimpiezaFacialContent({ service, waLink }: Props) {
-  const limpiezaWaLink = `https://wa.me/50686907757?text=Hola!%20Deseo%20más%20información%20sobre%20la%20Limpieza%20Facial%20en%20Turrialba`;
+  // Use the provided waLink or fallback to a default one
+  const limpiezaWaLink = waLink || `https://wa.me/50686907757?text=Hola!%20Deseo%20más%20información%20sobre%20la%20Limpieza%20Facial%20en%20Turrialba`;
 
   return (
     <div className="space-y-24 pb-20 overflow-hidden">
       {/* 1. Intro Section (Post-Janeth) */}
-      <section className="relative py-20 bg-white">
+      <section className="relative py-20 bg-white text-stone-800">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div
             initial="hidden"
@@ -54,19 +48,10 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
             className="space-y-8"
           >
             <motion.div variants={fadeUp} className="space-y-6">
-              <p className="text-lg text-stone-700 leading-relaxed">
-                En MJ Estética & Wellness Center entendemos que una limpieza facial no se trata solo de “limpiar la piel”.<br />
-                Se trata de ayudarte a recuperar frescura, glow natural y bienestar facial mediante protocolos personalizados y una experiencia skincare premium en Turrialba.
-              </p>
+              <div className="text-lg text-stone-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: service.heroDescription }} />
 
               <div className="space-y-3">
-                {[
-                  "Valoración facial personalizada",
-                  "Protocolos adaptados según tu tipo de piel",
-                  "Experiencia relajante y profesional",
-                  "Productos especializados skincare",
-                  "Atención enfocada en bienestar y luminosidad facial",
-                ].map((item, i) => (
+                {service.benefits.slice(0, 5).map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <span className="text-primary text-lg">✨</span>
                     <span className="text-stone-800 font-medium">{item}</span>
@@ -110,11 +95,11 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
             variants={fadeUp}
             className="space-y-10"
           >
-            <h2 className="text-4xl md:text-5xl font-serif font-bold">¿Qué es una limpieza facial?</h2>
-            <p className="text-xl text-stone-300 leading-relaxed font-light">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white">¿Qué es una limpieza facial?</h2>
+            <p className="text-xl text-stone-200 leading-relaxed font-light">
               La limpieza facial es un tratamiento skincare diseñado para apoyar la limpieza profunda de la piel, mejorar la sensación de frescura facial y favorecer una apariencia más luminosa y revitalizada.
             </p>
-            <p className="text-lg text-stone-400">
+            <p className="text-lg text-stone-300">
               En MJ Estética & Wellness Center cada protocolo se adapta según las necesidades específicas de tu piel, porque no todas las pieles requieren el mismo cuidado.
             </p>
 
@@ -130,7 +115,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-none">
                     <span className="text-green-400">✅</span>
-                    <span className="text-sm font-medium tracking-wide uppercase">{item}</span>
+                    <span className="text-sm font-medium tracking-wide uppercase text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -161,16 +146,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
             </motion.p>
 
             <motion.div variants={fadeUp} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                "Glow y luminosidad facial",
-                "Sensación de limpieza profunda",
-                "Bienestar general de la piel",
-                "Apariencia más fresca y revitalizada",
-                "Textura facial más uniforme",
-                "Rutinas de skincare personalizadas",
-                "Cuidado facial preventivo",
-                "Sensación de hidratación y frescura",
-              ].map((item, i) => (
+              {service.benefits.map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <span className="text-primary">✨</span>
                   <span className="text-stone-700 text-sm font-medium">{item}</span>
@@ -190,17 +166,17 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
             variants={staggerContainer}
             className="bg-[#071e2e] p-10 md:p-16 text-white space-y-8"
           >
-            <motion.h3 variants={fadeUp} className="text-3xl font-serif font-bold leading-tight">
+            <motion.h3 variants={fadeUp} className="text-3xl font-serif font-bold leading-tight text-white">
               ¿Por qué tantas personas están incorporando limpiezas faciales en sus rutinas?
             </motion.h3>
-            <motion.p variants={fadeUp} className="text-stone-300 leading-relaxed">
+            <motion.p variants={fadeUp} className="text-stone-100 leading-relaxed">
               Porque hoy el skincare dejó de ser un lujo. Ahora es parte del autocuidado.
             </motion.p>
-            <motion.p variants={fadeUp} className="text-stone-400 text-sm">
+            <motion.p variants={fadeUp} className="text-stone-200 text-sm">
               Muchas personas pasan semanas usando maquillaje, protector solar, estrés diario y contaminación ambiental sobre la piel… sin darle un verdadero proceso de limpieza profunda.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="space-y-4">
+            <motion.div variants={fadeUp} className="space-y-4 text-white">
               <p className="text-xs font-bold tracking-[0.2em] text-primary uppercase">El resultado puede sentirse así:</p>
               {[
                 "Piel apagada",
@@ -209,9 +185,9 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
                 "Textura irregular",
                 "Sensación de cansancio facial",
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 text-stone-300">
+                <div key={i} className="flex items-center gap-3">
                   <span className="text-red-400">❌</span>
-                  <span>{item}</span>
+                  <span className="text-stone-200">{item}</span>
                 </div>
               ))}
             </motion.div>
@@ -269,32 +245,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
           <h2 className="text-3xl font-serif font-bold text-stone-900 mb-16 text-center uppercase tracking-widest">Tipos de limpieza facial disponibles</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Limpieza facial profunda",
-                desc: "Ideal para quienes buscan una sensación de limpieza intensiva y renovación facial.",
-                features: ["Limpieza profesional", "Bienestar facial", "Sensación de frescura profunda"],
-                cta: "Consulta disponibilidad"
-              },
-              {
-                title: "Limpieza facial hidratante",
-                desc: "Pensada para pieles que buscan hidratación, suavidad y luminosidad natural.",
-                features: ["Glow saludable", "Sensación de hidratación", "Apariencia revitalizada"],
-                cta: "Agenda tu valoración facial"
-              },
-              {
-                title: "Facial premium glow",
-                desc: "Una experiencia skincare orientada al bienestar, relajación y luminosidad facial.",
-                features: ["Experiencia wellness", "Productos especializados", "Cuidado facial premium"],
-                cta: "Descubre el protocolo ideal"
-              },
-              {
-                title: "Protocolos skincare avanzados",
-                desc: "Tratamientos personalizados según necesidades específicas evaluadas profesionalmente.",
-                features: ["Valoración individual", "Protocolos personalizados", "Seguimiento profesional"],
-                cta: "Escríbenos por WhatsApp"
-              },
-            ].map((type, i) => (
+            {service.items.map((type, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -303,24 +254,35 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white p-10 flex flex-col h-full border border-stone-100 hover:shadow-2xl transition-all"
               >
+                {type.badge && (
+                   <span className="inline-block px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest mb-4 w-fit">
+                    {type.badge}
+                   </span>
+                )}
                 <h4 className="text-xl font-serif font-bold text-stone-900 mb-4">{type.title}</h4>
-                <p className="text-stone-500 text-sm mb-8 flex-grow leading-relaxed">{type.desc}</p>
-                <div className="space-y-3 mb-10">
-                  {type.features.map((feat, j) => (
-                    <div key={j} className="flex items-center gap-2 text-stone-700 text-sm">
-                      <span className="text-blue-500">✔</span>
-                      {feat}
-                    </div>
-                  ))}
-                </div>
+                <p className="text-stone-600 text-sm mb-8 flex-grow leading-relaxed">{type.description}</p>
+
+                {type.features && (
+                  <div className="space-y-3 mb-10">
+                    {type.features.map((feat, j) => (
+                      <div key={j} className="flex items-center gap-2 text-stone-800 text-sm">
+                        <span className="text-primary font-bold">✔</span>
+                        {feat}
+                      </div>
+                    ))}
+                  </div>
+                )}
+
                 <a
-                  href={limpiezaWaLink}
+                  href={type.link || limpiezaWaLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest group"
                 >
                   <span className="text-xl group-hover:translate-x-1 transition-transform">👉</span>
-                  <span className="border-b-2 border-primary/20 pb-0.5 group-hover:border-primary transition-colors">{type.cta}</span>
+                  <span className="border-b-2 border-primary/20 pb-0.5 group-hover:border-primary transition-colors">
+                    {type.linkText || "Consulta disponibilidad"}
+                  </span>
                 </a>
               </motion.div>
             ))}
@@ -333,7 +295,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
         <div className="bg-[#040f19] text-white p-10 md:p-20 relative">
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-4xl font-serif font-bold mb-12">¿Cómo funciona una limpieza facial?</h2>
+              <h2 className="text-4xl font-serif font-bold mb-12 text-white">¿Cómo funciona una limpieza facial?</h2>
               <div className="space-y-12">
                 {[
                   {
@@ -361,8 +323,8 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
                     <div className="absolute -left-1 top-0 w-2 h-2 rounded-full bg-primary" />
                     <div>
                       <span className="text-primary font-serif italic text-xl mb-1 block">{item.step}</span>
-                      <h4 className="text-xl font-bold mb-2 uppercase tracking-wide">{item.title}</h4>
-                      <p className="text-stone-400 leading-relaxed text-sm">{item.desc}</p>
+                      <h4 className="text-xl font-bold mb-2 uppercase tracking-wide text-white">{item.title}</h4>
+                      <p className="text-stone-300 leading-relaxed text-sm">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -375,17 +337,17 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
                   <Clock className="w-8 h-8" />
                   <div>
                     <h4 className="font-bold uppercase tracking-widest text-[10px]">Duración aproximada</h4>
-                    <p className="text-2xl font-serif">60 a 90 minutos</p>
+                    <p className="text-2xl font-serif text-white">60 a 90 minutos</p>
                   </div>
                 </div>
                 <div className="space-y-4 pt-6 border-t border-white/10">
                   <div className="flex items-center gap-3">
                     <span className="text-primary text-lg">✨</span>
-                    <span className="text-stone-300 text-sm">Experiencia relajante y cómoda</span>
+                    <span className="text-stone-200 text-sm">Experiencia relajante y cómoda</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="text-yellow-400 text-lg">☀</span>
-                    <span className="text-stone-300 text-sm">Recomendado protector solar e hidratación</span>
+                    <span className="text-stone-200 text-sm">Recomendado protector solar e hidratación</span>
                   </div>
                 </div>
               </div>
@@ -409,7 +371,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
             <h2 className="text-3xl font-serif font-bold text-stone-900 uppercase tracking-widest mb-4">¿Para quién se recomienda una limpieza facial?</h2>
             <p className="text-stone-500">Este tratamiento puede ser ideal para:</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-stone-800">
             {[
               "Personas interesadas en glow facial",
               "Personas que buscan limpieza profunda",
@@ -444,7 +406,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
               "Resultados personalizados",
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3 justify-center">
-                <span className="text-primary">✔</span>
+                <span className="text-primary font-bold">✔</span>
                 <span className="text-stone-800 font-bold uppercase tracking-widest text-[10px]">{item}</span>
               </div>
             ))}
@@ -456,7 +418,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
       {/* 9. Testimonials */}
       <section className="bg-[#071e2e] py-24 text-white relative">
         <div className="max-w-4xl mx-auto px-6 relative z-10">
-          <h2 className="text-3xl font-serif font-bold mb-16 text-center">Lo que dicen nuestras clientas</h2>
+          <h2 className="text-3xl font-serif font-bold mb-16 text-center text-white">Lo que dicen nuestras clientas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               "Mi piel se siente mucho más fresca y luminosa.",
@@ -471,7 +433,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
                     <Star key={j} className="w-3 h-3 fill-primary text-primary" />
                   ))}
                 </div>
-                <p className="text-stone-300 italic leading-relaxed">“{text}”</p>
+                <p className="text-stone-100 italic leading-relaxed">“{text}”</p>
               </div>
             ))}
           </div>
@@ -479,23 +441,14 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
       </section>
 
       {/* 10. FAQs */}
-      <section className="py-24">
+      <section className="py-24 text-stone-800">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-4xl font-serif font-bold text-stone-900 mb-16 text-center">Preguntas frecuentes</h2>
           <div className="space-y-10">
-            {[
-              { q: "¿Qué incluye una limpieza facial?", a: "Incluye valoración facial, limpieza profesional, protocolo personalizado y recomendaciones posteriores." },
-              { q: "¿Cada cuánto se recomienda?", a: "Depende del tipo de piel y objetivos individuales. La frecuencia ideal se define en valoración." },
-              { q: "¿Ayuda con glow facial?", a: "Muchas personas buscan este tratamiento para apoyar luminosidad y bienestar facial." },
-              { q: "¿Tiene recuperación?", a: "Generalmente las personas continúan sus actividades normales el mismo día." },
-              { q: "¿Qué productos utilizan?", a: "Utilizamos productos especializados seleccionados según las necesidades de cada piel." },
-              { q: "¿Se puede combinar con otros tratamientos faciales?", a: "Sí, dependiendo de la valoración profesional y objetivos skincare." },
-              { q: "¿Cuánto dura la sesión?", a: "Entre 60 y 90 minutos aproximadamente." },
-              { q: "¿Qué cuidados posteriores se recomiendan?", a: "Hidratación, protector solar y seguimiento de recomendaciones profesionales." },
-            ].map((faq, i) => (
+            {service.faq?.map((faq, i) => (
               <div key={i} className="space-y-3 pb-8 border-b border-stone-100">
-                <h4 className="text-lg font-bold text-stone-900">{faq.q}</h4>
-                <p className="text-stone-600 leading-relaxed">{faq.a}</p>
+                <h4 className="text-lg font-bold text-stone-900">{faq.question}</h4>
+                <p className="text-stone-700 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -540,7 +493,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
               "Cuidado orientado a glow natural y bienestar",
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-4 p-4 bg-stone-50 border border-stone-100">
-                <span className="text-primary">✅</span>
+                <span className="text-primary font-bold">✅</span>
                 <span className="text-stone-800 font-medium">{item}</span>
               </div>
             ))}
