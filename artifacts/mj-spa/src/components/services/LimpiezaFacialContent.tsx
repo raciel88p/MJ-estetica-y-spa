@@ -62,22 +62,15 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
               <div className="pt-4">
                 <p className="text-xl font-serif font-bold text-stone-900 mb-6">Descubre el protocolo ideal para tu piel hoy</p>
                 <div className="space-y-4">
-                  {[
-                    "Agenda tu valoración facial",
-                    "Consulta disponibilidad",
-                    "Escríbenos por WhatsApp",
-                  ].map((text, i) => (
-                    <a
-                      key={i}
-                      href={limpiezaWaLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 text-primary font-bold hover:translate-x-2 transition-transform cursor-pointer"
-                    >
-                      <span className="text-xl">👉</span>
-                      <span className="border-b border-primary/30 pb-0.5">{text}</span>
-                    </a>
-                  ))}
+                  <a
+                    href={limpiezaWaLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-primary font-bold hover:translate-x-2 transition-transform cursor-pointer"
+                  >
+                    <span className="text-xl">👉</span>
+                    <span className="border-b border-primary/30 pb-0.5">Escríbenos por WhatsApp</span>
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -281,7 +274,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
                 >
                   <span className="text-xl group-hover:translate-x-1 transition-transform">👉</span>
                   <span className="border-b-2 border-primary/20 pb-0.5 group-hover:border-primary transition-colors">
-                    {type.linkText || "Consulta disponibilidad"}
+                    {type.linkText || "Escríbenos por WhatsApp"}
                   </span>
                 </a>
               </motion.div>
@@ -473,7 +466,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
               </div>
             ))}
           </div>
-          <p className="text-stone-500 font-medium">Consulta disponibilidad y promociones activas.</p>
+          <p className="text-stone-500 font-medium">Promociones activas disponibles por WhatsApp.</p>
         </div>
       </section>
 
@@ -535,22 +528,15 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
               Tu piel merece más que una limpieza rápida. Merece cuidado profesional, bienestar y una experiencia diseñada especialmente para ti.
             </p>
             <div className="flex flex-col items-center gap-6 pt-6">
-              {[
-                "Agenda tu valoración facial hoy",
-                "Consulta disponibilidad",
-                "Escríbenos por WhatsApp y descubre tu protocolo ideal",
-              ].map((text, i) => (
-                <a
-                  key={i}
-                  href={limpiezaWaLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-primary font-bold hover:scale-105 transition-transform"
-                >
-                  <span className="text-2xl font-serif">✨</span>
-                  <span className="border-b-2 border-primary/20 pb-0.5">{text}</span>
-                </a>
-              ))}
+              <a
+                href={limpiezaWaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-primary font-bold hover:scale-105 transition-transform"
+              >
+                <span className="text-2xl font-serif">✨</span>
+                <span className="border-b-2 border-primary/20 pb-0.5">Escríbenos por WhatsApp y descubre tu protocolo ideal</span>
+              </a>
             </div>
           </div>
 
