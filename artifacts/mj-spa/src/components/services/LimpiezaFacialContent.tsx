@@ -436,7 +436,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
       {/* 10. FAQs */}
       <section className="py-24 text-stone-800">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-4xl font-serif font-bold text-stone-900 mb-16 text-center">Preguntas frecuentes</h2>
+          <h2 className="text-4xl font-serif font-bold text-stone-900 mb-16 text-center">Preguntas Frecuentes sobre Limpiezas Faciales</h2>
           <div className="space-y-10">
             {service.faq?.map((faq, i) => (
               <div key={i} className="space-y-3 pb-8 border-b border-stone-100">

@@ -437,38 +437,54 @@ export const servicePages: ServicePageData[] = [
         linkText: "Escríbenos por WhatsApp",
       },
     ],
-    faqs: [
+    faq: [
       {
-        question: "¿Qué incluye una limpieza facial?",
-        answer: "Incluye valoración facial, limpieza profesional, protocolo personalizado y recomendaciones posteriores.",
+        question: "¿Qué es una limpieza facial profesional?",
+        answer: "Una limpieza facial profesional es un tratamiento estético diseñado para eliminar impurezas, células muertas, exceso de grasa y puntos negros de la piel. Además, ayuda a mejorar la apariencia, textura y salud general del rostro.",
       },
       {
-        question: "¿Cada cuánto se recomienda?",
-        answer: "Depende del tipo de piel y objetivos individuales. La frecuencia ideal se define en valoración.",
+        question: "¿Cada cuánto tiempo se recomienda realizar una limpieza facial?",
+        answer: "La frecuencia recomendada suele ser cada 4 a 6 semanas, aunque puede variar según el tipo de piel, la edad y las necesidades específicas de cada persona.",
       },
       {
-        question: "¿Ayuda con glow facial?",
-        answer: "Muchas personas buscan este tratamiento para apoyar luminosidad y bienestar facial.",
+        question: "¿La limpieza facial es adecuada para todo tipo de piel?",
+        answer: "Sí. Las limpiezas faciales pueden adaptarse a diferentes tipos de piel, incluyendo piel seca, grasa, mixta, sensible o con tendencia acneica.",
       },
       {
-        question: "¿Tiene recuperación?",
-        answer: "Generalmente las personas continúan sus actividades normales el mismo día.",
+        question: "¿Duele una limpieza facial?",
+        answer: "La mayoría de los procedimientos son cómodos y relajantes. Durante la extracción de puntos negros o impurezas puede sentirse una ligera molestia, pero suele ser mínima y temporal.",
       },
       {
-        question: "¿Qué productos utilizan?",
-        answer: "Utilizamos productos especializados seleccionados según las necesidades de cada piel.",
+        question: "¿Cuánto dura una sesión de limpieza facial?",
+        answer: "Una sesión de limpieza facial suele durar entre 45 y 90 minutos, dependiendo del tratamiento y las necesidades de la piel.",
       },
       {
-        question: "¿Se puede combinar con otros tratamientos faciales?",
-        answer: "Sí, dependiendo de la valoración profesional y objetivos skincare.",
+        question: "¿Qué beneficios tiene una limpieza facial?",
+        answer: "Entre los principales beneficios se encuentran: Eliminación de impurezas y células muertas, desobstrucción de poros, reducción de puntos negros, mejora de la textura y luminosidad de la piel, mayor absorción de productos cosméticos y apariencia más saludable y rejuvenecida.",
       },
       {
-        question: "¿Cuánto dura la sesión?",
-        answer: "Entre 60 y 90 minutos aproximadamente.",
+        question: "¿Puedo maquillarme después de una limpieza facial?",
+        answer: "Se recomienda evitar el maquillaje durante las primeras 24 horas para permitir que la piel respire y se recupere adecuadamente.",
       },
       {
-        question: "¿Qué cuidados posteriores se recomiendan?",
-        answer: "Hidratación, protector solar y seguimiento de recomendaciones profesionales.",
+        question: "¿La limpieza facial ayuda a combatir el acné?",
+        answer: "Sí. Las limpiezas faciales pueden ayudar a reducir la acumulación de grasa e impurezas que contribuyen a la aparición del acné. Sin embargo, los casos moderados o severos pueden requerir tratamientos complementarios.",
+      },
+      {
+        question: "¿Qué debo hacer después de una limpieza facial?",
+        answer: "Después del tratamiento se recomienda utilizar protector solar, mantener la piel hidratada, evitar la exposición prolongada al sol y no manipular ni tocar excesivamente el rostro.",
+      },
+      {
+        question: "¿Hay algún tiempo de recuperación?",
+        answer: "No suele ser necesario un periodo de recuperación. Algunas personas pueden experimentar un leve enrojecimiento temporal, que desaparece en pocas horas.",
+      },
+      {
+        question: "¿Cuál es la diferencia entre una limpieza facial básica y una profunda?",
+        answer: "La limpieza facial básica se centra en la higiene y mantenimiento de la piel, mientras que la limpieza profunda incluye extracciones más intensivas y tratamientos específicos para poros obstruidos, exceso de grasa o imperfecciones.",
+      },
+      {
+        question: "¿Puedo hacerme una limpieza facial si tengo la piel sensible?",
+        answer: "Sí. Los tratamientos pueden personalizarse utilizando productos y técnicas específicas para minimizar la irritación y proteger la barrera cutánea.",
       },
     ],
   },
