@@ -186,9 +186,9 @@ export const servicePages: ServicePageData[] = [
   {
     slug: "masajes-relajantes",
     name: "Masajes Relajantes",
+    fullTitle: "Masajes en Turrialba | Relajantes, Terapéuticos y Descontracturantes",
     tagline: "Un viaje al bienestar total",
-    heroDescription:
-      "Déjate llevar por nuestros masajes relajantes, diseñados para desconectar mente y cuerpo. Técnicas suaves y profundas combinadas para una experiencia única de paz interior.",
+    heroDescription: "Recupera tu bienestar con masajes profesionales en Turrialba. ¿Buscas un lugar donde puedas relajarte, aliviar tensiones musculares y desconectarte del estrés diario?",
     benefits: [
       "Reducción del cortisol (hormona del estrés)",
       "Mejora del sueño y el descanso",
@@ -198,44 +198,52 @@ export const servicePages: ServicePageData[] = [
     ],
     items: [
       {
-        title: "Masaje Sueco",
-        description:
-          "El clásico masaje relajante con movimientos largos y deslizantes que liberan la tensión muscular y promueven la circulación.",
-        duration: "60 min",
-        price: "Consultar precio",
+        title: "Masaje Relajante",
+        description: "Ideal para reducir estrés, ansiedad y tensión acumulada.",
+        duration: "60-90 min",
+        linkText: "Escríbenos por WhatsApp",
       },
       {
-        title: "Masaje Aromático",
-        description:
-          "Combina las técnicas de masaje sueco con aceites esenciales seleccionados según tu estado emocional para una experiencia sensorial completa.",
-        duration: "75 min",
-        price: "Consultar precio",
+        title: "Masaje Descontracturante",
+        description: "Perfecto para personas con molestias musculares causadas por trabajo físico, deporte o estrés.",
+        duration: "60-90 min",
+        linkText: "Escríbenos por WhatsApp",
       },
       {
-        title: "Masaje Californiano",
-        description:
-          "Movimientos amplios y envolventes que conectan el cuerpo como un todo, ideal para estados de estrés intenso o ansiedad.",
-        duration: "60 min",
-        price: "Consultar precio",
+        title: "Masaje Terapéutico",
+        description: "Tratamiento enfocado en mejorar la condición muscular y promover el bienestar físico.",
+        duration: "60-90 min",
+        linkText: "Escríbenos por WhatsApp",
       },
       {
-        title: "Ritual Spa Completo",
-        description:
-          "Experiencia de 2 horas que incluye exfoliación corporal, masaje relajante, mascarilla facial y momento de relajación en ambiente spa.",
-        duration: "120 min",
-        price: "Consultar precio",
+        title: "Aromaterapia",
+        description: "Combinamos técnicas de masaje con aceites esenciales para potenciar la relajación.",
+        duration: "60-90 min",
+        linkText: "Escríbenos por WhatsApp",
+      },
+      {
+        title: "Spa para Parejas",
+        description: "Comparte una experiencia única de relajación con alguien especial.",
+        duration: "90 min",
+        linkText: "Escríbenos por WhatsApp",
       },
     ],
     faq: [
       {
-        question: "¿Qué diferencia hay entre un masaje relajante y uno terapéutico?",
-        answer:
-          "El masaje relajante se enfoca en el bienestar general y la reducción del estrés, con técnicas suaves. El terapéutico trabaja zonas específicas con mayor profundidad para abordar dolencias concretas.",
+        question: "¿Necesito reservar con anticipación?",
+        answer: "Sí. Trabajamos con cita previa para brindar una atención personalizada.",
       },
       {
-        question: "¿Puedo pedir una intensidad específica?",
-        answer:
-          "Por supuesto. Antes de comenzar, nuestra terapeuta hablará contigo para adaptar la presión y las técnicas a tus preferencias y necesidades.",
+        question: "¿Cuánto dura una sesión?",
+        answer: "Dependiendo del tratamiento, las sesiones pueden durar entre 60 y 90 minutos.",
+      },
+      {
+        question: "¿Cuál masaje recomiendan para el estrés?",
+        answer: "El masaje relajante combinado con aromaterapia suele ser una de las opciones más solicitadas.",
+      },
+      {
+        question: "¿Atienden parejas?",
+        answer: "Sí. Contamos con opciones de Spa y masajes para parejas.",
       },
     ],
   },
