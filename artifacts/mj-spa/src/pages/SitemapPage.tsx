@@ -46,8 +46,10 @@ const sections = [
     color: "text-primary",
     links: [
       { name: "Todos los Tratamientos Faciales", href: "/tratamientos/faciales" },
-      { name: "Limpieza Facial en Turrialba", href: "/servicios/limpieza-facial-turrialba" },
-      { name: "Limpieza Facial", href: "/servicios/terapias-faciales" },
+      { name: "Limpieza Facial", href: "/servicios/limpieza-facial" },
+      { name: "Limpieza Facial Profunda", href: "/servicios/limpieza-facial-profunda" },
+      { name: "Limpieza Facial Hidratante", href: "/servicios/limpieza-facial-hidratante" },
+      { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
       { name: "Peeling Químico", href: "/servicios/peeling-quimico" },
       { name: "HOLLYWOOD PEEL EN TURRIALBA", href: "/servicios/hollywood-peel" },
       { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },

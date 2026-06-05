@@ -3,6 +3,10 @@ export type ServiceItem = {
   description: string;
   duration?: string;
   price?: string;
+  badge?: string;
+  link?: string;
+  linkText?: string;
+  features?: string[];
 };
 
 export type ServicePageData = {
@@ -47,8 +51,10 @@ export const tratamientosCorporalesLinks = [
 
 export const tratamientosFacialesLinks = [
   { name: "Tratamientos Faciales", href: "/servicios/faciales" },
-  { name: "Limpieza Facial en Turrialba", href: "/servicios/limpieza-facial-turrialba" },
-  { name: "Limpieza Facial", href: "/servicios/terapias-faciales" },
+  { name: "Limpieza Facial", href: "/servicios/limpieza-facial" },
+  { name: "Limpieza Facial Profunda", href: "/servicios/limpieza-facial-profunda" },
+  { name: "Limpieza Facial Hidratante", href: "/servicios/limpieza-facial-hidratante" },
+  { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
   { name: "Peeling Químico", href: "/servicios/peeling-quimico" },
   { name: "Hollywood Peel en Turrialba", href: "/servicios/hollywood-peel" },
   { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
@@ -139,32 +145,28 @@ export const servicePages: ServicePageData[] = [
     ],
     items: [
       {
-        title: "Higiene Facial Completa",
-        description:
-          "Limpieza profunda que elimina impurezas, puntos negros y células muertas. Incluye vaporización, extracción y mascarilla personalizada.",
-        duration: "75 min",
-        price: "Consultar precio",
+        title: "Limpieza facial profunda",
+        description: "Ideal para quienes buscan una sensación de limpieza intensiva y renovación facial.",
+        features: ["Limpieza profesional", "Bienestar facial", "Sensación de frescura profunda"],
+        linkText: "Consulta disponibilidad",
       },
       {
-        title: "Tratamiento Hidratante Intensivo",
-        description:
-          "Aporta hidratación profunda a pieles secas y deshidratadas mediante activos de última generación y técnicas de penetración.",
-        duration: "60 min",
-        price: "Consultar precio",
+        title: "Limpieza facial hidratante",
+        description: "Pensada para pieles que buscan hidratación, suavidad y luminosidad natural.",
+        features: ["Glow saludable", "Sensación de hidratación", "Apariencia revitalizada"],
+        linkText: "Agenda tu valoración facial",
       },
       {
-        title: "Tratamiento Antiacné",
-        description:
-          "Protocolo específico para pieles mixtas-grasas con tendencia acneica. Reduce la producción de sebo y previene futuras imperfecciones.",
-        duration: "60 min",
-        price: "Consultar precio",
+        title: "Facial premium glow",
+        description: "Una experiencia skincare orientada al bienestar, relajación y luminosidad facial.",
+        features: ["Experiencia wellness", "Productos especializados", "Cuidado facial premium"],
+        linkText: "Descubre el protocolo ideal",
       },
       {
-        title: "Facial Antienvejecimiento",
-        description:
-          "Combina activos reafirmantes, antioxidantes y técnicas de mesoterapia sin agujas para un efecto lifting y rejuvenecedor inmediato.",
-        duration: "90 min",
-        price: "Consultar precio",
+        title: "Protocolos skincare avanzados",
+        description: "Tratamientos personalizados según necesidades específicas evaluadas profesionalmente.",
+        features: ["Valoración individual", "Protocolos personalizados", "Seguimiento profesional"],
+        linkText: "Escríbenos por WhatsApp",
       },
     ],
     faq: [
@@ -394,61 +396,11 @@ export const servicePages: ServicePageData[] = [
     ],
   },
   {
-    slug: "limpieza-facial-turrialba",
+    slug: "limpieza-facial",
     name: "Limpieza Facial",
     fullTitle: "Limpieza Facial en Turrialba",
     tagline: "Glow natural, bienestar facial y skincare premium",
-    heroDescription: "Glow natural, bienestar facial y skincare premium en una experiencia diseñada para tu piel <br /><br /> Tu piel habla antes que tú. <br /> Y cuando se siente apagada, con exceso de grasa, textura irregular o sin luminosidad… también afecta cómo te ves y cómo te sientes.",
-    benefits: [
-      "Glow y luminosidad facial",
-      "Sensación de limpieza profunda",
-      "Bienestar general de la piel",
-      "Apariencia más fresca y revitalizada",
-      "Textura facial más uniforme",
-      "Rutinas de skincare personalizadas",
-    ],
-    items: [
-      {
-        title: "Limpieza facial profunda",
-        description: "Ideal para quienes buscan una sensación de limpieza intensiva y renovación facial.",
-        duration: "75-90 min",
-        price: "Consultar",
-      },
-      {
-        title: "Limpieza facial hidratante",
-        description: "Pensada para pieles que buscan hidratación, suavidad y luminosidad natural.",
-        duration: "60 min",
-        price: "Consultar",
-      },
-      {
-        title: "Facial premium glow",
-        description: "Una experiencia skincare orientada al bienestar, relajación y luminosidad facial.",
-        duration: "90 min",
-        price: "Consultar",
-      },
-    ],
-    faqs: [
-      {
-        question: "¿Qué incluye una limpieza facial?",
-        answer: "Incluye valoración facial, limpieza profesional, protocolo personalizado y recomendaciones posteriores.",
-      },
-      {
-        question: "¿Cada cuánto se recomienda?",
-        answer: "Depende del tipo de piel y objetivos individuales. La frecuencia ideal se define en valoración.",
-      },
-      {
-        question: "¿Tiene recuperación?",
-        answer: "Generalmente las personas continúan sus actividades normales el mismo día.",
-      },
-    ],
-  },
-  {
-    slug: "terapias-faciales",
-    name: "Limpieza Facial",
-    fullTitle: "Limpieza Facial en Turrialba",
-    tagline: "Glow natural, bienestar facial y skincare premium",
-    heroDescription:
-      "En MJ Estética & Wellness Center entendemos que una limpieza facial no se trata solo de “limpiar la piel”. Se trata de ayudarte a recuperar frescura, glow natural y bienestar facial mediante protocolos personalizados y una experiencia skincare premium en Turrialba.",
+    heroDescription: "En MJ Estética & Wellness Center entendemos que una limpieza facial no se trata solo de “limpiar la piel”.<br />Se trata de ayudarte a recuperar frescura, glow natural y bienestar facial mediante protocolos personalizados y una experiencia skincare premium en Turrialba.",
     benefits: [
       "Glow y luminosidad facial",
       "Sensación de limpieza profunda",
@@ -463,26 +415,26 @@ export const servicePages: ServicePageData[] = [
       {
         title: "Limpieza facial profunda",
         description: "Ideal para quienes buscan una sensación de limpieza intensiva y renovación facial.",
-        duration: "75-90 min",
-        price: "Consultar",
+        features: ["Limpieza profesional", "Bienestar facial", "Sensación de frescura profunda"],
+        linkText: "Consulta disponibilidad",
       },
       {
         title: "Limpieza facial hidratante",
         description: "Pensada para pieles que buscan hidratación, suavidad y luminosidad natural.",
-        duration: "60 min",
-        price: "Consultar",
+        features: ["Glow saludable", "Sensación de hidratación", "Apariencia revitalizada"],
+        linkText: "Agenda tu valoración facial",
       },
       {
         title: "Facial premium glow",
         description: "Una experiencia skincare orientada al bienestar, relajación y luminosidad facial.",
-        duration: "90 min",
-        price: "Consultar",
+        features: ["Experiencia wellness", "Productos especializados", "Cuidado facial premium"],
+        linkText: "Descubre el protocolo ideal",
       },
       {
         title: "Protocolos skincare avanzados",
         description: "Tratamientos personalizados según necesidades específicas evaluadas profesionalmente.",
-        duration: "Variable",
-        price: "Consultar",
+        features: ["Valoración individual", "Protocolos personalizados", "Seguimiento profesional"],
+        linkText: "Escríbenos por WhatsApp",
       },
     ],
     faq: [
@@ -517,6 +469,89 @@ export const servicePages: ServicePageData[] = [
       {
         question: "¿Qué cuidados posteriores se recomiendan?",
         answer: "Hidratación, protector solar y seguimiento de recomendaciones profesionales.",
+      },
+    ],
+  },
+  {
+    slug: "limpieza-facial-profunda",
+    name: "Limpieza Facial Profunda",
+    tagline: "Limpieza intensiva y renovación facial",
+    heroDescription: "Nuestra limpieza facial profunda está diseñada para quienes buscan una renovación completa de la piel, eliminando impurezas acumuladas y devolviendo la vitalidad perdida.",
+    benefits: [
+      "Eliminación profunda de impurezas",
+      "Renovación celular visible",
+      "Piel más suave y receptiva a productos",
+    ],
+    items: [
+      {
+        title: "Extracción y Purificación",
+        description: "Proceso detallado de eliminación de puntos negros y comedones.",
+      }
+    ],
+  },
+  {
+    slug: "limpieza-facial-hidratante",
+    name: "Limpieza Facial Hidratante",
+    tagline: "Hidratación, suavidad y luminosidad natural",
+    heroDescription: "Protocolo ideal para pieles secas o deshidratadas que necesitan recuperar su equilibrio hídrico y lucir un glow saludable.",
+    benefits: [
+      "Hidratación profunda",
+      "Suavidad inmediata",
+      "Luminosidad natural recuperada",
+    ],
+    items: [
+      {
+        title: "Nutrición Hídrica",
+        description: "Aplicación de activos altamente hidratantes para calmar y nutrir la piel.",
+      }
+    ],
+  },
+  {
+    slug: "terapias-faciales",
+    name: "Terapias Faciales",
+    tagline: "Tecnología y naturaleza al servicio de tu piel",
+    heroDescription: "Combinamos tecnologías estéticas avanzadas con principios naturales para tratar en profundidad los problemas más comunes de la piel y devolverte un rostro sano y luminoso.",
+    benefits: [
+      "Resultados visibles y medibles",
+      "Tratamientos personalizados",
+      "Tecnología de última generación",
+      "Sin efectos secundarios",
+      "Mejora progresiva de la calidad de la piel",
+    ],
+    items: [
+      {
+        title: "Radiofrecuencia Facial",
+        description: "Estimula la producción de colágeno y elastina mediante calor controlado. Efecto tensor y reafirmante visible desde la primera sesión.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Mesoterapia Facial",
+        description: "Microinyecciones con cóctail de vitaminas, ácido hialurónico y antioxidantes que hidratan, nutren y rejuvenecen la piel en profundidad.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Fototerapia LED",
+        description: "Luz LED de diferentes longitudes de onda que estimula la regeneración celular, reduce la inflamación y mejora la textura cutánea.",
+        duration: "30 min",
+        price: "Consultar precio",
+      },
+      {
+        title: "Microdermoabrasión",
+        description: "Exfoliación mecánica controlada que elimina las capas superficiales de la piel revelando una tez más suave, uniforme y luminosa.",
+        duration: "45 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Las terapias faciales son compatibles entre sí?",
+        answer: "Sí, muchas de ellas se pueden combinar en un mismo protocolo para potenciar los resultados. Nuestra especialista diseñará el plan más adecuado para ti.",
+      },
+      {
+        question: "¿Cuánto tiempo duran los resultados?",
+        answer: "Depende del tratamiento y de los cuidados en casa. La radiofrecuencia tiene efectos acumulativos que pueden durar varios meses con sesiones de mantenimiento.",
       },
     ],
   },
