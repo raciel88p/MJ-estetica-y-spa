@@ -65,6 +65,7 @@ export const tratamientosFacialesLinks = [
   { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
   { name: "Microagujas con Vitamina C", href: "/servicios/microagujas-vitamina-c" },
   { name: "Rejuvenecimiento Facial", href: "/servicios/rejuvenecimiento-facial" },
+  { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
   { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
 ];
 
@@ -520,6 +521,54 @@ export const servicePages: ServicePageData[] = [
         title: "Nutrición Hídrica",
         description: "Aplicación de activos altamente hidratantes para calmar y nutrir la piel.",
       }
+    ],
+  },
+  {
+    slug: "microdermoabrasion",
+    name: "Microdermoabrasión",
+    fullTitle: "Facial de Microdermoabrasión en Turrialba",
+    tagline: "Renueva la textura, luminosidad y frescura natural de tu piel con una experiencia premium de skincare avanzado",
+    heroDescription: "¿Sientes tu piel opaca, con textura irregular o sin ese glow saludable que deseas?<br />El Facial de Microdermoabrasión de MJ Estética & Wellness Center está diseñado para apoyar protocolos de renovación facial mediante exfoliación profesional y atención personalizada orientada a mejorar la apariencia, luminosidad y bienestar de tu piel.",
+    benefits: [
+      "Piel más luminosa",
+      "Sensación de frescura facial",
+      "Textura más uniforme",
+      "Glow natural progresivo",
+      "Experiencia wellness premium",
+    ],
+    items: [
+      {
+        title: "Protocolo Microdermoabrasión",
+        description: "Tratamiento de exfoliación profesional orientado a renovación y revitalización de la piel.",
+        duration: "45-60 min",
+        linkText: "Escríbenos por WhatsApp",
+      }
+    ],
+    faq: [
+      {
+        question: "¿La microdermoabrasión duele?",
+        answer: "Generalmente es un procedimiento confortable y bien tolerado.",
+      },
+      {
+        question: "¿Cuándo se ven resultados?",
+        answer: "Muchas personas notan sensación de frescura y luminosidad desde las primeras sesiones, aunque los resultados pueden variar según cada piel.",
+      },
+      {
+        question: "¿Ayuda con textura facial?",
+        answer: "El tratamiento está orientado a apoyar protocolos de renovación facial y apariencia más uniforme de la piel.",
+      },
+      {
+        question: "¿Tiene tiempo de recuperación?",
+        answer: "Normalmente las personas continúan sus actividades habituales siguiendo recomendaciones de hidratación y protección solar.",
+      },
+      {
+        question: "¿Se puede combinar con otros faciales?",
+        answer: "Sí, dependiendo de la valoración profesional y objetivos skincare.",
+      },
+      {
+        question: "¿Cuántas sesiones se recomiendan?",
+        answer: "Cada protocolo es personalizado según las necesidades individuales de la piel.",
+      },
     ],
   },
   {

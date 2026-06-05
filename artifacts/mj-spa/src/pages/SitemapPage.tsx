@@ -60,6 +60,7 @@ const sections = [
       { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
       { name: "Microagujas con Vitamina C", href: "/servicios/microagujas-vitamina-c" },
       { name: "Rejuvenecimiento Facial en Turrialba", href: "/servicios/rejuvenecimiento-facial" },
+      { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
       { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
     ],
   },

@@ -947,6 +947,7 @@ export default function Home() {
                       <option value="microagujas-ginkgo-biloba">Microagujas con Ginkgo Biloba</option>
                       <option value="microagujas-vitamina-c">Microagujas con Vitamina C</option>
                       <option value="rejuvenecimiento-facial">Rejuvenecimiento Facial en Turrialba</option>
+                      <option value="microdermoabrasion">Microdermoabrasión</option>
                       <option value="hollywood-peel">HOLLYWOOD PEEL EN TURRIALBA</option>
                       <option value="radiofrecuencia-facial">Radiofrecuencia Facial</option>
                       <option value="eliminacion-manchas">Eliminación de Manchas</option>
