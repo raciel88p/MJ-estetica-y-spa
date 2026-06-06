@@ -582,49 +582,110 @@ export const servicePages: ServicePageData[] = [
   {
     slug: "terapias-faciales",
     name: "Terapias Faciales",
-    tagline: "Tecnología y naturaleza al servicio de tu piel",
-    heroDescription: "Combinamos tecnologías estéticas avanzadas con principios naturales para tratar en profundidad los problemas más comunes de la piel y devolverte un rostro sano y luminoso.",
+    fullTitle: "Limpieza Facial en Turrialba",
+    tagline: "Protocolos personalizados para recuperar frescura, glow natural y bienestar facial",
+    heroDescription:
+      "En MJ Estética & Wellness Center entendemos que una limpieza facial no se trata solo de “limpiar la piel”. Se trata de ayudarte a recuperar frescura, glow natural y bienestar facial mediante protocolos personalizados y una experiencia skincare premium en Turrialba.",
     benefits: [
-      "Resultados visibles y medibles",
-      "Tratamientos personalizados",
-      "Tecnología de última generación",
-      "Sin efectos secundarios",
-      "Mejora progresiva de la calidad de la piel",
+      "Valoración facial personalizada",
+      "Protocolos adaptados según tu tipo de piel",
+      "Experiencia relajante y profesional",
+      "Productos especializados skincare",
+      "Atención enfocada en bienestar y luminosidad facial",
+      "Glow y luminosidad facial",
+      "Sensación de limpieza profunda",
+      "Bienestar general de la piel",
+      "Apariencia más fresca y revitalizada",
+      "Textura facial más uniforme",
+      "Rutinas de skincare personalizadas",
+      "Cuidado facial preventivo",
+      "Sensación de hidratación y frescura",
     ],
     items: [
       {
-        title: "Radiofrecuencia Facial",
-        description: "Estimula la producción de colágeno y elastina mediante calor controlado. Efecto tensor y reafirmante visible desde la primera sesión.",
-        duration: "60 min",
-        price: "Consultar precio",
+        title: "Limpieza facial profunda",
+        description:
+          "Ideal para quienes buscan una sensación de limpieza intensiva y renovación facial.",
+        features: [
+          "Limpieza profesional",
+          "Bienestar facial",
+          "Sensación de frescura profunda",
+        ],
+        linkText: "Consulta disponibilidad",
       },
       {
-        title: "Mesoterapia Facial",
-        description: "Microinyecciones con cóctail de vitaminas, ácido hialurónico y antioxidantes que hidratan, nutren y rejuvenecen la piel en profundidad.",
-        duration: "45 min",
-        price: "Consultar precio",
+        title: "Limpieza facial hidratante",
+        description:
+          "Pensada para pieles que buscan hidratación, suavidad y luminosidad natural.",
+        features: [
+          "Glow saludable",
+          "Sensación de hidratación",
+          "Apariencia revitalizada",
+        ],
+        linkText: "Agenda tu valoración facial",
       },
       {
-        title: "Fototerapia LED",
-        description: "Luz LED de diferentes longitudes de onda que estimula la regeneración celular, reduce la inflamación y mejora la textura cutánea.",
-        duration: "30 min",
-        price: "Consultar precio",
+        title: "Facial premium glow",
+        description:
+          "Una experiencia skincare orientada al bienestar, relajación y luminosidad facial.",
+        features: [
+          "Experiencia wellness",
+          "Productos especializados",
+          "Cuidado facial premium",
+        ],
+        linkText: "Descubre el protocolo ideal para tu piel",
       },
       {
-        title: "Microdermoabrasión",
-        description: "Exfoliación mecánica controlada que elimina las capas superficiales de la piel revelando una tez más suave, uniforme y luminosa.",
-        duration: "45 min",
-        price: "Consultar precio",
+        title: "Protocolos skincare avanzados",
+        description:
+          "Tratamientos personalizados según necesidades específicas evaluadas profesionalmente.",
+        features: [
+          "Valoración individual",
+          "Protocolos personalizados",
+          "Seguimiento profesional",
+        ],
+        linkText: "Escríbenos por WhatsApp",
       },
     ],
     faq: [
       {
-        question: "¿Las terapias faciales son compatibles entre sí?",
-        answer: "Sí, muchas de ellas se pueden combinar en un mismo protocolo para potenciar los resultados. Nuestra especialista diseñará el plan más adecuado para ti.",
+        question: "¿Qué incluye una limpieza facial?",
+        answer:
+          "Incluye valoración facial, limpieza profesional, protocolo personalizado y recomendaciones posteriores.",
       },
       {
-        question: "¿Cuánto tiempo duran los resultados?",
-        answer: "Depende del tratamiento y de los cuidados en casa. La radiofrecuencia tiene efectos acumulativos que pueden durar varios meses con sesiones de mantenimiento.",
+        question: "¿Cada cuánto se recomienda?",
+        answer:
+          "Depende del tipo de piel y objetivos individuales. La frecuencia ideal se define en valoración.",
+      },
+      {
+        question: "¿Ayuda con glow facial?",
+        answer:
+          "Muchas personas buscan este tratamiento para apoyar luminosidad y bienestar facial.",
+      },
+      {
+        question: "¿Tiene recuperación?",
+        answer:
+          "Generalmente las personas continúan sus actividades normales el mismo día.",
+      },
+      {
+        question: "¿Qué productos utilizan?",
+        answer:
+          "Utilizamos productos especializados seleccionados según las necesidades de cada piel.",
+      },
+      {
+        question: "¿Se puede combinar con otros tratamientos faciales?",
+        answer:
+          "Sí, dependiendo de la valoración profesional y objetivos skincare.",
+      },
+      {
+        question: "¿Cuánto dura la sesión?",
+        answer: "Entre 60 y 90 minutos aproximadamente.",
+      },
+      {
+        question: "¿Qué cuidados posteriores se recomiendan?",
+        answer:
+          "Hidratación, protector solar y seguimiento de recomendaciones profesionales.",
       },
     ],
   },
@@ -1170,6 +1231,7 @@ export const servicePages: ServicePageData[] = [
     name: "Hilos de Colágeno",
     fullTitle: "Hilos de Colágeno en Turrialba",
     tagline: "Rejuvenecimiento Facial Natural, Firmeza y Glow Premium",
+    heroBg: "https://i5.walmartimages.com/asr/81a8d6ba-e929-41d2-b349-eaaac42faa01.5a1383e330f604e473d84befe6ae4df5.jpeg",
     heroDescription:
       "Diseñamos protocolos personalizados con Hilos de Colágeno orientados a rejuvenecimiento progresivo, firmeza facial y armonización estética natural en Turrialba.",
     benefits: [

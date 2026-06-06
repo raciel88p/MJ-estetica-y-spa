@@ -227,6 +227,10 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
   const category = serviceCategoryMap[service.slug];
   const BASE = import.meta.env.BASE_URL;
 
+  const heroBg = service.heroBg?.startsWith("http")
+    ? service.heroBg
+    : `${BASE}images/${heroBgMap[service.slug] ?? service.heroBg ?? "hero-bg.webp"}`;
+
   const breadcrumbItems = category
     ? [{ label: category.name, href: category.href }, { label: service.name }]
     : [{ label: service.name }];
@@ -253,7 +257,7 @@ export default function ServicePage({ service }: { service: ServicePageData }) {
       <section className="relative min-h-[75vh] flex items-end pb-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${BASE}images/${heroBgMap[service.slug] ?? service.heroBg ?? "hero-bg.webp"})` }}
+          style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/90" />
 
