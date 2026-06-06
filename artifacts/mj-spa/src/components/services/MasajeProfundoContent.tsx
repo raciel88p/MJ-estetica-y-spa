@@ -75,7 +75,7 @@ export function MasajeProfundoContent({
         </div>
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-             <h2 className="text-3xl md:text-5xl font-serif italic mb-12">Imagina por un momento…</h2>
+             <h2 className="text-3xl md:text-5xl font-serif italic mb-12 text-white">Imagina por un momento…</h2>
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                {[
                  "Llegar a un ambiente tranquilo.",
