@@ -66,7 +66,7 @@ export const tratamientosFacialesLinks = [
   { name: "Microagujas con Vitamina C", href: "/servicios/microagujas-vitamina-c" },
   { name: "Rejuvenecimiento Facial", href: "/servicios/rejuvenecimiento-facial" },
   { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
-  { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
+  { name: "Tratamiento para Ojeras en Turrialba", href: "/servicios/tratamiento-ojeras" },
 ];
 
 export const tratamientosPiernasLinks = [
@@ -2197,57 +2197,43 @@ export const servicePages: ServicePageData[] = [
   // ── TRATAMIENTO DE OJERAS ───────────────────────────
   {
     slug: "tratamiento-ojeras",
-    name: "Tratamiento de Ojeras",
-    tagline: "Elimina las ojeras y recupera una mirada luminosa y descansada",
+    name: "Tratamiento para Ojeras en Turrialba",
+    fullTitle: "Tratamiento para Ojeras en Turrialba | Recupera una Mirada Más Fresca y Rejuvenecida",
+    tagline: "Recupera una Mirada Más Fresca y Rejuvenecida",
     heroDescription:
-      "Las ojeras son uno de los problemas estéticos más comunes y difíciles de disimular con maquillaje. En MJ Fisio Estética y Spa combinamos las técnicas más avanzadas — ácido hialurónico, biorevitalización y peelings específicos — para reducir el color, el volumen y la textura de las ojeras de forma segura, natural y duradera.",
+      "Descubre cómo nuestro tratamiento de carboxiterapia para ojeras en Turrialba puede ayudarte a mejorar la apariencia de bolsas, pigmentación oscura y signos visibles de fatiga.",
     benefits: [
-      "Mirada más luminosa, descansada y juvenil desde la primera sesión",
-      "Reducción del color oscuro y las sombras bajo los ojos",
-      "Relleno de surcos lagrimales que proyectan cansancio",
-      "Tratamientos no quirúrgicos con recuperación inmediata",
-      "Protocolos personalizados según el tipo y causa de tu ojera",
-      "Resultados visibles y duraderos sin cirugía",
+      "Ayuda a disminuir la apariencia de las ojeras",
+      "Favorece una mirada más descansada",
+      "Mejora la luminosidad del contorno de ojos",
+      "Procedimiento mínimamente invasivo",
+      "Sin cirugía",
+      "Sesiones rápidas",
+      "Atención personalizada",
+      "Tratamiento profesional en Turrialba"
     ],
-    items: [
-      {
-        title: "Relleno de Surco Lagrimal con Ácido Hialurónico",
-        description:
-          "Microinyecciones de ácido hialurónico en el surco lagrimal para rellenar la depresión que genera sombra y aspecto de cansancio. Resultado inmediato, natural y de larga duración.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Biorevitalización Periocular",
-        description:
-          "Infiltración de vitaminas, aminoácidos y ácido hialurónico no reticulado en la zona del contorno de ojos para mejorar la hidratación, luminosidad y reducir el color oscuro.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Protocolo Completo Antiojeras",
-        description:
-          "Combinación de relleno, biorevitalización y cuidado tópico especializado para resultados máximos en ojeras mixtas (vasculares + estructurales). Incluye seguimiento y retoque.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-    ],
+    items: [],
     faq: [
       {
-        question: "¿Cuántas sesiones necesito para ver resultados?",
-        answer:
-          "Para ojeras vasculares (de color) se recomiendan 3-4 sesiones de biorevitalización. Para ojeras estructurales (surco lagrimal hundido), el relleno con ácido hialurónico muestra resultado inmediato desde la primera sesión.",
+        question: "¿Dónde realizan el tratamiento para ojeras en Turrialba?",
+        answer: "En MJ Fisio Estética & Spa, Turrialba, Costa Rica."
       },
       {
-        question: "¿Es un tratamiento doloroso?",
-        answer:
-          "Aplicamos crema anestésica antes del procedimiento. La mayoría de las pacientes lo describen como muy tolerable. La zona periocular es sensible pero el procedimiento completo dura muy pocos minutos.",
+        question: "¿La carboxiterapia para ojeras duele?",
+        answer: "Puede generar molestias leves y temporales dependiendo de cada persona."
       },
       {
-        question: "¿Cuánto dura el efecto?",
-        answer:
-          "El relleno con ácido hialurónico tiene una duración de 9 a 12 meses en la zona periocular. La biorevitalización se mantiene con sesiones de mantenimiento cada 3-4 meses.",
+        question: "¿Cuánto dura una sesión?",
+        answer: "Entre 20 y 40 minutos aproximadamente."
       },
+      {
+        question: "¿Cuántas sesiones necesito?",
+        answer: "La cantidad varía según cada caso y será definida durante la valoración."
+      },
+      {
+        question: "¿Es un procedimiento quirúrgico?",
+        answer: "No, es un tratamiento estético no quirúrgico."
+      }
     ],
   },
 

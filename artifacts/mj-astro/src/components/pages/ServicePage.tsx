@@ -38,6 +38,7 @@ import { MicroagujasVitaminaCContent } from "@/components/services/MicroagujasVi
 import { RejuvenecimientoFacialContent } from "@/components/services/RejuvenecimientoFacialContent";
 import { LimpiezaFacialContent } from "@/components/services/LimpiezaFacialContent";
 import { MicrodermoabrasionContent } from "@/components/services/MicrodermoabrasionContent";
+import { OjerasServiceContent } from "@/components/services/OjerasServiceContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 
 import AnticelulitisServiceContent from "@/components/services/AnticelulitisServiceContent";
@@ -393,8 +394,32 @@ function ServicePage({ service }: { service: ServicePageData }) {
                   </span>
                 </div>
                 <p className="text-stone-500 text-sm leading-relaxed mt-4 max-w-xl">
-                  La estética es una pasión que ha formado parte de mi vida desde siempre. Me inspira la belleza en todas sus formas y me dedico a realzar la belleza natural de cada persona, ayudándoles a sentirse seguras y radiantes.
+                  {service.slug === "tratamiento-ojeras"
+                    ? "¿Tus ojeras te hacen lucir cansada aunque descanses bien? Descubre cómo nuestro tratamiento de carboxiterapia para ojeras en Turrialba puede ayudarte a mejorar la apariencia de bolsas, pigmentación oscura y signos visibles de fatiga."
+                    : "La estética es una pasión que ha formado parte de mi vida desde siempre. Me inspira la belleza en todas sus formas y me dedico a realzar la belleza natural de cada persona, ayudándoles a sentirse seguras y radiantes."
+                  }
                 </p>
+                {service.slug === "tratamiento-ojeras" && (
+                  <div className="flex flex-col gap-3 mt-6">
+                    <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> Valoración Personalizada
+                    </div>
+                    <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> Tratamiento No Quirúrgico
+                    </div>
+                    <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> Atención Profesional en Turrialba
+                    </div>
+                    <div className="flex flex-wrap gap-4 mt-4">
+                      <a href={WA} target="_blank" rel="noopener noreferrer" className="bg-primary text-white text-[10px] font-bold px-5 py-3 tracking-widest uppercase hover:bg-stone-900 transition-colors">
+                        📲 Agendar Valoración por WhatsApp
+                      </a>
+                      <a href={WA} target="_blank" rel="noopener noreferrer" className="border border-stone-900 text-stone-900 text-[10px] font-bold px-5 py-3 tracking-widest uppercase hover:bg-stone-900 hover:text-white transition-colors">
+                        🎁 Descargar Guía Gratuita para Ojeras
+                      </a>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>
@@ -447,6 +472,10 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
       {service.slug === "limpieza-facial" && (
         <LimpiezaFacialContent service={service} waLink={WA} />
+      )}
+
+      {service.slug === "tratamiento-ojeras" && (
+        <OjerasServiceContent waLink={WA} />
       )}
 
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
@@ -597,7 +626,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
-      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "limpieza-facial"].includes(service.slug) && (
+      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "limpieza-facial", "tratamiento-ojeras"].includes(service.slug) && (
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -644,7 +673,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {!["adn-salmon", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "limpieza-facial"].includes(service.slug) && (
+      {!["adn-salmon", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "limpieza-facial", "tratamiento-ojeras"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -937,7 +966,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── URGENCY CTA BAND ──────────────────────────── */}
-      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "masajes-profundos" && service.slug !== "botox-full-face" && service.slug !== "hilos-tensores" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && service.slug !== "relleno-de-labios" && service.slug !== "tratamiento-anticelulitis" && service.slug !== "auriculoterapia" && service.slug !== "microagujas" && service.slug !== "microagujas-ginkgo-biloba" && service.slug !== "microagujas-vitamina-c" && service.slug !== "rejuvenecimiento-facial" && service.slug !== "limpieza-facial" && (
+      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "masajes-profundos" && service.slug !== "botox-full-face" && service.slug !== "hilos-tensores" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && service.slug !== "relleno-de-labios" && service.slug !== "tratamiento-anticelulitis" && service.slug !== "auriculoterapia" && service.slug !== "microagujas" && service.slug !== "microagujas-ginkgo-biloba" && service.slug !== "microagujas-vitamina-c" && service.slug !== "rejuvenecimiento-facial" && service.slug !== "limpieza-facial" && service.slug !== "tratamiento-ojeras" && (
       <section className="bg-primary py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -972,7 +1001,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "limpieza-facial"].includes(service.slug) && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "limpieza-facial", "tratamiento-ojeras"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div
