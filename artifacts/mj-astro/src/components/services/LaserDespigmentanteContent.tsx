@@ -352,7 +352,7 @@ export function LaserDespigmentanteContent({ service, waLink }: { service: Servi
               <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Guía Gratuita:</h2>
               <p className="text-2xl font-serif mb-10 italic">“Cómo mejorar los resultados de tu tratamiento despigmentante”</p>
 
-              <div className="max-w-md mx-auto bg-white p-10 text-stone-900 shadow-2xl">
+              <div className="max-w-xl mx-auto bg-white p-10 text-stone-900 shadow-2xl">
                  <p className="text-[10px] font-bold text-primary tracking-[0.3em] uppercase mb-4">💌 Comenta la palabra:</p>
                  <p className="text-5xl font-serif font-bold text-primary mb-10 underline decoration-stone-200">“DESPIGMENTANTE”</p>
                  <p className="text-sm text-stone-500 leading-relaxed mb-8">y recibe GRATIS nuestra guía con recomendaciones para apoyar:</p>
