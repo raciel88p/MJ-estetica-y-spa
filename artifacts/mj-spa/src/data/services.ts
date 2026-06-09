@@ -411,6 +411,11 @@ export const servicePages: ServicePageData[] = [
     tagline: "Glow natural, bienestar facial y skincare premium",
     heroDescription: "En MJ Estética & Wellness Center entendemos que una limpieza facial no se trata solo de “limpiar la piel”.<br />Se trata de ayudarte a recuperar frescura, glow natural y bienestar facial mediante protocolos personalizados y una experiencia skincare premium en Turrialba.",
     benefits: [
+      "Valoración facial personalizada",
+      "Protocolos adaptados según tu tipo de piel",
+      "Experiencia relajante y profesional",
+      "Productos especializados skincare",
+      "Atención enfocada en bienestar y luminosidad facial",
       "Glow y luminosidad facial",
       "Sensación de limpieza profunda",
       "Bienestar general de la piel",
@@ -425,19 +430,19 @@ export const servicePages: ServicePageData[] = [
         title: "Limpieza facial profunda",
         description: "Ideal para quienes buscan una sensación de limpieza intensiva y renovación facial.",
         features: ["Limpieza profesional", "Bienestar facial", "Sensación de frescura profunda"],
-        linkText: "Escríbenos por WhatsApp",
+        linkText: "Consulta disponibilidad",
       },
       {
         title: "Limpieza facial hidratante",
         description: "Pensada para pieles que buscan hidratación, suavidad y luminosidad natural.",
         features: ["Glow saludable", "Sensación de hidratación", "Apariencia revitalizada"],
-        linkText: "Escríbenos por WhatsApp",
+        linkText: "Agenda tu valoración facial",
       },
       {
         title: "Facial premium glow",
         description: "Una experiencia skincare orientada al bienestar, relajación y luminosidad facial.",
         features: ["Experiencia wellness", "Productos especializados", "Cuidado facial premium"],
-        linkText: "Escríbenos por WhatsApp",
+        linkText: "Descubre el protocolo ideal para tu piel",
       },
       {
         title: "Protocolos skincare avanzados",
@@ -448,52 +453,52 @@ export const servicePages: ServicePageData[] = [
     ],
     faq: [
       {
-        question: "¿Qué es una limpieza facial profesional?",
-        answer: "Una limpieza facial profesional es un tratamiento estético diseñado para eliminar impurezas, células muertas, exceso de grasa y puntos negros de la piel. Además, ayuda a mejorar la apariencia, textura y salud general del rostro.",
+        question: "¿Qué incluye una limpieza facial?",
+        answer: "Incluye valoración facial, limpieza profesional, protocolo personalizado y recomendaciones posteriores.",
       },
       {
-        question: "¿Cada cuánto tiempo se recomienda realizar una limpieza facial?",
-        answer: "La frecuencia recomendada suele ser cada 4 a 6 semanas, aunque puede variar según el tipo de piel, la edad y las necesidades específicas de cada persona.",
+        question: "¿Cada cuánto se recomienda?",
+        answer: "Depende del tipo de piel y objetivos individuales. La frecuencia ideal se define en valoración.",
       },
       {
-        question: "¿La limpieza facial es adecuada para todo tipo de piel?",
-        answer: "Sí. Las limpiezas faciales pueden adaptarse a diferentes tipos de piel, incluyendo piel seca, grasa, mixta, sensible o con tendencia acneica.",
+        question: "¿Ayuda con glow facial?",
+        answer: "Muchas personas buscan este tratamiento para apoyar luminosidad y bienestar facial.",
+      },
+      {
+        question: "¿Tiene recuperación?",
+        answer: "Generalmente las personas continúan sus actividades normales el mismo día.",
+      },
+      {
+        question: "¿Qué productos utilizan?",
+        answer: "Utilizamos productos especializados seleccionados según las necesidades de cada piel.",
+      },
+      {
+        question: "¿Se puede combinar con otros tratamientos faciales?",
+        answer: "Sí, dependiendo de la valoración profesional y objetivos skincare.",
+      },
+      {
+        question: "¿Cuánto dura la sesión?",
+        answer: "Entre 60 y 90 minutos aproximadamente.",
+      },
+      {
+        question: "¿Qué cuidados posteriores se recomiendan?",
+        answer: "Hidratación, protector solar y seguimiento de recomendaciones profesionales.",
       },
       {
         question: "¿Duele una limpieza facial?",
-        answer: "La mayoría de los procedimientos son cómodos y relajantes. Durante la extracción de puntos negros o impurezas puede sentirse una ligera molestia, pero suele ser mínima y temporal.",
+        answer: "Puede haber una ligera molestia al extraer impurezas, pero es un proceso diseñado para ser relajante, profesional y cómodo.",
       },
       {
-        question: "¿Cuánto dura una sesión de limpieza facial?",
-        answer: "Una sesión de limpieza facial suele durar entre 45 y 90 minutos, dependiendo del tratamiento y las necesidades de la piel.",
+        question: "¿Puedo maquillarme después del tratamiento?",
+        answer: "Recomendamos esperar 24 horas para permitir que la piel se recupere y absorba mejor los nutrientes y productos aplicados.",
       },
       {
-        question: "¿Qué beneficios tiene una limpieza facial?",
-        answer: "Entre los principales beneficios se encuentran: Eliminación de impurezas y células muertas, desobstrucción de poros, reducción de puntos negros, mejora de la textura y luminosidad de la piel, mayor absorción de productos cosméticos y apariencia más saludable y rejuvenecida.",
+        question: "¿Qué es una limpieza facial?",
+        answer: "Es un tratamiento skincare diseñado para apoyar la limpieza profunda, mejorar la frescura facial y favorecer una apariencia más luminosa y revitalizada.",
       },
       {
-        question: "¿Puedo maquillarme después de una limpieza facial?",
-        answer: "Se recomienda evitar el maquillaje durante las primeras 24 horas para permitir que la piel respire y se recupere adecuadamente.",
-      },
-      {
-        question: "¿La limpieza facial ayuda a combatir el acné?",
-        answer: "Sí. Las limpiezas faciales pueden ayudar a reducir la acumulación de grasa e impurezas que contribuyen a la aparición del acné. Sin embargo, los casos moderados o severos pueden requerir tratamientos complementarios.",
-      },
-      {
-        question: "¿Qué debo hacer después de una limpieza facial?",
-        answer: "Después del tratamiento se recomienda utilizar protector solar, mantener la piel hidratada, evitar la exposición prolongada al sol y no manipular ni tocar excesivamente el rostro.",
-      },
-      {
-        question: "¿Hay algún tiempo de recuperación?",
-        answer: "No suele ser necesario un periodo de recuperación. Algunas personas pueden experimentar un leve enrojecimiento temporal, que desaparece en pocas horas.",
-      },
-      {
-        question: "¿Cuál es la diferencia entre una limpieza facial básica y una profunda?",
-        answer: "La limpieza facial básica se centra en la higiene y mantenimiento de la piel, mientras que la limpieza profunda incluye extracciones más intensivas y tratamientos específicos para poros obstruidos, exceso de grasa o imperfecciones.",
-      },
-      {
-        question: "¿Puedo hacerme una limpieza facial si tengo la piel sensible?",
-        answer: "Sí. Los tratamientos pueden personalizarse utilizando productos y técnicas específicas para minimizar la irritación y proteger la barrera cutánea.",
+        question: "¿Cómo funciona el proceso?",
+        answer: "Incluye valoración personalizada, limpieza profesional, aplicación del protocolo skincare específico y recomendaciones de cuidado posterior.",
       },
     ],
   },
@@ -582,110 +587,41 @@ export const servicePages: ServicePageData[] = [
   {
     slug: "terapias-faciales",
     name: "Terapias Faciales",
-    fullTitle: "Limpieza Facial en Turrialba",
-    tagline: "Protocolos personalizados para recuperar frescura, glow natural y bienestar facial",
-    heroDescription:
-      "En MJ Estética & Wellness Center entendemos que una limpieza facial no se trata solo de “limpiar la piel”. Se trata de ayudarte a recuperar frescura, glow natural y bienestar facial mediante protocolos personalizados y una experiencia skincare premium en Turrialba.",
+    fullTitle: "Terapias Faciales en Turrialba",
+    tagline: "Revitaliza tu rostro con protocolos avanzados",
+    heroDescription: "En MJ Estética & Wellness Center ofrecemos una gama de terapias faciales diseñadas para tratar necesidades específicas de la piel, desde hidratación profunda hasta regeneración celular y armonización estética.",
     benefits: [
-      "Valoración facial personalizada",
-      "Protocolos adaptados según tu tipo de piel",
-      "Experiencia relajante y profesional",
-      "Productos especializados skincare",
-      "Atención enfocada en bienestar y luminosidad facial",
-      "Glow y luminosidad facial",
-      "Sensación de limpieza profunda",
-      "Bienestar general de la piel",
-      "Apariencia más fresca y revitalizada",
-      "Textura facial más uniforme",
-      "Rutinas de skincare personalizadas",
-      "Cuidado facial preventivo",
-      "Sensación de hidratación y frescura",
+      "Protocolos personalizados según objetivos",
+      "Técnicas de vanguardia no invasivas",
+      "Mejora visible de la textura y el tono",
+      "Sensación de bienestar y relajación",
+      "Asesoría profesional en cada sesión",
     ],
     items: [
       {
-        title: "Limpieza facial profunda",
-        description:
-          "Ideal para quienes buscan una sensación de limpieza intensiva y renovación facial.",
-        features: [
-          "Limpieza profesional",
-          "Bienestar facial",
-          "Sensación de frescura profunda",
-        ],
-        linkText: "Consulta disponibilidad",
+        title: "Terapia de Hidratación Profunda",
+        description: "Protocolo intensivo para devolver el equilibrio hídrico a la piel y lograr un aspecto jugoso y saludable.",
+        duration: "60 min",
       },
       {
-        title: "Limpieza facial hidratante",
-        description:
-          "Pensada para pieles que buscan hidratación, suavidad y luminosidad natural.",
-        features: [
-          "Glow saludable",
-          "Sensación de hidratación",
-          "Apariencia revitalizada",
-        ],
-        linkText: "Agenda tu valoración facial",
+        title: "Terapia Revitalizante Vitamínica",
+        description: "Infusión de activos y vitaminas que aportan luminosidad y energía al rostro cansado.",
+        duration: "60 min",
       },
       {
-        title: "Facial premium glow",
-        description:
-          "Una experiencia skincare orientada al bienestar, relajación y luminosidad facial.",
-        features: [
-          "Experiencia wellness",
-          "Productos especializados",
-          "Cuidado facial premium",
-        ],
-        linkText: "Descubre el protocolo ideal para tu piel",
-      },
-      {
-        title: "Protocolos skincare avanzados",
-        description:
-          "Tratamientos personalizados según necesidades específicas evaluadas profesionalmente.",
-        features: [
-          "Valoración individual",
-          "Protocolos personalizados",
-          "Seguimiento profesional",
-        ],
-        linkText: "Escríbenos por WhatsApp",
+        title: "Terapia de Armonización Facial",
+        description: "Combinación de técnicas para mejorar la simetría y frescura del rostro sin cirugías.",
+        duration: "Variable",
       },
     ],
     faq: [
       {
-        question: "¿Qué incluye una limpieza facial?",
-        answer:
-          "Incluye valoración facial, limpieza profesional, protocolo personalizado y recomendaciones posteriores.",
+        question: "¿Qué diferencia hay entre limpieza y terapia facial?",
+        answer: "La limpieza se enfoca en purificar la piel de impurezas y comedones. Las terapias faciales son protocolos específicos para tratar condiciones como deshidratación, falta de luminosidad o envejecimiento incipiente.",
       },
       {
-        question: "¿Cada cuánto se recomienda?",
-        answer:
-          "Depende del tipo de piel y objetivos individuales. La frecuencia ideal se define en valoración.",
-      },
-      {
-        question: "¿Ayuda con glow facial?",
-        answer:
-          "Muchas personas buscan este tratamiento para apoyar luminosidad y bienestar facial.",
-      },
-      {
-        question: "¿Tiene recuperación?",
-        answer:
-          "Generalmente las personas continúan sus actividades normales el mismo día.",
-      },
-      {
-        question: "¿Qué productos utilizan?",
-        answer:
-          "Utilizamos productos especializados seleccionados según las necesidades de cada piel.",
-      },
-      {
-        question: "¿Se puede combinar con otros tratamientos faciales?",
-        answer:
-          "Sí, dependiendo de la valoración profesional y objetivos skincare.",
-      },
-      {
-        question: "¿Cuánto dura la sesión?",
-        answer: "Entre 60 y 90 minutos aproximadamente.",
-      },
-      {
-        question: "¿Qué cuidados posteriores se recomiendan?",
-        answer:
-          "Hidratación, protector solar y seguimiento de recomendaciones profesionales.",
+        question: "¿Cuántas sesiones se recomiendan?",
+        answer: "Depende del objetivo y el estado de la piel. En la valoración inicial diseñamos el programa ideal para ti.",
       },
     ],
   },

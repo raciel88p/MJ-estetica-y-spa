@@ -1,4 +1,5 @@
-import { Link } from "wouter";
+import { withAppProviders } from "@/components/ReactAppWrapper";
+
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
@@ -46,9 +47,7 @@ const sections = [
     color: "text-primary",
     links: [
       { name: "Todos los Tratamientos Faciales", href: "/tratamientos/faciales" },
-      { name: "Limpieza Facial", href: "/servicios/limpieza-facial" },
-      { name: "Limpieza Facial Profunda", href: "/servicios/limpieza-facial-profunda" },
-      { name: "Limpieza Facial Hidratante", href: "/servicios/limpieza-facial-hidratante" },
+      { name: "Limpieza Facial en Turrialba", href: "/servicios/limpieza-facial" },
       { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
       { name: "Peeling Químico", href: "/servicios/peeling-quimico" },
       { name: "HOLLYWOOD PEEL EN TURRIALBA", href: "/servicios/hollywood-peel" },
@@ -60,7 +59,6 @@ const sections = [
       { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
       { name: "Microagujas con Vitamina C", href: "/servicios/microagujas-vitamina-c" },
       { name: "Rejuvenecimiento Facial en Turrialba", href: "/servicios/rejuvenecimiento-facial" },
-      { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
       { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
     ],
   },
@@ -90,7 +88,7 @@ const sections = [
   },
 ];
 
-export default function SitemapPage() {
+function SitemapPage() {
   return (
     <div className="min-h-screen bg-white">
       <SEO
@@ -132,13 +130,13 @@ export default function SitemapPage() {
                 <ul className="space-y-2">
                   {section.links.map((link) => (
                     <li key={link.href}>
-                      <Link
+                      <a
                         href={link.href}
                         className="group flex items-center gap-2 text-stone-600 hover:text-primary transition-colors text-sm"
                       >
                         <ChevronRight className="w-3.5 h-3.5 shrink-0 text-primary/50 group-hover:text-primary transition-colors" />
                         {link.name}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
@@ -152,3 +150,5 @@ export default function SitemapPage() {
     </div>
   );
 }
+
+export default withAppProviders(SitemapPage);

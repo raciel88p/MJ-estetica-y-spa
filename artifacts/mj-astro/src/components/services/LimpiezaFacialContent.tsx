@@ -139,7 +139,7 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
             </motion.p>
 
             <motion.div variants={fadeUp} className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {service.benefits.map((item, i) => (
+              {service.benefits.slice(5).map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <span className="text-primary">✨</span>
                   <span className="text-stone-700 text-sm font-medium">{item}</span>
@@ -414,10 +414,10 @@ export function LimpiezaFacialContent({ service, waLink }: Props) {
           <h2 className="text-3xl font-serif font-bold mb-16 text-center text-white">Lo que dicen nuestras clientas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              "Mi piel se siente mucho más fresca y luminosa.",
-              "La experiencia fue súper relajante y personalizada.",
-              "Me encantó cómo quedó mi piel después de la limpieza facial.",
-              "Sentí una diferencia en luminosidad y suavidad desde la primera sesión.",
+              "✨ “Mi piel se siente mucho más fresca y luminosa.”",
+              "✨ “La experiencia fue súper relajante y personalizada.”",
+              "✨ “Me encantó cómo quedó mi piel después de la limpieza facial.”",
+              "✨ “Sentí una diferencia en luminosidad y suavidad desde la primera sesión.”",
             ].map((text, i) => (
               <div key={i} className="p-10 bg-white/5 border border-white/10 relative">
                 <Quote className="absolute top-6 left-6 w-8 h-8 text-primary/20" />
