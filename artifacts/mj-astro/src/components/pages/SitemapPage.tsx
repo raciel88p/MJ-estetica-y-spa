@@ -47,9 +47,7 @@ const sections = [
     color: "text-primary",
     links: [
       { name: "Todos los Tratamientos Faciales", href: "/tratamientos/faciales" },
-      { name: "Limpieza Facial", href: "/servicios/limpieza-facial" },
-      { name: "Limpieza Facial Profunda", href: "/servicios/limpieza-facial-profunda" },
-      { name: "Limpieza Facial Hidratante", href: "/servicios/limpieza-facial-hidratante" },
+      { name: "Limpieza Facial en Turrialba", href: "/servicios/limpieza-facial" },
       { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
       { name: "Peeling Químico", href: "/servicios/peeling-quimico" },
       { name: "HOLLYWOOD PEEL EN TURRIALBA", href: "/servicios/hollywood-peel" },
@@ -61,7 +59,6 @@ const sections = [
       { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
       { name: "Microagujas con Vitamina C", href: "/servicios/microagujas-vitamina-c" },
       { name: "Rejuvenecimiento Facial en Turrialba", href: "/servicios/rejuvenecimiento-facial" },
-      { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
       { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
     ],
   },
