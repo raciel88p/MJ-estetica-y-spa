@@ -170,6 +170,7 @@ export default function Home() {
     "microagujas-ginkgo-biloba": "Microagujas con Ginkgo Biloba",
     "microagujas-vitamina-c": "Microagujas con Vitamina C",
     "hilos-colageno": "Hilos de Colágeno",
+    "rejuvenecimiento-facial-laser": "Rejuvenecimiento Facial Láser",
     "tratamiento-ojeras": "Tratamiento de Ojeras",
     "blanqueamiento-zona-intima": "Blanqueamiento Zona Íntima en Turrialba",
     "hollywood-peel": "HOLLYWOOD PEEL EN TURRIALBA",
@@ -947,6 +948,7 @@ export default function Home() {
                       <option value="microagujas-ginkgo-biloba">Microagujas con Ginkgo Biloba</option>
                       <option value="microagujas-vitamina-c">Microagujas con Vitamina C</option>
                       <option value="rejuvenecimiento-facial">Rejuvenecimiento Facial en Turrialba</option>
+                      <option value="rejuvenecimiento-facial-laser">Rejuvenecimiento Facial Láser</option>
                       <option value="microdermoabrasion">Microdermoabrasión</option>
                       <option value="hollywood-peel">HOLLYWOOD PEEL EN TURRIALBA</option>
                       <option value="radiofrecuencia-facial">Radiofrecuencia Facial</option>

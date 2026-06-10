@@ -23,7 +23,6 @@ import { BustoServiceContent } from "@/components/services/BustoServiceContent";
 import { TensadoServiceContent } from "@/components/services/TensadoServiceContent";
 import { IronBeautyServiceContent } from "@/components/services/IronBeautyServiceContent";
 import { VendasFriasContent } from "@/components/services/VendasFriasContent";
-import { LaserDespigmentanteContent } from "@/components/services/LaserDespigmentanteContent";
 import { HollywoodPeelContent } from "@/components/services/HollywoodPeelContent";
 import { HilosColagenoContent } from "@/components/services/HilosColagenoContent";
 import { TrasplanteCapilarContent } from "@/components/services/TrasplanteCapilarContent";

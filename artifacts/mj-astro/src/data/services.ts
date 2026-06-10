@@ -66,6 +66,7 @@ export const tratamientosFacialesLinks = [
   { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
   { name: "Microagujas con Vitamina C", href: "/servicios/microagujas-vitamina-c" },
   { name: "Rejuvenecimiento Facial", href: "/servicios/rejuvenecimiento-facial" },
+  { name: "Rejuvenecimiento Facial Láser", href: "/servicios/rejuvenecimiento-facial-laser" },
   { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
   { name: "Tratamiento para Ojeras en Turrialba", href: "/servicios/tratamiento-ojeras" },
 ];
@@ -1193,6 +1194,38 @@ export const servicePages: ServicePageData[] = [
       {
         question: "¿Qué son los Hilos de Colágeno?",
         answer: "Son procedimientos estéticos orientados a protocolos de firmeza y rejuvenecimiento facial progresivo."
+      }
+    ]
+  },
+  {
+    slug: "rejuvenecimiento-facial-laser",
+    name: "Rejuvenecimiento Facial Láser",
+    fullTitle: "Rejuvenecimiento Facial con Láser en Turrialba",
+    tagline: "Recupera la Juventud y Luminosidad de tu Piel",
+    heroDescription: "Recupera la Juventud y Luminosidad de tu Piel con tecnología láser de vanguardia en Turrialba.",
+    benefits: [
+      "Estimula la producción natural de colágeno",
+      "Mejora la textura de la piel",
+      "Reduce líneas de expresión",
+      "Disminuye manchas y daños solares",
+      "Resultados progresivos y naturales"
+    ],
+    items: [
+      {
+        title: "Tratamiento de Rejuvenecimiento Facial con Láser",
+        description: "Protocolo personalizado diseñado para estimular el colágeno y mejorar la calidad de la piel desde el interior.",
+        duration: "60 min",
+        price: "Consultar precio"
+      }
+    ],
+    faq: [
+      {
+        question: "¿Quién es candidato para el rejuvenecimiento láser?",
+        answer: "Es ideal para hombres y mujeres que desean mejorar la apariencia de su piel, prevenir el envejecimiento prematuro y reducir líneas finas."
+      },
+      {
+        question: "¿Duele el tratamiento?",
+        answer: "El procedimiento está diseñado para ser profesional y cómodo, adaptando la tecnología a la sensibilidad de cada paciente."
       }
     ]
   },
