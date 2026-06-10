@@ -121,7 +121,7 @@ export function AromaterapiaContent({ waLink }: { waLink: string }) {
             </motion.div>
             <div className="relative">
               <div className="aspect-square bg-stone-100 rounded-sm overflow-hidden border border-stone-200">
-                <img src="/images/aromaterapia-experience.webp" alt="Aromaterapia Experience" className="w-full h-full object-cover" />
+                <img src="/images/masajes-relajantes-bg.webp" alt="Aromaterapia Experience" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -top-6 -right-6 bg-primary p-8 shadow-xl hidden sm:block">
                 <Sparkles className="w-8 h-8 text-white" />
