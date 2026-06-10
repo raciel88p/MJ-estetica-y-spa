@@ -171,7 +171,7 @@ export default function Home() {
     "microagujas-vitamina-c": "Microagujas con Vitamina C",
     "hilos-colageno": "Hilos de Colágeno",
     "tratamiento-ojeras": "Tratamiento de Ojeras",
-    "blanqueamiento-zona-intima": "Láser Despigmentante en Turrialba",
+    "blanqueamiento-zona-intima": "Blanqueamiento Zona Íntima en Turrialba",
     "hollywood-peel": "HOLLYWOOD PEEL EN TURRIALBA",
     "radiofrecuencia-facial": "Radiofrecuencia Facial",
     "eliminacion-manchas": "Eliminación de Manchas",
@@ -938,7 +938,7 @@ export default function Home() {
                       <option value="masajes-post-operatorios">Masajes Post Operatorios</option>
                       <option value="tensado-corporal">Tensado Corporal en Turrialba</option>
                       <option value="drenaje-linfatico">Drenaje Linfático</option>
-                      <option value="blanqueamiento-zona-intima">Láser Despigmentante en Turrialba</option>
+                      <option value="blanqueamiento-zona-intima">Blanqueamiento Zona Íntima en Turrialba</option>
                     </optgroup>
                     <optgroup label="Tratamientos Faciales">
                       <option value="adn-salmon">ADN de Salmón</option>
