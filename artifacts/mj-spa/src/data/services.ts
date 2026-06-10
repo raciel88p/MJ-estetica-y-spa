@@ -46,7 +46,8 @@ export const tratamientosCorporalesLinks = [
   { name: "Levantamiento de Busto", href: "/servicios/levantamiento-busto" },
   { name: "Vendas Frías", href: "/servicios/vendas-frias" },
   { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
-  { name: "Láser Despigmentante", href: "/servicios/blanqueamiento-zona-intima" },
+  { name: "Aromaterapia", href: "/servicios/aromaterapia" },
+  { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
 ];
 
 export const tratamientosFacialesLinks = [
@@ -2239,12 +2240,55 @@ export const servicePages: ServicePageData[] = [
 
   // ── BLANQUEAMIENTO ZONA ÍNTIMA ──────────────────────
   {
+    slug: "aromaterapia",
+    name: "Aromaterapia en Turrialba",
+    fullTitle: "Aromaterapia en Turrialba | Relajación, Bienestar y Experiencias Wellness Premium",
+    tagline: "Regálate un momento de calma, bienestar y desconexión",
+    heroDescription: "Experiencia wellness que utiliza aceites esenciales y estímulos aromáticos cuidadosamente seleccionados para crear ambientes orientados a la relajación, el bienestar emocional y el descanso.",
+    benefits: [
+      "Sensación de relajación profunda",
+      "Momentos de desconexión y descanso",
+      "Bienestar emocional y físico",
+      "Espacios de calma y armonía",
+      "Experiencias wellness personalizadas",
+      "Autocuidado consciente",
+      "Ambiente premium orientado al bienestar"
+    ],
+    items: [],
+    faq: [
+      {
+        question: "¿Qué es la aromaterapia?",
+        answer: "Es una experiencia wellness que utiliza aromas y aceites esenciales para crear ambientes orientados al bienestar y la relajación."
+      },
+      {
+        question: "¿Cuánto dura la sesión?",
+        answer: "Depende del protocolo seleccionado y de las necesidades de cada persona."
+      },
+      {
+        question: "¿Se puede combinar con masajes?",
+        answer: "Sí. Es una de las combinaciones más solicitadas por nuestros clientes."
+      },
+      {
+        question: "¿Qué aceites esenciales utilizan?",
+        answer: "Seleccionamos opciones según la experiencia deseada y las preferencias individuales."
+      },
+      {
+        question: "¿Necesito preparación previa?",
+        answer: "No. Solo venir con disposición para disfrutar un momento de bienestar."
+      },
+      {
+        question: "¿Dónde están ubicados?",
+        answer: "Nos encontramos en Turrialba, con fácil acceso y parqueo para nuestros visitantes."
+      }
+    ],
+  },
+  {
     slug: "blanqueamiento-zona-intima",
-    name: "Láser Despigmentante",
-    fullTitle: "Láser Despigmentante en Turrialba",
-    tagline: "Piel más luminosa, uniforme y revitalizada con tecnología estética avanzada",
+    name: "Blanqueamiento Zona Íntima",
+    fullTitle: "Blanqueamiento de Zona Íntima en Turrialba",
+    tagline: "Unifica el tono de tus zonas más delicadas con seguridad y confianza",
     heroDescription:
-      "Protocolos personalizados de láser despigmentante orientados a mejorar la apariencia de manchas, tono irregular y falta de luminosidad mediante skincare premium y tecnología de vanguardia en Turrialba.",
+      "Recupera la seguridad en ti misma con nuestros protocolos especializados de blanqueamiento para entrepierna, axilas y zona perianal. Tratamientos no invasivos, respetuosos y altamente efectivos en Turrialba.",
     benefits: [
       "Unificación del tono de piel en zonas de hiperpigmentación",
       "Tratamiento 100% seguro y respetuoso con la piel íntima",
