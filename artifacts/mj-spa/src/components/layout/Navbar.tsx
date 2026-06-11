@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback, type Dispatch, type SetStateA
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "wouter";
 
 import {
   medicoEsteticosLinks,
@@ -82,7 +83,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a href="/" className="flex items-center cursor-pointer group">
+          <Link to="/" className="flex items-center cursor-pointer group">
             <img
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
               alt="MJ Fisio Estética y Spa"
@@ -91,7 +92,7 @@ export function Navbar() {
               width="160"
               height="64"
             />
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
@@ -119,18 +120,18 @@ export function Navbar() {
                   >
                     <div className="w-52 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
                       <div className="px-3 pt-4 pb-3 flex flex-col gap-1">
-                        <a href="/nosotros"
+                        <Link to="/nosotros"
                           className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                           onClick={() => setOpenDropdown(null)}
                         >
                           Sobre Nosotros
-                        </a>
-                        <a href="/buzon-sugerencias"
+                        </Link>
+                        <Link to="/buzon-sugerencias"
                           className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                           onClick={() => setOpenDropdown(null)}
                         >
                           Buzón de Sugerencias
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </motion.div>
@@ -138,13 +139,13 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            <a href="/testimonios" className={`${linkBase} ${textClass}`}>
+            <Link to="/testimonios" className={`${linkBase} ${textClass}`}>
               Testimonios
-            </a>
+            </Link>
 
-            <a href="/paquetes" className={`${linkBase} ${textClass}`}>
+            <Link to="/paquetes" className={`${linkBase} ${textClass}`}>
               Paquetes
-            </a>
+            </Link>
 
 
 
@@ -177,72 +178,72 @@ export function Navbar() {
                         <div className="grid grid-cols-4 gap-x-4">
                           {/* Corporales col 1 */}
                           <div>
-                            <a href="/tratamientos/corporales"
+                            <Link to="/tratamientos/corporales"
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
                               Corporales
-                            </a>
-                            {corporalesHalf1.map((link) => (
-                              <a
-                                key={link.name}
-                                href={link.href}
+                            </Link>
+                            {corporalesHalf1.map((linkItem) => (
+                              <Link
+                                key={linkItem.name}
+                                href={linkItem.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
-                                {link.name}
-                              </a>
+                                {linkItem.name}
+                              </Link>
                             ))}
                           </div>
                           {/* Corporales col 2 (continuation) */}
                           <div className="pt-6">
-                            {corporalesHalf2.map((link) => (
-                              <a
-                                key={link.name}
-                                href={link.href}
+                            {corporalesHalf2.map((linkItem) => (
+                              <Link
+                                key={linkItem.name}
+                                href={linkItem.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
-                                {link.name}
-                              </a>
+                                {linkItem.name}
+                              </Link>
                             ))}
                           </div>
                           {/* Faciales */}
                           <div>
-                            <a href="/tratamientos/faciales"
+                            <Link to="/tratamientos/faciales"
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
                               Faciales
-                            </a>
-                            {tratamientosFacialesLinks.map((link) => (
-                              <a
-                                key={link.name}
-                                href={link.href}
+                            </Link>
+                            {tratamientosFacialesLinks.map((linkItem) => (
+                              <Link
+                                key={linkItem.name}
+                                href={linkItem.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
-                                {link.name}
-                              </a>
+                                {linkItem.name}
+                              </Link>
                             ))}
                           </div>
                           {/* Piernas */}
                           <div>
-                            <a href="/tratamientos/piernas"
+                            <Link to="/tratamientos/piernas"
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
                               Piernas
-                            </a>
-                            {tratamientosPiernasLinks.map((link) => (
-                              <a
-                                key={link.name}
-                                href={link.href}
+                            </Link>
+                            {tratamientosPiernasLinks.map((linkItem) => (
+                              <Link
+                                key={linkItem.name}
+                                href={linkItem.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
-                                {link.name}
-                              </a>
+                                {linkItem.name}
+                              </Link>
                             ))}
                           </div>
                         </div>
@@ -260,12 +261,12 @@ export function Navbar() {
               onMouseLeave={medicos.scheduleClose}
             >
               <div className="flex items-center gap-1">
-                <a
+                <Link
                   href="/medicina-estetica"
                   className={`${linkBase} ${textClass}`}
                 >
                   Médico Estético
-                </a>
+                </Link>
                 <button
                   className={`p-1 ${textClass} hover:text-primary transition-colors`}
                   onClick={(e) => { e.stopPropagation(); setOpenDropdown(medicos.isOpen ? null : "medicos"); }}
@@ -287,22 +288,22 @@ export function Navbar() {
                           Especialidades
                         </p>
                         <div className="flex flex-col gap-1">
-                          <a
+                          <Link
                             href="/medicina-estetica"
                             className="block px-3 py-2 text-sm font-bold text-primary hover:bg-secondary/40 transition-colors rounded-lg"
                             onClick={() => setOpenDropdown(null)}
                           >
                             Armonización Facial
-                          </a>
-                          {medicoEsteticosLinks.map((link) => (
-                            <a
-                              key={link.name}
-                              href={link.href}
+                          </Link>
+                          {medicoEsteticosLinks.map((linkItem) => (
+                            <Link
+                              key={linkItem.name}
+                              href={linkItem.href}
                               className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                               onClick={() => setOpenDropdown(null)}
                             >
-                              {link.name}
-                            </a>
+                              {linkItem.name}
+                            </Link>
                           ))}
                         </div>
                       </div>
@@ -312,9 +313,9 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            <a href="/#contacto" className={`${linkBase} ${textClass}`}>
+            <Link to="/#contacto" className={`${linkBase} ${textClass}`}>
               Contacto
-            </a>
+            </Link>
 
             <Button
               className={`rounded-none px-6 py-2.5 text-sm font-semibold tracking-wide transition-all ${
@@ -368,37 +369,37 @@ export function Navbar() {
                       className="overflow-hidden"
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
-                        <a href="/nosotros"
+                        <Link to="/nosotros"
                           className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                         >
                           Sobre Nosotros
-                        </a>
-                        <a href="/buzon-sugerencias"
+                        </Link>
+                        <Link to="/buzon-sugerencias"
                           className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                         >
                           Buzón de Sugerencias
-                        </a>
+                        </Link>
                       </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
 
-              <a href="/testimonios"
+              <Link to="/testimonios"
                 className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Testimonios
-              </a>
+              </Link>
 
-              <a href="/paquetes"
+              <Link to="/paquetes"
                 className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Paquetes
-              </a>
+              </Link>
 
 
 
@@ -422,59 +423,59 @@ export function Navbar() {
                       <div className="pb-3 pl-4 flex flex-col gap-1">
                         {/* Corporales */}
                         <div className="mb-2">
-                          <a href="/tratamientos/corporales"
+                          <Link to="/tratamientos/corporales"
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
                             Corporales
-                          </a>
-                          {tratamientosCorporalesLinks.map((link) => (
-                            <a
-                              key={link.name}
-                              href={link.href}
+                          </Link>
+                          {tratamientosCorporalesLinks.map((linkItem) => (
+                            <Link
+                              key={linkItem.name}
+                              href={linkItem.href}
                               className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
                               onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                             >
-                              {link.name}
-                            </a>
+                              {linkItem.name}
+                            </Link>
                           ))}
                         </div>
                         {/* Faciales */}
                         <div className="mb-2">
-                          <a href="/tratamientos/faciales"
+                          <Link to="/tratamientos/faciales"
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
                             Faciales
-                          </a>
-                          {tratamientosFacialesLinks.map((link) => (
-                            <a
-                              key={link.name}
-                              href={link.href}
+                          </Link>
+                          {tratamientosFacialesLinks.map((linkItem) => (
+                            <Link
+                              key={linkItem.name}
+                              href={linkItem.href}
                               className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
                               onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                             >
-                              {link.name}
-                            </a>
+                              {linkItem.name}
+                            </Link>
                           ))}
                         </div>
                         {/* Piernas */}
                         <div className="mb-2">
-                          <a href="/tratamientos/piernas"
+                          <Link to="/tratamientos/piernas"
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
                             Piernas
-                          </a>
-                          {tratamientosPiernasLinks.map((link) => (
-                            <a
-                              key={link.name}
-                              href={link.href}
+                          </Link>
+                          {tratamientosPiernasLinks.map((linkItem) => (
+                            <Link
+                              key={linkItem.name}
+                              href={linkItem.href}
                               className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
                               onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                             >
-                              {link.name}
-                            </a>
+                              {linkItem.name}
+                            </Link>
                           ))}
                         </div>
                       </div>
@@ -486,13 +487,13 @@ export function Navbar() {
               {/* Mobile Médico Estético Accordion */}
               <div className="border-b border-muted">
                 <div className="flex justify-between items-center w-full">
-                  <a
+                  <Link
                     href="/medicina-estetica"
                     className="flex-grow text-foreground text-lg py-3 hover:text-primary transition-colors font-serif"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Médico Estético
-                  </a>
+                  </Link>
                   <button
                     className="p-3 text-foreground hover:text-primary transition-colors"
                     onClick={() => setIsMobileMedicosOpen(!isMobileMedicosOpen)}
@@ -509,22 +510,22 @@ export function Navbar() {
                       className="overflow-hidden"
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
-                          <a
+                          <Link
                             href="/medicina-estetica"
                             className="block py-2 text-base font-bold text-primary hover:text-primary/80 transition-colors"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileMedicosOpen(false); }}
                           >
                             Armonización Facial
-                          </a>
-                        {medicoEsteticosLinks.map((link) => (
-                          <a
-                            key={link.name}
-                            href={link.href}
+                          </Link>
+                        {medicoEsteticosLinks.map((linkItem) => (
+                          <Link
+                            key={linkItem.name}
+                            href={linkItem.href}
                             className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileMedicosOpen(false); }}
                           >
-                            {link.name}
-                          </a>
+                            {linkItem.name}
+                          </Link>
                         ))}
                       </div>
                     </motion.div>
@@ -532,13 +533,13 @@ export function Navbar() {
                 </AnimatePresence>
               </div>
 
-              <a
+              <Link
                 href="/#contacto"
                 className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contacto
-              </a>
+              </Link>
 
               <Button className="mt-4 w-full rounded-full bg-primary text-white hover:bg-primary/90" asChild>
                 <a id="cta-nav-reserva-mobile" href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>

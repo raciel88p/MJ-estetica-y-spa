@@ -49,7 +49,7 @@ const sections = [
       { name: "Todos los Tratamientos Faciales", href: "/tratamientos/faciales" },
       { name: "Limpieza Facial en Turrialba", href: "/servicios/limpieza-facial" },
       { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
-      { name: "Peeling Químico", href: "/servicios/peeling-quimico" },
+      { name: "Peeling Facial", href: "/servicios/peeling-quimico" },
       { name: "HOLLYWOOD PEEL EN TURRIALBA", href: "/servicios/hollywood-peel" },
       { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
       { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },

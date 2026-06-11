@@ -284,7 +284,7 @@ function Home() {
             >
               <div className="aspect-[4/5] overflow-hidden rounded-sm relative shadow-2xl">
                 <img
-                  src="/images/nosotros.webp"
+                  src="/images/about-us.webp"
                   alt="Instalaciones de MJ Fisio Estética"
                   className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   loading="lazy"
@@ -349,7 +349,7 @@ function Home() {
               id: 'corporales',
               num: '01',
               title: "Corporales",
-              img: "tratamientos-c.jpg",
+              img: "about-us.webp",
               link: "/tratamientos/corporales",
               desc: "Moldea tu figura y recupera la firmeza de tu piel."
             },
@@ -357,7 +357,7 @@ function Home() {
               id: 'faciales',
               num: '02',
               title: "Faciales",
-              img: "tratamientos-f.jpg",
+              img: "hero-bg.webp",
               link: "/tratamientos/faciales",
               desc: "Rejuvenece y revitaliza tu rostro con tecnología médica."
             },
@@ -365,7 +365,7 @@ function Home() {
               id: 'piernas',
               num: '03',
               title: "Piernas",
-              img: "tratamientos-p.jpg",
+              img: "spa-texture.webp",
               link: "/tratamientos/piernas",
               desc: "Mejora circulatoria profunda y bienestar para tus piernas."
             }
@@ -421,8 +421,8 @@ function Home() {
               <div className="order-2 lg:order-1 space-y-8">
                 <div>
                   <h3 className="text-stone-400 font-bold tracking-[0.2em] uppercase text-xs mb-3">Dirección Médica</h3>
-                  <h2 className="text-4xl md:text-5xl font-serif text-stone-900">Dr. Raciel Pérez</h2>
-                  <p className="text-primary font-medium mt-2">Código Médico: MED16200</p>
+                  <h2 className="text-4xl md:text-5xl font-serif text-stone-900">Dr. Ricard Araya</h2>
+                  <p className="text-primary font-medium mt-2">Código Médico: 323106</p>
                 </div>
 
                 <div className="prose prose-stone text-stone-600">
@@ -465,8 +465,8 @@ function Home() {
               <div className="order-1 lg:order-2">
                 <div className="relative aspect-square md:aspect-[4/3] rounded-sm overflow-hidden shadow-xl">
                   <img
-                    src="/images/doctor-raciel.webp"
-                    alt="Dr. Raciel Pérez"
+                    src="/images/dr-ricard-araya.webp"
+                    alt="Dr. Ricard Araya"
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
