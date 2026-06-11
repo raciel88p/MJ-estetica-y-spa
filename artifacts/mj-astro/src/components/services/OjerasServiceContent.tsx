@@ -178,7 +178,7 @@ export function OjerasServiceContent({ waLink }: { waLink: string }) {
             </motion.div>
             <div className="relative">
                <div className="aspect-[4/5] bg-stone-100 overflow-hidden rounded-sm">
-                  <img src="/images/carboxiterapia-ojeras.webp" alt="Tratamiento de Carboxiterapia para Ojeras" className="w-full h-full object-cover" />
+                  <img src="/images/acido-hialuronico-bg.webp" alt="Tratamiento de Carboxiterapia para Ojeras" className="w-full h-full object-cover" />
                </div>
                <div className="absolute -bottom-6 -left-6 bg-primary p-8 shadow-xl hidden sm:block">
                   <Zap className="w-8 h-8 text-white" />

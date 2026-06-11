@@ -99,7 +99,7 @@ export default function NotFound() {
                 <MessageCircle className="w-4 h-4" />
                 Reservar cita por WhatsApp
               </a>
-              <Link href="/">
+              <Link to="/">
                 <span className="inline-flex items-center gap-2 text-white/70 text-sm font-medium border border-white/20 px-8 py-4 hover:border-white/60 hover:text-white transition-all cursor-pointer">
                   <Home className="w-4 h-4" />
                   Ir al inicio
@@ -133,7 +133,7 @@ export default function NotFound() {
           >
             {popularTreatments.map((t) => (
               <motion.div key={t.href} variants={fadeUp}>
-                <Link href={t.href}>
+                <Link to={t.href}>
                   <div className="group bg-white p-8 hover:bg-stone-50 transition-colors cursor-pointer h-full flex flex-col justify-between min-h-[180px]">
                     <div>
                       <p className="text-stone-400 text-xs font-serif font-bold mb-3">{t.num}</p>
@@ -176,7 +176,7 @@ export default function NotFound() {
                 <MessageCircle className="w-4 h-4" />
                 Hablar con una especialista
               </a>
-              <Link href="/mapa-del-sitio">
+              <Link to="/mapa-del-sitio">
                 <span className="inline-flex items-center gap-2 text-white/80 text-sm font-medium border border-white/30 px-8 py-4 hover:border-white hover:text-white transition-all cursor-pointer">
                   Ver todos los servicios <ArrowRight className="w-4 h-4" />
                 </span>

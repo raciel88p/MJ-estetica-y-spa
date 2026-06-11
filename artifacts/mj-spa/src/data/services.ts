@@ -56,7 +56,7 @@ export const tratamientosFacialesLinks = [
   { name: "Limpieza Facial Profunda", href: "/servicios/limpieza-facial-profunda" },
   { name: "Limpieza Facial Hidratante", href: "/servicios/limpieza-facial-hidratante" },
   { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
-  { name: "Peeling Químico", href: "/servicios/peeling-quimico" },
+  { name: "Peeling Facial", href: "/servicios/peeling-quimico" },
   { name: "Hollywood Peel en Turrialba", href: "/servicios/hollywood-peel" },
   { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
   { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
@@ -629,10 +629,11 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "peeling-quimico",
-    name: "Peeling Químico",
-    tagline: "Renueva tu piel, transforma tu confianza",
+    name: "Peeling Facial",
+    fullTitle: "Peeling Facial en Turrialba: Reduce Manchas, Marcas de Acné y Signos de Envejecimiento",
+    tagline: "Tratamiento de Peeling Facial Profesional en Turrialba para una Piel Más Joven y Luminosa",
     heroDescription:
-      "El peeling químico es uno de los tratamientos más efectivos para renovar la piel, corregir manchas, reducir arrugas y mejorar la textura cutánea de forma controlada y segura.",
+      "El peeling facial profesional es un tratamiento estético que ayuda a renovar la piel, estimular la regeneración celular y devolverle luminosidad a tu rostro en Turrialba.",
     benefits: [
       "Eliminación de manchas e hiperpigmentación",
       "Reducción de arrugas finas",

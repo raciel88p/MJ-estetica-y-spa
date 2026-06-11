@@ -136,7 +136,7 @@ export function RejuvenecimientoLaserContent({ waLink }: { waLink: string }) {
             </motion.div>
             <div className="relative">
               <div className="aspect-[4/5] bg-stone-100 rounded-sm overflow-hidden border border-stone-200">
-                 <img src="/images/rejuvenecimiento-facial-bg.webp" alt="Rejuvenecimiento Facial" className="w-full h-full object-cover" />
+                 <img src="/images/faciales-bg.webp" alt="Rejuvenecimiento Facial" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary p-8 shadow-xl hidden sm:block">
                 <Sparkles className="w-8 h-8 text-white" />
