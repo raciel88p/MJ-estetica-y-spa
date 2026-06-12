@@ -335,7 +335,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </a>
               {category && (
-                <Link to={category.href}>
+                <Link href={category.href}>
                   <span className="inline-flex items-center gap-2 text-white/60 text-sm font-medium border-b border-white/20 pb-0.5 hover:text-white hover:border-white transition-colors cursor-pointer">
                     Ver todos los {category.name.toLowerCase()}
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -1133,7 +1133,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                     {rel.name}
                   </h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-5">{rel.tagline}</p>
-                  <Link to={`/servicios/${rel.slug}`}>
+                  <Link href={`/servicios/${rel.slug}`}>
                     <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-primary border-b border-primary/30 pb-0.5 hover:border-primary transition-colors cursor-pointer">
                       Ver tratamiento <ArrowRight className="w-3 h-3" />
                     </span>
@@ -1143,7 +1143,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
             </div>
             {category && (
               <div className="mt-8 text-center">
-                <Link to={category.href}>
+                <Link href={category.href}>
                   <span className="inline-flex items-center gap-2 text-sm font-bold text-stone-600 border-b border-stone-300 pb-0.5 hover:text-primary hover:border-primary transition-colors cursor-pointer tracking-wide uppercase text-xs">
                     Ver todos los {category.name.toLowerCase()} <ArrowRight className="w-3.5 h-3.5" />
                   </span>

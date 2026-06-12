@@ -44,14 +44,14 @@ export function Footer() {
           <div>
             <h4 className="text-xl font-serif text-white mb-6">Páginas</h4>
             <ul className="space-y-3">
-              <li><Link to="/nosotros" className="hover:text-secondary transition-colors">Sobre Nosotros</Link></li>
-              <li><Link to="/tratamientos/corporales" className="hover:text-secondary transition-colors">Tratamientos Corporales</Link></li>
-              <li><Link to="/tratamientos/faciales" className="hover:text-secondary transition-colors">Tratamientos Faciales</Link></li>
-              <li><Link to="/tratamientos/piernas" className="hover:text-secondary transition-colors">Tratamientos de Piernas</Link></li>
-              <li><Link to="/paquetes" className="hover:text-secondary transition-colors">Paquetes</Link></li>
-              <li><Link to="/medicos-esteticos" className="hover:text-secondary transition-colors">Médico Estético</Link></li>
-              <li><Link to="/testimonios" className="hover:text-secondary transition-colors">Testimonios</Link></li>
-              <li><Link to="/mapa-del-sitio" className="hover:text-secondary transition-colors">Mapa del Sitio</Link></li>
+              <li><Link href="/nosotros" className="hover:text-secondary transition-colors">Sobre Nosotros</Link></li>
+              <li><Link href="/tratamientos/corporales" className="hover:text-secondary transition-colors">Tratamientos Corporales</Link></li>
+              <li><Link href="/tratamientos/faciales" className="hover:text-secondary transition-colors">Tratamientos Faciales</Link></li>
+              <li><Link href="/tratamientos/piernas" className="hover:text-secondary transition-colors">Tratamientos de Piernas</Link></li>
+              <li><Link href="/paquetes" className="hover:text-secondary transition-colors">Paquetes</Link></li>
+              <li><Link href="/medicos-esteticos" className="hover:text-secondary transition-colors">Médico Estético</Link></li>
+              <li><Link href="/testimonios" className="hover:text-secondary transition-colors">Testimonios</Link></li>
+              <li><Link href="/mapa-del-sitio" className="hover:text-secondary transition-colors">Mapa del Sitio</Link></li>
             </ul>
           </div>
 
@@ -130,8 +130,8 @@ export function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
           <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. Todos los derechos reservados.</p>
           <div className="flex gap-4">
-            <Link to="/politica-de-datos" className="hover:text-white">Política de Privacidad</Link>
-            <Link to="/mapa-del-sitio" className="hover:text-white">Mapa del Sitio</Link>
+            <Link href="/politica-de-datos" className="hover:text-white">Política de Privacidad</Link>
+            <Link href="/mapa-del-sitio" className="hover:text-white">Mapa del Sitio</Link>
           </div>
         </div>
       </div>

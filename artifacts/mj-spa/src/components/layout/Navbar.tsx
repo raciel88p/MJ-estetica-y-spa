@@ -85,7 +85,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center cursor-pointer group">
+          <Link href="/" className="flex items-center cursor-pointer group">
             <img
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
               alt="MJ Fisio Estética y Spa"
@@ -122,13 +122,13 @@ export function Navbar() {
                   >
                     <div className="w-52 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
                       <div className="px-3 pt-4 pb-3 flex flex-col gap-1">
-                        <Link to="/nosotros"
+                        <Link href="/nosotros"
                           className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                           onClick={() => setOpenDropdown(null)}
                         >
                           Sobre Nosotros
                         </Link>
-                        <Link to="/buzon-sugerencias"
+                        <Link href="/buzon-sugerencias"
                           className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                           onClick={() => setOpenDropdown(null)}
                         >
@@ -141,11 +141,11 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            <Link to="/testimonios" className={`${linkBase} ${textClass}`}>
+            <Link href="/testimonios" className={`${linkBase} ${textClass}`}>
               Testimonios
             </Link>
 
-            <Link to="/paquetes" className={`${linkBase} ${textClass}`}>
+            <Link href="/paquetes" className={`${linkBase} ${textClass}`}>
               Paquetes
             </Link>
 
@@ -180,7 +180,7 @@ export function Navbar() {
                         <div className="grid grid-cols-5 gap-x-4">
                           {/* Corporales col 1 */}
                           <div>
-                            <Link to="/tratamientos/corporales"
+                            <Link href="/tratamientos/corporales"
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
@@ -212,7 +212,7 @@ export function Navbar() {
                           </div>
                           {/* Faciales col 1 */}
                           <div>
-                            <Link to="/tratamientos/faciales"
+                            <Link href="/tratamientos/faciales"
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
@@ -244,7 +244,7 @@ export function Navbar() {
                           </div>
                           {/* Piernas */}
                           <div>
-                            <Link to="/tratamientos/piernas"
+                            <Link href="/tratamientos/piernas"
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
@@ -328,7 +328,7 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            <Link to="/#contacto" className={`${linkBase} ${textClass}`}>
+            <Link href="/#contacto" className={`${linkBase} ${textClass}`}>
               Contacto
             </Link>
 
@@ -384,13 +384,13 @@ export function Navbar() {
                       className="overflow-hidden"
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
-                        <Link to="/nosotros"
+                        <Link href="/nosotros"
                           className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                         >
                           Sobre Nosotros
                         </Link>
-                        <Link to="/buzon-sugerencias"
+                        <Link href="/buzon-sugerencias"
                           className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                         >
@@ -402,14 +402,14 @@ export function Navbar() {
                 </AnimatePresence>
               </div>
 
-              <Link to="/testimonios"
+              <Link href="/testimonios"
                 className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Testimonios
               </Link>
 
-              <Link to="/paquetes"
+              <Link href="/paquetes"
                 className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -438,7 +438,7 @@ export function Navbar() {
                       <div className="pb-3 pl-4 flex flex-col gap-1">
                         {/* Corporales */}
                         <div className="mb-2">
-                          <Link to="/tratamientos/corporales"
+                          <Link href="/tratamientos/corporales"
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
@@ -457,7 +457,7 @@ export function Navbar() {
                         </div>
                         {/* Faciales */}
                         <div className="mb-2">
-                          <Link to="/tratamientos/faciales"
+                          <Link href="/tratamientos/faciales"
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
@@ -476,7 +476,7 @@ export function Navbar() {
                         </div>
                         {/* Piernas */}
                         <div className="mb-2">
-                          <Link to="/tratamientos/piernas"
+                          <Link href="/tratamientos/piernas"
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >

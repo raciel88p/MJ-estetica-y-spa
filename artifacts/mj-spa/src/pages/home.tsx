@@ -392,7 +392,7 @@ export default function Home() {
               variants={{ hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65, delay: i * 0.12 } } }}
               className="group relative overflow-hidden cursor-pointer"
             >
-              <Link to={cat.href}>
+              <Link href={cat.href}>
                 {/* Background image */}
                 <div className="relative h-[520px] md:h-[620px]">
                   <img
@@ -499,7 +499,7 @@ export default function Home() {
                 transition={{ duration: 0.45, delay: i * 0.06 }}
                 className={i % 2 === 0 ? "md:border-r border-white/8" : ""}
               >
-                <Link to={t.href}>
+                <Link href={t.href}>
                   <div className="group flex items-center justify-between border-b border-white/8 py-6 px-2 hover:bg-primary/10 hover:px-5 transition-all duration-300 cursor-pointer">
                     <div className="flex items-center gap-5">
                       <span className="text-primary text-xl font-serif font-bold w-8 shrink-0 leading-none">
@@ -586,7 +586,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <Link to="/nosotros">
+              <Link href="/nosotros">
                 <span className="inline-flex items-center gap-2 text-xs font-bold text-primary border-b border-primary/40 pb-0.5 hover:border-primary transition-colors cursor-pointer tracking-[0.2em] uppercase">
                   Conoce nuestro equipo <ChevronRight className="w-4 h-4" />
                 </span>
@@ -651,7 +651,7 @@ export default function Home() {
                 <span className="font-light italic text-primary">nuestras clientas</span>
               </h2>
             </div>
-            <Link to="/testimonios">
+            <Link href="/testimonios">
               <span className="text-xs font-bold text-stone-500 hover:text-primary transition-colors cursor-pointer tracking-[0.2em] uppercase whitespace-nowrap">
                 Ver todos →
               </span>
