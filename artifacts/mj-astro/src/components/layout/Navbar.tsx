@@ -12,6 +12,8 @@ import {
 
 const corporalesHalf1 = tratamientosCorporalesLinks.slice(0, 6);
 const corporalesHalf2 = tratamientosCorporalesLinks.slice(6);
+const facialesHalf1 = tratamientosFacialesLinks.slice(0, 9);
+const facialesHalf2 = tratamientosFacialesLinks.slice(9);
 
 type DropdownKey = "nosotros" | "servicios" | "medicos" | "paquetes" | null;
 
@@ -169,12 +171,12 @@ export function Navbar() {
                     onMouseEnter={servicios.cancelClose}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >
-                    <div className="w-[820px] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden m-[5px]">
+                    <div className="w-[1000px] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden m-[5px]">
                       <div className="px-5 pt-5 pb-5">
                         <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-4">
                           Nuestros Servicios
                         </p>
-                        <div className="grid grid-cols-4 gap-x-4">
+                        <div className="grid grid-cols-5 gap-x-4">
                           {/* Corporales col 1 */}
                           <div>
                             <a href="/tratamientos/corporales"
@@ -207,7 +209,7 @@ export function Navbar() {
                               </a>
                             ))}
                           </div>
-                          {/* Faciales */}
+                          {/* Faciales col 1 */}
                           <div>
                             <a href="/tratamientos/faciales"
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
@@ -215,7 +217,20 @@ export function Navbar() {
                             >
                               Faciales
                             </a>
-                            {tratamientosFacialesLinks.map((link) => (
+                            {facialesHalf1.map((link) => (
+                              <a
+                                key={link.name}
+                                href={link.href}
+                                className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
+                                onClick={() => setOpenDropdown(null)}
+                              >
+                                {link.name}
+                              </a>
+                            ))}
+                          </div>
+                          {/* Faciales col 2 (continuation) */}
+                          <div className="pt-6">
+                            {facialesHalf2.map((link) => (
                               <a
                                 key={link.name}
                                 href={link.href}
