@@ -365,7 +365,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       </section>
       )}
 
-      {!["depilacion-laser"].includes(service.slug) && <StatsBar />}
+      {!["depilacion-laser", "peeling-quimico", "aromaterapia", "blanqueamiento-zona-intima", "rejuvenecimiento-facial-laser", "tratamiento-ojeras"].includes(service.slug) && <StatsBar />}
 
 
       {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
@@ -403,14 +403,14 @@ function ServicePage({ service }: { service: ServicePageData }) {
                   </span>
                 </div>
                 <p className="text-stone-500 text-sm leading-relaxed mt-4 max-w-xl">
-                  {service.slug === "tratamiento-ojeras"
+                  {service.slug === "peeling-quimico"
+                    ? "Con amplia experiencia en medicina estética, Maria Molina Madrigal se especializa en protocolos de renovación cutánea y tratamientos avanzados para manchas y acné, brindando resultados seguros y personalizados."
+                    : service.slug === "tratamiento-ojeras"
                     ? "¿Tus ojeras te hacen lucir cansada aunque descanses bien? Descubre cómo nuestro tratamiento de carboxiterapia para ojeras en Turrialba puede ayudarte a mejorar la apariencia de bolsas, pigmentación oscura y signos visibles de fatiga."
                     : service.slug === "aromaterapia"
                     ? "¿Sientes que el estrés, las responsabilidades y el ritmo diario no te dejan tiempo para ti? En MJ Estética & Wellness Center, hemos creado una experiencia de aromaterapia en Turrialba diseñada para ayudarte a disfrutar de momentos de relajación profunda, bienestar integral y autocuidado en un ambiente cómodo, privado y totalmente personalizado."
                     : service.slug === "rejuvenecimiento-facial-laser"
                     ? "¿Buscas recuperar la firmeza y luminosidad de tu piel sin cirugías? Nuestro tratamiento de rejuvenecimiento facial con láser en Turrialba está diseñado para estimular el colágeno natural y devolverle a tu rostro una apariencia fresca, saludable y juvenil."
-                    : service.slug === "peeling-quimico"
-                    ? "¿Buscas un peeling facial en Turrialba que te ayude a mejorar manchas, marcas de acné, poros abiertos o líneas de expresión? En MJ Fisio Estética & Spa ofrecemos tratamientos de rejuvenecimiento facial en Turrialba diseñados para renovar la piel, estimular la regeneración celular y devolverle luminosidad a tu rostro."
                     : "La estética es una pasión que ha formado parte de mi vida desde siempre. Me inspira la belleza en todas sus formas y me dedico a realzar la belleza natural de cada persona, ayudándoles a sentirse seguras y radiantes."
                   }
                 </p>
@@ -838,7 +838,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── ANTES Y DESPUÉS — servicios corporales seleccionados ─── */}
-      {["masajes-corporales", "reduccion-de-medidas", "drenaje-linfatico", "carboxiterapia"].includes(service.slug) && (() => {
+      {["masajes-corporales", "reduccion-de-medidas", "drenaje-linfatico", "carboxiterapia"].includes(service.slug) && !["peeling-quimico", "aromaterapia", "blanqueamiento-zona-intima", "rejuvenecimiento-facial-laser", "tratamiento-ojeras"].includes(service.slug) && (() => {
         const bgPair = beforeAfterBgMap[service.slug] ?? { before: "corporales-antes-bg.webp", after: "corporales-despues-bg.webp" };
         const beforeBg = `${BASE}images/${bgPair.before}`;
         const afterBg  = `${BASE}images/${bgPair.after}`;

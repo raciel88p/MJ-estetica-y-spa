@@ -630,7 +630,7 @@ export const servicePages: ServicePageData[] = [
   {
     slug: "peeling-quimico",
     name: "Peeling Facial",
-    fullTitle: "Peeling Facial en Turrialba: Reduce Manchas, Marcas de Acné y Signos de Envejecimiento",
+    fullTitle: "Peeling Facial en Turrialba",
     tagline: "Tratamiento de Peeling Facial Profesional en Turrialba para una Piel Más Joven y Luminosa",
     heroDescription:
       "El peeling facial profesional es un tratamiento estético que ayuda a renovar la piel, estimular la regeneración celular y devolverle luminosidad a tu rostro en Turrialba.",
