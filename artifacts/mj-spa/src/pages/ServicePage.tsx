@@ -1,5 +1,6 @@
 import { withAppProviders } from "@/components/ReactAppWrapper";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "wouter";
 import { CheckCircle2, Clock, Clock4, ChevronDown, ArrowRight, MessageCircle, Star, ShieldCheck, Award, UserCheck, GraduationCap, BadgeCheck } from "lucide-react";
 import { useState, useEffect } from "react";
 
