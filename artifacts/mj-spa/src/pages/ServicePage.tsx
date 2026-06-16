@@ -267,6 +267,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
       return () => controller.abort();
     }
+    return undefined;
   }, [service.slug, service.name]);
 
   const BASE = import.meta.env.BASE_URL;
