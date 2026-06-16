@@ -38,8 +38,16 @@ const heroSlides = [
     title: "RELÁJATE Y\nRECUPERA TU ENERGÍA",
     sub: "Circuitos de spa, masajes y tratamientos corporales diseñados para tu bienestar total.",
     cta: "Reservar cita",
-    ctaHref: "#contacto",
-  }
+    ctaHref: "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0",
+  },
+  {
+    bg: "about-us.webp",
+    label: "Medicina Estética",
+    title: "TECNOLOGÍA DE\nVANGUARDIA PARA TI",
+    sub: "Tratamientos médico-estéticos con resultados visibles desde la primera sesión.",
+    cta: "Conocer más",
+    ctaHref: "/medicos-esteticos",
+  },
 ];
 
 /* ── FORM SCHEMA ──────────────────────────────────── */
@@ -610,7 +618,11 @@ function Home() {
                 <Clock className="w-5 h-5 text-primary shrink-0 mt-1" />
                 <div>
                   <h4 className="font-bold text-stone-900 mb-1">Horario</h4>
-                  <p className="text-stone-500 text-sm">Lunes a Sábado: 8:00 AM - 6:00 PM<br/>Domingo: Cerrado</p>
+                  <p className="text-stone-500 text-sm">
+                    Lun, Mar, Jue, Vie: 9:00 - 20:00<br/>
+                    Sáb: 8:00 - 15:00<br/>
+                    Miércoles y Domingo: Cerrado
+                  </p>
                 </div>
               </div>
             </div>

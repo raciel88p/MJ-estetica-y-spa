@@ -760,10 +760,10 @@ export const servicePages: ServicePageData[] = [
   },
   {
     slug: "nutricion",
-    name: "Nutrición",
+    name: "Nutricionista en Turrialba | Planes Nutricionales Personalizados para Bienestar, Salud y Composición Corporal",
     tagline: "Alimenta tu cuerpo, transforma tu vida",
     heroDescription:
-      "Nuestro servicio de nutrición personalizada te acompaña en el camino hacia una alimentación equilibrada y saludable, adaptada a tus objetivos, estilo de vida y necesidades específicas.",
+      "Transforma tus hábitos alimenticios con acompañamiento profesional y un plan nutricional diseñado específicamente para ti.",
     benefits: [
       "Plan nutricional completamente personalizado",
       "Mejora del peso y composición corporal",

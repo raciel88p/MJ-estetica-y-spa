@@ -6,7 +6,7 @@ import type { ServicePageData } from "@/data/services";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as any } },
 };
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {
