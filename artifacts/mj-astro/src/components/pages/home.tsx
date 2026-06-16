@@ -333,7 +333,7 @@ function Home() {
                 <div className="w-8 h-px bg-primary" />
                 <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">MJ Fisio Estética y Spa</span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 leading-tight text-white">
                 Nuestras áreas<br/>
                 <span className="font-light italic text-stone-400">de tratamiento</span>
               </h2>
@@ -346,18 +346,18 @@ function Home() {
               transition={{ delay: 0.2 }}
               className="text-stone-400 text-lg max-w-sm"
             >
-              Tres especialidades, un solo lugar. Tratamientos médico-estéticos en el corazón de Turrialba.
+              Cuatro especialidades, un solo lugar. Tratamientos médico-estéticos en el corazón de Turrialba.
             </motion.p>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 h-auto md:h-[600px]">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 h-auto md:h-[600px]">
           {[
             {
               id: 'corporales',
               num: '01',
               title: "Corporales",
-              img: "about-us.webp",
+              img: "masajes-corporales-bg.webp",
               link: "/tratamientos/corporales",
               desc: "Moldea tu figura y recupera la firmeza de tu piel."
             },
@@ -365,15 +365,23 @@ function Home() {
               id: 'faciales',
               num: '02',
               title: "Faciales",
-              img: "hero-bg.webp",
+              img: "faciales-bg.webp",
               link: "/tratamientos/faciales",
               desc: "Rejuvenece y revitaliza tu rostro con tecnología médica."
             },
             {
-              id: 'piernas',
+              id: 'medicos',
               num: '03',
+              title: "Médico Estético",
+              img: "medicina-estetica-hero.jpg",
+              link: "/medicina-estetica",
+              desc: "Tratamientos médicos avanzados para realzar tu belleza natural."
+            },
+            {
+              id: 'piernas',
+              num: '04',
               title: "Piernas",
-              img: "spa-texture.webp",
+              img: "piernas-cansadas-bg.webp",
               link: "/tratamientos/piernas",
               desc: "Mejora circulatoria profunda y bienestar para tus piernas."
             }
