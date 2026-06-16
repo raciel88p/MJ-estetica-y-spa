@@ -371,7 +371,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
-      {!["botox-full-face","hilos-tensores","relleno-de-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar","biorevitalizacion", "nutricion"].includes(service.slug) && (
+      {!["botox-full-face","hilos-tensores","relleno-de-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar","biorevitalizacion"].includes(service.slug) && (
       <section className="py-10 bg-white border-b border-stone-100">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -380,7 +380,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
           >
             <div className="bg-primary px-6 py-3 flex items-center gap-2">
               <UserCheck className="w-4 h-4 text-white shrink-0" />
-              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">Profesional responsable</span>
+              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">{service.slug === "nutricion" ? "Especialista a cargo" : "Profesional responsable"}</span>
             </div>
             <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
@@ -393,15 +393,15 @@ function ServicePage({ service }: { service: ServicePageData }) {
                 <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
                   <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
                     <BadgeCheck className="w-3.5 h-3.5" />
-                    Linc Fisio Terapia
+                    {service.slug === "nutricion" ? "Código: 3667-25" : "Linc Fisio Terapia"}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <GraduationCap className="w-3.5 h-3.5" />
-                    Especialista en Estética
+                    {service.slug === "nutricion" ? "Nutricionista Deportivo" : "Especialista en Estética"}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <Award className="w-3.5 h-3.5 text-primary" />
-                    Laboró Hospital la Católica
+                    {service.slug === "nutricion" ? "Atención Personalizada" : "Laboró Hospital la Católica"}
                   </span>
                 </div>
                 <p className="text-stone-500 text-sm leading-relaxed mt-4 max-w-xl">
@@ -414,7 +414,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                     : service.slug === "rejuvenecimiento-facial-laser"
                     ? "¿Buscas recuperar la firmeza y luminosidad de tu piel sin cirugías? Nuestro tratamiento de rejuvenecimiento facial con láser en Turrialba está diseñado para estimular el colágeno natural y devolverle a tu rostro una apariencia fresca, saludable y juvenil."
                     : service.slug === "nutricion"
-                    ? "En MJ Estética & Wellness Center ayudamos a personas de Turrialba, Cartago y zonas cercanas a mejorar su alimentación, desarrollar hábitos sostenibles y alcanzar objetivos de bienestar mediante consultas nutricionales personalizadas."
+                    ? "Transforma tus hábitos alimenticios con acompañamiento profesional y un plan nutricional diseñado específicamente para ti.<br /><br />En MJ Estética & Wellness Center ayudamos a personas de Turrialba, Cartago y zonas cercanas a mejorar su alimentación, desarrollar hábitos sostenibles y alcanzar objetivos de bienestar mediante consultas nutricionales personalizadas."
                     : "La estética es una pasión que ha formado parte de mi vida desde siempre. Me inspira la belleza en todas sus formas y me dedico a realzar la belleza natural de cada persona, ayudándoles a sentirse seguras y radiantes."
                   }
                 </p>
@@ -578,7 +578,6 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
       {(() => {
         const doctorMap: Record<string, { name: string; code: string; specialty: string; photo?: string; bio: string }> = {
-          "nutricion":           { name: "Dr. Johan",                  code: "3667-25",   specialty: "Nutricionista Deportivo",  photo: "dr-johan.webp",               bio: "Especialista en nutrición clínica y deportiva. Diseña planes alimentarios personalizados orientados a objetivos de salud, rendimiento y composición corporal." },
           "trasplante-capilar":  { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.webp",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
           "implante-barba":      { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.webp",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
           "mesoterapia-capilar": { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.webp",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },

@@ -20,7 +20,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Link } from "wouter";
 
 
 /* ── HERO SLIDES ──────────────────────────────────── */
@@ -64,8 +63,6 @@ function Home() {
   const abTestResult = useABTest({testName: 'hero_cta_color', variants: {A: 'primary', B: 'accent'}});
   const abVariant = abTestResult ? abTestResult.value : 'primary';
   const { toast } = useToast();
-
-  const BASE = import.meta.env.BASE_URL;
 
   useEffect(() => {
     setMounted(true);
@@ -111,7 +108,7 @@ function Home() {
               className="absolute inset-0"
             >
               <img
-                src={`${BASE}images/${heroSlides[currentSlide].bg}`}
+                src={`/images/${heroSlides[currentSlide].bg}`}
                 alt="MJ Fisio Estética y Spa"
                 className="w-full h-full object-cover object-center"
                 loading={currentSlide === 0 ? "eager" : "lazy"}
@@ -128,7 +125,7 @@ function Home() {
         {!mounted && (
           <div className="absolute inset-0" style={{ opacity: 0, transform: 'scale(1.04)' }}>
             <img
-              src={`${BASE}images/hero-bg.webp`}
+              src="/images/hero-bg.webp"
               alt="MJ Fisio Estética y Spa"
               className="w-full h-full object-cover object-center"
               loading="eager"
@@ -279,12 +276,10 @@ function Home() {
               </div>
 
               <div className="mt-12">
-                <Link href="/nosotros">
-                  <span className="inline-flex items-center gap-2 text-sm font-bold tracking-[0.15em] uppercase text-primary hover:text-stone-900 transition-colors group cursor-pointer">
-                    Conoce nuestra historia
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Link>
+                <a href="/nosotros" className="inline-flex items-center gap-2 text-sm font-bold tracking-[0.15em] uppercase text-primary hover:text-stone-900 transition-colors group">
+                  Conoce nuestra historia
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
               </div>
             </motion.div>
 
@@ -297,7 +292,7 @@ function Home() {
             >
               <div className="aspect-[4/5] overflow-hidden rounded-sm relative shadow-2xl">
                 <img
-                  src={`${BASE}images/about-us.webp`}
+                  src="/images/about-us.webp"
                   alt="Instalaciones de MJ Fisio Estética"
                   className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
                   loading="lazy"
@@ -356,7 +351,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 h-auto md:h-[600px]">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 h-auto lg:h-[600px]">
           {[
             {
               id: 'corporales',
@@ -381,48 +376,53 @@ function Home() {
               img: "spa-texture.webp",
               link: "/tratamientos/piernas",
               desc: "Mejora circulatoria profunda y bienestar para tus piernas."
+            },
+            {
+              id: 'medicos',
+              num: '04',
+              title: "Médicos",
+              img: "dr-ricard-araya.webp",
+              link: "/medicos-esteticos",
+              desc: "Tratamientos médicos avanzados con resultados naturales."
             }
           ].map((cat, i) => (
-            <motion.div
+            <motion.a
               key={cat.id}
+              href={cat.link}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.2, duration: 0.8 }}
-              className="group relative h-[400px] md:h-full overflow-hidden block border-r border-stone-800 last:border-r-0 cursor-pointer"
+              className="group relative h-[400px] lg:h-full overflow-hidden block border-r border-stone-800 last:border-r-0 cursor-pointer"
             >
-              <Link href={cat.link}>
-                <div className="absolute inset-0">
-                  <img
-                    src={`${BASE}images/${cat.img}`}
-                    alt={`Tratamientos ${cat.title}`}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                    loading="lazy"
-                    decoding="async"
-                    width={600}
-                    height={800}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
+              <img
+                src={`/images/${cat.img}`}
+                alt={`Tratamientos ${cat.title}`}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
+                width={600}
+                height={800}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
 
-                  <div className="absolute inset-0 p-10 flex flex-col justify-between">
-                    <span className="text-6xl font-serif text-white/20 font-bold tracking-tighter transition-colors duration-500 group-hover:text-primary/40">
-                      {cat.num}
-                    </span>
+              <div className="absolute inset-0 p-10 flex flex-col justify-between">
+                <span className="text-6xl font-serif text-white/20 font-bold tracking-tighter transition-colors duration-500 group-hover:text-primary/40">
+                  {cat.num}
+                </span>
 
-                    <div className="transform transition-transform duration-500 group-hover:-translate-y-4">
-                      <div className="flex items-center gap-4 mb-4">
-                        <h3 className="text-2xl font-serif tracking-wide border border-white/20 px-6 py-2 backdrop-blur-sm group-hover:bg-primary group-hover:border-primary transition-all duration-300">
-                          {cat.title}
-                        </h3>
-                      </div>
-                      <p className="text-stone-300 h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 overflow-hidden leading-relaxed">
-                        {cat.desc}
-                      </p>
-                    </div>
+                <div className="transform transition-transform duration-500 group-hover:-translate-y-4">
+                  <div className="flex items-center gap-4 mb-4">
+                    <h3 className="text-2xl font-serif tracking-wide border border-white/20 px-6 py-2 backdrop-blur-sm group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+                      {cat.title}
+                    </h3>
                   </div>
+                  <p className="text-stone-300 h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 overflow-hidden leading-relaxed">
+                    {cat.desc}
+                  </p>
                 </div>
-              </Link>
-            </motion.div>
+              </div>
+            </motion.a>
           ))}
         </div>
       </section>
@@ -470,18 +470,18 @@ function Home() {
                 </div>
 
                 <div className="pt-4">
-                  <Link href="/medicos-esteticos">
+                  <a href="/medicos-esteticos">
                     <Button variant="outline" className="h-12 px-8 tracking-widest uppercase text-xs font-bold border-stone-300 text-stone-700 hover:bg-stone-900 hover:text-white transition-all">
                       Conocer al equipo médico
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </div>
 
               <div className="order-1 lg:order-2">
                 <div className="relative aspect-square md:aspect-[4/3] rounded-sm overflow-hidden shadow-xl">
                   <img
-                    src={`${BASE}images/dr-ricard-araya.webp`}
+                    src="/images/dr-ricard-araya.webp"
                     alt="Dr. Ricard Araya"
                     className="w-full h-full object-cover"
                     loading="lazy"
@@ -538,11 +538,11 @@ function Home() {
           </div>
 
           <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/testimonios">
+            <a href="/testimonios">
               <Button size="lg" className="h-14 px-8 tracking-widest uppercase text-xs font-bold bg-primary text-white hover:bg-primary/90 w-full sm:w-auto">
                 Ver más testimonios
               </Button>
-            </Link>
+            </a>
             <a href={GOOGLE_REVIEW_LINK} target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg" className="h-14 px-8 tracking-widest uppercase text-xs font-bold border-white/20 text-white bg-transparent hover:bg-white hover:text-stone-900 w-full sm:w-auto">
                 Dejar una reseña en Google

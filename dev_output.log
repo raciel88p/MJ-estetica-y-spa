@@ -24,3 +24,20 @@
 19:32:49 [watch] /src/styles/global.css?direct, /src/styles/global.css, /src/components/pages/home.tsx
 19:32:49 [watch] src/components/pages/home.tsx
 [vite] program reload
+[vite] program reload
+21:06:12 [watch] /src/styles/global.css?direct, /src/styles/global.css, /src/components/pages/home.tsx
+21:06:12 [watch] src/components/pages/home.tsx
+[vite] program reload
+21:08:13 [watch] /src/styles/global.css?direct, /src/styles/global.css, /src/components/pages/home.tsx
+21:08:13 [watch] src/components/pages/home.tsx
+[vite] program reload
+[vite] program reload
+[vite] program reload
+[vite] program reload
+[vite] program reload
+[vite] program reload
+[vite] program reload
+21:11:12 [200] / 356ms
+/app/artifacts/mj-astro:
+ ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL  @workspace/mj-astro@0.0.1 dev: `astro dev`
+Exit status 143

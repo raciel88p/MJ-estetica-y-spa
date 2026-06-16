@@ -58,7 +58,7 @@ export function NutricionServiceContent({ waLink }: Props) {
                   "Crear una mejor relación con la alimentación"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
-                    <span className="text-primary font-bold">✔</span>
+                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     <span className="text-sm text-stone-700 font-medium">{item}</span>
                   </li>
                 ))}
@@ -128,16 +128,16 @@ export function NutricionServiceContent({ waLink }: Props) {
         <div className="max-w-7xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
             <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">VENTAJAS</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900">Beneficios de Recibir Acompañamiento Nutricional Profesional</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900">Beneficios</h2>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { t: "Alimentación Adaptada a Ti", d: "No trabajamos con planes genéricos." },
-              { t: "Hábitos Sostenibles", d: "Creamos estrategias realistas para tu estilo de vida." },
-              { t: "Educación Nutricional", d: "Comprende cómo funciona tu alimentación." },
-              { t: "Bienestar Integral", d: "La nutrición forma parte de un enfoque completo de salud y bienestar." },
-              { t: "Seguimiento Continuo", d: "Te acompañamos durante el proceso." },
-              { t: "Objetivos Personalizados", d: "Cada paciente tiene metas diferentes y cada plan se adapta a ellas." }
+              { t: "Alimentación adaptada a ti", d: "No trabajamos con planes genéricos." },
+              { t: "Hábitos sostenibles y realistas", d: "Creamos estrategias que puedas mantener a largo plazo." },
+              { t: "Educación nutricional", d: "Aprende a tomar mejores decisiones por tu cuenta." },
+              { t: "Bienestar integral y energía", d: "Mejora tu calidad de vida y vitalidad." },
+              { t: "Seguimiento y acompañamiento profesional", d: "Te acompañamos en cada etapa del proceso." },
+              { t: "Objetivos personalizados", d: "Ya sea salud, estética o rendimiento deportivo." }
             ].map((b, i) => (
               <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-50 p-8 border border-stone-100 hover:border-primary/20 transition-colors">
                 <h4 className="font-serif font-bold text-xl text-stone-900 mb-3">{b.t}</h4>
@@ -154,15 +154,15 @@ export function NutricionServiceContent({ waLink }: Props) {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
               <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">METODOLOGÍA</p>
-              <h2 className="text-4xl md:text-5xl font-serif leading-tight">¿Cómo Funciona una Consulta Nutricional en MJ Estética & Wellness Center?</h2>
+              <h2 className="text-4xl md:text-5xl font-serif leading-tight">¿Cómo funciona una consulta nutricional en MJ Estética & Wellness Center?</h2>
             </motion.div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
             {[
-              { s: "Paso 1", t: "Valoración Inicial", d: "Analizamos hábitos, objetivos y estilo de vida." },
-              { s: "Paso 2", t: "Diseño del Plan Nutricional", d: "Creamos una estrategia personalizada." },
-              { s: "Paso 3", t: "Implementación", d: "Comienzas a aplicar los cambios de manera progresiva." },
-              { s: "Paso 4", t: "Seguimiento y Ajustes", d: "Realizamos acompañamiento para optimizar resultados." }
+              { s: "Paso 1", t: "Valoración inicial", d: "Hábitos, objetivos y estilo de vida." },
+              { s: "Paso 2", t: "Diseño del plan nutricional", d: "Estrategia personalizada." },
+              { s: "Paso 3", t: "Implementación", d: "Cambios progresivos." },
+              { s: "Paso 4", t: "Seguimiento y ajustes", d: "Para optimizar resultados." }
             ].map((step, i) => (
               <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-900 p-10">
                 <span className="text-primary text-xs font-bold tracking-widest uppercase block mb-6">{step.s}</span>
@@ -174,124 +174,22 @@ export function NutricionServiceContent({ waLink }: Props) {
         </div>
       </section>
 
-      {/* ── FOR WHOM / CASES ─────────────────────────── */}
-      <section className="py-20 bg-white border-b border-stone-100">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <h2 className="text-3xl font-serif font-bold text-stone-900 mb-8 leading-tight">¿Para Quién se Recomienda el Servicio de Nutricionista?</h2>
-              <div className="space-y-4">
-                {[
-                  "Personas que desean bajar porcentaje de grasa corporal",
-                  "Personas interesadas en bienestar integral",
-                  "Personas que desean mejorar hábitos alimenticios",
-                  "Personas con objetivos estéticos y wellness",
-                  "Personas que desean una alimentación más organizada",
-                  "Personas que buscan orientación nutricional profesional",
-                  "Hombres y mujeres de Turrialba y Cartago que desean mejorar su calidad de vida"
-                ].map((item, i) => (
-                  <div key={i} className="bg-stone-50 p-4 border-l-4 border-primary/30">
-                    <p className="text-stone-800 font-bold text-sm leading-snug">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <h2 className="text-3xl font-serif font-bold text-stone-900 mb-8 leading-tight">Casos Frecuentes que Atendemos</h2>
-              <div className="space-y-6">
-                {[
-                  "Personas que sienten que comen bien pero no logran resultados.",
-                  "Personas que han probado múltiples dietas.",
-                  "Personas que desean complementar tratamientos estéticos.",
-                  "Personas con agendas ocupadas que necesitan estrategias realistas.",
-                  "Personas que desean mejorar energía y bienestar."
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 text-stone-600">
-                    <span className="text-primary font-bold">✔</span>
-                    <p className="text-lg">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── WHY CHOOSE US ────────────────────────────── */}
-      <section className="py-20 bg-stone-50">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6 leading-tight">¿Por Qué Elegir MJ Estética & Wellness Center?</h2>
-            <p className="text-stone-600 text-lg mb-12 leading-relaxed">
-              A diferencia de un enfoque tradicional centrado únicamente en la alimentación, nuestro centro integra bienestar, estética y acompañamiento profesional.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto mb-16">
-              {[
-                "Nutrición Personalizada",
-                "Atención Individualizada",
-                "Seguimiento Profesional",
-                "Enfoque Wellness Integral",
-                "Ambiente Cómodo y Seguro",
-                "Atención Cercana y Humana",
-                "Ubicación Conveniente en Turrialba"
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-primary flex items-center justify-center shrink-0">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-white" />
-                  </div>
-                  <span className="text-stone-700 font-bold text-sm">{item}</span>
-                </div>
-              ))}
-            </div>
-            <p className="text-stone-500 font-medium text-lg italic">Nuestro objetivo es ayudarte a construir hábitos que realmente puedas mantener.</p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ── TESTIMONIALS ─────────────────────────────── */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <p className="text-primary text-xs font-bold tracking-widest uppercase mb-4">Lo Que Dicen Nuestros Pacientes</p>
-            <div className="flex justify-center gap-1 mb-10">
-              {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
-            </div>
-            <div className="grid grid-cols-1 gap-12">
-              {[
-                "Aprendí a organizar mi alimentación sin sentir restricciones extremas.",
-                "Por primera vez sentí que el plan fue diseñado para mí.",
-                "El acompañamiento me ayudó a mantener hábitos que antes abandonaba.",
-                "Me siento mejor física y emocionalmente gracias al proceso."
-              ].map((t, i) => (
-                <div key={i} className="relative">
-                  <span className="text-stone-100 text-[100px] font-serif absolute -top-12 left-0 -z-10 leading-none select-none">"</span>
-                  <p className="text-2xl md:text-3xl font-serif text-stone-800 italic leading-relaxed">
-                    {t}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* ── FAQ ───────────────────────────────────────── */}
       <section className="py-20 bg-stone-50 border-y border-stone-200">
         <div className="max-w-3xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-16 text-center">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-4 leading-tight">
-              Preguntas Frecuentes Sobre Nutrición en Turrialba
+              Preguntas Frecuentes
             </h2>
           </motion.div>
           <div className="space-y-10">
             {[
-              { q: "¿Los planes nutricionales son personalizados?", a: "Sí. Cada paciente recibe recomendaciones adaptadas a sus objetivos." },
-              { q: "¿La consulta incluye seguimiento?", a: "Sí. El seguimiento es parte fundamental del proceso." },
-              { q: "¿Puedo combinar nutrición con tratamientos estéticos?", a: "Sí. Muchos pacientes integran nutrición y bienestar dentro de un enfoque integral." },
-              { q: "¿Atienden personas de Cartago y zonas cercanas?", a: "Sí. Recibimos pacientes de Turrialba y comunidades cercanas." },
-              { q: "¿Qué objetivos puede apoyar una nutricionista?", a: "Hábitos saludables, bienestar integral, organización alimenticia y objetivos de composición corporal." }
+              { q: "¿Los planes nutricionales son personalizados?", a: "Sí, cada recomendación se adapta a tus objetivos." },
+              { q: "¿La consulta incluye seguimiento?", a: "Sí, el acompañamiento es fundamental para el éxito." },
+              { q: "¿Puedo combinar nutrición con tratamientos estéticos?", a: "Sí, es el complemento ideal para potenciar resultados corporales." },
+              { q: "¿Qué objetivos puede apoyar una nutricionista?", a: "Hábitos, bienestar, organización alimenticia y composición corporal." }
             ].map((faq, i) => (
-              <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+              <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={faqUp}>
                 <h4 className="text-lg font-bold text-stone-900 mb-3">{faq.q}</h4>
                 <p className="text-stone-600 leading-relaxed">{faq.a}</p>
               </motion.div>
@@ -342,3 +240,4 @@ export function NutricionServiceContent({ waLink }: Props) {
     </div>
   );
 }
+const faqUp = fadeUp;
