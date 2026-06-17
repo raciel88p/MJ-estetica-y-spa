@@ -6,10 +6,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import {
   ArrowRight, Star, MapPin, Phone, Clock,
-  ChevronRight, ChevronLeft, MessageCircle
+  ChevronRight, ChevronLeft, MessageCircle,
+  ShieldCheck, Award, Sparkles, Heart, CheckCircle2
 } from "lucide-react";
 
-import { useABTest } from "@/hooks/useABTest";
 import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -21,36 +21,18 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
+const WA_LINK = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
-/* ── HERO SLIDES ──────────────────────────────────── */
-const heroSlides = [
-  {
-    bg: "hero-bg.webp",
-    label: "Estética Avanzada",
-    title: "DESCUBRE TU\nMEJOR VERSIÓN",
-    sub: "Los mejores profesionales y la mejor tecnología, exclusivamente para ti.",
-    cta: "Ver tratamientos",
-    ctaHref: "#servicios",
-  },
-  {
-    bg: "spa-texture.webp",
-    label: "Spa & Bienestar",
-    title: "RELÁJATE Y\nRECUPERA TU ENERGÍA",
-    sub: "Circuitos de spa, masajes y tratamientos corporales diseñados para tu bienestar total.",
-    cta: "Reservar cita",
-    ctaHref: "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0",
-  },
-  {
-    bg: "about-us.webp",
-    label: "Medicina Estética",
-    title: "TECNOLOGÍA DE\nVANGUARDIA PARA TI",
-    sub: "Tratamientos médico-estéticos con resultados visibles desde la primera sesión.",
-    cta: "Conocer más",
-    ctaHref: "/medicos-esteticos",
-  },
-];
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" as const } },
+};
 
-/* ── FORM SCHEMA ──────────────────────────────────── */
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
+};
+
 const formSchema = z.object({
   name: z.string().min(2, "El nombre es muy corto"),
   phone: z.string().min(8, "Teléfono inválido"),
@@ -58,18 +40,11 @@ const formSchema = z.object({
 });
 
 function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [mounted, setMounted] = useState(false);
-  const abTestResult = useABTest({testName: 'hero_cta_color', variants: {A: 'primary', B: 'accent'}});
-  const abVariant = abTestResult ? abTestResult.value : 'primary';
   const { toast } = useToast();
 
   useEffect(() => {
     setMounted(true);
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 6000);
-    return () => clearInterval(timer);
   }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
@@ -86,567 +61,384 @@ function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-white overflow-x-hidden">
+    <div className="min-h-screen bg-white overflow-x-hidden selection:bg-primary/20">
       <SEO
-        title="Centro de Estética y Spa en Turrialba"
-        description="MJ Fisio Estética y Spa en Turrialba, Costa Rica. Tratamientos faciales, corporales, piernas cansadas, botox, hilos tensores y más. Reserva tu cita hoy."
+        title="MJ Fisio Estética & Spa | Centro de Bienestar en Turrialba"
+        description="Descubre tu mejor versión en MJ Fisio Estética y Spa. Tratamientos médicos, faciales y corporales de vanguardia en Turrialba, Costa Rica."
         canonical="/"
       />
       <Navbar />
       <FloatingWhatsApp />
 
-      {/* ── HERO ────────────────────────────────────────── */}
-      <section id="inicio" className="relative h-screen min-h-[640px] overflow-hidden">
-        {mounted && (
-          <AnimatePresence mode="sync">
-            <motion.div
-              key={currentSlide}
-              initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1.2, ease: "easeInOut" }}
-              className="absolute inset-0"
-            >
-              <img
-                src={`/images/${heroSlides[currentSlide].bg}`}
-                alt="MJ Fisio Estética y Spa"
-                className="w-full h-full object-cover object-center"
-                loading={currentSlide === 0 ? "eager" : "lazy"}
-                fetchPriority={currentSlide === 0 ? "high" : "auto"}
-                decoding="async"
-                width={1920}
-                height={1080}
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
-            </motion.div>
-          </AnimatePresence>
-        )}
-        {/* Fallback para SSR */}
-        {!mounted && (
-          <div className="absolute inset-0" style={{ opacity: 0, transform: 'scale(1.04)' }}>
-            <img
-              src="/images/hero-bg.webp"
-              alt="MJ Fisio Estética y Spa"
-              className="w-full h-full object-cover object-center"
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              width={1920}
-              height={1080}
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
-          </div>
-        )}
-
-        {/* Decoración lateral */}
-        <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-3 z-10">
-          <span className="text-white/30 text-[10px] tracking-[0.35em] uppercase font-medium" style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}>
-            Turrialba · Costa Rica
-          </span>
-          <div className="w-px h-16 bg-white/20" />
+      {/* ── HERO SECTION ────────────────────────────────── */}
+      <section className="relative h-[90vh] min-h-[700px] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/hero-bg.webp"
+            alt="MJ Fisio Estética & Spa"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent md:bg-gradient-to-r md:from-black/70 md:via-black/30 md:to-transparent" />
         </div>
 
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+        <div className="container relative z-10 mx-auto px-6">
           <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="max-w-5xl mx-auto"
+            initial="hidden"
+            animate="visible"
+            variants={stagger}
+            className="max-w-3xl"
           >
-            {/* Etiqueta superior */}
-            <div className="flex items-center justify-center gap-4 mb-7">
-              <div className="w-12 h-px bg-white/30" />
-              <p className="text-white/85 tracking-[0.35em] uppercase text-xs font-medium">
-                {heroSlides[currentSlide]?.label || heroSlides[0].label}
-              </p>
-              <div className="w-12 h-px bg-white/30" />
-            </div>
+            <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-6">
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase">Estética Avanzada & Wellness</span>
+            </motion.div>
 
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[96px] font-serif font-bold text-white leading-none tracking-tight mb-7 whitespace-pre-line">
-              {heroSlides[currentSlide]?.title || heroSlides[0].title}
-            </h1>
+            <motion.h1
+              variants={fadeUp}
+              className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] mb-8"
+            >
+              Realza tu <br />
+              <span className="italic font-light text-primary">belleza natural</span>
+            </motion.h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-              {heroSlides[currentSlide]?.sub || heroSlides[0].sub}
-            </p>
+            <motion.p
+              variants={fadeUp}
+              className="text-lg md:text-xl text-white/80 mb-10 max-w-xl leading-relaxed font-light"
+            >
+              En MJ Fisio Estética & Spa combinamos ciencia médica y tecnología de vanguardia para ofrecerte resultados visibles en un ambiente de total relajación.
+            </motion.p>
 
-            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
-              <a href={heroSlides[currentSlide]?.ctaHref || heroSlides[0].ctaHref}>
-                <Button
-                  size="lg"
-                  className={`
-                    h-14 px-10 text-sm tracking-[0.2em] uppercase font-semibold
-                    hover-elevate active-elevate-2
-                    ${abVariant === 'accent'
-                      ? 'bg-accent text-accent-foreground hover:bg-accent/90'
-                      : 'bg-primary text-white hover:bg-primary/90'}
-                  `}
-                >
-                  {heroSlides[currentSlide]?.cta || heroSlides[0].cta}
+            <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5">
+              <a href="#especialidades">
+                <Button size="lg" className="h-14 px-10 text-sm tracking-widest uppercase font-bold bg-primary hover:bg-primary/90 transition-all shadow-xl shadow-primary/20">
+                  Ver tratamientos
                 </Button>
               </a>
-              <a href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="h-14 px-10 text-sm tracking-[0.2em] uppercase font-semibold bg-white/10 text-white border-white/20 hover:bg-white hover:text-stone-900 transition-all duration-300"
-                >
-                  Contáctanos
+              <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="lg" className="h-14 px-10 text-sm tracking-widest uppercase font-bold bg-white/5 text-white border-white/20 hover:bg-white hover:text-stone-900 transition-all backdrop-blur-sm">
+                  Agendar Cita
                 </Button>
               </a>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
 
-        {/* Controles del Slider */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-4 z-10">
-          <button
-            onClick={() => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
-            className="p-3 rounded-full border border-white/20 text-white/70 hover:bg-white hover:text-black hover:border-white transition-all duration-300 group"
-            aria-label="Diapositiva anterior"
+        {/* Scroll indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block">
+          <motion.div
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="w-6 h-10 rounded-full border-2 border-white/20 flex justify-center p-1"
           >
-            <ChevronLeft className="w-4 h-4 group-hover:-translate-x-0.5 transition-transform" />
-          </button>
+            <div className="w-1.5 h-2 bg-primary rounded-full" />
+          </motion.div>
+        </div>
+      </section>
 
-          <div className="flex gap-2">
-            {heroSlides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrentSlide(i)}
-                className={`transition-all duration-500 rounded-full ${
-                  i === currentSlide ? 'w-8 h-1.5 bg-white' : 'w-1.5 h-1.5 bg-white/40 hover:bg-white/60'
-                }`}
-                aria-label={`Ir a diapositiva ${i + 1}`}
-              />
+      {/* ── TRUST BAR ──────────────────────────────────── */}
+      <section className="bg-[#050c14] py-12 border-b border-white/5">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { icon: ShieldCheck, title: "Profesionales", sub: "Certificados" },
+              { icon: Star, title: "Resultados", sub: "Garantizados" },
+              { icon: Heart, title: "Atención", sub: "Personalizada" },
+              { icon: Award, title: "Tecnología", sub: "Médica" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-center gap-4 justify-center">
+                <item.icon className="w-8 h-8 text-primary" />
+                <div className="text-left">
+                  <p className="text-white font-bold text-sm uppercase tracking-wider leading-tight">{item.title}</p>
+                  <p className="text-white/40 text-[10px] uppercase tracking-[0.2em]">{item.sub}</p>
+                </div>
+              </div>
             ))}
           </div>
-
-          <button
-            onClick={() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
-            className="p-3 rounded-full border border-white/20 text-white/70 hover:bg-white hover:text-black hover:border-white transition-all duration-300 group"
-            aria-label="Siguiente diapositiva"
-          >
-            <ChevronRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-          </button>
         </div>
       </section>
 
-      {/* ── STATS BAR ──────────────────────────────────── */}
-      <StatsBar />
+      {/* ── ESPECIALIDADES ─────────────────────────────── */}
+      <section id="especialidades" className="py-24 md:py-32 bg-stone-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-stone-400 text-xs font-bold tracking-[0.3em] uppercase mb-4">MJ Fisio Estética & Spa</h2>
+            <h3 className="text-4xl md:text-6xl font-serif text-stone-900 mb-6">Nuestras Especialidades</h3>
+            <div className="w-20 h-1 bg-primary mx-auto" />
+          </div>
 
-      {/* ── NOSOTROS ────────────────────────────────────── */}
-      <section id="nosotros" className="py-24 md:py-32 bg-stone-50 relative overflow-hidden">
-        {/* Decoración de fondo */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-stone-100/50 -skew-x-12 translate-x-20" />
-
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="inline-flex items-center gap-3 mb-6">
-                <div className="w-8 h-px bg-primary" />
-                <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">Nuestra Esencia</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-8 leading-tight">
-                El Arte del <br />
-                <span className="italic text-primary font-light">Bienestar Integral</span>
-              </h2>
-              <div className="prose prose-stone prose-lg text-stone-600 space-y-6">
-                <p>
-                  En MJ Fisio Estética y Spa, no solo ofrecemos tratamientos; creamos experiencias transformadoras. Nuestro enfoque integral combina la ciencia médica más avanzada con el arte del cuidado personal.
-                </p>
-                <p>
-                  Ubicados en el corazón de Turrialba, hemos diseñado un santuario de tranquilidad donde la belleza y la salud convergen bajo el cuidado de expertos apasionados.
-                </p>
-              </div>
-
-              <div className="mt-10 grid grid-cols-2 gap-8 border-t border-stone-200 pt-10">
-                <div>
-                  <h4 className="text-3xl font-serif text-stone-900 mb-2">10+</h4>
-                  <p className="text-sm tracking-wide text-stone-500 uppercase">Años de Excelencia</p>
-                </div>
-                <div>
-                  <h4 className="text-3xl font-serif text-stone-900 mb-2">3</h4>
-                  <p className="text-sm tracking-wide text-stone-500 uppercase">Especialidades Médicas</p>
-                </div>
-              </div>
-
-              <div className="mt-12">
-                <a href="/nosotros" className="inline-flex items-center gap-2 text-sm font-bold tracking-[0.15em] uppercase text-primary hover:text-stone-900 transition-colors group">
-                  Conoce nuestra historia
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="aspect-[4/5] overflow-hidden rounded-sm relative shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              {
+                title: "Corporales",
+                slug: "corporales",
+                img: "about-us.webp",
+                desc: "Remodelación y firmeza corporal.",
+                link: "/tratamientos/corporales"
+              },
+              {
+                title: "Faciales",
+                slug: "faciales",
+                img: "faciales-bg.webp",
+                desc: "Limpieza y rejuvenecimiento facial.",
+                link: "/tratamientos/faciales"
+              },
+              {
+                title: "Médico Estético",
+                slug: "medicos",
+                img: "dr-ricard-araya.webp",
+                desc: "Botox, hilos y rellenos médicos.",
+                link: "/medicos-esteticos"
+              },
+              {
+                title: "Piernas",
+                slug: "piernas",
+                img: "spa-texture.webp",
+                desc: "Tratamientos circulatorios.",
+                link: "/tratamientos/piernas"
+              },
+            ].map((cat, i) => (
+              <motion.a
+                key={i}
+                href={cat.link}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="group relative h-[450px] overflow-hidden rounded-sm"
+              >
                 <img
-                  src="/images/about-us.webp"
-                  alt="Instalaciones de MJ Fisio Estética"
-                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-1000"
-                  loading="lazy"
-                  decoding="async"
-                  width={800}
-                  height={1000}
+                  src={`/images/${cat.img}`}
+                  alt={cat.title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 border-[1px] border-white/20 m-6 rounded-sm pointer-events-none" />
-              </div>
-
-              {/* Badge flotante */}
-              <div className="absolute -bottom-8 -left-8 bg-white p-8 shadow-xl max-w-[280px]">
-                <div className="flex gap-1 text-primary mb-3">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star key={i} className="w-4 h-4 fill-current" />
-                  ))}
-                </div>
-                <p className="text-stone-800 font-serif italic text-lg leading-snug">
-                  "Un oasis de paz y profesionalismo. Resultados increíbles desde la primera sesión."
-                </p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── ÁREAS DE TRATAMIENTO ────────────────────────── */}
-      <section id="servicios" className="py-24 md:py-32 bg-stone-900 text-white relative">
-        <div className="max-w-7xl mx-auto px-6 mb-16 md:mb-24">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="max-w-2xl"
-            >
-              <div className="inline-flex items-center gap-3 mb-6">
-                <div className="w-8 h-px bg-primary" />
-                <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">MJ Fisio Estética y Spa</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif mb-6 leading-tight">
-                Nuestras áreas<br/>
-                <span className="font-light italic text-stone-400">de tratamiento</span>
-              </h2>
-            </motion.div>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="text-stone-400 text-lg max-w-sm"
-            >
-              Tres especialidades, un solo lugar. Tratamientos médico-estéticos en el corazón de Turrialba.
-            </motion.p>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 h-auto lg:h-[600px]">
-          {[
-            {
-              id: 'corporales',
-              num: '01',
-              title: "Corporales",
-              img: "about-us.webp",
-              link: "/tratamientos/corporales",
-              desc: "Moldea tu figura y recupera la firmeza de tu piel."
-            },
-            {
-              id: 'faciales',
-              num: '02',
-              title: "Faciales",
-              img: "hero-bg.webp",
-              link: "/tratamientos/faciales",
-              desc: "Rejuvenece y revitaliza tu rostro con tecnología médica."
-            },
-            {
-              id: 'piernas',
-              num: '03',
-              title: "Piernas",
-              img: "spa-texture.webp",
-              link: "/tratamientos/piernas",
-              desc: "Mejora circulatoria profunda y bienestar para tus piernas."
-            },
-            {
-              id: 'medicos',
-              num: '04',
-              title: "Médicos",
-              img: "dr-ricard-araya.webp",
-              link: "/medicos-esteticos",
-              desc: "Tratamientos médicos avanzados con resultados naturales."
-            }
-          ].map((cat, i) => (
-            <motion.a
-              key={cat.id}
-              href={cat.link}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.2, duration: 0.8 }}
-              className="group relative h-[400px] lg:h-full overflow-hidden block border-r border-stone-800 last:border-r-0 cursor-pointer"
-            >
-              <img
-                src={`/images/${cat.img}`}
-                alt={`Tratamientos ${cat.title}`}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                loading="lazy"
-                decoding="async"
-                width={600}
-                height={800}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/40 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-500" />
-
-              <div className="absolute inset-0 p-10 flex flex-col justify-between">
-                <span className="text-6xl font-serif text-white/20 font-bold tracking-tighter transition-colors duration-500 group-hover:text-primary/40">
-                  {cat.num}
-                </span>
-
-                <div className="transform transition-transform duration-500 group-hover:-translate-y-4">
-                  <div className="flex items-center gap-4 mb-4">
-                    <h3 className="text-2xl font-serif tracking-wide border border-white/20 px-6 py-2 backdrop-blur-sm group-hover:bg-primary group-hover:border-primary transition-all duration-300">
-                      {cat.title}
-                    </h3>
-                  </div>
-                  <p className="text-stone-300 h-0 opacity-0 group-hover:h-auto group-hover:opacity-100 transition-all duration-500 overflow-hidden leading-relaxed">
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity" />
+                <div className="absolute inset-0 p-8 flex flex-col justify-end">
+                  <h4 className="text-2xl font-serif text-white mb-2">{cat.title}</h4>
+                  <p className="text-white/60 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
                     {cat.desc}
                   </p>
-                </div>
-              </div>
-            </motion.a>
-          ))}
-        </div>
-      </section>
-
-      {/* ── DOCTOR SECTION ──────────────────────────────── */}
-      <section className="py-24 md:py-32 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-white p-8 md:p-16 shadow-2xl rounded-sm border border-stone-100 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-
-            <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
-              <div className="order-2 lg:order-1 space-y-8">
-                <div>
-                  <h3 className="text-stone-400 font-bold tracking-[0.2em] uppercase text-xs mb-3">Dirección Médica</h3>
-                  <h2 className="text-4xl md:text-5xl font-serif text-stone-900">Dr. Ricard Araya</h2>
-                  <p className="text-primary font-medium mt-2">Código Médico: 323106</p>
-                </div>
-
-                <div className="prose prose-stone text-stone-600">
-                  <p>
-                    Especialista en Medicina Estética y Funcional, dedicado a realzar la belleza natural
-                    mediante procedimientos mínimamente invasivos y tecnología de vanguardia.
-                  </p>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-6 pt-6 border-t border-stone-100">
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <Star className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-stone-900">Especialista</h4>
-                      <p className="text-sm text-stone-500">Medicina Estética</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <MessageCircle className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-stone-900">Consulta</h4>
-                      <p className="text-sm text-stone-500">Valoración inicial</p>
-                    </div>
+                  <div className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-widest uppercase">
+                    Ver más <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
-
-                <div className="pt-4">
-                  <a href="/medicos-esteticos">
-                    <Button variant="outline" className="h-12 px-8 tracking-widest uppercase text-xs font-bold border-stone-300 text-stone-700 hover:bg-stone-900 hover:text-white transition-all">
-                      Conocer al equipo médico
-                    </Button>
-                  </a>
-                </div>
-              </div>
-
-              <div className="order-1 lg:order-2">
-                <div className="relative aspect-square md:aspect-[4/3] rounded-sm overflow-hidden shadow-xl">
-                  <img
-                    src="/images/dr-ricard-araya.webp"
-                    alt="Dr. Ricard Araya"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-stone-900/10" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── GOOGLE REVIEWS SUMMARY ──────────────────────── */}
-      <section className="py-24 bg-stone-900 text-white relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] aspect-square bg-primary/20 rounded-full blur-[120px] opacity-50" />
-
-        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <div className="flex justify-center gap-1 mb-8">
-            {[1,2,3,4,5].map(i => (
-              <Star key={i} className="w-8 h-8 fill-[#FABB05] text-[#FABB05]" />
+              </motion.a>
             ))}
           </div>
+        </div>
+      </section>
 
-          <h2 className="text-3xl md:text-5xl font-serif mb-6 leading-tight">
-            Lo que dicen <br />
-            <span className="font-light italic text-primary">nuestras clientas</span>
-          </h2>
-
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 md:p-12 mt-12 rounded-sm relative">
-            <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-stone-900 border border-white/10 w-12 h-12 flex items-center justify-center rounded-full">
-              <span className="text-4xl font-serif text-primary leading-none mt-4">"</span>
+      {/* ── TRATAMIENTOS ESTRELLA ──────────────────────── */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+            <div>
+              <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">Tratamientos Destacados</p>
+              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">Nuestros resultados <br /><span className="italic font-light text-primary">más buscados</span></h2>
             </div>
-
-            <p className="text-lg md:text-xl text-stone-300 font-light leading-relaxed mb-8">
-              "Excelente atención, el personal es muy profesional y amable. Las instalaciones son de primer nivel y los resultados de los tratamientos son visibles desde la primera sesión. 100% recomendado para quienes buscan calidad."
-            </p>
-
-            <div className="flex items-center justify-center gap-4">
-              <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center font-bold text-primary">
-                MV
-              </div>
-              <div className="text-left">
-                <p className="font-bold">María V.</p>
-                <div className="flex items-center gap-2">
-                  <div className="flex gap-0.5">
-                    {[1,2,3,4,5].map(i => (
-                      <Star key={i} className="w-3 h-3 fill-[#FABB05] text-[#FABB05]" />
-                    ))}
-                  </div>
-                  <p className="text-white/50 text-xs">hace 2 semanas</p>
-                </div>
-              </div>
-            </div>
+            <a href="/tratamientos/corporales" className="text-sm font-bold tracking-widest uppercase border-b border-stone-200 pb-2 hover:text-primary hover:border-primary transition-colors">
+              Ver todos los servicios
+            </a>
           </div>
 
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/testimonios">
-              <Button size="lg" className="h-14 px-8 tracking-widest uppercase text-xs font-bold bg-primary text-white hover:bg-primary/90 w-full sm:w-auto">
-                Ver más testimonios
-              </Button>
-            </a>
-            <a href={GOOGLE_REVIEW_LINK} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" size="lg" className="h-14 px-8 tracking-widest uppercase text-xs font-bold border-white/20 text-white bg-transparent hover:bg-white hover:text-stone-900 w-full sm:w-auto">
-                Dejar una reseña en Google
-              </Button>
-            </a>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+            {[
+              {
+                title: "Botox Full Face",
+                category: "Médico Estético",
+                desc: "Suaviza arrugas de expresión manteniendo tu naturalidad.",
+                link: "/servicios/botox-full-face"
+              },
+              {
+                title: "Hidrolipoclasia",
+                category: "Corporal",
+                desc: "Elimina grasa localizada sin cirugía en una sesión.",
+                link: "/servicios/masajes-corporales"
+              },
+              {
+                title: "Limpieza Facial Profunda",
+                category: "Facial",
+                desc: "Renovación completa para una piel radiante y sin impurezas.",
+                link: "/servicios/limpieza-facial"
+              },
+              {
+                title: "Hilos Tensores",
+                category: "Médico Estético",
+                desc: "Efecto lifting inmediato estimulando tu propio colágeno.",
+                link: "/servicios/hilos-tensores"
+              },
+              {
+                title: "Depilación Láser",
+                category: "Premium",
+                desc: "Despídete del vello para siempre con tecnología de punta.",
+                link: "/servicios/depilacion-laser"
+              },
+              {
+                title: "Levantamiento de Glúteo",
+                category: "Corporal",
+                desc: "Tonifica y proyecta tu figura de forma no invasiva.",
+                link: "/servicios/levantamiento-gluteo"
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="group"
+              >
+                <div className="mb-6 overflow-hidden bg-stone-100 aspect-video relative">
+                   <div className="absolute inset-0 bg-stone-200 flex items-center justify-center">
+                      <Sparkles className="w-12 h-12 text-white" />
+                   </div>
+                </div>
+                <p className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-2">{item.category}</p>
+                <h4 className="text-2xl font-serif text-stone-900 mb-3 group-hover:text-primary transition-colors">{item.title}</h4>
+                <p className="text-stone-500 text-sm leading-relaxed mb-6">
+                  {item.desc}
+                </p>
+                <a href={item.link} className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors">
+                  Conocer más <ArrowRight className="w-3.5 h-3.5" />
+                </a>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* ── CONTACTO Y MAPA ────────────────────────────── */}
-      <section id="contacto" className="py-0 relative flex flex-col lg:flex-row min-h-[800px]">
-        {/* Formulario */}
-        <div className="w-full lg:w-1/2 bg-stone-50 p-8 md:p-16 lg:p-24 flex items-center">
-          <div className="max-w-md mx-auto w-full">
-            <div className="inline-flex items-center gap-3 mb-6">
-              <div className="w-8 h-px bg-primary" />
-              <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">Contacto</span>
-            </div>
+      {/* ── EXPERIENCIA MJ ─────────────────────────────── */}
+      <section className="py-24 md:py-32 bg-stone-900 text-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-1/4" />
 
-            <h2 className="text-4xl font-serif text-stone-900 mb-4">Ponte en contacto</h2>
-            <p className="text-stone-500 mb-10">Agenda tu cita o realiza una consulta. Nuestro equipo te atenderá a la brevedad.</p>
-
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-              <div>
-                <Input
-                  placeholder="Tu nombre"
-                  className="bg-white border-stone-200 h-14 rounded-sm"
-                  {...form.register("name")}
-                />
-                {form.formState.errors.name && (
-                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.name.message}</p>
-                )}
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+            >
+              <h2 className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">Experiencia Wellness</h2>
+              <h3 className="text-4xl md:text-6xl font-serif mb-8 leading-tight">Mucho más que un <br /><span className="italic font-light text-stone-400">centro de estética</span></h3>
+              <div className="space-y-6 text-stone-400 text-lg font-light leading-relaxed">
+                <p>Ubicados en el corazón de Turrialba, en MJ Estética & Wellness Center diseñamos cada tratamiento como un ritual de cuidado personal.</p>
+                <p>Nuestra misión es ayudarte a sentirte bien contigo misma, fusionando protocolos médicos de alta eficiencia con una experiencia sensorial única.</p>
               </div>
 
-              <div>
-                <Input
-                  placeholder="Tu teléfono"
-                  type="tel"
-                  className="bg-white border-stone-200 h-14 rounded-sm"
-                  {...form.register("phone")}
-                />
-                {form.formState.errors.phone && (
-                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.phone.message}</p>
-                )}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
+                {[
+                  "Valoración profesional previa",
+                  "Protocolos 100% personalizados",
+                  "Tecnología de última generación",
+                  "Ambiente privado y relajante"
+                ].map((feature, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-primary" />
+                    <span className="text-white text-sm font-medium">{feature}</span>
+                  </div>
+                ))}
               </div>
 
-              <div>
-                <Textarea
-                  placeholder="¿En qué tratamiento estás interesada?"
-                  className="bg-white border-stone-200 min-h-[120px] rounded-sm resize-none"
-                  {...form.register("message")}
-                />
-                {form.formState.errors.message && (
-                  <p className="text-red-500 text-sm mt-1">{form.formState.errors.message.message}</p>
-                )}
+              <div className="mt-14">
+                 <a href="/nosotros">
+                    <Button variant="outline" className="h-12 px-8 tracking-widest uppercase text-[10px] font-bold border-white/20 text-white hover:bg-white hover:text-stone-900 transition-all">
+                       Conoce nuestra historia
+                    </Button>
+                 </a>
               </div>
+            </motion.div>
 
-              <Button type="submit" className="w-full h-14 tracking-widest uppercase text-xs font-bold bg-stone-900 text-white hover:bg-primary transition-colors">
-                Enviar mensaje
-              </Button>
-            </form>
-
-            <div className="mt-12 pt-12 border-t border-stone-200 space-y-6">
-              <div className="flex items-start gap-4">
-                <MapPin className="w-5 h-5 text-primary shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-stone-900 mb-1">Ubicación</h4>
-                  <p className="text-stone-500 text-sm">Turrialba Centro, 150m este de la Iglesia Católica, Cartago, Costa Rica.</p>
-                </div>
+            <div className="relative">
+              <div className="aspect-[4/5] rounded-sm overflow-hidden shadow-2xl">
+                 <img src="/images/about-us.webp" alt="Experiencia MJ" className="w-full h-full object-cover" />
               </div>
-
-              <div className="flex items-start gap-4">
-                <Phone className="w-5 h-5 text-primary shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-stone-900 mb-1">Teléfono</h4>
-                  <p className="text-stone-500 text-sm">+506 8888-8888</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <Clock className="w-5 h-5 text-primary shrink-0 mt-1" />
-                <div>
-                  <h4 className="font-bold text-stone-900 mb-1">Horario</h4>
-                  <p className="text-stone-500 text-sm">
-                    Lun, Mar, Jue, Vie: 9:00 - 20:00<br/>
-                    Sáb: 8:00 - 15:00<br/>
-                    Miércoles y Domingo: Cerrado
-                  </p>
-                </div>
+              <div className="absolute -bottom-10 -left-10 bg-primary p-10 hidden md:block">
+                 <p className="text-white text-5xl font-serif font-bold mb-1">10+</p>
+                 <p className="text-white/80 text-[10px] font-bold tracking-widest uppercase">Años de experiencia</p>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Mapa */}
-        <div className="w-full lg:w-1/2 min-h-[400px] lg:min-h-full h-[50vh] lg:h-auto relative">
-          <GoogleMap />
+      {/* ── TESTIMONIOS ────────────────────────────────── */}
+      <section className="py-24 bg-stone-50 border-b border-stone-200">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="flex justify-center gap-1 mb-8">
+              {[1,2,3,4,5].map(i => <Star key={i} className="w-6 h-6 fill-primary text-primary" />)}
+            </div>
+            <h2 className="text-3xl md:text-5xl font-serif text-stone-900 mb-12">Lo que nuestras clientas dicen</h2>
 
-          <div className="absolute bottom-8 right-8 z-10 hidden md:block">
-            <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer">
-              <Button className="bg-white text-stone-900 shadow-xl hover:bg-stone-100 rounded-sm font-bold uppercase tracking-widest text-xs h-12 px-6">
-                Abrir en Google Maps
-              </Button>
-            </a>
+            <div className="bg-white p-10 md:p-16 shadow-xl rounded-sm relative">
+              <p className="text-xl md:text-2xl text-stone-600 font-light italic leading-relaxed mb-8">
+                "Excelente atención, el personal es muy profesional y amable. Las instalaciones son de primer nivel y los resultados de los tratamientos son visibles desde la primera sesión. 100% recomendado para quienes buscan calidad."
+              </p>
+              <p className="text-stone-900 font-bold uppercase tracking-widest text-sm">— María V.</p>
+            </div>
+
+            <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+               <a href="/testimonios">
+                  <Button variant="ghost" className="tracking-widest uppercase text-xs font-bold">Ver más testimonios</Button>
+               </a>
+               <a href={GOOGLE_REVIEW_LINK} target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="tracking-widest uppercase text-xs font-bold border-stone-200">Dejar reseña en Google</Button>
+               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── CONTACTO ──────────────────────────────────── */}
+      <section id="contacto" className="py-24 md:py-32 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
+            <div className="flex-1">
+              <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">Contacto</p>
+              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-8 leading-tight">¿Lista para empezar <br />tu transformación?</h2>
+
+              <div className="space-y-8 mt-12">
+                <div className="flex gap-5">
+                   <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center shrink-0">
+                      <MapPin className="w-5 h-5 text-primary" />
+                   </div>
+                   <div>
+                      <p className="font-bold text-stone-900 text-lg">Visítanos</p>
+                      <p className="text-stone-500 leading-relaxed">Turrialba Centro, 150m este de la Iglesia Católica, Cartago, Costa Rica.</p>
+                   </div>
+                </div>
+                <div className="flex gap-5">
+                   <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center shrink-0">
+                      <Phone className="w-5 h-5 text-primary" />
+                   </div>
+                   <div>
+                      <p className="font-bold text-stone-900 text-lg">Llámanos</p>
+                      <p className="text-stone-500">+506 8888-8888</p>
+                   </div>
+                </div>
+                <div className="flex gap-5">
+                   <div className="w-12 h-12 rounded-full bg-stone-100 flex items-center justify-center shrink-0">
+                      <Clock className="w-5 h-5 text-primary" />
+                   </div>
+                   <div>
+                      <p className="font-bold text-stone-900 text-lg">Horario</p>
+                      <p className="text-stone-500">Lun - Vie: 9:00 - 20:00 / Sáb: 8:00 - 15:00</p>
+                   </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex-1">
+               <div className="bg-stone-50 p-8 md:p-12 border border-stone-200">
+                  <h3 className="text-2xl font-serif text-stone-900 mb-6">Envíanos un mensaje</h3>
+                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <Input placeholder="Nombre completo" className="bg-white border-stone-200 h-14" {...form.register("name")} />
+                    <Input placeholder="Teléfono" className="bg-white border-stone-200 h-14" {...form.register("phone")} />
+                    <Textarea placeholder="¿En qué servicio estás interesada?" className="bg-white border-stone-200 min-h-[120px]" {...form.register("message")} />
+                    <Button type="submit" className="w-full h-14 bg-stone-900 text-white font-bold tracking-widest uppercase hover:bg-primary transition-all">Enviar Consulta</Button>
+                  </form>
+               </div>
+            </div>
           </div>
         </div>
       </section>
