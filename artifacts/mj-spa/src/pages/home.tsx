@@ -421,15 +421,14 @@ function Home() {
               </div>
             </div>
 
-            <div className="flex-1">
-               <div className="bg-stone-50 p-8 md:p-12 border border-stone-200">
-                  <h3 className="text-2xl font-serif text-stone-900 mb-6">Envíanos un mensaje</h3>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <Input placeholder="Nombre completo" className="bg-white border-stone-200 h-14" {...form.register("name")} />
-                    <Input placeholder="Teléfono" className="bg-white border-stone-200 h-14" {...form.register("phone")} />
-                    <Textarea placeholder="¿En qué servicio estás interesada?" className="bg-white border-stone-200 min-h-[120px]" {...form.register("message")} />
-                    <Button type="submit" className="w-full h-14 bg-stone-900 text-white font-bold tracking-widest uppercase hover:bg-primary transition-all">Enviar Consulta</Button>
-                  </form>
+            <div className="flex-1 min-h-[450px] relative rounded-sm overflow-hidden shadow-2xl border border-stone-100">
+               <GoogleMap />
+               <div className="absolute bottom-6 right-6 z-10">
+                  <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer">
+                    <Button className="bg-white text-stone-900 shadow-xl hover:bg-stone-100 rounded-sm font-bold uppercase tracking-widest text-[10px] h-10 px-4">
+                      Abrir en Google Maps
+                    </Button>
+                  </a>
                </div>
             </div>
           </div>
