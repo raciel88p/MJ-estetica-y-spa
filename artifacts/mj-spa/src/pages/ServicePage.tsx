@@ -414,39 +414,10 @@ function ServicePage({ service }: { service: ServicePageData }) {
                     : service.slug === "rejuvenecimiento-facial-laser"
                     ? "¿Buscas recuperar la firmeza y luminosidad de tu piel sin cirugías? Nuestro tratamiento de rejuvenecimiento facial con láser en Turrialba está diseñado para estimular el colágeno natural y devolverle a tu rostro una apariencia fresca, saludable y juvenil."
                     : service.slug === "nutricion"
-                    ? "Transforma tus hábitos alimenticios con acompañamiento profesional y un plan nutricional diseñado específicamente para ti.<br /><br />En MJ Estética & Wellness Center ayudamos a personas de Turrialba, Cartago y zonas cercanas a mejorar su alimentación, desarrollar hábitos sostenibles y alcanzar objetivos de bienestar mediante consultas nutricionales personalizadas."
+                    ? "Transforma tus hábitos alimenticios con acompañamiento profesional y un plan nutricional diseñado específicamente para ti."
                     : "La estética es una pasión que ha formado parte de mi vida desde siempre. Me inspira la belleza en todas sus formas y me dedico a realzar la belleza natural de cada persona, ayudándoles a sentirse seguras y radiantes."
                   }
                 </p>
-                {service.slug === "nutricion" && (
-                  <div className="flex flex-col gap-3 mt-6">
-                    <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Valoración Nutricional Profesional
-                    </div>
-                    <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Plan Nutricional Personalizado
-                    </div>
-                    <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Seguimiento y Acompañamiento
-                    </div>
-                    <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Nutrición para Bienestar y Estética
-                    </div>
-                    <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Atención en Turrialba
-                    </div>
-
-                    <div className="mt-10 bg-primary/5 border border-primary/20 p-8 rounded-sm">
-                       <p className="text-primary text-[10px] font-bold tracking-[0.3em] uppercase mb-4">🎁 Descarga GRATIS la Guía:</p>
-                       <h3 className="text-2xl font-serif font-bold text-stone-900 mb-4 leading-tight">7 Estrategias que Utilizan Nuestros Pacientes para Mejorar su Alimentación y Reducir Grasa Corporal de Forma Sostenible</h3>
-                       <p className="text-stone-600 text-sm mb-6">Aprende hábitos simples que pueden ayudarte a sentirte mejor, organizar tu alimentación y potenciar tus resultados.</p>
-                       <a href={WA} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-white text-[10px] font-bold px-6 py-4 tracking-widest uppercase hover:bg-stone-900 transition-colors">
-                         <Download className="w-4 h-4" /> [DESCARGAR GUÍA GRATIS]
-                       </a>
-                       <p className="text-stone-400 text-[10px] mt-4 uppercase tracking-widest">👉 Solicita tu guía gratuita aquí</p>
-                    </div>
-                  </div>
-                )}
                 {service.slug === "aromaterapia" && (
                   <div className="flex flex-col gap-3 mt-6">
                     <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
@@ -501,6 +472,48 @@ function ServicePage({ service }: { service: ServicePageData }) {
               </div>
             </div>
           </motion.div>
+
+          {/* ── NUTRITION LEAD MAGNET (OUTSIDE CARD) ── */}
+          {service.slug === "nutricion" && (
+            <motion.div
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+              className="mt-12"
+            >
+              <div className="max-w-xl mx-auto">
+                <p className="text-stone-600 text-base leading-relaxed mb-8">
+                  En MJ Estética & Wellness Center ayudamos a personas de Turrialba, Cartago y zonas cercanas a mejorar su alimentación, desarrollar hábitos sostenibles y alcanzar objetivos de bienestar mediante consultas nutricionales personalizadas.
+                </p>
+
+                <div className="flex flex-col gap-3 mb-10">
+                  <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> Valoración Nutricional Profesional
+                  </div>
+                  <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> Plan Nutricional Personalizado
+                  </div>
+                  <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> Seguimiento y Acompañamiento
+                  </div>
+                  <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> Nutrición para Bienestar y Estética
+                  </div>
+                  <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> Atención en Turrialba
+                  </div>
+                </div>
+
+                <div className="bg-primary/5 border border-primary/20 p-8 sm:p-10 rounded-sm">
+                   <p className="text-primary text-[10px] font-bold tracking-[0.3em] uppercase mb-4">🎁 Descarga GRATIS la Guía:</p>
+                   <h3 className="text-2xl font-serif font-bold text-stone-900 mb-4 leading-tight">7 Estrategias que Utilizan Nuestros Pacientes para Mejorar su Alimentación y Reducir Grasa Corporal de Forma Sostenible</h3>
+                   <p className="text-stone-600 text-sm mb-6 leading-relaxed">Aprende hábitos simples que pueden ayudarte a sentirte mejor, organizar tu alimentación y potenciar tus resultados.</p>
+                   <a href={WA} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-white text-[10px] font-bold px-8 py-5 tracking-widest uppercase hover:bg-stone-900 transition-colors shadow-lg">
+                     <Download className="w-4 h-4" /> [DESCARGAR GUÍA GRATIS]
+                   </a>
+                   <p className="text-stone-400 text-[10px] mt-4 uppercase tracking-widest">👉 Solicita tu guía gratuita aquí</p>
+                </div>
+              </div>
+            </motion.div>
+          )}
         </div>
       </section>
       )}

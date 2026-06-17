@@ -154,7 +154,7 @@ export function NutricionServiceContent({ waLink }: Props) {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
               <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">METODOLOGÍA</p>
-              <h2 className="text-4xl md:text-5xl font-serif leading-tight">¿Cómo funciona una consulta nutricional en MJ Estética & Wellness Center?</h2>
+              <h2 className="text-4xl md:text-5xl font-serif text-white leading-tight">¿Cómo funciona una consulta nutricional en MJ Estética & Wellness Center?</h2>
             </motion.div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
@@ -166,8 +166,8 @@ export function NutricionServiceContent({ waLink }: Props) {
             ].map((step, i) => (
               <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-900 p-10">
                 <span className="text-primary text-xs font-bold tracking-widest uppercase block mb-6">{step.s}</span>
-                <h3 className="text-2xl font-serif font-bold mb-4">{step.t}</h3>
-                <p className="text-stone-400 text-sm leading-relaxed">{step.d}</p>
+                <h3 className="text-2xl font-serif font-bold text-white mb-4">{step.t}</h3>
+                <p className="text-white/80 text-sm leading-relaxed">{step.d}</p>
               </motion.div>
             ))}
           </div>
