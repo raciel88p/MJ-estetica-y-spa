@@ -185,7 +185,7 @@ function Home() {
               {
                 title: "Piernas",
                 slug: "piernas",
-                img: "spa-texture.webp",
+                img: "anticelulitis-bg.webp",
                 desc: "Tratamientos circulatorios.",
                 link: "/tratamientos/piernas"
               },
