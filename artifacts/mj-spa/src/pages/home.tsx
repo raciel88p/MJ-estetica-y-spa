@@ -351,7 +351,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 h-auto lg:h-[600px]">
+        <div className="grid md:grid-cols-3 h-auto md:h-[600px]">
           {[
             {
               id: 'corporales',
@@ -376,14 +376,6 @@ function Home() {
               img: "spa-texture.webp",
               link: "/tratamientos/piernas",
               desc: "Mejora circulatoria profunda y bienestar para tus piernas."
-            },
-            {
-              id: 'medicos',
-              num: '04',
-              title: "Médicos",
-              img: "dr-ricard-araya.webp",
-              link: "/medicos-esteticos",
-              desc: "Tratamientos médicos avanzados con resultados naturales."
             }
           ].map((cat, i) => (
             <motion.a
@@ -393,7 +385,7 @@ function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.2, duration: 0.8 }}
-              className="group relative h-[400px] lg:h-full overflow-hidden block border-r border-stone-800 last:border-r-0 cursor-pointer"
+              className="group relative h-[400px] md:h-full overflow-hidden block border-r border-stone-800 last:border-r-0 cursor-pointer"
             >
               <img
                 src={`/images/${cat.img}`}
@@ -427,72 +419,6 @@ function Home() {
         </div>
       </section>
 
-      {/* ── DOCTOR SECTION ──────────────────────────────── */}
-      <section className="py-24 md:py-32 bg-stone-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-white p-8 md:p-16 shadow-2xl rounded-sm border border-stone-100 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-
-            <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
-              <div className="order-2 lg:order-1 space-y-8">
-                <div>
-                  <h3 className="text-stone-400 font-bold tracking-[0.2em] uppercase text-xs mb-3">Dirección Médica</h3>
-                  <h2 className="text-4xl md:text-5xl font-serif text-stone-900">Dr. Ricard Araya</h2>
-                  <p className="text-primary font-medium mt-2">Código Médico: 323106</p>
-                </div>
-
-                <div className="prose prose-stone text-stone-600">
-                  <p>
-                    Especialista en Medicina Estética y Funcional, dedicado a realzar la belleza natural
-                    mediante procedimientos mínimamente invasivos y tecnología de vanguardia.
-                  </p>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-6 pt-6 border-t border-stone-100">
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <Star className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-stone-900">Especialista</h4>
-                      <p className="text-sm text-stone-500">Medicina Estética</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-                      <MessageCircle className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-stone-900">Consulta</h4>
-                      <p className="text-sm text-stone-500">Valoración inicial</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-4">
-                  <a href="/medicos-esteticos">
-                    <Button variant="outline" className="h-12 px-8 tracking-widest uppercase text-xs font-bold border-stone-300 text-stone-700 hover:bg-stone-900 hover:text-white transition-all">
-                      Conocer al equipo médico
-                    </Button>
-                  </a>
-                </div>
-              </div>
-
-              <div className="order-1 lg:order-2">
-                <div className="relative aspect-square md:aspect-[4/3] rounded-sm overflow-hidden shadow-xl">
-                  <img
-                    src="/images/dr-ricard-araya.webp"
-                    alt="Dr. Ricard Araya"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-stone-900/10" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── GOOGLE REVIEWS SUMMARY ──────────────────────── */}
       <section className="py-24 bg-stone-900 text-white relative overflow-hidden">
