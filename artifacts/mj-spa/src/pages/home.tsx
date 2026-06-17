@@ -166,7 +166,7 @@ function Home() {
             <div className="w-20 h-1 bg-primary mx-auto" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 title: "Corporales",
@@ -181,13 +181,6 @@ function Home() {
                 img: "faciales-bg.webp",
                 desc: "Limpieza y rejuvenecimiento facial.",
                 link: "/tratamientos/faciales"
-              },
-              {
-                title: "Médico Estético",
-                slug: "medicos",
-                img: "dr-ricard-araya.webp",
-                desc: "Botox, hilos y rellenos médicos.",
-                link: "/medicos-esteticos"
               },
               {
                 title: "Piernas",
@@ -319,7 +312,7 @@ function Home() {
               variants={fadeUp}
             >
               <h2 className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">Experiencia Wellness</h2>
-              <h3 className="text-4xl md:text-6xl font-serif mb-8 leading-tight">Mucho más que un <br /><span className="italic font-light text-stone-400">centro de estética</span></h3>
+              <h3 className="text-4xl md:text-6xl font-serif text-white mb-8 leading-tight">Mucho más que un <br /><span className="italic font-light text-stone-400">centro de estética</span></h3>
               <div className="space-y-6 text-stone-400 text-lg font-light leading-relaxed">
                 <p>Ubicados en el corazón de Turrialba, en MJ Estética & Wellness Center diseñamos cada tratamiento como un ritual de cuidado personal.</p>
                 <p>Nuestra misión es ayudarte a sentirte bien contigo misma, fusionando protocolos médicos de alta eficiencia con una experiencia sensorial única.</p>
