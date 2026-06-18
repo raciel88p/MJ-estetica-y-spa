@@ -3,7 +3,7 @@ interface GoogleMapProps {
 }
 
 const MAPS_EMBED_URL =
-  "https://maps.google.com/maps?q=MJ+Fisio+Estetica+y+Spa+Ciudadela+Jorge+de+Bravo+Turrialba+Costa+Rica&t=&z=16&ie=UTF8&iwloc=&output=embed";
+  "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15719.82424424368!2d-83.6763459!3d9.9376176!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d707b47f5b37%3A0x204dec416362c752!2sMJ%20Fisio%20Est%C3%A9tica%20y%20Spa!5e0!3m2!1ses-419!2scr!4v1739983456789!5m2!1ses-419!2scr";
 
 const MAPS_LINK =
   "https://maps.google.com/maps?q=MJ+Fisio+Estetica+y+Spa+Ciudadela+Jorge+de+Bravo+Turrialba+Costa+Rica";
@@ -16,20 +16,22 @@ const GOOGLE_REVIEW_LINK =
 
 export function GoogleMap({ className = "" }: GoogleMapProps) {
   return (
-    <div className={`relative ${className}`}>
-      <iframe
-        title="MJ Fisio Estética y Spa — Google Maps"
-        src={MAPS_EMBED_URL}
-        width="100%"
-        height="100%"
+    <div className={`relative flex flex-col ${className}`}>
+      <div className="flex-1 w-full min-h-0">
+        <iframe
+          title="MJ Fisio Estética y Spa — Google Maps"
+          src={MAPS_EMBED_URL}
+          width="100%"
+          height="100%"
         style={{ border: 0, display: "block" }}
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        aria-label="Mapa de ubicación de MJ Fisio Estética y Spa en Turrialba, Costa Rica"
-      />
-      {/* Overlay action buttons */}
-      <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-t border-stone-100 flex flex-col sm:flex-row gap-0 divide-y sm:divide-y-0 sm:divide-x divide-stone-100">
+          aria-label="Mapa de ubicación de MJ Fisio Estética y Spa en Turrialba, Costa Rica"
+        />
+      </div>
+      {/* Footer action buttons */}
+      <div className="w-full bg-white/95 backdrop-blur-sm border-t border-stone-100 flex flex-col sm:flex-row gap-0 divide-y sm:divide-y-0 sm:divide-x divide-stone-100">
         <a
           href={MAPS_LINK}
           target="_blank"

@@ -422,14 +422,7 @@ function Home() {
             </div>
 
             <div className="flex-1 min-h-[450px] relative rounded-sm overflow-hidden shadow-2xl border border-stone-100">
-               <GoogleMap />
-               <div className="absolute bottom-6 right-6 z-10">
-                  <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer">
-                    <Button className="bg-white text-stone-900 shadow-xl hover:bg-stone-100 rounded-sm font-bold uppercase tracking-widest text-[10px] h-10 px-4">
-                      Abrir en Google Maps
-                    </Button>
-                  </a>
-               </div>
+               <GoogleMap className="h-full w-full" />
             </div>
           </div>
         </div>
