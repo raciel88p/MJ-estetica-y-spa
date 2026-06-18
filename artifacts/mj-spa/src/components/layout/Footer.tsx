@@ -1,12 +1,12 @@
 import { Instagram, Facebook, MapPin, Phone, Clock } from "lucide-react";
-import { Link } from "wouter";
+
 
 export function Footer() {
   return (
     <footer className="bg-foreground text-white/80 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          
+
           {/* Brand */}
           <div className="space-y-4">
             <img
@@ -44,14 +44,15 @@ export function Footer() {
           <div>
             <h4 className="text-xl font-serif text-white mb-6">Páginas</h4>
             <ul className="space-y-3">
-              <li><Link href="/nosotros" className="hover:text-secondary transition-colors">Sobre Nosotros</Link></li>
-              <li><Link href="/tratamientos/corporales" className="hover:text-secondary transition-colors">Tratamientos Corporales</Link></li>
-              <li><Link href="/tratamientos/faciales" className="hover:text-secondary transition-colors">Tratamientos Faciales</Link></li>
-              <li><Link href="/tratamientos/piernas" className="hover:text-secondary transition-colors">Tratamientos de Piernas</Link></li>
-              <li><Link href="/paquetes" className="hover:text-secondary transition-colors">Paquetes</Link></li>
-              <li><Link href="/medicos-esteticos" className="hover:text-secondary transition-colors">Médico Estético</Link></li>
-              <li><Link href="/testimonios" className="hover:text-secondary transition-colors">Testimonios</Link></li>
-              <li><Link href="/mapa-del-sitio" className="hover:text-secondary transition-colors">Mapa del Sitio</Link></li>
+              <li><a href="/nosotros" className="hover:text-secondary transition-colors">Sobre Nosotros</a></li>
+              <li><a href="/tratamientos/corporales" className="hover:text-secondary transition-colors">Tratamientos Corporales</a></li>
+              <li><a href="/tratamientos/faciales" className="hover:text-secondary transition-colors">Tratamientos Faciales</a></li>
+              <li><a href="/tratamientos/piernas" className="hover:text-secondary transition-colors">Tratamientos de Piernas</a></li>
+              <li><a href="/paquetes" className="hover:text-secondary transition-colors">Paquetes</a></li>
+              <li><a href="/medicos-esteticos" className="hover:text-secondary transition-colors">Médico Estético</a></li>
+              <li><a href="/testimonios" className="hover:text-secondary transition-colors">Testimonios</a></li>
+              <li><a href="/buzon-sugerencias" className="hover:text-secondary transition-colors font-medium text-primary">Buzón de Sugerencias</a></li>
+              <li><a href="/mapa-del-sitio" className="hover:text-secondary transition-colors">Mapa del Sitio</a></li>
             </ul>
           </div>
 
@@ -130,8 +131,8 @@ export function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
           <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. Todos los derechos reservados.</p>
           <div className="flex gap-4">
-            <Link href="/politica-de-datos" className="hover:text-white">Política de Privacidad</Link>
-            <Link href="/mapa-del-sitio" className="hover:text-white">Mapa del Sitio</Link>
+            <a href="/politica-de-datos" className="hover:text-white">Política de Privacidad</a>
+            <a href="/mapa-del-sitio" className="hover:text-white">Mapa del Sitio</a>
           </div>
         </div>
       </div>

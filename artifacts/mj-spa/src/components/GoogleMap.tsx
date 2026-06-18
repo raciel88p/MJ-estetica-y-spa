@@ -3,7 +3,7 @@ interface GoogleMapProps {
 }
 
 const MAPS_EMBED_URL =
-  "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15719.82424424368!2d-83.6763459!3d9.9376176!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d707b47f5b37%3A0x204dec416362c752!2sMJ%20Fisio%20Est%C3%A9tica%20y%20Spa!5e0!3m2!1ses-419!2scr!4v1739983456789!5m2!1ses-419!2scr";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.01605335198!2d-83.67886472401662!3d9.932688090169542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0d707b47f5b37%3A0x204dec416362c752!2sMJ%20Fisio%20Est%C3%A9tica%20y%20Spa!5e0!3m2!1ses-419!2scr!4v1740000000000!5m2!1ses-419!2scr";
 
 const MAPS_LINK =
   "https://maps.google.com/maps?q=MJ+Fisio+Estetica+y+Spa+Ciudadela+Jorge+de+Bravo+Turrialba+Costa+Rica";
