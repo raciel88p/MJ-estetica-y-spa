@@ -169,11 +169,11 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                title: "Corporales",
-                slug: "corporales",
-                img: "about-us.webp",
-                desc: "Remodelación y firmeza corporal.",
-                link: "/tratamientos/corporales"
+                title: "Depilación Láser",
+                slug: "depilacion-laser",
+                img: "depilacion-laser-bg.webp",
+                desc: "Piel lisa y sin vello para siempre.",
+                link: "/servicios/depilacion-laser"
               },
               {
                 title: "Faciales",
