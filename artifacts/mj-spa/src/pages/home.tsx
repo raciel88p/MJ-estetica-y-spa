@@ -239,37 +239,45 @@ function Home() {
                 title: "Botox Full Face",
                 category: "Médico Estético",
                 desc: "Suaviza arrugas de expresión manteniendo tu naturalidad.",
-                link: "/servicios/botox-full-face"
+                link: "/servicios/botox-full-face",
+                img: "botox-full-face-bg.webp"
               },
               {
                 title: "Hidrolipoclasia",
                 category: "Corporal",
                 desc: "Elimina grasa localizada sin cirugía en una sesión.",
-                link: "/servicios/masajes-corporales"
+                link: "/servicios/masajes-corporales",
+                isComparison: true,
+                before: "corporales-antes-bg.webp",
+                after: "corporales-despues-bg.webp"
               },
               {
                 title: "Limpieza Facial Profunda",
                 category: "Facial",
                 desc: "Renovación completa para una piel radiante y sin impurezas.",
-                link: "/servicios/limpieza-facial"
+                link: "/servicios/limpieza-facial",
+                img: "faciales-bg.webp"
               },
               {
                 title: "Hilos Tensores",
                 category: "Médico Estético",
                 desc: "Efecto lifting inmediato estimulando tu propio colágeno.",
-                link: "/servicios/hilos-tensores"
+                link: "/servicios/hilos-tensores",
+                img: "hilos-tensores-bg.webp"
               },
               {
                 title: "Depilación Láser",
                 category: "Premium",
                 desc: "Despídete del vello para siempre con tecnología de punta.",
-                link: "/servicios/depilacion-laser"
+                link: "/servicios/depilacion-laser",
+                img: "depilacion-laser-bg.webp"
               },
               {
                 title: "Levantamiento de Glúteo",
                 category: "Corporal",
                 desc: "Tonifica y proyecta tu figura de forma no invasiva.",
-                link: "/servicios/levantamiento-gluteo"
+                link: "/servicios/levantamiento-gluteo",
+                img: "levantamiento-gluteo-bg.webp"
               },
             ].map((item, i) => (
               <motion.div
@@ -280,10 +288,22 @@ function Home() {
                 variants={fadeUp}
                 className="group"
               >
-                <div className="mb-6 overflow-hidden bg-stone-100 aspect-video relative">
-                   <div className="absolute inset-0 bg-stone-200 flex items-center justify-center">
-                      <Sparkles className="w-12 h-12 text-white" />
-                   </div>
+                <div className="mb-6 overflow-hidden bg-stone-100 aspect-video relative rounded-sm shadow-md group-hover:shadow-xl transition-all duration-500">
+                   {item.isComparison ? (
+                     <div className="flex h-full w-full">
+                       <div className="relative flex-1 overflow-hidden border-r border-white/20">
+                         <img src={`/images/${item.before}`} className="absolute inset-0 w-full h-full object-cover grayscale-[0.2]" alt="Antes" />
+                         <span className="absolute top-2 left-2 bg-black/60 text-[8px] font-bold text-white px-2 py-0.5 uppercase tracking-widest">Antes</span>
+                       </div>
+                       <div className="relative flex-1 overflow-hidden">
+                         <img src={`/images/${item.after}`} className="absolute inset-0 w-full h-full object-cover" alt="Después" />
+                         <span className="absolute top-2 left-2 bg-primary text-[8px] font-bold text-white px-2 py-0.5 uppercase tracking-widest">Después</span>
+                       </div>
+                     </div>
+                   ) : (
+                     <img src={`/images/${item.img}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={item.title} />
+                   )}
+                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
                 </div>
                 <p className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-2">{item.category}</p>
                 <h4 className="text-2xl font-serif text-stone-900 mb-3 group-hover:text-primary transition-colors">{item.title}</h4>
