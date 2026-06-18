@@ -51,6 +51,7 @@ export function Footer() {
               <li><a href="/paquetes" className="hover:text-secondary transition-colors">Paquetes</a></li>
               <li><a href="/medicos-esteticos" className="hover:text-secondary transition-colors">Médico Estético</a></li>
               <li><a href="/testimonios" className="hover:text-secondary transition-colors">Testimonios</a></li>
+              <li><a href="/buzon-sugerencias" className="hover:text-secondary transition-colors font-medium text-primary">Buzón de Sugerencias</a></li>
               <li><a href="/mapa-del-sitio" className="hover:text-secondary transition-colors">Mapa del Sitio</a></li>
             </ul>
           </div>

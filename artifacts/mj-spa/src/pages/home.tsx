@@ -428,6 +428,25 @@ function Home() {
         </div>
       </section>
 
+      <section className="py-12 bg-[#040911] text-center border-t border-white/5">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="flex flex-col md:flex-row items-center justify-center gap-6"
+          >
+            <p className="text-white/40 text-sm font-light tracking-wide">¿Tienes alguna idea para mejorar nuestra página?</p>
+            <a href="/buzon-sugerencias">
+              <Button variant="outline" className="border-primary/30 text-primary hover:bg-primary hover:text-white transition-all text-[10px] tracking-widest uppercase font-bold h-10 px-6 rounded-full">
+                💡 Enviar Sugerencia
+              </Button>
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
