@@ -164,7 +164,7 @@ export function MasajeMaxilofacialContent({ waLink }: Props) {
                 <div className="absolute top-0 right-0 p-8 opacity-10">
                    <Star className="w-24 h-24 text-white" />
                 </div>
-                <h3 className="text-3xl font-serif font-bold mb-8">¿Por Qué Elegir MJ Estética & Wellness Center?</h3>
+                <h3 className="text-3xl font-serif font-bold mb-8 text-white">¿Por Qué Elegir MJ Estética & Wellness Center?</h3>
                 <ul className="space-y-6">
                    {[
                      { t: "Atención Personalizada", d: "Cada protocolo se adapta individualmente." },
@@ -257,7 +257,7 @@ export function MasajeMaxilofacialContent({ waLink }: Props) {
               </div>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-[#040f19] p-12 text-white text-center rounded-sm shadow-2xl">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8 leading-tight">VIVE LA EXPERIENCIA WELLNESS</h2>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8 leading-tight text-white">VIVE LA EXPERIENCIA WELLNESS</h2>
               <p className="text-white/70 mb-10 leading-relaxed text-lg">
                 Agenda hoy tu valoración facial personalizada y descubre una experiencia wellness diseñada para ti.
               </p>
