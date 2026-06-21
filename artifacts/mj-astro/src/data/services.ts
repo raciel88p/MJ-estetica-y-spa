@@ -70,6 +70,7 @@ export const tratamientosFacialesLinks = [
   { name: "Rejuvenecimiento Facial Láser", href: "/servicios/rejuvenecimiento-facial-laser" },
   { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
   { name: "Tratamiento para Ojeras en Turrialba", href: "/servicios/tratamiento-ojeras" },
+  { name: "Masaje Maxilofacial", href: "/servicios/masaje-maxilofacial" },
 ];
 
 export const tratamientosPiernasLinks = [
@@ -1287,6 +1288,47 @@ export const servicePages: ServicePageData[] = [
         answer: "Es un tratamiento que combina microneedling con activos de Ginkgo Biloba para potenciar el glow y la salud de la piel.",
       },
     ],
+  },
+  {
+    slug: "masaje-maxilofacial",
+    name: "Masaje Maxilofacial en Turrialba | Relajación Facial Profunda",
+    fullTitle: "Masaje Maxilofacial en Turrialba | Relajación Facial Profunda y Bienestar Integral",
+    tagline: "Libera tensión, regálate un momento de bienestar",
+    heroDescription: "¿Sientes tensión en el rostro, mandíbula cargada o simplemente deseas regalarte un momento de relajación y autocuidado?<br /><br />En MJ Estética & Wellness Center hemos desarrollado una experiencia de masaje maxilofacial en Turrialba enfocada en promover bienestar facial, relajación muscular y una sensación profunda de descanso físico y emocional.",
+    benefits: [
+      "Relajación facial profunda",
+      "Alivio de la tensión mandibular",
+      "Bienestar muscular facial",
+      "Experiencia wellness premium",
+      "Relajación física y emocional",
+      "Momento de autocuidado personal"
+    ],
+    items: [
+      {
+        title: "Sesión Masaje Maxilofacial",
+        description: "Protocolo personalizado de masaje facial orientado a la relajación profunda y armonización muscular.",
+        duration: "60 min",
+        price: "Consultar precio"
+      }
+    ],
+    faq: [
+      {
+        question: "¿Qué se siente durante la sesión?",
+        answer: "Generalmente se percibe como una experiencia relajante, confortable y de profundo descanso."
+      },
+      {
+        question: "¿Cuánto dura una cita?",
+        answer: "La duración puede variar según el protocolo, habitualmente entre 45 y 60 minutos."
+      },
+      {
+        question: "¿Es personalizado?",
+        answer: "Sí. Adaptamos cada sesión a las necesidades individuales de cada cliente y su nivel de tensión."
+      },
+      {
+        question: "¿Puedo combinarlo con otros faciales?",
+        answer: "Sí, es el complemento ideal para una limpieza facial o tratamiento de hidratación para potenciar la relajación."
+      }
+    ]
   },
   {
     slug: "rejuvenecimiento-facial",
