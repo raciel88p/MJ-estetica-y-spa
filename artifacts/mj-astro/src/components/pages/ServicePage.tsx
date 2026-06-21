@@ -384,28 +384,28 @@ function ServicePage({ service }: { service: ServicePageData }) {
           >
             <div className="bg-primary px-6 py-3 flex items-center gap-2">
               <UserCheck className="w-4 h-4 text-white shrink-0" />
-              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">{service.slug === "nutricion" ? "Especialista a cargo" : "Profesional responsable"}</span>
+              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">{(service.slug === "nutricion" || service.slug === "inbody") ? "Especialista a cargo" : "Profesional responsable"}</span>
             </div>
             <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
-                <img src={service.slug === "nutricion" ? "/images/dr-johan.webp" : "/images/janneth-molina.webp"} alt={service.slug === "peeling-quimico" ? "Maria Molina Madrigal" : service.slug === "nutricion" ? "Dr. Johan" : "Janneth Maria Molina Madrigal"} className="w-full h-full object-cover object-top" />
+                <img src={(service.slug === "nutricion" || service.slug === "inbody") ? "/images/dr-johan.webp" : "/images/janneth-molina.webp"} alt={service.slug === "peeling-quimico" ? "Maria Molina Madrigal" : (service.slug === "nutricion" || service.slug === "inbody") ? "Dr. Johan" : "Janneth Maria Molina Madrigal"} className="w-full h-full object-cover object-top" />
               </div>
               <div className="flex-1 text-center sm:text-left">
                 <h3 className="text-xl font-serif font-bold text-stone-900 mb-1">
-                  {service.slug === "peeling-quimico" ? "Maria Molina Madrigal" : service.slug === "nutricion" ? "Dr. Johan" : "Janneth Maria Molina Madrigal"}
+                  {service.slug === "peeling-quimico" ? "Maria Molina Madrigal" : (service.slug === "nutricion" || service.slug === "inbody") ? "Dr. Johan" : "Janneth Maria Molina Madrigal"}
                 </h3>
                 <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
                   <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
                     <BadgeCheck className="w-3.5 h-3.5" />
-                    {service.slug === "nutricion" ? "Código: 3667-25" : "Linc Fisio Terapia"}
+                    {(service.slug === "nutricion" || service.slug === "inbody") ? "Código: 3667-25" : "Linc Fisio Terapia"}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <GraduationCap className="w-3.5 h-3.5" />
-                    {service.slug === "nutricion" ? "Nutricionista Deportivo" : "Especialista en Estética"}
+                    {(service.slug === "nutricion" || service.slug === "inbody") ? "Nutricionista Deportivo" : "Especialista en Estética"}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <Award className="w-3.5 h-3.5 text-primary" />
-                    {service.slug === "nutricion" ? "Atención Personalizada" : "Laboró Hospital la Católica"}
+                    {(service.slug === "nutricion" || service.slug === "inbody") ? "Atención Personalizada" : "Laboró Hospital la Católica"}
                   </span>
                 </div>
                 <p className="text-stone-500 text-sm leading-relaxed mt-4 max-w-xl">
@@ -417,7 +417,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                     ? "¿Sientes que el estrés, las responsabilidades y el ritmo diario no te dejan tiempo para ti? En MJ Estética & Wellness Center, hemos creado una experiencia de aromaterapia en Turrialba diseñada para ayudarte a disfrutar de momentos de relajación profunda, bienestar integral y autocuidado en un ambiente cómodo, privado y totalmente personalizado."
                     : service.slug === "rejuvenecimiento-facial-laser"
                     ? "¿Buscas recuperar la firmeza y luminosidad de tu piel sin cirugías? Nuestro tratamiento de rejuvenecimiento facial con láser en Turrialba está diseñado para estimular el colágeno natural y devolverle a tu rostro una apariencia fresca, saludable y juvenil."
-                    : service.slug === "nutricion"
+                    : (service.slug === "nutricion" || service.slug === "inbody")
                     ? "Transforma tus hábitos alimenticios con acompañamiento profesional y un plan nutricional diseñado específicamente para ti."
                     : "La estética es una pasión que ha formado parte de mi vida desde siempre. Me inspira la belleza en todas sus formas y me dedico a realzar la belleza natural de cada persona, ayudándoles a sentirse seguras y radiantes."
                   }
