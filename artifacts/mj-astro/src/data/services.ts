@@ -31,6 +31,7 @@ export const medicoEsteticosLinks = [
   { name: "Implante de Barba", href: "/servicios/implante-barba" },
   { name: "Mesoterapia Capilar", href: "/servicios/mesoterapia-capilar" },
   { name: "Relleno de Labios", href: "/servicios/relleno-de-labios" },
+  { name: "InBody", href: "/servicios/inbody" },
 ];
 
 export const tratamientosCorporalesLinks = [
@@ -2172,6 +2173,47 @@ export const servicePages: ServicePageData[] = [
   },
 
   // ── RELLENOS DE LABIOS ──────────────────────────────
+  {
+    slug: "inbody",
+    name: "InBody en Turrialba | Análisis de Composición Corporal Profesional",
+    fullTitle: "InBody en Turrialba | Análisis de Composición Corporal Profesional",
+    tagline: "Conoce tu cuerpo, mide tu progreso, mejora tus resultados",
+    heroDescription: "¿Quieres saber si realmente estás perdiendo grasa, ganando músculo o mejorando tu condición física?<br /><br />Una báscula tradicional solo muestra tu peso, pero no explica qué está pasando dentro de tu cuerpo. En MJ Estética & Wellness Center realizamos análisis de composición corporal InBody, una evaluación profesional para tomar mejores decisiones sobre entrenamiento, alimentación y bienestar.",
+    benefits: [
+      "Conocer porcentaje de grasa corporal real",
+      "Medir masa muscular por segmentos",
+      "Identificar nivel de grasa visceral",
+      "Evaluar hidratación y agua corporal",
+      "Calcular metabolismo basal exacto",
+      "Seguimiento profesional de resultados"
+    ],
+    items: [
+      {
+        title: "Análisis InBody Profesional",
+        description: "Evaluación completa de composición corporal con entrega de reporte e interpretación de resultados.",
+        duration: "10 min",
+        price: "Consultar precio"
+      }
+    ],
+    faq: [
+      {
+        question: "¿Cuánto cuesta un InBody en Turrialba?",
+        answer: "El precio puede variar según el servicio y la orientación incluida. Escríbenos por WhatsApp para conocer disponibilidad y detalles."
+      },
+      {
+        question: "¿Cuánto dura un análisis InBody?",
+        answer: "La medición tarda aproximadamente entre 5 y 10 minutos."
+      },
+      {
+        question: "¿El InBody mide grasa corporal y músculo?",
+        answer: "Sí. Permite conocer porcentaje de grasa, masa muscular, grasa visceral, agua corporal y otros indicadores."
+      },
+      {
+        question: "¿Cada cuánto debo realizar un InBody?",
+        answer: "Depende de tus objetivos. Muchas personas realizan mediciones cada 4 a 8 semanas para evaluar cambios."
+      }
+    ]
+  },
   {
     slug: "relleno-de-labios",
     name: "Relleno de Labios en Turrialba",
