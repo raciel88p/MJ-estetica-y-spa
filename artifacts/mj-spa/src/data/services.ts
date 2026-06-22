@@ -66,6 +66,7 @@ export const tratamientosFacialesLinks = [
   { name: "Microagujas", href: "/servicios/microagujas" },
   { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
   { name: "Microagujas con Vitamina C", href: "/servicios/microagujas-vitamina-c" },
+  { name: "Microagujas con MelanOut", href: "/servicios/microagujas-melanout" },
   { name: "Rejuvenecimiento Facial", href: "/servicios/rejuvenecimiento-facial" },
   { name: "Rejuvenecimiento Facial Láser", href: "/servicios/rejuvenecimiento-facial-laser" },
   { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
@@ -1424,6 +1425,47 @@ export const servicePages: ServicePageData[] = [
       {
         question: "¿Cuándo se ven resultados?",
         answer: "Los resultados pueden percibirse progresivamente dependiendo del tratamiento realizado."
+      }
+    ]
+  },
+  {
+    slug: "microagujas-melanout",
+    name: "Microneedling con MelanOut en Turrialba",
+    fullTitle: "Microneedling con MelanOut en Turrialba | Tratamiento para Manchas, Melasma y Rejuvenecimiento Facial",
+    tagline: "Recupera la uniformidad y luminosidad de tu piel",
+    heroDescription: "¿Te gustaría lucir una piel más luminosa, uniforme y saludable?<br /><br />En MJ Estética & Wellness Center hemos desarrollado protocolos personalizados de Microneedling con MelanOut en Turrialba, diseñados para apoyar tratamientos despigmentantes, mejorar la apariencia de la textura facial y potenciar la luminosidad natural de la piel.",
+    benefits: [
+      "Glow facial natural y luminoso",
+      "Apoyo en protocolos despigmentantes",
+      "Mejora visible de la textura facial",
+      "Reducción de apariencia de manchas",
+      "Rejuvenecimiento facial progresivo",
+      "Complemento ideal para rutina skincare"
+    ],
+    items: [
+      {
+        title: "Protocolo MelanOut Facial",
+        description: "Sesión avanzada de microneedling con activos despigmentantes MelanOut para mejorar tono y textura.",
+        duration: "60-90 min",
+        price: "Consultar precio"
+      }
+    ],
+    faq: [
+      {
+        question: "¿El Microneedling con MelanOut ayuda con manchas faciales?",
+        answer: "Puede formar parte de protocolos despigmentantes personalizados orientados a mejorar la apariencia de manchas y tono desigual."
+      },
+      {
+        question: "¿Cuántas sesiones se recomiendan?",
+        answer: "La cantidad varía según cada piel y los objetivos definidos durante la valoración."
+      },
+      {
+        question: "¿Cuándo se observan resultados?",
+        answer: "Muchas personas comienzan a notar cambios progresivos conforme avanzan las sesiones."
+      },
+      {
+        question: "¿Tiene tiempo de recuperación?",
+        answer: "Generalmente es mínimo, aunque puede variar según la sensibilidad de cada persona (enrojecimiento leve temporal)."
       }
     ]
   },
