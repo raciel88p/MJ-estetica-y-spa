@@ -71,6 +71,7 @@ export const tratamientosFacialesLinks = [
   { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
   { name: "Tratamiento para Ojeras en Turrialba", href: "/servicios/tratamiento-ojeras" },
   { name: "Masaje Maxilofacial", href: "/servicios/masaje-maxilofacial" },
+  { name: "Láser para Acné", href: "/servicios/laser-acne" },
 ];
 
 export const tratamientosPiernasLinks = [
@@ -1288,6 +1289,47 @@ export const servicePages: ServicePageData[] = [
         answer: "Es un tratamiento que combina microneedling con activos de Ginkgo Biloba para potenciar el glow y la salud de la piel.",
       },
     ],
+  },
+  {
+    slug: "laser-acne",
+    name: "Láser para Acné en Turrialba | Mejora Brotes y Marcas",
+    fullTitle: "Láser para Acné en Turrialba | Mejora Brotes, Marcas y Textura de la Piel",
+    tagline: "Mejora la apariencia de brotes, marcas y textura",
+    heroDescription: "¿Te gustaría verte al espejo y sentir más confianza al observar tu piel?<br /><br />En MJ Estética & Wellness Center ofrecemos tratamientos de Láser para Acné en Turrialba diseñados para complementar protocolos profesionales de cuidado facial, ayudando a mejorar progresivamente brotes activos, marcas y poros visibles.",
+    benefits: [
+      "Mejora progresiva de brotes activos",
+      "Reducción visual de marcas de acné",
+      "Control de piel grasa y poros",
+      "Unificación del tono y textura",
+      "Procedimiento seguro y personalizado",
+      "Aumento de bienestar y confianza"
+    ],
+    items: [
+      {
+        title: "Sesión Láser para Acné",
+        description: "Tratamiento láser avanzado enfocado en mejorar la apariencia de pieles con tendencia acneica.",
+        duration: "45 min",
+        price: "Consultar precio"
+      }
+    ],
+    faq: [
+      {
+        question: "¿El láser para acné duele?",
+        answer: "La mayoría de personas describe una sensación tolerable que depende de la sensibilidad individual."
+      },
+      {
+        question: "¿Ayuda con marcas de acné?",
+        answer: "Puede formar parte de protocolos orientados a mejorar su apariencia según valoración profesional."
+      },
+      {
+        question: "¿Cuántas sesiones necesito?",
+        answer: "Cada caso es diferente y requiere evaluación personalizada."
+      },
+      {
+        question: "¿Sirve para piel grasa?",
+        answer: "Muchas personas con piel grasa incorporan este tratamiento dentro de sus protocolos faciales."
+      }
+    ]
   },
   {
     slug: "masaje-maxilofacial",
