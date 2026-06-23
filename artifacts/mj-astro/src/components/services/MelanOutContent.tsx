@@ -121,7 +121,7 @@ export function MelanOutContent({ waLink }: Props) {
       <section className="py-24 bg-white border-b border-stone-100">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-20">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 mb-6 text-white">¿Cómo funciona una sesión?</h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 mb-6">¿Cómo funciona una sesión?</h2>
             <p className="text-stone-500 max-w-2xl mx-auto italic">Un proceso profesional diseñado para tu bienestar.</p>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -220,7 +220,7 @@ export function MelanOutContent({ waLink }: Props) {
       {/* ── LEAD MAGNET ─────────────────────────────── */}
       <section className="max-w-5xl mx-auto px-6 py-12">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-primary/5 border-2 border-dashed border-primary/30 p-12 text-center rounded-sm">
-           <p className="text-primary text-[10px] font-bold tracking-[0.3em] uppercase mb-4 italic text-white font-bold">🎁 RECURSO GRATUITO</p>
+           <p className="text-primary text-[10px] font-bold tracking-[0.3em] uppercase mb-4 italic font-bold">🎁 RECURSO GRATUITO</p>
            <h3 className="text-3xl font-serif font-bold text-stone-900 mb-6">Guía: Cómo Potenciar los Resultados Despigmentantes</h3>
 
            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-left mt-10">

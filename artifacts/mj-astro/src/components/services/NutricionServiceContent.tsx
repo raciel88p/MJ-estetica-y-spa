@@ -149,33 +149,77 @@ export function NutricionServiceContent({ waLink }: Props) {
       </section>
 
       {/* ── METHODOLOGY ──────────────────────────────── */}
-      <section className="py-20 bg-stone-900 text-white">
+      <section className="py-20 bg-white text-stone-900 border-y border-stone-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
               <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">METODOLOGÍA</p>
-              <h2 className="text-4xl md:text-5xl font-serif text-white leading-tight">¿Cómo funciona una consulta nutricional en MJ Estética & Wellness Center?</h2>
+              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">¿Cómo funciona una consulta nutricional en MJ Estética & Wellness Center?</h2>
             </motion.div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-100 border border-stone-100">
             {[
               { s: "Paso 1", t: "Valoración inicial", d: "Hábitos, objetivos y estilo de vida." },
               { s: "Paso 2", t: "Diseño del plan nutricional", d: "Estrategia personalizada." },
               { s: "Paso 3", t: "Implementación", d: "Cambios progresivos." },
               { s: "Paso 4", t: "Seguimiento y ajustes", d: "Para optimizar resultados." }
             ].map((step, i) => (
-              <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-900 p-10">
+              <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white p-10">
                 <span className="text-primary text-xs font-bold tracking-widest uppercase block mb-6">{step.s}</span>
-                <h3 className="text-2xl font-serif font-bold text-white mb-4">{step.t}</h3>
-                <p className="text-white/80 text-sm leading-relaxed">{step.d}</p>
+                <h3 className="text-2xl font-serif font-bold text-stone-900 mb-4">{step.t}</h3>
+                <p className="text-stone-500 text-sm leading-relaxed">{step.d}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* ── TESTIMONIALS ──────────────────────────────── */}
+      <section className="py-24 bg-stone-50 border-y border-stone-200">
+        <div className="max-w-5xl mx-auto px-6">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-6">Historias de Éxito</h2>
+            <p className="text-stone-500 max-w-2xl mx-auto">Pacientes reales que han transformado su estilo de vida en Turrialba.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white p-10 shadow-sm border border-stone-100">
+              <div className="flex gap-1 mb-6">
+                {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+              </div>
+              <p className="text-stone-600 italic mb-8 leading-relaxed">
+                "MJ Estética me ha brindado mucho apoyo para bajar de peso. Además la atención ha sido genial y muy interesados en ayudar a que uno pueda lo más pronto bajar de peso."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center font-bold text-stone-400">E</div>
+                <div>
+                  <p className="text-stone-900 font-bold text-sm uppercase tracking-wider">Eduardo Andres Loaiza Mata</p>
+                  <p className="text-stone-400 text-[10px] uppercase">Paciente de Nutrición</p>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white p-10 shadow-sm border border-stone-100">
+              <div className="flex gap-1 mb-6">
+                {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
+              </div>
+              <p className="text-stone-600 italic mb-8 leading-relaxed">
+                "Mis post han sido de gran ayuda para mi, ya eh visto mucho el cambio en mi físico desde q inicié. Los recomiendo a ojos cerrados."
+              </p>
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center font-bold text-stone-400">J</div>
+                <div>
+                  <p className="text-stone-900 font-bold text-sm uppercase tracking-wider">Johana Nuñez Campos</p>
+                  <p className="text-stone-400 text-[10px] uppercase">Paciente de Nutrición</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ ───────────────────────────────────────── */}
-      <section className="py-20 bg-stone-50 border-y border-stone-200">
+      <section className="py-20 bg-white">
         <div className="max-w-3xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-16 text-center">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-4 leading-tight">
@@ -184,10 +228,10 @@ export function NutricionServiceContent({ waLink }: Props) {
           </motion.div>
           <div className="space-y-10">
             {[
-              { q: "¿Los planes nutricionales son personalizados?", a: "Sí, cada recomendación se adapta a tus objetivos." },
-              { q: "¿La consulta incluye seguimiento?", a: "Sí, el acompañamiento es fundamental para el éxito." },
-              { q: "¿Puedo combinar nutrición con tratamientos estéticos?", a: "Sí, es el complemento ideal para potenciar resultados corporales." },
-              { q: "¿Qué objetivos puede apoyar una nutricionista?", a: "Hábitos, bienestar, organización alimenticia y composición corporal." }
+              { q: "¿Los planes nutricionales son personalizados?", a: "Sí, cada recomendación se adapta a tus objetivos, gustos y estilo de vida." },
+              { q: "¿La consulta incluye seguimiento?", a: "Sí, el acompañamiento es fundamental para el éxito y realizar ajustes según tu progreso." },
+              { q: "¿Puedo combinar nutrición con tratamientos estéticos?", a: "Sí, es el complemento ideal para potenciar resultados corporales y mejorar la composición corporal." },
+              { q: "¿Qué objetivos puede apoyar una nutricionista?", a: "Desde pérdida de grasa y aumento de masa muscular hasta mejorar la relación con la comida y organizar tus menús diarios." }
             ].map((faq, i) => (
               <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={faqUp}>
                 <h4 className="text-lg font-bold text-stone-900 mb-3">{faq.q}</h4>

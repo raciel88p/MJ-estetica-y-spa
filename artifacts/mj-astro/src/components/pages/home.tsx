@@ -221,7 +221,7 @@ function Home() {
       </section>
 
       {/* ── TRATAMIENTOS ESTRELLA ──────────────────────── */}
-      <section className="py-24 md:py-32 bg-white">
+      <section id="tratamientos-destacados" className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
@@ -320,8 +320,8 @@ function Home() {
       </section>
 
       {/* ── EXPERIENCIA MJ ─────────────────────────────── */}
-      <section className="py-24 md:py-32 bg-stone-900 text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 -skew-x-12 translate-x-1/4" />
+      <section className="py-24 md:py-32 bg-white text-stone-900 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-stone-50 -skew-x-12 translate-x-1/4" />
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -332,8 +332,8 @@ function Home() {
               variants={fadeUp}
             >
               <h2 className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">Experiencia Wellness</h2>
-              <h3 className="text-4xl md:text-6xl font-serif text-white mb-8 leading-tight">Mucho más que un <br /><span className="italic font-light text-stone-400">centro de estética</span></h3>
-              <div className="space-y-6 text-stone-400 text-lg font-light leading-relaxed">
+              <h3 className="text-4xl md:text-6xl font-serif text-stone-900 mb-8 leading-tight">Mucho más que un <br /><span className="italic font-light text-stone-400">centro de estética</span></h3>
+              <div className="space-y-6 text-stone-500 text-lg font-light leading-relaxed">
                 <p>Ubicados en el corazón de Turrialba, en MJ Estética & Wellness Center diseñamos cada tratamiento como un ritual de cuidado personal.</p>
                 <p>Nuestra misión es ayudarte a sentirte bien contigo misma, fusionando protocolos médicos de alta eficiencia con una experiencia sensorial única.</p>
               </div>
@@ -347,14 +347,14 @@ function Home() {
                 ].map((feature, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary" />
-                    <span className="text-white text-sm font-medium">{feature}</span>
+                    <span className="text-stone-700 text-sm font-medium">{feature}</span>
                   </div>
                 ))}
               </div>
 
               <div className="mt-14">
                  <a href="/nosotros">
-                    <Button variant="outline" className="h-12 px-8 tracking-widest uppercase text-[10px] font-bold border-white/20 text-white hover:bg-white hover:text-stone-900 transition-all">
+                    <Button variant="outline" className="h-12 px-8 tracking-widest uppercase text-[10px] font-bold border-stone-200 text-stone-900 hover:bg-stone-900 hover:text-white transition-all">
                        Conoce nuestra historia
                     </Button>
                  </a>

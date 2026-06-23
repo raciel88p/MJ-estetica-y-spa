@@ -22,7 +22,7 @@ export function LaserAcneContent({ waLink }: Props) {
       <section className="py-20 bg-stone-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-8 leading-tight text-white">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-8 leading-tight">
               ¿Te gustaría verte al espejo y sentir más confianza al observar tu piel?
             </h2>
             <div className="space-y-6 text-stone-600 text-lg leading-relaxed max-w-3xl mx-auto">
