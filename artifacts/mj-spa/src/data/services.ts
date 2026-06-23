@@ -73,6 +73,7 @@ export const tratamientosFacialesLinks = [
   { name: "Tratamiento para Ojeras en Turrialba", href: "/servicios/tratamiento-ojeras" },
   { name: "Masaje Maxilofacial", href: "/servicios/masaje-maxilofacial" },
   { name: "Láser para Acné", href: "/servicios/laser-acne" },
+  { name: "Mascarillas Faciales", href: "/servicios/mascarillas-faciales" },
 ];
 
 export const tratamientosPiernasLinks = [
@@ -2542,6 +2543,40 @@ export const servicePages: ServicePageData[] = [
   },
 
   // ── NUEVOS SERVICIOS (PLANTILLAS VACÍAS) ────────────
+  {
+    slug: "mascarillas-faciales",
+    name: "Mascarillas Faciales",
+    fullTitle: "Mascarillas Faciales en Turrialba",
+    tagline: "La experiencia que ayuda a devolverle a tu piel la hidratación, luminosidad y frescura que el estrés diario le ha quitado.",
+    heroDescription: "Porque una piel luminosa no es casualidad. Es el resultado de cuidarla. De escucharla. Y de darle exactamente lo que necesita.",
+    benefits: [
+      "Sensación de hidratación profunda",
+      "Glow facial natural",
+      "Experiencia relajante",
+      "Momento de autocuidado",
+      "Piel con apariencia más fresca",
+      "Complemento ideal para una rutina skincare premium",
+      "Sensación de bienestar y confianza"
+    ],
+    items: [
+      {
+        title: "Mascarilla Facial Personalizada",
+        description: "Protocolo adaptado según las necesidades específicas de cada cliente para recuperar frescura, luminosidad e hidratación.",
+        duration: "60 min",
+        price: "Consultar precio",
+      },
+    ],
+    faq: [
+      {
+        question: "¿Qué hace diferente esta experiencia?",
+        answer: "Combinamos valoración facial personalizada, protocolos adaptados, ambiente relajante y atención individualizada para resultados superiores."
+      },
+      {
+        question: "¿Para quién se recomienda?",
+        answer: "Para cualquier persona que desee mejorar la luminosidad, complementar su rutina facial o simplemente regalarse un momento de bienestar premium."
+      }
+    ]
+  },
   {
     slug: "nuevo-servicio-1",
     name: "Nuevo Servicio 1 (Plantilla)",
