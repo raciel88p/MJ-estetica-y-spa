@@ -39,6 +39,7 @@ const sections = [
       { name: "Levantamiento de Busto", href: "/servicios/levantamiento-busto" },
       { name: "Vendas Frías", href: "/servicios/vendas-frias" },
       { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
+      { name: "Boda Spa", href: "/servicios/boda-spa" },
       { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
     ],
   },

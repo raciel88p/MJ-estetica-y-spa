@@ -50,6 +50,7 @@ import { MasajeMaxilofacialContent } from "@/components/services/MasajeMaxilofac
 import { InBodyServiceContent } from "@/components/services/InBodyServiceContent";
 import { NutricionServiceContent } from "@/components/services/NutricionServiceContent";
 import { RejuvenecimientoLaserContent } from "@/components/services/RejuvenecimientoLaserContent";
+import { BodaSpaContent } from "@/components/services/BodaSpaContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 
 import AnticelulitisServiceContent from "@/components/services/AnticelulitisServiceContent";
@@ -167,6 +168,7 @@ const heroBgMap: Record<string, string> = {
   "blanqueamiento-zona-intima":"depilacion-laser-bg.webp",
   "aromaterapia": "masajes-relajantes-bg.webp",
   "inbody": "about-us.webp",
+  "boda-spa": "masajes-relajantes-bg.webp",
   "implante-barba":            "trasplante-capilar-bg.webp",
   "mesoterapia-capilar":       "trasplante-capilar-bg.webp",
   "relleno-de-labios":           "acido-hialuronico-bg.webp",
@@ -211,6 +213,7 @@ const serviceCategoryMap: Record<string, { name: string; href: string }> = {
   "tratamiento-ojeras":        { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "blanqueamiento-zona-intima":{ name: "Tratamientos Corporales", href: "/tratamientos/corporales"  },
   "aromaterapia": { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
+  "boda-spa": { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
   "inbody": { name: "Médico Estético",     href: "/medicos-esteticos"        },
   "implante-barba":            { name: "Médico Estético",     href: "/medicos-esteticos"        },
   "mesoterapia-capilar":       { name: "Médico Estético",     href: "/medicos-esteticos"        },
@@ -350,12 +353,12 @@ function ServicePage({ service }: { service: ServicePageData }) {
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </a>
               {category && (
-                <a href={category.href}>
+                <Link href={category.href}>
                   <span className="inline-flex items-center gap-2 text-white/60 text-sm font-medium border-b border-white/20 pb-0.5 hover:text-white hover:border-white transition-colors cursor-pointer">
                     Ver todos los {category.name.toLowerCase()}
                     <ArrowRight className="w-3.5 h-3.5" />
                   </span>
-                </a>
+                </Link>
               )}
             </motion.div>
           </motion.div>
@@ -619,6 +622,10 @@ function ServicePage({ service }: { service: ServicePageData }) {
         <RejuvenecimientoLaserContent waLink={WA} />
       )}
 
+      {service.slug === "boda-spa" && (
+        <BodaSpaContent waLink={WA} />
+      )}
+
       {service.slug === "nutricion" && (
         <NutricionServiceContent waLink={WA} />
       )}
@@ -774,7 +781,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
-      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "rejuvenecimiento-facial-laser", "limpieza-facial", "tratamiento-ojeras", "aromaterapia", "peeling-quimico", "nutricion", "terapias-faciales", "inbody", "masaje-maxilofacial", "limpieza-facial-profunda", "limpieza-facial-hidratante", "laser-acne", "microagujas-melanout", "mascarillas-faciales"].includes(service.slug) && (
+      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "rejuvenecimiento-facial-laser", "limpieza-facial", "tratamiento-ojeras", "aromaterapia", "peeling-quimico", "nutricion", "terapias-faciales", "inbody", "masaje-maxilofacial", "limpieza-facial-profunda", "limpieza-facial-hidratante", "laser-acne", "microagujas-melanout", "mascarillas-faciales", "boda-spa"].includes(service.slug) && (
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -821,7 +828,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {!["adn-salmon", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "rejuvenecimiento-facial-laser", "limpieza-facial", "tratamiento-ojeras", "aromaterapia", "peeling-quimico", "nutricion", "terapias-faciales", "inbody", "masaje-maxilofacial", "limpieza-facial-profunda", "limpieza-facial-hidratante", "laser-acne", "microagujas-melanout", "mascarillas-faciales"].includes(service.slug) && (
+      {!["adn-salmon", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "rejuvenecimiento-facial-laser", "limpieza-facial", "tratamiento-ojeras", "aromaterapia", "peeling-quimico", "nutricion", "terapias-faciales", "inbody", "masaje-maxilofacial", "limpieza-facial-profunda", "limpieza-facial-hidratante", "laser-acne", "microagujas-melanout", "mascarillas-faciales", "boda-spa"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -929,7 +936,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── ANTES Y DESPUÉS — servicios corporales seleccionados ─── */}
-      {["masajes-corporales", "reduccion-de-medidas", "drenaje-linfatico", "carboxiterapia"].includes(service.slug) && !["peeling-quimico", "aromaterapia", "blanqueamiento-zona-intima", "rejuvenecimiento-facial-laser", "tratamiento-ojeras", "terapias-faciales", "inbody", "masaje-maxilofacial", "limpieza-facial-profunda", "limpieza-facial-hidratante", "laser-acne", "microagujas-melanout", "mascarillas-faciales"].includes(service.slug) && (() => {
+      {["masajes-corporales", "reduccion-de-medidas", "drenaje-linfatico", "carboxiterapia"].includes(service.slug) && !["peeling-quimico", "aromaterapia", "blanqueamiento-zona-intima", "rejuvenecimiento-facial-laser", "tratamiento-ojeras", "terapias-faciales", "inbody", "masaje-maxilofacial", "limpieza-facial-profunda", "limpieza-facial-hidratante", "laser-acne", "microagujas-melanout", "mascarillas-faciales", "boda-spa"].includes(service.slug) && (() => {
         const bgPair = beforeAfterBgMap[service.slug] ?? { before: "corporales-antes-bg.webp", after: "corporales-despues-bg.webp" };
         const beforeBg = `${BASE}images/${bgPair.before}`;
         const afterBg  = `${BASE}images/${bgPair.after}`;
@@ -1114,7 +1121,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── URGENCY CTA BAND ──────────────────────────── */}
-      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "masajes-profundos" && service.slug !== "botox-full-face" && service.slug !== "hilos-tensores" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && service.slug !== "relleno-de-labios" && service.slug !== "tratamiento-anticelulitis" && service.slug !== "auriculoterapia" && service.slug !== "microagujas" && service.slug !== "microagujas-ginkgo-biloba" && service.slug !== "microagujas-vitamina-c" && service.slug !== "rejuvenecimiento-facial" && service.slug !== "rejuvenecimiento-facial-laser" && service.slug !== "limpieza-facial" && service.slug !== "tratamiento-ojeras" && service.slug !== "aromaterapia" && service.slug !== "peeling-quimico" && service.slug !== "nutricion" && service.slug !== "terapias-faciales" && service.slug !== "inbody" && service.slug !== "masaje-maxilofacial" && service.slug !== "limpieza-facial-profunda" && service.slug !== "limpieza-facial-hidratante" && service.slug !== "laser-acne" && service.slug !== "microagujas-melanout" && service.slug !== "mascarillas-faciales" && (
+      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "masajes-profundos" && service.slug !== "botox-full-face" && service.slug !== "hilos-tensores" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && service.slug !== "relleno-de-labios" && service.slug !== "tratamiento-anticelulitis" && service.slug !== "auriculoterapia" && service.slug !== "microagujas" && service.slug !== "microagujas-ginkgo-biloba" && service.slug !== "microagujas-vitamina-c" && service.slug !== "rejuvenecimiento-facial" && service.slug !== "rejuvenecimiento-facial-laser" && service.slug !== "limpieza-facial" && service.slug !== "tratamiento-ojeras" && service.slug !== "aromaterapia" && service.slug !== "peeling-quimico" && service.slug !== "nutricion" && service.slug !== "terapias-faciales" && service.slug !== "inbody" && service.slug !== "masaje-maxilofacial" && service.slug !== "limpieza-facial-profunda" && service.slug !== "limpieza-facial-hidratante" && service.slug !== "laser-acne" && service.slug !== "microagujas-melanout" && service.slug !== "mascarillas-faciales" && service.slug !== "boda-spa" && (
       <section className="bg-primary py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -1149,7 +1156,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "rejuvenecimiento-facial-laser", "limpieza-facial", "tratamiento-ojeras", "aromaterapia", "peeling-quimico", "nutricion", "terapias-faciales", "inbody", "masaje-maxilofacial", "limpieza-facial-profunda", "limpieza-facial-hidratante", "laser-acne", "microagujas-melanout", "mascarillas-faciales"].includes(service.slug) && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "rejuvenecimiento-facial-laser", "limpieza-facial", "tratamiento-ojeras", "aromaterapia", "peeling-quimico", "nutricion", "terapias-faciales", "inbody", "masaje-maxilofacial", "limpieza-facial-profunda", "limpieza-facial-hidratante", "laser-acne", "microagujas-melanout", "mascarillas-faciales", "boda-spa"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div
@@ -1223,21 +1230,21 @@ function ServicePage({ service }: { service: ServicePageData }) {
                     {rel.name}
                   </h3>
                   <p className="text-stone-600 text-sm leading-relaxed mb-5">{rel.tagline}</p>
-                  <a href={`/servicios/${rel.slug}`}>
+                  <Link href={`/servicios/${rel.slug}`}>
                     <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-primary border-b border-primary/30 pb-0.5 hover:border-primary transition-colors cursor-pointer">
                       Ver tratamiento <ArrowRight className="w-3 h-3" />
                     </span>
-                  </a>
+                  </Link>
                 </motion.div>
               ))}
             </div>
             {category && (
               <div className="mt-8 text-center">
-                <a href={category.href}>
+                <Link href={category.href}>
                   <span className="inline-flex items-center gap-2 text-sm font-bold text-stone-600 border-b border-stone-300 pb-0.5 hover:text-primary hover:border-primary transition-colors cursor-pointer tracking-wide uppercase text-xs">
                     Ver todos los {category.name.toLowerCase()} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
-                </a>
+                </Link>
               </div>
             )}
           </div>
