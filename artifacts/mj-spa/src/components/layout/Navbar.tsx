@@ -1,14 +1,15 @@
 import { useState, useEffect, useRef, useCallback, type Dispatch, type SetStateAction } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "wouter";
 
 import {
   medicoEsteticosLinks,
   tratamientosCorporalesLinks,
   tratamientosFacialesLinks,
   tratamientosPiernasLinks,
+  mjCreativoLinks,
 } from "@/data/services";
 
 const corporalesHalf1 = tratamientosCorporalesLinks.slice(0, 6);
@@ -94,7 +95,7 @@ export function Navbar() {
               width="160"
               height="64"
             />
-          </Link>
+          </a>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
@@ -177,7 +178,7 @@ export function Navbar() {
                         <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-4">
                           Nuestros Servicios
                         </p>
-                        <div className="grid grid-cols-5 gap-x-4">
+                        <div className="grid grid-cols-6 gap-x-4">
                           {/* Corporales col 1 */}
                           <div>
                             <Link href="/tratamientos/corporales"
@@ -186,27 +187,46 @@ export function Navbar() {
                             >
                               Corporales
                             </Link>
-                            {corporalesHalf1.map((linkItem) => (
+                            {corporalesHalf1.map((link) => (
                               <Link
-                                key={linkItem.name}
-                                href={linkItem.href}
+                                key={link.name}
+                                href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
-                                {linkItem.name}
+                                {link.name}
+                              </Link>
+                            ))}
+                          </div>
+                          {/* MJ Creativo */}
+                          <div>
+                            <Link href="/servicios/arteterapia"
+                              className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
+                              onClick={() => setOpenDropdown(null)}
+                            >
+                              MJ Creativo
+                            </Link>
+                            {mjCreativoLinks.map((link) => (
+                              <Link
+                                key={link.name}
+                                href={link.href}
+                                className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
+                                onClick={() => setOpenDropdown(null)}
+                              >
+                                {link.name}
                               </Link>
                             ))}
                           </div>
                           {/* Corporales col 2 (continuation) */}
                           <div className="pt-6">
-                            {corporalesHalf2.map((linkItem) => (
+                            {corporalesHalf2.map((link) => (
                               <Link
-                                key={linkItem.name}
-                                href={linkItem.href}
+                                key={link.name}
+                                href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
-                                {linkItem.name}
+                                {link.name}
                               </Link>
                             ))}
                           </div>
@@ -218,27 +238,27 @@ export function Navbar() {
                             >
                               Faciales
                             </Link>
-                            {facialesHalf1.map((linkItem) => (
+                            {facialesHalf1.map((link) => (
                               <Link
-                                key={linkItem.name}
-                                href={linkItem.href}
+                                key={link.name}
+                                href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
-                                {linkItem.name}
+                                {link.name}
                               </Link>
                             ))}
                           </div>
                           {/* Faciales col 2 (continuation) */}
                           <div className="pt-6">
-                            {facialesHalf2.map((linkItem) => (
+                            {facialesHalf2.map((link) => (
                               <Link
-                                key={linkItem.name}
-                                href={linkItem.href}
+                                key={link.name}
+                                href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
-                                {linkItem.name}
+                                {link.name}
                               </Link>
                             ))}
                           </div>
@@ -250,14 +270,14 @@ export function Navbar() {
                             >
                               Piernas
                             </Link>
-                            {tratamientosPiernasLinks.map((linkItem) => (
+                            {tratamientosPiernasLinks.map((link) => (
                               <Link
-                                key={linkItem.name}
-                                href={linkItem.href}
+                                key={link.name}
+                                href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
-                                {linkItem.name}
+                                {link.name}
                               </Link>
                             ))}
                           </div>
@@ -276,12 +296,12 @@ export function Navbar() {
               onMouseLeave={medicos.scheduleClose}
             >
               <div className="flex items-center gap-1">
-                <Link
+              <Link
                   href="/medicina-estetica"
                   className={`${linkBase} ${textClass}`}
                 >
                   Médico Estético
-                </Link>
+              </Link>
                 <button
                   className={`p-1 ${textClass} hover:text-primary transition-colors`}
                   onClick={(e) => { e.stopPropagation(); setOpenDropdown(medicos.isOpen ? null : "medicos"); }}
@@ -310,14 +330,33 @@ export function Navbar() {
                           >
                             Armonización Facial
                           </Link>
-                          {medicoEsteticosLinks.map((linkItem) => (
+                          {medicoEsteticosLinks.map((link) => (
                             <Link
-                              key={linkItem.name}
-                              href={linkItem.href}
+                              key={link.name}
+                              href={link.href}
                               className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                               onClick={() => setOpenDropdown(null)}
                             >
-                              {linkItem.name}
+                              {link.name}
+                            </Link>
+                          ))}
+                        </div>
+                        {/* MJ Creativo */}
+                        <div className="mb-2">
+                          <Link href="/servicios/arteterapia"
+                            className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
+                            onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
+                          >
+                            MJ Creativo
+                          </Link>
+                          {mjCreativoLinks.map((link) => (
+                            <Link
+                              key={link.name}
+                              href={link.href}
+                              className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
+                              onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
+                            >
+                              {link.name}
                             </Link>
                           ))}
                         </div>
@@ -444,14 +483,14 @@ export function Navbar() {
                           >
                             Corporales
                           </Link>
-                          {tratamientosCorporalesLinks.map((linkItem) => (
+                          {tratamientosCorporalesLinks.map((link) => (
                             <Link
-                              key={linkItem.name}
-                              href={linkItem.href}
+                              key={link.name}
+                              href={link.href}
                               className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
                               onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                             >
-                              {linkItem.name}
+                              {link.name}
                             </Link>
                           ))}
                         </div>
@@ -463,14 +502,14 @@ export function Navbar() {
                           >
                             Faciales
                           </Link>
-                          {tratamientosFacialesLinks.map((linkItem) => (
+                          {tratamientosFacialesLinks.map((link) => (
                             <Link
-                              key={linkItem.name}
-                              href={linkItem.href}
+                              key={link.name}
+                              href={link.href}
                               className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
                               onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                             >
-                              {linkItem.name}
+                              {link.name}
                             </Link>
                           ))}
                         </div>
@@ -482,14 +521,14 @@ export function Navbar() {
                           >
                             Piernas
                           </Link>
-                          {tratamientosPiernasLinks.map((linkItem) => (
+                          {tratamientosPiernasLinks.map((link) => (
                             <Link
-                              key={linkItem.name}
-                              href={linkItem.href}
+                              key={link.name}
+                              href={link.href}
                               className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
                               onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                             >
-                              {linkItem.name}
+                              {link.name}
                             </Link>
                           ))}
                         </div>
@@ -532,14 +571,14 @@ export function Navbar() {
                           >
                             Armonización Facial
                           </Link>
-                        {medicoEsteticosLinks.map((linkItem) => (
+                        {medicoEsteticosLinks.map((link) => (
                           <Link
-                            key={linkItem.name}
-                            href={linkItem.href}
+                            key={link.name}
+                            href={link.href}
                             className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileMedicosOpen(false); }}
                           >
-                            {linkItem.name}
+                            {link.name}
                           </Link>
                         ))}
                       </div>

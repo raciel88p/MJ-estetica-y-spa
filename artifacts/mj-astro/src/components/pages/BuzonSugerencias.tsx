@@ -29,27 +29,13 @@ function BuzonSugerencias() {
     reset,
   } = useForm<FormValues>({ resolver: zodResolver(schema) });
 
-  const onSubmit = (data: FormValues, event?: React.BaseSyntheticEvent) => {
-    // WebMCP integration: handle agent-invoked submissions
-    const nativeEvent = event?.nativeEvent as any;
-    if (nativeEvent && nativeEvent.agentInvoked && typeof nativeEvent.respondWith === 'function') {
-      nativeEvent.respondWith(Promise.resolve({
-        content: [{
-          type: "text",
-          text: `Sugerencia recibida para la categoría "${data.tipo}". Gracias ${data.nombre}, hemos procesado tu comentario: "${data.mensaje.substring(0, 50)}..."`
-        }]
-      }));
-    }
-
+  const onSubmit = (data: FormValues) => {
     const texto = `*Buzón de Sugerencias - MJ Estética*%0A%0A*Nombre:* ${encodeURIComponent(data.nombre)}%0A*Categoría:* ${encodeURIComponent(data.tipo)}%0A%0A*Mensaje:*%0A${encodeURIComponent(data.mensaje)}`;
 
-    // Only open WhatsApp if it's not an automated agent submission or if we want to maintain the flow
-    if (!nativeEvent?.agentInvoked) {
-      window.open(
-        `https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0&text=${texto}`,
-        "_blank"
-      );
-    }
+    window.open(
+      `https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0&text=${texto}`,
+      "_blank"
+    );
 
     setEnviado(true);
     reset();
@@ -110,10 +96,6 @@ function BuzonSugerencias() {
               <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="space-y-6"
-                // @ts-ignore - WebMCP declarative attributes
-                toolname="enviar-sugerencia"
-                tooldescription="Envía una sugerencia, idea o comentario al equipo de MJ Estética."
-                toolautosubmit="true"
               >
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
@@ -122,8 +104,6 @@ function BuzonSugerencias() {
                   <input
                     {...register("nombre")}
                     placeholder="Tu nombre"
-                    // @ts-ignore
-                    toolparamdescription="Tu nombre completo para identificarte."
                     className={`w-full border rounded-xl px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all ${errors.nombre ? "border-destructive" : "border-border"}`}
                   />
                   {errors.nombre && <p className="text-destructive text-xs mt-1">{errors.nombre.message}</p>}
@@ -135,8 +115,6 @@ function BuzonSugerencias() {
                   </label>
                   <select
                     {...register("tipo")}
-                    // @ts-ignore
-                    toolparamdescription="La categoría de tu sugerencia (ej: Atención al cliente, Instalaciones, Tratamientos)."
                     className={`w-full border rounded-xl px-4 py-3 text-foreground bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all ${errors.tipo ? "border-destructive" : "border-border"}`}
                   >
                     <option value="">Selecciona una categoría</option>
@@ -158,8 +136,6 @@ function BuzonSugerencias() {
                     {...register("mensaje")}
                     rows={5}
                     placeholder="Escribe aquí tu sugerencia, comentario o idea..."
-                    // @ts-ignore
-                    toolparamdescription="El detalle de tu sugerencia, idea o comentario."
                     className={`w-full border rounded-xl px-4 py-3 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none ${errors.mensaje ? "border-destructive" : "border-border"}`}
                   />
                   {errors.mensaje && <p className="text-destructive text-xs mt-1">{errors.mensaje.message}</p>}
