@@ -37,11 +37,20 @@ import { MasajeRelajanteContent } from "@/components/services/MasajeRelajanteCon
 import { MicroagujasVitaminaCContent } from "@/components/services/MicroagujasVitaminaCContent";
 import { RejuvenecimientoFacialContent } from "@/components/services/RejuvenecimientoFacialContent";
 import { LimpiezaFacialContent } from "@/components/services/LimpiezaFacialContent";
+import { LimpiezaHidratanteContent } from "@/components/services/LimpiezaHidratanteContent";
 import { MicrodermoabrasionContent } from "@/components/services/MicrodermoabrasionContent";
 import { OjerasServiceContent } from "@/components/services/OjerasServiceContent";
+import { PeelingFacialContent } from "@/components/services/PeelingFacialContent";
 import { AromaterapiaContent } from "@/components/services/AromaterapiaContent";
+import { TerapiasFacialesContent } from "@/components/services/TerapiasFacialesContent";
+import { LaserAcneContent } from "@/components/services/LaserAcneContent";
+import { MelanOutContent } from "@/components/services/MelanOutContent";
+import { MascarillasFacialesContent } from "@/components/services/MascarillasFacialesContent";
+import { MasajeMaxilofacialContent } from "@/components/services/MasajeMaxilofacialContent";
+import { InBodyServiceContent } from "@/components/services/InBodyServiceContent";
 import { NutricionServiceContent } from "@/components/services/NutricionServiceContent";
 import { RejuvenecimientoLaserContent } from "@/components/services/RejuvenecimientoLaserContent";
+import { BodaSpaContent } from "@/components/services/BodaSpaContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 
 import AnticelulitisServiceContent from "@/components/services/AnticelulitisServiceContent";
@@ -84,11 +93,11 @@ const beforeDescMap: Record<string, string[]> = {
   "tratamiento-ojeras":        ["Ojeras oscuras y surcos lagrimales que proyectan cansancio permanente", "Aspecto apagado que el maquillaje no puede disimular", "Pérdida de luminosidad en la mirada que envejece el rostro"],
   "blanqueamiento-zona-intima":["Hiperpigmentación y manchas oscuras en zonas íntimas por fricción u hormonas", "Tono irregular en ingle, axilas o zona bikini que genera inseguridad", "Manchas post-depilación resistentes que no mejoran con cremas"],
   "aromaterapia": ["Estrés acumulado y ritmo diario que no deja tiempo propio", "Necesidad de desconexión profunda y bienestar emocional", "Deseo de una experiencia sensorial premium y personalizada"],
+  "rejuvenecimiento-facial-laser": ["Signos visibles de envejecimiento y cansancio", "Pérdida de colágeno y firmeza natural", "Manchas y textura irregular que restan juventud"],
   "implante-barba":            ["Barba irregular, con calvas y sin densidad uniforme", "Incapacidad de conseguir un aspecto masculino definido con barba natural", "Falta de confianza por una barba escasa que no crece en zonas clave"],
   "mesoterapia-capilar":       ["Caída de cabello progresiva y devisa que no se detiene", "Cabello sin densidad, fino y sin vitalidad", "Cuero cabelludo con poca circulación y folículos debilitados"],
   "relleno-de-labios":           ["Labios finos, asimétricos o con pérdida de volumen por la edad", "Contorno labial difuminado que envejece el tercio inferior del rostro", "Inseguridad al hablar o sonreír por la apariencia de los labios"],
   "rejuvenecimiento-facial": ["Piel opaca y sin vitalidad", "Deseo de rejuvenecimiento natural", "Pérdida de glow facial"],
-  "rejuvenecimiento-facial-laser": ["Signos visibles de envejecimiento y cansancio", "Pérdida de colágeno y firmeza natural", "Manchas y textura irregular que restan juventud"],
 };
 
 const afterDescMap: Record<string, string[]> = {
@@ -158,10 +167,14 @@ const heroBgMap: Record<string, string> = {
   "tratamiento-ojeras":        "acido-hialuronico-bg.webp",
   "blanqueamiento-zona-intima":"depilacion-laser-bg.webp",
   "aromaterapia": "masajes-relajantes-bg.webp",
+  "inbody": "about-us.webp",
+  "boda-spa": "masajes-relajantes-bg.webp",
   "implante-barba":            "trasplante-capilar-bg.webp",
   "mesoterapia-capilar":       "trasplante-capilar-bg.webp",
   "relleno-de-labios":           "acido-hialuronico-bg.webp",
+  "laser-acne": "faciales-bg.webp",
   "rejuvenecimiento-facial-laser": "faciales-bg.webp",
+  "mascarillas-faciales": "faciales-bg.webp",
 };
 
 const serviceCategoryMap: Record<string, { name: string; href: string }> = {
@@ -186,10 +199,12 @@ const serviceCategoryMap: Record<string, { name: string; href: string }> = {
   "rejuvenecimiento-facial": { name: "Tratamientos Faciales", href: "/tratamientos/faciales" },
   "rejuvenecimiento-facial-laser": { name: "Tratamientos Faciales", href: "/tratamientos/faciales" },
   "limpieza-facial":           { name: "Tratamientos Faciales", href: "/tratamientos/faciales" },
+  "masaje-maxilofacial":       { name: "Tratamientos Faciales", href: "/tratamientos/faciales" },
   "faciales":                  { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "adn-salmon":                { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "terapias-faciales":         { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "peeling-quimico":           { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
+  "laser-acne":                { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "hollywood-peel":            { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "eliminacion-manchas":       { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "radiofrecuencia-facial":    { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
@@ -198,9 +213,12 @@ const serviceCategoryMap: Record<string, { name: string; href: string }> = {
   "tratamiento-ojeras":        { name: "Tratamientos Faciales",   href: "/tratamientos/faciales"   },
   "blanqueamiento-zona-intima":{ name: "Tratamientos Corporales", href: "/tratamientos/corporales"  },
   "aromaterapia": { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
+  "boda-spa": { name: "Tratamientos Corporales", href: "/tratamientos/corporales" },
+  "inbody": { name: "Médico Estético",     href: "/medicos-esteticos"        },
   "implante-barba":            { name: "Médico Estético",     href: "/medicos-esteticos"        },
   "mesoterapia-capilar":       { name: "Médico Estético",     href: "/medicos-esteticos"        },
   "relleno-de-labios":           { name: "Médico Estético",     href: "/medicos-esteticos"        },
+  "mascarillas-faciales":      { name: "Tratamientos Faciales", href: "/tratamientos/faciales" },
 };
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {
@@ -366,11 +384,11 @@ function ServicePage({ service }: { service: ServicePageData }) {
       </section>
       )}
 
-      {!["depilacion-laser"].includes(service.slug) && <StatsBar />}
+      {!["depilacion-laser", "peeling-quimico", "aromaterapia", "blanqueamiento-zona-intima", "rejuvenecimiento-facial-laser", "tratamiento-ojeras", "terapias-faciales", "microagujas-melanout"].includes(service.slug) && <StatsBar />}
 
 
       {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
-      {!["botox-full-face","hilos-tensores","relleno-de-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar","biorevitalizacion", "nutricion"].includes(service.slug) && (
+      {!["botox-full-face","hilos-tensores","relleno-de-labios","acido-hialuronico","trasplante-capilar","implante-barba","mesoterapia-capilar","biorevitalizacion"].includes(service.slug) && (
       <section className="py-10 bg-white border-b border-stone-100">
         <div className="max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -379,71 +397,44 @@ function ServicePage({ service }: { service: ServicePageData }) {
           >
             <div className="bg-primary px-6 py-3 flex items-center gap-2">
               <UserCheck className="w-4 h-4 text-white shrink-0" />
-              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">Profesional responsable</span>
+              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">{(service.slug === "nutricion" || service.slug === "inbody") ? "Especialista a cargo" : "Profesional responsable"}</span>
             </div>
             <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
-                <img src={service.slug === "nutricion" ? "/images/dr-johan.webp" : "/images/janneth-molina.webp"} alt={service.slug === "peeling-quimico" ? "Maria Molina Madrigal" : service.slug === "nutricion" ? "Dr. Johan" : "Janneth Maria Molina Madrigal"} className="w-full h-full object-cover object-top" />
+                <img src={(service.slug === "nutricion" || service.slug === "inbody") ? "/images/dr-johan.webp" : "/images/janneth-molina.webp"} alt={service.slug === "peeling-quimico" ? "Maria Molina Madrigal" : (service.slug === "nutricion" || service.slug === "inbody") ? "Dr. Johan" : "Janneth Maria Molina Madrigal"} className="w-full h-full object-cover object-top" />
               </div>
               <div className="flex-1 text-center sm:text-left">
                 <h3 className="text-xl font-serif font-bold text-stone-900 mb-1">
-                  {service.slug === "peeling-quimico" ? "Maria Molina Madrigal" : service.slug === "nutricion" ? "Dr. Johan" : "Janneth Maria Molina Madrigal"}
+                  {service.slug === "peeling-quimico" ? "Maria Molina Madrigal" : (service.slug === "nutricion" || service.slug === "inbody") ? "Dr. Johan" : "Janneth Maria Molina Madrigal"}
                 </h3>
                 <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
                   <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
                     <BadgeCheck className="w-3.5 h-3.5" />
-                    Linc Fisio Terapia
+                    {(service.slug === "nutricion" || service.slug === "inbody") ? "Código: 3667-25" : "Linc Fisio Terapia"}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <GraduationCap className="w-3.5 h-3.5" />
-                    Especialista en Estética
+                    {(service.slug === "nutricion" || service.slug === "inbody") ? "Nutricionista Deportivo" : "Especialista en Estética"}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <Award className="w-3.5 h-3.5 text-primary" />
-                    Laboró Hospital la Católica
+                    {(service.slug === "nutricion" || service.slug === "inbody") ? "Atención Personalizada" : "Laboró Hospital la Católica"}
                   </span>
                 </div>
                 <p className="text-stone-500 text-sm leading-relaxed mt-4 max-w-xl">
-                  {service.slug === "tratamiento-ojeras"
+                  {service.slug === "peeling-quimico"
+                    ? "Con amplia experiencia en medicina estética, Maria Molina Madrigal se especializa en protocolos de renovación cutánea y tratamientos avanzados para manchas y acné, brindando resultados seguros y personalizados."
+                    : service.slug === "tratamiento-ojeras"
                     ? "¿Tus ojeras te hacen lucir cansada aunque descanses bien? Descubre cómo nuestro tratamiento de carboxiterapia para ojeras en Turrialba puede ayudarte a mejorar la apariencia de bolsas, pigmentación oscura y signos visibles de fatiga."
                     : service.slug === "aromaterapia"
                     ? "¿Sientes que el estrés, las responsabilidades y el ritmo diario no te dejan tiempo para ti? En MJ Estética & Wellness Center, hemos creado una experiencia de aromaterapia en Turrialba diseñada para ayudarte a disfrutar de momentos de relajación profunda, bienestar integral y autocuidado en un ambiente cómodo, privado y totalmente personalizado."
                     : service.slug === "rejuvenecimiento-facial-laser"
                     ? "¿Buscas recuperar la firmeza y luminosidad de tu piel sin cirugías? Nuestro tratamiento de rejuvenecimiento facial con láser en Turrialba está diseñado para estimular el colágeno natural y devolverle a tu rostro una apariencia fresca, saludable y juvenil."
-                    : service.slug === "nutricion"
-                    ? "En MJ Estética & Wellness Center ayudamos a personas de Turrialba, Cartago y zonas cercanas a mejorar su alimentación, desarrollar hábitos sostenibles y alcanzar objetivos de bienestar mediante consultas nutricionales personalizadas."
+                    : (service.slug === "nutricion" || service.slug === "inbody")
+                    ? "Transforma tus hábitos alimenticios con acompañamiento profesional y un plan nutricional diseñado específicamente para ti."
                     : "La estética es una pasión que ha formado parte de mi vida desde siempre. Me inspira la belleza en todas sus formas y me dedico a realzar la belleza natural de cada persona, ayudándoles a sentirse seguras y radiantes."
                   }
                 </p>
-                {service.slug === "nutricion" && (
-                  <div className="flex flex-col gap-3 mt-6">
-                    <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Valoración Nutricional Profesional
-                    </div>
-                    <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Plan Nutricional Personalizado
-                    </div>
-                    <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Seguimiento y Acompañamiento
-                    </div>
-                    <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Nutrición para Bienestar y Estética
-                    </div>
-                    <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Atención en Turrialba
-                    </div>
-
-                    <div className="mt-10 bg-primary/5 border border-primary/20 p-8 rounded-sm">
-                       <p className="text-primary text-[10px] font-bold tracking-[0.3em] uppercase mb-4">🎁 Descarga GRATIS la Guía:</p>
-                       <h3 className="text-2xl font-serif font-bold text-stone-900 mb-4 leading-tight">7 Estrategias que Utilizan Nuestros Pacientes para Mejorar su Alimentación y Reducir Grasa Corporal de Forma Sostenible</h3>
-                       <p className="text-stone-600 text-sm mb-6">Aprende hábitos simples que pueden ayudarte a sentirte mejor, organizar tu alimentación y potenciar tus resultados.</p>
-                       <a href={WA} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-white text-[10px] font-bold px-6 py-4 tracking-widest uppercase hover:bg-stone-900 transition-colors">
-                         <Download className="w-4 h-4" /> [DESCARGAR GUÍA GRATIS]
-                       </a>
-                       <p className="text-stone-400 text-[10px] mt-4 uppercase tracking-widest">👉 Solicita tu guía gratuita aquí</p>
-                    </div>
-                  </div>
-                )}
                 {service.slug === "aromaterapia" && (
                   <div className="flex flex-col gap-3 mt-6">
                     <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
@@ -498,6 +489,48 @@ function ServicePage({ service }: { service: ServicePageData }) {
               </div>
             </div>
           </motion.div>
+
+          {/* ── NUTRITION LEAD MAGNET (OUTSIDE CARD) ── */}
+          {service.slug === "nutricion" && (
+            <motion.div
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+              className="mt-12"
+            >
+              <div className="max-w-xl mx-auto">
+                <p className="text-stone-600 text-base leading-relaxed mb-8">
+                  En MJ Estética & Wellness Center ayudamos a personas de Turrialba, Cartago y zonas cercanas a mejorar su alimentación, desarrollar hábitos sostenibles y alcanzar objetivos de bienestar mediante consultas nutricionales personalizadas.
+                </p>
+
+                <div className="flex flex-col gap-3 mb-10">
+                  <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> Valoración Nutricional Profesional
+                  </div>
+                  <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> Plan Nutricional Personalizado
+                  </div>
+                  <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> Seguimiento y Acompañamiento
+                  </div>
+                  <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> Nutrición para Bienestar y Estética
+                  </div>
+                  <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> Atención en Turrialba
+                  </div>
+                </div>
+
+                <div className="bg-primary/5 border border-primary/20 p-8 sm:p-10 rounded-sm">
+                   <p className="text-primary text-[10px] font-bold tracking-[0.3em] uppercase mb-4">🎁 Descarga GRATIS la Guía:</p>
+                   <h3 className="text-2xl font-serif font-bold text-stone-900 mb-4 leading-tight">7 Estrategias que Utilizan Nuestros Pacientes para Mejorar su Alimentación y Reducir Grasa Corporal de Forma Sostenible</h3>
+                   <p className="text-stone-600 text-sm mb-6 leading-relaxed">Aprende hábitos simples que pueden ayudarte a sentirte mejor, organizar tu alimentación y potenciar tus resultados.</p>
+                   <a href={WA} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-white text-[10px] font-bold px-8 py-5 tracking-widest uppercase hover:bg-stone-900 transition-colors shadow-lg">
+                     <Download className="w-4 h-4" /> [DESCARGAR GUÍA GRATIS]
+                   </a>
+                   <p className="text-stone-400 text-[10px] mt-4 uppercase tracking-widest">👉 Solicita tu guía gratuita aquí</p>
+                </div>
+              </div>
+            </motion.div>
+          )}
         </div>
       </section>
       )}
@@ -545,8 +578,36 @@ function ServicePage({ service }: { service: ServicePageData }) {
         <MicrodermoabrasionContent service={service} waLink={WA} />
       )}
 
+      {service.slug === "peeling-quimico" && (
+        <PeelingFacialContent waLink={WA} />
+      )}
+
+      {service.slug === "terapias-faciales" && (
+        <TerapiasFacialesContent waLink={WA} />
+      )}
+
+      {service.slug === "masaje-maxilofacial" && (
+        <MasajeMaxilofacialContent waLink={WA} />
+      )}
+
+      {service.slug === "laser-acne" && (
+        <LaserAcneContent waLink={WA} />
+      )}
+
+      {service.slug === "microagujas-melanout" && (
+        <MelanOutContent waLink={WA} />
+      )}
+
+      {service.slug === "mascarillas-faciales" && (
+        <MascarillasFacialesContent waLink={WA} />
+      )}
+
       {service.slug === "limpieza-facial" && (
         <LimpiezaFacialContent service={service} waLink={WA} />
+      )}
+
+      {(service.slug === "limpieza-facial-profunda" || service.slug === "limpieza-facial-hidratante") && (
+        <LimpiezaHidratanteContent waLink={WA} />
       )}
 
       {service.slug === "tratamiento-ojeras" && (
@@ -561,8 +622,16 @@ function ServicePage({ service }: { service: ServicePageData }) {
         <RejuvenecimientoLaserContent waLink={WA} />
       )}
 
+      {service.slug === "boda-spa" && (
+        <BodaSpaContent waLink={WA} />
+      )}
+
       {service.slug === "nutricion" && (
         <NutricionServiceContent waLink={WA} />
+      )}
+
+      {service.slug === "inbody" && (
+        <InBodyServiceContent waLink={WA} />
       )}
 
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
@@ -571,7 +640,6 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
       {(() => {
         const doctorMap: Record<string, { name: string; code: string; specialty: string; photo?: string; bio: string }> = {
-          "nutricion":           { name: "Dr. Johan",                  code: "3667-25",   specialty: "Nutricionista Deportivo",  photo: "dr-johan.webp",               bio: "Especialista en nutrición clínica y deportiva. Diseña planes alimentarios personalizados orientados a objetivos de salud, rendimiento y composición corporal." },
           "trasplante-capilar":  { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.webp",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
           "implante-barba":      { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.webp",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
           "mesoterapia-capilar": { name: "Dr. Ruddy Jiménez Montero", code: "13583",  specialty: "Master en Cirugía Capilar",     photo: "dr-ruddy-jimenez.webp",  bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes." },
@@ -713,7 +781,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
-      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "rejuvenecimiento-facial-laser", "limpieza-facial", "tratamiento-ojeras", "aromaterapia", "nutricion"].includes(service.slug) && (
+      {!["depilacion-laser", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "rejuvenecimiento-facial-laser", "limpieza-facial", "tratamiento-ojeras", "aromaterapia", "peeling-quimico", "nutricion", "terapias-faciales", "inbody", "masaje-maxilofacial", "limpieza-facial-profunda", "limpieza-facial-hidratante", "laser-acne", "microagujas-melanout", "mascarillas-faciales", "boda-spa"].includes(service.slug) && (
       <section className="py-16 bg-stone-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div
@@ -760,7 +828,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── SERVICE ITEMS ─────────────────────────────── */}
-      {!["adn-salmon", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "rejuvenecimiento-facial-laser", "limpieza-facial", "tratamiento-ojeras", "aromaterapia", "nutricion"].includes(service.slug) && (
+      {!["adn-salmon", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "rejuvenecimiento-facial-laser", "limpieza-facial", "tratamiento-ojeras", "aromaterapia", "peeling-quimico", "nutricion", "terapias-faciales", "inbody", "masaje-maxilofacial", "limpieza-facial-profunda", "limpieza-facial-hidratante", "laser-acne", "microagujas-melanout", "mascarillas-faciales", "boda-spa"].includes(service.slug) && (
         <section className="py-20 md:py-28 bg-white">
           <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
             <motion.div
@@ -868,7 +936,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── ANTES Y DESPUÉS — servicios corporales seleccionados ─── */}
-      {["masajes-corporales", "reduccion-de-medidas", "drenaje-linfatico", "carboxiterapia"].includes(service.slug) && (() => {
+      {["masajes-corporales", "reduccion-de-medidas", "drenaje-linfatico", "carboxiterapia"].includes(service.slug) && !["peeling-quimico", "aromaterapia", "blanqueamiento-zona-intima", "rejuvenecimiento-facial-laser", "tratamiento-ojeras", "terapias-faciales", "inbody", "masaje-maxilofacial", "limpieza-facial-profunda", "limpieza-facial-hidratante", "laser-acne", "microagujas-melanout", "mascarillas-faciales", "boda-spa"].includes(service.slug) && (() => {
         const bgPair = beforeAfterBgMap[service.slug] ?? { before: "corporales-antes-bg.webp", after: "corporales-despues-bg.webp" };
         const beforeBg = `${BASE}images/${bgPair.before}`;
         const afterBg  = `${BASE}images/${bgPair.after}`;
@@ -1053,7 +1121,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       )}
 
       {/* ── URGENCY CTA BAND ──────────────────────────── */}
-      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "masajes-profundos" && service.slug !== "botox-full-face" && service.slug !== "hilos-tensores" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && service.slug !== "relleno-de-labios" && service.slug !== "tratamiento-anticelulitis" && service.slug !== "auriculoterapia" && service.slug !== "microagujas" && service.slug !== "microagujas-ginkgo-biloba" && service.slug !== "microagujas-vitamina-c" && service.slug !== "rejuvenecimiento-facial" && service.slug !== "rejuvenecimiento-facial-laser" && service.slug !== "limpieza-facial" && service.slug !== "tratamiento-ojeras" && service.slug !== "aromaterapia" && service.slug !== "nutricion" && (
+      {service.slug !== "depilacion-laser" && service.slug !== "tensado-corporal" && service.slug !== "masajes-post-operatorios" && service.slug !== "masajes-profundos" && service.slug !== "botox-full-face" && service.slug !== "hilos-tensores" && service.slug !== "levantamiento-busto" && service.slug !== "iron-beauty-fitness" && service.slug !== "vendas-frias" && service.slug !== "blanqueamiento-zona-intima" && service.slug !== "hollywood-peel" && service.slug !== "hilos-colageno" && service.slug !== "trasplante-capilar" && service.slug !== "relleno-de-labios" && service.slug !== "tratamiento-anticelulitis" && service.slug !== "auriculoterapia" && service.slug !== "microagujas" && service.slug !== "microagujas-ginkgo-biloba" && service.slug !== "microagujas-vitamina-c" && service.slug !== "rejuvenecimiento-facial" && service.slug !== "rejuvenecimiento-facial-laser" && service.slug !== "limpieza-facial" && service.slug !== "tratamiento-ojeras" && service.slug !== "aromaterapia" && service.slug !== "peeling-quimico" && service.slug !== "nutricion" && service.slug !== "terapias-faciales" && service.slug !== "inbody" && service.slug !== "masaje-maxilofacial" && service.slug !== "limpieza-facial-profunda" && service.slug !== "limpieza-facial-hidratante" && service.slug !== "laser-acne" && service.slug !== "microagujas-melanout" && service.slug !== "mascarillas-faciales" && service.slug !== "boda-spa" && (
       <section className="bg-primary py-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
@@ -1088,7 +1156,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
 
       {/* ── FAQ ───────────────────────────────────────── */}
-      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "rejuvenecimiento-facial-laser", "limpieza-facial", "tratamiento-ojeras", "aromaterapia", "nutricion"].includes(service.slug) && (
+      {service.faq && service.faq.length > 0 && !["depilacion-laser", "masajes-corporales", "masajes-profundos", "carboxiterapia", "tensado-corporal", "masajes-post-operatorios", "botox-full-face", "hilos-tensores", "masajes-profundos", "levantamiento-gluteo", "levantamiento-busto", "iron-beauty-fitness", "vendas-frias", "blanqueamiento-zona-intima", "hollywood-peel", "hilos-colageno", "trasplante-capilar", "relleno-de-labios", "tratamiento-anticelulitis", "auriculoterapia", "microagujas", "microagujas-ginkgo-biloba", "microagujas-vitamina-c", "rejuvenecimiento-facial", "rejuvenecimiento-facial-laser", "limpieza-facial", "tratamiento-ojeras", "aromaterapia", "peeling-quimico", "nutricion", "terapias-faciales", "inbody", "masaje-maxilofacial", "limpieza-facial-profunda", "limpieza-facial-hidratante", "laser-acne", "microagujas-melanout", "mascarillas-faciales", "boda-spa"].includes(service.slug) && (
         <section className="py-20 md:py-28">
           <div className="max-w-3xl mx-auto px-6 sm:px-10">
             <motion.div

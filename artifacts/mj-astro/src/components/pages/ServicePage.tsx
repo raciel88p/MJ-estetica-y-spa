@@ -156,6 +156,11 @@ const heroBgMap: Record<string, string> = {
   "microagujas-vitamina-c": "microagujas-vitamina-c-bg.jpg",
   "rejuvenecimiento-facial": "faciales-bg.webp",
   "limpieza-facial":           "faciales-bg.webp",
+  "limpieza-facial-profunda":  "faciales-bg.webp",
+  "limpieza-facial-hidratante": "faciales-bg.webp",
+  "microdermoabrasion":        "faciales-bg.webp",
+  "masaje-maxilofacial":       "faciales-bg.webp",
+  "microagujas-melanout":      "faciales-bg.webp",
   "piernas-cansadas":          "piernas-cansadas-bg.webp",
   "nutricion":                 "nutricion-bg.webp",
   "botox-full-face":           "botox-full-face-bg.webp",
@@ -218,7 +223,18 @@ const serviceCategoryMap: Record<string, { name: string; href: string }> = {
   "implante-barba":            { name: "Médico Estético",     href: "/medicos-esteticos"        },
   "mesoterapia-capilar":       { name: "Médico Estético",     href: "/medicos-esteticos"        },
   "relleno-de-labios":           { name: "Médico Estético",     href: "/medicos-esteticos"        },
-  "mascarillas-faciales":      { name: "Tratamientos Faciales", href: "/tratamientos/faciales" },
+  "botox-full-face":             { name: "Médico Estético",     href: "/medicos-esteticos"        },
+  "nutricion":                   { name: "Médico Estético",     href: "/medicos-esteticos"        },
+  "trasplante-capilar":          { name: "Médico Estético",     href: "/medicos-esteticos"        },
+  "hilos-tensores":              { name: "Médico Estético",     href: "/medicos-esteticos"        },
+  "hilos-colageno":              { name: "Tratamientos Faciales", href: "/tratamientos/faciales"   },
+  "acido-hialuronico":           { name: "Médico Estético",     href: "/medicos-esteticos"        },
+  "biorevitalizacion":           { name: "Médico Estético",     href: "/medicos-esteticos"        },
+  "mascarillas-faciales":        { name: "Tratamientos Faciales", href: "/tratamientos/faciales"   },
+  "limpieza-facial-profunda":    { name: "Tratamientos Faciales", href: "/tratamientos/faciales"   },
+  "limpieza-facial-hidratante":  { name: "Tratamientos Faciales", href: "/tratamientos/faciales"   },
+  "microdermoabrasion":          { name: "Tratamientos Faciales", href: "/tratamientos/faciales"   },
+  "microagujas-melanout":        { name: "Tratamientos Faciales", href: "/tratamientos/faciales"   },
 };
 
 function FaqItem({ question, answer }: { question: string; answer: string }) {
@@ -289,6 +305,9 @@ function ServicePage({ service }: { service: ServicePageData }) {
 
   const BASE = import.meta.env.BASE_URL;
 
+  const isNutritionEspecialist = service.slug === "nutricion" || service.slug === "inbody";
+  const specialistName = service.slug === "peeling-quimico" ? "Maria Molina Madrigal" : isNutritionEspecialist ? "Dr. Johan" : "Janneth Maria Molina Madrigal";
+
   const breadcrumbItems = category
     ? [{ label: category.name, href: category.href }, { label: service.name }]
     : [{ label: service.name }];
@@ -302,11 +321,15 @@ function ServicePage({ service }: { service: ServicePageData }) {
     })
     .slice(0, 3);
 
+  const heroBg = service.heroBg?.startsWith("http")
+    ? service.heroBg
+    : `${BASE}images/${heroBgMap[service.slug] ?? service.heroBg ?? "hero-bg.webp"}`;
+
   return (
     <div className="min-h-screen bg-white">
       <SEO
         title={service.fullTitle ?? service.name}
-        description={`${service.tagline} — ${service.heroDescription.slice(0, 120)}. MJ Fisio Estética y Spa, Turrialba, Costa Rica.`}
+        description={`${service.tagline} — ${service.heroDescription.replace(/<[^>]*>?/gm, '').slice(0, 120)}. MJ Fisio Estética y Spa, Turrialba, Costa Rica.`}
         canonical={`/servicios/${service.slug}`}
       />
       <Navbar />
@@ -315,7 +338,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
       <section className="relative min-h-[75vh] flex items-end pb-0 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${BASE}images/${heroBgMap[service.slug] ?? service.heroBg ?? "hero-bg.webp"})` }}
+          style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/90" />
 
@@ -397,28 +420,28 @@ function ServicePage({ service }: { service: ServicePageData }) {
           >
             <div className="bg-primary px-6 py-3 flex items-center gap-2">
               <UserCheck className="w-4 h-4 text-white shrink-0" />
-              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">{(service.slug === "nutricion" || service.slug === "inbody") ? "Especialista a cargo" : "Profesional responsable"}</span>
+              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">{isNutritionEspecialist ? "Especialista a cargo" : "Profesional responsable"}</span>
             </div>
             <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
-                <img src={(service.slug === "nutricion" || service.slug === "inbody") ? "/images/dr-johan.webp" : "/images/janneth-molina.webp"} alt={service.slug === "peeling-quimico" ? "Maria Molina Madrigal" : (service.slug === "nutricion" || service.slug === "inbody") ? "Dr. Johan" : "Janneth Maria Molina Madrigal"} className="w-full h-full object-cover object-top" />
+                <img src={isNutritionEspecialist ? "/images/dr-johan.webp" : "/images/janneth-molina.webp"} alt={specialistName} className="w-full h-full object-cover object-top" />
               </div>
               <div className="flex-1 text-center sm:text-left">
                 <h3 className="text-xl font-serif font-bold text-stone-900 mb-1">
-                  {service.slug === "peeling-quimico" ? "Maria Molina Madrigal" : (service.slug === "nutricion" || service.slug === "inbody") ? "Dr. Johan" : "Janneth Maria Molina Madrigal"}
+                  {specialistName}
                 </h3>
                 <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
                   <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
                     <BadgeCheck className="w-3.5 h-3.5" />
-                    {(service.slug === "nutricion" || service.slug === "inbody") ? "Código: 3667-25" : "Linc Fisio Terapia"}
+                    {isNutritionEspecialist ? "Código: 3667-25" : "Linc Fisio Terapia"}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <GraduationCap className="w-3.5 h-3.5" />
-                    {(service.slug === "nutricion" || service.slug === "inbody") ? "Nutricionista Deportivo" : "Especialista en Estética"}
+                    {isNutritionEspecialist ? "Nutricionista Deportivo" : "Especialista en Estética"}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <Award className="w-3.5 h-3.5 text-primary" />
-                    {(service.slug === "nutricion" || service.slug === "inbody") ? "Atención Personalizada" : "Laboró Hospital la Católica"}
+                    {isNutritionEspecialist ? "Atención Personalizada" : "Laboró Hospital la Católica"}
                   </span>
                 </div>
                 <p className="text-stone-500 text-sm leading-relaxed mt-4 max-w-xl">
