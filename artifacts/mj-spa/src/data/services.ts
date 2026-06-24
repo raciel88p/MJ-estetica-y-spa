@@ -48,6 +48,7 @@ export const tratamientosCorporalesLinks = [
   { name: "Vendas Frías", href: "/servicios/vendas-frias" },
   { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
   { name: "Aromaterapia", href: "/servicios/aromaterapia" },
+  { name: "Boda Spa", href: "/servicios/boda-spa" },
   { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
 ];
 
@@ -2484,6 +2485,52 @@ export const servicePages: ServicePageData[] = [
         answer: "Nos encontramos en Turrialba, con fácil acceso y parqueo para nuestros visitantes."
       }
     ],
+  },
+  {
+    slug: "boda-spa",
+    name: "Boda Spa",
+    fullTitle: "Spa para Novias en Turrialba | Boda Spa Exclusivo para Relajarte Antes de Tu Gran Día 💍",
+    tagline: "El mejor regalo antes de tu boda eres tú",
+    heroDescription: "Vive la experiencia de Boda Spa más relajante en Turrialba. En MJ Estética & Wellness Center hemos diseñado una experiencia exclusiva para ayudarte a recuperar el equilibrio físico y emocional antes de ese momento tan especial.",
+    benefits: [
+      "Relajación profunda del sistema nervioso",
+      "Alivio de tensiones y dolores musculares",
+      "Mejora de la luminosidad y frescura de la piel",
+      "Reducción de la ansiedad y el estrés pre-boda",
+      "Mejora de la calidad del sueño",
+      "Momento de desconexión total para la novia"
+    ],
+    items: [
+      {
+        title: "Paquete Novia Radiante",
+        description: "Protocolo integral que combina exfoliación corporal, masaje relajante y facial express para un brillo espectacular.",
+        duration: "120 min",
+      },
+      {
+        title: "Spa en Pareja Pre-Boda",
+        description: "Experiencia compartida para liberar el estrés de los preparativos juntos en un ambiente de calma absoluta.",
+        duration: "90 min",
+      },
+      {
+        title: "Masaje Anti-Estrés Nupcial",
+        description: "Sesión focalizada en liberar tensión de espalda, cuello y hombros acumulada por la organización del evento.",
+        duration: "60 min",
+      }
+    ],
+    faq: [
+      {
+        question: "¿Con cuánta anticipación debo reservar mi Boda Spa?",
+        answer: "Recomendamos reservar con al menos 2 a 4 semanas de anticipación, especialmente si deseas una fecha cercana al gran día."
+      },
+      {
+        question: "¿Cuántos días antes de la boda es ideal realizar el spa?",
+        answer: "Lo ideal es entre 2 y 5 días antes de la boda para que los efectos de relajación y luminosidad estén en su punto máximo."
+      },
+      {
+        question: "¿Pueden ir mis damas de honor?",
+        answer: "¡Claro! Contamos con paquetes especiales para grupos. Consúltanos por WhatsApp para coordinar una experiencia grupal inolvidable."
+      }
+    ]
   },
   {
     slug: "blanqueamiento-zona-intima",
