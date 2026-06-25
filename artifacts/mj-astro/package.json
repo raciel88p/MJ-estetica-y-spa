@@ -13,8 +13,8 @@
     "typecheck": "astro check"
   },
   "dependencies": {
-    "@astrojs/react": "^6.0.0",
-    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/react": "^4.2.1",
+    "@astrojs/sitemap": "^3.2.1",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "^1.2.12",
     "@radix-ui/react-alert-dialog": "^1.1.15",
@@ -48,7 +48,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@workspace/api-client-react": "workspace:*",
-    "astro": "^7.0.0",
+    "astro": "^5.4.2",
     "class-variance-authority": "catalog:",
     "clsx": "catalog:",
     "cmdk": "^1.1.1",
@@ -71,7 +71,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.9",
+    "@astrojs/check": "^0.9.4",
     "@playwright/test": "^1.60.0",
     "typescript": "~5.9.3"
   }

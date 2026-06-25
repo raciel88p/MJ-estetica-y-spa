@@ -306,7 +306,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
     <div className="min-h-screen bg-white">
       <SEO
         title={service.fullTitle ?? service.name}
-        description={`${service.tagline} — ${service.heroDescription.slice(0, 120)}. MJ Fisio Estética y Spa, Turrialba, Costa Rica.`}
+        description={`${service.tagline} — ${service.heroDescription.replace(/<[^>]*>?/gm, '').slice(0, 120)}. MJ Fisio Estética y Spa, Turrialba, Costa Rica.`}
         canonical={`/servicios/${service.slug}`}
       />
       <Navbar />

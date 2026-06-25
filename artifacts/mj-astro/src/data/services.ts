@@ -82,6 +82,10 @@ export const tratamientosPiernasLinks = [
   { name: "Tratamiento Anticelulitis", href: "/servicios/tratamiento-anticelulitis" },
 ];
 
+export const mjCreativoLinks = [
+  { name: "Arteterapia", href: "/servicios/arteterapia" },
+];
+
 export const servicePages: ServicePageData[] = [
   {
     slug: "masajes-corporales",
@@ -2529,6 +2533,44 @@ export const servicePages: ServicePageData[] = [
       {
         question: "¿Pueden ir mis damas de honor?",
         answer: "¡Claro! Contamos con paquetes especiales para grupos. Consúltanos por WhatsApp para coordinar una experiencia grupal inolvidable."
+      }
+    ]
+  },
+  {
+    slug: "arteterapia",
+    name: "Arteterapia en Turrialba",
+    fullTitle: "Arteterapia en Turrialba: Pintura, Café y Bienestar para Reducir el Estrés",
+    tagline: "Libera tu creatividad, reduce el estrés y regálate bienestar",
+    heroDescription:
+      "¿Buscas una actividad diferente en Turrialba para relajarte, desconectarte del estrés y dedicarte tiempo de calidad?<br /><br />En MJ Estética y Spa Turrialba hemos creado una experiencia única que combina arteterapia, pintura guiada y café, diseñada para ayudarte a liberar tensiones, estimular tu creatividad y mejorar tu bienestar emocional en un ambiente acogedor y seguro.",
+    benefits: [
+      "Reducción del estrés y la ansiedad",
+      "Mejora del bienestar emocional",
+      "Estímulo de la creatividad",
+      "Espacio de desconexión y tiempo para ti",
+      "Experiencia única de pintura y café en Turrialba",
+      "Ambiente relajante y acogedor",
+    ],
+    items: [
+      {
+        title: "Sesión de Arteterapia y Café",
+        description: "Experiencia completa que incluye materiales de pintura, café y acompañamiento guiado en un ambiente de bienestar.",
+        duration: "120 min",
+        price: "Consultar precio",
+      }
+    ],
+    faq: [
+      {
+        question: "¿Necesito saber pintar?",
+        answer: "No. No buscamos artistas, buscamos ayudarte a sentirte mejor. La experiencia está diseñada para que cualquier persona pueda disfrutarla sin importar su nivel artístico.",
+      },
+      {
+        question: "¿Qué incluye la sesión?",
+        answer: "Incluye todos los materiales de pintura, una deliciosa taza de café (o bebida alternativa), guía durante la actividad y un ambiente diseñado para la relajación.",
+      },
+      {
+        question: "¿Quiénes pueden participar?",
+        answer: "Es ideal para personas con estrés laboral, parejas, grupos de amigos o cualquier persona que quiera dedicar tiempo a su bienestar emocional y salir de la rutina.",
       }
     ]
   },
