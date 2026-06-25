@@ -95,7 +95,7 @@ export function Navbar() {
               width="160"
               height="64"
             />
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
