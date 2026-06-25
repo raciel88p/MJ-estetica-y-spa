@@ -315,7 +315,13 @@ function ServicePage({ service }: { service: ServicePageData }) {
   const BASE = import.meta.env.BASE_URL;
 
   const isNutritionEspecialist = service.slug === "nutricion" || service.slug === "inbody";
-  const specialistName = service.slug === "peeling-quimico" ? "Maria Molina Madrigal" : isNutritionEspecialist ? "Dr. Johan" : "Janneth Maria Molina Madrigal";
+  const isPeelingSpecialist = service.slug === "peeling-quimico" || service.slug === "microdermoabrasion";
+
+  const specialistName = isPeelingSpecialist
+    ? "Maria Molina Madrigal"
+    : isNutritionEspecialist
+    ? "Dr. Johan"
+    : "Janneth Maria Molina Madrigal";
 
   const breadcrumbItems = category
     ? [{ label: category.name, href: category.href }, { label: service.name }]
@@ -433,7 +439,17 @@ function ServicePage({ service }: { service: ServicePageData }) {
             </div>
             <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
-                <img src={isNutritionEspecialist ? "/images/dr-johan.webp" : "/images/janneth-molina.webp"} alt={specialistName} className="w-full h-full object-cover object-top" />
+                <img
+                  src={isNutritionEspecialist ? "/images/dr-johan.webp" : isPeelingSpecialist ? "/images/maria-molina.webp" : "/images/janneth-molina.webp"}
+                  alt={specialistName}
+                  className="w-full h-full object-cover object-top"
+                  onError={(e) => {
+                    // Fallback to janneth if maria image is missing, but with a console note
+                    if (isPeelingSpecialist) {
+                      (e.target as HTMLImageElement).src = "/images/janneth-molina.webp";
+                    }
+                  }}
+                />
               </div>
               <div className="flex-1 text-center sm:text-left">
                 <h3 className="text-xl font-serif font-bold text-stone-900 mb-1">

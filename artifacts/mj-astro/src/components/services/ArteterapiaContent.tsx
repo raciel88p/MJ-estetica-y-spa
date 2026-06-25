@@ -82,7 +82,7 @@ export function ArteterapiaContent({ waLink }: { waLink: string }) {
                 Vivimos en una época donde el estrés, las preocupaciones y la sobrecarga mental forman parte de la rutina diaria. Muchas personas en Turrialba buscan actividades para reducir el estrés y salir de la rutina.
               </p>
               <p>
-                En MJ Estética y Spa Turrialba hemos creado una experiencia única que combina <span className="font-bold text-stone-900">arteterapia, pintura guiada y café</span>, diseñada para ayudarte a liberar tensiones, estimular tu creatividad y mejorar tu bienestar emocional en un ambiente acogedor y seguro.
+                En MJ Estética y Spa Turrialba hemos creado una experiencia única que combina <span className="font-bold text-stone-900">arteterapia, pintura de ositos de resina y café</span>, diseñada para ayudarte a liberar tensiones, estimular tu creatividad y mejorar tu bienestar emocional en un ambiente acogedor y seguro.
               </p>
             </div>
           </motion.div>
@@ -107,7 +107,7 @@ export function ArteterapiaContent({ waLink }: { waLink: string }) {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  "Pintura terapéutica",
+                  "Pintura de ositos de resina",
                   "Café de especialidad",
                   "Bienestar emocional",
                   "Conexión personal",
@@ -124,7 +124,7 @@ export function ArteterapiaContent({ waLink }: { waLink: string }) {
             </motion.div>
             <div className="relative">
               <div className="aspect-square bg-stone-100 rounded-sm overflow-hidden border border-stone-200">
-                <img src="/images/masajes-relajantes-bg.webp" alt="Arteterapia Experience" className="w-full h-full object-cover" />
+                <img src="/images/arteterapia-osito.webp" alt="Señora adulta pintando un osito de resina" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -top-6 -right-6 bg-primary p-8 shadow-xl hidden sm:block">
                 <Palette className="w-8 h-8 text-white" />
@@ -158,7 +158,7 @@ export function ArteterapiaContent({ waLink }: { waLink: string }) {
           </div>
           <div className="mt-16 flex flex-wrap justify-center gap-x-12 gap-y-6 text-sm font-bold text-stone-600 uppercase tracking-widest">
             <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-primary" /> Sesiones de 120 min</span>
-            <span className="flex items-center gap-2"><Palette className="w-4 h-4 text-primary" /> Materiales incluidos</span>
+            <span className="flex items-center gap-2"><Palette className="w-4 h-4 text-primary" /> Osito de resina y materiales</span>
             <span className="flex items-center gap-2"><Coffee className="w-4 h-4 text-primary" /> Café incluido</span>
             <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-primary" /> Turrialba Centro</span>
           </div>
@@ -204,11 +204,11 @@ export function ArteterapiaContent({ waLink }: { waLink: string }) {
                <h2 className="text-3xl md:text-4xl font-serif font-bold mb-8 leading-tight text-white">¿Qué Incluye Tu Experiencia?</h2>
                <div className="space-y-4">
                  {[
-                   "Materiales de pintura (bastidor, pinceles, acrílicos)",
+                   "Osito de resina para decorar",
+                   "Materiales de pintura (pinceles, acrílicos)",
                    "Café de especialidad durante la actividad",
                    "Guía y acompañamiento durante la sesión",
                    "Ambiente relajante y sensorial",
-                   "Espacio ideal para compartir y disfrutar",
                    "Tu obra finalizada para llevar a casa"
                  ].map((item, i) => (
                    <div key={i} className="flex items-center gap-3">
@@ -373,7 +373,7 @@ export function ArteterapiaContent({ waLink }: { waLink: string }) {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 mb-8 leading-tight">
-              Vive una Experiencia Diferente de Pintura y Café
+              Vive una Experiencia Diferente: Pintura de Ositos y Café
             </h2>
             <p className="text-stone-600 text-lg mb-12 max-w-2xl mx-auto italic">
               Da el primer paso hacia tu bienestar hoy mismo. Los espacios son limitados para garantizar una experiencia personalizada.
