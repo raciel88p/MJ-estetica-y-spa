@@ -2539,22 +2539,22 @@ export const servicePages: ServicePageData[] = [
   {
     slug: "arteterapia",
     name: "Arteterapia en Turrialba",
-    fullTitle: "Arteterapia en Turrialba: Pintura, Café y Bienestar para Reducir el Estrés",
-    tagline: "Libera tu creatividad, reduce el estrés y regálate bienestar",
+    fullTitle: "Arteterapia en Turrialba: Pintura de Ositos, Café y Bienestar",
+    tagline: "Libera tu creatividad, reduce el estrés y decora tu propio osito de resina",
     heroDescription:
-      "¿Buscas una actividad diferente en Turrialba para relajarte, desconectarte del estrés y dedicarte tiempo de calidad?<br /><br />En MJ Estética y Spa Turrialba hemos creado una experiencia única que combina arteterapia, pintura guiada y café, diseñada para ayudarte a liberar tensiones, estimular tu creatividad y mejorar tu bienestar emocional en un ambiente acogedor y seguro.",
+      "¿Buscas una actividad diferente en Turrialba para relajarte, desconectarte del estrés y dedicarte tiempo de calidad?<br /><br />En MJ Estética y Spa Turrialba hemos creado una experiencia única que combina arteterapia, pintura de ositos de resina y café, diseñada para ayudarte a liberar tensiones, estimular tu creatividad y mejorar tu bienestar emocional en un ambiente acogedor y seguro.",
     benefits: [
       "Reducción del estrés y la ansiedad",
+      "Decora y personaliza tu propio osito de resina",
       "Mejora del bienestar emocional",
       "Estímulo de la creatividad",
       "Espacio de desconexión y tiempo para ti",
-      "Experiencia única de pintura y café en Turrialba",
       "Ambiente relajante y acogedor",
     ],
     items: [
       {
-        title: "Sesión de Arteterapia y Café",
-        description: "Experiencia completa que incluye materiales de pintura, café y acompañamiento guiado en un ambiente de bienestar.",
+        title: "Sesión de Pintura de Ositos y Café",
+        description: "Experiencia completa que incluye osito de resina, materiales de pintura, café y acompañamiento guiado.",
         duration: "120 min",
         price: "Consultar precio",
       }
