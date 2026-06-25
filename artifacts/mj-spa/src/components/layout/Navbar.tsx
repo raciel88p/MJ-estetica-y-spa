@@ -44,6 +44,7 @@ function useHoverDropdown(key: DropdownKey, openDropdown: DropdownKey, setOpenDr
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [currentPath, setCurrentPath] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isMobileMedicosOpen, setIsMobileMedicosOpen] = useState(false);
@@ -53,6 +54,7 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
+    setCurrentPath(window.location.pathname);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -67,7 +69,19 @@ export function Navbar() {
   const medicos = useHoverDropdown("medicos", openDropdown, setOpenDropdown as any);
 
   const textClass = isScrolled ? "text-[#0c3e5a]" : "text-white/90";
-  const linkBase = `text-[15px] uppercase tracking-widest font-medium hover:text-primary transition-colors`;
+  const linkBase = `text-[15px] uppercase tracking-widest font-medium hover:text-primary transition-all duration-300 relative group/link`;
+
+  const isActive = (path: string) => currentPath === path || (path !== "/" && currentPath.startsWith(path));
+
+  const ActiveIndicator = () => (
+    <motion.span
+      layoutId="activeNav"
+      className="absolute -bottom-1 left-0 w-full h-0.5 bg-primary rounded-full"
+      initial={{ scaleX: 0 }}
+      animate={{ scaleX: 1 }}
+      transition={{ type: "spring", stiffness: 380, damping: 30 }}
+    />
+  );
 
   const dropdownPanelVariants = {
     initial: { opacity: 0, y: 8, scale: 0.97 },
@@ -77,10 +91,10 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white shadow-sm py-3 border-b border-stone-100"
-          : "bg-gradient-to-b from-black/60 via-black/20 to-transparent py-5"
+          ? "bg-white/80 backdrop-blur-lg shadow-sm py-3 border-b border-stone-100"
+          : "bg-gradient-to-b from-black/80 via-black/20 to-transparent py-5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,11 +121,12 @@ export function Navbar() {
               onMouseLeave={nosotros.scheduleClose}
             >
               <button
-                className={`flex items-center gap-1 ${linkBase} ${textClass}`}
+                className={`flex items-center gap-1 ${linkBase} ${textClass} ${isActive("/nosotros") || isActive("/buzon-sugerencias") ? "text-primary" : ""}`}
                 onClick={(e) => { e.stopPropagation(); setOpenDropdown(nosotros.isOpen ? null : "nosotros"); }}
               >
                 Nosotros
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${nosotros.isOpen ? "rotate-180" : ""}`} />
+                {(isActive("/nosotros") || isActive("/buzon-sugerencias")) && <ActiveIndicator />}
               </button>
               <AnimatePresence>
                 {nosotros.isOpen && (
@@ -142,12 +157,14 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            <Link href="/testimonios" className={`${linkBase} ${textClass}`}>
+            <Link href="/testimonios" className={`${linkBase} ${textClass} ${isActive("/testimonios") ? "text-primary" : ""}`}>
               Testimonios
+              {isActive("/testimonios") && <ActiveIndicator />}
             </Link>
 
-            <Link href="/paquetes" className={`${linkBase} ${textClass}`}>
+            <Link href="/paquetes" className={`${linkBase} ${textClass} ${isActive("/paquetes") ? "text-primary" : ""}`}>
               Paquetes
+              {isActive("/paquetes") && <ActiveIndicator />}
             </Link>
 
 
@@ -159,11 +176,12 @@ export function Navbar() {
               onMouseLeave={servicios.scheduleClose}
             >
               <button
-                className={`flex items-center gap-1 ${linkBase} ${textClass}`}
+                className={`flex items-center gap-1 ${linkBase} ${textClass} ${isActive("/tratamientos") || isActive("/servicios") ? "text-primary" : ""}`}
                 onClick={(e) => { e.stopPropagation(); setOpenDropdown(servicios.isOpen ? null : "servicios"); }}
               >
                 Servicios
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicios.isOpen ? "rotate-180" : ""}`} />
+                {(isActive("/tratamientos") || isActive("/servicios")) && <ActiveIndicator />}
               </button>
               <AnimatePresence>
                 {servicios.isOpen && (
@@ -298,9 +316,10 @@ export function Navbar() {
               <div className="flex items-center gap-1">
               <Link
                   href="/medicina-estetica"
-                  className={`${linkBase} ${textClass}`}
+                  className={`${linkBase} ${textClass} ${isActive("/medicina-estetica") ? "text-primary" : ""}`}
                 >
                   Médico Estético
+                  {isActive("/medicina-estetica") && <ActiveIndicator />}
               </Link>
                 <button
                   className={`p-1 ${textClass} hover:text-primary transition-colors`}
@@ -424,13 +443,13 @@ export function Navbar() {
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
                         <Link href="/nosotros"
-                          className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
+                          className={`block py-2 text-base ${isActive("/nosotros") ? "text-primary font-bold" : "text-muted-foreground"} hover:text-primary transition-colors`}
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                         >
                           Sobre Nosotros
                         </Link>
                         <Link href="/buzon-sugerencias"
-                          className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
+                          className={`block py-2 text-base ${isActive("/buzon-sugerencias") ? "text-primary font-bold" : "text-muted-foreground"} hover:text-primary transition-colors`}
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                         >
                           Buzón de Sugerencias
@@ -442,14 +461,14 @@ export function Navbar() {
               </div>
 
               <Link href="/testimonios"
-                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
+                className={`${isActive("/testimonios") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Testimonios
               </Link>
 
               <Link href="/paquetes"
-                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block"
+                className={`${isActive("/paquetes") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Paquetes
@@ -543,7 +562,7 @@ export function Navbar() {
                 <div className="flex justify-between items-center w-full">
                   <Link
                     href="/medicina-estetica"
-                    className="flex-grow text-foreground text-lg py-3 hover:text-primary transition-colors font-serif"
+                    className={`flex-grow ${isActive("/medicina-estetica") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 hover:text-primary transition-colors font-serif`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Médico Estético
@@ -589,7 +608,7 @@ export function Navbar() {
 
               <Link
                 href="/#contacto"
-                className="text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif"
+                className={`text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Contacto
