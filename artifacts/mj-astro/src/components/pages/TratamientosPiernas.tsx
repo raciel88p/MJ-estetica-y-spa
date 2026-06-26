@@ -35,7 +35,7 @@ function TratamientosPiernas() {
       <SEO
         title="Tratamientos de Piernas"
         description="Tratamientos de piernas en MJ Fisio Estética y Spa: piernas cansadas, anticelulitis y más en Turrialba, Costa Rica."
-        canonical="/tratamientos/piernas"
+        canonical="/servicios/piernas"
       />
       <Navbar />
       <FloatingWhatsApp />

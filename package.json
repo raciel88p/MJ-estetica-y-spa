@@ -14,7 +14,10 @@
     "node": ">=20.11.0"
   },
   "devDependencies": {
-    "typescript": "~5.7.3",
-    "prettier": "^3.5.1"
+    "prettier": "^3.5.1",
+    "typescript": "~5.7.3"
+  },
+  "dependencies": {
+    "playwright": "^1.61.1"
   }
 }

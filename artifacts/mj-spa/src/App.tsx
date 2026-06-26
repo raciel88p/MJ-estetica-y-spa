@@ -45,9 +45,9 @@ function Router() {
         <Route path="/buzon-sugerencias" component={BuzonSugerencias} />
         <Route path="/mapa-del-sitio" component={SitemapPage} />
         <Route path="/paquetes" component={Paquetes} />
-        <Route path="/tratamientos/corporales" component={TratamientosCorporales} />
-        <Route path="/tratamientos/faciales" component={TratamientosFaciales} />
-        <Route path="/tratamientos/piernas" component={TratamientosPiernas} />
+        <Route path="/servicios/corporales" component={TratamientosCorporales} />
+        <Route path="/servicios/faciales" component={TratamientosFaciales} />
+        <Route path="/servicios/piernas" component={TratamientosPiernas} />
         <Route path="/reductivos-turrialba" component={LandingReductivos} />
         <Route path="/faciales" component={LandingFaciales} />
         <Route path="/medicina-estetica" component={LandingMedicos} />

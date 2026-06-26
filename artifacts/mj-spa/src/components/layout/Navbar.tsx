@@ -199,7 +199,7 @@ export function Navbar() {
                         <div className="grid grid-cols-6 gap-x-4">
                           {/* Corporales col 1 */}
                           <div>
-                            <Link href="/tratamientos/corporales"
+                            <Link href="/servicios/corporales"
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
@@ -250,7 +250,7 @@ export function Navbar() {
                           </div>
                           {/* Faciales col 1 */}
                           <div>
-                            <Link href="/tratamientos/faciales"
+                            <Link href="/servicios/faciales"
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
@@ -282,7 +282,7 @@ export function Navbar() {
                           </div>
                           {/* Piernas */}
                           <div>
-                            <Link href="/tratamientos/piernas"
+                            <Link href="/servicios/piernas"
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
@@ -496,7 +496,7 @@ export function Navbar() {
                       <div className="pb-3 pl-4 flex flex-col gap-1">
                         {/* Corporales */}
                         <div className="mb-2">
-                          <Link href="/tratamientos/corporales"
+                          <Link href="/servicios/corporales"
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
@@ -515,7 +515,7 @@ export function Navbar() {
                         </div>
                         {/* Faciales */}
                         <div className="mb-2">
-                          <Link href="/tratamientos/faciales"
+                          <Link href="/servicios/faciales"
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
@@ -534,7 +534,7 @@ export function Navbar() {
                         </div>
                         {/* Piernas */}
                         <div className="mb-2">
-                          <Link href="/tratamientos/piernas"
+                          <Link href="/servicios/piernas"
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
