@@ -26,7 +26,7 @@ const sections = [
     title: "Tratamientos Corporales",
     color: "text-primary",
     links: [
-      { name: "Todos los Tratamientos Corporales", href: "/tratamientos/corporales" },
+      { name: "Todos los Tratamientos Corporales", href: "/servicios/corporales" },
       { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
       { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
       { name: "Masajes Profundos", href: "/servicios/masajes-profundos" },
@@ -47,7 +47,7 @@ const sections = [
     title: "Tratamientos Faciales",
     color: "text-primary",
     links: [
-      { name: "Todos los Tratamientos Faciales", href: "/tratamientos/faciales" },
+      { name: "Todos los Tratamientos Faciales", href: "/servicios/faciales" },
       { name: "Limpieza Facial en Turrialba", href: "/servicios/limpieza-facial" },
       { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
       { name: "Peeling Facial", href: "/servicios/peeling-quimico" },
@@ -68,7 +68,7 @@ const sections = [
     title: "Tratamientos de Piernas",
     color: "text-primary",
     links: [
-      { name: "Todos los Tratamientos de Piernas", href: "/tratamientos/piernas" },
+      { name: "Todos los Tratamientos de Piernas", href: "/servicios/piernas" },
       { name: "Tratamiento Anticelulitis", href: "/servicios/tratamiento-anticelulitis" },
       { name: "Cuidado de Piernas Cansadas", href: "/servicios/piernas-cansadas" },
     ],

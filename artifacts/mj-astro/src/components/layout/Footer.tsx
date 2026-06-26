@@ -45,9 +45,9 @@ export function Footer() {
             <h4 className="text-xl font-serif text-white mb-6">Páginas</h4>
             <ul className="space-y-3">
               <li><a href="/nosotros" className="hover:text-secondary transition-colors">Sobre Nosotros</a></li>
-              <li><a href="/tratamientos/corporales" className="hover:text-secondary transition-colors">Tratamientos Corporales</a></li>
-              <li><a href="/tratamientos/faciales" className="hover:text-secondary transition-colors">Tratamientos Faciales</a></li>
-              <li><a href="/tratamientos/piernas" className="hover:text-secondary transition-colors">Tratamientos de Piernas</a></li>
+              <li><a href="/servicios/corporales" className="hover:text-secondary transition-colors">Tratamientos Corporales</a></li>
+              <li><a href="/servicios/faciales" className="hover:text-secondary transition-colors">Tratamientos Faciales</a></li>
+              <li><a href="/servicios/piernas" className="hover:text-secondary transition-colors">Tratamientos de Piernas</a></li>
               <li><a href="/paquetes" className="hover:text-secondary transition-colors">Paquetes</a></li>
               <li><a href="/medicos-esteticos" className="hover:text-secondary transition-colors">Médico Estético</a></li>
               <li><a href="/testimonios" className="hover:text-secondary transition-colors">Testimonios</a></li>

@@ -167,7 +167,7 @@ function Home() {
             <div className="w-20 h-1 bg-primary mx-auto" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 title: "Depilación Láser",
@@ -181,14 +181,21 @@ function Home() {
                 slug: "faciales",
                 img: "faciales-bg.webp",
                 desc: "Limpieza y rejuvenecimiento facial.",
-                link: "/tratamientos/faciales"
+                link: "/servicios/faciales"
               },
               {
                 title: "Piernas",
                 slug: "piernas",
                 img: "anticelulitis-bg.webp",
                 desc: "Tratamientos circulatorios.",
-                link: "/tratamientos/piernas"
+                link: "/servicios/piernas-cansadas"
+              },
+              {
+                title: "Arteterapia",
+                slug: "arteterapia",
+                img: "about-us.webp",
+                desc: "Creatividad y bienestar emocional.",
+                link: "/servicios/arteterapia"
               },
             ].map((cat, i) => (
               <Link key={i} href={cat.link}>
@@ -229,7 +236,7 @@ function Home() {
               <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">Tratamientos Destacados</p>
               <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">Nuestros resultados <br /><span className="italic font-light text-primary">más buscados</span></h2>
             </div>
-            <Link href="/tratamientos/corporales" className="text-sm font-bold tracking-widest uppercase border-b border-stone-200 pb-2 hover:text-primary hover:border-primary transition-colors">
+            <Link href="/servicios/masajes-corporales" className="text-sm font-bold tracking-widest uppercase border-b border-stone-200 pb-2 hover:text-primary hover:border-primary transition-colors">
               Ver todos los servicios
             </Link>
           </div>
@@ -293,7 +300,7 @@ function Home() {
                    {item.isComparison ? (
                      <div className="flex h-full w-full">
                        <div className="relative flex-1 overflow-hidden border-r border-white/20">
-                         <img src={`/images/${item.before}`} className="absolute inset-0 w-full h-full object-cover grayscale-[0.2]" alt="Antes" />
+                         <img src={`/images/${item.before}`} className="absolute inset-0 w-full h-full object-cover" alt="Antes" />
                          <span className="absolute top-2 left-2 bg-black/60 text-[8px] font-bold text-white px-2 py-0.5 uppercase tracking-widest">Antes</span>
                        </div>
                        <div className="relative flex-1 overflow-hidden">
