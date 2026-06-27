@@ -124,7 +124,7 @@ export function ArteterapiaContent({ waLink }: { waLink: string }) {
             </motion.div>
             <div className="relative">
               <div className="aspect-square bg-stone-100 rounded-sm overflow-hidden border border-stone-200">
-                <img src="/images/arteterapia-osito.webp" alt="Señora adulta pintando un osito de resina" className="w-full h-full object-cover" />
+                <img src="/images/arteterapia-osito.jpeg" alt="Señora adulta pintando un osito de resina" className="w-full h-full object-cover" />
               </div>
               <div className="absolute -top-6 -right-6 bg-primary p-8 shadow-xl hidden sm:block">
                 <Palette className="w-8 h-8 text-white" />
