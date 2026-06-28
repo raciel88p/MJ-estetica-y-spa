@@ -122,11 +122,11 @@ export function ArteterapiaContent({ waLink }: { waLink: string }) {
                 ))}
               </div>
             </motion.div>
-            <div className="relative">
-              <div className="aspect-square bg-stone-100 rounded-sm overflow-hidden border border-stone-200">
-                <img src="/images/arteterapia-sagrada-familia.jpeg" alt="Paciente en sesión de arteterapia en MJ" className="w-full h-full object-cover" />
+            <div className="relative flex justify-center items-center py-12 md:py-0">
+              <div className="aspect-square bg-stone-100 rounded-sm overflow-hidden border border-stone-200 scale-120 md:scale-120">
+                <img src="/images/arteterapia-sagrada-familia.jpeg" alt="Paciente en sesión de arteterapia en MJ" className="w-full h-full object-contain" />
               </div>
-              <div className="absolute -top-6 -right-6 bg-primary p-8 shadow-xl hidden sm:block">
+              <div className="absolute -top-12 -right-6 md:-top-6 md:-right-6 bg-primary p-8 shadow-xl hidden sm:block z-10">
                 <Palette className="w-8 h-8 text-white" />
               </div>
             </div>
