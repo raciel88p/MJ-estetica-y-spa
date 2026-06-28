@@ -8,7 +8,6 @@ import {
   tratamientosCorporalesLinks,
   tratamientosFacialesLinks,
   tratamientosPiernasLinks,
-  mjCreativoLinks,
 } from "@/data/services";
 
 const corporalesHalf1 = tratamientosCorporalesLinks.slice(0, 6);
@@ -195,7 +194,7 @@ export function Navbar() {
                         <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-4">
                           Nuestros Servicios
                         </p>
-                        <div className="grid grid-cols-6 gap-x-4">
+                        <div className="grid grid-cols-5 gap-x-4">
                           {/* Corporales col 1 */}
                           <div>
                             <a href="/servicios/corporales"
@@ -205,25 +204,6 @@ export function Navbar() {
                               Corporales
                             </a>
                             {corporalesHalf1.map((link) => (
-                              <a
-                                key={link.name}
-                                href={link.href}
-                                className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
-                                onClick={() => setOpenDropdown(null)}
-                              >
-                                {link.name}
-                              </a>
-                            ))}
-                          </div>
-                          {/* MJ Creativo */}
-                          <div>
-                            <a href="/servicios/arteterapia"
-                              className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
-                              onClick={() => setOpenDropdown(null)}
-                            >
-                              MJ Creativo
-                            </a>
-                            {mjCreativoLinks.map((link) => (
                               <a
                                 key={link.name}
                                 href={link.href}
@@ -354,25 +334,6 @@ export function Navbar() {
                               href={link.href}
                               className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                               onClick={() => setOpenDropdown(null)}
-                            >
-                              {link.name}
-                            </a>
-                          ))}
-                        </div>
-                        {/* MJ Creativo */}
-                        <div className="mb-2">
-                          <a href="/servicios/arteterapia"
-                            className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
-                            onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
-                          >
-                            MJ Creativo
-                          </a>
-                          {mjCreativoLinks.map((link) => (
-                            <a
-                              key={link.name}
-                              href={link.href}
-                              className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
-                              onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                             >
                               {link.name}
                             </a>
