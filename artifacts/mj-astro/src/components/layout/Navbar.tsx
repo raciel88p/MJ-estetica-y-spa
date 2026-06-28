@@ -8,6 +8,7 @@ import {
   tratamientosCorporalesLinks,
   tratamientosFacialesLinks,
   tratamientosPiernasLinks,
+  mjCreativoLinks,
 } from "@/data/services";
 
 const corporalesHalf1 = tratamientosCorporalesLinks.slice(0, 6);
@@ -277,6 +278,23 @@ export function Navbar() {
                                 {link.name}
                               </a>
                             ))}
+
+                            {/* MJ Creativo */}
+                            <div className="mt-4">
+                              <span className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest mb-1">
+                                MJ Creativo
+                              </span>
+                              {mjCreativoLinks.map((link) => (
+                                <a
+                                  key={link.name}
+                                  href={link.href}
+                                  className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
+                                  onClick={() => setOpenDropdown(null)}
+                                >
+                                  {link.name}
+                                </a>
+                              ))}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -472,6 +490,7 @@ export function Navbar() {
                               {link.name}
                             </a>
                           ))}
+
                         </div>
                         {/* Faciales */}
                         <div className="mb-2">
@@ -491,6 +510,7 @@ export function Navbar() {
                               {link.name}
                             </a>
                           ))}
+
                         </div>
                         {/* Piernas */}
                         <div className="mb-2">
@@ -510,6 +530,23 @@ export function Navbar() {
                               {link.name}
                             </a>
                           ))}
+
+                          {/* MJ Creativo (Mobile) */}
+                          <div className="mt-3 pl-2">
+                            <span className="block py-1 text-[10px] font-bold text-primary uppercase tracking-widest mb-1">
+                              MJ Creativo
+                            </span>
+                            {mjCreativoLinks.map((link) => (
+                              <a
+                                key={link.name}
+                                href={link.href}
+                                className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                                onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
+                              >
+                                {link.name}
+                              </a>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </motion.div>
@@ -560,7 +597,9 @@ export function Navbar() {
                             {link.name}
                           </a>
                         ))}
-                      </div>
+
+
+                        </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
