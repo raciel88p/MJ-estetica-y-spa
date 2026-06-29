@@ -82,7 +82,7 @@ export function ArteterapiaContent({ waLink }: { waLink: string }) {
                 Vivimos en una época donde el estrés, las preocupaciones y la sobrecarga mental forman parte de la rutina diaria. Muchas personas en Turrialba buscan actividades para reducir el estrés y salir de la rutina.
               </p>
               <p>
-                En MJ Estética y Spa Turrialba hemos creado una experiencia única que combina <span className="font-bold text-stone-900">arteterapia, pintura de ositos de resina y café</span>, diseñada para ayudarte a liberar tensiones, estimular tu creatividad y mejorar tu bienestar emocional en un ambiente acogedor y seguro.
+                En Mj estética and Wellness Center hemos creado una experiencia única que combina <span className="font-bold text-stone-900">arteterapia, pintura de ositos de resina y café</span>, diseñada para ayudarte a liberar tensiones, estimular tu creatividad y mejorar tu bienestar emocional en un ambiente acogedor y seguro.
               </p>
             </div>
           </motion.div>
@@ -241,10 +241,10 @@ export function ArteterapiaContent({ waLink }: { waLink: string }) {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-8 leading-tight">
-              ¿Por Qué Elegir MJ Estética & Wellness Center?
+              ¿Por Qué Elegir Mj estética and Wellness Center?
             </h2>
             <p className="text-stone-600 text-lg max-w-2xl mx-auto leading-relaxed italic">
-              En MJ Estética y Spa entendemos que el bienestar va mucho más allá de la estética. Creemos que sentirse bien por dentro también se refleja por fuera.
+              En Mj estética and Wellness Center entendemos que el bienestar va mucho más allá de la estética. Creemos que sentirse bien por dentro también se refleja por fuera.
             </p>
           </motion.div>
 
@@ -317,7 +317,7 @@ export function ArteterapiaContent({ waLink }: { waLink: string }) {
               { q: "¿Necesito saber pintar?", a: "No. No buscamos artistas, buscamos ayudarte a sentirte mejor. La experiencia está diseñada para que cualquier persona pueda disfrutarla sin importar su nivel artístico." },
               { q: "¿Qué incluye la sesión?", a: "Incluye todos los materiales de pintura, una deliciosa taza de café (o bebida alternativa), guía durante la actividad y un ambiente diseñado para la relajación." },
               { q: "¿Quiénes pueden participar?", a: "Es ideal para personas con estrés laboral, parejas, grupos de amigos o cualquier persona que quiera dedicar tiempo a su bienestar emocional y salir de la rutina." },
-              { q: "¿Dónde están ubicados?", a: "En MJ Estética y Spa, en el centro de Turrialba, con parqueo disponible." }
+              { q: "¿Dónde están ubicados?", a: "En Mj estética and Wellness Center, en el centro de Turrialba, con parqueo disponible." }
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp}>
                 <FaqItem question={item.q} answer={item.a} />
@@ -381,7 +381,7 @@ export function ArteterapiaContent({ waLink }: { waLink: string }) {
 
             <div className="bg-stone-50 p-10 border border-stone-200 mb-12 flex flex-col md:flex-row items-center justify-center gap-12">
                <div className="text-left">
-                  <h3 className="text-xl font-serif font-bold text-stone-900 mb-2">📍 MJ Estética & Wellness Center</h3>
+                  <h3 className="text-xl font-serif font-bold text-stone-900 mb-2">📍 Mj estética and Wellness Center</h3>
                   <p className="text-stone-500 text-sm">Turrialba Centro, Cartago</p>
                </div>
                <div className="flex flex-col gap-4">
