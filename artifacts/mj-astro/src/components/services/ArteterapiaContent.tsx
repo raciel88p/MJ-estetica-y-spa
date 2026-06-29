@@ -67,7 +67,7 @@ export function ArteterapiaContent({ waLink }: { waLink: string }) {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-8 leading-tight">
-              Arteterapia en Turrialba: Una Experiencia Diferente para Tu Bienestar
+              Clases de Pintura Turrialba: Arteterapia y un cafésito para tu bienestar
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed max-w-3xl mx-auto mb-8">
               ¿Buscas una actividad diferente en Turrialba para relajarte, desconectarte del estrés y dedicarte tiempo de calidad?

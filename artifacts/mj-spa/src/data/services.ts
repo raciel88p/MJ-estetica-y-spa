@@ -2539,7 +2539,7 @@ export const servicePages: ServicePageData[] = [
   {
     slug: "arteterapia",
     name: "Arteterapia en Turrialba",
-    fullTitle: "Arteterapia en Turrialba: Pintura de Ositos, Café y Bienestar",
+    fullTitle: "Clases de Pintura Turrialba: Arteterapia y un cafésito para tu bienestar",
     tagline: "Libera tu creatividad, reduce el estrés y decora tu propio osito de resina",
     heroDescription:
       "¿Buscas una actividad diferente en Turrialba para relajarte, desconectarte del estrés y dedicarte tiempo de calidad?<br /><br />En MJ Estética y Spa Turrialba hemos creado una experiencia única que combina arteterapia, pintura de ositos de resina y café, diseñada para ayudarte a liberar tensiones, estimular tu creatividad y mejorar tu bienestar emocional en un ambiente acogedor y seguro.",
