@@ -371,19 +371,14 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
               {lang === 'es' ? "Contacto" : "Contact"}
             </a>
 
-            {/* Language Switcher */}
-            <div className="flex items-center border-l border-white/10 ml-4 pl-4 gap-2">
-              <a
-                href={alternateLink || (currentPath.startsWith('/en') ? currentPath.replace('/en', '') || '/' : '/en' + (currentPath === '/' ? '' : currentPath))}
-                className={`p-2 rounded-full hover:bg-primary/10 transition-colors flex items-center gap-1.5 ${textClass}`}
-                title={lang === 'es' ? "Switch to English" : "Cambiar a Español"}
-              >
-                <Globe className="w-4 h-4" />
-                <span className="text-[10px] font-bold uppercase tracking-tighter">
-                  {lang === 'es' ? "EN" : "ES"}
-                </span>
-              </a>
-            </div>
+            {/* Language Switcher Label */}
+            <a
+              href={alternateLink || (currentPath.startsWith('/en') ? currentPath.replace('/en', '') || '/' : '/en' + (currentPath === '/' ? '' : currentPath))}
+              className={`${linkBase} ${textClass} font-bold text-primary border-l border-white/10 pl-4 ml-4`}
+              title={lang === 'es' ? "Switch to English" : "Cambiar a Español"}
+            >
+              {lang === 'es' ? "English" : "Español"}
+            </a>
 
             <Button
               className={`rounded-none px-6 py-2.5 text-sm font-semibold tracking-wide transition-all ${
@@ -634,13 +629,22 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                 </AnimatePresence>
               </div>
 
-              <a
-                href="/#contacto"
-                className={`text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contacto
-              </a>
+              <div className="flex justify-between items-center py-3 border-b border-muted">
+                <a
+                  href={lang === 'es' ? "/#contacto" : "/en/#contact"}
+                  className={`text-foreground text-lg hover:text-primary transition-colors font-serif`}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {lang === 'es' ? "Contacto" : "Contact"}
+                </a>
+                <a
+                  href={alternateLink || (currentPath.startsWith('/en') ? currentPath.replace('/en', '') || '/' : '/en' + (currentPath === '/' ? '' : currentPath))}
+                  className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {lang === 'es' ? "English" : "Español"}
+                </a>
+              </div>
 
               <Button className="mt-4 w-full rounded-full bg-primary text-white hover:bg-primary/90" asChild>
                 <a id="cta-nav-reserva-mobile" href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
