@@ -11,6 +11,7 @@ import { servicePages } from "@/data/services";
 import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { StatsBar } from "@/components/StatsBar";
+import { useTranslations } from "@/i18n/ui";
 import { LaserServiceContent } from "@/components/services/LaserServiceContent";
 import { HydrolipoclasiaContent } from "@/components/services/HydrolipoclasiaContent";
 import { HydrolipoclasiaBottomContent } from "@/components/services/HydrolipoclasiaBottomContent";
@@ -274,8 +275,34 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
   );
 }
 
-function ServicePage({ service }: { service: ServicePageData }) {
-  const category = serviceCategoryMap[service.slug];
+function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?: 'es' | 'en' }) {
+  const t = useTranslations(lang);
+  const categoryRaw = serviceCategoryMap[service.slug];
+  const category = categoryRaw ? {
+    ...categoryRaw,
+    name: lang === 'es' ? categoryRaw.name : (
+      categoryRaw.name === "Tratamientos Corporales" ? "Body Treatments" :
+      categoryRaw.name === "Tratamientos Faciales" ? "Facial Treatments" :
+      categoryRaw.name === "Tratamientos de Piernas" ? "Leg Treatments" :
+      categoryRaw.name === "Médico Estético" ? "Medical Aesthetic" :
+      categoryRaw.name === "MJ Creativo" ? "MJ Creative" : categoryRaw.name
+    ),
+    href: lang === 'es' ? categoryRaw.href : (
+      categoryRaw.href === "/servicios/corporales" ? "/en/services/body-treatments" :
+      categoryRaw.href === "/servicios/faciales" ? "/en/services/facials" :
+      categoryRaw.href === "/servicios/piernas" ? "/en/services/leg-treatments" :
+      categoryRaw.href === "/medicos-esteticos" ? "/en/medical-aesthetic" :
+      categoryRaw.href === "/servicios/arteterapia" ? "/en/services/art-therapy" : categoryRaw.href
+    )
+  } : undefined;
+
+  const alternateSlug = lang === 'es'
+    ? servicePages.find(s => s.es.slug === service.slug)?.en.slug
+    : servicePages.find(s => s.en.slug === service.slug)?.es.slug;
+
+  const alternatePath = lang === 'es'
+    ? `/en/services/${alternateSlug}`
+    : `/servicios/${alternateSlug}`;
 
   // WebMCP Integration: Register service details tool
   useEffect(() => {
@@ -345,9 +372,11 @@ function ServicePage({ service }: { service: ServicePageData }) {
       <SEO
         title={service.fullTitle ?? service.name}
         description={`${service.tagline} — ${service.heroDescription.replace(/<[^>]*>?/gm, '').slice(0, 120)}. MJ Fisio Estética y Spa, Turrialba, Costa Rica.`}
-        canonical={`/servicios/${service.slug}`}
+        canonical={lang === 'es' ? `/servicios/${service.slug}` : `/en/services/${service.slug}`}
+        alternateUrl={alternatePath}
+        lang={lang}
       />
-      <Navbar />
+      <Navbar lang={lang} alternateLink={alternatePath} />
 
       {/* ── HERO ─────────────────────────────────────── */}
       <section className="relative min-h-[75vh] flex items-end pb-0 overflow-hidden">
@@ -387,13 +416,13 @@ function ServicePage({ service }: { service: ServicePageData }) {
                 className="inline-flex items-center gap-2.5 bg-primary text-white text-sm font-bold tracking-[0.15em] uppercase px-8 py-4 hover:bg-primary/90 transition-all group"
               >
                 <MessageCircle className="w-4 h-4" />
-                Reservar por WhatsApp
+                {t('service.hero.wa')}
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </a>
               {category && (
                 <a href={category.href}>
                   <span className="inline-flex items-center gap-2 text-white/60 text-sm font-medium border-b border-white/20 pb-0.5 hover:text-white hover:border-white transition-colors cursor-pointer">
-                    Ver todos los {category.name.toLowerCase()}
+                    {t('service.hero.viewall')} {category.name.toLowerCase()}
                     <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </a>
@@ -408,14 +437,14 @@ function ServicePage({ service }: { service: ServicePageData }) {
       <section className="bg-[#040f19] py-5 border-b border-white/5">
         <div className="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {[
-            { icon: <Star className="w-4 h-4 fill-primary text-primary" />, text: "5★ en Google" },
-            { icon: <ShieldCheck className="w-4 h-4 text-primary" />,       text: "100% no invasivo" },
-            { icon: <Award className="w-4 h-4 text-primary" />,             text: "Profesionales certificados" },
-            { icon: <MessageCircle className="w-4 h-4 text-primary" />,     text: "Valoración gratuita" },
-          ].map((t) => (
-            <div key={t.text} className="flex items-center justify-center gap-2">
-              {t.icon}
-              <span className="text-white/60 text-xs font-medium tracking-wide">{t.text}</span>
+            { icon: <Star className="w-4 h-4 fill-primary text-primary" />, text: lang === 'es' ? "5★ en Google" : "5★ on Google" },
+            { icon: <ShieldCheck className="w-4 h-4 text-primary" />,       text: lang === 'es' ? "100% no invasivo" : "100% non-invasive" },
+            { icon: <Award className="w-4 h-4 text-primary" />,             text: lang === 'es' ? "Profesionales certificados" : "Certified professionals" },
+            { icon: <MessageCircle className="w-4 h-4 text-primary" />,     text: lang === 'es' ? "Valoración gratuita" : "Free assessment" },
+          ].map((t_item) => (
+            <div key={t_item.text} className="flex items-center justify-center gap-2">
+              {t_item.icon}
+              <span className="text-white/60 text-xs font-medium tracking-wide">{t_item.text}</span>
             </div>
           ))}
         </div>
@@ -435,7 +464,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
           >
             <div className="bg-primary px-6 py-3 flex items-center gap-2">
               <UserCheck className="w-4 h-4 text-white shrink-0" />
-              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">{isNutritionEspecialist ? "Especialista a cargo" : "Profesional responsable"}</span>
+              <span className="text-white text-[10px] font-bold tracking-[0.35em] uppercase">{isNutritionEspecialist ? t('service.professional.specialist') : t('service.professional.responsible')}</span>
             </div>
             <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
@@ -458,57 +487,69 @@ function ServicePage({ service }: { service: ServicePageData }) {
                 <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
                   <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
                     <BadgeCheck className="w-3.5 h-3.5" />
-                    {isNutritionEspecialist ? "Código: 3667-25" : "Linc Fisio Terapia"}
+                    {isNutritionEspecialist ? `${t('service.professional.code')}: 3667-25` : t('service.professional.linc')}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <GraduationCap className="w-3.5 h-3.5" />
-                    {isNutritionEspecialist ? "Nutricionista Deportivo" : "Especialista en Estética"}
+                    {isNutritionEspecialist ? (lang === 'es' ? "Nutricionista Deportivo" : "Sports Nutritionist") : t('service.professional.aesthetic')}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <Award className="w-3.5 h-3.5 text-primary" />
-                    {isNutritionEspecialist ? "Atención Personalizada" : "Laboró Hospital la Católica"}
+                    {isNutritionEspecialist ? t('service.professional.personalized') : t('service.professional.hospital')}
                   </span>
                 </div>
                 <p className="text-stone-500 text-sm leading-relaxed mt-4 max-w-xl">
                   {service.slug === "peeling-quimico"
-                    ? "Con amplia experiencia en medicina estética, Maria Molina Madrigal se especializa en protocolos de renovación cutánea y tratamientos avanzados para manchas y acné, brindando resultados seguros y personalizados."
+                    ? (lang === 'es'
+                        ? "Con amplia experiencia en medicina estética, Maria Molina Madrigal se especializa en protocolos de renovación cutánea y tratamientos avanzados para manchas y acné, brindando resultados seguros y personalizados."
+                        : "With extensive experience in medical aesthetics, Maria Molina Madrigal specializes in skin renewal protocols and advanced treatments for spots and acne, providing safe and personalized results.")
                     : service.slug === "tratamiento-ojeras"
-                    ? "¿Tus ojeras te hacen lucir cansada aunque descanses bien? Descubre cómo nuestro tratamiento de carboxiterapia para ojeras en Turrialba puede ayudarte a mejorar la apariencia de bolsas, pigmentación oscura y signos visibles de fatiga."
+                    ? (lang === 'es'
+                        ? "¿Tus ojeras te hacen lucir cansada aunque descanses bien? Descubre cómo nuestro tratamiento de carboxiterapia para ojeras en Turrialba puede ayudarte a mejorar la apariencia de bolsas, pigmentación oscura y signos visibles de fatiga."
+                        : "Do your dark circles make you look tired even when you rest well? Discover how our carboxytherapy treatment for dark circles in Turrialba can help you improve the appearance of bags, dark pigmentation, and visible signs of fatigue.")
                     : service.slug === "aromaterapia"
-                    ? "¿Sientes que el estrés, las responsabilidades y el ritmo diario no te dejan tiempo para ti? En MJ Estética & Wellness Center, hemos creado una experiencia de aromaterapia en Turrialba diseñada para ayudarte a disfrutar de momentos de relajación profunda, bienestar integral y autocuidado en un ambiente cómodo, privado y totalmente personalizado."
+                    ? (lang === 'es'
+                        ? "¿Sientes que el estrés, las responsabilidades y el ritmo diario no te dejan tiempo para ti? En MJ Estética & Wellness Center, hemos creado una experiencia de aromaterapia en Turrialba diseñada para ayudarte a disfrutar de momentos de relajación profunda, bienestar integral y autocuidado en un ambiente cómodo, privado y totalmente personalizado."
+                        : "Do you feel that stress, responsibilities, and the daily rhythm leave you no time for yourself? At MJ Estética & Wellness Center, we have created an aromatherapy experience in Turrialba designed to help you enjoy moments of deep relaxation, integral well-being, and self-care in a comfortable, private, and totally personalized environment.")
                     : service.slug === "rejuvenecimiento-facial-laser"
-                    ? "¿Buscas recuperar la firmeza y luminosidad de tu piel sin cirugías? Nuestro tratamiento de rejuvenecimiento facial con láser en Turrialba está diseñado para estimular el colágeno natural y devolverle a tu rostro una apariencia fresca, saludable y juvenil."
+                    ? (lang === 'es'
+                        ? "¿Buscas recuperar la firmeza y luminosidad de tu piel sin cirugías? Nuestro tratamiento de rejuvenecimiento facial con láser en Turrialba está diseñado para estimular el colágeno natural y devolverle a tu rostro una apariencia fresca, saludable y juvenil."
+                        : "Looking to recover the firmness and luminosity of your skin without surgeries? Our laser facial rejuvenation treatment in Turrialba is designed to stimulate natural collagen and give your face a fresh, healthy, and youthful appearance.")
                     : (service.slug === "nutricion" || service.slug === "inbody")
-                    ? "Transforma tus hábitos alimenticios con acompañamiento profesional y un plan nutricional diseñado específicamente para ti."
-                    : "La estética es una pasión que ha formado parte de mi vida desde siempre. Me inspira la belleza en todas sus formas y me dedico a realzar la belleza natural de cada persona, ayudándoles a sentirse seguras y radiantes."
+                    ? (lang === 'es'
+                        ? "Transforma tus hábitos alimenticios con acompañamiento profesional y un plan nutricional diseñado específicamente para ti."
+                        : "Transform your eating habits with professional guidance and a nutritional plan designed specifically for you.")
+                    : (lang === 'es'
+                        ? "La estética es una pasión que ha formado parte de mi vida desde siempre. Me inspira la belleza en todas sus formas y me dedico a realzar la belleza natural de cada persona, ayudándoles a sentirse seguras y radiantes."
+                        : "Aesthetics is a passion that has always been part of my life. I am inspired by beauty in all its forms and I am dedicated to enhancing the natural beauty of each person, helping them feel confident and radiant.")
                   }
                 </p>
                 {service.slug === "aromaterapia" && (
                   <div className="flex flex-col gap-3 mt-6">
                     <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Atención personalizada
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> {lang === 'es' ? "Atención personalizada" : "Personalized attention"}
                     </div>
                     <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Protocolos wellness premium
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> {lang === 'es' ? "Protocolos wellness premium" : "Premium wellness protocols"}
                     </div>
                     <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Ambiente relajante y sensorial
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> {lang === 'es' ? "Ambiente relajante y sensorial" : "Relaxing and sensory environment"}
                     </div>
                     <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Espacios privados y confortables
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> {lang === 'es' ? "Espacios privados y confortables" : "Private and comfortable spaces"}
                     </div>
                     <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Ubicación accesible en Turrialba
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> {lang === 'es' ? "Ubicación accesible en Turrialba" : "Accessible location in Turrialba"}
                     </div>
                     <div className="flex flex-wrap gap-4 mt-4">
                       <a href={WA} target="_blank" rel="noopener noreferrer" className="bg-primary text-white text-[10px] font-bold px-5 py-3 tracking-widest uppercase hover:bg-stone-900 transition-colors">
-                        📲 Escríbenos por WhatsApp
+                        {t('service.professional.wa_write')}
                       </a>
                       <a href={WA} target="_blank" rel="noopener noreferrer" className="border border-stone-900 text-stone-900 text-[10px] font-bold px-5 py-3 tracking-widest uppercase hover:bg-stone-900 hover:text-white transition-colors">
-                        📅 Consulta disponibilidad
+                        {t('service.professional.check_avail')}
                       </a>
                       <a href={WA} target="_blank" rel="noopener noreferrer" className="border border-stone-400 text-stone-500 text-[10px] font-bold px-5 py-3 tracking-widest uppercase hover:bg-stone-900 hover:text-white transition-colors">
-                        📍 Visítanos en Turrialba
+                        {t('service.professional.visit')}
                       </a>
                     </div>
                   </div>
@@ -516,20 +557,20 @@ function ServicePage({ service }: { service: ServicePageData }) {
                 {service.slug === "tratamiento-ojeras" && (
                   <div className="flex flex-col gap-3 mt-6">
                     <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Valoración Personalizada
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> {lang === 'es' ? "Valoración Personalizada" : "Personalized Assessment"}
                     </div>
                     <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Tratamiento No Quirúrgico
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> {lang === 'es' ? "Tratamiento No Quirúrgico" : "Non-Surgical Treatment"}
                     </div>
                     <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Atención Profesional en Turrialba
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> {lang === 'es' ? "Atención Profesional en Turrialba" : "Professional Attention in Turrialba"}
                     </div>
                     <div className="flex flex-wrap gap-4 mt-4">
                       <a href={WA} target="_blank" rel="noopener noreferrer" className="bg-primary text-white text-[10px] font-bold px-5 py-3 tracking-widest uppercase hover:bg-stone-900 transition-colors">
-                        📲 Agendar Valoración por WhatsApp
+                        {t('service.professional.schedule_wa')}
                       </a>
                       <a href={WA} target="_blank" rel="noopener noreferrer" className="border border-stone-900 text-stone-900 text-[10px] font-bold px-5 py-3 tracking-widest uppercase hover:bg-stone-900 hover:text-white transition-colors">
-                        🎁 Descargar Guía Gratuita para Ojeras
+                        {t('service.professional.guide_free')} {lang === 'es' ? "para Ojeras" : "for Dark Circles"}
                       </a>
                     </div>
                   </div>
@@ -546,35 +587,41 @@ function ServicePage({ service }: { service: ServicePageData }) {
             >
               <div className="max-w-xl mx-auto">
                 <p className="text-stone-600 text-base leading-relaxed mb-8">
-                  En MJ Estética & Wellness Center ayudamos a personas de Turrialba, Cartago y zonas cercanas a mejorar su alimentación, desarrollar hábitos sostenibles y alcanzar objetivos de bienestar mediante consultas nutricionales personalizadas.
+                  {lang === 'es'
+                    ? "En MJ Estética & Wellness Center ayudamos a personas de Turrialba, Cartago y zonas cercanas a mejorar su alimentación, desarrollar hábitos sostenibles y alcanzar objetivos de bienestar mediante consultas nutricionales personalizadas."
+                    : "At MJ Estética & Wellness Center we help people from Turrialba, Cartago, and nearby areas improve their nutrition, develop sustainable habits, and achieve well-being goals through personalized nutritional consultations."}
                 </p>
 
                 <div className="flex flex-col gap-3 mb-10">
                   <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                    <CheckCircle2 className="w-4 h-4 text-primary" /> Valoración Nutricional Profesional
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> {lang === 'es' ? "Valoración Nutricional Profesional" : "Professional Nutritional Assessment"}
                   </div>
                   <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                    <CheckCircle2 className="w-4 h-4 text-primary" /> Plan Nutricional Personalizado
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> {lang === 'es' ? "Plan Nutricional Personalizado" : "Personalized Nutritional Plan"}
                   </div>
                   <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                    <CheckCircle2 className="w-4 h-4 text-primary" /> Seguimiento y Acompañamiento
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> {lang === 'es' ? "Seguimiento y Acompañamiento" : "Follow-up and Guidance"}
                   </div>
                   <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                    <CheckCircle2 className="w-4 h-4 text-primary" /> Nutrición para Bienestar y Estética
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> {lang === 'es' ? "Nutrición para Bienestar y Estética" : "Nutrition for Well-being and Aesthetics"}
                   </div>
                   <div className="flex items-center gap-2 text-stone-700 text-sm font-bold uppercase tracking-wider">
-                    <CheckCircle2 className="w-4 h-4 text-primary" /> Atención en Turrialba
+                    <CheckCircle2 className="w-4 h-4 text-primary" /> {lang === 'es' ? "Atención en Turrialba" : "Attention in Turrialba"}
                   </div>
                 </div>
 
                 <div className="bg-primary/5 border border-primary/20 p-8 sm:p-10 rounded-sm">
-                   <p className="text-primary text-[10px] font-bold tracking-[0.3em] uppercase mb-4">🎁 Descarga GRATIS la Guía:</p>
-                   <h3 className="text-2xl font-serif font-bold text-stone-900 mb-4 leading-tight">7 Estrategias que Utilizan Nuestros Pacientes para Mejorar su Alimentación y Reducir Grasa Corporal de Forma Sostenible</h3>
-                   <p className="text-stone-600 text-sm mb-6 leading-relaxed">Aprende hábitos simples que pueden ayudarte a sentirte mejor, organizar tu alimentación y potenciar tus resultados.</p>
+                   <p className="text-primary text-[10px] font-bold tracking-[0.3em] uppercase mb-4">🎁 {lang === 'es' ? "Descarga GRATIS la Guía:" : "Download the Guide for FREE:"}</p>
+                   <h3 className="text-2xl font-serif font-bold text-stone-900 mb-4 leading-tight">{t('service.nutrition.guide_title')}</h3>
+                   <p className="text-stone-600 text-sm mb-6 leading-relaxed">
+                     {lang === 'es'
+                        ? "Aprende hábitos simples que pueden ayudarte a sentirte mejor, organizar tu alimentación y potenciar tus resultados."
+                        : "Learn simple habits that can help you feel better, organize your eating, and boost your results."}
+                   </p>
                    <a href={WA} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-white text-[10px] font-bold px-8 py-5 tracking-widest uppercase hover:bg-stone-900 transition-colors shadow-lg">
-                     <Download className="w-4 h-4" /> [DESCARGAR GUÍA GRATIS]
+                     <Download className="w-4 h-4" /> {t('service.nutrition.guide_cta')}
                    </a>
-                   <p className="text-stone-400 text-[10px] mt-4 uppercase tracking-widest">👉 Solicita tu guía gratuita aquí</p>
+                   <p className="text-stone-400 text-[10px] mt-4 uppercase tracking-widest">{t('service.nutrition.guide_request')}</p>
                 </div>
               </div>
             </motion.div>
@@ -709,8 +756,8 @@ function ServicePage({ service }: { service: ServicePageData }) {
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
                 className="text-center mb-10"
               >
-                <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">Especialista a cargo</p>
-                <h2 className="text-3xl font-serif font-bold text-stone-900">Tu procedimiento en manos expertas</h2>
+                <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">{t('service.professional.specialist')}</p>
+                <h2 className="text-3xl font-serif font-bold text-stone-900">{lang === 'es' ? "Tu procedimiento en manos expertas" : "Your procedure in expert hands"}</h2>
               </motion.div>
               <motion.div
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
@@ -718,7 +765,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
               >
                 <div className="bg-[#071e2e] px-8 py-5 flex items-center gap-3">
                   <UserCheck className="w-5 h-5 text-primary shrink-0" />
-                  <span className="text-white/70 text-xs font-bold tracking-[0.35em] uppercase">Médico Certificado</span>
+                  <span className="text-white/70 text-xs font-bold tracking-[0.35em] uppercase">{lang === 'es' ? "Médico Certificado" : "Certified Doctor"}</span>
                 </div>
                 <div className="px-8 py-10 flex flex-col md:flex-row items-center md:items-start gap-8">
                   <div className="shrink-0 w-24 h-24 rounded-full overflow-hidden border-2 border-primary/30 shadow-md">
@@ -745,19 +792,26 @@ function ServicePage({ service }: { service: ServicePageData }) {
                     <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-4">
                       <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
                         <BadgeCheck className="w-3.5 h-3.5" />
-                        Código Médico: {doctor.code}
+                        {lang === 'es' ? "Código Médico:" : "Medical Code:"} {doctor.code}
                       </span>
                       <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                         <GraduationCap className="w-3.5 h-3.5" />
-                        {doctor.specialty}
+                        {lang === 'es' ? doctor.specialty : (
+                          doctor.specialty === "Armonizador Facial" ? "Facial Harmonizer" :
+                          doctor.specialty === "Master en Cirugía Capilar" ? "Master in Hair Surgery" : doctor.specialty
+                        )}
                       </span>
                       <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                         <ShieldCheck className="w-3.5 h-3.5 text-primary" />
-                        Registro CCSS verificado
+                        {lang === 'es' ? "Registro CCSS verificado" : "CCSS Registration verified"}
                       </span>
                     </div>
                     <p className="text-stone-500 text-sm leading-relaxed mt-5 max-w-xl">
-                      {doctor.bio}
+                      {lang === 'es' ? doctor.bio : (
+                        doctor.name === "Dr. Ricard Araya"
+                          ? "Medical specialist in medical aesthetics and minimally invasive facial treatments. Expert in botulinum toxin, hyaluronic acid, and tensor threads with a focus on natural results."
+                          : "Specialist with postgraduate training in hair surgery. Performs each procedure with state-of-the-art techniques guaranteeing natural, safe, and permanent results."
+                      )}
                     </p>
                   </div>
                 </div>
@@ -840,11 +894,11 @@ function ServicePage({ service }: { service: ServicePageData }) {
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
             className="text-center mb-10"
           >
-            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">Beneficios</p>
+            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">{lang === 'es' ? "Beneficios" : "Benefits"}</p>
             <h2 className="text-3xl font-serif font-bold text-stone-900">
-              {service.slug === "adn-salmon" ? "✨ BENEFICIOS DEL TRATAMIENTO" :
-               service.slug === "depilacion-laser" ? "Beneficios reales que notarás" :
-               "¿Por qué elegir este tratamiento?"}
+              {service.slug === "adn-salmon" ? (lang === 'es' ? "✨ BENEFICIOS DEL TRATAMIENTO" : "✨ TREATMENT BENEFITS") :
+               service.slug === "depilacion-laser" ? (lang === 'es' ? "Beneficios reales que notarás" : "Real benefits you will notice") :
+               (lang === 'es' ? "¿Por qué elegir este tratamiento?" : "Why choose this treatment?")}
             </h2>
           </motion.div>
 
@@ -872,7 +926,9 @@ function ServicePage({ service }: { service: ServicePageData }) {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
               className="mt-10 text-center text-stone-600 font-medium italic max-w-2xl mx-auto"
             >
-              Este tratamiento es ideal si deseas verte más fresca, descansada y saludable sin perder naturalidad.
+              {lang === 'es'
+                ? "Este tratamiento es ideal si deseas verte más fresca, descansada y saludable sin perder naturalidad."
+                : "This treatment is ideal if you want to look fresher, more rested, and healthy without losing naturalness."}
             </motion.p>
           )}
         </div>
@@ -890,18 +946,22 @@ function ServicePage({ service }: { service: ServicePageData }) {
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-8 h-0.5 bg-primary" />
                 <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">
-                  {service.slug === "depilacion-laser" ? "Inversión y Paquetes" : "Nuestros Tratamientos"}
+                  {service.slug === "depilacion-laser" ? (lang === 'es' ? "Inversión y Paquetes" : "Investment and Packages") : (lang === 'es' ? "Nuestros Tratamientos" : "Our Treatments")}
                 </p>
               </div>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight">
                 {service.slug === "depilacion-laser" ? (
-                  <>Elige tu plan de <span className="font-light italic text-primary">transformación</span></>
+                  lang === 'es'
+                    ? <>Elige tu plan de <span className="font-light italic text-primary">transformación</span></>
+                    : <>Choose your <span className="font-light italic text-primary">transformation</span> plan</>
                 ) : (
-                  <>¿Qué incluye<br /><span className="font-light italic text-primary">este servicio?</span></>
+                  lang === 'es'
+                    ? <>¿Qué incluye<br /><span className="font-light italic text-primary">este servicio?</span></>
+                    : <>What does<br /><span className="font-light italic text-primary">this service include?</span></>
                 )}
               </h2>
               {service.slug === "depilacion-laser" && (
-                <p className="text-primary font-bold mt-4">👉 Consulta disponibilidad y valoración personalizada hoy mismo</p>
+                <p className="text-primary font-bold mt-4">👉 {lang === 'es' ? "Consulta disponibilidad y valoración personalizada hoy mismo" : "Check availability and personalized assessment today"}</p>
               )}
             </motion.div>
 
@@ -917,7 +977,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                     className="relative bg-stone-50 border border-stone-200 p-8 flex flex-col group hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                   >
                     <div className="mb-6">
-                       <span className="text-primary text-[10px] font-bold tracking-widest uppercase mb-2 block">Opción {i+1}</span>
+                       <span className="text-primary text-[10px] font-bold tracking-widest uppercase mb-2 block">{lang === 'es' ? "Opción" : "Option"} {i+1}</span>
                        <h3 className="text-xl font-serif font-bold text-stone-900 leading-tight min-h-[3rem] flex items-center">{item.title.replace("✨ ", "")}</h3>
                     </div>
                     <div className="flex-1">
@@ -925,7 +985,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                     </div>
                     <div className="mt-auto pt-6 border-t border-stone-200/60">
                        <div className="mb-6">
-                          <p className="text-stone-400 text-[10px] uppercase tracking-widest mb-1">Inversión</p>
+                          <p className="text-stone-400 text-[10px] uppercase tracking-widest mb-1">{t('service.items.investment')}</p>
                           <p className="text-2xl font-serif font-bold text-primary">{item.price}</p>
                        </div>
                        <a
@@ -935,7 +995,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                         className="w-full inline-flex justify-center items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-white bg-primary py-3.5 hover:bg-stone-900 transition-colors"
                       >
                         <MessageCircle className="w-3.5 h-3.5" />
-                        LO QUIERO
+                        {t('service.items.want')}
                       </a>
                     </div>
                   </motion.div>
@@ -976,7 +1036,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                       className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-white bg-primary px-5 py-2.5 hover:bg-primary/90 transition-colors group/btn"
                     >
                       <MessageCircle className="w-3.5 h-3.5" />
-                      Reservar sesión
+                      {t('service.items.book')}
                       <ArrowRight className="w-3 h-3 group-hover/btn:translate-x-0.5 transition-transform" />
                     </a>
                   </motion.div>
@@ -1005,12 +1065,12 @@ function ServicePage({ service }: { service: ServicePageData }) {
                 initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
                 className="text-center mb-14"
               >
-                <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">Transformación Real</p>
+                <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">{t('service.beforeafter.title')}</p>
                 <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4">
-                  Antes y <span className="text-primary font-light italic">después</span>
+                  {lang === 'es' ? "Antes y " : "Before and "} <span className="text-primary font-light italic">{lang === 'es' ? "después" : "after"}</span>
                 </h2>
                 <p className="text-white/45 text-sm max-w-sm mx-auto leading-relaxed mb-8">
-                  Así cambia la vida de nuestras clientas con {service.name.toLowerCase()}.
+                  {t('service.beforeafter.desc')} {service.name.toLowerCase()}.
                 </p>
               </motion.div>
 
@@ -1028,9 +1088,9 @@ function ServicePage({ service }: { service: ServicePageData }) {
                      {/* ANTES */}
                      <motion.div variants={fadeUp} className="flex flex-col">
                        <div>
-                         <p className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-2">Sin tratamiento</p>
+                         <p className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-2">{lang === 'es' ? "Sin tratamiento" : "Without treatment"}</p>
                          <h3 className="text-xl font-serif font-bold text-white/80 leading-tight mb-6">
-                           La situación que queremos cambiar
+                           {t('service.beforeafter.change')}
                          </h3>
                        </div>
                        <ul className="space-y-4">
@@ -1048,9 +1108,9 @@ function ServicePage({ service }: { service: ServicePageData }) {
                      {/* DESPUÉS */}
                      <motion.div variants={fadeUp} className="flex flex-col">
                        <div>
-                         <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-2">Con nuestro tratamiento</p>
+                         <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-2">{lang === 'es' ? "Con nuestro tratamiento" : "With our treatment"}</p>
                          <h3 className="text-xl font-serif font-bold text-white leading-tight mb-6">
-                           La transformación que te mereces
+                           {t('service.beforeafter.deserved')}
                          </h3>
                        </div>
                        <ul className="space-y-4">
@@ -1075,21 +1135,21 @@ function ServicePage({ service }: { service: ServicePageData }) {
                     <div className="relative overflow-hidden bg-[#040f19] flex items-center justify-center" style={{ height: "440px" }}>
                       <img
                         src={beforeBg}
-                        alt="Antes del tratamiento"
+                        alt={lang === 'es' ? "Antes del tratamiento" : "Before treatment"}
                         className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
                         style={{ filter: "grayscale(1) brightness(0.88)" }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
                       <span className="absolute top-4 left-4 bg-black/60 backdrop-blur-sm text-white/80 text-[10px] font-bold tracking-[0.35em] uppercase px-3 py-1.5">
-                        Antes
+                        {lang === 'es' ? "Antes" : "Before"}
                       </span>
                     </div>
                     {/* Text below image */}
                     <div className="px-8 py-8 flex-1 flex flex-col justify-between">
                       <div>
-                        <p className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-2">Sin tratamiento</p>
+                        <p className="text-white/40 text-xs font-bold tracking-[0.3em] uppercase mb-2">{lang === 'es' ? "Sin tratamiento" : "Without treatment"}</p>
                         <h3 className="text-xl font-serif font-bold text-white/80 leading-tight mb-6">
-                          La situación que queremos cambiar
+                          {t('service.beforeafter.change')}
                         </h3>
                       </div>
                       <ul className="space-y-3">
@@ -1111,20 +1171,20 @@ function ServicePage({ service }: { service: ServicePageData }) {
                     <div className="relative overflow-hidden bg-[#040f19] flex items-center justify-center" style={{ height: "440px" }}>
                       <img
                         src={afterBg}
-                        alt="Después del tratamiento"
+                        alt={lang === 'es' ? "Después del tratamiento" : "After treatment"}
                         className="max-w-full max-h-full w-auto h-full object-contain transition-transform duration-700 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#040f19]/80 to-transparent" />
                       <span className="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold tracking-[0.35em] uppercase px-3 py-1.5">
-                        Después
+                        {lang === 'es' ? "Después" : "After"}
                       </span>
                     </div>
                     {/* Text below image */}
                     <div className="px-8 py-8 flex-1 flex flex-col justify-between">
                       <div>
-                        <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-2">Con nuestro tratamiento</p>
+                        <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-2">{lang === 'es' ? "Con nuestro tratamiento" : "With our treatment"}</p>
                         <h3 className="text-xl font-serif font-bold text-white leading-tight mb-6">
-                          La transformación que te mereces
+                          {t('service.beforeafter.deserved')}
                         </h3>
                       </div>
                       <ul className="space-y-3">
@@ -1146,7 +1206,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                   initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
                   className="mt-10 text-center"
                 >
-                  <p className="text-white/40 text-xs mb-5 uppercase tracking-widest">¿Lista para tu transformación?</p>
+                  <p className="text-white/40 text-xs mb-5 uppercase tracking-widest">{lang === 'es' ? "¿Lista para tu transformación?" : "Ready for your transformation?"}</p>
                   <a
                     href={WA}
                     target="_blank"
@@ -1154,7 +1214,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                     className="inline-flex items-center gap-2.5 border border-primary text-primary text-xs font-bold tracking-[0.2em] uppercase px-8 py-3.5 hover:bg-primary hover:text-white transition-all"
                   >
                     <MessageCircle className="w-3.5 h-3.5" />
-                    Reservar mi sesión
+                    {t('service.beforeafter.book')}
                     <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </motion.div>
@@ -1178,15 +1238,19 @@ function ServicePage({ service }: { service: ServicePageData }) {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
             <p className="text-white/70 text-xs font-bold tracking-[0.4em] uppercase mb-3">
-              {service.slug === "adn-salmon" ? "✨ MJ Estética Wellness Center" : "Valoración Sin Compromiso"}
+              {service.slug === "adn-salmon" ? "✨ MJ Estética Wellness Center" : t('service.urgency.title')}
             </p>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
-              {service.slug === "adn-salmon" ? "Rejuvenecimiento facial avanzado con resultados naturales." : "Reserva hoy — plazas limitadas"}
+              {service.slug === "adn-salmon"
+                ? (lang === 'es' ? "Rejuvenecimiento facial avanzado con resultados naturales." : "Advanced facial rejuvenation with natural results.")
+                : t('service.urgency.reserve')}
             </h2>
             {service.slug !== "adn-salmon" && (
               <>
                 <p className="text-white/75 text-sm mb-8 max-w-md mx-auto leading-relaxed">
-                  Escríbenos por WhatsApp y te asesoramos sin costo. Diseñamos el protocolo ideal para tu caso.
+                  {lang === 'es'
+                    ? "Escríbenos por WhatsApp y te asesoramos sin costo. Diseñamos el protocolo ideal para tu caso."
+                    : "Write us on WhatsApp and we will advise you free of charge. We design the ideal protocol for your case."}
                 </p>
                 <a
                   id={`cta-urgency-${service.slug}`}
@@ -1196,7 +1260,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                   className="inline-flex items-center gap-3 bg-white text-primary text-sm font-bold tracking-[0.15em] uppercase px-10 py-4 hover:bg-stone-100 transition-colors group"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  Escribir por WhatsApp
+                  {t('service.urgency.wa')}
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </a>
               </>
@@ -1217,11 +1281,11 @@ function ServicePage({ service }: { service: ServicePageData }) {
             >
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-8 h-0.5 bg-primary" />
-                <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">Preguntas Frecuentes</p>
+                <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">{t('service.faq.title')}</p>
               </div>
               <h2 className="text-4xl font-serif font-bold text-stone-900">
-                Todo lo que necesitas<br />
-                <span className="font-light italic text-primary">saber antes de tu cita</span>
+                {lang === 'es' ? "Todo lo que necesitas" : "Everything you need"}<br />
+                <span className="font-light italic text-primary">{lang === 'es' ? "saber antes de tu cita" : "to know before your appointment"}</span>
               </h2>
             </motion.div>
             <motion.div
@@ -1241,8 +1305,8 @@ function ServicePage({ service }: { service: ServicePageData }) {
               className="mt-12 p-8 bg-[#040f19] flex flex-col md:flex-row items-center justify-between gap-6"
             >
               <div>
-                <p className="text-white font-serif text-xl font-bold mb-1">¿Tienes más dudas?</p>
-                <p className="text-white/75 text-sm">Escríbenos y te respondemos al instante.</p>
+                <p className="text-white font-serif text-xl font-bold mb-1">{t('service.faq.more_doubts')}</p>
+                <p className="text-white/75 text-sm">{lang === 'es' ? "Escríbenos y te respondemos al instante." : "Write us and we will answer you instantly."}</p>
               </div>
               <a
                 href={WA}
@@ -1251,7 +1315,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
                 className="shrink-0 inline-flex items-center gap-2 border border-primary text-primary text-xs font-bold tracking-[0.2em] uppercase px-6 py-3 hover:bg-primary hover:text-white transition-all"
               >
                 <MessageCircle className="w-3.5 h-3.5" />
-                Preguntar ahora
+                {t('service.faq.ask_now')}
               </a>
             </motion.div>
           </div>
@@ -1266,35 +1330,38 @@ function ServicePage({ service }: { service: ServicePageData }) {
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
               className="mb-10"
             >
-              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">También te puede interesar</p>
-              <h2 className="text-3xl font-serif font-bold text-stone-900">Servicios relacionados</h2>
+              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">{t('service.related.title')}</p>
+              <h2 className="text-3xl font-serif font-bold text-stone-900">{t('service.related.subtitle')}</h2>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-stone-200">
-              {related.map((rel, i) => (
-                <motion.div
-                  key={rel.slug}
-                  initial="hidden" whileInView="visible" viewport={{ once: true }}
-                  variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.5, delay: i * 0.08 } } }}
-                  className="bg-white p-8 group hover:bg-stone-50 transition-colors"
-                >
-                  <p className="text-xs font-serif font-bold text-stone-400 mb-3">{String(i + 1).padStart(2, "0")}</p>
-                  <h3 className="text-xl font-serif font-bold text-stone-900 mb-2 group-hover:text-primary transition-colors">
-                    {rel.name}
-                  </h3>
-                  <p className="text-stone-600 text-sm leading-relaxed mb-5">{rel.tagline}</p>
-                  <a href={`/servicios/${rel.slug}`}>
-                    <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-primary border-b border-primary/30 pb-0.5 hover:border-primary transition-colors cursor-pointer">
-                      Ver tratamiento <ArrowRight className="w-3 h-3" />
-                    </span>
-                  </a>
-                </motion.div>
-              ))}
+              {related.map((rel_raw, i) => {
+                const rel = rel_raw[lang];
+                return (
+                  <motion.div
+                    key={rel.slug}
+                    initial="hidden" whileInView="visible" viewport={{ once: true }}
+                    variants={{ ...fadeUp, visible: { ...fadeUp.visible, transition: { duration: 0.5, delay: i * 0.08 } } }}
+                    className="bg-white p-8 group hover:bg-stone-50 transition-colors"
+                  >
+                    <p className="text-xs font-serif font-bold text-stone-400 mb-3">{String(i + 1).padStart(2, "0")}</p>
+                    <h3 className="text-xl font-serif font-bold text-stone-900 mb-2 group-hover:text-primary transition-colors">
+                      {rel.name}
+                    </h3>
+                    <p className="text-stone-600 text-sm leading-relaxed mb-5">{rel.tagline}</p>
+                    <a href={lang === 'es' ? `/servicios/${rel.slug}` : `/en/services/${rel.slug}`}>
+                      <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase text-primary border-b border-primary/30 pb-0.5 hover:border-primary transition-colors cursor-pointer">
+                        {t('service.related.view')} <ArrowRight className="w-3 h-3" />
+                      </span>
+                    </a>
+                  </motion.div>
+                );
+              })}
             </div>
             {category && (
               <div className="mt-8 text-center">
                 <a href={category.href}>
                   <span className="inline-flex items-center gap-2 text-sm font-bold text-stone-600 border-b border-stone-300 pb-0.5 hover:text-primary hover:border-primary transition-colors cursor-pointer tracking-wide uppercase text-xs">
-                    Ver todos los {category.name.toLowerCase()} <ArrowRight className="w-3.5 h-3.5" />
+                    {t('service.hero.viewall')} {category.name.toLowerCase()} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </a>
               </div>
@@ -1303,7 +1370,7 @@ function ServicePage({ service }: { service: ServicePageData }) {
         </section>
       )}
 
-      <Footer />
+      <Footer lang={lang} />
       <FloatingWhatsApp />
     </div>
   );

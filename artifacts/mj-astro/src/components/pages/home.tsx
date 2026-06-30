@@ -20,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslations } from "@/i18n/ui";
 
 const WA_LINK = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
@@ -39,7 +40,8 @@ const formSchema = z.object({
   message: z.string().min(10, "El mensaje es muy corto"),
 });
 
-function Home() {
+function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
+  const t = useTranslations(lang);
   const [mounted, setMounted] = useState(false);
   const { toast } = useToast();
 
@@ -63,11 +65,12 @@ function Home() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden selection:bg-primary/20">
       <SEO
-        title="MJ Fisio Estética & Spa | Centro de Bienestar en Turrialba"
-        description="Descubre tu mejor versión en MJ Fisio Estética y Spa. Tratamientos médicos, faciales y corporales de vanguardia en Turrialba, Costa Rica."
-        canonical="/"
+        title={lang === 'es' ? "MJ Fisio Estética & Spa | Centro de Bienestar en Turrialba" : "MJ Fisio Estética & Spa | Wellness Center in Turrialba"}
+        description={lang === 'es' ? "Descubre tu mejor versión en MJ Fisio Estética y Spa. Tratamientos médicos, faciales y corporales de vanguardia en Turrialba, Costa Rica." : "Discover your best version at MJ Fisio Estética & Spa. Avant-garde medical, facial, and body treatments in Turrialba, Costa Rica."}
+        canonical={lang === 'es' ? "/" : "/en"}
+        lang={lang}
       />
-      <Navbar />
+      <Navbar lang={lang} />
       <FloatingWhatsApp />
 
       {/* ── HERO SECTION ────────────────────────────────── */}
@@ -90,33 +93,33 @@ function Home() {
           >
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-6">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase">Estética Avanzada & Wellness</span>
+              <span className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase">{t('home.hero.tagline')}</span>
             </motion.div>
 
             <motion.h1
               variants={fadeUp}
               className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] mb-8"
             >
-              Realza tu <br />
-              <span className="italic font-light text-primary">belleza natural</span>
+              {t('home.hero.title')} <br />
+              <span className="italic font-light text-primary">{t('home.hero.title_italic')}</span>
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
               className="text-lg md:text-xl text-white/80 mb-10 max-w-xl leading-relaxed font-light"
             >
-              En MJ Fisio Estética & Spa combinamos ciencia médica y tecnología de vanguardia para ofrecerte resultados visibles en un ambiente de total relajación.
+              {t('home.hero.desc')}
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5">
               <a href="#especialidades">
                 <Button size="lg" className="h-14 px-10 text-sm tracking-widest uppercase font-bold bg-primary hover:bg-primary/90 transition-all shadow-xl shadow-primary/20">
-                  Ver tratamientos
+                  {t('home.hero.cta_primary')}
                 </Button>
               </a>
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg" className="h-14 px-10 text-sm tracking-widest uppercase font-bold bg-white/5 text-white border-white/20 hover:bg-white hover:text-stone-900 transition-all backdrop-blur-sm">
-                  Agendar Cita
+                  {t('home.hero.cta_secondary')}
                 </Button>
               </a>
             </motion.div>
@@ -140,10 +143,10 @@ function Home() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: ShieldCheck, title: "Profesionales", sub: "Certificados" },
-              { icon: Star, title: "Resultados", sub: "Garantizados" },
-              { icon: Heart, title: "Atención", sub: "Personalizada" },
-              { icon: Award, title: "Tecnología", sub: "Médica" },
+              { icon: ShieldCheck, title: lang === 'es' ? "Profesionales" : "Certified", sub: lang === 'es' ? "Certificados" : "Professionals" },
+              { icon: Star, title: lang === 'es' ? "Resultados" : "Guaranteed", sub: lang === 'es' ? "Garantizados" : "Results" },
+              { icon: Heart, title: lang === 'es' ? "Atención" : "Personalized", sub: lang === 'es' ? "Personalizada" : "Care" },
+              { icon: Award, title: lang === 'es' ? "Tecnología" : "Medical", sub: lang === 'es' ? "Médica" : "Technology" },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-4 justify-center">
                 <item.icon className="w-8 h-8 text-primary" />
@@ -162,7 +165,7 @@ function Home() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-stone-400 text-xs font-bold tracking-[0.3em] uppercase mb-4">MJ Fisio Estética & Spa</h2>
-            <h3 className="text-4xl md:text-6xl font-serif text-stone-900 mb-6">Nuestras Especialidades</h3>
+            <h3 className="text-4xl md:text-6xl font-serif text-stone-900 mb-6">{t('home.specialties.title')}</h3>
             <div className="w-20 h-1 bg-primary mx-auto" />
           </div>
 
@@ -232,11 +235,11 @@ function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
-              <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">Tratamientos Destacados</p>
-              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">Nuestros resultados <br /><span className="italic font-light text-primary">más buscados</span></h2>
+              <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">{lang === 'es' ? 'Tratamientos Destacados' : 'Featured Treatments'}</p>
+              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">{t('home.featured.title')} <br /><span className="italic font-light text-primary">{t('home.featured.subtitle')}</span></h2>
             </div>
-            <a href="/servicios/masajes-corporales" className="text-sm font-bold tracking-widest uppercase border-b border-stone-200 pb-2 hover:text-primary hover:border-primary transition-colors">
-              Ver todos los servicios
+            <a href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"} className="text-sm font-bold tracking-widest uppercase border-b border-stone-200 pb-2 hover:text-primary hover:border-primary transition-colors">
+              {lang === 'es' ? 'Ver todos los servicios' : 'View all services'}
             </a>
           </div>
 
@@ -338,19 +341,19 @@ function Home() {
               viewport={{ once: true }}
               variants={fadeUp}
             >
-              <h2 className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">Experiencia Wellness</h2>
-              <h3 className="text-4xl md:text-6xl font-serif text-stone-900 mb-8 leading-tight">Mucho más que un <br /><span className="italic font-light text-stone-400">centro de estética</span></h3>
+              <h2 className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">{lang === 'es' ? 'Experiencia Wellness' : 'Wellness Experience'}</h2>
+              <h3 className="text-4xl md:text-6xl font-serif text-stone-900 mb-8 leading-tight">{t('home.experience.title')} <br /><span className="italic font-light text-stone-400">{t('home.experience.subtitle')}</span></h3>
               <div className="space-y-6 text-stone-500 text-lg font-light leading-relaxed">
-                <p>Ubicados en el corazón de Turrialba, en MJ Estética & Wellness Center diseñamos cada tratamiento como un ritual de cuidado personal.</p>
-                <p>Nuestra misión es ayudarte a sentirte bien contigo misma, fusionando protocolos médicos de alta eficiencia con una experiencia sensorial única.</p>
+                <p>{t('home.experience.p1')}</p>
+                <p>{t('home.experience.p2')}</p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
                 {[
-                  "Valoración profesional previa",
-                  "Protocolos 100% personalizados",
-                  "Tecnología de última generación",
-                  "Ambiente privado y relajante"
+                  t('home.experience.f1'),
+                  t('home.experience.f2'),
+                  t('home.experience.f3'),
+                  t('home.experience.f4')
                 ].map((feature, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary" />
@@ -360,9 +363,9 @@ function Home() {
               </div>
 
               <div className="mt-14">
-                 <a href="/nosotros">
+                 <a href={lang === 'es' ? "/nosotros" : "/en/nosotros"}>
                     <Button variant="outline" className="h-12 px-8 tracking-widest uppercase text-[10px] font-bold border-stone-200 text-stone-900 hover:bg-stone-900 hover:text-white transition-all">
-                       Conoce nuestra historia
+                       {t('home.experience.cta')}
                     </Button>
                  </a>
               </div>
@@ -374,7 +377,7 @@ function Home() {
               </div>
               <div className="absolute -bottom-10 -left-10 bg-primary p-10 hidden md:block">
                  <p className="text-white text-5xl font-serif font-bold mb-1">10+</p>
-                 <p className="text-white/80 text-[10px] font-bold tracking-widest uppercase">Años de experiencia</p>
+                 <p className="text-white/80 text-[10px] font-bold tracking-widest uppercase">{lang === 'es' ? 'Años de experiencia' : 'Years of experience'}</p>
               </div>
             </div>
           </div>
@@ -388,7 +391,7 @@ function Home() {
             <div className="flex justify-center gap-1 mb-8">
               {[1,2,3,4,5].map(i => <Star key={i} className="w-6 h-6 fill-primary text-primary" />)}
             </div>
-            <h2 className="text-3xl md:text-5xl font-serif text-stone-900 mb-12">Lo que nuestras clientas dicen</h2>
+            <h2 className="text-3xl md:text-5xl font-serif text-stone-900 mb-12">{t('home.testimonials.title')}</h2>
 
             <div className="bg-white p-10 md:p-16 shadow-xl rounded-sm relative">
               <p className="text-xl md:text-2xl text-stone-600 font-light italic leading-relaxed mb-8">
@@ -398,11 +401,11 @@ function Home() {
             </div>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-               <a href="/testimonios">
-                  <Button variant="ghost" className="tracking-widest uppercase text-xs font-bold">Ver más testimonios</Button>
+               <a href={lang === 'es' ? "/testimonios" : "/en/testimonials"}>
+                  <Button variant="ghost" className="tracking-widest uppercase text-xs font-bold">{lang === 'es' ? 'Ver más testimonios' : 'View more testimonials'}</Button>
                </a>
                <a href={GOOGLE_REVIEW_LINK} target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" className="tracking-widest uppercase text-xs font-bold border-stone-200">Dejar reseña en Google</Button>
+                  <Button variant="outline" className="tracking-widest uppercase text-xs font-bold border-stone-200">{lang === 'es' ? 'Dejar reseña en Google' : 'Leave a Google review'}</Button>
                </a>
             </div>
           </div>
@@ -414,8 +417,8 @@ function Home() {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
             <div className="flex-1">
-              <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">Contacto</p>
-              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-8 leading-tight">¿Lista para empezar <br />tu transformación?</h2>
+              <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">{lang === 'es' ? 'Contacto' : 'Contact'}</p>
+              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-8 leading-tight">{t('home.contact.title')}</h2>
 
               <div className="space-y-8 mt-12">
                 <div className="flex gap-5">
@@ -423,8 +426,8 @@ function Home() {
                       <MapPin className="w-5 h-5 text-primary" />
                    </div>
                    <div>
-                      <p className="font-bold text-stone-900 text-lg">Visítanos</p>
-                      <p className="text-stone-500 leading-relaxed">Turrialba Centro, 150m este de la Iglesia Católica, Cartago, Costa Rica.</p>
+                      <p className="font-bold text-stone-900 text-lg">{t('home.contact.visit')}</p>
+                      <p className="text-stone-500 leading-relaxed">{lang === 'es' ? 'Turrialba Centro, 150m este de la Iglesia Católica, Cartago, Costa Rica.' : 'Downtown Turrialba, 150m east of the Catholic Church, Cartago, Costa Rica.'}</p>
                    </div>
                 </div>
                 <div className="flex gap-5">
@@ -432,8 +435,8 @@ function Home() {
                       <Phone className="w-5 h-5 text-primary" />
                    </div>
                    <div>
-                      <p className="font-bold text-stone-900 text-lg">Llámanos</p>
-                      <p className="text-stone-500">+506 8888-8888</p>
+                      <p className="font-bold text-stone-900 text-lg">{t('home.contact.call')}</p>
+                      <p className="text-stone-500">+506 8690-7757</p>
                    </div>
                 </div>
                 <div className="flex gap-5">
@@ -441,8 +444,8 @@ function Home() {
                       <Clock className="w-5 h-5 text-primary" />
                    </div>
                    <div>
-                      <p className="font-bold text-stone-900 text-lg">Horario</p>
-                      <p className="text-stone-500">Lun - Vie: 9:00 - 20:00 / Sáb: 8:00 - 15:00</p>
+                      <p className="font-bold text-stone-900 text-lg">{t('home.contact.hours')}</p>
+                      <p className="text-stone-500">{lang === 'es' ? 'Lun - Vie: 9:00 - 20:00 / Sáb: 8:00 - 15:00' : 'Mon - Fri: 9:00 - 20:00 / Sat: 8:00 - 15:00'}</p>
                    </div>
                 </div>
               </div>
@@ -464,17 +467,17 @@ function Home() {
             variants={fadeUp}
             className="flex flex-col md:flex-row items-center justify-center gap-6"
           >
-            <p className="text-white/40 text-sm font-light tracking-wide">¿Tienes alguna idea para mejorar nuestra página?</p>
-            <a href="/buzon-sugerencias">
+            <p className="text-white/40 text-sm font-light tracking-wide">{lang === 'es' ? '¿Tienes alguna idea para mejorar nuestra página?' : 'Do you have any ideas to improve our website?'}</p>
+            <a href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"}>
               <Button variant="outline" className="border-primary/30 text-primary hover:bg-primary hover:text-white transition-all text-[10px] tracking-widest uppercase font-bold h-10 px-6 rounded-full">
-                💡 Enviar Sugerencia
+                💡 {lang === 'es' ? 'Enviar Sugerencia' : 'Send Suggestion'}
               </Button>
             </a>
           </motion.div>
         </div>
       </section>
 
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

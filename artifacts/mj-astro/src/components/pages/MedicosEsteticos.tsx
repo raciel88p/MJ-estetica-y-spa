@@ -1,3 +1,4 @@
+import { useTranslations } from "@/i18n/ui";
 import { withAppProviders } from "@/components/ReactAppWrapper";
 import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
@@ -13,52 +14,76 @@ import { servicePages } from "@/data/services";
 
 const BASE = import.meta.env.BASE_URL;
 
-const doctors = [
-  {
-    name: "Dr. Ricard Araya",
-    linc: "323106",
-    specialty: "Armonizador Facial",
-    photo: "dr-ricard-araya.webp",
-    bio: "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales.",
-    services: ["/servicios/botox-full-face", "/servicios/hilos-tensores", "/servicios/acido-hialuronico", "/servicios/relleno-de-labios"],
-    serviceLabels: ["Botox Full Face", "Hilos Tensores Turrialba", "Ácido Hialurónico", "Relleno de Labios", "Microagujas"],
-  },
-  {
-    name: "Dr. Ruddy Jiménez Montero",
-    linc: "13583",
-    specialty: "Master en Cirugía Capilar",
-    photo: "dr-ruddy-jimenez.webp",
-    bio: "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes.",
-    services: ["/servicios/trasplante-capilar", "/servicios/implante-barba", "/servicios/mesoterapia-capilar"],
-    serviceLabels: ["Trasplante Capilar Natural", "Implante de Barba", "Mesoterapia Capilar"],
-  },
-  {
-    name: "Dr. Johan",
-    linc: "3667-25",
-    specialty: "Nutricionista Deportivo",
-    photo: "dr-johan.webp",
-    bio: "Especialista en nutrición clínica y deportiva. Diseña planes alimentarios personalizados orientados a objetivos de salud, rendimiento y composición corporal.",
-    services: ["/servicios/nutricion"],
-    serviceLabels: ["Nutrición Clínica"],
-  },
-];
+function MedicosEsteticos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
+  const t = useTranslations(lang);
 
-const descriptions: Record<string, string> = {
-  nutricion:
-    "Planes nutricionales personalizados para alcanzar tus objetivos de salud, peso y bienestar con el acompañamiento de nuestros especialistas.",
-  "botox-full-face":
-    "Tratamiento con toxina botulínica para reducir arrugas de expresión y rejuvenecer el rostro de forma natural y sin cirugía.",
-  "hilos-tensores":
-    "Lifting no quirúrgico con hilos reabsorbibles que devuelven firmeza y tensión a la piel estimulando la producción de colágeno.",
-  "trasplante-capilar":
-    "Solución definitiva para la alopecia con técnicas mínimamente invasivas, resultados permanentes y aspecto completamente natural.",
-  "implante-barba":
-    "Técnica de trasplante capilar facial para obtener una barba densa, uniforme y completamente natural adaptada a tu estructura facial.",
-  "mesoterapia-capilar":
-    "Microinyecciones de vitaminas, minerales y factores de crecimiento directamente en el cuero cabelludo para frenar la caída y estimular el crecimiento.",
-  "relleno-de-labios":
-    "Procedimientos especializados de relleno labial con ácido hialurónico orientados a volumen, hidratación y perfilado natural en Turrialba.",
-};
+  const doctors = [
+    {
+      name: "Dr. Ricard Araya",
+      linc: "323106",
+      specialty: lang === 'es' ? "Armonizador Facial" : "Facial Harmonizer",
+      photo: "dr-ricard-araya.webp",
+      bio: lang === 'es'
+        ? "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales."
+        : "Specialist doctor in medical aesthetics and minimally invasive facial treatments. Expert in botulinum toxin, hyaluronic acid, and tensor threads with a focus on natural results.",
+      services: lang === 'es'
+        ? ["/servicios/botox-full-face", "/servicios/hilos-tensores", "/servicios/acido-hialuronico", "/servicios/relleno-de-labios"]
+        : ["/en/services/botox-full-face", "/en/services/hilos-tensores", "/en/services/acido-hialuronico", "/en/services/relleno-de-labios"],
+      serviceLabels: lang === 'es'
+        ? ["Botox Full Face", "Hilos Tensores Turrialba", "Ácido Hialurónico", "Relleno de Labios", "Microagujas"]
+        : ["Full Face Botox", "Tensor Threads Turrialba", "Hyaluronic Acid", "Lip Filler", "Microneedling"],
+    },
+    {
+      name: "Dr. Ruddy Jiménez Montero",
+      linc: "13583",
+      specialty: lang === 'es' ? "Master en Cirugía Capilar" : "Master in Hair Surgery",
+      photo: "dr-ruddy-jimenez.webp",
+      bio: lang === 'es'
+        ? "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes."
+        : "Specialist with postgraduate training in hair surgery. Performs each procedure with state-of-the-art techniques guaranteeing natural, safe, and permanent results.",
+      services: lang === 'es'
+        ? ["/servicios/trasplante-capilar", "/servicios/implante-barba", "/servicios/mesoterapia-capilar"]
+        : ["/en/services/trasplante-capilar", "/en/services/implante-barba", "/en/services/mesoterapia-capilar"],
+      serviceLabels: lang === 'es'
+        ? ["Trasplante Capilar Natural", "Implante de Barba", "Mesoterapia Capilar"]
+        : ["Natural Hair Transplant", "Beard Implant", "Hair Mesotherapy"],
+    },
+    {
+      name: "Dr. Johan",
+      linc: "3667-25",
+      specialty: lang === 'es' ? "Nutricionista Deportivo" : "Sports Nutritionist",
+      photo: "dr-johan.webp",
+      bio: lang === 'es'
+        ? "Especialista en nutrición clínica y deportiva. Diseña planes alimentarios personalizados orientados a objetivos de salud, rendimiento y composición corporal."
+        : "Specialist in clinical and sports nutrition. Designs personalized food plans oriented towards health, performance, and body composition goals.",
+      services: lang === 'es' ? ["/servicios/nutricion"] : ["/en/services/nutricion"],
+      serviceLabels: lang === 'es' ? ["Nutrición Clínica"] : ["Clinical Nutrition"],
+    },
+  ];
+
+  const descriptions: Record<string, string> = {
+    nutricion: lang === 'es'
+      ? "Planes nutricionales personalizados para alcanzar tus objetivos de salud, peso y bienestar con el acompañamiento de nuestros especialistas."
+      : "Personalized nutritional plans to achieve your health, weight, and well-being goals with the guidance of our specialists.",
+    "botox-full-face": lang === 'es'
+      ? "Tratamiento con toxina botulínica para reducir arrugas de expresión y rejuvenecer el rostro de forma natural y sin cirugía."
+      : "Botulinum toxin treatment to reduce expression wrinkles and rejuvenate the face naturally and without surgery.",
+    "hilos-tensores": lang === 'es'
+      ? "Lifting no quirúrgico con hilos reabsorbibles que devuelven firmeza y tensión a la piel estimulando la producción de colágeno."
+      : "Non-surgical lifting with absorbable threads that restore firmness and tension to the skin by stimulating collagen production.",
+    "trasplante-capilar": lang === 'es'
+      ? "Solución definitiva para la alopecia con técnicas mínimamente invasivas, resultados permanentes y aspecto completamente natural."
+      : "Definitive solution for alopecia with minimally invasive techniques, permanent results, and a completely natural appearance.",
+    "implante-barba": lang === 'es'
+      ? "Técnica de trasplante capilar facial para obtener una barba densa, uniforme y completamente natural adaptada a tu estructura facial."
+      : "Facial hair transplant technique to obtain a dense, uniform, and completely natural beard adapted to your facial structure.",
+    "mesoterapia-capilar": lang === 'es'
+      ? "Microinyecciones de vitaminas, minerales y factores de crecimiento directamente en el cuero cabelludo para frenar la caída y estimular el crecimiento."
+      : "Micro-injections of vitamins, minerals, and growth factors directly into the scalp to stop hair loss and stimulate growth.",
+    "relleno-de-labios": lang === 'es'
+      ? "Procedimientos especializados de relleno labial con ácido hialurónico orientados a volumen, hidratación y perfilado natural en Turrialba."
+      : "Specialized lip filler procedures with hyaluronic acid oriented towards volume, hydration, and natural contouring in Turrialba.",
+  };
 
 const icons: Record<string, string> = {
   nutricion: "🥗",
@@ -70,28 +95,37 @@ const icons: Record<string, string> = {
   "relleno-de-labios": "👄",
 };
 
-function MedicosEsteticos() {
-  const services = medicoEsteticosLinks.map((link) => {
-    const slug = link.href.replace("/servicios/", "");
-    const data = servicePages.find((s) => s.slug === slug);
-    return { ...link, slug, tagline: data?.tagline ?? "", description: descriptions[slug] ?? "" };
+  const services = medicoEsteticosLinks[lang].map((link) => {
+    // Correctly extract slug regardless of language prefix
+    const slug = link.href.split('/').pop() || "";
+    // Find the service entry by looking at both ES and EN slugs
+    const data = servicePages.find((s) => s.es.slug === slug || s.en.slug === slug);
+    const serviceData = data ? data[lang] : null;
+
+    return {
+      ...link,
+      slug,
+      tagline: serviceData?.tagline ?? "",
+      description: descriptions[slug] ?? descriptions[data?.es.slug ?? ""] ?? ""
+    };
   });
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEO
-        title="Tratamientos Médicos Estéticos"
-        description="Tratamientos médicos estéticos en Turrialba: botox, rellenos, hilos tensores, trasplante capilar y nutrición. Especialistas certificados en MJ Fisio Estética y Spa."
-        canonical="/medicos-esteticos"
+        title={lang === 'es' ? "Tratamientos Médicos Estéticos" : "Medical Aesthetic Treatments"}
+        description={lang === 'es' ? "Tratamientos médicos estéticos en Turrialba: botox, rellenos, hilos tensores, trasplante capilar y nutrición. Especialistas certificados en MJ Fisio Estética y Spa." : "Medical aesthetic treatments in Turrialba: botox, fillers, thread lifts, hair transplant, and nutrition. Certified specialists at MJ Fisio Estética & Spa."}
+        canonical={lang === 'es' ? "/medicos-esteticos" : "/en/medical-aesthetic"}
+        lang={lang}
       />
-      <Navbar />
+      <Navbar lang={lang} alternateLink={lang === 'es' ? '/en/medical-aesthetic' : '/medicina-estetica'} />
 
       {/* Hero */}
       <section className="relative pt-36 pb-20 bg-foreground overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <div className="flex justify-center mb-6">
-            <Breadcrumb items={[{ label: "Médico Estético" }]} />
+            <Breadcrumb items={[{ label: t('nav.medico') }]} />
           </div>
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -100,14 +134,13 @@ function MedicosEsteticos() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-medium tracking-widest uppercase mb-6">
               <Stethoscope className="w-4 h-4" />
-              Especialidades
+              {t('medical.hero.tagline')}
             </div>
             <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">
-              Médico Estético
+              {t('medical.hero.title')}
             </h1>
             <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-              Tratamientos médico-estéticos de vanguardia realizados por profesionales especializados.
-              Ciencia y belleza para transformar tu bienestar de adentro hacia afuera.
+              {t('medical.hero.desc')}
             </p>
           </motion.div>
         </div>
@@ -125,10 +158,10 @@ function MedicosEsteticos() {
             transition={{ duration: 0.5 }}
             className="text-center mb-14"
           >
-            <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-3">Equipo Médico</p>
-            <h2 className="text-4xl font-serif text-white">Nuestros Especialistas</h2>
+            <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-3">{t('medical.team.tagline')}</p>
+            <h2 className="text-4xl font-serif text-white">{t('medical.team.title')}</h2>
             <p className="text-white/60 mt-3 max-w-xl mx-auto text-sm">
-              Profesionales certificados con años de experiencia en medicina estética y bienestar.
+              {t('medical.team.desc')}
             </p>
           </motion.div>
 
@@ -210,7 +243,7 @@ function MedicosEsteticos() {
                         {service.description}
                       </p>
                       <div className="flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
-                        Ver tratamientos
+                        {t('medical.services.view')}
                         <ArrowRight className="w-4 h-4" />
                       </div>
                     </div>
@@ -225,9 +258,9 @@ function MedicosEsteticos() {
       {/* CTA */}
       <section className="py-16 bg-secondary/20">
         <div className="max-w-2xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-serif text-foreground mb-4">¿No sabes cuál es el tratamiento ideal para ti?</h2>
+          <h2 className="text-3xl font-serif text-foreground mb-4">{t('medical.cta.title')}</h2>
           <p className="text-muted-foreground mb-8">
-            Contáctanos y nuestros especialistas te orientarán para elegir el tratamiento más adecuado según tus objetivos y condición.
+            {t('medical.cta.desc')}
           </p>
           <a
             id="cta-medicos-asesoria"
@@ -236,13 +269,13 @@ function MedicosEsteticos() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-8 py-4 text-base font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-primary/30"
           >
-            Solicitar asesoría gratuita
+            {t('medical.cta.button')}
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </section>
 
-      <Footer />
+      <Footer lang={lang} />
       <FloatingWhatsApp />
     </div>
   );

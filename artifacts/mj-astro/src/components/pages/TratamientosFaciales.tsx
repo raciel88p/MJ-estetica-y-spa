@@ -9,6 +9,7 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { tratamientosFacialesLinks, servicePages } from "@/data/services";
 import { StatsBar } from "@/components/StatsBar";
+import { useTranslations } from "@/i18n/ui";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
@@ -17,27 +18,29 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
 };
 
-const highlights = [
-  { n: "7+", label: "Tratamientos faciales" },
-  { n: "100%", label: "Personalizados" },
-  { n: "Alta", label: "Tecnología" },
-];
+function TratamientosFaciales({ lang = 'es' }: { lang?: 'es' | 'en' }) {
+  const t = useTranslations(lang);
 
-function TratamientosFaciales() {
-  const services = tratamientosFacialesLinks.map((link) => {
-    const slug = link.href.replace("/servicios/", "");
-    const data = servicePages.find((s) => s.slug === slug);
+  const highlights = [
+    { n: "7+", label: t('faciales.hero.stat1') },
+    { n: "100%", label: t('faciales.hero.stat2') },
+    { n: lang === 'es' ? "Alta" : "High", label: t('faciales.hero.stat3') },
+  ];
+  const services = tratamientosFacialesLinks[lang].map((link) => {
+    const slug = link.href.replace("/servicios/", "").replace("/en/services/", "");
+    const data = servicePages.find((s) => s[lang].slug === slug);
     return { ...link, slug, tagline: data?.tagline ?? "", heroDescription: data?.heroDescription ?? "" };
   });
 
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Tratamientos Faciales"
-        description="Tratamientos faciales en MJ Fisio Estética y Spa: Hollywood Peel en Turrialba, eliminación de manchas, radiofrecuencia, peeling químico, terapias faciales y más en Turrialba, Costa Rica."
-        canonical="/servicios/faciales"
+        title={lang === 'es' ? "Tratamientos Faciales" : "Facial Treatments"}
+        description={lang === 'es' ? "Tratamientos faciales en MJ Fisio Estética y Spa: Hollywood Peel en Turrialba, eliminación de manchas, radiofrecuencia, peeling químico, terapias faciales y más en Turrialba, Costa Rica." : "Facial treatments at MJ Fisio Estética & Spa: Hollywood Peel, spot removal, radiofrequency, chemical peel, facial therapies, and more in Turrialba, Costa Rica."}
+        canonical={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"}
+        lang={lang}
       />
-      <Navbar />
+      <Navbar lang={lang} alternateLink={lang === 'es' ? '/en/services/facials' : '/servicios/faciales'} />
       <FloatingWhatsApp />
 
       {/* Hero */}
@@ -48,18 +51,18 @@ function TratamientosFaciales() {
         />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumb
-            items={[{ label: "Tratamientos Faciales" }]}
+            items={[{ label: t('faciales.hero.title') }]}
             variant="dark"
           />
           <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mt-8 mb-4">
-            FACIALES
+            {t('faciales.hero.tagline')}
           </p>
           <h1 className="text-5xl md:text-6xl font-serif font-bold text-white leading-tight mb-6">
-            Tratamientos<br />
-            <span className="italic font-light text-white/50">Faciales</span>
+            {t('faciales.hero.title')}<br />
+            <span className="italic font-light text-white/50">{t('faciales.hero.title_italic')}</span>
           </h1>
           <p className="text-white/75 text-lg leading-relaxed max-w-xl">
-            Desde limpiezas profundas hasta tratamientos con láser y radiofrecuencia — cuida tu piel con lo mejor en tecnología estética y cosmetología avanzada.
+            {t('faciales.hero.desc')}
           </p>
 
           <div className="grid grid-cols-3 gap-8 mt-14 pt-10 border-t border-[#1a4f6e]">
@@ -79,7 +82,7 @@ function TratamientosFaciales() {
       <section className="py-5 bg-primary">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white text-center sm:text-left text-sm font-medium">
-            Cada piel es única — <strong>valoración gratuita</strong> y protocolo personalizado
+            {t('faciales.banner.desc')}
           </p>
           <a
             href={WA}
@@ -88,7 +91,7 @@ function TratamientosFaciales() {
             className="shrink-0 inline-flex items-center gap-2 text-white text-xs font-bold tracking-[0.2em] uppercase border border-white/60 px-6 py-2.5 hover:bg-white hover:text-primary transition-all"
           >
             <MessageCircle className="w-3.5 h-3.5" />
-            Reservar valoración gratuita
+            {t('corporales.banner.cta')}
           </a>
         </div>
       </section>
@@ -100,9 +103,9 @@ function TratamientosFaciales() {
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
             className="mb-14"
           >
-            <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">NUESTROS SERVICIOS</p>
+            <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">{t('corporales.services.tagline')}</p>
             <h2 className="text-4xl font-serif font-bold text-stone-900">
-              Todos nuestros tratamientos faciales
+              {t('faciales.services.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mt-5" />
           </motion.div>
@@ -128,7 +131,7 @@ function TratamientosFaciales() {
                 </p>
                 <a href={service.href}>
                   <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary border-b border-primary/30 pb-0.5 hover:border-primary transition-colors cursor-pointer">
-                    Ver tratamiento <ArrowRight className="w-3.5 h-3.5" />
+                    {t('service.related.view')} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </a>
               </motion.div>
@@ -142,15 +145,15 @@ function TratamientosFaciales() {
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
             {[
-              { icon: <ShieldCheck className="w-6 h-6 text-primary" />, title: "Cosmetología avanzada", desc: "Tratamientos con ingredientes activos de alta concentración y tecnología de última generación." },
-              { icon: <Award className="w-6 h-6 text-primary" />, title: "Diagnóstico personalizado", desc: "Evaluamos tu tipo de piel antes de cada protocolo para garantizar los mejores resultados." },
-              { icon: <Clock4 className="w-6 h-6 text-primary" />, title: "Sin tiempo de recuperación", desc: "La mayoría de tratamientos faciales permiten retomar tu rutina el mismo día." },
-            ].map((t) => (
-              <div key={t.title} className="flex gap-4">
-                <div className="shrink-0 mt-0.5">{t.icon}</div>
+              { icon: <ShieldCheck className="w-6 h-6 text-primary" />, title: t('faciales.trust.t1'), desc: t('faciales.trust.d1') },
+              { icon: <Award className="w-6 h-6 text-primary" />, title: t('faciales.trust.t2'), desc: t('faciales.trust.d2') },
+              { icon: <Clock4 className="w-6 h-6 text-primary" />, title: t('faciales.trust.t3'), desc: t('faciales.trust.d3') },
+            ].map((t_item) => (
+              <div key={t_item.title} className="flex gap-4">
+                <div className="shrink-0 mt-0.5">{t_item.icon}</div>
                 <div>
-                  <p className="font-serif font-bold text-stone-900 mb-1">{t.title}</p>
-                  <p className="text-white/65 text-sm leading-relaxed">{t.desc}</p>
+                  <p className="font-serif font-bold text-stone-900 mb-1">{t_item.title}</p>
+                  <p className="text-white/65 text-sm leading-relaxed">{t_item.desc}</p>
                 </div>
               </div>
             ))}
@@ -162,13 +165,13 @@ function TratamientosFaciales() {
             className="border-l-4 border-primary pl-8 py-2"
           >
             <p className="text-stone-700 font-serif text-xl italic leading-relaxed mb-4">
-              "Vine por el Hollywood Peel en Turrialba y quedé enamorada de los resultados. Mi piel nunca había estado tan luminosa y uniforme. El equipo es muy profesional y el ambiente del spa es relajante."
+              {t('faciales.testimonial.text')}
             </p>
             <footer className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs font-bold">A</div>
               <div>
-                <p className="text-stone-900 text-sm font-semibold">Andrea P.</p>
-                <p className="text-white/75 text-xs">Clienta — Turrialba</p>
+                <p className="text-stone-900 text-sm font-semibold">{t('faciales.testimonial.author')}</p>
+                <p className="text-white/75 text-xs">{t('corporales.testimonial.role')}</p>
               </div>
             </footer>
           </motion.blockquote>
@@ -179,13 +182,13 @@ function TratamientosFaciales() {
       <section className="py-20 bg-[#071e2e]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">PIDE TU CITA</p>
+            <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">{t('corporales.cta.tagline')}</p>
             <h2 className="text-4xl font-serif font-bold text-white mb-6">
-              Tu piel merece lo mejor<br />
-              <span className="italic font-light text-white/50">empieza hoy</span>
+              {t('faciales.cta.title')}<br />
+              <span className="italic font-light text-white/50">{t('faciales.cta.title_italic')}</span>
             </h2>
             <p className="text-white/75 text-sm mb-10 max-w-md mx-auto">
-              En Turrialba, Ciudadela Jorge de Bravo. Escríbenos y te asesoramos sin compromiso.
+              {t('faciales.cta.desc')}
             </p>
             <a
               href={WA}
@@ -194,14 +197,14 @@ function TratamientosFaciales() {
               className="inline-flex items-center gap-3 bg-primary text-white text-sm font-bold tracking-[0.15em] uppercase px-10 py-4 hover:bg-primary/90 transition-all group"
             >
               <MessageCircle className="w-4 h-4" />
-              Reservar por WhatsApp
+              {t('corporales.cta.button')}
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>
         </div>
       </section>
 
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

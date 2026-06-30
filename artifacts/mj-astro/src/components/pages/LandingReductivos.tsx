@@ -96,17 +96,18 @@ function FAQ({ q, a, open, toggle }: { q: string; a: string; open: boolean; togg
   );
 }
 
-function LandingReductivos() {
+function LandingReductivos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Reductivos en Turrialba — Reduce medidas sin cirugía | MJ Estética"
-        description="Tratamientos reductivos en Turrialba, Costa Rica. Pierde hasta 2 tallas en 4 semanas con maderoterapia, drenaje linfático y reductivos. Valoración GRATIS. MJ Estética."
-        canonical="/reductivos-turrialba"
+        title={lang === 'es' ? "Reductivos en Turrialba — Reduce medidas sin cirugía | MJ Estética" : "Weight Loss in Turrialba — Reduce sizes without surgery | MJ Estética"}
+        description={lang === 'es' ? "Tratamientos reductivos en Turrialba, Costa Rica. Pierde hasta 2 tallas en 4 semanas con maderoterapia, drenaje linfático y reductivos. Valoración GRATIS. MJ Estética." : "Weight loss treatments in Turrialba, Costa Rica. Lose up to 2 sizes in 4 weeks with wood therapy, lymphatic drainage and weight loss. FREE assessment. MJ Estética."}
+        canonical={lang === 'es' ? "/reductivos-turrialba" : "/en/weight-loss"}
+        lang={lang}
       />
-      <Navbar />
+      <Navbar lang={lang} alternateLink={lang === 'es' ? '/en/weight-loss' : '/reductivos-turrialba'} />
 
       {/* ───── 1. HERO ───── */}
       <section className="relative min-h-screen flex items-center justify-center bg-[#071e2e] overflow-hidden pt-20">
@@ -583,7 +584,7 @@ function LandingReductivos() {
         </div>
       </section>
 
-      <Footer />
+      <Footer lang={lang} />
       <FloatingWhatsApp />
     </div>
   );

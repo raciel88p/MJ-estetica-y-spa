@@ -1,7 +1,8 @@
 import { Instagram, Facebook, MapPin, Phone, Clock } from "lucide-react";
+import { useTranslations } from "@/i18n/ui";
 
-
-export function Footer() {
+export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
+  const t = useTranslations(lang);
   return (
     <footer className="bg-foreground text-white/80 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,7 +19,7 @@ export function Footer() {
               height="64"
             />
             <p className="text-white/60 font-light leading-relaxed">
-              Tu centro de confianza en Turrialba para cuidar de tu cuerpo, mente y bienestar con los mejores profesionales.
+              {t('footer.brand')}
             </p>
             <div className="flex gap-4 pt-4 flex-wrap">
               <a href="https://www.instagram.com/fisioesteticamj/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
@@ -42,23 +43,23 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-serif text-white mb-6">Páginas</h4>
+            <h4 className="text-xl font-serif text-white mb-6">{t('footer.pages')}</h4>
             <ul className="space-y-3">
-              <li><a href="/nosotros" className="hover:text-secondary transition-colors">Sobre Nosotros</a></li>
-              <li><a href="/servicios/corporales" className="hover:text-secondary transition-colors">Tratamientos Corporales</a></li>
-              <li><a href="/servicios/faciales" className="hover:text-secondary transition-colors">Tratamientos Faciales</a></li>
-              <li><a href="/servicios/piernas" className="hover:text-secondary transition-colors">Tratamientos de Piernas</a></li>
-              <li><a href="/paquetes" className="hover:text-secondary transition-colors">Paquetes</a></li>
-              <li><a href="/medicos-esteticos" className="hover:text-secondary transition-colors">Médico Estético</a></li>
-              <li><a href="/testimonios" className="hover:text-secondary transition-colors">Testimonios</a></li>
-              <li><a href="/buzon-sugerencias" className="hover:text-secondary transition-colors font-medium text-primary">Buzón de Sugerencias</a></li>
-              <li><a href="/mapa-del-sitio" className="hover:text-secondary transition-colors">Mapa del Sitio</a></li>
+              <li><a href={lang === 'es' ? "/nosotros" : "/en/nosotros"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Sobre Nosotros" : "About Us"}</a></li>
+              <li><a href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos Corporales" : "Body Treatments"}</a></li>
+              <li><a href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos Faciales" : "Facial Treatments"}</a></li>
+              <li><a href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos de Piernas" : "Leg Treatments"}</a></li>
+              <li><a href={lang === 'es' ? "/paquetes" : "/en/packages"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Paquetes" : "Packages"}</a></li>
+              <li><a href={lang === 'es' ? "/medicos-esteticos" : "/en/medical-aesthetic"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Médico Estético" : "Medical Aesthetic"}</a></li>
+              <li><a href={lang === 'es' ? "/testimonios" : "/en/testimonials"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Testimonios" : "Testimonials"}</a></li>
+              <li><a href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"} className="hover:text-secondary transition-colors font-medium text-primary">{lang === 'es' ? "Buzón de Sugerencias" : "Suggestion Box"}</a></li>
+              <li><a href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</a></li>
             </ul>
           </div>
 
           {/* Google Business + Find us */}
           <div>
-            <h4 className="text-xl font-serif text-white mb-6">Encuéntranos</h4>
+            <h4 className="text-xl font-serif text-white mb-6">{t('footer.findus')}</h4>
             <ul className="space-y-3">
               <li>
                 <a
@@ -107,7 +108,7 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xl font-serif text-white mb-6">Contacto</h4>
+            <h4 className="text-xl font-serif text-white mb-6">{t('footer.contact')}</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
@@ -129,10 +130,10 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-          <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. {t('footer.rights')}</p>
           <div className="flex gap-4">
-            <a href="/politica-de-datos" className="hover:text-white">Política de Privacidad</a>
-            <a href="/mapa-del-sitio" className="hover:text-white">Mapa del Sitio</a>
+            <a href={lang === 'es' ? "/politica-de-datos" : "/en/data-policy"} className="hover:text-white">{lang === 'es' ? "Política de Privacidad" : "Privacy Policy"}</a>
+            <a href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-white">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</a>
           </div>
         </div>
       </div>
