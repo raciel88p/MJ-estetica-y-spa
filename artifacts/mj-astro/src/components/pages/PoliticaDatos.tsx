@@ -5,15 +5,16 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { motion } from "framer-motion";
 
-function PoliticaDatos() {
+function PoliticaDatos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEO
-        title="Política de Datos"
-        description="Política de privacidad y tratamiento de datos personales de MJ Fisio Estética y Spa, Turrialba, Costa Rica."
-        canonical="/politica-de-datos"
+        title={lang === 'es' ? "Política de Datos" : "Data Policy"}
+        description={lang === 'es' ? "Política de privacidad y tratamiento de datos personales de MJ Fisio Estética y Spa, Turrialba, Costa Rica." : "Privacy policy and personal data treatment of MJ Fisio Estética & Spa, Turrialba, Costa Rica."}
+        canonical={lang === 'es' ? "/politica-de-datos" : "/en/data-policy"}
+        lang={lang}
       />
-      <Navbar />
+      <Navbar lang={lang} alternateLink={lang === 'es' ? '/en/data-policy' : '/politica-de-datos'} />
 
       {/* Breadcrumb strip */}
       <div className="pt-24 pb-2 bg-foreground/5 border-b border-border">
@@ -129,7 +130,7 @@ function PoliticaDatos() {
         </div>
       </main>
 
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

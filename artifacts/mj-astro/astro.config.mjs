@@ -10,6 +10,13 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: "https://mjfisioesteticayspa.com",
   integrations: [react(), sitemap()],
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en"],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  },
 
   vite: {
     plugins: [tailwindcss()],

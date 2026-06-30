@@ -7,95 +7,105 @@ import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { motion } from "framer-motion";
 import { CheckCircle2, Star, Heart, Award, Users, Sparkles, ArrowRight } from "lucide-react";
 import { StatsBar } from "@/components/StatsBar";
+import { useTranslations } from "@/i18n/ui";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const values = [
-  {
-    icon: Heart,
-    title: "Vocación de Servicio",
-    description:
-      "Cada tratamiento está diseñado con dedicación y empatía. Tu bienestar es nuestra mayor motivación y satisfacción.",
-  },
-  {
-    icon: Award,
-    title: "Excelencia Profesional",
-    description:
-      "Nuestro equipo cuenta con formación especializada y se actualiza continuamente para ofrecerte técnicas y tecnologías de vanguardia.",
-  },
-  {
-    icon: Users,
-    title: "Trato Personalizado",
-    description:
-      "Cada persona es única. Por eso escuchamos, evaluamos y diseñamos un plan a medida para cada cliente.",
-  },
-  {
-    icon: Sparkles,
-    title: "Ambiente de Bienestar",
-    description:
-      "Hemos creado un espacio pensado para que desde el momento en que entras, te desconectes del mundo y disfrutes.",
-  },
-];
+function Nosotros({ lang = 'es' }: { lang?: 'es' | 'en' }) {
+  const t = useTranslations(lang);
 
-const team = [
-  {
-    name: "María Jeanneth",
-    role: "Directora & Especialista en Estética",
-    description:
-      "Fundadora de MJ Fisio Estética y Spa, con más de 15 años de experiencia en tratamientos estéticos y bienestar. Su pasión por el cuidado personal la llevó a crear un espacio de referencia en Turrialba.",
-    emoji: "👩‍⚕️",
-  },
-  {
-    name: "Equipo de Fisioterapia",
-    role: "Fisioterapeutas Certificados",
-    description:
-      "Profesionales certificados especializados en técnicas de rehabilitación, masajes terapéuticos y tratamientos corporales. Con experiencia en deporte, lesiones y bienestar general.",
-    emoji: "🏥",
-  },
-  {
-    name: "Equipo Médico Estético",
-    role: "Médicos y Especialistas",
-    description:
-      "Médicos especialistas en estética avanzada: botox, hilos tensores, rellenos y trasplante capilar. Comprometidos con resultados naturales y seguros.",
-    emoji: "💉",
-  },
-  {
-    name: "Nutricionista",
-    role: "Especialista en Nutrición",
-    description:
-      "Experta en diseño de planes nutricionales personalizados para objetivos de salud, peso y rendimiento deportivo.",
-    emoji: "🥗",
-  },
-];
+  const values = [
+    {
+      icon: Heart,
+      title: lang === 'es' ? "Vocación de Servicio" : "Service Vocation",
+      description: lang === 'es'
+        ? "Cada tratamiento está diseñado con dedicación y empatía. Tu bienestar es nuestra mayor motivación y satisfacción."
+        : "Each treatment is designed with dedication and empathy. Your well-being is our greatest motivation and satisfaction.",
+    },
+    {
+      icon: Award,
+      title: lang === 'es' ? "Excelencia Profesional" : "Professional Excellence",
+      description: lang === 'es'
+        ? "Nuestro equipo cuenta con formación especializada y se actualiza continuamente para ofrecerte técnicas y tecnologías de vanguardia."
+        : "Our team has specialized training and is continuously updated to offer you cutting-edge techniques and technologies.",
+    },
+    {
+      icon: Users,
+      title: lang === 'es' ? "Trato Personalizado" : "Personalized Care",
+      description: lang === 'es'
+        ? "Cada persona es única. Por eso escuchamos, evaluamos y diseñamos un plan a medida para cada cliente."
+        : "Each person is unique. That's why we listen, evaluate, and design a custom plan for each client.",
+    },
+    {
+      icon: Sparkles,
+      title: lang === 'es' ? "Ambiente de Bienestar" : "Wellness Environment",
+      description: lang === 'es'
+        ? "Hemos creado un espacio pensado para que desde el momento en que entras, te desconectes del mundo y disfrutes."
+        : "We have created a space designed so that from the moment you enter, you disconnect from the world and enjoy.",
+    },
+  ];
 
-function Nosotros() {
+  const team = [
+    {
+      name: "María Jeanneth",
+      role: lang === 'es' ? "Directora & Especialista en Estética" : "Director & Aesthetic Specialist",
+      description: lang === 'es'
+        ? "Fundadora de MJ Fisio Estética y Spa, con más de 15 años de experiencia en tratamientos estéticos y bienestar. Su pasión por el cuidado personal la llevó a crear un espacio de referencia en Turrialba."
+        : "Founder of MJ Fisio Estética & Spa, with more than 15 years of experience in aesthetic treatments and well-being. Her passion for personal care led her to create a reference space in Turrialba.",
+      emoji: "👩‍⚕️",
+    },
+    {
+      name: lang === 'es' ? "Equipo de Fisioterapia" : "Physiotherapy Team",
+      role: lang === 'es' ? "Fisioterapeutas Certificados" : "Certified Physiotherapists",
+      description: lang === 'es'
+        ? "Profesionales certificados especializados en técnicas de rehabilitación, masajes terapéuticos y tratamientos corporales. Con experiencia en deporte, lesiones y bienestar general."
+        : "Certified professionals specialized in rehabilitation techniques, therapeutic massages, and body treatments. With experience in sports, injuries, and general well-being.",
+      emoji: "🏥",
+    },
+    {
+      name: lang === 'es' ? "Equipo Médico Estético" : "Medical Aesthetic Team",
+      role: lang === 'es' ? "Médicos y Especialistas" : "Doctors and Specialists",
+      description: lang === 'es'
+        ? "Médicos especialistas en estética avanzada: botox, hilos tensores, rellenos y trasplante capilar. Comprometidos con resultados naturales y seguros."
+        : "Doctors specializing in advanced aesthetics: botox, tensor threads, fillers, and hair transplant. Committed to natural and safe results.",
+      emoji: "💉",
+    },
+    {
+      name: lang === 'es' ? "Nutricionista" : "Nutritionist",
+      role: lang === 'es' ? "Especialista en Nutrición" : "Nutrition Specialist",
+      description: lang === 'es'
+        ? "Experta en diseño de planes nutricionales personalizados para objetivos de salud, peso y rendimiento deportivo."
+        : "Expert in designing personalized nutritional plans for health, weight, and sports performance goals.",
+      emoji: "🥗",
+    },
+  ];
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEO
-        title="Sobre Nosotros"
-        description="Conoce al equipo de MJ Fisio Estética y Spa en Turrialba. Más de 15 años de experiencia en estética y bienestar, con 2335 clientes satisfechos y 82+ tratamientos disponibles."
-        canonical="/nosotros"
+        title={lang === 'es' ? "Sobre Nosotros" : "About Us"}
+        description={lang === 'es' ? "Conoce la historia de MJ Fisio Estética y Spa. Más de 10 años de experiencia brindando bienestar y tratamientos estéticos de alta calidad en Turrialba." : "Learn about the history of MJ Fisio Estética & Spa. Over 10 years of experience providing wellness and high-quality aesthetic treatments in Turrialba."}
+        canonical={lang === 'es' ? "/nosotros" : "/en/nosotros"}
+        lang={lang}
       />
-      <Navbar />
+      <Navbar lang={lang} alternateLink={lang === 'es' ? '/en/nosotros' : '/nosotros'} />
 
       {/* Hero */}
       <section className="relative pt-36 pb-24 bg-foreground overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <div className="flex justify-center mb-6">
-            <Breadcrumb items={[{ label: "Nosotros" }]} />
+            <Breadcrumb items={[{ label: t('nav.nosotros') }]} />
           </div>
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <p className="text-primary/80 tracking-widest uppercase text-sm font-medium mb-4">Quiénes somos</p>
+            <p className="text-primary/80 tracking-widest uppercase text-sm font-medium mb-4">{t('about.hero.tagline')}</p>
             <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">
-              El Arte de Cuidar <span className="italic text-white/85">de Ti</span>
+              {t('about.hero.title')} <span className="italic text-white/85">{t('about.hero.title_italic')}</span>
             </h1>
             <p className="text-lg text-primary/90 max-w-2xl mx-auto leading-relaxed">
-              En MJ Fisio Estética y Spa hemos creado un espacio donde la salud, la belleza y el bienestar
-              se unen para ofrecerte una experiencia única en el corazón de Turrialba, Costa Rica.
+              {t('about.hero.desc')}
             </p>
           </motion.div>
         </div>
@@ -117,7 +127,7 @@ function Nosotros() {
               <div className="absolute inset-0 bg-secondary rounded-t-full rounded-b-xl transform -translate-x-4 translate-y-4 -z-10" />
               <img
                 src={`${import.meta.env.BASE_URL}images/about-us.webp`}
-                alt="Equipo de MJ Fisio Estética y Spa en Turrialba"
+                alt={lang === 'es' ? "Equipo de MJ Fisio Estética y Spa en Turrialba" : "MJ Fisio Estética & Spa Team in Turrialba"}
                 className="rounded-t-full rounded-b-xl shadow-2xl object-cover w-full h-[550px]"
                 loading="lazy"
                 decoding="async"
@@ -134,8 +144,8 @@ function Nosotros() {
                     <Star className="w-6 h-6 text-primary fill-primary" />
                   </div>
                   <div>
-                    <p className="font-bold text-2xl text-foreground">+3 Años</p>
-                    <p className="text-sm text-muted-foreground">de Experiencia</p>
+                    <p className="font-bold text-2xl text-foreground">10+</p>
+                    <p className="text-sm text-muted-foreground">{lang === 'es' ? 'Años de Experiencia' : 'Years of Experience'}</p>
                   </div>
                 </div>
               </div>
@@ -147,28 +157,24 @@ function Nosotros() {
               viewport={{ once: true }}
               variants={fadeUp}
             >
-              <h2 className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Nuestra Historia</h2>
+              <h2 className="text-primary font-medium tracking-widest uppercase text-sm mb-3">{t('about.history.tagline')}</h2>
               <h3 className="text-4xl md:text-5xl font-serif mb-6 text-foreground">
-                Nació de una <span className="italic text-muted-foreground">pasión</span>
+                {t('about.history.title')} <span className="italic text-muted-foreground">{t('about.history.title_italic')}</span>
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-5 text-lg">
-                MJ Fisio Estética y Spa nació del sueño de crear un lugar donde cada persona pudiera sentirse
-                cuidada, escuchada y renovada. Ubicados en Turrialba, Ciudadela Jorge de Bravo, Costa Rica,
-                combinamos la calidez de un trato cercano con la excelencia de profesionales altamente cualificados.
+                {t('about.history.p1')}
               </p>
               <p className="text-muted-foreground leading-relaxed mb-8 text-lg">
-                Desde nuestros inicios, la misión ha sido clara: ofrecer tratamientos de calidad en un ambiente
-                relajante, donde cada visita sea una experiencia de bienestar real. Hoy contamos con un equipo
-                multidisciplinario de especialistas en fisioterapia, estética y medicina estética.
+                {t('about.history.p2')}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  "Profesionales certificados",
-                  "Tecnología de vanguardia",
-                  "Ambiente diseñado para relajar",
-                  "Tratamientos personalizados",
-                  "Atención integral",
-                  "Resultados comprobados",
+                  t('about.history.f1'),
+                  t('about.history.f2'),
+                  t('about.history.f3'),
+                  t('about.history.f4'),
+                  t('about.history.f5'),
+                  t('about.history.f6'),
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
@@ -185,8 +191,8 @@ function Nosotros() {
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Lo que nos define</p>
-            <h2 className="text-4xl md:text-5xl font-serif text-foreground">Nuestros Valores</h2>
+            <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">{t('about.values.tagline')}</p>
+            <h2 className="text-4xl md:text-5xl font-serif text-foreground">{t('about.values.title')}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, i) => (
@@ -213,8 +219,8 @@ function Nosotros() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">Las personas detrás del spa</p>
-            <h2 className="text-4xl md:text-5xl font-serif text-foreground">Nuestro Equipo</h2>
+            <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">{t('about.team.tagline')}</p>
+            <h2 className="text-4xl md:text-5xl font-serif text-foreground">{t('about.team.title')}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, i) => (
@@ -244,9 +250,9 @@ function Nosotros() {
       <section className="py-20 bg-foreground relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent" />
         <div className="max-w-2xl mx-auto px-4 text-center relative">
-          <h2 className="text-4xl font-serif text-white mb-4">¿Lista para tu primera visita?</h2>
+          <h2 className="text-4xl font-serif text-white mb-4">{t('about.cta.title')}</h2>
           <p className="text-white/80 mb-8 text-lg">
-            Reserva tu cita y descubre por qué somos el centro de referencia en Turrialba.
+            {t('about.cta.desc')}
           </p>
           <a
             id="cta-nosotros-reserva"
@@ -255,13 +261,13 @@ function Nosotros() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-8 py-4 text-base font-semibold hover:bg-primary/90 transition-colors shadow-lg"
           >
-            Reservar mi cita
+            {t('about.cta.button')}
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </section>
 
-      <Footer />
+      <Footer lang={lang} />
       <FloatingWhatsApp />
     </div>
   );

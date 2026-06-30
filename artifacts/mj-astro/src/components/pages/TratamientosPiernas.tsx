@@ -23,21 +23,22 @@ const highlights = [
   { n: "Rápido", label: "Sin recuperación" },
 ];
 
-function TratamientosPiernas() {
-  const services = tratamientosPiernasLinks.map((link) => {
-    const slug = link.href.replace("/servicios/", "");
-    const data = servicePages.find((s) => s.slug === slug);
+function TratamientosPiernas({ lang = 'es' }: { lang?: 'es' | 'en' }) {
+  const services = tratamientosPiernasLinks[lang].map((link) => {
+    const slug = link.href.replace("/servicios/", "").replace("/en/services/", "");
+    const data = servicePages.find((s) => s[lang].slug === slug);
     return { ...link, slug, tagline: data?.tagline ?? "", heroDescription: data?.heroDescription ?? "" };
   });
 
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Tratamientos de Piernas"
-        description="Tratamientos de piernas en MJ Fisio Estética y Spa: piernas cansadas, anticelulitis y más en Turrialba, Costa Rica."
-        canonical="/servicios/piernas"
+        title={lang === 'es' ? "Tratamientos de Piernas" : "Leg Treatments"}
+        description={lang === 'es' ? "Tratamientos de piernas en MJ Fisio Estética y Spa: piernas cansadas, anticelulitis y más en Turrialba, Costa Rica." : "Leg treatments at MJ Fisio Estética & Spa: tired legs, anti-cellulite, and more in Turrialba, Costa Rica."}
+        canonical={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"}
+        lang={lang}
       />
-      <Navbar />
+      <Navbar lang={lang} alternateLink={lang === 'es' ? '/en/services/leg-treatments' : '/servicios/piernas'} />
       <FloatingWhatsApp />
 
       {/* Hero */}
@@ -228,7 +229,7 @@ function TratamientosPiernas() {
         </div>
       </section>
 
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }
