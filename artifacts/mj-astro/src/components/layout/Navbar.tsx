@@ -399,13 +399,25 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
             </Button>
           </nav>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            className={`md:hidden p-2 transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Menu Toggle & Lang */}
+          <div className="flex items-center gap-2 md:hidden">
+            <a
+              href={alternateLink || (currentPath.startsWith('/en') ? currentPath.replace('/en', '') || '/' : '/en' + (currentPath === '/' ? '' : currentPath))}
+              className={`p-2 rounded-full hover:bg-primary/10 transition-colors flex items-center gap-1.5 ${isScrolled ? "text-foreground" : "text-white"}`}
+              title={lang === 'es' ? "Switch to English" : "Cambiar a Español"}
+            >
+              <Globe className="w-4 h-4" />
+              <span className="text-[10px] font-bold uppercase tracking-tighter">
+                {lang === 'es' ? "EN" : "ES"}
+              </span>
+            </a>
+            <button
+              className={`p-2 transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
