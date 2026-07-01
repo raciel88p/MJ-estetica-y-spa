@@ -372,47 +372,21 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
               {lang === 'es' ? "Contacto" : "Contact"}
             </a>
 
-            {/* ── Idioma Dropdown ── */}
-            <div
-              className="relative"
-              onMouseEnter={() => { idioma.cancelClose(); idioma.open(); }}
-              onMouseLeave={idioma.scheduleClose}
-            >
-              <button
-                className={`flex items-center gap-1.5 ${linkBase} ${textClass} border-l border-white/10 pl-4 ml-4 font-bold group`}
-                onClick={(e) => { e.stopPropagation(); setOpenDropdown(idioma.isOpen ? null : "idioma"); }}
+            {/* ── Idioma Toggle ── */}
+            <div className={`flex items-center gap-3 border-l border-white/10 pl-6 ml-2`}>
+              <a
+                href={lang === 'es' ? currentPath : (alternateLink || currentPath.replace('/en', '') || '/')}
+                className={`text-[13px] font-bold transition-all ${lang === 'es' ? 'text-primary underline underline-offset-4' : textClass + ' opacity-60 hover:opacity-100'}`}
               >
-                <Globe className="w-4 h-4 mr-0.5" />
-                {lang === 'es' ? 'Idioma' : 'Language'}
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${idioma.isOpen ? "rotate-180" : ""}`} />
-              </button>
-              <AnimatePresence>
-                {idioma.isOpen && (
-                  <motion.div
-                    {...dropdownPanelVariants}
-                    transition={{ duration: 0.16, ease: "easeOut" as const }}
-                    onMouseEnter={idioma.cancelClose}
-                    className="absolute top-full right-0 pt-3 z-50"
-                  >
-                    <div className="w-36 bg-white rounded-xl shadow-2xl border border-border overflow-hidden">
-                      <div className="p-2 flex flex-col gap-1">
-                        <a href={lang === 'es' ? currentPath : (alternateLink || currentPath.replace('/en', '') || '/')}
-                          className={`block px-4 py-2.5 text-sm rounded-lg transition-colors ${lang === 'es' ? 'bg-primary text-white font-bold' : 'text-stone-600 hover:bg-secondary/40 hover:text-primary'}`}
-                          onClick={() => setOpenDropdown(null)}
-                        >
-                          Español
-                        </a>
-                        <a href={lang === 'en' ? currentPath : (alternateLink || (currentPath === '/' ? '/en' : '/en' + currentPath))}
-                          className={`block px-4 py-2.5 text-sm rounded-lg transition-colors ${lang === 'en' ? 'bg-primary text-white font-bold' : 'text-stone-600 hover:bg-secondary/40 hover:text-primary'}`}
-                          onClick={() => setOpenDropdown(null)}
-                        >
-                          English
-                        </a>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                ES
+              </a>
+              <span className={`${textClass} opacity-20 text-xs`}>|</span>
+              <a
+                href={lang === 'en' ? currentPath : (alternateLink || (currentPath === '/' ? '/en' : '/en' + currentPath))}
+                className={`text-[13px] font-bold transition-all ${lang === 'en' ? 'text-primary underline underline-offset-4' : textClass + ' opacity-60 hover:opacity-100'}`}
+              >
+                EN
+              </a>
             </div>
 
             <Button
