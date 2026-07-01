@@ -12,7 +12,7 @@ import {
 } from "@/data/services";
 import { useTranslations } from "@/i18n/ui";
 
-type DropdownKey = "nosotros" | "servicios" | "medicos" | "paquetes" | null;
+type DropdownKey = "nosotros" | "servicios" | "medicos" | "paquetes" | "idioma" | null;
 
 function useHoverDropdown(key: DropdownKey, openDropdown: DropdownKey, setOpenDropdown: Dispatch<SetStateAction<DropdownKey>>) {
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
@@ -69,6 +69,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
   const nosotros = useHoverDropdown("nosotros", openDropdown, setOpenDropdown as any);
   const servicios = useHoverDropdown("servicios", openDropdown, setOpenDropdown as any);
   const medicos = useHoverDropdown("medicos", openDropdown, setOpenDropdown as any);
+  const idioma = useHoverDropdown("idioma", openDropdown, setOpenDropdown as any);
 
   const textClass = isScrolled ? "text-[#0c3e5a]" : "text-white/90";
   const linkBase = `text-[15px] uppercase tracking-widest font-medium hover:text-primary transition-all duration-300 relative group/link`;
@@ -371,14 +372,48 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
               {lang === 'es' ? "Contacto" : "Contact"}
             </a>
 
-            {/* Language Switcher Label */}
-            <a
-              href={alternateLink || (currentPath.startsWith('/en') ? currentPath.replace('/en', '') || '/' : '/en' + (currentPath === '/' ? '' : currentPath))}
-              className={`${linkBase} ${textClass} font-bold text-primary border-l border-white/10 pl-4 ml-4`}
-              title={lang === 'es' ? "Switch to English" : "Cambiar a Español"}
+            {/* ── Idioma Dropdown ── */}
+            <div
+              className="relative"
+              onMouseEnter={() => { idioma.cancelClose(); idioma.open(); }}
+              onMouseLeave={idioma.scheduleClose}
             >
-              {lang === 'es' ? "English" : "Español"}
-            </a>
+              <button
+                className={`flex items-center gap-1.5 ${linkBase} ${textClass} border-l border-white/10 pl-4 ml-4 font-bold group`}
+                onClick={(e) => { e.stopPropagation(); setOpenDropdown(idioma.isOpen ? null : "idioma"); }}
+              >
+                <Globe className="w-4 h-4 mr-0.5" />
+                {lang === 'es' ? 'Idioma' : 'Language'}
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${idioma.isOpen ? "rotate-180" : ""}`} />
+              </button>
+              <AnimatePresence>
+                {idioma.isOpen && (
+                  <motion.div
+                    {...dropdownPanelVariants}
+                    transition={{ duration: 0.16, ease: "easeOut" as const }}
+                    onMouseEnter={idioma.cancelClose}
+                    className="absolute top-full right-0 pt-3 z-50"
+                  >
+                    <div className="w-36 bg-white rounded-xl shadow-2xl border border-border overflow-hidden">
+                      <div className="p-2 flex flex-col gap-1">
+                        <a href={lang === 'es' ? currentPath : (alternateLink || currentPath.replace('/en', '') || '/')}
+                          className={`block px-4 py-2.5 text-sm rounded-lg transition-colors ${lang === 'es' ? 'bg-primary text-white font-bold' : 'text-stone-600 hover:bg-secondary/40 hover:text-primary'}`}
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          Español
+                        </a>
+                        <a href={lang === 'en' ? currentPath : (alternateLink || (currentPath === '/' ? '/en' : '/en' + currentPath))}
+                          className={`block px-4 py-2.5 text-sm rounded-lg transition-colors ${lang === 'en' ? 'bg-primary text-white font-bold' : 'text-stone-600 hover:bg-secondary/40 hover:text-primary'}`}
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          English
+                        </a>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
 
             <Button
               className={`rounded-none px-6 py-2.5 text-sm font-semibold tracking-wide transition-all ${
@@ -394,18 +429,8 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
             </Button>
           </nav>
 
-          {/* Mobile Menu Toggle & Lang */}
+          {/* Mobile Menu Toggle */}
           <div className="flex items-center gap-2 md:hidden">
-            <a
-              href={alternateLink || (currentPath.startsWith('/en') ? currentPath.replace('/en', '') || '/' : '/en' + (currentPath === '/' ? '' : currentPath))}
-              className={`p-2 rounded-full hover:bg-primary/10 transition-colors flex items-center gap-1.5 ${isScrolled ? "text-foreground" : "text-white"}`}
-              title={lang === 'es' ? "Switch to English" : "Cambiar a Español"}
-            >
-              <Globe className="w-4 h-4" />
-              <span className="text-[10px] font-bold uppercase tracking-tighter">
-                {lang === 'es' ? "EN" : "ES"}
-              </span>
-            </a>
             <button
               className={`p-2 transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -426,6 +451,28 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
             className="absolute top-full left-0 right-0 bg-white shadow-xl border-t border-border md:hidden max-h-[85vh] overflow-y-auto"
           >
             <div className="flex flex-col py-4 px-6 gap-1">
+              {/* Mobile Language Selection - TOP & PROMINENT */}
+              <div className="py-5 border-b-2 border-primary/5 bg-stone-50/50 -mx-6 px-6 mb-4">
+                <div className="flex items-center gap-2 mb-4 justify-center">
+                  <Globe className="w-4 h-4 text-primary" />
+                  <p className="text-[10px] font-bold text-stone-400 uppercase tracking-[0.3em]">Seleccionar Idioma</p>
+                </div>
+                <div className="flex gap-3">
+                  <a href={lang === 'es' ? currentPath : (alternateLink || currentPath.replace('/en', '') || '/')}
+                    className={`flex-1 text-center py-3 rounded-xl border-2 font-bold uppercase text-xs tracking-widest transition-all ${lang === 'es' ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20' : 'bg-white text-stone-400 border-stone-200'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Español
+                  </a>
+                  <a href={lang === 'en' ? currentPath : (alternateLink || (currentPath === '/' ? '/en' : '/en' + currentPath))}
+                    className={`flex-1 text-center py-3 rounded-xl border-2 font-bold uppercase text-xs tracking-widest transition-all ${lang === 'en' ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20' : 'bg-white text-stone-400 border-stone-200'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    English
+                  </a>
+                </div>
+              </div>
+
               {/* Mobile Nosotros Accordion */}
               <div className="border-b border-muted">
                 <button
@@ -629,22 +676,14 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                 </AnimatePresence>
               </div>
 
-              <div className="flex justify-between items-center py-3 border-b border-muted">
-                <a
-                  href={lang === 'es' ? "/#contacto" : "/en/#contact"}
-                  className={`text-foreground text-lg hover:text-primary transition-colors font-serif`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {lang === 'es' ? "Contacto" : "Contact"}
-                </a>
-                <a
-                  href={alternateLink || (currentPath.startsWith('/en') ? currentPath.replace('/en', '') || '/' : '/en' + (currentPath === '/' ? '' : currentPath))}
-                  className="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {lang === 'es' ? "English" : "Español"}
-                </a>
-              </div>
+
+              <a
+                href={lang === 'es' ? "/#contacto" : "/en/#contact"}
+                className={`text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {lang === 'es' ? "Contacto" : "Contact"}
+              </a>
 
               <Button className="mt-4 w-full rounded-full bg-primary text-white hover:bg-primary/90" asChild>
                 <a id="cta-nav-reserva-mobile" href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
