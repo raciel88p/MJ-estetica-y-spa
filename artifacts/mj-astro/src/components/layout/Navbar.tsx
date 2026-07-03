@@ -525,7 +525,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                           >
                             {lang === 'es' ? 'Corporales' : 'Body'}
                           </a>
-                          {tratamientosCorporalesLinks.map((link) => (
+                          {tratamientosCorporalesLinks[lang].map((link) => (
                             <a
                               key={link.name}
                               href={link.href}
@@ -545,7 +545,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                           >
                             {lang === 'es' ? 'Faciales' : 'Facials'}
                           </a>
-                          {tratamientosFacialesLinks.map((link) => (
+                          {tratamientosFacialesLinks[lang].map((link) => (
                             <a
                               key={link.name}
                               href={link.href}
