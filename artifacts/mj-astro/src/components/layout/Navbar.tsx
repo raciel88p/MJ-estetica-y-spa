@@ -69,7 +69,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
   const nosotros = useHoverDropdown("nosotros", openDropdown, setOpenDropdown as any);
   const servicios = useHoverDropdown("servicios", openDropdown, setOpenDropdown as any);
   const medicos = useHoverDropdown("medicos", openDropdown, setOpenDropdown as any);
-  const idioma = useHoverDropdown("idioma", openDropdown, setOpenDropdown as any);
 
   const textClass = isScrolled ? "text-[#0c3e5a]" : "text-white/90";
   const linkBase = `text-[15px] uppercase tracking-widest font-medium hover:text-primary transition-all duration-300 relative group/link`;
@@ -92,6 +91,15 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
     exit: { opacity: 0, y: 8, scale: 0.97 },
   };
 
+  const getAlternateLink = (targetLang: 'es' | 'en') => {
+    if (alternateLink) return alternateLink;
+    if (targetLang === 'en') {
+      return currentPath === '/' ? '/en' : '/en' + currentPath;
+    } else {
+      return currentPath.replace('/en', '') || '/';
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -103,7 +111,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a href="/" className="flex items-center cursor-pointer group">
+          <a href={lang === 'es' ? "/" : "/en"} className="flex items-center cursor-pointer group">
             <img
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
               alt="MJ Fisio Estética y Spa"
@@ -368,26 +376,32 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
               </AnimatePresence>
             </div>
 
+            {/* ── Idioma Toggle ── */}
+            <div className={`flex items-center gap-2 border-r border-white/10 pr-6 mr-2`}>
+              <Globe className={`w-3.5 h-3.5 ${textClass} opacity-50`} />
+              <span className={`text-[10px] uppercase tracking-tighter ${textClass} opacity-50 font-bold mr-1`}>
+                {lang === 'es' ? 'Idioma' : 'Language'}
+              </span>
+              <div className="flex items-center gap-2">
+                <a
+                  href={getAlternateLink('es')}
+                  className={`text-[13px] font-bold transition-all ${lang === 'es' ? 'text-primary underline underline-offset-4' : textClass + ' opacity-60 hover:opacity-100'}`}
+                >
+                  ES
+                </a>
+                <span className={`${textClass} opacity-20 text-xs`}>|</span>
+                <a
+                  href={getAlternateLink('en')}
+                  className={`text-[13px] font-bold transition-all ${lang === 'en' ? 'text-primary underline underline-offset-4' : textClass + ' opacity-60 hover:opacity-100'}`}
+                >
+                  EN
+                </a>
+              </div>
+            </div>
+
             <a href={lang === 'es' ? "/#contacto" : "/en/#contact"} className={`${linkBase} ${textClass}`}>
               {lang === 'es' ? "Contacto" : "Contact"}
             </a>
-
-            {/* ── Idioma Toggle ── */}
-            <div className={`flex items-center gap-3 border-l border-white/10 pl-6 ml-2`}>
-              <a
-                href={lang === 'es' ? currentPath : (alternateLink || currentPath.replace('/en', '') || '/')}
-                className={`text-[13px] font-bold transition-all ${lang === 'es' ? 'text-primary underline underline-offset-4' : textClass + ' opacity-60 hover:opacity-100'}`}
-              >
-                ES
-              </a>
-              <span className={`${textClass} opacity-20 text-xs`}>|</span>
-              <a
-                href={lang === 'en' ? currentPath : (alternateLink || (currentPath === '/' ? '/en' : '/en' + currentPath))}
-                className={`text-[13px] font-bold transition-all ${lang === 'en' ? 'text-primary underline underline-offset-4' : textClass + ' opacity-60 hover:opacity-100'}`}
-              >
-                EN
-              </a>
-            </div>
 
             <Button
               className={`rounded-none px-6 py-2.5 text-sm font-semibold tracking-wide transition-all ${
@@ -432,14 +446,14 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                   <p className="text-[10px] font-bold text-stone-400 uppercase tracking-[0.3em]">Seleccionar Idioma</p>
                 </div>
                 <div className="flex gap-3">
-                  <a href={lang === 'es' ? currentPath : (alternateLink || currentPath.replace('/en', '') || '/')}
-                    className={`flex-1 text-center py-3 rounded-xl border-2 font-bold uppercase text-xs tracking-widest transition-all ${lang === 'es' ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20' : 'bg-white text-stone-400 border-stone-200'}`}
+                  <a href={getAlternateLink('es')}
+                    className={`flex-1 text-center py-3 rounded-xl border-2 font-bold uppercase text-xs tracking-widest transition-all ${lang === 'es' ? "bg-primary text-white border-primary shadow-lg shadow-primary/20" : "bg-white text-stone-400 border-stone-200"}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Español
                   </a>
-                  <a href={lang === 'en' ? currentPath : (alternateLink || (currentPath === '/' ? '/en' : '/en' + currentPath))}
-                    className={`flex-1 text-center py-3 rounded-xl border-2 font-bold uppercase text-xs tracking-widest transition-all ${lang === 'en' ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20' : 'bg-white text-stone-400 border-stone-200'}`}
+                  <a href={getAlternateLink('en')}
+                    className={`flex-1 text-center py-3 rounded-xl border-2 font-bold uppercase text-xs tracking-widest transition-all ${lang === 'en' ? "bg-primary text-white border-primary shadow-lg shadow-primary/20" : "bg-white text-stone-400 border-stone-200"}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     English

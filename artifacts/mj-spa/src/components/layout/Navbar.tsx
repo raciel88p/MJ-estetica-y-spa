@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback, type Dispatch, type SetStateAction } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
-import { Link } from "wouter";
+import { Menu, X, ChevronDown, Globe } from "lucide-react";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -11,13 +11,9 @@ import {
   tratamientosPiernasLinks,
   mjCreativoLinks,
 } from "@/data/services";
+import { useTranslations } from "@/i18n/ui";
 
-const corporalesHalf1 = tratamientosCorporalesLinks.slice(0, 6);
-const corporalesHalf2 = tratamientosCorporalesLinks.slice(6);
-const facialesHalf1 = tratamientosFacialesLinks.slice(0, 9);
-const facialesHalf2 = tratamientosFacialesLinks.slice(9);
-
-type DropdownKey = "nosotros" | "servicios" | "medicos" | "paquetes" | null;
+type DropdownKey = "nosotros" | "servicios" | "medicos" | "paquetes" | "idioma" | null;
 
 function useHoverDropdown(key: DropdownKey, openDropdown: DropdownKey, setOpenDropdown: Dispatch<SetStateAction<DropdownKey>>) {
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
@@ -43,8 +39,16 @@ function useHoverDropdown(key: DropdownKey, openDropdown: DropdownKey, setOpenDr
 }
 
 export function Navbar() {
+  const [location] = useLocation();
+  const lang = location.startsWith("/en") ? "en" : "es";
+  const t = useTranslations(lang);
+
+  const corporalesHalf1 = tratamientosCorporalesLinks[lang].slice(0, 6);
+  const corporalesHalf2 = tratamientosCorporalesLinks[lang].slice(6);
+  const facialesHalf1 = tratamientosFacialesLinks[lang].slice(0, 9);
+  const facialesHalf2 = tratamientosFacialesLinks[lang].slice(9);
+
   const [isScrolled, setIsScrolled] = useState(false);
-  const [currentPath, setCurrentPath] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isMobileMedicosOpen, setIsMobileMedicosOpen] = useState(false);
@@ -54,7 +58,6 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
-    setCurrentPath(window.location.pathname);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -71,7 +74,7 @@ export function Navbar() {
   const textClass = isScrolled ? "text-[#0c3e5a]" : "text-white/90";
   const linkBase = `text-[15px] uppercase tracking-widest font-medium hover:text-primary transition-all duration-300 relative group/link`;
 
-  const isActive = (path: string) => currentPath === path || (path !== "/" && currentPath.startsWith(path));
+  const isActive = (path: string) => location === path || (path !== "/" && location.startsWith(path));
 
   const ActiveIndicator = () => (
     <motion.span
@@ -89,6 +92,14 @@ export function Navbar() {
     exit: { opacity: 0, y: 8, scale: 0.97 },
   };
 
+  const getAlternateLink = (targetLang: 'es' | 'en') => {
+    if (targetLang === 'en') {
+      return location.startsWith('/en') ? location : (location === '/' ? '/en' : '/en' + location);
+    } else {
+      return location.startsWith('/en') ? (location.replace('/en', '') || '/') : location;
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -100,7 +111,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center cursor-pointer group">
+          <Link href={lang === 'es' ? "/" : "/en"} className="flex items-center cursor-pointer group">
             <img
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
               alt="MJ Fisio Estética y Spa"
@@ -124,7 +135,7 @@ export function Navbar() {
                 className={`flex items-center gap-1 ${linkBase} ${textClass} ${isActive("/nosotros") || isActive("/buzon-sugerencias") ? "text-primary" : ""}`}
                 onClick={(e) => { e.stopPropagation(); setOpenDropdown(nosotros.isOpen ? null : "nosotros"); }}
               >
-                Nosotros
+                {t('nav.nosotros')}
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${nosotros.isOpen ? "rotate-180" : ""}`} />
                 {(isActive("/nosotros") || isActive("/buzon-sugerencias")) && <ActiveIndicator />}
               </button>
@@ -138,17 +149,17 @@ export function Navbar() {
                   >
                     <div className="w-52 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
                       <div className="px-3 pt-4 pb-3 flex flex-col gap-1">
-                        <Link href="/nosotros"
+                        <Link href={lang === 'es' ? "/nosotros" : "/en/nosotros"}
                           className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                           onClick={() => setOpenDropdown(null)}
                         >
-                          Sobre Nosotros
+                          {lang === 'es' ? 'Sobre Nosotros' : 'About Us'}
                         </Link>
-                        <Link href="/buzon-sugerencias"
+                        <Link href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"}
                           className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                           onClick={() => setOpenDropdown(null)}
                         >
-                          Buzón de Sugerencias
+                          {lang === 'es' ? 'Buzón de Sugerencias' : 'Suggestion Box'}
                         </Link>
                       </div>
                     </div>
@@ -157,13 +168,13 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            <Link href="/testimonios" className={`${linkBase} ${textClass} ${isActive("/testimonios") ? "text-primary" : ""}`}>
-              Testimonios
+            <Link href={lang === 'es' ? "/testimonios" : "/en/testimonials"} className={`${linkBase} ${textClass} ${isActive("/testimonios") ? "text-primary" : ""}`}>
+              {t('nav.testimonios')}
               {isActive("/testimonios") && <ActiveIndicator />}
             </Link>
 
-            <Link href="/paquetes" className={`${linkBase} ${textClass} ${isActive("/paquetes") ? "text-primary" : ""}`}>
-              Paquetes
+            <Link href={lang === 'es' ? "/paquetes" : "/en/packages"} className={`${linkBase} ${textClass} ${isActive("/paquetes") ? "text-primary" : ""}`}>
+              {t('nav.paquetes')}
               {isActive("/paquetes") && <ActiveIndicator />}
             </Link>
 
@@ -179,7 +190,7 @@ export function Navbar() {
                 className={`flex items-center gap-1 ${linkBase} ${textClass} ${isActive("/tratamientos") || isActive("/servicios") ? "text-primary" : ""}`}
                 onClick={(e) => { e.stopPropagation(); setOpenDropdown(servicios.isOpen ? null : "servicios"); }}
               >
-                Servicios
+                {t('nav.servicios')}
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicios.isOpen ? "rotate-180" : ""}`} />
                 {(isActive("/tratamientos") || isActive("/servicios")) && <ActiveIndicator />}
               </button>
@@ -199,11 +210,11 @@ export function Navbar() {
                         <div className="grid grid-cols-5 gap-x-4">
                           {/* Corporales col 1 */}
                           <div>
-                            <Link href="/servicios/corporales"
+                            <Link href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"}
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
-                              Corporales
+                              {lang === 'es' ? 'Corporales' : 'Body'}
                             </Link>
                             {corporalesHalf1.map((link) => (
                               <Link
@@ -231,11 +242,11 @@ export function Navbar() {
                           </div>
                           {/* Faciales col 1 */}
                           <div>
-                            <Link href="/servicios/faciales"
+                            <Link href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"}
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
-                              Faciales
+                              {lang === 'es' ? 'Faciales' : 'Facials'}
                             </Link>
                             {facialesHalf1.map((link) => (
                               <Link
@@ -263,13 +274,13 @@ export function Navbar() {
                           </div>
                           {/* Piernas */}
                           <div>
-                            <Link href="/servicios/piernas"
+                            <Link href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"}
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
-                              Piernas
+                              {lang === 'es' ? 'Piernas' : 'Legs'}
                             </Link>
-                            {tratamientosPiernasLinks.map((link) => (
+                          {tratamientosPiernasLinks[lang].map((link) => (
                               <Link
                                 key={link.name}
                                 href={link.href}
@@ -285,7 +296,7 @@ export function Navbar() {
                               <span className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest mb-1">
                                 MJ Creativo
                               </span>
-                              {mjCreativoLinks.map((link) => (
+                            {mjCreativoLinks[lang].map((link) => (
                                 <Link
                                   key={link.name}
                                   href={link.href}
@@ -312,13 +323,13 @@ export function Navbar() {
               onMouseLeave={medicos.scheduleClose}
             >
               <div className="flex items-center gap-1">
-              <Link
-                  href="/medicina-estetica"
+                <Link
+                  href={lang === 'es' ? "/medicina-estetica" : "/en/medical-aesthetic"}
                   className={`${linkBase} ${textClass} ${isActive("/medicina-estetica") ? "text-primary" : ""}`}
                 >
-                  Médico Estético
+                  {t('nav.medico')}
                   {isActive("/medicina-estetica") && <ActiveIndicator />}
-              </Link>
+                </Link>
                 <button
                   className={`p-1 ${textClass} hover:text-primary transition-colors`}
                   onClick={(e) => { e.stopPropagation(); setOpenDropdown(medicos.isOpen ? null : "medicos"); }}
@@ -341,13 +352,13 @@ export function Navbar() {
                         </p>
                         <div className="flex flex-col gap-1">
                           <Link
-                            href="/medicina-estetica"
+                            href={lang === 'es' ? "/medicina-estetica" : "/en/facial-harmonization"}
                             className="block px-3 py-2 text-sm font-bold text-primary hover:bg-secondary/40 transition-colors rounded-lg"
                             onClick={() => setOpenDropdown(null)}
                           >
-                            Armonización Facial
+                            {lang === 'es' ? 'Armonización Facial' : 'Facial Harmonization'}
                           </Link>
-                          {medicoEsteticosLinks.map((link) => (
+                          {medicoEsteticosLinks[lang].map((link) => (
                             <Link
                               key={link.name}
                               href={link.href}
@@ -365,8 +376,31 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            <Link href="/#contacto" className={`${linkBase} ${textClass}`}>
-              Contacto
+            {/* ── Idioma Toggle ── */}
+            <div className={`flex items-center gap-2 border-r border-white/10 pr-6 mr-2`}>
+              <Globe className={`w-3.5 h-3.5 ${textClass} opacity-50`} />
+              <span className={`text-[10px] uppercase tracking-tighter ${textClass} opacity-50 font-bold mr-1`}>
+                {lang === 'es' ? 'Idioma' : 'Language'}
+              </span>
+              <div className="flex items-center gap-2">
+                <Link
+                  href={getAlternateLink('es')}
+                  className={`text-[13px] font-bold transition-all ${lang === 'es' ? 'text-primary underline underline-offset-4' : textClass + ' opacity-60 hover:opacity-100'}`}
+                >
+                  ES
+                </Link>
+                <span className={`${textClass} opacity-20 text-xs`}>|</span>
+                <Link
+                  href={getAlternateLink('en')}
+                  className={`text-[13px] font-bold transition-all ${lang === 'en' ? 'text-primary underline underline-offset-4' : textClass + ' opacity-60 hover:opacity-100'}`}
+                >
+                  EN
+                </Link>
+              </div>
+            </div>
+
+            <Link href={lang === 'es' ? "/#contacto" : "/en/#contact"} className={`${linkBase} ${textClass}`}>
+              {lang === 'es' ? "Contacto" : "Contact"}
             </Link>
 
             <Button
@@ -378,18 +412,20 @@ export function Navbar() {
               asChild
             >
               <a id="cta-nav-reserva-desktop" href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer">
-                Reservar cita
+                {t('nav.reservar')}
               </a>
             </Button>
           </nav>
 
           {/* Mobile Menu Toggle */}
-          <button
-            className={`md:hidden p-2 transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="flex items-center gap-2 md:hidden">
+            <button
+              className={`p-2 transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -403,6 +439,28 @@ export function Navbar() {
             className="absolute top-full left-0 right-0 bg-white shadow-xl border-t border-border md:hidden max-h-[85vh] overflow-y-auto"
           >
             <div className="flex flex-col py-4 px-6 gap-1">
+              {/* Mobile Language Selection - TOP & PROMINENT */}
+              <div className="py-5 border-b-2 border-primary/5 bg-stone-50/50 -mx-6 px-6 mb-4">
+                <div className="flex items-center gap-2 mb-4 justify-center">
+                  <Globe className="w-4 h-4 text-primary" />
+                  <p className="text-[10px] font-bold text-stone-400 uppercase tracking-[0.3em]">Seleccionar Idioma</p>
+                </div>
+                <div className="flex gap-3">
+                  <Link href={getAlternateLink('es')}
+                    className={`flex-1 text-center py-3 rounded-xl border-2 font-bold uppercase text-xs tracking-widest transition-all ${lang === 'es' ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20' : 'bg-white text-stone-400 border-stone-200'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Español
+                  </Link>
+                  <Link href={getAlternateLink('en')}
+                    className={`flex-1 text-center py-3 rounded-xl border-2 font-bold uppercase text-xs tracking-widest transition-all ${lang === 'en' ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20' : 'bg-white text-stone-400 border-stone-200'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    English
+                  </Link>
+                </div>
+              </div>
+
               {/* Mobile Nosotros Accordion */}
               <div className="border-b border-muted">
                 <button
@@ -421,17 +479,17 @@ export function Navbar() {
                       className="overflow-hidden"
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
-                        <Link href="/nosotros"
+                        <Link href={lang === 'es' ? "/nosotros" : "/en/nosotros"}
                           className={`block py-2 text-base ${isActive("/nosotros") ? "text-primary font-bold" : "text-muted-foreground"} hover:text-primary transition-colors`}
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                         >
-                          Sobre Nosotros
+                          {lang === 'es' ? 'Sobre Nosotros' : 'About Us'}
                         </Link>
-                        <Link href="/buzon-sugerencias"
+                        <Link href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"}
                           className={`block py-2 text-base ${isActive("/buzon-sugerencias") ? "text-primary font-bold" : "text-muted-foreground"} hover:text-primary transition-colors`}
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                         >
-                          Buzón de Sugerencias
+                          {lang === 'es' ? 'Buzón de Sugerencias' : 'Suggestion Box'}
                         </Link>
                       </div>
                     </motion.div>
@@ -439,18 +497,18 @@ export function Navbar() {
                 </AnimatePresence>
               </div>
 
-              <Link href="/testimonios"
+              <Link href={lang === 'es' ? "/testimonios" : "/en/testimonials"}
                 className={`${isActive("/testimonios") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Testimonios
+                {t('nav.testimonios')}
               </Link>
 
-              <Link href="/paquetes"
+              <Link href={lang === 'es' ? "/paquetes" : "/en/packages"}
                 className={`${isActive("/paquetes") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Paquetes
+                {t('nav.paquetes')}
               </Link>
 
 
@@ -475,13 +533,13 @@ export function Navbar() {
                       <div className="pb-3 pl-4 flex flex-col gap-1">
                         {/* Corporales */}
                         <div className="mb-2">
-                          <Link href="/servicios/corporales"
+                          <Link href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"}
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
-                            Corporales
+                            {lang === 'es' ? 'Corporales' : 'Body'}
                           </Link>
-                          {tratamientosCorporalesLinks.map((link) => (
+                          {tratamientosCorporalesLinks[lang].map((link) => (
                             <Link
                               key={link.name}
                               href={link.href}
@@ -495,13 +553,13 @@ export function Navbar() {
                         </div>
                         {/* Faciales */}
                         <div className="mb-2">
-                          <Link href="/servicios/faciales"
+                          <Link href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"}
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
-                            Faciales
+                            {lang === 'es' ? 'Faciales' : 'Facials'}
                           </Link>
-                          {tratamientosFacialesLinks.map((link) => (
+                          {tratamientosFacialesLinks[lang].map((link) => (
                             <Link
                               key={link.name}
                               href={link.href}
@@ -515,13 +573,13 @@ export function Navbar() {
                         </div>
                         {/* Piernas */}
                         <div className="mb-2">
-                          <Link href="/servicios/piernas"
+                          <Link href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"}
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
-                            Piernas
+                            {lang === 'es' ? 'Piernas' : 'Legs'}
                           </Link>
-                          {tratamientosPiernasLinks.map((link) => (
+                          {tratamientosPiernasLinks[lang].map((link) => (
                             <Link
                               key={link.name}
                               href={link.href}
@@ -537,7 +595,7 @@ export function Navbar() {
                             <span className="block py-1 text-[10px] font-bold text-primary uppercase tracking-widest mb-1">
                               MJ Creativo
                             </span>
-                            {mjCreativoLinks.map((link) => (
+                            {mjCreativoLinks[lang].map((link) => (
                               <Link
                                 key={link.name}
                                 href={link.href}
@@ -559,11 +617,11 @@ export function Navbar() {
               <div className="border-b border-muted">
                 <div className="flex justify-between items-center w-full">
                   <Link
-                    href="/medicina-estetica"
+                    href={lang === 'es' ? "/medicina-estetica" : "/en/facial-harmonization"}
                     className={`flex-grow ${isActive("/medicina-estetica") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 hover:text-primary transition-colors font-serif`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Médico Estético
+                    {t('nav.medico')}
                   </Link>
                   <button
                     className="p-3 text-foreground hover:text-primary transition-colors"
@@ -582,13 +640,13 @@ export function Navbar() {
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
                           <Link
-                            href="/medicina-estetica"
+                            href={lang === 'es' ? "/medicina-estetica" : "/en/facial-harmonization"}
                             className="block py-2 text-base font-bold text-primary hover:text-primary/80 transition-colors"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileMedicosOpen(false); }}
                           >
-                            Armonización Facial
+                            {lang === 'es' ? 'Armonización Facial' : 'Facial Harmonization'}
                           </Link>
-                        {medicoEsteticosLinks.map((link) => (
+                      {medicoEsteticosLinks[lang].map((link) => (
                           <Link
                             key={link.name}
                             href={link.href}
@@ -606,17 +664,18 @@ export function Navbar() {
                 </AnimatePresence>
               </div>
 
+
               <Link
-                href="/#contacto"
-                className={`text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif`}
+                href={lang === 'es' ? "/#contacto" : "/en/#contact"}
+                className={`text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contacto
+                {lang === 'es' ? "Contacto" : "Contact"}
               </Link>
 
               <Button className="mt-4 w-full rounded-full bg-primary text-white hover:bg-primary/90" asChild>
                 <a id="cta-nav-reserva-mobile" href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>
-                  Reserva tu cita
+                  {t('nav.reservar')}
                 </a>
               </Button>
             </div>
