@@ -1,0 +1,101 @@
+{
+  "intro": {
+    "quote": "At MJ Estética & Wellness Center we offer relaxing, therapeutic and deep tissue massages in Turrialba designed to help you feel better physically and mentally from the first session.",
+    "items": [
+      { "text": "Convenient location in Turrialba" },
+      { "text": "Quick booking via WhatsApp" },
+      { "text": "Scheduled appointments" },
+      { "text": "Personalized attention" }
+    ],
+    "guideTitle": "Download our FREE Guide to Boosting Massage Benefits",
+    "guideDesc": "Learn how to get better results before and after your session.",
+    "guideCta": "Download Free Guide"
+  },
+  "whyUs": {
+    "title": "Why Choose Our Massages in Turrialba?",
+    "desc": "We live exposed to stress, long working hours, poor posture and accumulated tension.",
+    "consequenceLabel": "Over time this can cause:",
+    "consequences": [
+      "Neck pain",
+      "Muscle contractures",
+      "Constant stress",
+      "Physical fatigue",
+      "Problems resting",
+      "Feeling of exhaustion"
+    ],
+    "quote": "Our treatments are designed to help you regain balance, well-being and relaxation."
+  },
+  "services": {
+    "title": "Massage Services in Turrialba",
+    "locationSuffix": "in Turrialba",
+    "benefitsLabel": "Benefits:",
+    "cta": "BOOK NOW",
+    "benefitGroups": {
+      "relaxing": ["Deep relaxation", "Better rest", "Less muscle tension", "General well-being sensation"],
+      "deep-tissue": ["Contracture relief", "Less muscle stiffness", "Better mobility", "Muscle recovery"],
+      "default": ["Localized tension relief", "Physical recovery", "Greater body comfort", "Sensation of relief"]
+    },
+    "aromaNote": "Ideal for people seeking an integral well-being experience.",
+    "spaParejaNote": "An excellent option for anniversaries, celebrations or simply to disconnect together."
+  },
+  "regularBenefits": {
+    "title": "Benefits of Receiving Regular Massages",
+    "desc": "Many people seek massages in Turrialba because they want to improve their quality of life.",
+    "items": [
+      "Reduce stress and anxiety",
+      "Improve sleep quality",
+      "Decrease muscle tension",
+      "Promote blood circulation",
+      "Improve physical and emotional well-being",
+      "Recover from daily fatigue"
+    ]
+  },
+  "difference": {
+    "title": "What Sets MJ Estética & Wellness Center Apart",
+    "quote": "We don't offer generic sessions. Each massage is adapted to the specific needs of each client.",
+    "chooseLabel": "That's why our clients choose us:",
+    "items": [
+      "Professional and personalized attention",
+      "Private and relaxing environment",
+      "Comfortable and safe facilities",
+      "Protocols adapted to each person",
+      "Easy access in Turrialba",
+      "Quick booking via WhatsApp"
+    ],
+    "opinionsLabel": "Opinions from Turrialba Clients",
+    "opinions": [
+      "Excellent service and environment. I left completely relaxed.",
+      "The deep tissue massage helped me a lot with back tension.",
+      "A very professional and welcoming place."
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions About Massages in Turrialba"
+  },
+  "finalCta": {
+    "title": "Book Your Massage in Turrialba Today",
+    "desc": "If you are looking for a relaxing, therapeutic or deep tissue massage in Turrialba, we are ready to help you. Don't wait for stress and tension to keep building up.",
+    "items": [
+      "MJ Estética & Wellness Center",
+      "Book via WhatsApp",
+      "Limited spots per day"
+    ],
+    "cta": "👉 SCHEDULE MY MASSAGE NOW",
+    "footer": "Recover your well-being, relax your body and start feeling better again.",
+    "zonesTitle": "Areas We Serve",
+    "zonesDesc": "If you are looking for massages in Turrialba or nearby areas, we will be happy to assist you.",
+    "zones": [
+      "Turrialba Center",
+      "La Suiza",
+      "Santa Cruz",
+      "Tucurrique",
+      "Pavones",
+      "Juan Viñas",
+      "Aquiares",
+      "Pejibaye"
+    ]
+  },
+  "waMessages": {
+    "general": "Hi! I would like more information about Massages in Turrialba"
+  }
+}

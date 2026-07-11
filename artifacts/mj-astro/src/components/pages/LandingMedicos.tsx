@@ -193,7 +193,7 @@ function LandingMedicos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         </div>
       </section>
 
-      <StatsBar />
+      <StatsBar lang={lang} />
 
       {/* ───── 2. INTRO ───── */}
       <section className="py-24 px-4 sm:px-6">

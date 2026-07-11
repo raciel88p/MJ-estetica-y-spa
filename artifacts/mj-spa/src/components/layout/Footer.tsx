@@ -1,8 +1,16 @@
 import { Instagram, Facebook, MapPin, Phone, Clock } from "lucide-react";
-import { Link } from "wouter";
+import { useTranslations } from "@/i18n/ui";
 
+export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
+  const t = useTranslations(lang);
 
-export function Footer() {
+  const t_address = lang === 'es' ? 'Turrialba, Ciudadela Jorge de Bravo' : 'Turrialba, Ciudadela Jorge de Bravo';
+  const t_maps = lang === 'es' ? 'Ver en Google Maps' : 'View on Google Maps';
+  const t_review = lang === 'es' ? 'Dejarnos una reseña' : 'Leave us a review';
+  const t_search = lang === 'es' ? 'Buscar en Google' : 'Search on Google';
+  const t_hours_week = lang === 'es' ? 'Lun, Mar, Jue, Vie: 9:00 - 20:00' : 'Mon, Tue, Thu, Fri: 9:00 - 20:00';
+  const t_hours_sat = lang === 'es' ? 'Sáb: 8:00 - 15:00' : 'Sat: 8:00 - 15:00';
+
   return (
     <footer className="bg-foreground text-white/80 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,7 +27,7 @@ export function Footer() {
               height="64"
             />
             <p className="text-white/60 font-light leading-relaxed">
-              Tu centro de confianza en Turrialba para cuidar de tu cuerpo, mente y bienestar con los mejores profesionales.
+              {t('footer.brand')}
             </p>
             <div className="flex gap-4 pt-4 flex-wrap">
               <a href="https://www.instagram.com/fisioesteticamj/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
@@ -43,23 +51,23 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-serif text-white mb-6">Páginas</h4>
+            <h4 className="text-xl font-serif text-white mb-6">{t('footer.pages')}</h4>
             <ul className="space-y-3">
-              <li><Link href="/nosotros" className="hover:text-secondary transition-colors">Sobre Nosotros</Link></li>
-              <li><Link href="/servicios/corporales" className="hover:text-secondary transition-colors">Tratamientos Corporales</Link></li>
-              <li><Link href="/servicios/faciales" className="hover:text-secondary transition-colors">Tratamientos Faciales</Link></li>
-              <li><Link href="/servicios/piernas" className="hover:text-secondary transition-colors">Tratamientos de Piernas</Link></li>
-              <li><Link href="/paquetes" className="hover:text-secondary transition-colors">Paquetes</Link></li>
-              <li><Link href="/medicos-esteticos" className="hover:text-secondary transition-colors">Médico Estético</Link></li>
-              <li><Link href="/testimonios" className="hover:text-secondary transition-colors">Testimonios</Link></li>
-              <li><Link href="/buzon-sugerencias" className="hover:text-secondary transition-colors font-medium text-primary">Buzón de Sugerencias</Link></li>
-              <li><Link href="/mapa-del-sitio" className="hover:text-secondary transition-colors">Mapa del Sitio</Link></li>
+              <li><a href={lang === 'es' ? "/nosotros" : "/en/about-us"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Sobre Nosotros" : "About Us"}</a></li>
+              <li><a href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos Corporales" : "Body Treatments"}</a></li>
+              <li><a href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos Faciales" : "Facial Treatments"}</a></li>
+              <li><a href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos de Piernas" : "Leg Treatments"}</a></li>
+              <li><a href={lang === 'es' ? "/paquetes" : "/en/packages"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Paquetes" : "Packages"}</a></li>
+              <li><a href={lang === 'es' ? "/medicos-esteticos" : "/en/medical-aesthetic"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Médico Estético" : "Medical Aesthetic"}</a></li>
+              <li><a href={lang === 'es' ? "/testimonios" : "/en/testimonials"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Testimonios" : "Testimonials"}</a></li>
+              <li><a href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"} className="hover:text-secondary transition-colors font-medium text-primary">{lang === 'es' ? "Buzón de Sugerencias" : "Suggestion Box"}</a></li>
+              <li><a href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</a></li>
             </ul>
           </div>
 
           {/* Google Business + Find us */}
           <div>
-            <h4 className="text-xl font-serif text-white mb-6">Encuéntranos</h4>
+            <h4 className="text-xl font-serif text-white mb-6">{t('footer.findus')}</h4>
             <ul className="space-y-3">
               <li>
                 <a
@@ -71,7 +79,7 @@ export function Footer() {
                   <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                   </svg>
-                  Ver en Google Maps
+                  {t_maps}
                 </a>
               </li>
               <li>
@@ -84,7 +92,7 @@ export function Footer() {
                   <svg className="w-4 h-4 shrink-0 fill-yellow-400" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>
-                  Dejarnos una reseña
+                  {t_review}
                 </a>
               </li>
               <li>
@@ -100,7 +108,7 @@ export function Footer() {
                     <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                     <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                   </svg>
-                  Buscar en Google
+                  {t_search}
                 </a>
               </li>
             </ul>
@@ -108,11 +116,11 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xl font-serif text-white mb-6">Contacto</h4>
+            <h4 className="text-xl font-serif text-white mb-6">{t('footer.contact')}</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
-                <span>Turrialba, Ciudadela Jorge de Bravo</span>
+                <span>{t_address}</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-secondary shrink-0" />
@@ -121,8 +129,8 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <Clock className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                 <div>
-                  <p>Lun, Mar, Jue, Vie: 9:00 - 20:00</p>
-                  <p>Sáb: 8:00 - 15:00</p>
+                  <p>{t_hours_week}</p>
+                  <p>{t_hours_sat}</p>
                 </div>
               </li>
             </ul>
@@ -130,10 +138,10 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-          <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. {t('footer.rights')}</p>
           <div className="flex gap-4">
-            <Link href="/politica-de-datos" className="hover:text-white">Política de Privacidad</Link>
-            <Link href="/mapa-del-sitio" className="hover:text-white">Mapa del Sitio</Link>
+            <a href={lang === 'es' ? "/politica-de-datos" : "/en/data-policy"} className="hover:text-white">{lang === 'es' ? "Política de Privacidad" : "Privacy Policy"}</a>
+            <a href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-white">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</a>
           </div>
         </div>
       </div>

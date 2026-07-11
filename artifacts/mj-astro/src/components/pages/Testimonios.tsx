@@ -243,7 +243,7 @@ function Testimonios({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         </div>
       </section>
 
-      <StatsBar />
+      <StatsBar lang={lang} />
 
 
       {/* CRO Testimonial System */}
@@ -261,7 +261,7 @@ function Testimonios({ lang = 'es' }: { lang?: 'es' | 'en' }) {
               {t_hook('testimonials.cases.desc')}
             </p>
           </div>
-          <TestimonialGrid />
+          <TestimonialGrid lang={lang} />
         </div>
       </section>
 

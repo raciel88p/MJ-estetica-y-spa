@@ -1,0 +1,142 @@
+{
+  "intro": {
+    "tagline": "Facial Renewal",
+    "p1": "Do you feel that dark spots, uneven tone, or lack of luminosity make your skin look tired or dull?",
+    "p2": "At <span class=\"font-bold text-stone-900\">MJ Estética & Wellness Center</span> we develop personalized depigmenting laser protocols oriented towards supporting the appearance of brighter, more even, and revitalized skin through advanced aesthetic technology and premium skincare.",
+    "items": [
+      "✨ Natural Glow",
+      "✨ Progressive facial luminosity",
+      "✨ Personalized protocols",
+      "✨ Premium aesthetic experience",
+      "✨ Professional attention in Turrialba"
+    ]
+  },
+  "whatIs": {
+    "title": "Discover how to improve your skin's appearance with advanced aesthetic technology",
+    "desc": "The depigmenting laser is a facial treatment designed to support luminosity, even tone appearance, and facial rejuvenation protocols through technology oriented towards skin well-being and advanced care.",
+    "desc2": "Every skin has different needs, which is why at MJ we perform a personalized evaluation to recommend the most appropriate protocol based on goals, texture, sensitivity, and skin type.",
+    "boxTitle": "What can this treatment help improve?",
+    "items": [
+      "Even tone appearance",
+      "Glow and facial luminosity",
+      "Sensation of facial renewal",
+      "Revitalized appearance",
+      "Visually more even texture",
+      "Advanced skincare protocols",
+      "Skin well-being and care",
+      "Premium facial experience"
+    ]
+  },
+  "why": {
+    "title": "Why do many people choose the depigmenting laser?",
+    "intro": "Because they seek to look fresher, brighter, and more confident without the need for exaggerated changes.",
+    "p1": "Often facial spots, uneven tone, or loss of glow make the skin look more tired than it really is.",
+    "p2": "The problem isn't always age. Often it's accumulation of sun, stress, hormonal changes, or simply a lack of appropriate protocols for the skin.",
+    "p3": "And although there are many products, masks, or viral routines... most do not work in a personalized way.",
+    "p4": "That's where a professional protocol can make a big difference.",
+    "p5": "At MJ Estética & Wellness Center we combine premium skincare experience, individualized evaluation, and advanced aesthetic technology to create protocols oriented towards facial luminosity and skin well-being."
+  },
+  "methodology": {
+    "title": "How does the depigmenting laser treatment work?",
+    "steps": [
+      { "s": "Step 1", "t": "Personalized facial evaluation", "d": "We analyze your skin, goals, and specific needs to recommend the most appropriate protocol." },
+      { "s": "Step 2", "t": "Skin preparation", "d": "The skin is prepared through protocols oriented towards comfort and facial care." },
+      { "s": "Step 3", "t": "Laser protocol application", "d": "The session is performed professionally and personally according to sensitivity and goals." },
+      { "s": "Step 4", "t": "Post-treatment recommendations", "d": "We guide you with post-treatment care, sun protection, and professional follow-up to support better results." }
+    ]
+  },
+  "benefits": {
+    "title": "Benefits of the depigmenting laser",
+    "items": [
+      "Brighter appearance",
+      "Progressive facial glow",
+      "Sensation of renewal",
+      "Premium skincare experience",
+      "Facial well-being",
+      "Personalized protocols",
+      "Facial rejuvenation oriented towards luminosity",
+      "Professional attention and individualized follow-up"
+    ]
+  },
+  "who": {
+    "title": "Who is this treatment recommended for?",
+    "desc": "This treatment can be ideal for people looking for:",
+    "items": [
+      "Natural facial glow",
+      "More even appearance",
+      "Advanced skincare protocols",
+      "Facial luminosity",
+      "Skin well-being",
+      "Progressive facial rejuvenation",
+      "Premium aesthetic experiences"
+    ]
+  },
+  "whyUs": {
+    "title": "What makes MJ Estética & Wellness Center different",
+    "p1": "We don't believe in generic treatments. We believe each skin deserves a personalized protocol.",
+    "p2": "That's why our experience is oriented towards:",
+    "items": [
+      { "t": "Advanced aesthetic technology" },
+      { "t": "Individualized protocols" },
+      { "t": "Professional attention" },
+      { "t": "Comfortable and safe environment" },
+      { "t": "Premium skincare experience" },
+      { "t": "Personalized follow-up" },
+      { "t": "Professional facial evaluation" }
+    ],
+    "closing": "Our goal is not only to perform a treatment. We seek to help you feel more comfortable, secure, and happy with the appearance of your skin."
+  },
+  "testimonials": {
+    "title": "Testimonials of real experiences",
+    "items": [
+      "“My skin felt much brighter and fresher after the sessions.”",
+      "“I loved that the protocol was personalized and they explained each step.”",
+      "“The experience was super professional and the facial glow looked very natural.”"
+    ],
+    "author": "MJ Patient"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "What is the depigmenting laser?", "a": "It is a facial protocol oriented towards supporting even tone appearance and luminosity through advanced aesthetic technology." },
+      { "q": "Does it help with facial spots?", "a": "It can support protocols related to even appearance and facial glow based on personalized evaluation." },
+      { "q": "Is there recovery time?", "a": "Depending on each skin, there may be subsequent recommendations and significant use of sunscreen." },
+      { "q": "How many sessions are recommended?", "a": "The quantity can vary according to goals and individualized facial evaluation." },
+      { "q": "Can it be combined with other treatments?", "a": "Yes, many people combine facial protocols and advanced skincare based on professional recommendation." },
+      { "q": "When are changes observed?", "a": "Each skin responds differently. Results are usually perceived progressively." },
+      { "q": "What post-treatment care is required?", "a": "Sun protection, hydration, and professional follow-up." }
+    ]
+  },
+  "programs": {
+    "title": "Programs and evaluations",
+    "items": [
+      "✨ Personalized facial evaluations",
+      "✨ Facial glow programs",
+      "✨ Premium skincare protocols",
+      "✨ Advanced facial care",
+      "✨ Facial care packages"
+    ],
+    "note": "Check availability and options according to your skin"
+  },
+  "leadMagnet": {
+    "label": "🎁 EXCLUSIVE FREE RESOURCE",
+    "title": "Free Guide:",
+    "subtitle": "“How to improve the results of your depigmenting treatment”",
+    "wordLabel": "💌 Comment the word:",
+    "word": "DESPIGMENTANTE",
+    "desc": "and receive our guide for FREE with recommendations to support:",
+    "items": ["Facial glow", "Luminosity", "Post-care", "Sun protection", "Skincare routines", "Skin well-being"],
+    "cta": "GO TO INSTAGRAM"
+  },
+  "finalCta": {
+    "title": "Schedule your facial evaluation today",
+    "desc": "Your skin deserves professional attention, personalized protocols, and a premium experience oriented towards facial well-being and luminosity.",
+    "location": "📍 MJ Estética & Wellness Center — Turrialba",
+    "items": [
+      "✅ Schedule your facial evaluation",
+      "✅ Discover the ideal protocol",
+      "✅ Check availability"
+    ],
+    "cta": "WRITE ON WHATSAPP TODAY"
+  }
+}

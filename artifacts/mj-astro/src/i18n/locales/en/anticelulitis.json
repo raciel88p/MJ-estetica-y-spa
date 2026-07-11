@@ -1,0 +1,149 @@
+{
+  "intro": {
+    "title": "Would you like to have smoother, firmer and more uniform skin?",
+    "subtitle": "Discover our Anti-Cellulite Treatment at MJ Estética & Wellness Center",
+    "p1": "Cellulite is one of the most common aesthetic concerns for women of all ages. Although it is completely natural, many people want to improve the appearance of their skin to feel more comfortable and confident.",
+    "p2": "At MJ Estética & Wellness Center we have developed personalized body protocols that help progressively improve skin appearance, promoting a sense of well-being and confidence."
+  },
+  "leadMagnet": {
+    "label": "Exclusive Gift",
+    "title": "By commenting the word ANTI-CELLULITE",
+    "subtitle": "We want to give you our free guide:",
+    "guideTitle": "\"7 habits that boost the results of any anti-cellulite treatment\"",
+    "desc": "Discover simple recommendations that can help you complement your body treatments and improve your well-being experience.",
+    "ctaLabel": "Request it now",
+    "ctaDesc": "Click the button at the bottom of this page or contact us on Instagram.",
+    "cta": "Go to Instagram"
+  },
+  "painPoints": {
+    "title": "Do you identify with any of these situations?",
+    "items": [
+      "You feel that the appearance of your skin has changed over time.",
+      "You have tried creams or products without noticing visible changes.",
+      "You feel uncomfortable wearing dresses, shorts or tight clothing.",
+      "You want to improve the texture and appearance of certain body areas.",
+      "You are looking for professional care accompanied by specialists."
+    ],
+    "closing": "If you answered yes to any of them, this treatment could be ideal for you."
+  },
+  "whatIs": {
+    "label": "The science of well-being",
+    "title": "What is our anti-cellulite treatment?",
+    "p1": "It is a personalized body protocol designed to progressively improve skin appearance through non-invasive aesthetic techniques that seek to favor circulation, stimulate tissues and complement body remodeling processes.",
+    "p2": "Each person has different characteristics, so we perform a prior assessment to determine the most appropriate protocol according to your goals."
+  },
+  "benefits": {
+    "title": "Benefits that our patients usually value",
+    "items": [
+      { "t": "More uniform skin", "d": "Skin appearance visibly smoother and softer.", "i": "✨" },
+      { "t": "Body firmness", "d": "Improves the sensation of tonicity in the treated areas.", "i": "💪" },
+      { "t": "Integral well-being", "d": "Ideal complement for your personal care programs.", "i": "🌿" },
+      { "t": "Self-care", "d": "A relaxing experience focused 100% on you.", "i": "🧖‍♀️" },
+      { "t": "Adapted to you", "d": "Protocols that adjust to your individual needs.", "i": "🎯" },
+      { "t": "Expert attention", "d": "Professional guidance throughout the process.", "i": "👩‍⚕️" }
+    ]
+  },
+  "vision": {
+    "title": "Imagine how you could feel",
+    "items": [
+      "Visualize wearing those clothes you love without worrying about your skin's appearance.",
+      "Imagine looking in the mirror and feeling more comfortable with your image.",
+      "Think about dedicating a space for yourself, for your well-being and self-care."
+    ],
+    "closing1": "It's not just about aesthetics.",
+    "closing2": "It's about feeling good about yourself."
+  },
+  "failure": {
+    "title": "Why do many people not get results?",
+    "desc1": "Because they usually focus solely on cosmetic products or isolated solutions.",
+    "desc2": "Skin appearance is influenced by multiple factors:",
+    "factors": [
+      "Daily habits", "Hydration",
+      "Physical activity", "Nutrition",
+      "Body care", "Aesthetic protocols"
+    ],
+    "closing": "That's why at MJ we work from an integral and personalized approach.",
+    "commitmentLabel": "MJ Commitment",
+    "commitmentQuote": "“We approach cellulite not as an isolated problem, but as part of your total body well-being.”"
+  },
+  "wellness": {
+    "title": "Our Body Wellness Experience",
+    "desc": "When you schedule your appointment you don't just receive a treatment. You receive an experience designed for your well-being.",
+    "items": [
+      "Comfortable spaces",
+      "Individual attention",
+      "Unique protocols",
+      "Relaxing environment",
+      "Guidance",
+      "Recommendations"
+    ],
+    "footer": "Each session is intended to become a moment of self-care and renewal."
+  },
+  "howItWorks": {
+    "title": "How does it work?",
+    "steps": [
+      { "s": "Step 1", "t": "Personalized assessment", "d": "We analyze your goals and individual characteristics." },
+      { "s": "Step 2", "t": "Protocol design", "d": "We select the most appropriate treatment for you." },
+      { "s": "Step 3", "t": "Procedure application", "d": "We perform the session following professional protocols." },
+      { "s": "Step 4", "t": "Complementary recommendations", "d": "We guide you on habits that can help enhance your experience." }
+    ]
+  },
+  "who": {
+    "title": "For whom is it recommended?",
+    "items": [
+      "People who want to improve skin appearance.",
+      "Women looking for personalized body treatments.",
+      "People interested in wellness and self-care.",
+      "Those who want to complement body remodeling programs.",
+      "People who value premium well-being experiences."
+    ]
+  },
+  "testimonials": {
+    "title": "What our patients say",
+    "items": [
+      "I loved the attention and guidance throughout the process.",
+      "The sessions feel relaxing and helped me dedicate time for myself.",
+      "From the assessment they understood exactly what I was looking for.",
+      "The environment is beautiful and the service excellent."
+    ]
+  },
+  "whyUs": {
+    "title": "Why choose MJ Estética & Wellness Center?",
+    "desc": "Because we understand that every body is different. We don't apply generic protocols.",
+    "subtitle": "We design personalized experiences focused on well-being, self-care and integral attention.",
+    "items": [
+      "Individual assessment", "Personalized body protocols",
+      "Close and professional service", "Premium environment",
+      "Integral wellness experience", "Accessible location in Turrialba"
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "How many sessions do I need?", "a": "The number of sessions can vary according to each person and their goals. During the assessment we will guide you." },
+      { "q": "Is it painful?", "a": "The experience is usually comfortable and adapted to each patient." },
+      { "q": "Can I combine it with other treatments?", "a": "Yes. There are complementary protocols that can be evaluated during your consultation." },
+      { "q": "How long does a session last?", "a": "Duration depends on the selected treatment and is explained during the assessment." },
+      { "q": "Are results immediate?", "a": "Each person responds differently and results are usually observed progressively." }
+    ]
+  },
+  "finalLead": {
+    "label": "🎁 EXCLUSIVE GIFT",
+    "title": "Claim your free guide",
+    "p1": "\"7 habits that boost the results of any anti-cellulite treatment\"",
+    "p2": "Also, receive information about our promotions and appointment availability.",
+    "wordLabel": "💌 Comment the word:",
+    "word": "ANTI-CELLULITE",
+    "desc": "and automatically receive the free guide + exclusive information about our sessions.",
+    "cta": "GO TO INSTAGRAM"
+  },
+  "finalCta": {
+    "title": "Schedule Your Body Assessment Today",
+    "desc": "Appointments are limited to ensure personalized attention.",
+    "cta1": "Click here and schedule your assessment",
+    "cta2": "Check availability via WhatsApp",
+    "cta3": "Discover which protocol is ideal for you",
+    "footerTitle": "MJ Estética & Wellness Center",
+    "footerDesc": "Body well-being, self-care and premium experiences in Turrialba."
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "leadMagnet": {
+    "tagline": "💍 EXCLUSIVE GIFT FOR BRIDES",
+    "title": "Download our FREE Guide:",
+    "subtitle": "\"How to Arrive Relaxed, Radiant and Stress-Free to Your Wedding Day\"",
+    "wordLabel": "💌 Comment the word:",
+    "word": "BODA",
+    "desc": "In this guide you will discover:",
+    "items": [
+      "Tips to enjoy the days before.",
+      "How to boost the benefits of a Pre-Wedding Spa.",
+      "Secrets for radiant skin on the big day.",
+      "Relaxation techniques for brides."
+    ],
+    "cta": "DOWNLOAD GUIDE VIA WHATSAPP",
+    "footer": "You will also receive exclusive information about our packages."
+  },
+  "problem": {
+    "title": "The Best Gift Before Your Wedding Is You",
+    "p1": "For months you organize every detail: Dress, Photography, Guests, Makeup, Decoration.",
+    "p2": "But many brides forget to take care of the most important person on that day: Themselves.",
+    "p3": "If you are feeling any of these symptoms, it is time to take a break:",
+    "symptoms": [
+      "Constant stress",
+      "Anxiety",
+      "Muscle pain",
+      "Accumulated fatigue",
+      "Difficulty sleeping",
+      "Dull skin"
+    ],
+    "closing": "All this can affect how you feel and look on your wedding day. At MJ Estética & Wellness Center we have designed an exclusive experience to help you regain physical and emotional balance."
+  },
+  "benefits": {
+    "title": "Live the Most Relaxing Bride Spa Experience in Turrialba",
+    "desc": "Our bridal protocols are designed so you arrive at the altar feeling light, renewed and with an unmatched natural glow.",
+    "listTitle": "What you will experience with us:",
+    "items": [
+      "Deep relaxation of the nervous system",
+      "Relief of muscle tension from stress",
+      "Skin preparation for perfect makeup",
+      "Lymphatic drainage to reduce inflammation",
+      "Private and exclusive environment for brides",
+      "100% personalized attention by professionals"
+    ],
+    "quote": "You deserve this moment just for you."
+  },
+  "packages": {
+    "title": "Our Exclusive Packages",
+    "desc": "Select the experience that best suits your needs before the big day.",
+    "items": [
+      {
+        "t": "Radiant Bride",
+        "p": "The Favorite",
+        "d": "Integral protocol combining silk body exfoliation, relaxing massage with aromatherapy and 'Bridal Glow' express facial.",
+        "time": "120 min"
+      },
+      {
+        "t": "Pre-Wedding Couples Spa",
+        "p": "Share the Calm",
+        "d": "Shared experience to release the stress of preparations together in an environment of absolute calm, candles and soft music.",
+        "time": "90 min"
+      },
+      {
+        "t": "Bridal Anti-Stress Massage",
+        "p": "Direct Relief",
+        "d": "Session focused on releasing deep tension in the back, neck and shoulders accumulated by organizing the event.",
+        "time": "60 min"
+      }
+    ]
+  },
+  "whyUs": {
+    "title": "Why Trust Your Relaxation to MJ Estética?",
+    "desc": "We understand the importance of your wedding. We don't just provide a service, we create a sanctuary of peace for you.",
+    "items": [
+      { "t": "Premium Experience" },
+      { "t": "Bridal Specialists" },
+      { "t": "Guaranteed Privacy" },
+      { "t": "Visible Results" },
+      { "t": "Attention to Detail" },
+      { "t": "Turrialba Center" }
+    ]
+  },
+  "faqs": {
+    "title": "Questions for Brides",
+    "items": [
+      { "q": "How far in advance should I book my Wedding Spa?", "a": "We recommend booking at least 2 to 4 weeks in advance to ensure your space in our calendar." },
+      { "q": "How many days before the wedding is ideal to perform the spa?", "a": "The ideal is between 2 and 5 days before the wedding. This way you will be relaxed and the aesthetic benefits on your skin will be at their peak on the day of the event." },
+      { "q": "Can my bridesmaids or mom come?", "a": "Of course! We can coordinate a group experience so you can share this moment with your closest people." },
+      { "q": "Do you have packages that include facials?", "a": "Yes, our star package 'Radiant Bride' includes a facial specifically designed to provide immediate luminosity." },
+      { "q": "What should I bring on the day of my session?", "a": "Just your willingness to relax. We provide everything you need: robe, slippers and a courtesy drink." }
+    ]
+  },
+  "finalCta": {
+    "title": "Book Your Wedding Spa in Turrialba Today",
+    "desc": "Don't leave your well-being for the last moment. Arrive at the altar feeling like the best version of yourself.",
+    "cta1": "Schedule via WhatsApp",
+    "cta2": "Check Availability"
+  }
+}

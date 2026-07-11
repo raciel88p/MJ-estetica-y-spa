@@ -37,6 +37,7 @@ function Router() {
   return (
     <Suspense fallback={<PageLoader />}>
       <Switch>
+        {/* ES Routes */}
         <Route path="/" component={Home} />
         <Route path="/politica-de-datos" component={PoliticaDatos} />
         <Route path="/medicos-esteticos" component={MedicosEsteticos} />
@@ -51,13 +52,39 @@ function Router() {
         <Route path="/reductivos-turrialba" component={LandingReductivos} />
         <Route path="/faciales" component={LandingFaciales} />
         <Route path="/medicina-estetica" component={LandingMedicos} />
+
+        {/* EN Routes */}
+        <Route path="/en"><Home lang="en" /></Route>
+        <Route path="/en/data-policy"><PoliticaDatos lang="en" /></Route>
+        <Route path="/en/medical-aesthetic"><MedicosEsteticos lang="en" /></Route>
+        <Route path="/en/about-us"><Nosotros lang="en" /></Route>
+        <Route path="/en/testimonials"><Testimonios lang="en" /></Route>
+        <Route path="/en/suggestion-box"><BuzonSugerencias lang="en" /></Route>
+        <Route path="/en/sitemap"><SitemapPage lang="en" /></Route>
+        <Route path="/en/packages"><Paquetes lang="en" /></Route>
+        <Route path="/en/services/body-treatments"><TratamientosCorporales lang="en" /></Route>
+        <Route path="/en/services/facials"><TratamientosFaciales lang="en" /></Route>
+        <Route path="/en/services/leg-treatments"><TratamientosPiernas lang="en" /></Route>
+        <Route path="/en/facial-harmonization"><LandingMedicos lang="en" /></Route>
+
+        {/* Dynamic Service Routes */}
         {servicePages.map((service) => (
           <Route
-            key={service.slug}
-            path={`/servicios/${service.slug}`}
-            component={() => <ServicePage service={service} />}
-          />
+            key={`es-${service.es.slug}`}
+            path={`/servicios/${service.es.slug}`}
+          >
+            <ServicePage service={service.es} lang="es" />
+          </Route>
         ))}
+        {servicePages.map((service) => (
+          <Route
+            key={`en-${service.en.slug}`}
+            path={`/en/services/${service.en.slug}`}
+          >
+            <ServicePage service={service.en} lang="en" />
+          </Route>
+        ))}
+
         <Route component={NotFound} />
       </Switch>
     </Suspense>

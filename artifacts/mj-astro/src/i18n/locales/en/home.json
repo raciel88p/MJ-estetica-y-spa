@@ -1,0 +1,88 @@
+{
+  "trust": [
+    { "title": "Certified", "sub": "Professionals" },
+    { "title": "Guaranteed", "sub": "Results" },
+    { "title": "Personalized", "sub": "Attention" },
+    { "title": "Medical", "sub": "Technology" }
+  ],
+  "specialties": [
+    {
+      "title": "Laser Hair Removal",
+      "desc": "Smooth and hairless skin forever.",
+      "link": "/en/services/laser-hair-removal"
+    },
+    {
+      "title": "Facials",
+      "desc": "Facial cleansing and rejuvenation.",
+      "link": "/en/services/facials"
+    },
+    {
+      "title": "Legs",
+      "desc": "Circulatory treatments.",
+      "link": "/en/services/tired-legs"
+    },
+    {
+      "title": "Art Therapy",
+      "desc": "Creativity and emotional well-being.",
+      "link": "/en/services/art-therapy"
+    }
+  ],
+  "featured": {
+    "label": "Featured Treatments",
+    "viewAll": "View all services",
+    "items": [
+      {
+        "title": "Botox Full Face",
+        "category": "Medical Aesthetic",
+        "desc": "Smoothes expression lines while maintaining your natural look.",
+        "link": "/en/services/botox-full-face"
+      },
+      {
+        "title": "Hydrolipoclasy",
+        "category": "Body",
+        "desc": "Removes localized fat without surgery in one session.",
+        "link": "/en/services/body-massages"
+      },
+      {
+        "title": "Deep Facial Cleansing",
+        "category": "Facial",
+        "desc": "Complete renewal for radiant skin without impurities.",
+        "link": "/en/services/facial-cleansing"
+      },
+      {
+        "title": "Tensor Threads",
+        "category": "Medical Aesthetic",
+        "desc": "Immediate lifting effect by stimulating your own collagen.",
+        "link": "/en/services/tensor-threads"
+      },
+      {
+        "title": "Laser Hair Removal",
+        "category": "Premium",
+        "desc": "Say goodbye to hair forever with state-of-the-art technology.",
+        "link": "/en/services/laser-hair-removal"
+      },
+      {
+        "title": "Buttock Lift",
+        "category": "Body",
+        "desc": "Tones and projects your figure non-invasively.",
+        "link": "/en/services/buttock-lift"
+      }
+    ]
+  },
+  "experience": {
+    "stat": "Years of experience"
+  },
+  "testimonials": {
+    "quote": "\"Excellent service, the staff is very professional and friendly. The facilities are top-notch and the results of the treatments are visible from the first session. 100% recommended for those seeking quality.\"",
+    "viewMore": "View more testimonials",
+    "leaveReview": "Leave a Google review"
+  },
+  "contact": {
+    "address": "Downtown Turrialba, 150m east of the Catholic Church, Cartago, Costa Rica.",
+    "schedule": "Mon - Fri: 9:00 - 20:00 / Sat: 8:00 - 15:00"
+  },
+  "suggestion": {
+    "text": "Do you have any ideas to improve our website?",
+    "cta": "Send Suggestion"
+  }
+}

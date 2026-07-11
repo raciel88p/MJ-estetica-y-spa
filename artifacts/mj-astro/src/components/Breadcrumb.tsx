@@ -15,12 +15,16 @@ interface BreadcrumbProps {
 const BASE_URL = "https://mjfisioesteticayspa.com";
 
 export function Breadcrumb({ items, variant = "dark" }: BreadcrumbProps) {
+  const isEn = typeof window !== "undefined" && window.location.pathname.startsWith("/en/");
+  const homeLabel = isEn ? "Home" : "Inicio";
+  const homeHref = isEn ? "/en/" : "/";
+
   const base = variant === "dark"
     ? "text-white/70 hover:text-white"
     : "text-muted-foreground hover:text-foreground";
   const current = variant === "dark" ? "text-white font-medium" : "text-foreground font-medium";
   const sep = variant === "dark" ? "text-white/40" : "text-muted-foreground/50";
-  const all = [{ label: "Inicio", href: "/" }, ...items];
+  const all = [{ label: homeLabel, href: homeHref }, ...items];
 
   const schemaItems = all.map((item, i) => ({
     "@type": "ListItem",
@@ -45,9 +49,9 @@ export function Breadcrumb({ items, variant = "dark" }: BreadcrumbProps) {
         aria-label="Breadcrumb"
         className={`flex items-center flex-wrap gap-1 text-sm ${variant === "dark" ? "text-white/70" : "text-muted-foreground"}`}
       >
-        <a href="/" className={`flex items-center gap-1 transition-colors ${base}`}>
+        <a href={homeHref} className={`flex items-center gap-1 transition-colors ${base}`}>
           <Home className="w-3.5 h-3.5" />
-          <span>Inicio</span>
+          <span>{homeLabel}</span>
         </a>
 
         {items.map((item, i) => (

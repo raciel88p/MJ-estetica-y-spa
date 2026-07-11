@@ -8,6 +8,8 @@ import { motion } from "framer-motion";
 import { CheckCircle2, Star, Heart, Award, Users, Sparkles, ArrowRight } from "lucide-react";
 import { StatsBar } from "@/components/StatsBar";
 import { useTranslations } from "@/i18n/ui";
+import esLoc from "@/i18n/locales/es/about.json";
+import enLoc from "@/i18n/locales/en/about.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -16,81 +18,26 @@ const fadeUp = {
 
 function Nosotros({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   const t = useTranslations(lang);
+  const content = lang === 'es' ? esLoc : enLoc;
 
-  const values = [
-    {
-      icon: Heart,
-      title: lang === 'es' ? "Vocación de Servicio" : "Service Vocation",
-      description: lang === 'es'
-        ? "Cada tratamiento está diseñado con dedicación y empatía. Tu bienestar es nuestra mayor motivación y satisfacción."
-        : "Each treatment is designed with dedication and empathy. Your well-being is our greatest motivation and satisfaction.",
-    },
-    {
-      icon: Award,
-      title: lang === 'es' ? "Excelencia Profesional" : "Professional Excellence",
-      description: lang === 'es'
-        ? "Nuestro equipo cuenta con formación especializada y se actualiza continuamente para ofrecerte técnicas y tecnologías de vanguardia."
-        : "Our team has specialized training and is continuously updated to offer you cutting-edge techniques and technologies.",
-    },
-    {
-      icon: Users,
-      title: lang === 'es' ? "Trato Personalizado" : "Personalized Care",
-      description: lang === 'es'
-        ? "Cada persona es única. Por eso escuchamos, evaluamos y diseñamos un plan a medida para cada cliente."
-        : "Each person is unique. That's why we listen, evaluate, and design a custom plan for each client.",
-    },
-    {
-      icon: Sparkles,
-      title: lang === 'es' ? "Ambiente de Bienestar" : "Wellness Environment",
-      description: lang === 'es'
-        ? "Hemos creado un espacio pensado para que desde el momento en que entras, te desconectes del mundo y disfrutes."
-        : "We have created a space designed so that from the moment you enter, you disconnect from the world and enjoy.",
-    },
-  ];
+  const values = content.values.map((v, i) => ({
+    ...v,
+    icon: [Heart, Award, Users, Sparkles][i]
+  }));
 
-  const team = [
-    {
-      name: "María Jeanneth",
-      role: lang === 'es' ? "Directora & Especialista en Estética" : "Director & Aesthetic Specialist",
-      description: lang === 'es'
-        ? "Fundadora de MJ Fisio Estética y Spa, con más de 15 años de experiencia en tratamientos estéticos y bienestar. Su pasión por el cuidado personal la llevó a crear un espacio de referencia en Turrialba."
-        : "Founder of MJ Fisio Estética & Spa, with more than 15 years of experience in aesthetic treatments and well-being. Her passion for personal care led her to create a reference space in Turrialba.",
-      emoji: "👩‍⚕️",
-    },
-    {
-      name: lang === 'es' ? "Equipo de Fisioterapia" : "Physiotherapy Team",
-      role: lang === 'es' ? "Fisioterapeutas Certificados" : "Certified Physiotherapists",
-      description: lang === 'es'
-        ? "Profesionales certificados especializados en técnicas de rehabilitación, masajes terapéuticos y tratamientos corporales. Con experiencia en deporte, lesiones y bienestar general."
-        : "Certified professionals specialized in rehabilitation techniques, therapeutic massages, and body treatments. With experience in sports, injuries, and general well-being.",
-      emoji: "🏥",
-    },
-    {
-      name: lang === 'es' ? "Equipo Médico Estético" : "Medical Aesthetic Team",
-      role: lang === 'es' ? "Médicos y Especialistas" : "Doctors and Specialists",
-      description: lang === 'es'
-        ? "Médicos especialistas en estética avanzada: botox, hilos tensores, rellenos y trasplante capilar. Comprometidos con resultados naturales y seguros."
-        : "Doctors specializing in advanced aesthetics: botox, tensor threads, fillers, and hair transplant. Committed to natural and safe results.",
-      emoji: "💉",
-    },
-    {
-      name: lang === 'es' ? "Nutricionista" : "Nutritionist",
-      role: lang === 'es' ? "Especialista en Nutrición" : "Nutrition Specialist",
-      description: lang === 'es'
-        ? "Experta en diseño de planes nutricionales personalizados para objetivos de salud, peso y rendimiento deportivo."
-        : "Expert in designing personalized nutritional plans for health, weight, and sports performance goals.",
-      emoji: "🥗",
-    },
-  ];
+  const team = content.team.map((m, i) => ({
+    ...m,
+    emoji: ["👩‍⚕️", "🏥", "💉", "🥗"][i]
+  }));
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEO
         title={lang === 'es' ? "Sobre Nosotros" : "About Us"}
         description={lang === 'es' ? "Conoce la historia de MJ Fisio Estética y Spa. Más de 10 años de experiencia brindando bienestar y tratamientos estéticos de alta calidad en Turrialba." : "Learn about the history of MJ Fisio Estética & Spa. Over 10 years of experience providing wellness and high-quality aesthetic treatments in Turrialba."}
-        canonical={lang === 'es' ? "/nosotros" : "/en/nosotros"}
+        canonical={lang === 'es' ? "/nosotros" : "/en/about-us"}
         lang={lang}
       />
-      <Navbar lang={lang} alternateLink={lang === 'es' ? '/en/nosotros' : '/nosotros'} />
+      <Navbar lang={lang} alternateLink={lang === 'es' ? '/en/about-us' : '/nosotros'} />
 
       {/* Hero */}
       <section className="relative pt-36 pb-24 bg-foreground overflow-hidden">
@@ -111,7 +58,7 @@ function Nosotros({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         </div>
       </section>
 
-      <StatsBar />
+      <StatsBar lang={lang} />
 
       {/* Historia */}
       <section className="py-24 bg-white">
@@ -145,7 +92,7 @@ function Nosotros({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                   </div>
                   <div>
                     <p className="font-bold text-2xl text-foreground">10+</p>
-                    <p className="text-sm text-muted-foreground">{lang === 'es' ? 'Años de Experiencia' : 'Years of Experience'}</p>
+                    <p className="text-sm text-muted-foreground">{content.experience}</p>
                   </div>
                 </div>
               </div>

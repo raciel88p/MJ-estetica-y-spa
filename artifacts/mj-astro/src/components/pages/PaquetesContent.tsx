@@ -164,6 +164,8 @@ export default function PaquetesContent({ lang = 'es' }: { lang?: 'es' | 'en' })
     }
   };
 
+  const t_promotion = lang === 'es' ? 'Promoción' : 'Promotion';
+
   return (
     <div className="min-h-screen bg-stone-50">
       <SEO
@@ -325,7 +327,7 @@ export default function PaquetesContent({ lang = 'es' }: { lang?: 'es' | 'en' })
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
                     <div className="text-white">
-                        <p className="text-xs font-bold uppercase tracking-[0.2em] mb-1 opacity-80">{lang === 'es' ? 'Promoción' : 'Promotion'}</p>
+                        <p className="text-xs font-bold uppercase tracking-[0.2em] mb-1 opacity-80">{t_promotion}</p>
                         <h4 className="text-xl font-serif font-bold">MJ Estética</h4>
                     </div>
                 </div>

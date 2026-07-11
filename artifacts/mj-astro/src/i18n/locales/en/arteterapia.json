@@ -1,0 +1,120 @@
+{
+  "problem": {
+    "title": "Painting Classes Turrialba: Art Therapy and coffee for your well-being",
+    "desc": "Looking for a different activity in Turrialba to relax, disconnect from stress and dedicate quality time to yourself?",
+    "instagram": "If you commented the word ARTETERAPIA on our Instagram, you've come to the right place.",
+    "p1": "We live in an age where stress, worries and mental overload are part of the daily routine. Many people in Turrialba look for activities to reduce stress and get out of the routine.",
+    "p2": "At Mj Estética and Wellness Center we have created a unique experience that combines art therapy, resin bear painting and coffee, designed to help you release tension, stimulate your creativity and improve your emotional well-being in a cozy and safe environment."
+  },
+  "whatIs": {
+    "title": "What is Art Therapy?",
+    "desc": "Art therapy is a wellness technique that uses the creative process as a tool to express emotions, reduce stress and improve emotional health.",
+    "points": [
+      "No artistic experience needed.",
+      "It doesn't matter if you've never picked up a brush.",
+      "We aren't looking for artists here. We seek to help you feel better."
+    ],
+    "items": [
+      "Resin bear painting",
+      "Specialty coffee",
+      "Emotional well-being",
+      "Personal connection",
+      "Anxiety reduction",
+      "Free creative space",
+      "Wellness environment"
+    ]
+  },
+  "whyJoin": {
+    "title": "Why Participate in a Session?",
+    "cards": [
+      { "t": "Reduce Stress", "d": "Painting helps focus attention on the present, reducing repetitive thoughts." },
+      { "t": "Improve Your Well-being", "d": "Art allows you to express emotions naturally and safely in a cozy environment." },
+      { "t": "Stimulate Creativity", "d": "Develop new ideas and strengthen your problem-solving ability." }
+    ],
+    "details": [
+      "120 min sessions",
+      "Resin bear and materials",
+      "Coffee included",
+      "Turrialba Center"
+    ]
+  },
+  "who": {
+    "title": "Who Can Participate?",
+    "desc": "Our Art Therapy experience in Turrialba is ideal for anyone who wants to relax and enjoy a moment for themselves.",
+    "items": [
+      "People with work stress",
+      "Couples looking for something different",
+      "Entrepreneurs and professionals",
+      "Groups of friends",
+      "Coffee and art lovers",
+      "People seeking wellness",
+      "Anyone who wants to relax",
+      "Emotional well-being seekers"
+    ]
+  },
+  "includes": {
+    "title": "What Does Your Experience Include?",
+    "items": [
+      "Resin bear to decorate",
+      "Painting materials (brushes, acrylics)",
+      "Specialty coffee during the activity",
+      "Guidance and support during the session",
+      "Relaxing and sensory environment",
+      "Your finished work to take home"
+    ],
+    "quote": "There are no strict rules. There is no pressure. There is only the present moment.",
+    "cta": "BOOK MY SESSION"
+  },
+  "whyUs": {
+    "title": "Why Choose Mj Estética and Wellness Center?",
+    "desc": "At Mj Estética and Wellness Center we understand that well-being goes far beyond aesthetics. We believe that feeling good inside is also reflected on the outside.",
+    "items": [
+      "Integral Well-being",
+      "Empathetic Attention",
+      "Safe Environment",
+      "Premium Quality",
+      "Personal Connection",
+      "Location in Turrialba"
+    ]
+  },
+  "testimonials": {
+    "title": "Discovering Well-being",
+    "items": [
+      "I arrived saying 'I don't know how to paint' and ended up discovering that the important thing was how I felt. I left much calmer.",
+      "A different way to connect with myself. Delicious coffee and the environment is simply magical.",
+      "It helped me let go of the stress of the week. You don't need to be an artist, you just need to want to feel good."
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "Do I need to know how to paint?", "a": "No. We aren't looking for artists, we seek to help you feel better. The experience is designed so that anyone can enjoy it regardless of their artistic level." },
+      { "q": "What does the session include?", "a": "It includes all painting materials, a delicious cup of coffee (or alternative drink), guidance during the activity and an environment designed for relaxation." },
+      { "q": "Who can participate?", "a": "It is ideal for people with work stress, couples, groups of friends or anyone who wants to dedicate time to their emotional well-being and get out of the routine." },
+      { "q": "Where are you located?", "a": "At Mj Estética and Wellness Center, in downtown Turrialba, with parking available." }
+    ]
+  },
+  "leadMagnet": {
+    "tagline": "🎁 EXCLUSIVE FREE RESOURCE",
+    "title": "Improve Your Emotional Well-being",
+    "subtitle": "\"Download our exclusive Art Therapy guide for free\"",
+    "wordLabel": "💌 Comment the word:",
+    "word": "ARTETERAPIA",
+    "desc": "Inside you will find:",
+    "items": [
+      "Basic art therapy techniques for home.",
+      "Scientific benefits for reducing stress.",
+      "Practical emotional connection exercises.",
+      "Tips to get more out of each session."
+    ],
+    "cta": "REQUEST FREE GUIDE"
+  },
+  "finalCta": {
+    "title": "Live a Different Experience: Bear Painting and Coffee",
+    "desc": "Take the first step towards your well-being today. Spaces are limited to guarantee a personalized experience.",
+    "location": "Mj Estética and Wellness Center",
+    "city": "Turrialba Center, Cartago",
+    "cta1": "BOOK SESSION",
+    "cta2": "REQUEST INFORMATION"
+  }
+}
