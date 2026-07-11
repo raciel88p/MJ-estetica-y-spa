@@ -1,0 +1,151 @@
+{
+  "diff": {
+    "label": "Differential",
+    "title": "What sets us apart",
+    "items": [
+      "Personalized assessment",
+      "Safe technology for different skin types",
+      "Body and facial treatments",
+      "Visible progressive results",
+      "Professional and humane care"
+    ],
+    "ctaTitle": "Start today!",
+    "ctaSubtitle": "👉 Schedule your personalized assessment today",
+    "ctaDesc": "Write to us on WhatsApp and discover which package is ideal for you.",
+    "cta": "Consult via WhatsApp"
+  },
+  "problems": {
+    "title": "We know that hair removal is often not just about aesthetics…",
+    "subtitle": "It can also cause:",
+    "items": [
+      "Constant irritation",
+      "Folliculitis",
+      "Spots",
+      "Insecurity",
+      "Time wasted shaving",
+      "Pain with wax or traditional methods"
+    ]
+  },
+  "leadMagnet": {
+    "label": "Special Gift",
+    "intro": "That's why we want to give you a:",
+    "title": "Free Beauty and Skin Care Guide",
+    "discover": "Discover:",
+    "items": [
+      "How to take care of your skin before and after laser hair removal",
+      "Errors that increase spots and irritation",
+      "How to achieve better results in fewer sessions",
+      "Tips to keep your skin smooth and even"
+    ],
+    "footer": "👉 Download your free guide here",
+    "cta": "I WANT MY GUIDE"
+  },
+  "whatIs": {
+    "title": "What is Laser Hair Removal?",
+    "p1": "Laser hair removal is an aesthetic treatment that helps progressively reduce hair growth using specialized technology that acts directly on the hair follicle.",
+    "p2": "At MJ Estética & Wellness Center we work with personalized protocols for different areas and skin types, providing a more comfortable, safe and effective experience in Turrialba."
+  },
+  "forWhom": {
+    "title": "Who is it ideal for?",
+    "items": [
+      "You shave constantly",
+      "You suffer from ingrown hairs",
+      "You have folliculitis",
+      "Your skin irritates easily",
+      "Waxing causes pain or spots",
+      "You want to save time in your routine",
+      "You want smoother, more uniform skin"
+    ]
+  },
+  "benefits": {
+    "title": "What problems does laser hair removal help improve?",
+    "items": [
+      { "t": "Constant irritation when shaving", "d": "Reduces frequent friction and continuous damage to the skin." },
+      { "t": "Ingrown hairs", "d": "Helps decrease irregular hair growth." },
+      { "t": "Folliculitis", "d": "Many people notice a progressive improvement in the appearance of the skin." },
+      { "t": "Darkening of areas", "d": "Can visually help improve skin uniformity." },
+      { "t": "Fast hair growth", "d": "Forget about constantly shaving." }
+    ],
+    "resultsLabel": "Progressive and real results",
+    "resultsSubtitle": "What is normally worked on:",
+    "results": [
+      "Progressive hair reduction",
+      "Better skin appearance",
+      "Irritation reduction",
+      "Less frequent growth"
+    ],
+    "note": "📍 Sessions and results may vary by person."
+  },
+  "realBenefits": {
+    "title": "Real benefits you will notice"
+  },
+  "howItWorks": {
+    "title": "How your treatment works",
+    "steps": [
+      { "s": "Step 1", "t": "Personalized assessment", "d": "We analyze your skin type, area and needs." },
+      { "s": "Step 2", "t": "Skin preparation", "d": "We explain pre-care and recommendations." },
+      { "s": "Step 3", "t": "Laser application", "d": "The session usually lasts between 15 and 60 minutes depending on the area." },
+      { "s": "Step 4", "t": "Aftercare", "d": "You receive indications to improve results and protect your skin." }
+    ]
+  },
+  "extra": {
+    "painTitle": "Does it hurt?",
+    "painDesc": "The sensation is usually described as small “heat touches” or “light pinpricks”. It is a fast and tolerable treatment.",
+    "sessionsTitle": "How many sessions do I need?",
+    "sessionsDesc": "It depends on the hair type and area, but many people start to notice progressive changes from the first sessions."
+  },
+  "imagine": {
+    "title": "Imagine this…",
+    "p1": "Waking up…",
+    "p2": "Putting on the clothes you like…",
+    "p3": "Going to the beach, the gym or going out without worrying about last-minute shaving.",
+    "seeking": "That's what many people seek when starting laser hair removal:",
+    "items": [
+      "✨ More comfort",
+      "✨ More confidence",
+      "✨ More peace of mind with their skin"
+    ]
+  },
+  "testimonials": {
+    "title": "Client testimonials",
+    "items": [
+      "I used to get very irritated when shaving. After several sessions I have noticed my skin is much calmer.",
+      "I no longer have to worry about shaving every few days.",
+      "I love feeling my skin smoother and more uniform."
+    ]
+  },
+  "faqs": {
+    "title": "Frequently asked questions"
+  },
+  "whyMJ": {
+    "title": "Why choose MJ Estética & Wellness Center?",
+    "subtitle": "We seek to help you feel better about yourself.",
+    "items": [
+      "Personalized attention",
+      "Professional protocols",
+      "Safe technology",
+      "Comfortable and private environment",
+      "Professional follow-up",
+      "Accessible location in Turrialba",
+      "Real experience in aesthetics and wellness"
+    ]
+  },
+  "contact": {
+    "title": "Location and contact",
+    "items": [
+      { "i": "📍", "t": "Turrialba, Cartago" },
+      { "i": "📲", "t": "WhatsApp service" },
+      { "i": "🕒", "t": "Flexible hours" },
+      { "i": "🚗", "t": "Easy access and nearby parking" }
+    ],
+    "ctaLabel": "Finish shaving today",
+    "ctaTitle": "Your skin can look and feel different",
+    "ctaDesc": "Every day you postpone starting… is another day dealing with irritation, constant shaving and unnecessary discomfort. Today can be the time to change that.",
+    "ctaSteps": [
+      "👉 Schedule your personalized assessment now",
+      "👉 Discover the ideal package for you",
+      "👉 Write to us on WhatsApp"
+    ],
+    "cta": "BOOK NOW"
+  }
+}

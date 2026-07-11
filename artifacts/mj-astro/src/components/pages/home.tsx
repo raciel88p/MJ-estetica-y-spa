@@ -21,6 +21,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslations } from "@/i18n/ui";
+import esLoc from "@/i18n/locales/es/home.json";
+import enLoc from "@/i18n/locales/en/home.json";
 
 const WA_LINK = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
@@ -42,6 +44,7 @@ const formSchema = z.object({
 
 function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   const t = useTranslations(lang);
+  const content = lang === 'es' ? esLoc : enLoc;
   const [mounted, setMounted] = useState(false);
   const { toast } = useToast();
 
@@ -142,20 +145,19 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
       <section className="bg-[#050c14] py-12 border-b border-white/5">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: ShieldCheck, title: lang === 'es' ? "Profesionales" : "Certified", sub: lang === 'es' ? "Certificados" : "Professionals" },
-              { icon: Star, title: lang === 'es' ? "Resultados" : "Guaranteed", sub: lang === 'es' ? "Garantizados" : "Results" },
-              { icon: Heart, title: lang === 'es' ? "Atención" : "Personalized", sub: lang === 'es' ? "Personalizada" : "Care" },
-              { icon: Award, title: lang === 'es' ? "Tecnología" : "Medical", sub: lang === 'es' ? "Médica" : "Technology" },
-            ].map((item, i) => (
+            {content.trust.map((item, i) => {
+              const icons = [ShieldCheck, Star, Heart, Award];
+              const Icon = icons[i];
+              return (
               <div key={i} className="flex items-center gap-4 justify-center">
-                <item.icon className="w-8 h-8 text-primary" />
+                <Icon className="w-8 h-8 text-primary" />
                 <div className="text-left">
                   <p className="text-white font-bold text-sm uppercase tracking-wider leading-tight">{item.title}</p>
                   <p className="text-white/40 text-[10px] uppercase tracking-[0.2em]">{item.sub}</p>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -170,36 +172,9 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Depilación Láser",
-                slug: "depilacion-laser",
-                img: "depilacion-laser-bg.webp",
-                desc: "Piel lisa y sin vello para siempre.",
-                link: "/servicios/depilacion-laser"
-              },
-              {
-                title: "Faciales",
-                slug: "faciales",
-                img: "faciales-bg.webp",
-                desc: "Limpieza y rejuvenecimiento facial.",
-                link: "/servicios/faciales"
-              },
-              {
-                title: "Piernas",
-                slug: "piernas",
-                img: "anticelulitis-bg.webp",
-                desc: "Tratamientos circulatorios.",
-                link: "/servicios/piernas-cansadas"
-              },
-              {
-                title: "Arteterapia",
-                slug: "arteterapia",
-                img: "about-us.webp",
-                desc: "Creatividad y bienestar emocional.",
-                link: "/servicios/arteterapia"
-              },
-            ].map((cat, i) => (
+            {content.specialties.map((cat, i) => {
+              const imgs = ["depilacion-laser-bg.webp", "faciales-bg.webp", "anticelulitis-bg.webp", "about-us.webp"];
+              return (
               <motion.a
                 key={i}
                 href={cat.link}
@@ -221,11 +196,12 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                     {cat.desc}
                   </p>
                   <div className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-widest uppercase">
-                    Ver más <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                    {lang === 'es' ? 'Ver más' : 'View more'} <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </motion.a>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -235,61 +211,19 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
-              <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">{lang === 'es' ? 'Tratamientos Destacados' : 'Featured Treatments'}</p>
+              <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">{content.featured.label}</p>
               <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">{t('home.featured.title')} <br /><span className="italic font-light text-primary">{t('home.featured.subtitle')}</span></h2>
             </div>
             <a href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"} className="text-sm font-bold tracking-widest uppercase border-b border-stone-200 pb-2 hover:text-primary hover:border-primary transition-colors">
-              {lang === 'es' ? 'Ver todos los servicios' : 'View all services'}
+              {content.featured.viewAll}
             </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-            {[
-              {
-                title: "Botox Full Face",
-                category: "Médico Estético",
-                desc: "Suaviza arrugas de expresión manteniendo tu naturalidad.",
-                link: "/servicios/botox-full-face",
-                img: "botox-full-face-bg.webp"
-              },
-              {
-                title: "Hidrolipoclasia",
-                category: "Corporal",
-                desc: "Elimina grasa localizada sin cirugía en una sesión.",
-                link: "/servicios/masajes-corporales",
-                isComparison: true,
-                before: "corporales-antes-bg.webp",
-                after: "corporales-despues-bg.webp"
-              },
-              {
-                title: "Limpieza Facial Profunda",
-                category: "Facial",
-                desc: "Renovación completa para una piel radiante y sin impurezas.",
-                link: "/servicios/limpieza-facial",
-                img: "faciales-bg.webp"
-              },
-              {
-                title: "Hilos Tensores",
-                category: "Médico Estético",
-                desc: "Efecto lifting inmediato estimulando tu propio colágeno.",
-                link: "/servicios/hilos-tensores",
-                img: "hilos-tensores-bg.webp"
-              },
-              {
-                title: "Depilación Láser",
-                category: "Premium",
-                desc: "Despídete del vello para siempre con tecnología de punta.",
-                link: "/servicios/depilacion-laser",
-                img: "depilacion-laser-bg.webp"
-              },
-              {
-                title: "Levantamiento de Glúteo",
-                category: "Corporal",
-                desc: "Tonifica y proyecta tu figura de forma no invasiva.",
-                link: "/servicios/levantamiento-gluteo",
-                img: "levantamiento-gluteo-bg.webp"
-              },
-            ].map((item, i) => (
+            {content.featured.items.map((item, i) => {
+              const imgs = ["botox-full-face-bg.webp", "corporales-antes-bg.webp", "faciales-bg.webp", "hilos-tensores-bg.webp", "depilacion-laser-bg.webp", "levantamiento-gluteo-bg.webp"];
+              const isComparison = i === 1;
+              return (
               <motion.div
                 key={i}
                 initial="hidden"
@@ -299,19 +233,19 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                 className="group"
               >
                 <div className="mb-6 overflow-hidden bg-stone-100 aspect-video relative rounded-sm shadow-md group-hover:shadow-xl transition-all duration-500">
-                   {item.isComparison ? (
+                   {isComparison ? (
                      <div className="flex h-full w-full">
                        <div className="relative flex-1 overflow-hidden border-r border-white/20">
-                         <img src={`/images/${item.before}`} className="absolute inset-0 w-full h-full object-cover" alt="Antes" />
-                         <span className="absolute top-2 left-2 bg-black/60 text-[8px] font-bold text-white px-2 py-0.5 uppercase tracking-widest">Antes</span>
+                         <img src={`/images/corporales-antes-bg.webp`} className="absolute inset-0 w-full h-full object-cover" alt="Antes" />
+                         <span className="absolute top-2 left-2 bg-black/60 text-[8px] font-bold text-white px-2 py-0.5 uppercase tracking-widest">{lang === 'es' ? 'Antes' : 'Before'}</span>
                        </div>
                        <div className="relative flex-1 overflow-hidden">
-                         <img src={`/images/${item.after}`} className="absolute inset-0 w-full h-full object-cover" alt="Después" />
-                         <span className="absolute top-2 left-2 bg-primary text-[8px] font-bold text-white px-2 py-0.5 uppercase tracking-widest">Después</span>
+                         <img src={`/images/corporales-despues-bg.webp`} className="absolute inset-0 w-full h-full object-cover" alt="Después" />
+                         <span className="absolute top-2 left-2 bg-primary text-[8px] font-bold text-white px-2 py-0.5 uppercase tracking-widest">{lang === 'es' ? 'Después' : 'After'}</span>
                        </div>
                      </div>
                    ) : (
-                     <img src={`/images/${item.img}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={item.title} />
+                     <img src={`/images/${imgs[i]}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={item.title} />
                    )}
                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
                 </div>
@@ -321,10 +255,11 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                   {item.desc}
                 </p>
                 <a href={item.link} className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors">
-                  Conocer más <ArrowRight className="w-3.5 h-3.5" />
+                  {lang === 'es' ? 'Conocer más' : 'Learn more'} <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </motion.div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -377,7 +312,7 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
               </div>
               <div className="absolute -bottom-10 -left-10 bg-primary p-10 hidden md:block">
                  <p className="text-white text-5xl font-serif font-bold mb-1">10+</p>
-                 <p className="text-white/80 text-[10px] font-bold tracking-widest uppercase">{lang === 'es' ? 'Años de experiencia' : 'Years of experience'}</p>
+                 <p className="text-white/80 text-[10px] font-bold tracking-widest uppercase">{content.experience.stat}</p>
               </div>
             </div>
           </div>
@@ -395,17 +330,17 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
 
             <div className="bg-white p-10 md:p-16 shadow-xl rounded-sm relative">
               <p className="text-xl md:text-2xl text-stone-600 font-light italic leading-relaxed mb-8">
-                "Excelente atención, el personal es muy profesional y amable. Las instalaciones son de primer nivel y los resultados de los tratamientos son visibles desde la primera sesión. 100% recomendado para quienes buscan calidad."
+                {content.testimonials.quote}
               </p>
               <p className="text-stone-900 font-bold uppercase tracking-widest text-sm">— María V.</p>
             </div>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
                <a href={lang === 'es' ? "/testimonios" : "/en/testimonials"}>
-                  <Button variant="ghost" className="tracking-widest uppercase text-xs font-bold">{lang === 'es' ? 'Ver más testimonios' : 'View more testimonials'}</Button>
+                  <Button variant="ghost" className="tracking-widest uppercase text-xs font-bold">{content.testimonials.viewMore}</Button>
                </a>
                <a href={GOOGLE_REVIEW_LINK} target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" className="tracking-widest uppercase text-xs font-bold border-stone-200">{lang === 'es' ? 'Dejar reseña en Google' : 'Leave a Google review'}</Button>
+                  <Button variant="outline" className="tracking-widest uppercase text-xs font-bold border-stone-200">{content.testimonials.leaveReview}</Button>
                </a>
             </div>
           </div>
@@ -427,7 +362,7 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                    </div>
                    <div>
                       <p className="font-bold text-stone-900 text-lg">{t('home.contact.visit')}</p>
-                      <p className="text-stone-500 leading-relaxed">{lang === 'es' ? 'Turrialba Centro, 150m este de la Iglesia Católica, Cartago, Costa Rica.' : 'Downtown Turrialba, 150m east of the Catholic Church, Cartago, Costa Rica.'}</p>
+                      <p className="text-stone-500 leading-relaxed">{content.contact.address}</p>
                    </div>
                 </div>
                 <div className="flex gap-5">
@@ -445,7 +380,7 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                    </div>
                    <div>
                       <p className="font-bold text-stone-900 text-lg">{t('home.contact.hours')}</p>
-                      <p className="text-stone-500">{lang === 'es' ? 'Lun - Vie: 9:00 - 20:00 / Sáb: 8:00 - 15:00' : 'Mon - Fri: 9:00 - 20:00 / Sat: 8:00 - 15:00'}</p>
+                      <p className="text-stone-500">{content.contact.schedule}</p>
                    </div>
                 </div>
               </div>
@@ -467,10 +402,10 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
             variants={fadeUp}
             className="flex flex-col md:flex-row items-center justify-center gap-6"
           >
-            <p className="text-white/40 text-sm font-light tracking-wide">{lang === 'es' ? '¿Tienes alguna idea para mejorar nuestra página?' : 'Do you have any ideas to improve our website?'}</p>
+            <p className="text-white/40 text-sm font-light tracking-wide">{content.suggestion.text}</p>
             <a href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"}>
               <Button variant="outline" className="border-primary/30 text-primary hover:bg-primary hover:text-white transition-all text-[10px] tracking-widest uppercase font-bold h-10 px-6 rounded-full">
-                💡 {lang === 'es' ? 'Enviar Sugerencia' : 'Send Suggestion'}
+                💡 {content.suggestion.cta}
               </Button>
             </a>
           </motion.div>

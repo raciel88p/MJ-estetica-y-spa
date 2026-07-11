@@ -28,7 +28,7 @@ function MedicosEsteticos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         : "Specialist doctor in medical aesthetics and minimally invasive facial treatments. Expert in botulinum toxin, hyaluronic acid, and tensor threads with a focus on natural results.",
       services: lang === 'es'
         ? ["/servicios/botox-full-face", "/servicios/hilos-tensores", "/servicios/acido-hialuronico", "/servicios/relleno-de-labios"]
-        : ["/en/services/botox-full-face", "/en/services/hilos-tensores", "/en/services/acido-hialuronico", "/en/services/relleno-de-labios"],
+        : ["/en/services/botox-full-face", "/en/services/tension-threads", "/en/services/hyaluronic-acid", "/en/services/relleno-de-labios"],
       serviceLabels: lang === 'es'
         ? ["Botox Full Face", "Hilos Tensores Turrialba", "Ácido Hialurónico", "Relleno de Labios", "Microagujas"]
         : ["Full Face Botox", "Tensor Threads Turrialba", "Hyaluronic Acid", "Lip Filler", "Microneedling"],
@@ -43,7 +43,7 @@ function MedicosEsteticos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         : "Specialist with postgraduate training in hair surgery. Performs each procedure with state-of-the-art techniques guaranteeing natural, safe, and permanent results.",
       services: lang === 'es'
         ? ["/servicios/trasplante-capilar", "/servicios/implante-barba", "/servicios/mesoterapia-capilar"]
-        : ["/en/services/trasplante-capilar", "/en/services/implante-barba", "/en/services/mesoterapia-capilar"],
+        : ["/en/services/trasplante-capilar", "/en/services/implante-barba", "/en/services/capillary-mesotherapy"],
       serviceLabels: lang === 'es'
         ? ["Trasplante Capilar Natural", "Implante de Barba", "Mesoterapia Capilar"]
         : ["Natural Hair Transplant", "Beard Implant", "Hair Mesotherapy"],
@@ -56,7 +56,7 @@ function MedicosEsteticos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
       bio: lang === 'es'
         ? "Especialista en nutrición clínica y deportiva. Diseña planes alimentarios personalizados orientados a objetivos de salud, rendimiento y composición corporal."
         : "Specialist in clinical and sports nutrition. Designs personalized food plans oriented towards health, performance, and body composition goals.",
-      services: lang === 'es' ? ["/servicios/nutricion"] : ["/en/services/nutricion"],
+      services: lang === 'es' ? ["/servicios/nutricion"] : ["/en/services/nutrition"],
       serviceLabels: lang === 'es' ? ["Nutrición Clínica"] : ["Clinical Nutrition"],
     },
   ];
@@ -97,16 +97,18 @@ const icons: Record<string, string> = {
 
   const services = medicoEsteticosLinks[lang].map((link) => {
     // Correctly extract slug regardless of language prefix
-    const slug = link.href.split('/').pop() || "";
+    const parts = link.href.split('/');
+    const slug = parts[parts.length - 1] || "";
     // Find the service entry by looking at both ES and EN slugs
     const data = servicePages.find((s) => s.es.slug === slug || s.en.slug === slug);
     const serviceData = data ? data[lang] : null;
+    const esSlug = data?.es.slug || slug;
 
     return {
       ...link,
-      slug,
+      slug: esSlug, // Use ES slug for icons mapping
       tagline: serviceData?.tagline ?? "",
-      description: descriptions[slug] ?? descriptions[data?.es.slug ?? ""] ?? ""
+      description: descriptions[esSlug] ?? ""
     };
   });
 
@@ -118,7 +120,7 @@ const icons: Record<string, string> = {
         canonical={lang === 'es' ? "/medicos-esteticos" : "/en/medical-aesthetic"}
         lang={lang}
       />
-      <Navbar lang={lang} alternateLink={lang === 'es' ? '/en/medical-aesthetic' : '/medicina-estetica'} />
+      <Navbar lang={lang} alternateLink={lang === 'es' ? '/en/medical-aesthetic' : '/medicos-esteticos'} />
 
       {/* Hero */}
       <section className="relative pt-36 pb-20 bg-foreground overflow-hidden">
@@ -146,7 +148,7 @@ const icons: Record<string, string> = {
         </div>
       </section>
 
-      <StatsBar />
+      <StatsBar lang={lang} />
 
       {/* ── Nuestros Especialistas ── */}
       <section className="py-20 bg-[#071e2e]">

@@ -1,0 +1,113 @@
+{
+  "problem": {
+    "title": "¿Te Identificas con Alguna de Estas Situaciones?",
+    "items": [
+      "Te ves cansada incluso después de dormir bien.",
+      "Las ojeras afectan tu confianza.",
+      "Las bolsas debajo de los ojos hacen que parezcas mayor.",
+      "Has probado cremas y maquillaje sin obtener los resultados esperados.",
+      "Sientes que tu mirada perdió luminosidad."
+    ],
+    "footer": "La realidad es que las ojeras pueden hacer que tu rostro refleje cansancio, estrés o envejecimiento prematuro."
+  },
+  "solution": {
+    "label": "La Solución",
+    "title": "Tratamiento para Ojeras con Carboxiterapia en Turrialba",
+    "p1": "En <span className=\"font-bold text-stone-900\">MJ Fisio Estética & Spa</span> ofrecemos un tratamiento especializado que ayuda a mejorar la apariencia del contorno de ojos mediante la aplicación controlada de dióxido de carbono medicinal (CO₂).",
+    "p2": "La carboxiterapia es uno de los procedimientos más utilizados para revitalizar la zona ocular sin necesidad de cirugía."
+  },
+  "benefits": {
+    "title": "Beneficios de la Carboxiterapia para Ojeras",
+    "items": [
+      "Ayuda a disminuir la apariencia de las ojeras.",
+      "Favorece una mirada más descansada.",
+      "Mejora la luminosidad del contorno de ojos.",
+      "Procedimiento mínimamente invasivo.",
+      "Sin cirugía.",
+      "Sesiones rápidas.",
+      "Atención personalizada.",
+      "Tratamiento profesional en Turrialba."
+    ]
+  },
+  "howItWorks": {
+    "title": "¿Cómo Funciona el Tratamiento?",
+    "p1": "La carboxiterapia consiste en la aplicación controlada de CO₂ medicinal en el área tratada para estimular procesos relacionados con la circulación, oxigenación y regeneración natural de la piel.",
+    "p2": "Es utilizada frecuentemente para ayudar a mejorar:",
+    "items": ["Ojeras oscuras", "Bolsas debajo de los ojos", "Apariencia de cansancio", "Flacidez leve", "Luminosidad de la piel"]
+  },
+  "idealFor": {
+    "title": "Este Tratamiento Puede Ser Ideal Para Ti Si Presentas:",
+    "items": [
+      "Ojeras oscuras.",
+      "Bolsas debajo de los ojos.",
+      "Mirada cansada.",
+      "Piel apagada en el contorno ocular.",
+      "Signos leves de envejecimiento.",
+      "Líneas finas alrededor de los ojos."
+    ]
+  },
+  "whyUs": {
+    "title": "¿Por qué Elegir MJ Fisio Estética & Spa en Turrialba?",
+    "items": [
+      "Atención personalizada.",
+      "Protocolos faciales profesionales.",
+      "Tratamientos estéticos avanzados.",
+      "Ambiente cómodo y seguro.",
+      "Evaluación individualizada.",
+      "Excelente ubicación en Turrialba.",
+      "Seguimiento profesional."
+    ],
+    "footer": "Nos enfocamos en ayudarte a mejorar la apariencia de tu piel mediante tratamientos personalizados y tecnología estética moderna."
+  },
+  "coverage": {
+    "title": "Atendemos Pacientes de Todo Turrialba y Cartago",
+    "p1": "Recibimos pacientes de todas estas zonas cercanas, brindando la mejor atención en medicina estética y bienestar.",
+    "zones": [
+      "Turrialba Centro", "La Suiza", "Santa Cruz", "Pavones", "Tucurrique",
+      "Juan Viñas", "Pacayitas", "Cartago Centro", "Paraíso", "Cervantes", "Jiménez"
+    ],
+    "footer": "Si buscas un tratamiento para ojeras cerca de Turrialba, estaremos encantados de ayudarte.",
+    "cta": "CONSULTAR DISPONIBILIDAD"
+  },
+  "firstVisit": {
+    "title": "¿Cómo Es Tu Primera Valoración?",
+    "items": [
+      { "s": "Paso 1", "t": "Agenda tu cita por WhatsApp.", "d": "El primer paso para tu transformación." },
+      { "s": "Paso 2", "t": "Realizamos una evaluación personalizada.", "d": "Analizamos tu caso específico y objetivos." },
+      { "s": "Paso 3", "t": "Determinamos el protocolo recomendado.", "d": "Diseñamos el plan de sesiones ideal para ti." },
+      { "s": "Paso 4", "t": "Iniciamos tu tratamiento.", "d": "Comienza tu camino hacia una mirada revitalizada." }
+    ]
+  },
+  "leadMagnet": {
+    "label": "🎁 RECURSO GRATUITO EXCLUSIVO",
+    "title": "Descarga Gratis Nuestra Guía:",
+    "p1": "\"7 Consejos para Mejorar la Apariencia de las Ojeras\"",
+    "keywordLabel": "💌 Solicítala enviando la palabra:",
+    "keyword": "“OJERAS”",
+    "p2": "Aprenderás:",
+    "items": [
+      "Hábitos que pueden influir en las ojeras.",
+      "Cuidados recomendados para el contorno de ojos.",
+      "Cómo complementar tus tratamientos estéticos."
+    ],
+    "cta": "SOLICITAR GUÍA POR WHATSAPP"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      { "q": "¿Dónde realizan el tratamiento para ojeras en Turrialba?", "a": "En MJ Fisio Estética & Spa, Turrialba, Costa Rica." },
+      { "q": "¿La carboxiterapia para ojeras duele?", "a": "Puede generar molestias leves y temporales dependiendo de cada persona." },
+      { "q": "¿Cuánto dura una sesión?", "a": "Entre 20 y 40 minutos aproximadamente." },
+      { "q": "¿Cuántas sesiones necesito?", "a": "La cantidad varía según cada caso y será definida durante la valoración." },
+      { "q": "¿Es un procedimiento quirúrgico?", "a": "No, es un tratamiento estético no quirúrgico." }
+    ]
+  },
+  "finalCta": {
+    "title": "Agenda Tu Valoración para Ojeras en Turrialba",
+    "p1": "Recupera una mirada más fresca, luminosa y descansada con nuestro enfoque profesional y personalizado.",
+    "location": "📍 MJ Fisio Estética & Spa",
+    "subLocation": "Turrialba, Cartago, Costa Rica",
+    "cta1": "Reserva por WhatsApp",
+    "cta2": "Quiero Agendar Mi Valoración"
+  }
+}

@@ -58,54 +58,106 @@ import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 import AnticelulitisServiceContent from "@/components/services/AnticelulitisServiceContent";
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
-const beforeDescMap: Record<string, string[]> = {
-  "masajes-corporales":        ["Celulitis visible y grasa localizada resistente", "Piel sin luminosidad y con pérdida de firmeza", "Estrías y signos de envejecimiento prematuro"],
-  "masajes-relajantes":        ["Ansiedad y estrés crónico que no cede", "Insomnio y dificultad para desconectarse", "Tensión acumulada en cuello, espalda y hombros"],
-  "masajes-profundos":         ["Estrés acumulado y rigidez muscular persistente", "Sensación de cuerpo pesado y falta de descanso", "Necesidad de desconexión profunda y bienestar"],
-  "masajes-post-operatorios":  ["Inflamación y fibrosis tras la cirugía", "Cicatrización lenta y adherencias subcutáneas", "Acumulación de líquidos y dolor postoperatorio"],
-  "reduccion-de-medidas":      ["Grasa localizada resistente a dieta y ejercicio", "Volumen excesivo en abdomen, flancos y muslos", "Pérdida de definición y contorno corporal"],
-  "tensado-corporal":          ["Flacidez visible en piel de brazos, abdomen y muslos", "Pérdida de firmeza y elasticidad por la edad o cambios de peso", "Piel sin tono que no responde al ejercicio"],
-  "drenaje-linfatico":         ["Retención de líquidos e hinchazón persistente", "Sensación de pesadez y piernas cansadas", "Toxinas acumuladas y sistema linfático bloqueado"],
-  "depilacion-laser":          ["Vello no deseado que reaparece constantemente", "Irritación, foliculitis y marcas por depilación frecuente", "Pérdida de tiempo y dinero en métodos temporales"],
-  "iron-beauty-fitness":       ["Pérdida de masa muscular y tono corporal", "Dificultad para combinar estética y fitness eficazmente", "Resultados lentos con el entrenamiento convencional"],
-  "carboxiterapia":            ["Celulitis visible y grasa localizada resistente", "Piel sin luminosidad y con pérdida de firmeza", "Estrías y signos de envejecimiento prematuro"],
-  "levantamiento-gluteo":      ["Glúteos caídos y sin volumen ni definición", "Flacidez en la zona glútea por la edad o cambios de peso", "Pérdida de curvatura y proyección natural"],
-  "levantamiento-busto":       ["Busto caído y sin firmeza tras lactancia o cambios de peso", "Pérdida de volumen y contorno en el escote", "Flacidez en piel pectoral que genera inseguridad"],
-  "vendas-frias":              ["Retención severa de líquidos y silueta hinchada", "Celulitis avanzada y piel de naranja visible", "Sensación de pesadez y falta de definición corporal"],
-  "maderoterapia":             ["Acumulación de grasa y nódulos de celulitis enquistados", "Piel irregular, sin tono y con textura de naranja", "Silueta indefinida y poco modelada"],
-  "auriculoterapia":           ["Ansiedad alimentaria y picoteo emocional fuera de control", "Estrés crónico que impide perder peso o dormir bien", "Desequilibrio del sistema nervioso y metabolismo lento"],
-  "microagujas": ["Piel opaca y sin brillo (pérdida de glow)", "Textura irregular y poros visibles", "Signos incipientes de envejecimiento facial"],
-  "microagujas-ginkgo-biloba": ["Piel opaca y sin brillo (pérdida de glow)", "Textura irregular y poros visibles", "Signos incipientes de envejecimiento facial"],
-  "microagujas-vitamina-c": ["Piel opaca y falta de luminosidad", "Textura irregular", "Deseo de rejuvenecimiento natural"],
-  "faciales":                  ["Piel opaca, con manchas y sin luminosidad", "Poros dilatados, imperfecciones y falta de hidratación", "Envejecimiento prematuro y pérdida de uniformidad"],
-  "terapias-faciales":         ["Piel deshidratada, tensa y sin vitalidad", "Manchas, rojeces y textura irregular", "Arrugas finas y pérdida de elasticidad visible"],
-  "peeling-quimico":           ["Manchas superficiales, piel apagada y textura irregular", "Cicatrices de acné y marcas post-inflamatorias", "Exceso de células muertas que bloquea la renovación celular"],
-  "hollywood-peel":            ["Piel sin brillo, gris y con poros visibles", "Acné, comedones y textura rugosa", "Aspecto cansado y falta de luminosidad en el rostro"],
-  "eliminacion-manchas":       ["Manchas solares, melasma y discromías visibles", "Tono irregular y falta de uniformidad en el rostro", "Hiperpigmentación que no responde a cremas convencionales"],
-  "radiofrecuencia-facial":    ["Flacidez facial incipiente y pérdida del óvalo", "Arrugas de expresión y surcos marcados", "Piel sin firmeza que envejece el aspecto general"],
-  "adn-salmon":                ["Piel envejecida, sin hidratación profunda ni luminosidad", "Arrugas, flacidez y pérdida de densidad cutánea", "Aspecto apagado y sin vitalidad que no mejora con cremas"],
-  "tratamiento-anticelulitis": ["Celulitis en muslos, glúteos y abdomen muy visible", "Piel de naranja resistente y textura irregular", "Mala circulación y sensación de pesadez en piernas"],
-  "piernas-cansadas":          ["Piernas pesadas, hinchadas y con sensación de fatiga al final del día", "Circulación deficiente y retención de líquidos en extremidades", "Calambres, hormigueos y piel sin tono en pantorrillas"],
-  "nutricion":                 ["Alimentación desordenada y objetivos sin resultados", "Metabolismo lento y sensación de bloqueo permanente", "Déficits nutricionales que afectan energía, piel y bienestar"],
-  "botox-full-face":           ["Arrugas de expresión marcadas en frente, entrecejo y patas de gallo", "Aspecto cansado y envejecido que no refleja cómo te sientes", "Pérdida de armonía facial y rasgos sin suavidad"],
-  "hilos-tensores":            ["Flacidez facial pronunciada y pérdida del óvalo", "Caída de mejillas, jowls marcados y cuello flácido", "Envejecimiento visible que los tratamientos tópicos no corrigen"],
-  "trasplante-capilar":        ["Alopecia progresiva con zonas sin densidad capilar", "Pérdida de confianza y autoestima por la caída del cabello", "Entradas, coronilla visible y frente que retrocede con el tiempo"],
-  "acido-hialuronico":         ["Pérdida de volumen facial y surcos nasogeniacos profundos", "Labios finos y asimétricos que proyectan vejez", "Ojeras profundas y pómulos hundidos que envejecen el rostro"],
-  "biorevitalizacion":         ["Piel deshidratada, sin luminosidad y con pérdida de firmeza difusa", "Arrugas finas y textura irregular que cremas no corrigen", "Aspecto apagado y sin vitalidad que no mejora con cosmética habitual"],
-  "tratamiento-ojeras":        ["Ojeras oscuras y surcos lagrimales que proyectan cansancio permanente", "Aspecto apagado que el maquillaje no puede disimular", "Pérdida de luminosidad en la mirada que envejece el rostro"],
-  "blanqueamiento-zona-intima":["Hiperpigmentación y manchas oscuras en zonas íntimas por fricción u hormonas", "Tono irregular en ingle, axilas o zona bikini que genera inseguridad", "Manchas post-depilación resistentes que no mejoran con cremas"],
-  "aromaterapia": ["Estrés acumulado y ritmo diario que no deja tiempo propio", "Necesidad de desconexión profunda y bienestar emocional", "Deseo de una experiencia sensorial premium y personalizada"],
-  "rejuvenecimiento-facial-laser": ["Signos visibles de envejecimiento y cansancio", "Pérdida de colágeno y firmeza natural", "Manchas y textura irregular que restan juventud"],
-  "implante-barba":            ["Barba irregular, con calvas y sin densidad uniforme", "Incapacidad de conseguir un aspecto masculino definido con barba natural", "Falta de confianza por una barba escasa que no crece en zonas clave"],
-  "mesoterapia-capilar":       ["Caída de cabello progresiva y devisa que no se detiene", "Cabello sin densidad, fino y sin vitalidad", "Cuero cabelludo con poca circulación y folículos debilitados"],
-  "relleno-de-labios":           ["Labios finos, asimétricos o con pérdida de volumen por la edad", "Contorno labial difuminado que envejece el tercio inferior del rostro", "Inseguridad al hablar o sonreír por la apariencia de los labios"],
-  "rejuvenecimiento-facial": ["Piel opaca y sin vitalidad", "Deseo de rejuvenecimiento natural", "Pérdida de glow facial"],
+const beforeDescMap: Record<string, Record<string, string[]>> = {
+  es: {
+    "masajes-corporales":        ["Celulitis visible y grasa localizada resistente", "Piel sin luminosidad y con pérdida de firmeza", "Estrías y signos de envejecimiento prematuro"],
+    "masajes-relajantes":        ["Ansiedad y estrés crónico que no cede", "Insomnio y dificultad para desconectarse", "Tensión acumulada en cuello, espalda y hombros"],
+    "masajes-profundos":         ["Estrés acumulado y rigidez muscular persistente", "Sensación de cuerpo pesado y falta de descanso", "Necesidad de desconexión profunda y bienestar"],
+    "masajes-post-operatorios":  ["Inflamación y fibrosis tras la cirugía", "Cicatrización lenta y adherencias subcutáneas", "Acumulación de líquidos y dolor postoperatorio"],
+    "reduccion-de-medidas":      ["Grasa localizada resistente a dieta y ejercicio", "Volumen excesivo en abdomen, flancos y muslos", "Pérdida de definición y contorno corporal"],
+    "tensado-corporal":          ["Flacidez visible en piel de brazos, abdomen y muslos", "Pérdida de firmeza y elasticidad por la edad o cambios de peso", "Piel sin tono que no responde al ejercicio"],
+    "drenaje-linfatico":         ["Retención de líquidos e hinchazón persistente", "Sensación de pesadez y piernas cansadas", "Toxinas acumuladas y sistema linfático bloqueado"],
+    "depilacion-laser":          ["Vello no deseado que reaparece constantemente", "Irritación, foliculitis y marcas por depilación frecuente", "Pérdida de tiempo y dinero en métodos temporales"],
+    "iron-beauty-fitness":       ["Pérdida de masa muscular y tono corporal", "Dificultad para combinar estética y fitness eficazmente", "Resultados lentos con el entrenamiento convencional"],
+    "carboxiterapia":            ["Celulitis visible y grasa localizada resistente", "Piel sin luminosidad y con pérdida de firmeza", "Estrías y signos de envejecimiento prematuro"],
+    "levantamiento-gluteo":      ["Glúteos caídos y sin volumen ni definición", "Flacidez en la zona glútea por la edad o cambios de peso", "Pérdida de curvatura y proyección natural"],
+    "levantamiento-busto":       ["Busto caído y sin firmeza tras lactancia o cambios de peso", "Pérdida de volumen y contorno en el escote", "Flacidez en piel pectoral que genera inseguridad"],
+    "vendas-frias":              ["Retención severa de líquidos y silueta hinchada", "Celulitis avanzada y piel de naranja visible", "Sensación de pesadez y falta de definición corporal"],
+    "maderoterapia":             ["Acumulación de grasa y nódulos de celulitis enquistados", "Piel irregular, sin tono y con textura de naranja", "Silueta indefinida y poco modelada"],
+    "auriculoterapia":           ["Ansiedad alimentaria y picoteo emocional fuera de control", "Estrés crónico que impide perder peso o dormir bien", "Desequilibrio del sistema nervioso y metabolismo lento"],
+    "microagujas": ["Piel opaca y sin brillo (pérdida de glow)", "Textura irregular y poros visibles", "Signos incipientes de envejecimiento facial"],
+    "microagujas-ginkgo-biloba": ["Piel opaca y sin brillo (pérdida de glow)", "Textura irregular y poros visibles", "Signos incipientes de envejecimiento facial"],
+    "microagujas-vitamina-c": ["Piel opaca y falta de luminosidad", "Textura irregular", "Deseo de rejuvenecimiento natural"],
+    "faciales":                  ["Piel opaca, con manchas y sin luminosidad", "Poros dilatados, imperfecciones y falta de hidratación", "Envejecimiento prematuro y pérdida de uniformidad"],
+    "terapias-faciales":         ["Piel deshidratada, tensa y sin vitalidad", "Manchas, rojeces y textura irregular", "Arrugas finas y pérdida de elasticidad visible"],
+    "peeling-quimico":           ["Manchas superficiales, piel apagada y textura irregular", "Cicatrices de acné y marcas post-inflamatorias", "Exceso de células muertas que bloquea la renovación celular"],
+    "hollywood-peel":            ["Piel sin brillo, gris y con poros visibles", "Acné, comedones y textura rugosa", "Aspecto cansado y falta de luminosidad en el rostro"],
+    "eliminacion-manchas":       ["Manchas solares, melasma y discromías visibles", "Tono irregular y falta de uniformidad en el rostro", "Hiperpigmentación que no responde a cremas convencionales"],
+    "radiofrecuencia-facial":    ["Flacidez facial incipiente y pérdida del óvalo", "Arrugas de expresión y surcos marcados", "Piel sin firmeza que envejece el aspecto general"],
+    "adn-salmon":                ["Piel envejecida, sin hidratación profunda ni luminosidad", "Arrugas, flacidez y pérdida de densidad cutánea", "Aspecto apagado y sin vitalidad que no mejora con cremas"],
+    "tratamiento-anticelulitis": ["Celulitis en muslos, glúteos y abdomen muy visible", "Piel de naranja resistente y textura irregular", "Mala circulación y sensación de pesadez en piernas"],
+    "piernas-cansadas":          ["Piernas pesadas, hinchadas y con sensación de fatiga al final del día", "Circulación deficiente y retención de líquidos en extremidades", "Calambres, hormigueos y piel sin tono en pantorrillas"],
+    "nutricion":                 ["Alimentación desordenada y objetivos sin resultados", "Metabolismo lento y sensación de bloqueo permanente", "Déficits nutricionales que afectan energía, piel y bienestar"],
+    "botox-full-face":           ["Arrugas de expresión marcadas en frente, entrecejo y patas de gallo", "Aspecto cansado y envejecido que no refleja cómo te sientes", "Pérdida de armonía facial y rasgos sin suavidad"],
+    "hilos-tensores":            ["Flacidez facial pronunciada y pérdida del óvalo", "Caída de mejillas, jowls marcados y cuello flácido", "Envejecimiento visible que los tratamientos tópicos no corrigen"],
+    "trasplante-capilar":        ["Alopecia progresiva con zonas sin densidad capilar", "Pérdida de confianza y autoestima por la caída del cabello", "Entradas, coronilla visible y frente que retrocede con el tiempo"],
+    "acido-hialuronico":         ["Pérdida de volumen facial y surcos nasogeniacos profundos", "Labios finos y asimétricos que proyectan vejez", "Ojeras profundas y pómulos hundidos que envejecen el rostro"],
+    "biorevitalizacion":         ["Piel deshidratada, sin luminosidad y con pérdida de firmeza difusa", "Arrugas finas y textura irregular que cremas no corrigen", "Aspecto apagado y sin vitalidad que no mejora con cosmética habitual"],
+    "tratamiento-ojeras":        ["Ojeras oscuras y surcos lagrimales que proyectan cansancio permanente", "Aspecto apagado que el maquillaje no puede disimular", "Pérdida de luminosidad en la mirada que envejece el rostro"],
+    "blanqueamiento-zona-intima":["Hiperpigmentación y manchas oscuras en zonas íntimas por fricción u hormonas", "Tono irregular en ingle, axilas o zona bikini que genera inseguridad", "Manchas post-depilación resistentes que no mejoran con cremas"],
+    "aromaterapia": ["Estrés acumulado y ritmo diario que no deja tiempo propio", "Necesidad de desconexión profunda y bienestar emocional", "Deseo de una experiencia sensorial premium y personalizada"],
+    "rejuvenecimiento-facial-laser": ["Signos visibles de envejecimiento y cansancio", "Pérdida de colágeno y firmeza natural", "Manchas y textura irregular que restan juventud"],
+    "implante-barba":            ["Barba irregular, con calvas y sin densidad uniforme", "Incapacidad de conseguir un aspecto masculino definido con barba natural", "Falta de confianza por una barba escasa que no crece en zonas clave"],
+    "mesoterapia-capilar":       ["Caída de cabello progresiva y devisa que no se detiene", "Cabello sin densidad, fino y sin vitalidad", "Cuero cabelludo con poca circulación y folículos debilitados"],
+    "relleno-de-labios":           ["Labios finos, asimétricos o con pérdida de volumen por la edad", "Contorno labial difuminado que envejece el tercio inferior del rostro", "Inseguridad al hablar o sonreír por la apariencia de los labios"],
+    "rejuvenecimiento-facial": ["Piel opaca y sin vitalidad", "Deseo de rejuvenecimiento natural", "Pérdida de glow facial"],
+  },
+  en: {
+    "body-massages": ["Visible cellulite and resistant localized fat", "Skin without radiance and loss of firmness", "Stretch marks and signs of premature aging"],
+    "relaxing-massages": ["Anxiety and chronic stress that does not subside", "Insomnia and difficulty disconnecting", "Tension in neck, back, and shoulders"],
+    "deep-massages": ["Accumulated stress and persistent muscle stiffness", "Heavy body sensation and lack of rest", "Need for deep disconnection and well-being"],
+    "post-op-massages": ["Inflammation and fibrosis after surgery", "Slow healing and subcutaneous adhesions", "Fluid accumulation and post-operative pain"],
+    "weight-loss": ["Localized fat resistant to diet and exercise", "Excessive volume in abdomen, flanks, and thighs", "Loss of definition and body contour"],
+    "body-tightening": ["Visible sagging in arms, abdomen, and thighs", "Loss of firmness and elasticity due to age or weight changes", "Toneless skin that does not respond to exercise"],
+    "lymphatic-drainage": ["Fluid retention and persistent swelling", "Heaviness sensation and tired legs", "Accumulated toxins and blocked lymphatic system"],
+    "laser-hair-removal": ["Unwanted hair that reappears constantly", "Irritation, folliculitis, and marks from frequent hair removal", "Loss of time and money on temporary methods"],
+    "iron-beauty": ["Loss of muscle mass and body tone", "Difficulty combining aesthetics and fitness effectively", "Slow results with conventional training"],
+    "carboxytherapy": ["Visible cellulite and resistant localized fat", "Skin without radiance and loss of firmness", "Stretch marks and signs of premature aging"],
+    "buttock-lift": ["Drooping buttocks without volume or definition", "Sagging in the gluteal area due to age or weight changes", "Loss of curvature and natural projection"],
+    "breast-lift": ["Drooping breast without firmness after breastfeeding or weight changes", "Loss of volume and contour in the neckline", "Sagging in pectoral skin that generates insecurity"],
+    "cold-wraps": ["Severe fluid retention and swollen silhouette", "Advanced cellulite and visible orange peel skin", "Heaviness sensation and lack of body definition"],
+    "maderotherapy": ["Fat accumulation and embedded cellulite nodules", "Irregular skin, without tone and with orange texture", "Undefined and poorly modeled silhouette"],
+    "auriculotherapy": ["Food anxiety and uncontrolled emotional snacking", "Chronic stress that prevents weight loss or sleeping well", "Nervous system imbalance and slow metabolism"],
+    "microneedling": ["Dull skin and loss of glow", "Irregular texture and visible pores", "Incipient signs of facial aging"],
+    "microneedling-ginkgo": ["Dull skin and loss of glow", "Irregular texture and visible pores", "Incipient signs of facial aging"],
+    "microneedling-vitamin-c": ["Dull skin and lack of radiance", "Irregular texture", "Desire for natural rejuvenation"],
+    "facials": ["Dull skin, with spots and without radiance", "Dilated pores, imperfections, and lack of hydration", "Premature aging and loss of uniformity"],
+    "facial-therapies": ["Dehydrated, tight skin without vitality", "Spots, redness, and irregular texture", "Fine wrinkles and visible loss of elasticity"],
+    "chemical-peeling": ["Superficial spots, dull skin, and irregular texture", "Acne scars and post-inflammatory marks", "Excess dead cells that block cell renewal"],
+    "hollywood-peel": ["Skin without radiance, gray, and with visible pores", "Acne, comedones, and rough texture", "Tired appearance and lack of facial radiance"],
+    "spot-removal": ["Sunspots, melasma, and visible dyschromias", "Irregular tone and lack of facial uniformity", "Hyperpigmentation that does not respond to conventional creams"],
+    "facial-radiofrequency": ["Incipient facial sagging and loss of oval", "Expression wrinkles and marked furrows", "Skin without firmness that ages the general appearance"],
+    "salmon-dna": ["Aged skin, without deep hydration or radiance", "Wrinkles, sagging, and loss of skin density", "Dull appearance and without vitality that does not improve with creams"],
+    "anticellulite-treatment": ["Very visible cellulite on thighs, buttocks, and abdomen", "Resistant orange peel skin and irregular texture", "Poor circulation and heaviness sensation in legs"],
+    "tired-legs": ["Heavy, swollen legs and fatigue at the end of the day", "Deficient circulation and fluid retention in extremities", "Cramps, tingling, and toneless skin in calves"],
+    "nutrition": ["Disordered eating and goals without results", "Slow metabolism and feeling of permanent block", "Nutritional deficits that affect energy, skin, and well-being"],
+    "botox-full-face": ["Marked expression wrinkles on forehead, frown, and crow's feet", "Tired and aged look that does not reflect how you feel", "Loss of facial harmony and traits without softness"],
+    "tensor-threads": ["Pronounced facial sagging and loss of oval", "Drooping cheeks, marked jowls, and sagging neck", "Visible aging that topical treatments do not correct"],
+    "hair-transplant": ["Progressive alopecia with areas without hair density", "Loss of confidence and self-esteem due to hair loss", "Receding hairline, visible crown, and forehead that recedes over time"],
+    "hyaluronic-acid": ["Loss of facial volume and deep nasolabial folds", "Thin and asymmetric lips that project aging", "Deep dark circles and sunken cheekbones that age the face"],
+    "biorevitalization": ["Dehydrated skin, without radiance and with diffuse loss of firmness", "Fine wrinkles and irregular texture that creams do not correct", "Dull and vitality-free appearance that does not improve with usual cosmetics"],
+    "dark-circles-treatment": ["Dark circles and tear troughs that project permanent tiredness", "Dull appearance that makeup cannot hide", "Loss of radiance in the look that ages the face"],
+    "intimate-bleaching": ["Hyperpigmentation and dark spots in intimate areas due to friction or hormones", "Irregular tone in groin, armpits, or bikini area that generates insecurity", "Resistant post-depilation spots that do not improve with creams"],
+    "aromatherapy": ["Accumulated stress and daily rhythm that leaves no personal time", "Need for deep disconnection and emotional well-being", "Desire for a premium and personalized sensory experience"],
+    "facial-rejuvenation-laser": ["Visible signs of aging and fatigue", "Loss of collagen and natural firmness", "Spots and irregular texture that subtract youth"],
+    "beard-implant": ["Irregular beard, with bald spots and without uniform density", "Inability to achieve a defined masculine look with natural beard", "Lack of confidence due to a sparse beard that does not grow in key areas"],
+    "hair-mesotherapy": ["Progressive hair loss that does not stop", "Hair without density, thin, and without vitality", "Scalp with poor circulation and weakened follicles"],
+    "lip-filler": ["Thin, asymmetric lips or loss of volume due to age", "Blurred lip contour that ages the lower third of the face", "Insecurity when speaking or smiling due to lip appearance"],
+    "facial-rejuvenation": ["Dull skin without vitality", "Desire for natural rejuvenation", "Loss of facial glow"],
+  }
 };
 
-const afterDescMap: Record<string, string[]> = {
-  "masajes-corporales":        ["Elimina la celulitis y la grasa localizada de forma eficaz", "Estimula la producción natural de colágeno y elastina", "Mejora la circulación y oxigenación del tejido"],
-  "botox-full-face":           ["Suaviza arrugas de expresión sin perder naturalidad", "Eleva la mirada y refresca el aspecto general", "Previene la formación de arrugas profundas"],
-  "levantamiento-gluteo":      ["Elevación visible y duradera de los glúteos", "Mejora significativa del tono muscular", "Piel más firme, tersa y definida"],
+const afterDescMap: Record<string, Record<string, string[]>> = {
+  es: {
+    "masajes-corporales":        ["Elimina la celulitis y la grasa localizada de forma eficaz", "Estimula la producción natural de colágeno y elastina", "Mejora la circulación y oxigenación del tejido"],
+    "botox-full-face":           ["Suaviza arrugas de expresión sin perder naturalidad", "Eleva la mirada y refresca el aspecto general", "Previene la formación de arrugas profundas"],
+    "levantamiento-gluteo":      ["Elevación visible y duradera de los glúteos", "Mejora significativa del tono muscular", "Piel más firme, tersa y definida"],
+  },
+  en: {
+    "body-massages": ["Eliminates cellulite and localized fat effectively", "Stimulates the natural production of collagen and elastin", "Improves tissue circulation and oxygenation"],
+    "botox-full-face": ["Smooths expression wrinkles without losing naturalness", "Elevates the look and refreshes the general appearance", "Prevents the formation of deep wrinkles"],
+    "buttock-lift": ["Visible and lasting lifting of the buttocks", "Significant improvement in muscle tone", "Firmer, smoother, and more defined skin"],
+  }
 };
 
 const beforeAfterBgMap: Record<string, { before: string; after: string }> = {
@@ -451,7 +503,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
       </section>
       )}
 
-      {!["depilacion-laser", "peeling-quimico", "aromaterapia", "blanqueamiento-zona-intima", "rejuvenecimiento-facial-laser", "tratamiento-ojeras", "terapias-faciales", "microagujas-melanout"].includes(service.slug) && <StatsBar />}
+      {!["depilacion-laser", "peeling-quimico", "aromaterapia", "blanqueamiento-zona-intima", "rejuvenecimiento-facial-laser", "tratamiento-ojeras", "terapias-faciales", "microagujas-melanout"].includes(service.slug) && <StatsBar lang={lang} />}
 
 
       {/* ── LINC FISIO TERAPIA – PROFESIONAL RESPONSABLE ── */}
@@ -632,110 +684,110 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
 
       {/* ── CUSTOM CONTENT: DEPILACIÓN LÁSER ────────────────── */}
       {service.slug === "depilacion-laser" && (
-        <LaserServiceContent service={service} waLink={WA} />
+        <LaserServiceContent service={service} waLink={WA} lang={lang} />
       )}
 
       {/* ── CUSTOM CONTENT: HIDROLIPOCLASIA ────────────────── */}
       {service.slug === "masajes-corporales" && (
-        <HydrolipoclasiaContent waLink={WA} />
+        <HydrolipoclasiaContent waLink={WA} lang={lang} />
       )}
       {service.slug === "masajes-profundos" && (
-        <MasajeProfundoContent waLink={WA} />
+        <MasajeProfundoContent waLink={WA} lang={lang} />
       )}
 
       {/* ── CUSTOM CONTENT: CARBOXITERAPIA ────────────────── */}
       {service.slug === "carboxiterapia" && (
-        <CarboxiterapiaContent service={service} waLink={WA} />
+        <CarboxiterapiaContent service={service} waLink={WA} lang={lang} />
       )}
       {/* ── CUSTOM CONTENT: ANTICELULITIS ──────────────────── */}
       {service.slug === "tratamiento-anticelulitis" && (
-        <AnticelulitisServiceContent service={service} waLink={WA} />
+        <AnticelulitisServiceContent service={service} waLink={WA} lang={lang} />
       )}
       {service.slug === "auriculoterapia" && (
-        <AuriculoterapiaContent waLink={WA} />
+        <AuriculoterapiaContent waLink={WA} lang={lang} />
       )}
       {service.slug === "microagujas" && (
-        <MicroagujasContent waLink={WA} />
+        <MicroagujasContent waLink={WA} lang={lang} />
       )}
       {service.slug === "microagujas-ginkgo-biloba" && (
-        <MicroagujasGinkgoContent waLink={WA} />
+        <MicroagujasGinkgoContent waLink={WA} lang={lang} />
       )}
       {service.slug === "microagujas-vitamina-c" && (
-        <MicroagujasVitaminaCContent waLink={WA} />
+        <MicroagujasVitaminaCContent waLink={WA} lang={lang} />
       )}
       {service.slug === "rejuvenecimiento-facial" && (
-        <RejuvenecimientoFacialContent waLink={WA} faq={service.faq} />
+        <RejuvenecimientoFacialContent waLink={WA} faq={service.faq} lang={lang} />
       )}
       {service.slug === "masajes-relajantes" && (
-        <MasajeRelajanteContent service={service} waLink={WA} />
+        <MasajeRelajanteContent service={service} waLink={WA} lang={lang} />
       )}
       {service.slug === "microdermoabrasion" && (
-        <MicrodermoabrasionContent service={service} waLink={WA} />
+        <MicrodermoabrasionContent service={service} waLink={WA} lang={lang} />
       )}
 
       {service.slug === "peeling-quimico" && (
-        <PeelingFacialContent waLink={WA} />
+        <PeelingFacialContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "terapias-faciales" && (
-        <TerapiasFacialesContent waLink={WA} />
+        <TerapiasFacialesContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "masaje-maxilofacial" && (
-        <MasajeMaxilofacialContent waLink={WA} />
+        <MasajeMaxilofacialContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "laser-acne" && (
-        <LaserAcneContent waLink={WA} />
+        <LaserAcneContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "microagujas-melanout" && (
-        <MelanOutContent waLink={WA} />
+        <MelanOutContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "mascarillas-faciales" && (
-        <MascarillasFacialesContent waLink={WA} />
+        <MascarillasFacialesContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "limpieza-facial" && (
-        <LimpiezaFacialContent service={service} waLink={WA} />
+        <LimpiezaFacialContent service={service} waLink={WA} lang={lang} />
       )}
 
       {(service.slug === "limpieza-facial-profunda" || service.slug === "limpieza-facial-hidratante") && (
-        <LimpiezaHidratanteContent waLink={WA} />
+        <LimpiezaHidratanteContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "tratamiento-ojeras" && (
-        <OjerasServiceContent waLink={WA} />
+        <OjerasServiceContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "aromaterapia" && (
-        <AromaterapiaContent waLink={WA} />
+        <AromaterapiaContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "rejuvenecimiento-facial-laser" && (
-        <RejuvenecimientoLaserContent waLink={WA} />
+        <RejuvenecimientoLaserContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "boda-spa" && (
-        <BodaSpaContent waLink={WA} />
+        <BodaSpaContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "arteterapia" && (
-        <ArteterapiaContent waLink={WA} />
+        <ArteterapiaContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "nutricion" && (
-        <NutricionServiceContent waLink={WA} />
+        <NutricionServiceContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "inbody" && (
-        <InBodyServiceContent waLink={WA} />
+        <InBodyServiceContent waLink={WA} lang={lang} />
       )}
 
       {/* ── MÉDICO ESPECIALISTA ────────────────────────── */}
       {service.slug === "masajes-post-operatorios" && (
-        <PostOpServiceContent waLink={WA} />
+        <PostOpServiceContent waLink={WA} lang={lang} />
       )}
       {(() => {
         const doctorMap: Record<string, { name: string; code: string; specialty: string; photo?: string; bio: string }> = {
@@ -823,67 +875,67 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
 
       {/* ── CUSTOM CONTENT: LEVANTAMIENTO DE GLÚTEO ─────────── */}
       {service.slug === "levantamiento-gluteo" && (
-        <GluteoServiceContent service={service} waLink={WA} />
+        <GluteoServiceContent service={service} waLink={WA} lang={lang} />
       )}
 
       {/* ── CUSTOM CONTENT: IRON BEAUTY FITNESS ─────────── */}
       {service.slug === "iron-beauty-fitness" && (
-        <IronBeautyServiceContent waLink={WA} />
+        <IronBeautyServiceContent waLink={WA} lang={lang} />
       )}
 
       {/* ── CUSTOM CONTENT: VENDAS FRÍAS ─────────── */}
       {service.slug === "vendas-frias" && (
-        <VendasFriasContent service={service} waLink={WA} />
+        <VendasFriasContent service={service} waLink={WA} lang={lang} />
       )}
 
       {/* ── CUSTOM CONTENT: LÁSER DESPIGMENTANTE ─────────── */}
       {service.slug === "blanqueamiento-zona-intima" && (
-        <BlanqueamientoIntimoContent service={service} waLink={WA} />
+        <BlanqueamientoIntimoContent service={service} waLink={WA} lang={lang} />
       )}
 
       {/* ── CUSTOM CONTENT: HOLLYWOOD PEEL ─────────── */}
       {service.slug === "hollywood-peel" && (
-        <HollywoodPeelContent service={service} waLink={WA} />
+        <HollywoodPeelContent service={service} waLink={WA} lang={lang} />
       )}
 
       {/* ── CUSTOM CONTENT: HILOS DE COLÁGENO ─────────── */}
       {service.slug === "hilos-colageno" && (
-        <HilosColagenoContent service={service} waLink={WA} />
+        <HilosColagenoContent service={service} waLink={WA} lang={lang} />
       )}
 
       {/* ── CUSTOM CONTENT: TRASPLANTE CAPILAR ─────────── */}
       {service.slug === "trasplante-capilar" && (
-        <TrasplanteCapilarContent service={service} waLink={WA} />
+        <TrasplanteCapilarContent service={service} waLink={WA} lang={lang} />
       )}
 
       {/* ── CUSTOM CONTENT: RELLENO DE LABIOS ─────────── */}
       {service.slug === "relleno-de-labios" && (
-        <LipFillerContent waLink={WA} />
+        <LipFillerContent waLink={WA} lang={lang} />
       )}
 
       {/* ── BOTOX CUSTOM SECTIONS ────────────────── */}
       {service.slug === "botox-full-face" && (
-        <BotoxServiceContent waLink={WA} faq={service.faq} />
+        <BotoxServiceContent waLink={WA} faq={service.faq} lang={lang} />
       )}
       {/* ── HILOS TENSORES CUSTOM SECTIONS ─────────── */}
       {service.slug === "hilos-tensores" && (
-        <HilosTensoresContent waLink={WA} faq={service.faq} />
+        <HilosTensoresContent waLink={WA} faq={service.faq} lang={lang} />
       )}
 
 
       {/* ── ADN SALMON CUSTOM SECTIONS ────────────────── */}
       {service.slug === "adn-salmon" && (
-        <AdnSalmonContent waLink={WA} />
+        <AdnSalmonContent waLink={WA} lang={lang} />
       )}
 
       {/* ── BUSTO CUSTOM SECTIONS ────────────────── */}
       {service.slug === "levantamiento-busto" && (
-        <BustoServiceContent service={service} waLink={WA} />
+        <BustoServiceContent service={service} waLink={WA} lang={lang} />
       )}
 
       {/* ── TENSADO CUSTOM SECTIONS ────────────────── */}
       {service.slug === "tensado-corporal" && (
-        <TensadoServiceContent service={service} waLink={WA} />
+        <TensadoServiceContent service={service} waLink={WA} lang={lang} />
       )}
 
       {/* ── BENEFITS ─────────────────────────────────── */}
@@ -1052,12 +1104,12 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
         const bgPair = beforeAfterBgMap[service.slug] ?? { before: "corporales-antes-bg.webp", after: "corporales-despues-bg.webp" };
         const beforeBg = `${BASE}images/${bgPair.before}`;
         const afterBg  = `${BASE}images/${bgPair.after}`;
-        const beforeItems = beforeDescMap[service.slug] ?? [
-          "Problema visible que afecta tu bienestar y confianza",
-          "Resultados lentos o nulos con métodos convencionales",
-          "Sensación de no encontrar la solución adecuada",
+        const beforeItems = beforeDescMap[lang][service.slug] ?? [
+          lang === 'es' ? "Problema visible que afecta tu bienestar y confianza" : "Visible problem that affects your well-being and confidence",
+          lang === 'es' ? "Resultados lentos o nulos con métodos convencionales" : "Slow or zero results with conventional methods",
+          lang === 'es' ? "Sensación de no encontrar la solución adecuada" : "Feeling of not finding the right solution",
         ];
-        const afterItems = afterDescMap[service.slug] ?? service.benefits.slice(0, 3);
+        const afterItems = afterDescMap[lang][service.slug] ?? service.benefits.slice(0, 3);
         return (
           <section className="py-20 md:py-28 bg-[#040f19] overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
@@ -1094,7 +1146,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
                          </h3>
                        </div>
                        <ul className="space-y-4">
-                         {(beforeDescMap[service.slug] ?? []).map((item, i) => (
+                         {(beforeDescMap[lang][service.slug] ?? []).map((item, i) => (
                            <li key={i} className="flex items-start gap-3">
                              <span className="w-3.5 h-3.5 rounded-full border border-stone-600 flex items-center justify-center shrink-0 mt-0.5">
                                <span className="w-1 h-1 rounded-full bg-stone-500" />
@@ -1114,7 +1166,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
                          </h3>
                        </div>
                        <ul className="space-y-4">
-                         {(afterDescMap[service.slug] ?? []).map((item, i) => (
+                         {(afterDescMap[lang][service.slug] ?? []).map((item, i) => (
                            <li key={i} className="flex items-start gap-3">
                              <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                              <span className="text-white/85 text-sm leading-snug">{item}</span>

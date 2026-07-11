@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef, useCallback, type Dispatch, type SetStateAction } from "react";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
-import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -38,9 +37,7 @@ function useHoverDropdown(key: DropdownKey, openDropdown: DropdownKey, setOpenDr
   return { open, scheduleClose, cancelClose, isOpen: openDropdown === key };
 }
 
-export function Navbar() {
-  const [location] = useLocation();
-  const lang = location.startsWith("/en") ? "en" : "es";
+export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alternateLink?: string }) {
   const t = useTranslations(lang);
 
   const corporalesHalf1 = tratamientosCorporalesLinks[lang].slice(0, 6);
@@ -49,6 +46,7 @@ export function Navbar() {
   const facialesHalf2 = tratamientosFacialesLinks[lang].slice(9);
 
   const [isScrolled, setIsScrolled] = useState(false);
+  const [currentPath, setCurrentPath] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isMobileMedicosOpen, setIsMobileMedicosOpen] = useState(false);
@@ -58,6 +56,7 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
+    setCurrentPath(window.location.pathname);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -74,7 +73,20 @@ export function Navbar() {
   const textClass = isScrolled ? "text-[#0c3e5a]" : "text-white/90";
   const linkBase = `text-[15px] uppercase tracking-widest font-medium hover:text-primary transition-all duration-300 relative group/link`;
 
-  const isActive = (path: string) => location === path || (path !== "/" && location.startsWith(path));
+  const isActive = (path: string) => {
+    const normalizedPath = currentPath.replace(/^\/en/, '') || '/';
+    const normalizedTarget = path.replace(/^\/en/, '') || '/';
+
+    // Handle special case for about-us / nosotros renaming
+    const isAboutPath = (p: string) => p === '/nosotros' || p === '/about-us';
+    if (isAboutPath(normalizedPath) && isAboutPath(normalizedTarget)) return true;
+
+    // Handle special case for other renamed pages if any
+    if (normalizedTarget === '/suggestion-box' && normalizedPath === '/buzon-sugerencias') return true;
+    if (normalizedTarget === '/buzon-sugerencias' && normalizedPath === '/suggestion-box') return true;
+
+    return normalizedPath === normalizedTarget || (normalizedTarget !== "/" && normalizedPath.startsWith(normalizedTarget));
+  };
 
   const ActiveIndicator = () => (
     <motion.span
@@ -93,10 +105,14 @@ export function Navbar() {
   };
 
   const getAlternateLink = (targetLang: 'es' | 'en') => {
+    if (alternateLink) return alternateLink;
     if (targetLang === 'en') {
-      return location.startsWith('/en') ? location : (location === '/' ? '/en' : '/en' + location);
+      if (currentPath === '/') return '/en';
+      if (currentPath.startsWith('/en')) return currentPath;
+      return '/en' + currentPath;
     } else {
-      return location.startsWith('/en') ? (location.replace('/en', '') || '/') : location;
+      if (!currentPath.startsWith('/en')) return currentPath || '/';
+      return currentPath.replace('/en', '') || '/';
     }
   };
 
@@ -111,7 +127,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href={lang === 'es' ? "/" : "/en"} className="flex items-center cursor-pointer group">
+          <a href={lang === 'es' ? "/" : "/en"} className="flex items-center cursor-pointer group">
             <img
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
               alt="MJ Fisio Estética y Spa"
@@ -120,7 +136,7 @@ export function Navbar() {
               width="160"
               height="64"
             />
-          </Link>
+          </a>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
@@ -149,18 +165,18 @@ export function Navbar() {
                   >
                     <div className="w-52 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
                       <div className="px-3 pt-4 pb-3 flex flex-col gap-1">
-                        <Link href={lang === 'es' ? "/nosotros" : "/en/nosotros"}
+                        <a href={lang === 'es' ? "/nosotros" : "/en/about-us"}
                           className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                           onClick={() => setOpenDropdown(null)}
                         >
                           {lang === 'es' ? 'Sobre Nosotros' : 'About Us'}
-                        </Link>
-                        <Link href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"}
+                        </a>
+                        <a href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"}
                           className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                           onClick={() => setOpenDropdown(null)}
                         >
                           {lang === 'es' ? 'Buzón de Sugerencias' : 'Suggestion Box'}
-                        </Link>
+                        </a>
                       </div>
                     </div>
                   </motion.div>
@@ -168,15 +184,15 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
-            <Link href={lang === 'es' ? "/testimonios" : "/en/testimonials"} className={`${linkBase} ${textClass} ${isActive("/testimonios") ? "text-primary" : ""}`}>
+            <a href={lang === 'es' ? "/testimonios" : "/en/testimonials"} className={`${linkBase} ${textClass} ${isActive("/testimonios") ? "text-primary" : ""}`}>
               {t('nav.testimonios')}
               {isActive("/testimonios") && <ActiveIndicator />}
-            </Link>
+            </a>
 
-            <Link href={lang === 'es' ? "/paquetes" : "/en/packages"} className={`${linkBase} ${textClass} ${isActive("/paquetes") ? "text-primary" : ""}`}>
+            <a href={lang === 'es' ? "/paquetes" : "/en/packages"} className={`${linkBase} ${textClass} ${isActive("/paquetes") ? "text-primary" : ""}`}>
               {t('nav.paquetes')}
               {isActive("/paquetes") && <ActiveIndicator />}
-            </Link>
+            </a>
 
 
 
@@ -210,85 +226,85 @@ export function Navbar() {
                         <div className="grid grid-cols-5 gap-x-4">
                           {/* Corporales col 1 */}
                           <div>
-                            <Link href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"}
+                            <a href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"}
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
                               {lang === 'es' ? 'Corporales' : 'Body'}
-                            </Link>
+                            </a>
                             {corporalesHalf1.map((link) => (
-                              <Link
+                              <a
                                 key={link.name}
                                 href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
                                 {link.name}
-                              </Link>
+                              </a>
                             ))}
                           </div>
                           {/* Corporales col 2 (continuation) */}
                           <div className="pt-6">
                             {corporalesHalf2.map((link) => (
-                              <Link
+                              <a
                                 key={link.name}
                                 href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
                                 {link.name}
-                              </Link>
+                              </a>
                             ))}
                           </div>
                           {/* Faciales col 1 */}
                           <div>
-                            <Link href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"}
+                            <a href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"}
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
                               {lang === 'es' ? 'Faciales' : 'Facials'}
-                            </Link>
+                            </a>
                             {facialesHalf1.map((link) => (
-                              <Link
+                              <a
                                 key={link.name}
                                 href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
                                 {link.name}
-                              </Link>
+                              </a>
                             ))}
                           </div>
                           {/* Faciales col 2 (continuation) */}
                           <div className="pt-6">
                             {facialesHalf2.map((link) => (
-                              <Link
+                              <a
                                 key={link.name}
                                 href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
                                 {link.name}
-                              </Link>
+                              </a>
                             ))}
                           </div>
                           {/* Piernas */}
                           <div>
-                            <Link href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"}
+                            <a href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"}
                               className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
                               onClick={() => setOpenDropdown(null)}
                             >
                               {lang === 'es' ? 'Piernas' : 'Legs'}
-                            </Link>
+                            </a>
                           {tratamientosPiernasLinks[lang].map((link) => (
-                              <Link
+                              <a
                                 key={link.name}
                                 href={link.href}
                                 className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                 onClick={() => setOpenDropdown(null)}
                               >
                                 {link.name}
-                              </Link>
+                              </a>
                             ))}
 
                             {/* MJ Creativo */}
@@ -297,14 +313,14 @@ export function Navbar() {
                                 MJ Creativo
                               </span>
                             {mjCreativoLinks[lang].map((link) => (
-                                <Link
+                                <a
                                   key={link.name}
                                   href={link.href}
                                   className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
                                   onClick={() => setOpenDropdown(null)}
                                 >
                                   {link.name}
-                                </Link>
+                                </a>
                               ))}
                             </div>
                           </div>
@@ -323,13 +339,13 @@ export function Navbar() {
               onMouseLeave={medicos.scheduleClose}
             >
               <div className="flex items-center gap-1">
-                <Link
+                <a
                   href={lang === 'es' ? "/medicina-estetica" : "/en/medical-aesthetic"}
                   className={`${linkBase} ${textClass} ${isActive("/medicina-estetica") ? "text-primary" : ""}`}
                 >
                   {t('nav.medico')}
                   {isActive("/medicina-estetica") && <ActiveIndicator />}
-                </Link>
+                </a>
                 <button
                   className={`p-1 ${textClass} hover:text-primary transition-colors`}
                   onClick={(e) => { e.stopPropagation(); setOpenDropdown(medicos.isOpen ? null : "medicos"); }}
@@ -351,22 +367,22 @@ export function Navbar() {
                           Especialidades
                         </p>
                         <div className="flex flex-col gap-1">
-                          <Link
+                          <a
                             href={lang === 'es' ? "/medicina-estetica" : "/en/facial-harmonization"}
                             className="block px-3 py-2 text-sm font-bold text-primary hover:bg-secondary/40 transition-colors rounded-lg"
                             onClick={() => setOpenDropdown(null)}
                           >
                             {lang === 'es' ? 'Armonización Facial' : 'Facial Harmonization'}
-                          </Link>
+                          </a>
                           {medicoEsteticosLinks[lang].map((link) => (
-                            <Link
+                            <a
                               key={link.name}
                               href={link.href}
                               className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                               onClick={() => setOpenDropdown(null)}
                             >
                               {link.name}
-                            </Link>
+                            </a>
                           ))}
                         </div>
                       </div>
@@ -383,25 +399,25 @@ export function Navbar() {
                 {lang === 'es' ? 'Idioma' : 'Language'}
               </span>
               <div className="flex items-center gap-2">
-                <Link
+                <a
                   href={getAlternateLink('es')}
                   className={`text-[13px] font-bold transition-all ${lang === 'es' ? 'text-primary underline underline-offset-4' : textClass + ' opacity-60 hover:opacity-100'}`}
                 >
                   ES
-                </Link>
+                </a>
                 <span className={`${textClass} opacity-20 text-xs`}>|</span>
-                <Link
+                <a
                   href={getAlternateLink('en')}
                   className={`text-[13px] font-bold transition-all ${lang === 'en' ? 'text-primary underline underline-offset-4' : textClass + ' opacity-60 hover:opacity-100'}`}
                 >
                   EN
-                </Link>
+                </a>
               </div>
             </div>
 
-            <Link href={lang === 'es' ? "/#contacto" : "/en/#contact"} className={`${linkBase} ${textClass}`}>
+            <a href={lang === 'es' ? "/#contacto" : "/en/#contact"} className={`${linkBase} ${textClass}`}>
               {lang === 'es' ? "Contacto" : "Contact"}
-            </Link>
+            </a>
 
             <Button
               className={`rounded-none px-6 py-2.5 text-sm font-semibold tracking-wide transition-all ${
@@ -446,18 +462,18 @@ export function Navbar() {
                   <p className="text-[10px] font-bold text-stone-400 uppercase tracking-[0.3em]">Seleccionar Idioma</p>
                 </div>
                 <div className="flex gap-3">
-                  <Link href={getAlternateLink('es')}
-                    className={`flex-1 text-center py-3 rounded-xl border-2 font-bold uppercase text-xs tracking-widest transition-all ${lang === 'es' ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20' : 'bg-white text-stone-400 border-stone-200'}`}
+                  <a href={getAlternateLink('es')}
+                    className={`flex-1 text-center py-3 rounded-xl border-2 font-bold uppercase text-xs tracking-widest transition-all ${lang === 'es' ? "bg-primary text-white border-primary shadow-lg shadow-primary/20" : "bg-white text-stone-400 border-stone-200"}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Español
-                  </Link>
-                  <Link href={getAlternateLink('en')}
-                    className={`flex-1 text-center py-3 rounded-xl border-2 font-bold uppercase text-xs tracking-widest transition-all ${lang === 'en' ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20' : 'bg-white text-stone-400 border-stone-200'}`}
+                  </a>
+                  <a href={getAlternateLink('en')}
+                    className={`flex-1 text-center py-3 rounded-xl border-2 font-bold uppercase text-xs tracking-widest transition-all ${lang === 'en' ? "bg-primary text-white border-primary shadow-lg shadow-primary/20" : "bg-white text-stone-400 border-stone-200"}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     English
-                  </Link>
+                  </a>
                 </div>
               </div>
 
@@ -479,37 +495,37 @@ export function Navbar() {
                       className="overflow-hidden"
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
-                        <Link href={lang === 'es' ? "/nosotros" : "/en/nosotros"}
-                          className={`block py-2 text-base ${isActive("/nosotros") ? "text-primary font-bold" : "text-muted-foreground"} hover:text-primary transition-colors`}
+                        <a href={lang === 'es' ? "/nosotros" : "/en/about-us"}
+                          className={`block py-2 text-base ${isActive("/nosotros") || isActive("/about-us") ? "text-primary font-bold" : "text-muted-foreground"} hover:text-primary transition-colors`}
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                         >
                           {lang === 'es' ? 'Sobre Nosotros' : 'About Us'}
-                        </Link>
-                        <Link href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"}
+                        </a>
+                        <a href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"}
                           className={`block py-2 text-base ${isActive("/buzon-sugerencias") ? "text-primary font-bold" : "text-muted-foreground"} hover:text-primary transition-colors`}
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                         >
                           {lang === 'es' ? 'Buzón de Sugerencias' : 'Suggestion Box'}
-                        </Link>
+                        </a>
                       </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
 
-              <Link href={lang === 'es' ? "/testimonios" : "/en/testimonials"}
+              <a href={lang === 'es' ? "/testimonios" : "/en/testimonials"}
                 className={`${isActive("/testimonios") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.testimonios')}
-              </Link>
+              </a>
 
-              <Link href={lang === 'es' ? "/paquetes" : "/en/packages"}
+              <a href={lang === 'es' ? "/paquetes" : "/en/packages"}
                 className={`${isActive("/paquetes") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.paquetes')}
-              </Link>
+              </a>
 
 
 
@@ -533,61 +549,61 @@ export function Navbar() {
                       <div className="pb-3 pl-4 flex flex-col gap-1">
                         {/* Corporales */}
                         <div className="mb-2">
-                          <Link href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"}
+                          <a href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"}
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
                             {lang === 'es' ? 'Corporales' : 'Body'}
-                          </Link>
+                          </a>
                           {tratamientosCorporalesLinks[lang].map((link) => (
-                            <Link
+                            <a
                               key={link.name}
                               href={link.href}
                               className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
                               onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                             >
                               {link.name}
-                            </Link>
+                            </a>
                           ))}
 
                         </div>
                         {/* Faciales */}
                         <div className="mb-2">
-                          <Link href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"}
+                          <a href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"}
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
                             {lang === 'es' ? 'Faciales' : 'Facials'}
-                          </Link>
+                          </a>
                           {tratamientosFacialesLinks[lang].map((link) => (
-                            <Link
+                            <a
                               key={link.name}
                               href={link.href}
                               className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
                               onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                             >
                               {link.name}
-                            </Link>
+                            </a>
                           ))}
 
                         </div>
                         {/* Piernas */}
                         <div className="mb-2">
-                          <Link href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"}
+                          <a href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"}
                             className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                           >
                             {lang === 'es' ? 'Piernas' : 'Legs'}
-                          </Link>
+                          </a>
                           {tratamientosPiernasLinks[lang].map((link) => (
-                            <Link
+                            <a
                               key={link.name}
                               href={link.href}
                               className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
                               onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                             >
                               {link.name}
-                            </Link>
+                            </a>
                           ))}
 
                           {/* MJ Creativo (Mobile) */}
@@ -596,14 +612,14 @@ export function Navbar() {
                               MJ Creativo
                             </span>
                             {mjCreativoLinks[lang].map((link) => (
-                              <Link
+                              <a
                                 key={link.name}
                                 href={link.href}
                                 className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors"
                                 onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
                               >
                                 {link.name}
-                              </Link>
+                              </a>
                             ))}
                           </div>
                         </div>
@@ -616,13 +632,13 @@ export function Navbar() {
               {/* Mobile Médico Estético Accordion */}
               <div className="border-b border-muted">
                 <div className="flex justify-between items-center w-full">
-                  <Link
+                  <a
                     href={lang === 'es' ? "/medicina-estetica" : "/en/facial-harmonization"}
                     className={`flex-grow ${isActive("/medicina-estetica") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 hover:text-primary transition-colors font-serif`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {t('nav.medico')}
-                  </Link>
+                  </a>
                   <button
                     className="p-3 text-foreground hover:text-primary transition-colors"
                     onClick={() => setIsMobileMedicosOpen(!isMobileMedicosOpen)}
@@ -639,22 +655,22 @@ export function Navbar() {
                       className="overflow-hidden"
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
-                          <Link
+                          <a
                             href={lang === 'es' ? "/medicina-estetica" : "/en/facial-harmonization"}
                             className="block py-2 text-base font-bold text-primary hover:text-primary/80 transition-colors"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileMedicosOpen(false); }}
                           >
                             {lang === 'es' ? 'Armonización Facial' : 'Facial Harmonization'}
-                          </Link>
+                          </a>
                       {medicoEsteticosLinks[lang].map((link) => (
-                          <Link
+                          <a
                             key={link.name}
                             href={link.href}
                             className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileMedicosOpen(false); }}
                           >
                             {link.name}
-                          </Link>
+                          </a>
                         ))}
 
 
@@ -665,13 +681,13 @@ export function Navbar() {
               </div>
 
 
-              <Link
+              <a
                 href={lang === 'es' ? "/#contacto" : "/en/#contact"}
                 className={`text-foreground text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {lang === 'es' ? "Contacto" : "Contact"}
-              </Link>
+              </a>
 
               <Button className="mt-4 w-full rounded-full bg-primary text-white hover:bg-primary/90" asChild>
                 <a id="cta-nav-reserva-mobile" href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0" target="_blank" rel="noopener noreferrer" onClick={() => setIsMobileMenuOpen(false)}>

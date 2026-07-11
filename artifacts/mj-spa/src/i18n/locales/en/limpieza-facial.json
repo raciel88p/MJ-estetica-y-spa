@@ -1,0 +1,174 @@
+{
+  "intro": {
+    "title": "Discover the ideal protocol for your skin today",
+    "cta": "Write to us on WhatsApp"
+  },
+  "whatIs": {
+    "title": "What is a facial cleansing?",
+    "desc1": "Facial cleansing is a skincare treatment designed to support deep skin cleansing, improve the feeling of facial freshness, and favor a more luminous and revitalized appearance.",
+    "desc2": "At MJ Estética & Wellness Center, each protocol is adapted according to the specific needs of your skin, because not all skins require the same care.",
+    "focus": "Our approach combines:",
+    "focusItems": [
+      "deep facial cleansing",
+      "skin well-being",
+      "natural facial glow",
+      "hydration and professional care",
+      "premium wellness experience"
+    ],
+    "quote": "The goal is not to change who you are. It's to help you feel more comfortable, fresh, and confident with your skin."
+  },
+  "improvements": {
+    "title": "What can this treatment help improve?",
+    "desc": "Facial cleansing can support protocols oriented to:",
+    "note": "Each skin responds differently, so we perform a prior assessment before recommending any protocol."
+  },
+  "why": {
+    "title": "Why are so many people incorporating facial cleansings into their routines?",
+    "p1": "Because today skincare is no longer a luxury. Now it is part of self-care.",
+    "p2": "Many people spend weeks using makeup, sunscreen, daily stress, and environmental pollution on their skin… without giving it a true deep cleansing process.",
+    "resultLabel": "The result can feel like this:",
+    "results": [
+      "Dull skin",
+      "Oily or dry sensation",
+      "Lack of luminosity",
+      "Irregular texture",
+      "Facial fatigue sensation"
+    ],
+    "closing": "That's where a premium facial experience can make the difference."
+  },
+  "realBenefits": {
+    "title": "Real benefits of a facial cleansing",
+    "desc": "At MJ Estética & Wellness Center we look for progressive, natural, and personalized results.",
+    "items": [
+      "Progressive facial glow",
+      "Freshness and cleanliness sensation",
+      "More luminous appearance",
+      "Integral facial well-being",
+      "Premium skincare experience",
+      "Relaxation and self-care",
+      "Professional skin care",
+      "Individually adapted protocols"
+    ],
+    "quote": "No unrealistic promises. No hype. Just professional care focused on the well-being and visual health of your skin."
+  },
+  "types": {
+    "title": "Types of facial cleansing available"
+  },
+  "howItWorks": {
+    "title": "How does a facial cleansing work?",
+    "steps": [
+      {
+        "step": "Step 1",
+        "title": "Personalized facial assessment",
+        "desc": "We analyze your skin and your goals to recommend the most appropriate protocol."
+      },
+      {
+        "step": "Step 2",
+        "title": "Facial cleansing and preparation",
+        "desc": "A professional cleansing process is carried out aimed at the well-being and preparation of the skin."
+      },
+      {
+        "step": "Step 3",
+        "title": "Skincare protocol application",
+        "desc": "We apply products and techniques according to the specific needs evaluated."
+      },
+      {
+        "step": "Step 4",
+        "title": "Post-treatment recommendations",
+        "desc": "We provide you with hydration, sunscreen, and facial care recommendations to boost results."
+      }
+    ],
+    "durationLabel": "Approximate duration",
+    "durationValue": "60 to 90 minutes",
+    "feature1": "Relaxing and comfortable experience",
+    "feature2": "Recommended sunscreen and hydration",
+    "cta": "Book session"
+  },
+  "forWhom": {
+    "title": "For whom is a facial cleansing recommended?",
+    "desc": "This treatment can be ideal for:",
+    "items": [
+      "People interested in facial glow",
+      "People looking for deep cleansing",
+      "Those who want to start a skincare routine",
+      "People interested in facial well-being",
+      "People looking for a premium facial care experience",
+      "Preventive skin care routines",
+      "People who want to improve the sensation of freshness and luminosity"
+    ]
+  },
+  "beforeAfter": {
+    "title": "Before & After: real results",
+    "desc": "At MJ Estética & Wellness Center we believe in natural results.",
+    "items": [
+      "Healthy glow",
+      "Progressive luminosity",
+      "Fresher looking skin",
+      "Real facial well-being",
+      "Personalized results"
+    ],
+    "note": "📸 We use real photographs of patients and authentic processes."
+  },
+  "testimonials": {
+    "title": "What our clients say",
+    "items": [
+      "My skin feels much fresher and more luminous.",
+      "The experience was super relaxing and personalized.",
+      "I loved how my skin looked after the facial cleansing.",
+      "I felt a difference in luminosity and softness from the first session."
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions about Facial Cleansings"
+  },
+  "programs": {
+    "title": "Premium skincare programs and experiences",
+    "items": [
+      "Personalized facial assessment",
+      "Facial glow programs",
+      "Skincare memberships",
+      "Wellness facial bundles",
+      "Individually adapted premium protocols"
+    ],
+    "promoNote": "Active promotions available via WhatsApp."
+  },
+  "whyMJ": {
+    "title": "Why choose MJ Estética & Wellness Center?",
+    "desc": "Because we believe that skincare should feel human, professional, and personalized.",
+    "items": [
+      "Personalized protocols",
+      "Professional attention",
+      "Advanced skincare experience",
+      "Comfortable and relaxing environment",
+      "Facial wellness focus",
+      "Individualized follow-up",
+      "Care oriented towards natural glow and well-being"
+    ],
+    "closing": "We are not looking to do a generic facial cleansing. We seek to help you live a premium facial care experience."
+  },
+  "location": {
+    "title": "Facial Cleansing in Turrialba",
+    "items": [
+      { "icon": "📍", "text": "Accessible location in Turrialba" },
+      { "icon": "📲", "text": "WhatsApp service" },
+      { "icon": "🚗", "text": "Nearby parking" },
+      { "icon": "🕒", "text": "Hours subject to availability" },
+      { "icon": "✨", "text": "Personalized attention" }
+    ]
+  },
+  "finalCta": {
+    "title": "Discover the ideal protocol for your skin",
+    "desc": "Your skin deserves more than a quick cleanse. It deserves professional care, well-being, and an experience designed especially for you.",
+    "waLinkText": "Write to us on WhatsApp and discover your ideal protocol"
+  },
+  "leadMagnet": {
+    "title": "🎁 Free Guide: How to improve the results of a facial cleansing",
+    "wordLabel": "Comment the word:",
+    "word": "LIMPIEZA",
+    "desc": "And receive for FREE our guide with professional recommendations to boost glow, luminosity and facial well-being from home.",
+    "cta": "I WANT MY FREE GUIDE"
+  },
+  "waMessages": {
+    "general": "Hi! I would like more information about Facial Cleansing in Turrialba"
+  }
+}

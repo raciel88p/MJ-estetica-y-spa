@@ -73,7 +73,20 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
   const textClass = isScrolled ? "text-[#0c3e5a]" : "text-white/90";
   const linkBase = `text-[15px] uppercase tracking-widest font-medium hover:text-primary transition-all duration-300 relative group/link`;
 
-  const isActive = (path: string) => currentPath === path || (path !== "/" && currentPath.startsWith(path));
+  const isActive = (path: string) => {
+    const normalizedPath = currentPath.replace(/^\/en/, '') || '/';
+    const normalizedTarget = path.replace(/^\/en/, '') || '/';
+
+    // Handle special case for about-us / nosotros renaming
+    const isAboutPath = (p: string) => p === '/nosotros' || p === '/about-us';
+    if (isAboutPath(normalizedPath) && isAboutPath(normalizedTarget)) return true;
+
+    // Handle special case for other renamed pages if any
+    if (normalizedTarget === '/suggestion-box' && normalizedPath === '/buzon-sugerencias') return true;
+    if (normalizedTarget === '/buzon-sugerencias' && normalizedPath === '/suggestion-box') return true;
+
+    return normalizedPath === normalizedTarget || (normalizedTarget !== "/" && normalizedPath.startsWith(normalizedTarget));
+  };
 
   const ActiveIndicator = () => (
     <motion.span
@@ -94,8 +107,11 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
   const getAlternateLink = (targetLang: 'es' | 'en') => {
     if (alternateLink) return alternateLink;
     if (targetLang === 'en') {
-      return currentPath === '/' ? '/en' : '/en' + currentPath;
+      if (currentPath === '/') return '/en';
+      if (currentPath.startsWith('/en')) return currentPath;
+      return '/en' + currentPath;
     } else {
+      if (!currentPath.startsWith('/en')) return currentPath || '/';
       return currentPath.replace('/en', '') || '/';
     }
   };
@@ -149,7 +165,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                   >
                     <div className="w-52 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
                       <div className="px-3 pt-4 pb-3 flex flex-col gap-1">
-                        <a href={lang === 'es' ? "/nosotros" : "/en/nosotros"}
+                        <a href={lang === 'es' ? "/nosotros" : "/en/about-us"}
                           className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg"
                           onClick={() => setOpenDropdown(null)}
                         >
@@ -479,8 +495,8 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                       className="overflow-hidden"
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
-                        <a href={lang === 'es' ? "/nosotros" : "/en/nosotros"}
-                          className={`block py-2 text-base ${isActive("/nosotros") ? "text-primary font-bold" : "text-muted-foreground"} hover:text-primary transition-colors`}
+                        <a href={lang === 'es' ? "/nosotros" : "/en/about-us"}
+                          className={`block py-2 text-base ${isActive("/nosotros") || isActive("/about-us") ? "text-primary font-bold" : "text-muted-foreground"} hover:text-primary transition-colors`}
                           onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                         >
                           {lang === 'es' ? 'Sobre Nosotros' : 'About Us'}

@@ -1,0 +1,129 @@
+{
+  "intro": {
+    "label": "Hair Restoration",
+    "title": "Are you concerned about hair loss and how it affects your personal image?",
+    "items": [
+      "Every time you look in the mirror, you notice less density, more marked receding hairlines, or areas where hair no longer looks the same.",
+      "Perhaps you've tried products, shampoos, supplements, or treatments without obtaining the results you expected.",
+      "The reality is that hair loss can impact much more than physical appearance. It can affect confidence, personal security, and even how you relate to others.",
+      "But there is an alternative designed for those who wish to improve their hair appearance in a progressive, natural, and personalized way."
+    ],
+    "box": {
+      "title": "Discover Hair Transplant at MJ Estética & Wellness Center",
+      "p1": "At MJ Estética & Wellness Center, we understand that every person has a different story behind their hair loss. That's why we develop personalized protocols aimed at restoring hair appearance while respecting facial harmony and seeking progressive and natural results.",
+      "p2": "Our approach consists not only of recovering hair. We seek to help you regain confidence, security, and aesthetic well-being."
+    }
+  },
+  "whatIs": {
+    "title": "What is a Hair Transplant?",
+    "p1": "A hair transplant is a procedure designed to support the restoration of hair appearance through the strategic redistribution of hair follicles. Its goal is to visually improve hair density, reinforce the hairline, and create a more harmonic and natural appearance.",
+    "p2": "Each case requires an individualized assessment to determine the most appropriate protocol based on:",
+    "items": [
+      "Hair loss pattern",
+      "Current density level",
+      "Facial features",
+      "Personal expectations",
+      "Aesthetic goals"
+    ]
+  },
+  "recommended": {
+    "title": "For whom is it recommended?",
+    "desc": "This procedure may be an option for people who wish to improve:",
+    "items": [
+      "Appearance of hair loss",
+      "Pronounced receding hairlines",
+      "Visual decrease in hair density",
+      "Poorly defined hairline",
+      "Personal image",
+      "Confidence and aesthetic security",
+      "Facial harmonization"
+    ]
+  },
+  "worries": {
+    "title": "What concerns those considering a Hair Transplant most",
+    "desc": "Most people ask us similar questions:",
+    "items": [
+      "“Will it look natural?”",
+      "“Will it hurt?”",
+      "“Will it be permanent?”",
+      "“When will I notice results?”",
+      "“Will it be worth it?”"
+    ],
+    "footer": "And these are totally valid questions. That's why our process always starts with a professional assessment to analyze your case and design a personalized strategy."
+  },
+  "benefits": {
+    "title": "Benefits of Hair Transplant",
+    "items": [
+      { "t": "Natural Appearance", "d": "Our goal is to achieve harmonic integration with your facial features." },
+      { "t": "Visual Density Improvement", "d": "Helps create a more uniform and balanced hair appearance." },
+      { "t": "Progressive Results", "d": "Evolution occurs gradually to respect the natural cycle of hair growth." },
+      { "t": "Personal Confidence", "d": "Many patients report feeling more secure with their image." },
+      { "t": "Personalized Restoration", "d": "Each protocol is adapted to the specific needs of each patient." },
+      { "t": "Professional Follow-up", "d": "We accompany you throughout the entire recovery and evolution process." }
+    ]
+  },
+  "process": {
+    "title": "How does the process work?",
+    "items": [
+      { "s": "Step 1", "t": "Hair Assessment", "d": "We analyze your case, history, and aesthetic goals." },
+      { "s": "Step 2", "t": "Personalized Design", "d": "We create a plan adapted to your hair loss pattern." },
+      { "s": "Step 3", "t": "Procedure", "d": "It is performed following protocols designed to maximize naturalness and visual harmony." },
+      { "s": "Step 4", "t": "Follow-up and Recovery", "d": "You receive guidance to optimize evolution and post-care." }
+    ]
+  },
+  "timeline": {
+    "title": "When do you start noticing results?",
+    "p1": "This is one of the most frequently asked questions. The answer is simple: <span className=\"font-bold text-stone-900\">Results are progressive.</span>",
+    "p2": "Each patient evolves differently and times can vary based on multiple individual factors.",
+    "p3": "The important thing is to understand that hair growth requires time and follow-up. Evolution is usually observed gradually as the recovery process advances."
+  },
+  "transformations": {
+    "title": "Transformation Stories",
+    "items": [
+      { "n": "Carlos, 38 years old", "t": "“My biggest fear was that it would look artificial. After the process, people tell me I look younger, but no one notices I had a procedure done.”" },
+      { "n": "Andrés, 42 years old", "t": "“More than recovering hair, I regained confidence for meetings, photography, and social activities.”" },
+      { "n": "Mariana, 35 years old", "t": "“I was looking to improve certain areas with less density and the result integrated very naturally.”" }
+    ]
+  },
+  "whyUs": {
+    "title": "Why choose MJ Estética & Wellness Center?",
+    "p1": "Because we understand that a hair transplant is not just about hair. It's about self-esteem, confidence, and well-being.",
+    "items": [
+      "Personalized protocols",
+      "Individual assessments",
+      "Professional care",
+      "Continuous follow-up",
+      "Integral aesthetic approach",
+      "Natural results",
+      "Safe and premium environment"
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "Does a hair transplant hurt?", "a": "The experience may vary between patients. All procedure details are explained during the assessment." },
+      { "q": "Does it look natural?", "a": "The main goal is to maintain a harmonic and natural appearance adapted to each person." },
+      { "q": "How long does recovery take?", "a": "It depends on each case and the recommended post-care." },
+      { "q": "Are results immediate?", "a": "No. Evolution is progressive and requires time." },
+      { "q": "Who is an ideal candidate?", "a": "People with hair loss who wish to improve the appearance and density of hair through a personalized assessment." },
+      { "q": "Can it be combined with other treatments?", "a": "Yes, depending on the professional evaluation performed." }
+    ]
+  },
+  "final": {
+    "title": "Schedule your Hair Assessment",
+    "p1": "If you've come this far, you've probably been looking for a solution to improve your hair appearance for some time. The first step is not to perform a procedure. The first step is to obtain a professional evaluation to know the options available for your case.",
+    "box": {
+      "items": [
+        "Professional diagnosis",
+        "Individual evaluation",
+        "Personalized protocol",
+        "Specialized attention",
+        "Professional follow-up"
+      ],
+      "p1": "Schedule your personalized hair assessment today.",
+      "p2": "Your new image can start with a conversation."
+    },
+    "cta": "CONSULT VIA WHATSAPP",
+    "footer": "📍 Turrialba — Advanced aesthetics, well-being and premium facial harmonization"
+  }
+}

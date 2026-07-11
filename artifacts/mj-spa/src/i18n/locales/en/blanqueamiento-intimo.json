@@ -1,0 +1,80 @@
+{
+  "intro": {
+    "tagline": "Advanced Intimate Aesthetics",
+    "p1": "Do you feel insecure about the darkening of your intimate areas? You are not alone.",
+    "p2": "At <span className=\"font-bold text-stone-900\">MJ Estética & Wellness Center</span> we offer <span className=\"font-bold text-primary\">Intimate Area Whitening</span> protocols designed to unify skin tone in delicate areas (bikini line, armpits, perianal area) in a safe, respectful, and professional way.",
+    "items": [
+      "✨ Tone unification",
+      "✨ 100% safe treatment",
+      "✨ Total privacy and comfort",
+      "✨ Painless and no recovery",
+      "✨ Progressive results"
+    ]
+  },
+  "causes": {
+    "title": "Why does the intimate area darken?",
+    "intro": "Darkening (hyperpigmentation) in intimate areas is very common and can be due to multiple factors that affect your daily confidence:",
+    "items": [
+      { "t": "Constant friction", "d": "Chafing from tight clothing or skin-to-skin contact generates a melanin defensive response." },
+      { "t": "Hormonal changes", "d": "Pregnancy, use of contraceptives, or menopause can darken specific areas." },
+      { "t": "Aggressive hair removal", "d": "Constant use of razors or hot wax irritates the area and causes post-inflammatory spots." },
+      { "t": "Genetic predisposition", "d": "Some skin types tend to pigment more easily in body folds." }
+    ]
+  },
+  "protocol": {
+    "title": "Our Whitening Protocol",
+    "desc": "We combine aesthetic technology and enzymatic peelings specific for sensitive areas.",
+    "steps": [
+      {
+        "t": "Private Assessment",
+        "d": "We analyze the degree of pigmentation and skin condition to personalize the number of sessions."
+      },
+      {
+        "t": "Enzymatic Peeling",
+        "d": "We apply depigmenting actives that lighten the area without causing burns or severe irritation."
+      },
+      {
+        "t": "Post-Session Care",
+        "d": "We provide you with the guidelines to maintain results and prevent the area from darkening again."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Benefits of Intimate Depigmentation",
+    "items": [
+      "Recover your skin's natural luminosity",
+      "Feel more comfortable wearing a bikini or underwear",
+      "Eliminate spots from chafing or post-hair removal",
+      "Painless and non-invasive treatment",
+      "Improve the texture and softness of the treated area",
+      "Protocols respectful of your privacy"
+    ],
+    "cta": "Check availability",
+    "privacyQuote": "\"Your privacy is our absolute priority.\"",
+    "badge": "Medical<br />Protocols"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "Is it safe for sensitive skin?", "a": "Absolutely. We use enzymatic peelings and latest generation actives designed specifically for delicate areas, avoiding aggressive irritation." },
+      { "q": "How many sessions do I need?", "a": "It depends on the degree of pigmentation. Generally, between 4 and 6 sessions are recommended for optimal and lasting results." },
+      { "q": "Can it be done on armpits too?", "a": "Yes, the protocol is excellent for armpits, bikini line, perianal area, and darkened knees/elbows." },
+      { "q": "Does hair interfere with the treatment?", "a": "We recommend the area be shaved (preferably 48h before) so the actives penetrate the skin better." },
+      { "q": "Does it hurt?", "a": "No. It is a non-invasive topical treatment. You may feel a slight tingling or momentary heat." }
+    ]
+  },
+  "leadMagnet": {
+    "label": "Free Ebook",
+    "title": "Intimate Care Guide",
+    "desc": "Learn how to prevent the darkening of your intimate areas and how to maintain the results of your professional treatment.",
+    "wordLabel": "Keyword",
+    "word": "INTIMATE",
+    "cta": "Ask via Instagram"
+  },
+  "finalCta": {
+    "title": "Feel comfortable in your own skin",
+    "desc": "Don't let spots limit your confidence. Schedule a private assessment at MJ Estética and discover how we can help you.",
+    "cta1": "Schedule Assessment",
+    "cta2": "Ask for prices"
+  }
+}

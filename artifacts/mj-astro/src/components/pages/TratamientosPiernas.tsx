@@ -9,6 +9,7 @@ import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { tratamientosPiernasLinks, servicePages } from "@/data/services";
 import { StatsBar } from "@/components/StatsBar";
+import { useTranslations } from "@/i18n/ui";
 
 const WA = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
@@ -17,13 +18,15 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as const } },
 };
 
-const highlights = [
-  { n: "2", label: "Tratamientos de piernas" },
-  { n: "100%", label: "No invasivos" },
-  { n: "Rápido", label: "Sin recuperación" },
-];
-
 function TratamientosPiernas({ lang = 'es' }: { lang?: 'es' | 'en' }) {
+  const t = useTranslations(lang);
+
+  const highlights = [
+    { n: "2", label: t('piernas.hero.stat1') },
+    { n: "100%", label: t('piernas.hero.stat2') },
+    { n: lang === 'es' ? "Rápido" : "Fast", label: t('piernas.hero.stat3') },
+  ];
+
   const services = tratamientosPiernasLinks[lang].map((link) => {
     const slug = link.href.replace("/servicios/", "").replace("/en/services/", "");
     const data = servicePages.find((s) => s[lang].slug === slug);
@@ -49,18 +52,18 @@ function TratamientosPiernas({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         />
         <div className="relative z-10 max-w-4xl mx-auto px-6 sm:px-10 lg:px-16">
           <Breadcrumb
-            items={[{ label: "Tratamientos de Piernas" }]}
+            items={[{ label: t('piernas.hero.title') }]}
             variant="dark"
           />
           <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mt-8 mb-4">
-            PIERNAS
+            {t('piernas.hero.tagline')}
           </p>
           <h1 className="text-5xl md:text-6xl font-serif font-bold text-white leading-tight mb-6">
-            Tratamientos<br />
-            <span className="italic font-light text-white/50">de Piernas</span>
+            {t('piernas.hero.title')}<br />
+            <span className="italic font-light text-white/50">{t('piernas.hero.title_italic')}</span>
           </h1>
           <p className="text-white/75 text-lg leading-relaxed max-w-xl">
-            Piernas cansadas o hinchadas — te ayudamos a recuperar unas piernas sanas, ligeras y estéticas con técnicas no invasivas.
+            {t('piernas.hero.desc')}
           </p>
 
           <div className="grid grid-cols-3 gap-8 mt-14 pt-10 border-t border-[#1a4f6e]">
@@ -74,13 +77,13 @@ function TratamientosPiernas({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         </div>
       </section>
 
-      <StatsBar />
+      <StatsBar lang={lang} />
 
       {/* Intro Banner */}
       <section className="py-5 bg-primary">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white text-center sm:text-left text-sm font-medium">
-            ¿Piernas pesadas o cansadas? Solicita tu <strong>valoración gratuita</strong> hoy
+            {t('piernas.banner.desc1')} <strong>{t('piernas.banner.desc2')}</strong> {t('piernas.banner.desc3')}
           </p>
           <a
             href={WA}
@@ -89,7 +92,7 @@ function TratamientosPiernas({ lang = 'es' }: { lang?: 'es' | 'en' }) {
             className="shrink-0 inline-flex items-center gap-2 text-white text-xs font-bold tracking-[0.2em] uppercase border border-white/60 px-6 py-2.5 hover:bg-white hover:text-primary transition-all"
           >
             <MessageCircle className="w-3.5 h-3.5" />
-            Reservar valoración gratuita
+            {t('piernas.banner.cta')}
           </a>
         </div>
       </section>
@@ -101,9 +104,9 @@ function TratamientosPiernas({ lang = 'es' }: { lang?: 'es' | 'en' }) {
             initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
             className="mb-14"
           >
-            <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">NUESTROS SERVICIOS</p>
+            <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">{t('corporales.services.tagline')}</p>
             <h2 className="text-4xl font-serif font-bold text-stone-900">
-              Tratamientos especializados en piernas
+              {t('piernas.services.title')}
             </h2>
             <div className="w-16 h-0.5 bg-primary mt-5" />
           </motion.div>
@@ -129,7 +132,7 @@ function TratamientosPiernas({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                 </p>
                 <a href={service.href}>
                   <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary border-b border-primary/30 pb-0.5 hover:border-primary transition-colors cursor-pointer">
-                    Ver tratamiento <ArrowRight className="w-3.5 h-3.5" />
+                    {t('service.related.view')} <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </a>
               </motion.div>
@@ -143,15 +146,15 @@ function TratamientosPiernas({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
             {[
-              { icon: <ShieldCheck className="w-6 h-6 text-primary" />, title: "100% No invasivo", desc: "Sin cirugía ni recuperación. Técnicas no agresivas que respetan tu cuerpo." },
-              { icon: <Award className="w-6 h-6 text-primary" />, title: "Equipo especializado", desc: "Fisioterapeutas con formación específica en bienestar y circulación." },
-              { icon: <Clock4 className="w-6 h-6 text-primary" />, title: "Mejora desde la 1ª sesión", desc: "Reducción de pesadez y molestias desde las primeras sesiones de tratamiento." },
-            ].map((t) => (
-              <div key={t.title} className="flex gap-4">
-                <div className="shrink-0 mt-0.5">{t.icon}</div>
+              { icon: <ShieldCheck className="w-6 h-6 text-primary" />, title: t('piernas.trust.t1'), desc: t('piernas.trust.d1') },
+              { icon: <Award className="w-6 h-6 text-primary" />, title: t('piernas.trust.t2'), desc: t('piernas.trust.d2') },
+              { icon: <Clock4 className="w-6 h-6 text-primary" />, title: t('piernas.trust.t3'), desc: t('piernas.trust.d3') },
+            ].map((t_item) => (
+              <div key={t_item.title} className="flex gap-4">
+                <div className="shrink-0 mt-0.5">{t_item.icon}</div>
                 <div>
-                  <p className="font-serif font-bold text-stone-900 mb-1">{t.title}</p>
-                  <p className="text-white/65 text-sm leading-relaxed">{t.desc}</p>
+                  <p className="font-serif font-bold text-stone-900 mb-1">{t_item.title}</p>
+                  <p className="text-white/65 text-sm leading-relaxed">{t_item.desc}</p>
                 </div>
               </div>
             ))}
@@ -163,13 +166,13 @@ function TratamientosPiernas({ lang = 'es' }: { lang?: 'es' | 'en' }) {
             className="border-l-4 border-primary pl-8 py-2"
           >
             <p className="text-stone-700 font-serif text-xl italic leading-relaxed mb-4">
-              "Sufría de pesadez en las piernas desde hace años y no me animaba a buscar ayuda. En MJ me explicaron todo el proceso con mucha paciencia. Después de 4 sesiones la sensación de alivio es increíble."
+              {t('piernas.testimonial.text')}
             </p>
             <footer className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary text-xs font-bold">C</div>
               <div>
-                <p className="text-stone-900 text-sm font-semibold">Carmen R.</p>
-                <p className="text-white/75 text-xs">Clienta — Turrialba</p>
+                <p className="text-stone-900 text-sm font-semibold">{t('piernas.testimonial.author')}</p>
+                <p className="text-white/75 text-xs">{t('corporales.testimonial.role')}</p>
               </div>
             </footer>
           </motion.blockquote>
@@ -181,20 +184,20 @@ function TratamientosPiernas({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
-              <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">¿POR QUÉ TRATARLAS?</p>
+              <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">{t('piernas.info.title')}</p>
               <h3 className="text-3xl font-serif font-bold text-stone-900 mb-5">
-                Las piernas pesadas y cansadas afectan tu calidad de vida
+                {t('piernas.info.subtitle')}
               </h3>
               <p className="text-white/65 text-sm leading-relaxed">
-                La mala circulación y el cansancio acumulado no solo son un problema estético, sino que pueden generar dolor, pesadez y calambres nocturnos. Un tratamiento a tiempo mejora tu calidad de vida y previene complicaciones futuras.
+                {t('piernas.info.desc')}
               </p>
             </div>
             <div className="space-y-4">
               {[
-                "Diagnóstico personalizado en primera consulta",
-                "Protocolos adaptados a tus necesidades",
-                "Resultados visibles desde las primeras sesiones",
-                "Tratamientos complementarios para potenciar resultados",
+                t('piernas.info.p1'),
+                t('piernas.info.p2'),
+                t('piernas.info.p3'),
+                t('piernas.info.p4'),
               ].map((point) => (
                 <div key={point} className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0 mt-1.5" />
@@ -210,10 +213,10 @@ function TratamientosPiernas({ lang = 'es' }: { lang?: 'es' | 'en' }) {
       <section className="py-20 bg-[#071e2e]">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">PIDE TU CITA</p>
+            <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-4">{t('corporales.cta.tagline')}</p>
             <h2 className="text-4xl font-serif font-bold text-white mb-6">
-              Recupera unas piernas<br />
-              <span className="italic font-light text-white/50">sanas y ligeras</span>
+              {t('piernas.cta.title')}<br />
+              <span className="italic font-light text-white/50">{t('piernas.cta.title_italic')}</span>
             </h2>
             <a
               href={WA}
@@ -222,7 +225,7 @@ function TratamientosPiernas({ lang = 'es' }: { lang?: 'es' | 'en' }) {
               className="inline-flex items-center gap-3 bg-primary text-white text-sm font-bold tracking-[0.15em] uppercase px-10 py-4 hover:bg-primary/90 transition-all group"
             >
               <MessageCircle className="w-4 h-4" />
-              Reservar por WhatsApp
+              {t('corporales.cta.button')}
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
             </a>
           </motion.div>

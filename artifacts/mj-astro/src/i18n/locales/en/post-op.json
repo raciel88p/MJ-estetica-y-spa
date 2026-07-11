@@ -1,0 +1,93 @@
+{
+  "symptoms": {
+    "label": "Symptoms to treat",
+    "title": "Do you notice hardness, inflammation, or <span class=\"font-light italic text-primary\">discomfort after your surgery?</span>",
+    "desc": "It's completely normal for hematomas, edema, or fibrosis to appear after an intervention. Our goal is to treat them in time to ensure that the final result is what you always dreamed of.",
+    "items": [
+      {
+        "title": "Surgical Fibrosis",
+        "desc": "We treat accumulations of scar tissue that generate hardness and irregularities under the skin."
+      },
+      {
+        "title": "Edema and Inflammation",
+        "desc": "We accelerate the elimination of accumulated fluids to reduce volume and pressure."
+      },
+      {
+        "title": "Hematomas",
+        "desc": "We improve local circulation so that bruises disappear more quickly."
+      }
+    ]
+  },
+  "vital": {
+    "label": "Why is it vital?",
+    "title": "Post-operative care is <span class=\"font-light italic text-primary\">50% of your surgery's success</span>",
+    "items": [
+      "More uniform results without irregularities",
+      "Significant reduction in pain and tension",
+      "Better healing and skin quality",
+      "Faster return to your daily activities",
+      "Prevention of long-term complications"
+    ],
+    "cta": "CHECK AVAILABILITY",
+    "stats": "Satisfaction in guided recovery"
+  },
+  "protocol": {
+    "label": "Our Protocol",
+    "title": "4 Steps towards your best version",
+    "steps": [
+      { "num": "01", "title": "Assessment", "desc": "We analyze your type of surgery and the current state of the tissues." },
+      { "num": "02", "title": "Drainage", "desc": "We activate the lymphatic system to evacuate liquids and toxins." },
+      { "num": "03", "title": "Defibrosis", "desc": "We manually work on the hard areas to soften them." },
+      { "num": "04", "title": "Follow-up", "desc": "We monitor your progress until the tissue is 100% healthy." }
+    ]
+  },
+  "leadMagnet": {
+    "label": "Exclusive Resource",
+    "title": "Download our <span class=\"text-primary italic font-light\">Care Guide</span> for Post-Operative Care at Home",
+    "desc": "Learn what to do and what to avoid during the first days so as not to compromise your results. Totally free.",
+    "cta": "REQUEST GUIDE VIA WHATSAPP"
+  },
+  "whyUs": {
+    "label": "Trust & Experience",
+    "title": "Why trust <span class=\"font-light italic text-primary\">MJ Wellness Center?</span>",
+    "items": [
+      {
+        "title": "Hospital Experience",
+        "desc": "We have years of experience working with renowned surgeons at Hospital La Católica."
+      },
+      {
+        "title": "Vanguard Techniques",
+        "desc": "Updated protocols that combine manual drainage with latest-generation equipment."
+      },
+      {
+        "title": "1 on 1 Attention",
+        "desc": "We are not a volume clinic. Each patient receives the time and attention their surgery requires."
+      }
+    ]
+  },
+  "faq": {
+    "label": "Resolving your doubts",
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "When should I start my massages?",
+        "a": "Generally from 48-72 hours for gentle lymphatic drainage. For fibrosis work, we usually start from the 3rd week."
+      },
+      {
+        "q": "Do post-operative massages hurt?",
+        "a": "Lymphatic drainage is a very gentle and painless technique. Defibrosis work can generate some discomfort, but it is always adapted to your sensitivity."
+      },
+      {
+        "q": "How many sessions will I need?",
+        "a": "It depends on the surgery and how your body responds. The average for a liposuction or abdominoplasty is 10 to 15 sessions."
+      }
+    ]
+  },
+  "finalCta": {
+    "label": "Your recovery starts here",
+    "title": "Ready to ensure the <span class=\"italic font-light opacity-80\">best results of your surgery?</span>",
+    "cta1": "SCHEDULE ASSESSMENT",
+    "cta2": "INQUIRE VIA WHATSAPP",
+    "footer": "Limited spots per week to guarantee personalized attention"
+  }
+}

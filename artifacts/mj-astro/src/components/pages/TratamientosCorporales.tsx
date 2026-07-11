@@ -76,7 +76,7 @@ function TratamientosCorporales({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         </div>
       </section>
 
-      <StatsBar />
+      <StatsBar lang={lang} />
 
       {/* Intro Banner */}
       <section className="py-5 bg-primary">
