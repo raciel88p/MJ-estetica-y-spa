@@ -392,29 +392,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
               </AnimatePresence>
             </div>
 
-            {/* ── Idioma Toggle ── */}
-            <div className={`flex items-center gap-2 border-r border-white/10 pr-6 mr-2`}>
-              <Globe className={`w-3.5 h-3.5 ${textClass} opacity-50`} />
-              <span className={`text-[10px] uppercase tracking-tighter ${textClass} opacity-50 font-bold mr-1`}>
-                {lang === 'es' ? 'Idioma' : 'Language'}
-              </span>
-              <div className="flex items-center gap-2">
-                <a
-                  href={getAlternateLink('es')}
-                  className={`text-[13px] font-bold transition-all ${lang === 'es' ? 'text-primary underline underline-offset-4' : textClass + ' opacity-60 hover:opacity-100'}`}
-                >
-                  ES
-                </a>
-                <span className={`${textClass} opacity-20 text-xs`}>|</span>
-                <a
-                  href={getAlternateLink('en')}
-                  className={`text-[13px] font-bold transition-all ${lang === 'en' ? 'text-primary underline underline-offset-4' : textClass + ' opacity-60 hover:opacity-100'}`}
-                >
-                  EN
-                </a>
-              </div>
-            </div>
-
             <a href={lang === 'es' ? "/#contacto" : "/en/#contact"} className={`${linkBase} ${textClass}`}>
               {lang === 'es' ? "Contacto" : "Contact"}
             </a>
@@ -431,6 +408,29 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                 {t('nav.reservar')}
               </a>
             </Button>
+
+            {/* ── Idioma Toggle ── */}
+            <div className={`flex items-center gap-2 border-l border-white/20 pl-6 ml-2`}>
+              <Globe className={`w-4 h-4 ${textClass} opacity-60`} />
+              <span className={`text-[11px] uppercase tracking-tighter ${textClass} opacity-60 font-bold mr-1`}>
+                {lang === 'es' ? 'Idioma' : 'Language'}
+              </span>
+              <div className="flex items-center gap-2">
+                <a
+                  href={getAlternateLink('es')}
+                  className={`text-[14px] font-bold transition-all ${lang === 'es' ? 'text-primary underline underline-offset-4 scale-105' : textClass + ' opacity-60 hover:opacity-100'}`}
+                >
+                  ES
+                </a>
+                <span className={`${textClass} opacity-20 text-xs`}>|</span>
+                <a
+                  href={getAlternateLink('en')}
+                  className={`text-[14px] font-bold transition-all ${lang === 'en' ? 'text-primary underline underline-offset-4 scale-105' : textClass + ' opacity-60 hover:opacity-100'}`}
+                >
+                  EN
+                </a>
+              </div>
+            </div>
           </nav>
 
           {/* Mobile Menu Toggle */}
