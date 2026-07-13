@@ -1,0 +1,61 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { sanityClient } from "sanity:client";
+import { urlFor } from "@/sanity/lib/image";
+import { SEO } from "@/components/SEO";
+
+const posts = await sanityClient.fetch<any[]>(`*[_type == "post" && language == "es"] | order(publishedAt desc)`);
+const lang = 'es';
+---
+
+<Layout lang={lang}>
+  <SEO
+    title="Blog | MJ Fisio Estética y Spa"
+    description="Consejos sobre salud, belleza y bienestar en Turrialba."
+    slot="seo"
+  />
+
+  <main class="pt-32 pb-20">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-serif text-primary mb-4">Nuestro Blog</h1>
+        <p class="text-xl text-muted-foreground">Consejos y novedades sobre bienestar y estética.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post: any) => (
+          <article class="bg-white rounded-2xl shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow">
+            {post.mainImage && (
+              <a href={`/blog/${post.slug.current}`}>
+                <img
+                  src={urlFor(post.mainImage).width(600).height(400).url()}
+                  alt={post.title}
+                  class="w-full h-48 object-cover"
+                />
+              </a>
+            )}
+            <div class="p-6">
+              <h2 class="text-xl font-serif mb-2">
+                <a href={`/blog/${post.slug.current}`} class="hover:text-primary transition-colors">
+                  {post.title}
+                </a>
+              </h2>
+              <p class="text-sm text-muted-foreground mb-4">
+                {new Date(post.publishedAt).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
+              </p>
+              <a href={`/blog/${post.slug.current}`} class="text-primary font-medium hover:underline">
+                Leer más →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {posts.length === 0 && (
+        <div class="text-center py-20 bg-stone-50 rounded-3xl border-2 border-dashed border-stone-200">
+           <p class="text-stone-400 font-medium">Próximamente compartiremos contenido muy especial contigo.</p>
+        </div>
+      )}
+    </div>
+  </main>
+</Layout>
