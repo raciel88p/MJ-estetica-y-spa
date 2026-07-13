@@ -8,6 +8,7 @@ export default defineConfig({
 
   projectId: 'c7ltnbh1',
   dataset: 'production',
+  basePath: '/admin',
 
   plugins: [structureTool()],
 
