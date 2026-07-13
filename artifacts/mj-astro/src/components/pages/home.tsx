@@ -115,7 +115,7 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5">
-              <a href="#especialidades">
+              <a href="#tratamientos-destacados">
                 <Button size="lg" className="h-14 px-10 text-sm tracking-widest uppercase font-bold bg-primary hover:bg-primary/90 transition-all shadow-xl shadow-primary/20">
                   {t('home.hero.cta_primary')}
                 </Button>
@@ -156,50 +156,6 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                   <p className="text-white/40 text-[10px] uppercase tracking-[0.2em]">{item.sub}</p>
                 </div>
               </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── ESPECIALIDADES ─────────────────────────────── */}
-      <section id="especialidades" className="py-24 md:py-32 bg-stone-50">
-        <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-stone-400 text-xs font-bold tracking-[0.3em] uppercase mb-4">MJ Fisio Estética & Spa</h2>
-            <h3 className="text-4xl md:text-6xl font-serif text-stone-900 mb-6">{t('home.specialties.title')}</h3>
-            <div className="w-20 h-1 bg-primary mx-auto" />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {content.specialties.map((cat, i) => {
-              const imgs = ["depilacion-laser-bg.webp", "faciales-bg.webp", "anticelulitis-bg.webp", "about-us.webp"];
-              return (
-              <motion.a
-                key={i}
-                href={cat.link}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="group relative h-[450px] overflow-hidden rounded-sm"
-              >
-                <img
-                  src={`/images/${cat.img}`}
-                  alt={cat.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity" />
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  <h4 className="text-2xl font-serif text-white mb-2">{cat.title}</h4>
-                  <p className="text-white/60 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                    {cat.desc}
-                  </p>
-                  <div className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-widest uppercase">
-                    {lang === 'es' ? 'Ver más' : 'View more'} <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
-              </motion.a>
               );
             })}
           </div>
