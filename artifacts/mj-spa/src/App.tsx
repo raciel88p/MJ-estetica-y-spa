@@ -22,6 +22,7 @@ const LandingFaciales   = lazy(() => import("@/pages/LandingFaciales"));
 const LandingMedicos    = lazy(() => import("@/pages/LandingMedicos"));
 const Blog              = lazy(() => import("@/pages/Blog"));
 const PostDetail        = lazy(() => import("@/pages/PostDetail"));
+const AdminPage         = lazy(() => import("@/pages/AdminPage"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -39,6 +40,13 @@ function Router() {
   return (
     <Suspense fallback={<PageLoader />}>
       <Switch>
+        <Route path="/admin">
+          <AdminPage />
+        </Route>
+        <Route path="/admin/:rest*">
+          <AdminPage />
+        </Route>
+
         {/* ES Routes */}
         <Route path="/" component={Home} />
         <Route path="/politica-de-datos" component={PoliticaDatos} />
