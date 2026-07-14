@@ -396,6 +396,11 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
               {lang === 'es' ? "Contacto" : "Contact"}
             </a>
 
+            <a href={lang === 'es' ? "/blog" : "/en/blog"} className={`${linkBase} ${textClass} ${isActive("/blog") ? "text-primary" : ""}`}>
+              {t('nav.blog')}
+              {isActive("/blog") && <ActiveIndicator />}
+            </a>
+
             <Button
               className={`rounded-none px-6 py-2.5 text-sm font-semibold tracking-wide transition-all ${
                 isScrolled
@@ -687,6 +692,14 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {lang === 'es' ? "Contacto" : "Contact"}
+              </a>
+
+              <a
+                href={lang === 'es' ? "/blog" : "/en/blog"}
+                className={`${isActive("/blog") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('nav.blog')}
               </a>
 
               <Button className="mt-4 w-full rounded-full bg-primary text-white hover:bg-primary/90" asChild>

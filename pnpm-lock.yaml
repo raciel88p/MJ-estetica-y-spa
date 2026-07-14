@@ -46,7 +46,7 @@ catalogs:
       specifier: 12.35.1
       version: 12.35.1
     lucide-react:
-      specifier: ^0.545.0
+      specifier: 0.545.0
       version: 0.545.0
     react:
       specifier: 19.1.0
@@ -439,6 +439,15 @@ importers:
 
   artifacts/mj-spa:
     dependencies:
+      '@portabletext/react':
+        specifier: ^6.2.0
+        version: 6.2.0(react@19.1.0)
+      '@sanity/client':
+        specifier: ^7.23.0
+        version: 7.23.0
+      '@sanity/image-url':
+        specifier: ^2.1.1
+        version: 2.1.1
       '@workspace/api-client-react':
         specifier: workspace:*
         version: link:../../lib/api-client-react
@@ -540,7 +549,7 @@ importers:
         specifier: 'catalog:'
         version: 0.0.6
       '@tailwindcss/typography':
-        specifier: ^0.5.15
+        specifier: ^0.5.19
         version: 0.5.19(tailwindcss@4.3.0)
       '@tailwindcss/vite':
         specifier: 'catalog:'
@@ -2246,6 +2255,12 @@ packages:
     engines: {node: ^14.13.1 || >=16.0.0}
     peerDependencies:
       react: ^17 || ^18 || >=19.0.0-0
+
+  '@portabletext/react@6.2.0':
+    resolution: {integrity: sha512-Z0J/AWrvg7GyDfEBQRRhi6ZpxLOsN4/QbU8KhTwfa6r2ELiRaMa4gkHE9wfs3V1ozNDrTG4IRr+8yBnHNDnAqA==}
+    engines: {node: '>=20.19 <22 || >=22.12'}
+    peerDependencies:
+      react: ^18.2 || ^19
 
   '@portabletext/to-html@2.0.17':
     resolution: {integrity: sha512-kLID+QW4qIybqeN5yv1LuycbYC2DMVDcIFKfhrAFpBI3P9lcrYUv8ukzhp2Nh55hvuGphzvTVHDSo/fkbv8ziA==}
@@ -10123,6 +10138,12 @@ snapshots:
       '@portabletext/toolkit': 2.0.18
       '@portabletext/types': 2.0.15
       react: 19.2.6
+
+  '@portabletext/react@6.2.0(react@19.1.0)':
+    dependencies:
+      '@portabletext/toolkit': 5.0.2
+      '@portabletext/types': 4.0.2
+      react: 19.1.0
 
   '@portabletext/to-html@2.0.17':
     dependencies:

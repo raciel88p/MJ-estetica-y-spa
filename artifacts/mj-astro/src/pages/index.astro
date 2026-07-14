@@ -1,7 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Home from '../components/pages/home';
+import { sanityClient } from "sanity:client";
+
+const latestPosts = await sanityClient.fetch(`*[_type == "post" && language == "es"] | order(publishedAt desc)[0...3] {
+  ...,
+  author->
+}`);
 ---
 <Layout lang="es">
-  <Home client:load />
+  <Home client:load latestPosts={latestPosts} />
 </Layout>

@@ -1846,8 +1846,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── CORPORALES NUEVOS ──────────────────────────────
   {
     es: {
       slug: "tensado-corporal",
@@ -1971,7 +1969,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-  // ── FACIALES NUEVOS ────────────────────────────────
   {
     es: {
       slug: "hollywood-peel",
@@ -2298,7 +2295,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
   {
     es: {
       slug: "hilos-colageno",
@@ -3157,8 +3153,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── PIERNAS ────────────────────────────────────────
   {
     es: {
       slug: "piernas-cansadas",
@@ -3262,8 +3256,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── MÉDICOS ESTÉTICOS NUEVOS ───────────────────────
   {
     es: {
       slug: "acido-hialuronico",
@@ -3454,8 +3446,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── CARBOXITERAPIA ─────────────────────────────────
   {
     es: {
       slug: "carboxiterapia",
@@ -3551,8 +3541,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── LEVANTAMIENTO DE GLÚTEO ─────────────────────────
   {
     es: {
       slug: "levantamiento-gluteo",
@@ -3719,8 +3707,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── LEVANTAMIENTO DE BUSTO ──────────────────────────
   {
     es: {
       slug: "levantamiento-busto",
@@ -3833,8 +3819,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── VENDAS FRÍAS ────────────────────────────────────
   {
     es: {
       slug: "vendas-frias",
@@ -3948,8 +3932,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── MADEROTERAPIA ──────────────────────────────────
   {
     es: {
       // ── AURICULOTERAPIA ─────────────────────────────────
@@ -4065,8 +4047,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── TRATAMIENTO ANTICELULITIS ──────────────────────
   {
     es: {
       slug: "tratamiento-anticelulitis",
@@ -4214,8 +4194,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── IRON BEAUTY FITNESS ────────────────────────────
   {
     es: {
       slug: "iron-beauty-fitness",
@@ -4356,8 +4334,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── IMPLANTE DE BARBA ───────────────────────────────
   {
     es: {
       slug: "implante-barba",
@@ -4470,8 +4446,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── MESOTERAPIA CAPILAR ─────────────────────────────
   {
     es: {
       slug: "mesoterapia-capilar",
@@ -4584,8 +4558,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── RELLENOS DE LABIOS ──────────────────────────────
   {
     es: {
       slug: "inbody",
@@ -4791,8 +4763,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── TRATAMIENTO DE OJERAS ───────────────────────────
   {
     es: {
       slug: "tratamiento-ojeras",
@@ -4880,8 +4850,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── BLANQUEAMIENTO ZONA ÍNTIMA ──────────────────────
   {
     es: {
       slug: "aromaterapia",
@@ -4979,117 +4947,6 @@ export const servicePages: MultiLangServicePageData[] = [
           question: "¿Dónde están ubicados?",
           answer:
             "Nos encontramos en Turrialba, con fácil acceso y parqueo para nuestros visitantes.",
-        },
-      ],
-    },
-  },
-  {
-    es: {
-      slug: "boda-spa",
-      name: "Boda Spa",
-      fullTitle:
-        "Spa para Novias en Turrialba | Boda Spa Exclusivo para Relajarte Antes de Tu Gran Día 💍",
-      tagline: "El mejor regalo antes de tu boda eres tú",
-      heroDescription:
-        "Vive la experiencia de Boda Spa más relajante en Turrialba. En MJ Estética & Wellness Center hemos diseñado una experiencia exclusiva para ayudarte a recuperar el equilibrio físico y emocional antes de ese momento tan especial.",
-      benefits: [
-        "Relajación profunda del sistema nervioso",
-        "Alivio de tensiones y dolores musculares",
-        "Mejora de la luminosidad y frescura de la piel",
-        "Reducción de la ansiedad y el estrés pre-boda",
-        "Mejora de la calidad del sueño",
-        "Momento de desconexión total para la novia",
-      ],
-      items: [
-        {
-          title: "Paquete Novia Radiante",
-          description:
-            "Protocolo integral que combina exfoliación corporal, masaje relajante y facial express para un brillo espectacular.",
-          duration: "120 min",
-        },
-        {
-          title: "Spa en Pareja Pre-Boda",
-          description:
-            "Experiencia compartida para liberar el estrés de los preparativos juntos en un ambiente de calma absoluta.",
-          duration: "90 min",
-        },
-        {
-          title: "Masaje Anti-Estrés Nupcial",
-          description:
-            "Sesión focalizada en liberar tensión de espalda, cuello y hombros acumulada por la organización del evento.",
-          duration: "60 min",
-        },
-      ],
-      faq: [
-        {
-          question: "¿Con cuánta anticipación debo reservar mi Boda Spa?",
-          answer:
-            "Recomendamos reservar con al menos 2 a 4 semanas de anticipación, especialmente si deseas una fecha cercana al gran día.",
-        },
-        {
-          question: "¿Cuántos días antes de la boda es ideal realizar el spa?",
-          answer:
-            "Lo ideal es entre 2 y 5 días antes de la boda para que los efectos de relajación y luminosidad estén en su punto máximo.",
-        },
-        {
-          question: "¿Pueden ir mis damas de honor?",
-          answer:
-            "¡Claro! Contamos con paquetes especiales para grupos. Consúltanos por WhatsApp para coordinar una experiencia grupal inolvidable.",
-        },
-      ],
-    },
-    en: {
-      slug: "salmon-dna",
-      name: "Salmon DNA",
-      tagline: "Deep cellular regeneration for radiant skin",
-      heroDescription:
-        "The Korean secret that is revolutionizing facial rejuvenation has arrived in Turrialba. PDRN treatment for luminous and hydrated skin.",
-      benefits: [
-        "Rejuvenates the skin naturally",
-        "Improves fine lines and early signs of aging",
-        "Stimulates collagen and elasticity",
-        "Provides deep hydration",
-      ],
-      items: [
-        {
-          title: "Facial Salmon DNA",
-          description: "Microinjections of PDRN to stimulate collagen production.",
-          duration: "45 min",
-          faq: [
-        {
-          question: "¿Con cuánta anticipación debo reservar mi Boda Spa?",
-          answer:
-            "Recomendamos reservar con al menos 2 a 4 semanas de anticipación, especialmente si deseas una fecha cercana al gran día.",
-        },
-        {
-          question: "¿Cuántos días antes de la boda es ideal realizar el spa?",
-          answer:
-            "Lo ideal es entre 2 y 5 días antes de la boda para que los efectos de relajación y luminosidad estén en su punto máximo.",
-        },
-        {
-          question: "¿Pueden ir mis damas de honor?",
-          answer:
-            "¡Claro! Contamos con paquetes especiales para grupos. Consúltanos por WhatsApp para coordinar una experiencia grupal inolvidable.",
-        },
-      ],
-    },
-      ],
-      slug: "spa-brides",
-      name: "Spa for Brides",
-      tagline: "The best gift before your wedding is you",
-      heroDescription:
-        "Live the most relaxing Bride Spa experience in Turrialba. Exclusive experience designed to help you regain physical and emotional balance.",
-      benefits: [
-        "Deep relaxation of the nervous system",
-        "Relief of tension and muscle pain",
-        "Improvement of skin luminosity and freshness",
-        "Reduction of pre-wedding anxiety and stress",
-      ],
-      items: [
-        {
-          title: "Radiant Bride Package",
-          description: "Integral protocol combining body exfoliation, relaxing massage, and express facial.",
-          duration: "120 min",
         },
       ],
     },
@@ -5291,8 +5148,6 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
   },
-
-  // ── NUEVOS SERVICIOS (PLANTILLAS VACÍAS) ────────────
   {
     es: {
       slug: "mascarillas-faciales",
@@ -5562,5 +5417,5 @@ export const servicePages: MultiLangServicePageData[] = [
         },
       ],
     },
-  },
+  }
 ];

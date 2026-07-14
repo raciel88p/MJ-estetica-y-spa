@@ -13,7 +13,7 @@ import {
   Star,
   Check,
   Search,
-  Quote
+  Quote, Heart
 } from "lucide-react";
 import { useState } from "react";
 import type { ServicePageData } from "@/data/services";

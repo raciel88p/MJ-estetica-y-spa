@@ -60,6 +60,7 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
               <li><a href={lang === 'es' ? "/paquetes" : "/en/packages"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Paquetes" : "Packages"}</a></li>
               <li><a href={lang === 'es' ? "/medicos-esteticos" : "/en/medical-aesthetic"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Médico Estético" : "Medical Aesthetic"}</a></li>
               <li><a href={lang === 'es' ? "/testimonios" : "/en/testimonials"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Testimonios" : "Testimonials"}</a></li>
+              <li><a href={lang === 'es' ? "/blog" : "/en/blog"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Blog" : "Blog"}</a></li>
               <li><a href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"} className="hover:text-secondary transition-colors font-medium text-primary">{lang === 'es' ? "Buzón de Sugerencias" : "Suggestion Box"}</a></li>
               <li><a href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</a></li>
             </ul>

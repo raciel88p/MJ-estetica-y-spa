@@ -6,7 +6,10 @@ import { SEO } from "@/components/SEO";
 import PortableText from "@/components/blog/PortableText.astro";
 
 export async function getStaticPaths() {
-  const posts = await sanityClient.fetch<any[]>(`*[_type == "post" && language == "es"]`);
+  const posts = await sanityClient.fetch<any[]>(`*[_type == "post" && language == "es"] {
+    ...,
+    author->
+  }`);
   return posts.map((post: any) => ({
     params: { slug: post.slug.current },
     props: { post },
@@ -46,6 +49,27 @@ const lang = 'es';
       <div class="prose prose-lg prose-stone max-w-none prose-headings:font-serif prose-headings:text-primary">
         <PortableText value={post.body} />
       </div>
+
+      {post.author && (
+        <div class="mt-16 p-8 bg-stone-50 rounded-2xl border border-border flex flex-col md:flex-row gap-6 items-center md:items-start">
+          {post.author.image && (
+            <img
+              src={urlFor(post.author.image).width(200).height(200).url()}
+              alt={post.author.name}
+              class="w-24 h-24 rounded-full object-cover shadow-sm"
+            />
+          )}
+          <div class="flex-1 text-center md:text-left">
+            <p class="text-primary text-xs font-bold tracking-widest uppercase mb-1">Sobre el autor</p>
+            <h3 class="text-xl font-serif text-stone-900 mb-3">{post.author.name}</h3>
+            {post.author.bio && (
+              <div class="text-stone-600 text-sm leading-relaxed">
+                <PortableText value={post.author.bio} />
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       <div class="mt-16 pt-8 border-t border-border">
         <a href="/blog" class="text-primary font-medium hover:underline">
