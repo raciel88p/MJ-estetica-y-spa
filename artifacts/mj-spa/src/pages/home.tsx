@@ -25,6 +25,7 @@ import esLoc from "@/i18n/locales/es/home.json";
 import enLoc from "@/i18n/locales/en/home.json";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
+import { PortableText } from "@portabletext/react";
 
 const WA_LINK = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
@@ -49,16 +50,22 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   const content = lang === 'es' ? esLoc : enLoc;
   const [mounted, setMounted] = useState(false);
   const [latestPosts, setLatestPosts] = useState<any[]>([]);
+  const [authors, setAuthors] = useState<any[]>([]);
   const { toast } = useToast();
 
   useEffect(() => {
     setMounted(true);
-    client
-      .fetch(`*[_type == "post" && language == $lang] | order(publishedAt desc)[0...3] {
+    Promise.all([
+      client.fetch(`*[_type == "post" && language == $lang] | order(publishedAt desc)[0...3] {
         ...,
         author->
-      }`, { lang })
-      .then(setLatestPosts)
+      }`, { lang }),
+      client.fetch(`*[_type == "author"]`)
+    ])
+      .then(([postsData, authorsData]) => {
+        setLatestPosts(postsData);
+        setAuthors(authorsData);
+      })
       .catch(console.error);
   }, [lang]);
 
@@ -171,6 +178,69 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
           </div>
         </div>
       </section>
+
+      {/* ── EQUIPO MÉDICO / LIDERAZGO ──────────────────── */}
+      {authors.length > 0 && (
+        <section className="py-24 md:py-32 bg-stone-50 overflow-hidden">
+          <div className="container mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div className="relative">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="aspect-[4/5] rounded-sm overflow-hidden shadow-2xl relative group"
+                >
+                  <a href="https://www.robertoperezsalazar.com/" target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={urlFor(authors[0].image).width(800).height(1000).url()}
+                      alt={authors[0].name}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
+                  </a>
+                </motion.div>
+                <div className="absolute -bottom-6 -right-6 bg-primary p-8 hidden md:block">
+                  <p className="text-white font-serif text-2xl font-bold">{authors[0].name}</p>
+                  <p className="text-white/70 text-[10px] font-bold tracking-widest uppercase">{lang === 'es' ? 'Director Médico' : 'Medical Director'}</p>
+                </div>
+              </div>
+
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+              >
+                <h2 className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">{lang === 'es' ? 'Liderazgo Profesional' : 'Professional Leadership'}</h2>
+                <h3 className="text-4xl md:text-5xl font-serif text-stone-900 mb-8 leading-tight">
+                  {lang === 'es' ? 'Excelencia Médica en' : 'Medical Excellence in'} <br />
+                  <span className="italic font-light text-stone-400">{lang === 'es' ? 'cada tratamiento' : 'every treatment'}</span>
+                </h3>
+
+                <div className="prose prose-stone prose-sm text-stone-500 max-w-none mb-10">
+                   {authors[0].bio ? (
+                     <div className="text-lg font-light leading-relaxed">
+                        <PortableText value={authors[0].bio} />
+                     </div>
+                   ) : (
+                     <p className="text-lg font-light leading-relaxed">{authors[0].name} lidera nuestro equipo con una visión integral de la salud y la belleza.</p>
+                   )}
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-6 mt-12">
+                  <a href="https://www.robertoperezsalazar.com/" target="_blank" rel="noopener noreferrer">
+                    <Button variant="outline" className="h-12 px-8 tracking-widest uppercase text-[10px] font-bold border-stone-200 text-stone-900 hover:bg-stone-900 hover:text-white transition-all">
+                       {lang === 'es' ? 'Ver Perfil Profesional' : 'View Professional Profile'}
+                    </Button>
+                  </a>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── TRATAMIENTOS ESTRELLA ──────────────────────── */}
       <section id="tratamientos-destacados" className="py-24 md:py-32 bg-white">
