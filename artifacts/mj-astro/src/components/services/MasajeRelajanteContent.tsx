@@ -137,7 +137,19 @@ export function MasajeRelajanteContent({ service, waLink, lang = "es" }: Props) 
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {service.items.map((item, i) => (
+            {service.items.map((item, i) => {
+              const itemTitle = item.title.toLowerCase();
+              let benefits: string[] = [];
+
+              if (itemTitle.includes("relajante") || itemTitle.includes("relaxing")) {
+                benefits = (content.services.benefitGroups as any).relajante || (content.services.benefitGroups as any).relaxing || [];
+              } else if (itemTitle.includes("descontracturante") || itemTitle.includes("deep-tissue")) {
+                benefits = (content.services.benefitGroups as any).descontracturante || (content.services.benefitGroups as any)["deep-tissue"] || [];
+              } else {
+                benefits = content.services.benefitGroups.default || [];
+              }
+
+              return (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -152,12 +164,7 @@ export function MasajeRelajanteContent({ service, waLink, lang = "es" }: Props) 
                 {item.title !== "Aromaterapia" && item.title !== "Aromatherapy" && item.title !== "Spa para Parejas" && item.title !== "Pre-Wedding Couples Spa" && (
                    <div className="space-y-3 mb-10 border-t border-stone-50 pt-6">
                     <p className="text-[10px] font-bold uppercase tracking-widest text-primary mb-4">{content.services.benefitsLabel}</p>
-                    {(item.title.toLowerCase().includes("relajante") || item.title.toLowerCase().includes("relaxing")
-                        ? content.services.benefitGroups.relaxing
-                        : item.title.toLowerCase().includes("descontracturante") || item.title.toLowerCase().includes("deep-tissue")
-                        ? content.services.benefitGroups["deep-tissue"]
-                        : content.services.benefitGroups.default
-                    ).map((feat, j) => (
+                    {benefits.map((feat, j) => (
                       <div key={j} className="flex items-center gap-2 text-stone-800 text-xs font-bold uppercase tracking-tight">
                         <span className="text-green-500">✅</span>
                         {feat}
@@ -185,7 +192,7 @@ export function MasajeRelajanteContent({ service, waLink, lang = "es" }: Props) 
                   </span>
                 </a>
               </motion.div>
-            ))}
+            )})}
           </div>
         </div>
       </section>
