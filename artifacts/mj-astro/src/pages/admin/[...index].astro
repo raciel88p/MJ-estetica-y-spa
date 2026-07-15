@@ -1,6 +1,12 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import AdminPage from "../../../mj-spa/src/pages/AdminPage"; // Import from the other workspace for parity
+import AdminPage from "../../components/AdminPage";
+
+export function getStaticPaths() {
+  return [
+    { params: { index: undefined } }
+  ];
+}
 ---
 <Layout lang="es">
   <AdminPage client:only="react" />
