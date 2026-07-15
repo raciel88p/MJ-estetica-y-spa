@@ -58,22 +58,41 @@ const lang = 'en';
       </div>
 
       {post.author && (
-        <div class="mt-16 p-8 bg-stone-50 rounded-2xl border border-border flex flex-col md:flex-row gap-6 items-center md:items-start">
-          {post.author.image && (
-            <img
-              src={urlFor(post.author.image).width(200).height(200).url()}
-              alt={post.author.name}
-              class="w-24 h-24 rounded-full object-cover shadow-sm"
-            />
-          )}
+        <div class="mt-16 p-8 bg-stone-50 rounded-2xl border border-border flex flex-col md:flex-row gap-8 items-center md:items-start">
+          <div class="shrink-0 relative">
+            <div class="w-24 h-24 rounded-full overflow-hidden shadow-md ring-4 ring-white">
+              {post.author.image ? (
+                <img
+                  src={urlFor(post.author.image).width(200).height(200).url()}
+                  alt={post.author.name}
+                  class="w-full h-full object-cover"
+                />
+              ) : (
+                <div class="w-full h-full bg-stone-200 flex items-center justify-center">
+                   <span class="text-stone-400 font-bold text-2xl">{post.author.name.charAt(0)}</span>
+                </div>
+              )}
+            </div>
+            <div class="absolute -bottom-2 -right-2 bg-primary text-white p-1.5 rounded-full shadow-sm">
+               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+          </div>
           <div class="flex-1 text-center md:text-left">
-            <p class="text-primary text-xs font-bold tracking-widest uppercase mb-1">About the author</p>
-            <h3 class="text-xl font-serif text-stone-900 mb-3">{post.author.name}</h3>
+            <p class="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-1">MJ Experts</p>
+            <h3 class="text-2xl font-serif text-stone-900 mb-2">{post.author.name}</h3>
+            {post.author.role && <p class="text-stone-500 text-xs font-medium uppercase tracking-wider mb-3">{post.author.role}</p>}
             {post.author.bio && (
-              <div class="text-stone-600 text-sm leading-relaxed">
+              <div class="text-stone-600 text-sm leading-relaxed font-light prose prose-sm prose-stone max-w-none">
                 <PortableText value={post.author.bio} />
               </div>
             )}
+            <div class="mt-4 flex justify-center md:justify-start gap-4">
+               {post.author.linkedin && (
+                 <a href={post.author.linkedin} target="_blank" rel="noopener noreferrer" class="text-stone-400 hover:text-primary transition-colors">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                 </a>
+               )}
+            </div>
           </div>
         </div>
       )}
