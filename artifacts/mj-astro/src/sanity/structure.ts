@@ -4,49 +4,34 @@ export const structure: StructureResolver = (S) =>
   S.list()
     .title('Contenido')
     .items([
-      // Top-level Posts with language filtering
+      // Simplified list using standard documentTypeListItem to guarantee "New" button visibility
+      S.documentTypeListItem('post').title('Publicaciones (Blog)'),
+      S.documentTypeListItem('author').title('Autores'),
+      S.documentTypeListItem('category').title('Categorías'),
+
+      S.divider(),
+
+      // Keep the language filter as an EXTRA view, not the only one
       S.listItem()
-        .title('Publicaciones (Blog)')
-        .schemaType('post')
+        .title('Filtrar Posts por Idioma')
         .child(
           S.list()
-            .title('Filtros de Publicaciones')
+            .title('Filtros')
             .items([
               S.listItem()
-                .title('🇪🇸 Publicaciones en Español')
-                .schemaType('post')
+                .title('Español')
                 .child(
-                  S.documentTypeList('post')
+                  S.documentList()
                     .title('Posts en Español')
                     .filter('_type == "post" && language == "es"')
                 ),
               S.listItem()
-                .title('🇺🇸 Publicaciones en Inglés')
-                .schemaType('post')
+                .title('Inglés')
                 .child(
-                  S.documentTypeList('post')
+                  S.documentList()
                     .title('Posts en Inglés')
                     .filter('_type == "post" && language == "en"')
                 ),
-              S.divider(),
-              S.listItem()
-                .title('Todas las Publicaciones')
-                .schemaType('post')
-                .child(S.documentTypeList('post').title('Todas las Publicaciones')),
             ])
         ),
-
-      S.divider(),
-
-      // Top-level Authors
-      S.listItem()
-        .title('Autores')
-        .schemaType('author')
-        .child(S.documentTypeList('author').title('Autores')),
-
-      // Top-level Categories
-      S.listItem()
-        .title('Categorías')
-        .schemaType('category')
-        .child(S.documentTypeList('category').title('Categorías')),
     ]);
