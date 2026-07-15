@@ -80,10 +80,15 @@ export const postType = defineType({
       title: 'title',
       author: 'author.name',
       media: 'mainImage',
+      language: 'language',
     },
     prepare(selection) {
-      const { author } = selection;
-      return { ...selection, subtitle: author && `by ${author}` };
+      const { author, language } = selection;
+      const langLabel = language === 'es' ? '🇪🇸 ES' : '🇺🇸 EN';
+      return {
+        ...selection,
+        subtitle: `${langLabel}${author ? ` | by ${author}` : ''}`
+      };
     },
   },
 });
