@@ -235,24 +235,16 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
                   variants={fadeUp}
                   className="aspect-[4/5] rounded-sm overflow-hidden shadow-2xl relative group"
                 >
-                  <a href="https://www.robertoperezsalazar.com/" target="_blank" rel="noopener noreferrer">
-                    {authors[0].image ? (
-                      <img
-                        src={urlFor(authors[0].image).width(800).height(1000).url()}
-                        alt={authors[0].name}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-stone-200 flex items-center justify-center">
-                        <span className="text-stone-400 font-bold text-4xl">{authors[0].name.charAt(0)}</span>
-                      </div>
-                    )}
-                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
-                  </a>
+                  <img
+                    src="/images/janneth-molina.webp"
+                    alt="Janneth Maria Molina"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
                 </motion.div>
                 <div className="absolute -bottom-6 -right-6 bg-primary p-8 hidden md:block">
-                  <p className="text-white font-serif text-2xl font-bold">{authors[0].name}</p>
-                  <p className="text-white/70 text-[10px] font-bold tracking-widest uppercase">{lang === 'es' ? 'Director Médico' : 'Medical Director'}</p>
+                  <p className="text-white font-serif text-2xl font-bold">Janneth Maria Molina</p>
+                  <p className="text-white/70 text-[10px] font-bold tracking-widest uppercase">{lang === 'es' ? 'Directora & Especialista' : 'Director & Specialist'}</p>
                 </div>
               </div>
 
