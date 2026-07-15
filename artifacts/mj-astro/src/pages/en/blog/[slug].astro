@@ -4,6 +4,9 @@ import { sanityClient } from "sanity:client";
 import { urlFor } from "@/sanity/lib/image";
 import { SEO } from "@/components/SEO";
 import PortableText from "@/components/blog/PortableText.astro";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 export async function getStaticPaths() {
   const posts = await sanityClient.fetch<any[]>(`*[_type == "post" && language == "en"] {
@@ -25,7 +28,11 @@ const lang = 'en';
     title={`${post.title} | MJ Fisio Estética y Spa`}
     description={post.title}
     slot="seo"
+    client:load
   />
+
+  <Navbar lang={lang} client:load />
+  <FloatingWhatsApp client:load />
 
   <article class="pt-32 pb-20">
     <div class="max-w-3xl mx-auto px-4">
@@ -78,4 +85,6 @@ const lang = 'en';
       </div>
     </div>
   </article>
+
+  <Footer lang={lang} client:load />
 </Layout>
