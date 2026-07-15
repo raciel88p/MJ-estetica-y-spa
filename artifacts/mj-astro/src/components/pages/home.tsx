@@ -237,13 +237,13 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
                 >
                   <img
                     src="/images/janneth-molina.webp"
-                    alt="Janneth Maria Molina"
+                    alt="Lic Maria Molina Madrigal"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
                 </motion.div>
                 <div className="absolute -bottom-6 -right-6 bg-primary p-8 hidden md:block">
-                  <p className="text-white font-serif text-2xl font-bold">Janneth Maria Molina</p>
+                  <p className="text-white font-serif text-2xl font-bold">Lic Maria Molina Madrigal</p>
                   <p className="text-white/70 text-[10px] font-bold tracking-widest uppercase">{lang === 'es' ? 'Directora & Especialista' : 'Director & Specialist'}</p>
                 </div>
               </div>
@@ -261,13 +261,7 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
                 </h3>
 
                 <div className="prose prose-stone prose-sm text-stone-500 max-w-none mb-10">
-                   {authors[0].bio ? (
-                     <div className="text-lg font-light leading-relaxed">
-                        <PortableText value={authors[0].bio} />
-                     </div>
-                   ) : (
-                     <p className="text-lg font-light leading-relaxed">{authors[0].name} lidera nuestro equipo con una visión integral de la salud y la belleza.</p>
-                   )}
+                  <p className="text-lg font-light leading-relaxed">Lic Maria Molina Madrigal lidera nuestro equipo con una visión integral de la salud y la belleza.</p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-6 mt-12">
