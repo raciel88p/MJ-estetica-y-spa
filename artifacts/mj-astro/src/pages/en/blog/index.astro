@@ -3,6 +3,9 @@ import Layout from "@/layouts/Layout.astro";
 import { sanityClient } from "sanity:client";
 import { urlFor } from "@/sanity/lib/image";
 import { SEO } from "@/components/SEO";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 
 const posts = await sanityClient.fetch<any[]>(`*[_type == "post" && language == "en"] | order(publishedAt desc) {
   ...,
@@ -17,7 +20,11 @@ const lang = 'en';
     title="Blog | MJ Fisio Estética y Spa"
     description="Health, beauty and wellness tips in Turrialba."
     slot="seo"
+    client:load
   />
+
+  <Navbar lang={lang} client:load />
+  <FloatingWhatsApp client:load />
 
   <main class="pt-32 pb-20">
     <div class="max-w-7xl mx-auto px-4">
@@ -100,4 +107,6 @@ const lang = 'en';
       )}
     </div>
   </main>
+
+  <Footer lang={lang} client:load />
 </Layout>
