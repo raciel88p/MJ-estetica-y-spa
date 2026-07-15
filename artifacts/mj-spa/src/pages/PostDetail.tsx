@@ -7,27 +7,27 @@ import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
 import { PortableText } from "@/components/blog/PortableText";
 import { useTranslations } from "@/i18n/ui";
+import { Link } from "wouter";
 
-export default function PostDetail({ lang = 'es' }: { lang?: 'es' | 'en' }) {
-  const [match, params] = useRoute(lang === 'es' ? "/blog/:slug" : "/en/blog/:slug");
+export default function PostDetail({ slug, lang = 'es' }: { slug?: string, lang?: 'es' | 'en' }) {
   const [post, setPost] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const t = useTranslations(lang);
 
   useEffect(() => {
-    if (params?.slug) {
+    if (slug) {
       client
         .fetch(`*[_type == "post" && slug.current == $slug && language == $lang][0] {
           ...,
           author->
-        }`, { slug: params.slug, lang })
+        }`, { slug, lang })
         .then((data) => {
           setPost(data);
           setLoading(false);
         })
         .catch(console.error);
     }
-  }, [params?.slug, lang]);
+  }, [slug, lang]);
 
   if (loading) {
     return (
@@ -47,9 +47,9 @@ export default function PostDetail({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         <Navbar lang={lang} />
         <div className="max-w-3xl mx-auto px-4 py-32 text-center">
           <h1 className="text-3xl font-serif mb-4">{lang === 'es' ? 'Post no encontrado' : 'Post not found'}</h1>
-          <a href={lang === 'es' ? "/blog" : "/en/blog"} className="text-primary hover:underline">
+          <Link href={lang === 'es' ? "/blog" : "/en/blog"} className="text-primary hover:underline cursor-pointer">
             {lang === 'es' ? '← Volver al blog' : '← Back to blog'}
-          </a>
+          </Link>
         </div>
         <Footer lang={lang} />
       </div>
@@ -111,9 +111,9 @@ export default function PostDetail({ lang = 'es' }: { lang?: 'es' | 'en' }) {
           )}
 
           <div className="mt-16 pt-8 border-t border-border">
-            <a href={lang === 'es' ? "/blog" : "/en/blog"} className="text-primary font-medium hover:underline flex items-center gap-2">
+            <Link href={lang === 'es' ? "/blog" : "/en/blog"} className="text-primary font-medium hover:underline flex items-center gap-2 cursor-pointer">
               <span>←</span> {lang === 'es' ? 'Volver al blog' : 'Back to blog'}
-            </a>
+            </Link>
           </div>
         </div>
       </article>

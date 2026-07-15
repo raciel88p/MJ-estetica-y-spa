@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/i18n/ui";
+import { Link } from "wouter";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -69,19 +70,19 @@ export default function Blog({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                     className="bg-white rounded-2xl shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow flex flex-col"
                   >
                     {post.mainImage && (
-                      <a href={lang === 'es' ? `/blog/${post.slug.current}` : `/en/blog/${post.slug.current}`}>
+                      <Link href={lang === 'es' ? `/blog/${post.slug.current}` : `/en/blog/${post.slug.current}`}>
                         <img
                           src={urlFor(post.mainImage).width(600).height(400).url()}
                           alt={post.title}
-                          className="w-full h-48 object-cover"
+                          className="w-full h-48 cursor-pointer object-cover"
                         />
-                      </a>
+                      </Link>
                     )}
                     <div className="p-6 flex flex-col flex-1">
                       <h2 className="text-xl font-serif mb-2 text-stone-900">
-                        <a href={lang === 'es' ? `/blog/${post.slug.current}` : `/en/blog/${post.slug.current}`} className="hover:text-primary transition-colors line-clamp-2">
+                        <Link href={lang === 'es' ? `/blog/${post.slug.current}` : `/en/blog/${post.slug.current}`} className="hover:text-primary transition-colors line-clamp-2 cursor-pointer">
                           {post.title}
-                        </a>
+                        </Link>
                       </h2>
                       <div className="flex items-center gap-2 mb-4">
                         {post.author?.image && (
@@ -95,9 +96,9 @@ export default function Blog({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                           <span className="font-medium text-stone-700">{post.author?.name}</span> • {new Date(post.publishedAt).toLocaleDateString(lang === 'es' ? 'es-ES' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' })}
                         </p>
                       </div>
-                      <a href={lang === 'es' ? `/blog/${post.slug.current}` : `/en/blog/${post.slug.current}`} className="mt-auto text-primary font-medium hover:underline">
+                      <Link href={lang === 'es' ? `/blog/${post.slug.current}` : `/en/blog/${post.slug.current}`} className="mt-auto text-primary font-medium hover:underline cursor-pointer">
                         {lang === 'es' ? 'Leer más →' : 'Read more →'}
-                      </a>
+                      </Link>
                     </div>
                   </motion.article>
                 ))}
