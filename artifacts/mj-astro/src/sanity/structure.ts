@@ -4,43 +4,34 @@ export const structure: StructureResolver = (S) =>
   S.list()
     .title('Contenido')
     .items([
-      // Top-level Posts with language filtering
+      // Simplified list using standard documentTypeListItem to guarantee "New" button visibility
+      S.documentTypeListItem('post').title('Publicaciones (Blog)'),
+      S.documentTypeListItem('author').title('Autores'),
+      S.documentTypeListItem('category').title('Categorías'),
+
+      S.divider(),
+
+      // Keep the language filter as an EXTRA view, not the only one
       S.listItem()
-        .title('Publicaciones (Blog)')
+        .title('Filtrar Posts por Idioma')
         .child(
           S.list()
-            .title('Filtros de Publicaciones')
+            .title('Filtros')
             .items([
               S.listItem()
-                .title('🇪🇸 Publicaciones en Español')
+                .title('Español')
                 .child(
                   S.documentList()
                     .title('Posts en Español')
                     .filter('_type == "post" && language == "es"')
                 ),
               S.listItem()
-                .title('🇺🇸 Publicaciones en Inglés')
+                .title('Inglés')
                 .child(
                   S.documentList()
                     .title('Posts en Inglés')
                     .filter('_type == "post" && language == "en"')
                 ),
-              S.divider(),
-              S.listItem()
-                .title('Todas las Publicaciones')
-                .child(S.documentTypeList('post').title('Todas las Publicaciones')),
             ])
         ),
-
-      S.divider(),
-
-      // Top-level Authors
-      S.listItem()
-        .title('Autores')
-        .child(S.documentTypeList('author').title('Autores')),
-
-      // Top-level Categories
-      S.listItem()
-        .title('Categorías')
-        .child(S.documentTypeList('category').title('Categorías')),
     ]);

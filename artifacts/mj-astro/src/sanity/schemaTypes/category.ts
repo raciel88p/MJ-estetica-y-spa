@@ -2,17 +2,17 @@ import { defineField, defineType } from 'sanity';
 
 export const categoryType = defineType({
   name: 'category',
-  title: 'Category',
+  title: 'Categoría',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Título',
       type: 'string',
     }),
     defineField({
       name: 'description',
-      title: 'Description',
+      title: 'Descripción',
       type: 'text',
     }),
   ],

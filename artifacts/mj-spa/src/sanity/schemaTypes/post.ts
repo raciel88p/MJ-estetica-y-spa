@@ -2,12 +2,12 @@ import { defineField, defineType } from 'sanity';
 
 export const postType = defineType({
   name: 'post',
-  title: 'Post',
+  title: 'Publicación',
   type: 'document',
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Título',
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
@@ -23,12 +23,12 @@ export const postType = defineType({
     }),
     defineField({
       name: 'language',
-      title: 'Language',
+      title: 'Idioma',
       type: 'string',
       options: {
         list: [
-          { title: 'Spanish', value: 'es' },
-          { title: 'English', value: 'en' },
+          { title: 'Español', value: 'es' },
+          { title: 'Inglés', value: 'en' },
         ],
       },
       initialValue: 'es',
@@ -36,13 +36,13 @@ export const postType = defineType({
     }),
     defineField({
       name: 'author',
-      title: 'Author',
+      title: 'Autor',
       type: 'reference',
       to: { type: 'author' },
     }),
     defineField({
       name: 'mainImage',
-      title: 'Main image',
+      title: 'Imagen principal',
       type: 'image',
       options: {
         hotspot: true,
@@ -50,18 +50,18 @@ export const postType = defineType({
     }),
     defineField({
       name: 'categories',
-      title: 'Categories',
+      title: 'Categorías',
       type: 'array',
       of: [{ type: 'reference', to: { type: 'category' } }],
     }),
     defineField({
       name: 'publishedAt',
-      title: 'Published at',
+      title: 'Fecha de publicación',
       type: 'datetime',
     }),
     defineField({
       name: 'body',
-      title: 'Body',
+      title: 'Contenido',
       type: 'array',
       of: [
         {
@@ -87,7 +87,7 @@ export const postType = defineType({
       const langLabel = language === 'es' ? '🇪🇸 ES' : '🇺🇸 EN';
       return {
         ...selection,
-        subtitle: `${langLabel}${author ? ` | by ${author}` : ''}`
+        subtitle: `${langLabel}${author ? ` | por ${author}` : ''}`
       };
     },
   },

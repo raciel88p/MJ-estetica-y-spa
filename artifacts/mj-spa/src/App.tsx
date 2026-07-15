@@ -40,9 +40,9 @@ function Router() {
   return (
     <Suspense fallback={<PageLoader />}>
       <Switch>
-        <Route path="/admin*">
-          <AdminPage />
-        </Route>
+        {/* Greedy Admin route to handle ALL subpaths immediately */}
+        <Route path="/admin" component={AdminPage} />
+        <Route path="/admin/:rest*" component={AdminPage} />
 
         {/* ES Routes */}
         <Route path="/" component={Home} />
