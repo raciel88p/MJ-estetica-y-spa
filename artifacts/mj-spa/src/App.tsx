@@ -39,6 +39,9 @@ const PageLoader = () => (
 function Router() {
   const [location] = useLocation();
 
+  // High-priority short-circuit for Sanity Studio
+  // This ensures that /admin and all sub-paths (/admin/structure/post, etc.)
+  // are handled by Sanity Studio's internal router without wouter interference.
   if (location.startsWith('/admin')) {
     return <AdminPage />;
   }
@@ -62,7 +65,7 @@ function Router() {
         <Route path="/faciales" component={LandingFaciales} />
         <Route path="/medicina-estetica" component={LandingMedicos} />
         <Route path="/blog" component={Blog} />
-        <Route path="/blog/:slug" component={PostDetail} />
+        <Route path="/blog/:slug">{(params) => <PostDetail slug={params.slug} lang="es" />}</Route>
 
         {/* EN Routes */}
         <Route path="/en"><Home lang="en" /></Route>
@@ -78,7 +81,7 @@ function Router() {
         <Route path="/en/services/leg-treatments"><TratamientosPiernas lang="en" /></Route>
         <Route path="/en/facial-harmonization"><LandingMedicos lang="en" /></Route>
         <Route path="/en/blog"><Blog lang="en" /></Route>
-        <Route path="/en/blog/:slug"><PostDetail lang="en" /></Route>
+        <Route path="/en/blog/:slug">{(params) => <PostDetail slug={params.slug} lang="en" />}</Route>
 
         {/* Dynamic Service Routes */}
         {servicePages.map((service) => (
