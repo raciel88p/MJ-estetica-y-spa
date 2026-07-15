@@ -22,6 +22,19 @@ export const authorType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'role',
+      title: 'Cargo / Especialidad',
+      type: 'string',
+      initialValue: 'Especialista en Estética',
+    }),
+    defineField({
+      name: 'featured',
+      title: 'Autor Destacado (Director)',
+      type: 'boolean',
+      initialValue: false,
+      description: 'Si se marca, este autor aparecerá en la sección de liderazgo de la página principal.',
+    }),
+    defineField({
       name: 'image',
       title: 'Foto',
       type: 'image',
@@ -46,8 +59,15 @@ export const authorType = defineType({
       type: 'string',
     }),
     defineField({
+      name: 'shortBio',
+      title: 'Resumen Corto',
+      type: 'text',
+      rows: 3,
+      description: 'Una descripción breve para tarjetas y previsualizaciones.',
+    }),
+    defineField({
       name: 'bio',
-      title: 'Biografía',
+      title: 'Biografía Completa',
       type: 'array',
       of: [
         {
@@ -61,7 +81,17 @@ export const authorType = defineType({
   preview: {
     select: {
       title: 'name',
+      subtitle: 'role',
       media: 'image',
+      featured: 'featured',
+    },
+    prepare(selection) {
+      const { title, subtitle, featured } = selection;
+      return {
+        ...selection,
+        title: `${title}${featured ? ' ⭐' : ''}`,
+        subtitle: subtitle || 'Sin cargo asignado',
+      };
     },
   },
 });
