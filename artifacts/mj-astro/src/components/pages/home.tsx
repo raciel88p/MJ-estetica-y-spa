@@ -236,11 +236,17 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
                   className="aspect-[4/5] rounded-sm overflow-hidden shadow-2xl relative group"
                 >
                   <a href="https://www.robertoperezsalazar.com/" target="_blank" rel="noopener noreferrer">
-                    <img
-                      src={urlFor(authors[0].image).width(800).height(1000).url()}
-                      alt={authors[0].name}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
+                    {authors[0].image ? (
+                      <img
+                        src={urlFor(authors[0].image).width(800).height(1000).url()}
+                        alt={authors[0].name}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-stone-200 flex items-center justify-center">
+                        <span className="text-stone-400 font-bold text-4xl">{authors[0].name.charAt(0)}</span>
+                      </div>
+                    )}
                     <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
                   </a>
                 </motion.div>
