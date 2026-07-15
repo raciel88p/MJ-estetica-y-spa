@@ -60,7 +60,7 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         ...,
         author->
       }`, { lang }),
-      client.fetch(`*[_type == "author"]`)
+      client.fetch(`*[_type == "author"] | order(featured desc, name asc)`)
     ])
       .then(([postsData, authorsData]) => {
         setLatestPosts(postsData);
@@ -203,7 +203,9 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                 </motion.div>
                 <div className="absolute -bottom-6 -right-6 bg-primary p-8 hidden md:block">
                   <p className="text-white font-serif text-2xl font-bold">{authors[0].name}</p>
-                  <p className="text-white/70 text-[10px] font-bold tracking-widest uppercase">{lang === 'es' ? 'Director Médico' : 'Medical Director'}</p>
+                  <p className="text-white/70 text-[10px] font-bold tracking-widest uppercase">
+                    {authors[0].role || (lang === 'es' ? 'Director Médico' : 'Medical Director')}
+                  </p>
                 </div>
               </div>
 

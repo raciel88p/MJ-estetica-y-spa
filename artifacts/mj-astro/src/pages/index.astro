@@ -8,7 +8,7 @@ const [latestPosts, authors] = await Promise.all([
     ...,
     author->
   }`),
-  sanityClient.fetch(`*[_type == "author"]`)
+  sanityClient.fetch(`*[_type == "author"] | order(featured desc, name asc)`)
 ]);
 ---
 <Layout lang="es">
