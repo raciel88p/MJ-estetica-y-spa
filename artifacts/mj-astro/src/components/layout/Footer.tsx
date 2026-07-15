@@ -138,7 +138,12 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-          <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. {t('footer.rights')}</p>
+          <p>
+            © 2026 MJ Fisio Estética y Spa. {t('footer.rights')}
+            <span className="ml-1">
+              Página realizada por <a href="https://robertoperezsalazar.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline underline-offset-2">Robertoperezsalazar.com</a> especialista en posicionamiento web.
+            </span>
+          </p>
           <div className="flex gap-4">
             <a href={lang === 'es' ? "/politica-de-datos" : "/en/data-policy"} className="hover:text-white">{lang === 'es' ? "Política de Privacidad" : "Privacy Policy"}</a>
             <a href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-white">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</a>
