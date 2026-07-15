@@ -129,7 +129,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
           {/* Logo */}
           <a href={lang === 'es' ? "/" : "/en"} className="flex items-center cursor-pointer group">
             <img
-              src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
+              src="/images/logo-mj.png"
               alt="MJ Fisio Estética y Spa"
               className="h-14 md:h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
               style={isScrolled ? {} : { filter: "drop-shadow(0 0 10px rgba(255,255,255,0.5)) brightness(1.15)" }}
@@ -187,11 +187,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
             <a href={lang === 'es' ? "/testimonios" : "/en/testimonials"} className={`${linkBase} ${textClass} ${isActive("/testimonios") ? "text-primary" : ""}`}>
               {t('nav.testimonios')}
               {isActive("/testimonios") && <ActiveIndicator />}
-            </a>
-
-            <a href={lang === 'es' ? "/paquetes" : "/en/packages"} className={`${linkBase} ${textClass} ${isActive("/paquetes") ? "text-primary" : ""}`}>
-              {t('nav.paquetes')}
-              {isActive("/paquetes") && <ActiveIndicator />}
             </a>
 
 
@@ -523,13 +518,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.testimonios')}
-              </a>
-
-              <a href={lang === 'es' ? "/paquetes" : "/en/packages"}
-                className={`${isActive("/paquetes") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t('nav.paquetes')}
               </a>
 
 

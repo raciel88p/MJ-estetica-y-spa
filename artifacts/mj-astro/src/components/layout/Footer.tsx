@@ -19,7 +19,7 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
           {/* Brand */}
           <div className="space-y-4">
             <img
-              src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
+              src="/images/logo-mj.png"
               alt="MJ Fisio Estética y Spa"
               className="h-16 w-auto object-contain mb-6"
               loading="lazy"
@@ -57,7 +57,6 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
               <li><a href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos Corporales" : "Body Treatments"}</a></li>
               <li><a href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos Faciales" : "Facial Treatments"}</a></li>
               <li><a href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos de Piernas" : "Leg Treatments"}</a></li>
-              <li><a href={lang === 'es' ? "/paquetes" : "/en/packages"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Paquetes" : "Packages"}</a></li>
               <li><a href={lang === 'es' ? "/medicos-esteticos" : "/en/medical-aesthetic"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Médico Estético" : "Medical Aesthetic"}</a></li>
               <li><a href={lang === 'es' ? "/testimonios" : "/en/testimonials"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Testimonios" : "Testimonials"}</a></li>
               <li><a href={lang === 'es' ? "/blog" : "/en/blog"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Blog" : "Blog"}</a></li>

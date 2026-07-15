@@ -9,6 +9,18 @@
     "BASE_PATH": "/",
     "NODE_ENV": "production"
   },
+  "redirects": [
+    {
+      "source": "/paquetes",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/en/packages",
+      "destination": "/en",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/admin/(.*)",
