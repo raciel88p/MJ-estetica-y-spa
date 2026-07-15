@@ -2,13 +2,14 @@ import { defineField, defineType } from 'sanity';
 
 export const authorType = defineType({
   name: 'author',
-  title: 'Author',
+  title: 'Autor',
   type: 'document',
   fields: [
     defineField({
       name: 'name',
-      title: 'Name',
+      title: 'Nombre',
       type: 'string',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
@@ -18,18 +19,35 @@ export const authorType = defineType({
         source: 'name',
         maxLength: 96,
       },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'image',
-      title: 'Image',
+      title: 'Foto',
       type: 'image',
       options: {
         hotspot: true,
       },
     }),
     defineField({
+      name: 'linkedin',
+      title: 'LinkedIn',
+      type: 'url',
+    }),
+    defineField({
+      name: 'titles',
+      title: 'Títulos',
+      type: 'array',
+      of: [{ type: 'string' }],
+    }),
+    defineField({
+      name: 'medicalCode',
+      title: 'Código Médico',
+      type: 'string',
+    }),
+    defineField({
       name: 'bio',
-      title: 'Bio',
+      title: 'Biografía',
       type: 'array',
       of: [
         {
