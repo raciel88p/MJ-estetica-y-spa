@@ -21,10 +21,10 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
             <img
               src="/images/logo-mj.png"
               alt="MJ Fisio Estética y Spa"
-              className="h-16 w-auto object-contain mb-6"
+              className="h-24 w-auto object-contain mb-6"
               loading="lazy"
-              width="160"
-              height="64"
+              width="240"
+              height="96"
             />
             <p className="text-white/60 font-light leading-relaxed">
               {t('footer.brand')}
