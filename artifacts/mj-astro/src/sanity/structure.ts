@@ -37,12 +37,10 @@ export const structure: StructureResolver = (S) =>
       // Top-level Authors
       S.listItem()
         .title('Autores')
-        .schemaType('author')
         .child(S.documentTypeList('author').title('Autores')),
 
       // Top-level Categories
       S.listItem()
         .title('Categorías')
-        .schemaType('category')
         .child(S.documentTypeList('category').title('Categorías')),
     ]);
