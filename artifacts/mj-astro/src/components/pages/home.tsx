@@ -265,7 +265,7 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-6 mt-12">
-                  <a href="https://www.robertoperezsalazar.com/" target="_blank" rel="noopener noreferrer">
+                  <a href={lang === 'es' ? "/nosotros" : "/en/about-us"}>
                     <Button variant="outline" className="h-12 px-8 tracking-widest uppercase text-[10px] font-bold border-stone-200 text-stone-900 hover:bg-stone-900 hover:text-white transition-all">
                        {lang === 'es' ? 'Ver Perfil Profesional' : 'View Professional Profile'}
                     </Button>
