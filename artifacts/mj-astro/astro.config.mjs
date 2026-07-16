@@ -29,6 +29,11 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      // Inline CSS when the chunk is less than 100KB — eliminates blocking requests
+      cssCodeSplit: false,
+      assetsInlineLimit: 102400, // 100KB limit
+    },
     server: {
       proxy: {
         '/api': {

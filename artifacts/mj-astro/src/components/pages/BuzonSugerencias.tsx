@@ -13,6 +13,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 function BuzonSugerencias({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   const schema = z.object({
+    botcheck: z.string().optional(),
     nombre: z.string().min(2, lang === 'es' ? "Por favor ingresa tu nombre" : "Please enter your name"),
     tipo: z.string().min(1, lang === 'es' ? "Selecciona una categoría" : "Select a category"),
     mensaje: z.string().min(10, lang === 'es' ? "El mensaje debe tener al menos 10 caracteres" : "The message must have at least 10 characters"),
@@ -29,6 +30,12 @@ function BuzonSugerencias({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   } = useForm<FormValues>({ resolver: zodResolver(schema) });
 
   const onSubmit = (data: FormValues) => {
+    // Honeypot check to prevent automated spam bot submissions
+    if (data.botcheck) {
+      console.warn("Spam bot detected!");
+      return;
+    }
+
     const header = lang === 'es' ? "*Buzón de Sugerencias - MJ Estética*" : "*Suggestion Box - MJ Aesthetics*";
     const nameLabel = lang === 'es' ? "*Nombre:*" : "*Name:*";
     const categoryLabel = lang === 'es' ? "*Categoría:*" : "*Category:*";
@@ -104,6 +111,15 @@ function BuzonSugerencias({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                 onSubmit={handleSubmit(onSubmit)}
                 className="space-y-6"
               >
+                {/* Honeypot anti-spam input */}
+                <div className="hidden" aria-hidden="true">
+                  <input
+                    {...register("botcheck")}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">
                     {lang === 'es' ? "Nombre" : "Name"} <span className="text-primary">*</span>
