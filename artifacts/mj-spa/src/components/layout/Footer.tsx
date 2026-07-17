@@ -1,5 +1,6 @@
 import { Instagram, Facebook, MapPin, Phone, Clock } from "lucide-react";
 import { useTranslations } from "@/i18n/ui";
+import { Link } from "wouter";
 
 export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   const t = useTranslations(lang);
@@ -53,15 +54,16 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
           <div>
             <h4 className="text-xl font-serif text-white mb-6">{t('footer.pages')}</h4>
             <ul className="space-y-3">
-              <li><a href={lang === 'es' ? "/nosotros" : "/en/about-us"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Sobre Nosotros" : "About Us"}</a></li>
-              <li><a href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos Corporales" : "Body Treatments"}</a></li>
-              <li><a href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos Faciales" : "Facial Treatments"}</a></li>
-              <li><a href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos de Piernas" : "Leg Treatments"}</a></li>
-              <li><a href={lang === 'es' ? "/paquetes" : "/en/packages"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Paquetes" : "Packages"}</a></li>
-              <li><a href={lang === 'es' ? "/medicos-esteticos" : "/en/medical-aesthetic"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Médico Estético" : "Medical Aesthetic"}</a></li>
-              <li><a href={lang === 'es' ? "/testimonios" : "/en/testimonials"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Testimonios" : "Testimonials"}</a></li>
-              <li><a href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"} className="hover:text-secondary transition-colors font-medium text-primary">{lang === 'es' ? "Buzón de Sugerencias" : "Suggestion Box"}</a></li>
-              <li><a href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</a></li>
+              <li><Link href={lang === 'es' ? "/nosotros" : "/en/about-us"} className="hover:text-secondary transition-colors cursor-pointer">{lang === 'es' ? "Sobre Nosotros" : "About Us"}</Link></li>
+              <li><Link href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"} className="hover:text-secondary transition-colors cursor-pointer">{lang === 'es' ? "Tratamientos Corporales" : "Body Treatments"}</Link></li>
+              <li><Link href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"} className="hover:text-secondary transition-colors cursor-pointer">{lang === 'es' ? "Tratamientos Faciales" : "Facial Treatments"}</Link></li>
+              <li><Link href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"} className="hover:text-secondary transition-colors cursor-pointer">{lang === 'es' ? "Tratamientos de Piernas" : "Leg Treatments"}</Link></li>
+              <li><Link href={lang === 'es' ? "/paquetes" : "/en/packages"} className="hover:text-secondary transition-colors cursor-pointer">{lang === 'es' ? "Paquetes" : "Packages"}</Link></li>
+              <li><Link href={lang === 'es' ? "/medicos-esteticos" : "/en/medical-aesthetic"} className="hover:text-secondary transition-colors cursor-pointer">{lang === 'es' ? "Médico Estético" : "Medical Aesthetic"}</Link></li>
+              <li><Link href={lang === 'es' ? "/testimonios" : "/en/testimonials"} className="hover:text-secondary transition-colors cursor-pointer">{lang === 'es' ? "Testimonios" : "Testimonials"}</Link></li>
+              <li><Link href={lang === 'es' ? "/blog" : "/en/blog"} className="hover:text-secondary transition-colors cursor-pointer">{lang === 'es' ? "Blog" : "Blog"}</Link></li>
+              <li><Link href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"} className="hover:text-secondary transition-colors font-medium text-primary cursor-pointer">{lang === 'es' ? "Buzón de Sugerencias" : "Suggestion Box"}</Link></li>
+              <li><Link href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-secondary transition-colors cursor-pointer">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</Link></li>
             </ul>
           </div>
 
@@ -140,8 +142,8 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
           <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. {t('footer.rights')}</p>
           <div className="flex gap-4">
-            <a href={lang === 'es' ? "/politica-de-datos" : "/en/data-policy"} className="hover:text-white">{lang === 'es' ? "Política de Privacidad" : "Privacy Policy"}</a>
-            <a href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-white">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</a>
+            <Link href={lang === 'es' ? "/politica-de-datos" : "/en/data-policy"} className="hover:text-white cursor-pointer">{lang === 'es' ? "Política de Privacidad" : "Privacy Policy"}</Link>
+            <Link href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-white cursor-pointer">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</Link>
           </div>
         </div>
       </div>

@@ -1,0 +1,172 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { sanityClient } from "sanity:client";
+import { urlFor } from "@/sanity/lib/image";
+import { SEO } from "@/components/SEO";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+
+const posts = await sanityClient.fetch<any[]>(`*[_type == "post" && language == "en"] | order(publishedAt desc) {
+  ...,
+  author->
+}`);
+const authors = await sanityClient.fetch<any[]>(`*[_type == "author"] | order(name asc)`);
+const lang = 'en';
+---
+
+<Layout lang={lang}>
+  <SEO
+    title="Blog | MJ Fisio Estética y Spa"
+    description="Health, beauty and wellness tips in Turrialba."
+    slot="seo"
+    client:load
+  />
+
+  <Navbar lang={lang} client:load />
+  <FloatingWhatsApp client:load />
+
+  <main class="bg-white">
+    {/* ── HERO BLOG ────────────────────────────────── */}
+    <section class="relative pt-44 pb-24 bg-[#050c14] overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-30"></div>
+        <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+      </div>
+
+      <div class="container relative z-10 mx-auto px-6">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-6">
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            <span class="text-primary text-[10px] font-bold tracking-[0.2em] uppercase">Magazine & Wellness</span>
+          </div>
+          <h1 class="text-5xl md:text-7xl font-serif font-bold text-white leading-tight mb-6">
+            Wellness <br />
+            <span class="italic font-light text-primary">Journal</span>
+          </h1>
+          <p class="text-lg md:text-xl text-white/60 font-light leading-relaxed max-w-xl">
+            Explore expert tips, trends in medical aesthetics and personal care rituals designed for your best version.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="container mx-auto px-6 -mt-12 relative z-20 pb-32">
+      {/* ── POST DESTACADO ────────────────────────────── */}
+      {posts.length > 0 && (
+        <article class="group bg-white rounded-sm shadow-2xl overflow-hidden mb-20 border border-stone-100">
+          <div class="flex flex-col lg:flex-row">
+            <div class="lg:w-3/5 overflow-hidden">
+              <a href={`/en/blog/${posts[0].slug.current}`} class="block h-full">
+                <img
+                  src={urlFor(posts[0].mainImage).width(1200).height(800).url()}
+                  alt={posts[0].title}
+                  class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                />
+              </a>
+            </div>
+            <div class="lg:w-2/5 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+               <div class="flex items-center gap-3 mb-6">
+                  <span class="px-3 py-1 bg-stone-100 text-stone-500 text-[10px] font-bold tracking-widest uppercase rounded-full">Featured</span>
+                  <span class="text-stone-300">•</span>
+                  <time class="text-stone-400 text-[10px] font-medium uppercase tracking-widest">
+                    {new Date(posts[0].publishedAt).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+                  </time>
+               </div>
+               <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mb-6 leading-tight group-hover:text-primary transition-colors">
+                 <a href={`/en/blog/${posts[0].slug.current}`}>{posts[0].title}</a>
+               </h2>
+               <p class="text-stone-500 font-light leading-relaxed mb-10 line-clamp-3">
+                 {posts[0].excerpt || "Discover the best-kept secrets for your skin care and comprehensive well-being in our latest editorial publication."}
+               </p>
+               <a href={`/en/blog/${posts[0].slug.current}`} class="inline-flex items-center gap-3 text-xs font-bold tracking-[0.2em] uppercase text-stone-900 group/btn">
+                  Continue reading
+                  <span class="w-8 h-px bg-stone-300 group-hover/btn:w-12 group-hover/btn:bg-primary transition-all"></span>
+               </a>
+            </div>
+          </div>
+        </article>
+      )}
+
+      {/* ── GRID DE ARTÍCULOS ─────────────────────────── */}
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20">
+        {posts.slice(1).map((post: any) => (
+          <article class="group flex flex-col">
+            <div class="relative aspect-[4/5] overflow-hidden bg-stone-100 mb-8 rounded-sm shadow-sm transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-1">
+              {post.mainImage && (
+                <a href={`/en/blog/${post.slug.current}`} class="block h-full">
+                  <img
+                    src={urlFor(post.mainImage).width(800).height(1000).url()}
+                    alt={post.title}
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"></div>
+                </a>
+              )}
+            </div>
+
+            <div class="flex flex-col flex-1">
+              <time class="text-primary text-[10px] font-bold tracking-[0.2em] uppercase mb-4 block">
+                {new Date(post.publishedAt).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' })}
+              </time>
+              <h3 class="text-2xl font-serif text-stone-900 mb-4 leading-tight group-hover:text-primary transition-colors">
+                <a href={`/en/blog/${post.slug.current}`}>
+                  {post.title}
+                </a>
+              </h3>
+              <div class="mt-auto pt-6 flex items-center gap-3 border-t border-stone-100">
+                {post.author?.image && (
+                  <img
+                    src={urlFor(post.author.image).width(40).height(40).url()}
+                    alt={post.author.name}
+                    class="w-8 h-8 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all shadow-sm"
+                  />
+                )}
+                <span class="text-[10px] text-stone-400 font-bold uppercase tracking-widest">
+                  {post.author?.name}
+                </span>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      {posts.length === 0 && (
+        <div class="text-center py-20 bg-stone-50 rounded-3xl border-2 border-dashed border-stone-200">
+           <p class="text-stone-400 font-medium">Coming soon we will share very special content with you.</p>
+        </div>
+      )}
+
+      {authors.length > 0 && (
+        <div class="mt-32">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-serif text-primary mb-4">Our Experts</h2>
+            <p class="text-muted-foreground text-lg">Meet the minds behind our wellness content.</p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {authors.map((author: any) => (
+              <div class="text-center group">
+                <div class="relative w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full shadow-md transition-transform group-hover:scale-105">
+                  {author.image ? (
+                    <img
+                      src={urlFor(author.image).width(200).height(200).url()}
+                      alt={author.name}
+                      class="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div class="w-full h-full bg-stone-200 flex items-center justify-center">
+                       <span class="text-stone-400 font-bold text-2xl">{author.name.charAt(0)}</span>
+                    </div>
+                  )}
+                </div>
+                <h3 class="font-serif text-lg font-medium text-stone-900">{author.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </main>
+
+  <Footer lang={lang} client:load />
+</Layout>

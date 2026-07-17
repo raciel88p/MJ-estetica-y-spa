@@ -1,7 +1,16 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Home from '../../components/pages/home';
+import { sanityClient } from "sanity:client";
+
+const [latestPosts, authors] = await Promise.all([
+  sanityClient.fetch(`*[_type == "post" && language == "en"] | order(publishedAt desc)[0...3] {
+    ...,
+    author->
+  }`),
+  sanityClient.fetch(`*[_type == "author"] | order(featured desc, name asc)`)
+]);
 ---
 <Layout lang="en">
-  <Home lang="en" client:load />
+  <Home client:load lang="en" latestPosts={latestPosts} authors={authors} />
 </Layout>

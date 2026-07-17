@@ -3,6 +3,7 @@ import { withAppProviders } from "@/components/ReactAppWrapper";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { Link } from "wouter";
 import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ChevronRight } from "lucide-react";
@@ -165,13 +166,13 @@ function SitemapPage({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                 <ul className="space-y-2">
                   {section.links.map((link) => (
                     <li key={link.href}>
-                      <a
+                      <Link
                         href={link.href}
-                        className="group flex items-center gap-2 text-stone-600 hover:text-primary transition-colors text-sm"
+                        className="group flex items-center gap-2 text-stone-600 hover:text-primary transition-colors text-sm cursor-pointer"
                       >
                         <ChevronRight className="w-3.5 h-3.5 shrink-0 text-primary/50 group-hover:text-primary transition-colors" />
                         {link.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

@@ -129,12 +129,12 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
           {/* Logo */}
           <a href={lang === 'es' ? "/" : "/en"} className="flex items-center cursor-pointer group">
             <img
-              src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
+              src="/images/logo-mj.png"
               alt="MJ Fisio Estética y Spa"
-              className="h-14 md:h-16 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+              className="h-20 md:h-24 w-auto object-contain transition-all duration-300 group-hover:scale-105"
               style={isScrolled ? {} : { filter: "drop-shadow(0 0 10px rgba(255,255,255,0.5)) brightness(1.15)" }}
-              width="160"
-              height="64"
+              width="240"
+              height="96"
             />
           </a>
 
@@ -187,11 +187,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
             <a href={lang === 'es' ? "/testimonios" : "/en/testimonials"} className={`${linkBase} ${textClass} ${isActive("/testimonios") ? "text-primary" : ""}`}>
               {t('nav.testimonios')}
               {isActive("/testimonios") && <ActiveIndicator />}
-            </a>
-
-            <a href={lang === 'es' ? "/paquetes" : "/en/packages"} className={`${linkBase} ${textClass} ${isActive("/paquetes") ? "text-primary" : ""}`}>
-              {t('nav.paquetes')}
-              {isActive("/paquetes") && <ActiveIndicator />}
             </a>
 
 
@@ -396,6 +391,11 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
               {lang === 'es' ? "Contacto" : "Contact"}
             </a>
 
+            <a href={lang === 'es' ? "/blog" : "/en/blog"} className={`${linkBase} ${textClass} ${isActive("/blog") ? "text-primary" : ""}`}>
+              {t('nav.blog')}
+              {isActive("/blog") && <ActiveIndicator />}
+            </a>
+
             <Button
               className={`rounded-none px-6 py-2.5 text-sm font-semibold tracking-wide transition-all ${
                 isScrolled
@@ -518,13 +518,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.testimonios')}
-              </a>
-
-              <a href={lang === 'es' ? "/paquetes" : "/en/packages"}
-                className={`${isActive("/paquetes") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t('nav.paquetes')}
               </a>
 
 
@@ -687,6 +680,14 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {lang === 'es' ? "Contacto" : "Contact"}
+              </a>
+
+              <a
+                href={lang === 'es' ? "/blog" : "/en/blog"}
+                className={`${isActive("/blog") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('nav.blog')}
               </a>
 
               <Button className="mt-4 w-full rounded-full bg-primary text-white hover:bg-primary/90" asChild>

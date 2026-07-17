@@ -23,6 +23,8 @@ import { useToast } from "@/hooks/use-toast";
 import { useTranslations } from "@/i18n/ui";
 import esLoc from "@/i18n/locales/es/home.json";
 import enLoc from "@/i18n/locales/en/home.json";
+import { urlFor } from "@/sanity/lib/image";
+import { PortableText } from "@portabletext/react";
 
 const WA_LINK = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
@@ -42,7 +44,7 @@ const formSchema = z.object({
   message: z.string().min(10, "El mensaje es muy corto"),
 });
 
-function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
+function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | 'en', latestPosts?: any[], authors?: any[] }) {
   const t = useTranslations(lang);
   const content = lang === 'es' ? esLoc : enLoc;
   const [mounted, setMounted] = useState(false);
@@ -220,6 +222,61 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         </div>
       </section>
 
+      {/* ── EQUIPO MÉDICO / LIDERAZGO ──────────────────── */}
+      {authors.length > 0 && (
+        <section className="py-24 md:py-32 bg-stone-50 overflow-hidden">
+          <div className="container mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div className="relative">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="aspect-[4/5] rounded-sm overflow-hidden shadow-2xl relative group"
+                >
+                  <img
+                    src="/images/janneth-molina.webp"
+                    alt="Lic Maria Molina Madrigal"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
+                </motion.div>
+                <div className="absolute -bottom-6 -right-6 bg-primary p-8 hidden md:block">
+                  <p className="text-white font-serif text-2xl font-bold">Lic Maria Molina Madrigal</p>
+                  <p className="text-white/70 text-[10px] font-bold tracking-widest uppercase">{lang === 'es' ? 'Directora & Especialista' : 'Director & Specialist'}</p>
+                </div>
+              </div>
+
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+              >
+                <h2 className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">{lang === 'es' ? 'Liderazgo Profesional' : 'Professional Leadership'}</h2>
+                <h3 className="text-4xl md:text-5xl font-serif text-stone-900 mb-8 leading-tight">
+                  {lang === 'es' ? 'Excelencia Médica en' : 'Medical Excellence in'} <br />
+                  <span className="italic font-light text-stone-400">{lang === 'es' ? 'cada tratamiento' : 'every treatment'}</span>
+                </h3>
+
+                <div className="prose prose-stone prose-sm text-stone-500 max-w-none mb-10">
+                  <p className="text-lg font-light leading-relaxed">Lic Maria Molina Madrigal lidera nuestro equipo con una visión integral de la salud y la belleza.</p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-6 mt-12">
+                  <a href={lang === 'es' ? "/nosotros" : "/en/about-us"}>
+                    <Button variant="outline" className="h-12 px-8 tracking-widest uppercase text-[10px] font-bold border-stone-200 text-stone-900 hover:bg-stone-900 hover:text-white transition-all">
+                       {lang === 'es' ? 'Ver Perfil Profesional' : 'View Professional Profile'}
+                    </Button>
+                  </a>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── EXPERIENCIA MJ ─────────────────────────────── */}
       <section className="py-24 md:py-32 bg-white text-stone-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-stone-50 -skew-x-12 translate-x-1/4" />
@@ -304,6 +361,71 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
       </section>
 
       {/* ── CONTACTO ──────────────────────────────────── */}
+      {/* ── ÚLTIMAS ENTRADAS DEL BLOG ─────────────────── */}
+      {latestPosts.length > 0 && (
+        <section className="py-24 md:py-32 bg-stone-50">
+          <div className="container mx-auto px-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+              <div>
+                <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">{lang === 'es' ? 'Nuestro Blog' : 'Our Blog'}</p>
+                <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">
+                  {lang === 'es' ? 'Consejos de' : 'Wellness'} <br />
+                  <span className="italic font-light text-primary">{lang === 'es' ? 'bienestar y estética' : 'tips & trends'}</span>
+                </h2>
+              </div>
+              <a href={lang === 'es' ? "/blog" : "/en/blog"} className="text-sm font-bold tracking-widest uppercase border-b border-stone-200 pb-2 hover:text-primary hover:border-primary transition-colors">
+                {lang === 'es' ? 'Ver todo el blog' : 'View all blog'}
+              </a>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {latestPosts.map((post, i) => (
+                <motion.div
+                  key={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="bg-white rounded-2xl shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow flex flex-col"
+                >
+                  {post.mainImage && (
+                    <a href={lang === 'es' ? `/blog/${post.slug.current}` : `/en/blog/${post.slug.current}`}>
+                      <img
+                        src={urlFor(post.mainImage).width(600).height(400).url()}
+                        alt={post.title}
+                        className="w-full h-48 object-cover"
+                      />
+                    </a>
+                  )}
+                  <div className="p-6 flex flex-col flex-1">
+                    <h4 className="text-xl font-serif mb-2 text-stone-900">
+                      <a href={lang === 'es' ? `/blog/${post.slug.current}` : `/en/blog/${post.slug.current}`} className="hover:text-primary transition-colors line-clamp-2">
+                        {post.title}
+                      </a>
+                    </h4>
+                    <div className="flex items-center gap-2 mb-4">
+                      {post.author?.image && (
+                        <img
+                          src={urlFor(post.author.image).width(40).height(40).url()}
+                          alt={post.author.name}
+                          className="w-5 h-5 rounded-full object-cover"
+                        />
+                      )}
+                      <p className="text-[10px] text-muted-foreground uppercase tracking-widest">
+                        <span className="font-bold text-stone-700">{post.author?.name}</span> • {new Date(post.publishedAt).toLocaleDateString(lang === 'es' ? 'es-ES' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' })}
+                      </p>
+                    </div>
+                    <a href={lang === 'es' ? `/blog/${post.slug.current}` : `/en/blog/${post.slug.current}`} className="mt-auto text-primary text-xs font-bold tracking-widest uppercase hover:underline">
+                      {lang === 'es' ? 'Leer más →' : 'Read more →'}
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section id="contacto" className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">

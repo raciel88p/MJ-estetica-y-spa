@@ -19,12 +19,12 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
           {/* Brand */}
           <div className="space-y-4">
             <img
-              src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
+              src="/images/logo-mj.png"
               alt="MJ Fisio Estética y Spa"
-              className="h-16 w-auto object-contain mb-6"
+              className="h-24 w-auto object-contain mb-6"
               loading="lazy"
-              width="160"
-              height="64"
+              width="240"
+              height="96"
             />
             <p className="text-white/60 font-light leading-relaxed">
               {t('footer.brand')}
@@ -57,9 +57,9 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
               <li><a href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos Corporales" : "Body Treatments"}</a></li>
               <li><a href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos Faciales" : "Facial Treatments"}</a></li>
               <li><a href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos de Piernas" : "Leg Treatments"}</a></li>
-              <li><a href={lang === 'es' ? "/paquetes" : "/en/packages"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Paquetes" : "Packages"}</a></li>
               <li><a href={lang === 'es' ? "/medicos-esteticos" : "/en/medical-aesthetic"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Médico Estético" : "Medical Aesthetic"}</a></li>
               <li><a href={lang === 'es' ? "/testimonios" : "/en/testimonials"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Testimonios" : "Testimonials"}</a></li>
+              <li><a href={lang === 'es' ? "/blog" : "/en/blog"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Blog" : "Blog"}</a></li>
               <li><a href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"} className="hover:text-secondary transition-colors font-medium text-primary">{lang === 'es' ? "Buzón de Sugerencias" : "Suggestion Box"}</a></li>
               <li><a href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</a></li>
             </ul>
@@ -138,7 +138,12 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-          <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. {t('footer.rights')}</p>
+          <p>
+            © 2026 MJ Fisio Estética y Spa. {t('footer.rights')}
+            <span className="ml-1">
+              Página realizada por <a href="https://robertoperezsalazar.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline underline-offset-2">Robertoperezsalazar.com</a> especialista en posicionamiento web.
+            </span>
+          </p>
           <div className="flex gap-4">
             <a href={lang === 'es' ? "/politica-de-datos" : "/en/data-policy"} className="hover:text-white">{lang === 'es' ? "Política de Privacidad" : "Privacy Policy"}</a>
             <a href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-white">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</a>

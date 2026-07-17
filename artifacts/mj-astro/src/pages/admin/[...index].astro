@@ -1,0 +1,13 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import AdminPage from "../../components/AdminPage";
+
+export function getStaticPaths() {
+  return [
+    { params: { index: undefined } }
+  ];
+}
+---
+<Layout lang="es">
+  <AdminPage client:only="react" />
+</Layout>
