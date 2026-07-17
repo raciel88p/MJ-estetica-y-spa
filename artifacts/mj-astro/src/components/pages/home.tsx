@@ -13,6 +13,7 @@ import {
 import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { Marquee } from "@/components/Marquee";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { GoogleMap, MAPS_LINK, GOOGLE_REVIEW_LINK } from "@/components/GoogleMap";
 import { StatsBar } from "@/components/StatsBar";
@@ -163,6 +164,33 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
           </div>
         </div>
       </section>
+
+      {/* ── INFINITE MARQUEE RIBBON ────────────────────── */}
+      <Marquee
+        items={
+          lang === "es"
+            ? [
+                "Fisioterapia",
+                "Estética Avanzada",
+                "Spa & Relajación",
+                "Masajes Profesionales",
+                "Tratamientos Médicos",
+                "Bienestar Integral",
+                "Depilación Láser",
+                "Nutrición",
+              ]
+            : [
+                "Physiotherapy",
+                "Advanced Aesthetics",
+                "Spa & Relaxation",
+                "Professional Massage",
+                "Medical Treatments",
+                "Holistic Wellness",
+                "Laser Hair Removal",
+                "Nutrition",
+              ]
+        }
+      />
 
       {/* ── TRATAMIENTOS ESTRELLA ──────────────────────── */}
       <section id="tratamientos-destacados" className="py-24 md:py-32 bg-white">
