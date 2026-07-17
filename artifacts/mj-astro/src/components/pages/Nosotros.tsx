@@ -215,7 +215,8 @@ function Nosotros({ lang = 'es' }: { lang?: 'es' | 'en' }) {
               {
                 name: "Cristina Pérez",
                 role: lang === "es" ? "Especialista en Nutrición" : "Nutrition Specialist",
-                photo: "dr-johan.webp",
+                photo: "https://cdn.sanity.io/images/c7ltnbh1/production/4e8f015f6997a29f0ac99c3b232c9ed35f40ba63-800x800.jpg?w=300",
+                isExternalPhoto: true,
                 desc: lang === "es"
                   ? "Especialista en asesoramiento nutricional personalizado, diseño de planes saludables y nutrición deportiva orientada al rendimiento y la estética corporal."
                   : "Specialist in personalized nutritional coaching, healthy plan design, and sports nutrition oriented towards performance and body aesthetics."
@@ -262,7 +263,7 @@ function Nosotros({ lang = 'es' }: { lang?: 'es' | 'en' }) {
               >
                 <div className="relative h-72 bg-stone-100 overflow-hidden">
                   <img
-                    src={`${import.meta.env.BASE_URL}images/${member.photo}`}
+                    src={member.isExternalPhoto ? member.photo : `${import.meta.env.BASE_URL}images/${member.photo}`}
                     alt={member.name}
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
