@@ -91,9 +91,9 @@ export default function PostDetail({ slug, lang = 'es' }: { slug?: string, lang?
             <div className="mt-16 p-8 bg-stone-50 rounded-2xl border border-border flex flex-col md:flex-row gap-6 items-center md:items-start">
               {post.author.image && (
                 <img
-                  src={urlFor(post.author.image).width(200).height(200).url()}
+                  src={urlFor(post.author.image).width(200).url()}
                   alt={post.author.name}
-                  className="w-24 h-24 rounded-full object-cover shadow-sm"
+                  className="w-24 h-24 rounded-full object-cover object-top shadow-sm"
                 />
               )}
               <div className="flex-1 text-center md:text-left">
