@@ -193,6 +193,98 @@ function Nosotros({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         </div>
       </section>
 
+      {/* ── NUESTROS EXPERTOS ─────────────────────────── */}
+      <section className="py-24 bg-stone-50 border-t border-b border-stone-200/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <p className="text-primary font-medium tracking-[0.25em] uppercase text-xs mb-3">
+              {lang === "es" ? "Nuestros Expertos" : "Our Experts"}
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-4">
+              {lang === "es" ? "Nuestros Expertos" : "Our Experts"}
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto text-sm leading-relaxed">
+              {lang === "es"
+                ? "Conoce a las mentes detrás de nuestro contenido de bienestar."
+                : "Meet the minds behind our wellness content."}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                name: "Cristina Pérez",
+                role: lang === "es" ? "Especialista en Nutrición" : "Nutrition Specialist",
+                photo: "dr-johan.webp",
+                desc: lang === "es"
+                  ? "Especialista en asesoramiento nutricional personalizado, diseño de planes saludables y nutrición deportiva orientada al rendimiento y la estética corporal."
+                  : "Specialist in personalized nutritional coaching, healthy plan design, and sports nutrition oriented towards performance and body aesthetics."
+              },
+              {
+                name: "Dr. Ricard Araya",
+                role: lang === "es" ? "Médico Armonizador Facial" : "Facial Harmonization Doctor",
+                photo: "dr-ricard-araya.webp",
+                desc: lang === "es"
+                  ? "Médico experto en rejuvenecimiento facial mínimamente invasivo, toxina botulínica, rellenos de ácido hialurónico y tratamientos avanzados de colágeno."
+                  : "Doctor expert in minimally invasive facial rejuvenation, botulinum toxin, hyaluronic acid fillers, and advanced collagen treatments."
+              },
+              {
+                name: "Dr. Ruddy Jiménez Montero",
+                role: lang === "es" ? "Especialista en Cirugía Capilar" : "Hair Surgery Specialist",
+                photo: "dr-ruddy-jimenez.webp",
+                desc: lang === "es"
+                  ? "Especialista con maestría en restauración capilar, injerto de barba y tratamientos médicos avanzados para la regeneración y densidad capilar."
+                  : "Specialist with a master's degree in hair restoration, beard grafting, and advanced medical treatments for hair regeneration and density."
+              },
+              {
+                name: "Janneth Maria Molina Madrigal",
+                role: lang === "es" ? "Directora & Especialista en Estética" : "Director & Aesthetic Specialist",
+                photo: "janneth-molina.webp",
+                desc: lang === "es"
+                  ? "Directora médica de MJ Fisio Estética y Spa, experta con más de 15 años liderando protocolos integrales de remodelación corporal y salud integral."
+                  : "Medical director of MJ Fisio Estética & Spa, expert with over 15 years leading comprehensive protocols of body remodeling and holistic health."
+              }
+            ].map((member, index) => (
+              <motion.div
+                key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                  hidden: { opacity: 0, y: 24 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: { delay: index * 0.1, duration: 0.5 }
+                  }
+                }}
+                className="bg-white rounded-2xl overflow-hidden border border-stone-200/60 hover:shadow-xl transition-all duration-300 flex flex-col group"
+              >
+                <div className="relative h-72 bg-stone-100 overflow-hidden">
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/${member.photo}`}
+                    alt={member.name}
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                </div>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-lg font-serif font-bold text-foreground mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-primary text-xs font-semibold tracking-wider uppercase mb-3">
+                    {member.role}
+                  </p>
+                  <p className="text-muted-foreground text-xs leading-relaxed mt-auto">
+                    {member.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-foreground relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent" />
