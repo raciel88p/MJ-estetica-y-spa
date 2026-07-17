@@ -117,9 +117,9 @@ const lang = 'es';
               <div class="mt-auto pt-6 flex items-center gap-3 border-t border-stone-100">
                 {post.author?.image && (
                   <img
-                    src={urlFor(post.author.image).width(40).height(40).url()}
+                    src={urlFor(post.author.image).width(80).url()}
                     alt={post.author.name}
-                    class="w-8 h-8 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all shadow-sm"
+                    class="w-8 h-8 rounded-full object-cover object-top grayscale group-hover:grayscale-0 transition-all shadow-sm"
                   />
                 )}
                 <span class="text-[10px] text-stone-400 font-bold uppercase tracking-widest">
@@ -149,9 +149,9 @@ const lang = 'es';
                 <div class="relative w-32 h-32 mx-auto mb-4 overflow-hidden rounded-full shadow-md transition-transform group-hover:scale-105">
                   {author.image ? (
                     <img
-                      src={urlFor(author.image).width(200).height(200).url()}
+                      src={urlFor(author.image).width(300).url()}
                       alt={author.name}
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover object-top"
                     />
                   ) : (
                     <div class="w-full h-full bg-stone-200 flex items-center justify-center">
