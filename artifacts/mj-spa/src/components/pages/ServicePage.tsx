@@ -438,7 +438,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/90" />
 
-        <div className="relative w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-36 pb-16">
+        <div className="relative w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-[194px] pb-16">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.div variants={fadeUp} className="mb-8">
               <Breadcrumb items={breadcrumbItems} variant="dark" />
