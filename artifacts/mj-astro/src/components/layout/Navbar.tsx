@@ -131,10 +131,10 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
             <img
               src="/images/logo-mj.png"
               alt="MJ Fisio Estética y Spa"
-              className="h-[180px] md:h-[212px] w-auto object-contain transition-all duration-300 group-hover:scale-105"
+              className="h-[324px] md:h-[382px] w-auto object-contain transition-all duration-300 group-hover:scale-105"
               style={isScrolled ? {} : { filter: "drop-shadow(0 0 10px rgba(255,255,255,0.5)) brightness(1.15)" }}
-              width="538"
-              height="212"
+              width="968"
+              height="382"
             />
           </a>
 
