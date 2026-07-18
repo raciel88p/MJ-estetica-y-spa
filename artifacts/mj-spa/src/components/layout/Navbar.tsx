@@ -121,12 +121,12 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-lg shadow-sm py-3 border-b border-stone-100"
-          : "bg-gradient-to-b from-black/80 via-black/20 to-transparent py-5"
+          ? "bg-white/80 backdrop-blur-lg shadow-sm py-0 border-b border-stone-100"
+          : "bg-gradient-to-b from-black/80 via-black/20 to-transparent py-0"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center gap-[50px]">
           {/* Logo */}
           <Link href={lang === 'es' ? "/" : "/en"} className="flex items-center cursor-pointer group">
             <img
