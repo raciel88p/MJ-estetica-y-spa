@@ -124,20 +124,17 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
           : "bg-gradient-to-b from-black/80 via-black/20 to-transparent py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          {/* Spacer to reserve horizontal space for the absolute logo */}
-          <div className="w-[140px] md:w-[190px] shrink-0" />
-
-          {/* Absolute hanging Logo */}
-          <a href={lang === 'es' ? "/" : "/en"} className="absolute -top-3 left-4 md:left-8 z-50 flex items-center cursor-pointer group">
+          {/* Logo inline aligned left to Nosotros/menu */}
+          <a href={lang === 'es' ? "/" : "/en"} className="flex items-center cursor-pointer group">
             <img
               src="/images/logo-mj.png"
               alt="MJ Fisio Estética y Spa"
-              className="h-[140px] md:h-[180px] w-auto object-contain transition-all duration-300 group-hover:scale-105"
-              style={isScrolled ? {} : { filter: "drop-shadow(0 0 12px rgba(255,255,255,0.6)) brightness(1.15)" }}
-              width="450"
-              height="180"
+              className="h-[110px] md:h-[144px] w-auto object-contain transition-all duration-300 group-hover:scale-105"
+              style={isScrolled ? {} : { filter: "drop-shadow(0 0 10px rgba(255,255,255,0.5)) brightness(1.15)" }}
+              width="360"
+              height="144"
             />
           </a>
 
