@@ -127,14 +127,13 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center w-full">
-          {/* Large prominent Brand Logo on the left */}
-          <Link href={lang === 'es' ? "/" : "/en"} className="flex items-center cursor-pointer group shrink-0">
+          {/* Large prominent Brand Logo on the left with zero side margins */}
+          <Link href={lang === 'es' ? "/" : "/en"} className="flex items-center cursor-pointer group shrink-0 mx-0 px-0">
             <img
               src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
               alt="MJ Fisio Estética y Spa"
-              className="h-16 md:h-20 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+              className="h-16 md:h-20 w-auto object-contain transition-all duration-300 group-hover:scale-105 mx-0 px-0"
               style={isScrolled ? {} : { filter: "drop-shadow(0 0 10px rgba(255,255,255,0.5)) brightness(1.15)" }}
-              width="200"
               height="80"
             />
           </Link>
