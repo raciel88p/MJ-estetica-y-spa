@@ -52,7 +52,8 @@ function MedicosEsteticos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
       name: "Dr. Johan",
       linc: "3667-25",
       specialty: lang === 'es' ? "Nutricionista Deportivo" : "Sports Nutritionist",
-      photo: "dr-johan.webp",
+      photo: "https://cdn.sanity.io/images/c7ltnbh1/production/4e8f015f6997a29f0ac99c3b232c9ed35f40ba63-800x800.jpg?w=300",
+      isExternalPhoto: true,
       bio: lang === 'es'
         ? "Especialista en nutrición clínica y deportiva. Diseña planes alimentarios personalizados orientados a objetivos de salud, rendimiento y composición corporal."
         : "Specialist in clinical and sports nutrition. Designs personalized food plans oriented towards health, performance, and body composition goals.",
@@ -180,7 +181,7 @@ const icons: Record<string, string> = {
                 {/* Photo */}
                 <div className="relative h-64 bg-[#0a2a3d] overflow-hidden">
                   <img
-                    src={`${BASE}images/${doc.photo}`}
+                    src={doc.isExternalPhoto ? doc.photo : `${BASE}images/${doc.photo}`}
                     alt={doc.name}
                     className="w-full h-full object-cover object-top"
                   />

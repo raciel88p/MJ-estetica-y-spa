@@ -71,7 +71,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
   const medicos = useHoverDropdown("medicos", openDropdown, setOpenDropdown as any);
 
   const textClass = isScrolled ? "text-[#0c3e5a]" : "text-white/90";
-  const linkBase = `text-[15px] uppercase tracking-widest font-medium hover:text-primary transition-all duration-300 relative group/link`;
+  const linkBase = `text-[11px] xl:text-[13px] uppercase tracking-wider font-semibold hover:text-primary transition-all duration-300 relative group/link`;
 
   const isActive = (path: string) => {
     const normalizedPath = currentPath.replace(/^\/en/, '') || '/';
@@ -131,14 +131,14 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
             <img
               src="/images/logo-mj.png"
               alt="MJ Fisio Estética y Spa"
-              className="h-16 md:h-20 w-auto object-contain transition-all duration-300 group-hover:scale-105 mx-0 px-0"
+              className={`${isScrolled ? "h-11 lg:h-14" : "h-14 lg:h-18"} w-auto object-contain transition-all duration-300 group-hover:scale-105 mx-0 px-0`}
               style={isScrolled ? {} : { filter: "drop-shadow(0 0 10px rgba(255,255,255,0.5)) brightness(1.15)" }}
               height="80"
             />
           </a>
 
           {/* Desktop Nav on the right */}
-          <nav className="hidden md:flex items-center gap-8 ml-auto">
+          <nav className="hidden lg:flex items-center gap-3 xl:gap-6 ml-auto">
 
             {/* ── Nosotros Dropdown ── */}
             <div
@@ -409,22 +409,22 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
             </Button>
 
             {/* ── Idioma Toggle ── */}
-            <div className={`flex items-center gap-2 border-l border-white/20 pl-6 ml-2`}>
-              <Globe className={`w-4 h-4 ${textClass} opacity-60`} />
-              <span className={`text-[11px] uppercase tracking-tighter ${textClass} opacity-60 font-bold mr-1`}>
+            <div className={`flex items-center gap-1.5 border-l border-white/20 pl-4 ml-1`}>
+              <Globe className={`w-3.5 h-3.5 ${textClass} opacity-60`} />
+              <span className={`text-[10px] xl:text-[11px] uppercase tracking-tighter ${textClass} opacity-60 font-bold mr-0.5`}>
                 {lang === 'es' ? 'Idioma' : 'Language'}
               </span>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1.5">
                 <a
                   href={getAlternateLink('es')}
-                  className={`text-[14px] font-bold transition-all ${lang === 'es' ? 'text-primary underline underline-offset-4 scale-105' : textClass + ' opacity-60 hover:opacity-100'}`}
+                  className={`text-[12px] xl:text-[13px] font-bold transition-all ${lang === 'es' ? 'text-primary underline underline-offset-4 scale-105' : textClass + ' opacity-60 hover:opacity-100'}`}
                 >
                   ES
                 </a>
                 <span className={`${textClass} opacity-20 text-xs`}>|</span>
                 <a
                   href={getAlternateLink('en')}
-                  className={`text-[14px] font-bold transition-all ${lang === 'en' ? 'text-primary underline underline-offset-4 scale-105' : textClass + ' opacity-60 hover:opacity-100'}`}
+                  className={`text-[12px] xl:text-[13px] font-bold transition-all ${lang === 'en' ? 'text-primary underline underline-offset-4 scale-105' : textClass + ' opacity-60 hover:opacity-100'}`}
                 >
                   EN
                 </a>
@@ -433,7 +433,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
           </nav>
 
           {/* Mobile Menu Toggle */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="flex items-center gap-2 lg:hidden">
             <button
               className={`p-2 transition-colors ${isScrolled ? "text-foreground" : "text-white"}`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -451,7 +451,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-white shadow-xl border-t border-border md:hidden max-h-[85vh] overflow-y-auto"
+            className="absolute top-full left-0 right-0 bg-white shadow-xl border-t border-border lg:hidden max-h-[85vh] overflow-y-auto"
           >
             <div className="flex flex-col py-4 px-6 gap-1">
               {/* Mobile Language Selection - TOP & PROMINENT */}
@@ -482,7 +482,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                   className="w-full flex justify-between items-center text-foreground text-lg py-3 hover:text-primary transition-colors font-serif"
                   onClick={() => setIsMobileNosotrosOpen(!isMobileNosotrosOpen)}
                 >
-                  Nosotros
+                  {lang === 'es' ? 'Nosotros' : 'About Us'}
                   <ChevronDown className={`w-5 h-5 transition-transform ${isMobileNosotrosOpen ? "rotate-180" : ""}`} />
                 </button>
                 <AnimatePresence>
@@ -527,7 +527,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                   className="w-full flex justify-between items-center text-foreground text-lg py-3 hover:text-primary transition-colors font-serif"
                   onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
                 >
-                  Servicios
+                  {lang === 'es' ? 'Servicios' : 'Services'}
                   <ChevronDown className={`w-5 h-5 transition-transform ${isMobileServicesOpen ? "rotate-180" : ""}`} />
                 </button>
                 <AnimatePresence>

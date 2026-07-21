@@ -245,6 +245,89 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
         </section>
       )}
 
+      {/* ── VENTAJAS (Advantages CRO Block) ───────────── */}
+      <section id="advantages" className="py-24 bg-stone-50 border-y border-stone-100">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+            <div>
+              <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">
+                {lang === 'es' ? 'Tu salud, nuestra especialidad' : 'Your health, our specialty'}
+              </p>
+              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">
+                {lang === 'es' ? 'Nuestras ventajas' : 'Our advantages'} <br />
+                <span className="italic font-light text-primary">{lang === 'es' ? 'Por qué elegirnos' : 'Why choose us'}</span>
+              </h2>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: lang === 'es' ? 'Soluciones de salud personalizadas' : 'Personalized health solutions',
+                num: '01',
+                icon: '👤',
+                description: lang === 'es' ? 'Planes diagnósticos a medida diseñados en torno a tu perfil genético único y tus objetivos de salud.' : 'Tailored diagnostic plans designed around your unique genetic profile and health goals.',
+              },
+              {
+                title: lang === 'es' ? 'Precisión y exactitud' : 'Precision and accuracy',
+                num: '02',
+                icon: '✦',
+                description: lang === 'es' ? 'Resultados certificados por laboratorio con precisión líder en el sector. Cada lectura, verificada.' : 'Laboratory certified results with industry-leading precision. Every reading, verified.',
+              },
+              {
+                title: lang === 'es' ? 'Innovación científica' : 'Scientific innovation',
+                num: '03',
+                icon: '🔬',
+                description: lang === 'es' ? 'En la frontera de la investigación genómica y molecular, transformando la ciencia en cuidado real.' : 'At the frontier of genomic and molecular research, transforming science into real care.',
+              },
+            ].map((adv, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-8 border border-stone-100 shadow-sm flex flex-col justify-between min-h-[280px] hover:translate-y-[-4px] hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden group"
+              >
+                {/* Top row */}
+                <div className="flex items-center justify-between mb-6">
+                  <span className="px-3.5 py-1 text-[10px] uppercase tracking-widest font-bold text-stone-400 bg-stone-50 border border-stone-100 rounded-full">
+                    {lang === 'es' ? 'Ventaja' : 'Advantage'}
+                  </span>
+                  <span className="text-primary text-xl font-bold group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
+                </div>
+
+                {/* Content */}
+                <div className="mb-6 flex-1">
+                  <h3 className="text-xl font-serif font-bold text-stone-900 leading-tight mb-3">
+                    {adv.title}
+                  </h3>
+                  <p className="text-stone-500 text-sm leading-relaxed max-w-[240px]">
+                    {adv.description}
+                  </p>
+                </div>
+
+                {/* Bottom row */}
+                <div className="flex items-end justify-between mt-auto">
+                  <div className="inline-flex items-center gap-1.5 px-3.5 py-1 bg-stone-50 border border-stone-100 rounded-full text-[10px] font-bold text-stone-700 uppercase tracking-wider">
+                    <span>{lang === 'es' ? 'Explorar' : 'Explore'}</span>
+                    <span className="text-xs">{adv.icon}</span>
+                  </div>
+                  <span
+                    className="text-7xl font-extrabold select-none pointer-events-none leading-none tracking-tighter"
+                    style={{
+                      color: 'transparent',
+                      WebkitTextStroke: '1px #e2e2e7',
+                      marginBottom: '-0.3rem',
+                      marginRight: '-0.1rem',
+                    }}
+                    aria-hidden="true"
+                  >
+                    {adv.num}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── TRATAMIENTOS ESTRELLA ──────────────────────── */}
       <section id="tratamientos-destacados" className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6">
