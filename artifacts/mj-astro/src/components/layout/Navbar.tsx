@@ -120,8 +120,8 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/80 backdrop-blur-lg shadow-sm py-2.5 border-b border-stone-100"
-          : "bg-gradient-to-b from-black/80 via-black/20 to-transparent py-4"
+          ? "bg-white/80 backdrop-blur-lg shadow-sm py-3.5 border-b border-stone-100"
+          : "bg-gradient-to-b from-black/80 via-black/20 to-transparent py-3.5"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -131,7 +131,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
             <img
               src="/images/logo-mj.png"
               alt="MJ Fisio Estética y Spa"
-              className={`${isScrolled ? "h-11 lg:h-14" : "h-14 lg:h-18"} w-auto object-contain transition-all duration-300 group-hover:scale-105 mx-0 px-0`}
+              className="h-14 lg:h-18 w-auto object-contain transition-all duration-300 group-hover:scale-105 mx-0 px-0"
               style={isScrolled ? {} : { filter: "drop-shadow(0 0 10px rgba(255,255,255,0.5)) brightness(1.15)" }}
               height="80"
             />
