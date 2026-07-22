@@ -20,7 +20,7 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
           {/* Brand */}
           <div className="space-y-4">
             <img
-              src={`${import.meta.env.BASE_URL}images/logo-mj.png`}
+              src={`${import.meta.env.BASE_URL}images/logo-mj.svg`}
               alt="MJ Fisio Estética y Spa"
               className="h-16 w-auto object-contain mb-6"
               loading="lazy"
