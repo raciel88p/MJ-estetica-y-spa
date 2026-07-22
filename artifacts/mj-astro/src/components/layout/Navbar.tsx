@@ -129,7 +129,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
           {/* Large prominent Brand Logo on the left with zero side margins */}
           <a href={lang === 'es' ? "/" : "/en"} className="flex items-center cursor-pointer group shrink-0 mx-0 px-0">
             <img
-              src="/images/logo-mj.png"
+              src="/images/logo-mj.svg"
               alt="MJ Fisio Estética y Spa"
               className="h-14 lg:h-18 w-auto object-contain transition-all duration-300 group-hover:scale-105 mx-0 px-0"
               style={isScrolled ? {} : { filter: "drop-shadow(0 0 10px rgba(255,255,255,0.5)) brightness(1.15)" }}
