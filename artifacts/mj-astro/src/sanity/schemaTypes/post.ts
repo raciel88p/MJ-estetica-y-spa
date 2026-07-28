@@ -4,6 +4,13 @@ export const postType = defineType({
   name: 'post',
   title: 'Publicación',
   type: 'document',
+  fieldsets: [
+    {
+      name: 'socialSharing',
+      title: '📣 Autopublicación en Redes Sociales',
+      options: { collapsible: true, collapsed: false },
+    },
+  ],
   fields: [
     defineField({
       name: 'title',
@@ -72,6 +79,46 @@ export const postType = defineType({
           options: { hotspot: true },
         },
       ],
+    }),
+    defineField({
+      name: 'socialCaption',
+      title: 'Descripción personalizada para Redes',
+      description: 'Si se deja vacío, se usará una parte del contenido o el título para la publicación.',
+      type: 'text',
+      rows: 3,
+      fieldset: 'socialSharing',
+    }),
+    defineField({
+      name: 'publishToLinkedIn',
+      title: 'Publicar en LinkedIn',
+      description: 'Activar para publicar automáticamente en LinkedIn al publicar esta entrada.',
+      type: 'boolean',
+      initialValue: false,
+      fieldset: 'socialSharing',
+    }),
+    defineField({
+      name: 'publishToFacebook',
+      title: 'Publicar en Facebook',
+      description: 'Activar para publicar automáticamente en Facebook al publicar esta entrada.',
+      type: 'boolean',
+      initialValue: false,
+      fieldset: 'socialSharing',
+    }),
+    defineField({
+      name: 'publishToInstagram',
+      title: 'Publicar en Instagram',
+      description: 'Activar para publicar automáticamente en Instagram (requiere imagen principal) al publicar esta entrada.',
+      type: 'boolean',
+      initialValue: false,
+      fieldset: 'socialSharing',
+    }),
+    defineField({
+      name: 'publishToX',
+      title: 'Publicar en X (Twitter)',
+      description: 'Activar para publicar automáticamente en X al publicar esta entrada.',
+      type: 'boolean',
+      initialValue: false,
+      fieldset: 'socialSharing',
     }),
   ],
 
