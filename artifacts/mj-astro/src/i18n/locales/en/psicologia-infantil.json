@@ -1,0 +1,64 @@
+{
+  "recommend": {
+    "title": "WHO IS IT RECOMMENDED FOR?",
+    "intro": "We address situations related to:",
+    "items": [
+      "Child behavior and emotional management",
+      "ADHD and attention difficulties",
+      "ASD and neurodevelopmental needs",
+      "Adaptation difficulties",
+      "Behavioral issues at home or school environment",
+      "Social skills difficulties",
+      "Emotional regulation",
+      "Anxiety and major life changes in the child",
+      "Parental and family guidance",
+      "Family dynamics and communication",
+      "Psychological support during different developmental stages"
+    ],
+    "note": "Timely professional assessment can be the key to peace of mind for the whole family."
+  },
+  "includes": {
+    "title": "Personalized Evaluation and Guidance",
+    "desc": "Every child is different. Therefore, before establishing recommendations, it is important to know their history, family context, behavior, strengths, and areas where support is needed.",
+    "label": "Our process includes",
+    "items": [
+      "1. First assessment (Understanding situation and concerns)",
+      "2. Professional evaluation (Analyzing relevant aspects)",
+      "3. Guidance to parents (Explaining findings clearly)",
+      "4. Support plan (Defining strategies and goals)",
+      "5. Follow-up (Evaluating progress and adjusting strategies)"
+    ],
+    "note": "Professional and close support at each and every stage."
+  },
+  "why": {
+    "title": "It is not just about changing a behavior",
+    "intro": "Behind a behavior is a need that has not yet been understood.",
+    "desc": "That is why our approach seeks to go beyond visible behavior. We observe. We evaluate. We understand. We accompany.",
+    "quote": "We work to identify the child's individual needs and provide the family with practical tools to face daily challenges."
+  },
+  "whyUs": {
+    "title": "For parents who want to understand, not just correct",
+    "desc": "We know that receiving professional guidance can generate many questions. Our goal is for parents not to feel alone or have to search for contradictory answers on the internet.",
+    "items": [
+      "What is happening.",
+      "Why it might be happening.",
+      "What can be done at home.",
+      "How to better accompany your child.",
+      "When it is advisable to seek additional support."
+    ],
+    "footer1": "Psychological care should not only be a place where the child receives help.",
+    "footer2": "It must also be a safe space where parents can ask, learn, and feel accompanied. Because when a family understands better what they are experiencing, they make better decisions."
+  },
+  "leadMagnet": {
+    "label": "Safe Space",
+    "title": "Comprehensive Professional Support",
+    "desc": "We offer a family and child psychology service focused on understanding the child's needs, guiding parents, and developing strategies that can be applied in daily life.",
+    "cta": "INQUIRE ON WHATSAPP"
+  },
+  "finalCta": {
+    "title": "Have you noticed changes that worry you?",
+    "desc": "If you observe persistent difficulties in attention, behavior, communication, social interaction, emotional regulation, or adaptation, a professional assessment can help you better understand the situation and define the next steps. You do not need to wait for the problem to grow larger to seek guidance.",
+    "quote": "Because behind every behavior, there is a story. And understanding it can be the first step to help.",
+    "cta": "Schedule Assessment"
+  }
+}

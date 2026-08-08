@@ -53,6 +53,7 @@ import { NutricionServiceContent } from "@/components/services/NutricionServiceC
 import { RejuvenecimientoLaserContent } from "@/components/services/RejuvenecimientoLaserContent";
 import { BodaSpaContent } from "@/components/services/BodaSpaContent";
 import { ArteterapiaContent } from "@/components/services/ArteterapiaContent";
+import { PsicologiaInfantilContent } from "@/components/services/PsicologiaInfantilContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 
 import AnticelulitisServiceContent from "@/components/services/AnticelulitisServiceContent";
@@ -395,11 +396,14 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
 
   const isNutritionEspecialist = service.slug === "nutricion" || service.slug === "inbody";
   const isPeelingSpecialist = service.slug === "peeling-quimico" || service.slug === "microdermoabrasion";
+  const isPsychologySpecialist = service.slug === "psicologia-infantil";
 
   const specialistName = isPeelingSpecialist
     ? "Maria Molina Madrigal"
     : isNutritionEspecialist
     ? "Dr. Johan"
+    : isPsychologySpecialist
+    ? "Linc. Cristina Pere Ibarra"
     : "Janneth Maria Molina Madrigal";
 
   const breadcrumbItems = category
@@ -521,12 +525,12 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
             <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
                 <img
-                  src={isNutritionEspecialist ? "/images/dr-johan.webp" : isPeelingSpecialist ? "/images/maria-molina.webp" : "/images/janneth-molina.webp"}
+                  src={isNutritionEspecialist ? "/images/dr-johan.webp" : isPeelingSpecialist ? "/images/maria-molina.webp" : isPsychologySpecialist ? "/images/cristina-perez.webp" : "/images/janneth-molina.webp"}
                   alt={specialistName}
                   className="w-full h-full object-cover object-top"
                   onError={(e) => {
-                    // Fallback to janneth if maria image is missing, but with a console note
-                    if (isPeelingSpecialist) {
+                    // Fallback to janneth if maria or cristina image is missing
+                    if (isPeelingSpecialist || isPsychologySpecialist) {
                       (e.target as HTMLImageElement).src = "/images/janneth-molina.webp";
                     }
                   }}
@@ -539,11 +543,11 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
                 <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
                   <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
                     <BadgeCheck className="w-3.5 h-3.5" />
-                    {isNutritionEspecialist ? `${t('service.professional.code')}: 3667-25` : t('service.professional.linc')}
+                    {isNutritionEspecialist ? `${t('service.professional.code')}: 3667-25` : isPsychologySpecialist ? `${t('service.professional.code')}: 15152` : t('service.professional.linc')}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <GraduationCap className="w-3.5 h-3.5" />
-                    {isNutritionEspecialist ? (lang === 'es' ? "Nutricionista Deportivo" : "Sports Nutritionist") : t('service.professional.aesthetic')}
+                    {isNutritionEspecialist ? (lang === 'es' ? "Nutricionista Deportivo" : "Sports Nutritionist") : isPsychologySpecialist ? (lang === 'es' ? "Psicología Infantil y Familiar" : "Child & Family Psychology") : t('service.professional.aesthetic')}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <Award className="w-3.5 h-3.5 text-primary" />
@@ -555,6 +559,10 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
                     ? (lang === 'es'
                         ? "Con amplia experiencia en medicina estética, Maria Molina Madrigal se especializa en protocolos de renovación cutánea y tratamientos avanzados para manchas y acné, brindando resultados seguros y personalizados."
                         : "With extensive experience in medical aesthetics, Maria Molina Madrigal specializes in skin renewal protocols and advanced treatments for spots and acne, providing safe and personalized results.")
+                    : service.slug === "psicologia-infantil"
+                    ? (lang === 'es'
+                        ? "Especialista en psicología infantil y familiar, con un enfoque cálido, empático y profesional. Cristina Pérez Ibarra acompaña a los niños y sus familias a comprender el origen de sus retos conductuales o del neurodesarrollo y construir herramientas prácticas para la vida diaria."
+                        : "Specialist in child and family psychology, with a warm, empathetic, and professional approach. Cristina Pérez Ibarra accompanies children and their families to understand the origin of their behavioral or neurodevelopmental challenges and build practical tools for daily life.")
                     : service.slug === "tratamiento-ojeras"
                     ? (lang === 'es'
                         ? "¿Tus ojeras te hacen lucir cansada aunque descanses bien? Descubre cómo nuestro tratamiento de carboxiterapia para ojeras en Turrialba puede ayudarte a mejorar la apariencia de bolsas, pigmentación oscura y signos visibles de fatiga."
@@ -775,6 +783,10 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
 
       {service.slug === "arteterapia" && (
         <ArteterapiaContent waLink={WA} lang={lang} />
+      )}
+
+      {service.slug === "psicologia-infantil" && (
+        <PsicologiaInfantilContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "nutricion" && (

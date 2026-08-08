@@ -29,6 +29,7 @@ export type MultiLangServicePageData = {
 export const medicoEsteticosLinks = {
   es: [
     { name: "Nutrición", href: "/servicios/nutricion" },
+    { name: "Psicología Familiar e Infantil", href: "/servicios/psicologia-infantil" },
     { name: "Botox Full Face", href: "/servicios/botox-full-face" },
     { name: "Hilos Tensores Turrialba", href: "/servicios/hilos-tensores" },
     { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
@@ -41,6 +42,7 @@ export const medicoEsteticosLinks = {
   ],
   en: [
     { name: "Nutrition", href: "/en/services/nutrition" },
+    { name: "Family & Child Psychology", href: "/en/services/child-psychology" },
     { name: "Botox Full Face", href: "/en/services/botox-full-face" },
     { name: "Tension Threads", href: "/en/services/tension-threads" },
     { name: "Hair Transplant", href: "/en/services/hair-transplant" },
@@ -200,6 +202,74 @@ export const mjCreativoLinks = {
 };
 
 export const servicePages: MultiLangServicePageData[] = [
+  {
+    es: {
+      slug: "psicologia-infantil",
+      name: "Psicología Familiar e Infantil",
+      fullTitle: "Psicología Familiar e Infantil Turrialba",
+      tagline: "Comprender. Acompañar. Transformar.",
+      heroDescription: "Cuando un niño enfrenta dificultades de conducta, atención, aprendizaje o interacción social, toda la familia puede sentirse desorientada.<br /><br />Como padres, es normal preguntarse:<br />¿Será una etapa?<br />¿Por qué mi hijo está teniendo estas conductas?<br />¿Cómo puedo ayudarlo sin sentir que todo termina en discusiones?<br />¿Necesita una evaluación profesional?<br />¿Cómo puedo entender mejor su forma de aprender, comunicarse o relacionarse?",
+      benefits: [
+        "Conducta infantil y manejo de emociones",
+        "TDAH y dificultades de atención",
+        "TEA y necesidades relacionadas con el neurodesarrollo",
+        "Dificultades de adaptación y habilidades sociales",
+        "Ansiedad y cambios importantes en la vida del niño",
+        "Orientación para padres y familiares"
+      ],
+      items: [
+        {
+          title: "Consulta de Psicología Familiar e Infantil",
+          description: "Sesión personalizada de valoración, orientación y acompañamiento psicológico enfocado en el neurodesarrollo y la dinámica familiar.",
+          duration: "60 min",
+          price: "Consultar precio"
+        }
+      ],
+      faq: [
+        {
+          question: "¿Cómo sé si mi hijo necesita acompañamiento psicológico?",
+          answer: "Si observa dificultades persistentes de atención, conducta, comunicación, interacción social, regulación emocional o adaptación, una valoración profesional puede ayudarle a entender mejor la situación y definir los siguientes pasos."
+        },
+        {
+          question: "¿Cuál es el enfoque del servicio?",
+          answer: "Creemos que cada niño necesita ser comprendido desde su realidad individual y que la familia debe formar parte activa del proceso para aplicar estrategias prácticas en el día a día."
+        }
+      ]
+    },
+    en: {
+      slug: "child-psychology",
+      name: "Family & Child Psychology",
+      fullTitle: "Family & Child Psychology Turrialba",
+      tagline: "Understand. Accompany. Transform.",
+      heroDescription: "When a child faces difficulties with behavior, attention, learning, or social interaction, the entire family can feel disoriented.<br /><br />As parents, it is normal to wonder:<br />Is it just a phase?<br />Why is my child behaving this way?<br />How can I help them without everything ending in an argument?<br />Do they need a professional evaluation?<br />How can I better understand their way of learning, communicating, or relating?",
+      benefits: [
+        "Child behavior and emotional management",
+        "ADHD and attention difficulties",
+        "ASD and neurodevelopmental needs",
+        "Adaptation difficulties and social skills",
+        "Anxiety and major life changes in the child",
+        "Guidance for parents and families"
+      ],
+      items: [
+        {
+          title: "Family & Child Psychology Consultation",
+          description: "Personalized session of assessment, guidance, and psychological support focused on neurodevelopment and family dynamics.",
+          duration: "60 min",
+          price: "Consult price"
+        }
+      ],
+      faq: [
+        {
+          question: "How do I know if my child needs psychological support?",
+          answer: "If you notice persistent difficulties in attention, behavior, communication, social interaction, emotional regulation, or adaptation, a professional assessment can help you understand the situation and define next steps."
+        },
+        {
+          question: "What is the approach of this service?",
+          answer: "We believe that every child needs to be understood from their individual reality and that the family must be an active part of the process to apply practical strategies in daily life."
+        }
+      ]
+    }
+  },
   {
     es: {
       slug: "masajes-corporales",
