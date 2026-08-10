@@ -82,7 +82,7 @@ export function NutricionServiceContent({ waLink, lang = "es" }: Props) {
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 leading-tight text-white">
                 {content.composition.title}
               </h2>
               <p className="text-white/70 mb-8">{content.composition.desc}</p>
@@ -98,7 +98,7 @@ export function NutricionServiceContent({ waLink, lang = "es" }: Props) {
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white/5 border border-white/10 p-10 backdrop-blur-sm text-center">
               <Star className="w-12 h-12 text-primary mx-auto mb-6" />
-              <h3 className="text-2xl font-serif font-bold mb-4">{content.composition.ctaTitle}</h3>
+              <h3 className="text-2xl font-serif font-bold mb-4 text-white">{content.composition.ctaTitle}</h3>
               <p className="text-white/60 mb-8 text-sm leading-relaxed">{content.composition.ctaDesc}</p>
               <a href={waLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-white text-xs font-bold tracking-widest uppercase px-8 py-4 hover:bg-white hover:text-stone-900 transition-all">
                 {content.composition.cta} <ArrowRight className="w-4 h-4" />
@@ -218,7 +218,7 @@ export function NutricionServiceContent({ waLink, lang = "es" }: Props) {
               </div>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-[#071e2e] p-10 text-white text-center">
-              <h2 className="text-3xl font-serif font-bold mb-6 leading-tight">{content.finalCta.title}</h2>
+              <h2 className="text-3xl font-serif font-bold mb-6 leading-tight text-white">{content.finalCta.title}</h2>
               <p className="text-white/70 mb-10 leading-relaxed">
                 {content.finalCta.desc}
               </p>

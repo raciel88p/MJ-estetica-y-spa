@@ -1,0 +1,64 @@
+{
+  "recommend": {
+    "title": "¿PARA QUIÉN ESTÁ RECOMENDADO?",
+    "intro": "Atendemos situaciones relacionadas con:",
+    "items": [
+      "Conducta infantil y manejo de emociones",
+      "TDAH y dificultades de atención",
+      "TEA y necesidades relacionadas con el neurodesarrollo",
+      "Dificultades de adaptación",
+      "Problemas de conducta en casa o en el entorno escolar",
+      "Dificultades en habilidades sociales",
+      "Regulación emocional",
+      "Ansiedad y cambios importantes en la vida del niño",
+      "Orientación para padres y familiares",
+      "Dinámica y comunicación familiar",
+      "Acompañamiento psicológico durante diferentes etapas del desarrollo"
+    ],
+    "note": "Una valoración profesional oportuna puede ser la clave para la tranquilidad de toda la familia."
+  },
+  "includes": {
+    "title": "Evaluación y orientación personalizada",
+    "desc": "Cada niño es diferente. Por eso, antes de establecer recomendaciones, es importante conocer su historia, contexto familiar, comportamiento, fortalezas y áreas en las que necesita apoyo.",
+    "label": "Nuestro proceso incluye",
+    "items": [
+      "1. Primera valoración (Conocemos la situación y preocupaciones)",
+      "2. Evaluación profesional (Analizamos aspectos relevantes)",
+      "3. Orientación a padres (Explicamos los hallazgos de forma clara)",
+      "4. Plan de acompañamiento (Definimos estrategias y objetivos)",
+      "5. Seguimiento (Evaluamos el progreso y ajustamos estrategias)"
+    ],
+    "note": "Acompañamiento profesional y cercano en cada una de las etapas."
+  },
+  "why": {
+    "title": "No se trata solamente de cambiar una conducta",
+    "intro": "Detrás de una conducta hay una necesidad que todavía no ha sido comprendida.",
+    "desc": "Por eso nuestro enfoque busca ir más allá del comportamiento visible. Observamos. Evaluamos. Comprendemos. Acompañamos.",
+    "quote": "Trabajamos para identificar las necesidades individuales del niño y proporcionar a la familia herramientas prácticas para afrontar los retos del día a día."
+  },
+  "whyUs": {
+    "title": "Para padres que quieren comprender, no simplemente corregir",
+    "desc": "Sabemos que recibir una orientación profesional puede generar muchas preguntas. Nuestro objetivo es que los padres no se sientan solos ni tengan que buscar respuestas contradictorias en internet.",
+    "items": [
+      "Qué está ocurriendo.",
+      "Por qué puede estar ocurriendo.",
+      "Qué pueden hacer en casa.",
+      "Cómo acompañar mejor a su hijo.",
+      "Cuándo es conveniente buscar apoyo adicional."
+    ],
+    "footer1": "La atención psicológica no debe ser únicamente un lugar donde el niño recibe ayuda.",
+    "footer2": "También debe ser un espacio seguro donde los padres puedan preguntar, aprender y sentirse acompañados. Porque cuando una familia comprende mejor lo que está viviendo, toma mejores decisiones."
+  },
+  "leadMagnet": {
+    "label": "Espacio Seguro",
+    "title": "Acompañamiento Profesional Integral",
+    "desc": "Ofrecemos un servicio de psicología familiar e infantil enfocado en comprender las necesidades del niño, orientar a los padres y desarrollar estrategias que puedan aplicarse en la vida cotidiana.",
+    "cta": "CONSULTAR POR WHATSAPP"
+  },
+  "finalCta": {
+    "title": "¿Ha notado cambios que le preocupan?",
+    "desc": "Si observa dificultades persistentes de atención, conducta, comunicación, interacción social, regulación emocional o adaptación, una valoración profesional puede ayudarle a entender mejor la situación y definir los siguientes pasos. No necesita esperar a que el problema se haga más grande para buscar orientación.",
+    "quote": "Porque detrás de cada conducta hay una historia. Y comprenderla puede ser el primer paso para ayudar.",
+    "cta": "Agendar Valoración"
+  }
+}
