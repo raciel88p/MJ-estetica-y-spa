@@ -525,12 +525,12 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
             <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
                 <img
-                  src={isNutritionEspecialist ? "/images/dr-johan.webp" : isPeelingSpecialist ? "/images/maria-molina.webp" : isPsychologySpecialist ? "/images/cristina-perez.webp" : "/images/janneth-molina.webp"}
+                  src={isNutritionEspecialist ? "/images/dr-johan.webp" : isPeelingSpecialist ? "/images/maria-molina.webp" : isPsychologySpecialist ? "https://cdn.sanity.io/images/c7ltnbh1/production/4e8f015f6997a29f0ac99c3b232c9ed35f40ba63-800x800.jpg?w=300" : "/images/janneth-molina.webp"}
                   alt={specialistName}
                   className="w-full h-full object-cover object-top"
                   onError={(e) => {
-                    // Fallback to janneth if maria or cristina image is missing
-                    if (isPeelingSpecialist || isPsychologySpecialist) {
+                    // Fallback to janneth if maria image is missing
+                    if (isPeelingSpecialist) {
                       (e.target as HTMLImageElement).src = "/images/janneth-molina.webp";
                     }
                   }}
