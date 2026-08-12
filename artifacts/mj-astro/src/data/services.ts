@@ -207,13 +207,13 @@ export const servicePages: MultiLangServicePageData[] = [
       slug: "psicologia-infantil",
       name: "Psicología Familiar e Infantil",
       fullTitle: "Psicología Familiar e Infantil Turrialba",
-      tagline: "Comprender. Acompañar. Transformar.",
-      heroDescription: "Cuando un niño enfrenta dificultades de conducta, atención, aprendizaje o interacción social, toda la familia puede sentirse desorientada.<br /><br />Como padres, es normal preguntarse:<br />¿Será una etapa?<br />¿Por qué mi hijo está teniendo estas conductas?<br />¿Cómo puedo ayudarlo sin sentir que todo termina en discusiones?<br />¿Necesita una evaluación profesional?<br />¿Cómo puedo entender mejor su forma de aprender, comunicarse o relacionarse?",
+      tagline: "Cuando tu hijo está teniendo dificultades, no tienes que enfrentarlo solo",
+      heroDescription: "Psicología familiar, conducta infantil, TDAH, TEA y apoyo psicopedagógico con un plan diseñado para las necesidades de cada niño y su familia.<br /><br />A veces no se trata simplemente de que un niño “no quiera obedecer”, “no ponga atención” o “tenga malas notas”. Detrás de una conducta difícil, una crisis emocional, problemas de atención o dificultades escolares puede haber necesidades que todavía no hemos identificado.<br /><br />Y cuando entendemos qué está pasando, por qué está pasando y qué podemos hacer, es posible comenzar a construir cambios reales en casa, en la escuela y en la relación familiar.",
       benefits: [
         "Conducta infantil y manejo de emociones",
         "TDAH y dificultades de atención",
         "TEA y necesidades relacionadas con el neurodesarrollo",
-        "Dificultades de adaptación y habilidades sociales",
+        "Dificultades de adaptación y aprendizaje",
         "Ansiedad y cambios importantes en la vida del niño",
         "Orientación para padres y familiares"
       ],
@@ -240,13 +240,13 @@ export const servicePages: MultiLangServicePageData[] = [
       slug: "child-psychology",
       name: "Family & Child Psychology",
       fullTitle: "Family & Child Psychology Turrialba",
-      tagline: "Understand. Accompany. Transform.",
-      heroDescription: "When a child faces difficulties with behavior, attention, learning, or social interaction, the entire family can feel disoriented.<br /><br />As parents, it is normal to wonder:<br />Is it just a phase?<br />Why is my child behaving this way?<br />How can I help them without everything ending in an argument?<br />Do they need a professional evaluation?<br />How can I better understand their way of learning, communicating, or relating?",
+      tagline: "When your child is having difficulties, you do not have to face it alone",
+      heroDescription: "Family psychology, child behavior, ADHD, ASD, and psycho-pedagogical support with a plan designed for the needs of each child and their family.<br /><br />Sometimes it's not just about a child 'not wanting to obey', 'not paying attention', or 'having bad grades'. Behind difficult behavior, an emotional crisis, attention problems, or school difficulties, there may be needs that we have not yet identified.<br /><br />And when we understand what is happening, why it is happening, and what we can do, it is possible to begin to build real changes at home, at school, and in the family relationship.",
       benefits: [
         "Child behavior and emotional management",
         "ADHD and attention difficulties",
         "ASD and neurodevelopmental needs",
-        "Adaptation difficulties and social skills",
+        "Adaptation difficulties and learning",
         "Anxiety and major life changes in the child",
         "Guidance for parents and families"
       ],
