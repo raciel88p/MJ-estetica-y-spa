@@ -38,7 +38,7 @@
       { "t": "Cita 1 — Entrevista con padres o cuidadores", "d": "Conocemos el motivo de consulta, historia del desarrollo, dinámica familiar, preocupaciones, fortalezas y expectativas." },
       { "t": "Cita 2 — Conociendo al niño o adolescente", "d": "Establecemos un vínculo inicial y observamos sus intereses, percepción del problema y funcionamiento emocional y conductual." },
       { "t": "Cita 3 — Valoración de habilidades para el aprendizaje", "d": "Exploramos aspectos como atención, memoria de trabajo, seguimiento de instrucciones, percepción, velocidad de procesamiento y funciones ejecutivas." },
-      { "t": "Cita 4 — Integración del perfil psicopedagógico", "d": "Integramos la información para identificar fortalezas y necesidades. El objetivo es comprender qué puede estar interfiriendo con el aprendizaje y desde dónde conviene comenzar a intervenir." },
+      { "t": "Cita 4 — Integración del perfil psicopedagógico", "d": "Integramos la información para identificar fortalezas and necesidades. El objetivo es comprender qué puede estar interfiriendo con el aprendizaje y desde dónde conviene comenzar a intervenir." },
       { "t": "Cita 5 — Devolución a padres + plan de intervención", "d": "Explicamos los hallazgos en un lenguaje claro y práctico. Definimos objetivos prioritarios y enseñamos las primeras estrategias que pueden aplicarse en casa." },
       { "t": "Citas 6 a 9 — Intervención", "d": "Desarrollamos un plan de acuerdo con las necesidades identificadas:", "items": [
           { "t": "Aprendizaje", "d": "Atención, memoria de trabajo, seguimiento de instrucciones, percepción, velocidad de procesamiento y funciones ejecutivas." },

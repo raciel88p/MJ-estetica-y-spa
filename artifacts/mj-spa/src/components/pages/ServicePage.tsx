@@ -403,7 +403,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
     : isNutritionEspecialist
     ? "Dr. Johan"
     : isPsychologySpecialist
-    ? "Linc. Cristina Pere Ibarra"
+    ? "Mast. Cristina Pere Ibarra"
     : "Janneth Maria Molina Madrigal";
 
   const breadcrumbItems = category
