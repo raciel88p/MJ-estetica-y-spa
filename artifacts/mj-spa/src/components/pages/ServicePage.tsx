@@ -1107,6 +1107,33 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
                 ))}
               </motion.div>
             )}
+
+            {/* OTRAS UBICACIONES DONDE BRINDO CONSULTAS */}
+            {service.slug === "psicologia-infantil" && (
+              <motion.div
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+                className="mt-16 bg-stone-50 border border-stone-200 p-8 rounded-sm"
+              >
+                <h3 className="text-2xl font-serif font-bold text-stone-900 mb-6 text-center">
+                  📍 {lang === 'es' ? "Otras ubicaciones donde brindo consultas" : "Other locations where I offer consultations"}
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                  <div className="bg-white p-6 border border-stone-150 rounded-sm">
+                    <h4 className="font-serif font-bold text-lg text-primary mb-2">🌴 Jacó</h4>
+                    <ul className="space-y-1 text-sm text-stone-600">
+                      <li>• Neurotek</li>
+                      <li>• Pequeños Angelitos</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-6 border border-stone-150 rounded-sm">
+                    <h4 className="font-serif font-bold text-lg text-primary mb-2">🏞 Tres Ríos</h4>
+                    <ul className="space-y-1 text-sm text-stone-600">
+                      <li>• Centro de Especialidades Omega</li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            )}
           </div>
         </section>
       )}
