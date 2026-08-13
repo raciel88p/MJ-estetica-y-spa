@@ -403,7 +403,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
     : isNutritionEspecialist
     ? "Dr. Johan"
     : isPsychologySpecialist
-    ? "Mast. Cristina Pere Ibarra"
+    ? "Linc. Cristina Pérez Ibarra"
     : "Janneth Maria Molina Madrigal";
 
   const breadcrumbItems = category
@@ -543,7 +543,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
                 <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
                   <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
                     <BadgeCheck className="w-3.5 h-3.5" />
-                    {isNutritionEspecialist ? `${t('service.professional.code')}: 3667-25` : isPsychologySpecialist ? `${t('service.professional.code')}: 15152` : t('service.professional.linc')}
+                    {isNutritionEspecialist ? `${t('service.professional.code')}: 3667-25` : isPsychologySpecialist ? `${t('service.professional.code')}: 13889` : t('service.professional.linc')}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <GraduationCap className="w-3.5 h-3.5" />
@@ -551,7 +551,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <Award className="w-3.5 h-3.5 text-primary" />
-                    {isNutritionEspecialist ? t('service.professional.personalized') : t('service.professional.hospital')}
+                    {isNutritionEspecialist ? t('service.professional.personalized') : isPsychologySpecialist ? (lang === 'es' ? "Centro de Especialidades Omega" : "Omega Specialty Center") : t('service.professional.hospital')}
                   </span>
                 </div>
                 <p className="text-stone-500 text-sm leading-relaxed mt-4 max-w-xl">
