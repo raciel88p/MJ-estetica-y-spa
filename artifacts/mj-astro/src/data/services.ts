@@ -1694,7 +1694,7 @@ export const servicePages: MultiLangServicePageData[] = [
       slug: "trasplante-capilar",
       name: "Trasplante Capilar",
       fullTitle:
-        "Recupera tu Confianza con un Trasplante Capilar de Apariencia Natural en Turrialba",
+        "Trasplante Capilar Costa Rica",
       tagline: "Recupera tu cabello, recupera tu confianza",
       heroDescription:
         "El trasplante capilar es la solución definitiva para la alopecia y la pérdida de cabello. Utilizamos las técnicas más avanzadas para resultados naturales, permanentes y de alta densidad.",
