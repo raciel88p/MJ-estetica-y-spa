@@ -1,0 +1,100 @@
+{
+  "intro": {
+    "quote": "\"En MJ Fisio Estética & Wellness Center ayudamos a nuestros pacientes a reducir el estrés, controlar la ansiedad y complementar procesos de pérdida de peso mediante sesiones profesionales de auriculoterapia en Turrialba.\"",
+    "p1": "Esta terapia natural estimula puntos específicos de la oreja para ayudar al cuerpo a recuperar su balance físico y emocional de forma segura y relajante.",
+    "highlight": "Agenda tu cita hoy mismo por WhatsApp y comienza tu proceso de bienestar.",
+    "cta": "Agendar Mi Cita"
+  },
+  "whatIs": {
+    "title": "¿Qué es la auriculoterapia?",
+    "desc": "La auriculoterapia es una técnica terapéutica que trabaja puntos reflejos en la oreja conectados con distintas áreas del cuerpo. Es utilizada para:",
+    "items": [
+      "Reducir ansiedad y estrés",
+      "Controlar apetito y antojos",
+      "Mejorar descanso y sueño",
+      "Complementar tratamientos reductivos",
+      "Ayudar en procesos emocionales",
+      "Mejorar bienestar general"
+    ],
+    "quote": "\"En nuestro centro de estética en Turrialba realizamos sesiones personalizadas según las necesidades de cada paciente.\""
+  },
+  "benefits": {
+    "label": "Efectos Reales",
+    "title": "Beneficios de la auriculoterapia en Turrialba",
+    "items": [
+      {
+        "title": "Controla la ansiedad y el estrés",
+        "desc": "Ideal para personas con tensión laboral, agotamiento mental o ansiedad constante."
+      },
+      {
+        "title": "Ayuda al control de peso",
+        "desc": "Puede disminuir antojos y apoyar tratamientos reductivos y hábitos saludables."
+      },
+      {
+        "title": "Mejora el descanso",
+        "desc": "Muchos pacientes experimentan una sensación profunda de relajación y mejor calidad de sueño."
+      },
+      {
+        "title": "Terapia natural y no invasiva",
+        "desc": "Sin procedimientos dolorosos ni tiempos de recuperación."
+      }
+    ]
+  },
+  "who": {
+    "title": "¿Para quién se recomienda?",
+    "intro": "La auriculoterapia es ideal para personas en Turrialba que buscan:",
+    "items": [
+      "Manejo de ansiedad",
+      "Reducción de estrés",
+      "Apoyo para bajar de peso",
+      "Mejorar hábitos alimenticios",
+      "Bienestar emocional",
+      "Terapias complementarias naturales"
+    ]
+  },
+  "process": {
+    "label": "El Proceso",
+    "title": "¿Cómo es una sesión de auriculoterapia?",
+    "items": [
+      "Evaluamos tus objetivos y necesidades.",
+      "Identificamos los puntos auriculares adecuados.",
+      "Aplicamos estímulos terapéuticos específicos.",
+      "Finalizas con una sensación de relajación y bienestar."
+    ],
+    "footer": "Las sesiones son rápidas, cómodas y personalizadas."
+  },
+  "whyUs": {
+    "title": "¿Por qué elegirnos en Turrialba?",
+    "items": [
+      {
+        "title": "Atención personalizada",
+        "desc": "Cada paciente recibe una evaluación individual."
+      },
+      {
+        "title": "Ambiente relajante y profesional",
+        "desc": "Creamos una experiencia enfocada en bienestar físico y emocional."
+      },
+      {
+        "title": "Experiencia integral",
+        "desc": "Combinamos técnicas estéticas y terapias complementarias para potenciar resultados."
+      }
+    ]
+  },
+  "faqs": {
+    "label": "Resolviendo dudas",
+    "title": "Preguntas frecuentes",
+    "items": [
+      { "q": "¿La auriculoterapia duele?", "a": "No. La mayoría de pacientes sienten únicamente una ligera presión o estímulo suave." },
+      { "q": "¿Cuántas sesiones necesito?", "a": "Depende de tus objetivos y condición. Muchas personas notan cambios desde las primeras sesiones." },
+      { "q": "¿La auriculoterapia ayuda para bajar de peso?", "a": "Sí, puede ayudar a controlar ansiedad y apetito como complemento de hábitos saludables." },
+      { "q": "¿Tiene efectos secundarios?", "a": "Es una terapia natural y segura cuando es aplicada por profesionales capacitados." }
+    ]
+  },
+  "finalCta": {
+    "title": "Reserva tu sesión de auriculoterapia en Turrialba",
+    "desc": "Si buscas una alternativa natural para reducir estrés, ansiedad o complementar tu proceso de bienestar, en MJ Fisio Estética y Spa estamos listos para ayudarte.",
+    "cta": "Escríbenos hoy mismo",
+    "location": "Turrialba, Costa Rica",
+    "schedule": "Horarios Flexibles"
+  }
+}

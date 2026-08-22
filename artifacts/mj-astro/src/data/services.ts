@@ -21,2740 +21,5471 @@ export type ServicePageData = {
   faq?: { question: string; answer: string }[];
 };
 
-export const medicoEsteticosLinks = [
-  { name: "Nutrición", href: "/servicios/nutricion" },
-  { name: "Botox Full Face", href: "/servicios/botox-full-face" },
-  { name: "Hilos Tensores Turrialba", href: "/servicios/hilos-tensores" },
-  { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
-  { name: "Ácido Hialurónico", href: "/servicios/acido-hialuronico" },
-  { name: "Biorevitalización", href: "/servicios/biorevitalizacion" },
-  { name: "Implante de Barba", href: "/servicios/implante-barba" },
-  { name: "Mesoterapia Capilar", href: "/servicios/mesoterapia-capilar" },
-  { name: "Relleno de Labios", href: "/servicios/relleno-de-labios" },
-  { name: "InBody", href: "/servicios/inbody" },
-];
+export type MultiLangServicePageData = {
+  es: ServicePageData;
+  en: ServicePageData;
+};
 
-export const tratamientosCorporalesLinks = [
-  { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
-  { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
-  { name: "Masajes Profundos", href: "/servicios/masajes-profundos" },
-  { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios" },
-  { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
-  { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
-  { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
-  { name: "Carboxiterapia", href: "/servicios/carboxiterapia" },
-  { name: "Levantamiento de Glúteo", href: "/servicios/levantamiento-gluteo" },
-  { name: "Levantamiento de Busto", href: "/servicios/levantamiento-busto" },
-  { name: "Vendas Frías", href: "/servicios/vendas-frias" },
-  { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
-  { name: "Aromaterapia", href: "/servicios/aromaterapia" },
-  { name: "Boda Spa", href: "/servicios/boda-spa" },
-  { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
-];
+export const medicoEsteticosLinks = {
+  es: [
+    { name: "Nutrición", href: "/servicios/nutricion" },
+    { name: "Psicología Familiar e Infantil", href: "/servicios/psicologia-infantil" },
+    { name: "Botox Full Face", href: "/servicios/botox-full-face" },
+    { name: "Hilos Tensores Turrialba", href: "/servicios/hilos-tensores" },
+    { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
+    { name: "Ácido Hialurónico", href: "/servicios/acido-hialuronico" },
+    { name: "Biorevitalización", href: "/servicios/biorevitalizacion" },
+    { name: "Implante de Barba", href: "/servicios/implante-barba" },
+    { name: "Mesoterapia Capilar", href: "/servicios/mesoterapia-capilar" },
+    { name: "Relleno de Labios", href: "/servicios/relleno-de-labios" },
+    { name: "InBody", href: "/servicios/inbody" },
+  ],
+  en: [
+    { name: "Nutrition", href: "/en/services/nutrition" },
+    { name: "Family & Child Psychology", href: "/en/services/child-psychology" },
+    { name: "Botox Full Face", href: "/en/services/botox-full-face" },
+    { name: "Tension Threads", href: "/en/services/tension-threads" },
+    { name: "Hair Transplant", href: "/en/services/hair-transplant" },
+    { name: "Hyaluronic Acid", href: "/en/services/hyaluronic-acid" },
+    { name: "Biorevitalization", href: "/en/services/biorevitalization" },
+    { name: "Beard Implant", href: "/en/services/beard-implant" },
+    { name: "Capillary Mesotherapy", href: "/en/services/capillary-mesotherapy" },
+    { name: "Lip Filler", href: "/en/services/lip-filler" },
+    { name: "InBody", href: "/en/services/inbody" },
+  ],
+};
 
-export const tratamientosFacialesLinks = [
-  { name: "Tratamientos Faciales", href: "/servicios/faciales" },
-  { name: "Limpieza Facial", href: "/servicios/limpieza-facial" },
-  { name: "Limpieza Facial Profunda", href: "/servicios/limpieza-facial-profunda" },
-  { name: "Limpieza Facial Hidratante", href: "/servicios/limpieza-facial-hidratante" },
-  { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
-  { name: "Peeling Facial", href: "/servicios/peeling-quimico" },
-  { name: "Hollywood Peel en Turrialba", href: "/servicios/hollywood-peel" },
-  { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
-  { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
-  { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
-  { name: "Hilos de Colágeno", href: "/servicios/hilos-colageno" },
-  { name: "Microagujas", href: "/servicios/microagujas" },
-  { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
-  { name: "Microagujas con Vitamina C", href: "/servicios/microagujas-vitamina-c" },
-  { name: "Microagujas con MelanOut", href: "/servicios/microagujas-melanout" },
-  { name: "Rejuvenecimiento Facial", href: "/servicios/rejuvenecimiento-facial" },
-  { name: "Rejuvenecimiento Facial Láser", href: "/servicios/rejuvenecimiento-facial-laser" },
-  { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
-  { name: "Tratamiento para Ojeras en Turrialba", href: "/servicios/tratamiento-ojeras" },
-  { name: "Masaje Maxilofacial", href: "/servicios/masaje-maxilofacial" },
-  { name: "Láser para Acné", href: "/servicios/laser-acne" },
-  { name: "Mascarillas Faciales", href: "/servicios/mascarillas-faciales" },
-];
+export const tratamientosCorporalesLinks = {
+  es: [
+    { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
+    { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
+    { name: "Masajes Profundos", href: "/servicios/masajes-profundos" },
+    {
+      name: "Masajes Post Operatorios",
+      href: "/servicios/masajes-post-operatorios",
+    },
+    { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
+    { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
+    { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
+    { name: "Carboxiterapia", href: "/servicios/carboxiterapia" },
+    {
+      name: "Levantamiento de Glúteo",
+      href: "/servicios/levantamiento-gluteo",
+    },
+    { name: "Levantamiento de Busto", href: "/servicios/levantamiento-busto" },
+    { name: "Vendas Frías", href: "/servicios/vendas-frias" },
+    { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
+    { name: "Aromaterapia", href: "/servicios/aromaterapia" },
+    { name: "Boda Spa", href: "/servicios/boda-spa" },
+    {
+      name: "Blanqueamiento Zona Íntima",
+      href: "/servicios/blanqueamiento-zona-intima",
+    },
+  ],
+  en: [
+    { name: "Body Massages", href: "/en/services/body-massages" },
+    { name: "Relaxing Massages", href: "/en/services/relaxing-massages" },
+    { name: "Deep Tissue Massages", href: "/en/services/deep-tissue-massages" },
+    { name: "Post-Operative Massages", href: "/en/services/post-operative-massages" },
+    { name: "Body Tightening", href: "/en/services/body-tightening" },
+    { name: "Laser Hair Removal", href: "/en/services/laser-hair-removal" },
+    { name: "Iron Beauty Fitness", href: "/en/services/iron-beauty-fitness" },
+    { name: "Carboxytherapy", href: "/en/services/carboxytherapy" },
+    { name: "Butt Lift", href: "/en/services/butt-lift" },
+    { name: "Bust Lift", href: "/en/services/bust-lift" },
+    { name: "Cold Wraps", href: "/en/services/cold-wraps" },
+    { name: "Auriculotherapy", href: "/en/services/auriculotherapy" },
+    { name: "Aromatherapy", href: "/en/services/aromatherapy" },
+    { name: "Spa for Brides", href: "/en/services/spa-brides" },
+    { name: "Intimate Area Whitening", href: "/en/services/intimate-whitening" },
+  ],
+};
 
-export const tratamientosPiernasLinks = [
-  { name: "Cuidado de Piernas Cansadas", href: "/servicios/piernas-cansadas" },
-  { name: "Tratamiento Anticelulitis", href: "/servicios/tratamiento-anticelulitis" },
-];
+export const tratamientosFacialesLinks = {
+  es: [
+    { name: "Tratamientos Faciales", href: "/servicios/faciales" },
+    { name: "Limpieza Facial", href: "/servicios/limpieza-facial" },
+    {
+      name: "Limpieza Facial Profunda",
+      href: "/servicios/limpieza-facial-profunda",
+    },
+    {
+      name: "Limpieza Facial Hidratante",
+      href: "/servicios/limpieza-facial-hidratante",
+    },
+    { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
+    { name: "Peeling Facial", href: "/servicios/peeling-quimico" },
+    { name: "Hollywood Peel en Turrialba", href: "/servicios/hollywood-peel" },
+    { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
+    {
+      name: "Radiofrecuencia Facial",
+      href: "/servicios/radiofrecuencia-facial",
+    },
+    { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
+    { name: "Hilos de Colágeno", href: "/servicios/hilos-colageno" },
+    { name: "Microagujas", href: "/servicios/microagujas" },
+    {
+      name: "Microagujas con Ginkgo Biloba",
+      href: "/servicios/microagujas-ginkgo-biloba",
+    },
+    {
+      name: "Microagujas con Vitamina C",
+      href: "/servicios/microagujas-vitamina-c",
+    },
+    {
+      name: "Microagujas con MelanOut",
+      href: "/servicios/microagujas-melanout",
+    },
+    {
+      name: "Rejuvenecimiento Facial",
+      href: "/servicios/rejuvenecimiento-facial",
+    },
+    {
+      name: "Rejuvenecimiento Facial Láser",
+      href: "/servicios/rejuvenecimiento-facial-laser",
+    },
+    { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
+    {
+      name: "Tratamiento para Ojeras en Turrialba",
+      href: "/servicios/tratamiento-ojeras",
+    },
+    { name: "Masaje Maxilofacial", href: "/servicios/masaje-maxilofacial" },
+    { name: "Láser para Acné", href: "/servicios/laser-acne" },
+    { name: "Mascarillas Faciales", href: "/servicios/mascarillas-faciales" },
+  ],
+  en: [
+    { name: "Facial Treatments", href: "/en/services/facials" },
+    { name: "Facial Cleansing", href: "/en/services/facial-cleansing" },
+    { name: "Deep Facial Cleansing", href: "/en/services/deep-facial-cleansing" },
+    { name: "Hydrating Facial Cleansing", href: "/en/services/hydrating-facial-cleansing" },
+    { name: "Facial Therapies", href: "/en/services/facial-therapies" },
+    { name: "Facial Peeling", href: "/en/services/facial-peeling" },
+    { name: "Hollywood Peel", href: "/en/services/hollywood-peel" },
+    { name: "Stain Removal", href: "/en/services/stain-removal" },
+    { name: "Facial Radiofrequency", href: "/en/services/facial-radiofrequency" },
+    { name: "Salmon DNA", href: "/en/services/salmon-dna" },
+    { name: "Collagen Threads", href: "/en/services/collagen-threads" },
+    { name: "Microneedling", href: "/en/services/microneedling" },
+    { name: "Microneedling with Ginkgo Biloba", href: "/en/services/microneedling-ginkgo-biloba" },
+    { name: "Microneedling with Vitamin C", href: "/en/services/microneedling-vitamin-c" },
+    { name: "Microneedling with MelanOut", href: "/en/services/microneedling-melanout" },
+    { name: "Facial Rejuvenation", href: "/en/services/facial-rejuvenation" },
+    { name: "Laser Facial Rejuvenation", href: "/en/services/laser-facial-rejuvenation" },
+    { name: "Microdermabrasion", href: "/en/services/microdermabrasion" },
+    { name: "Dark Circles Treatment", href: "/en/services/dark-circles-treatment" },
+    { name: "Maxillofacial Massage", href: "/en/services/maxillofacial-massage" },
+    { name: "Acne Laser", href: "/en/services/acne-laser" },
+    { name: "Facial Masks", href: "/en/services/facial-masks" },
+  ],
+};
 
-export const mjCreativoLinks = [
-  { name: "Arteterapia", href: "/servicios/arteterapia" },
-];
+export const tratamientosPiernasLinks = {
+  es: [
+    {
+      name: "Cuidado de Piernas Cansadas",
+      href: "/servicios/piernas-cansadas",
+    },
+    {
+      name: "Tratamiento Anticelulitis",
+      href: "/servicios/tratamiento-anticelulitis",
+    },
+  ],
+  en: [
+    { name: "Tired Leg Care", href: "/en/services/tired-legs" },
+    { name: "Anti-Cellulite Treatment", href: "/en/services/anti-cellulite" },
+  ],
+};
 
-export const servicePages: ServicePageData[] = [
-  {
-    slug: "masajes-corporales",
-    name: "Masajes Reductor con Hidrolicoplasia Turrialba",
-    tagline: "Libera la tensión, renueva tu energía",
-    heroDescription:
-      "Nuestros masajes corporales combinan técnicas profesionales para aliviar el estrés, reducir tensiones musculares y promover una sensación de bienestar total. Reduce grasa localizada y redefine tu contorno corporal sin cirugía",
-    benefits: [
-      "Reducción del estrés y la ansiedad",
-      "Alivio de dolores musculares",
-      "Mejora de la circulación sanguínea",
-      "Relajación profunda del sistema nervioso",
-      "Recuperación muscular más rápida",
-    ],
-    items: [
-      {
-        title: "Masaje Anticelulítico",
-        description:
-          "Tratamiento específico que trabaja las zonas con celulitis mediante técnicas de amasamiento y drenaje, mejorando la textura de la piel y la circulación local.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Masaje con Piedras Calientes",
-        description:
-          "Técnica de termoterapia con piedras volcánicas que actúan en profundidad para aliviar contracturas y proporcionar una relajación profunda.",
-        duration: "75 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Masaje Drenante",
-        description:
-          "Estimula el sistema linfático para eliminar toxinas y reducir la retención de líquidos, dejando el cuerpo más ligero y definido.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Envoltura Corporal",
-        description:
-          "Tratamiento nutritivo que envuelve el cuerpo con activos altamente hidratantes, dejando la piel suave, tersa y luminosa.",
-        duration: "90 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Con qué frecuencia debo realizarme un masaje corporal?",
-        answer:
-          "Recomendamos una sesión quincenal o mensual para mantenimiento general. Para resultados terapéuticos o reductores, puede ser necesario un programa más intensivo.",
-      },
-      {
-        question: "¿Debo prepararme de alguna forma antes del masaje?",
-        answer:
-          "Aconsejamos llegar bien hidratada y evitar comidas copiosas 2 horas antes. Tras el masaje, beber abundante agua para facilitar la eliminación de toxinas.",
-      },
-    ],
-  },
-  {
-    slug: "faciales",
-    name: "Tratamientos Faciales",
-    tagline: "Luce una piel radiante y rejuvenecida",
-    heroDescription:
-      "Descubre nuestra gama completa de tratamientos faciales diseñados para cada tipo de piel. Técnicas avanzadas y productos de alta gama para resultados visibles.",
-    benefits: [
-      "Piel más limpia y luminosa",
-      "Reducción de manchas e imperfecciones",
-      "Hidratación profunda y duradera",
-      "Efecto antiedad visible",
-      "Poros minimizados",
-    ],
-    items: [
-      {
-        title: "Limpieza facial profunda",
-        description: "Ideal para quienes buscan una sensación de limpieza intensiva y renovación facial.",
-        features: ["Limpieza profesional", "Bienestar facial", "Sensación de frescura profunda"],
-        linkText: "Escríbenos por WhatsApp",
-      },
-      {
-        title: "Limpieza facial hidratante",
-        description: "Pensada para pieles que buscan hidratación, suavidad y luminosidad natural.",
-        features: ["Glow saludable", "Sensación de hidratación", "Apariencia revitalizada"],
-        linkText: "Escríbenos por WhatsApp",
-      },
-      {
-        title: "Facial premium glow",
-        description: "Una experiencia skincare orientada al bienestar, relajación y luminosidad facial.",
-        features: ["Experiencia wellness", "Productos especializados", "Cuidado facial premium"],
-        linkText: "Escríbenos por WhatsApp",
-      },
-      {
-        title: "Protocolos skincare avanzados",
-        description: "Tratamientos personalizados según necesidades específicas evaluadas profesionalmente.",
-        features: ["Valoración individual", "Protocolos personalizados", "Seguimiento profesional"],
-        linkText: "Escríbenos por WhatsApp",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuántas sesiones necesito para ver resultados?",
-        answer:
-          "Los resultados son visibles desde la primera sesión, aunque para tratamientos específicos como antiedad o antimanchas recomendamos un mínimo de 4-6 sesiones.",
-      },
-      {
-        question: "¿Con qué frecuencia debo hacerme un facial?",
-        answer:
-          "Una higiene facial cada 4-6 semanas es lo ideal para mantener la piel limpia. Los tratamientos específicos siguen un protocolo personalizado.",
-      },
-    ],
-  },
-  {
-    slug: "masajes-relajantes",
-    name: "Masajes Relajantes",
-    fullTitle: "Masajes en Turrialba | Relajantes, Terapéuticos y Descontracturantes",
-    tagline: "Un viaje al bienestar total",
-    heroDescription: "Recupera tu bienestar con masajes profesionales en Turrialba. ¿Buscas un lugar donde puedas relajarte, aliviar tensiones musculares y desconectarte del estrés diario?",
-    benefits: [
-      "Reducción del cortisol (hormona del estrés)",
-      "Mejora del sueño y el descanso",
-      "Liberación de endorfinas naturales",
-      "Relajación muscular profunda",
-      "Sensación de bienestar prolongada",
-    ],
-    items: [
-      {
-        title: "Masaje Relajante",
-        description: "Ideal para reducir estrés, ansiedad y tensión acumulada.",
-        duration: "60-90 min",
-        linkText: "Escríbenos por WhatsApp",
-      },
-      {
-        title: "Masaje Descontracturante",
-        description: "Perfecto para personas con molestias musculares causadas por trabajo físico, deporte o estrés.",
-        duration: "60-90 min",
-        linkText: "Escríbenos por WhatsApp",
-      },
-      {
-        title: "Masaje Terapéutico",
-        description: "Tratamiento enfocado en mejorar la condición muscular y promover el bienestar físico.",
-        duration: "60-90 min",
-        linkText: "Escríbenos por WhatsApp",
-      },
-      {
-        title: "Aromaterapia",
-        description: "Combinamos técnicas de masaje con aceites esenciales para potenciar la relajación.",
-        duration: "60-90 min",
-        linkText: "Escríbenos por WhatsApp",
-      },
-      {
-        title: "Spa para Parejas",
-        description: "Comparte una experiencia única de relajación con alguien especial.",
-        duration: "90 min",
-        linkText: "Escríbenos por WhatsApp",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Necesito reservar con anticipación?",
-        answer: "Sí. Trabajamos con cita previa para brindar una atención personalizada.",
-      },
-      {
-        question: "¿Cuánto dura una sesión?",
-        answer: "Dependiendo del tratamiento, las sesiones pueden durar entre 60 y 90 minutos.",
-      },
-      {
-        question: "¿Cuál masaje recomiendan para el estrés?",
-        answer: "El masaje relajante combinado con aromaterapia suele ser una de las opciones más solicitadas.",
-      },
-      {
-        question: "¿Atienden parejas?",
-        answer: "Sí. Contamos con opciones de Spa y masajes para parejas.",
-      },
-    ],
-  },
-  {
-    slug: "masajes-profundos",
-    name: "Masajes Profundos",
-    fullTitle: "Masajes profundos Turrialba",
-    tagline: "Libera tensión, recupera bienestar",
-    heroDescription: "¿Sientes tu cuerpo cargado, rígido o agotado por el estrés del día a día?",
-    benefits: [
-      "Sensación de relajación muscular",
-      "Bienestar corporal integral",
-      "Descanso físico profundo",
-      "Experiencia wellness premium",
-      "Sensación de alivio corporal",
-      "Complemento ideal para autocuidado",
-    ],
-    items: [
-      {
-        title: "Masaje Profundo Terapéutico",
-        description: "Experiencia corporal orientada a liberar tensión muscular acumulada mediante técnicas personalizadas.",
-        duration: "60-90 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Qué se siente durante el masaje profundo?",
-        answer: "Una sensación progresiva de relajación muscular y bienestar corporal.",
-      },
-    ],
-  },
-  {
-    slug: "masajes-post-operatorios",
-    name: "Masajes Post Operatorios en Turrialba",
-    tagline: "Recuperación más rápida, resultados más visibles",
-    heroDescription:
-      "Recuperación estética con acompañamiento profesional, bienestar y protocolos diseñados para ayudarte a sentirte mejor más rápido<br /><br />Después de una cirugía estética, tu cuerpo necesita mucho más que reposo. Necesita atención especializada, drenaje adecuado y protocolos post operatorios diseñados para favorecer la recuperación, reducir inflamación y ayudarte a mejorar tu proceso de recuperación con mayor comodidad y confianza.",
-    benefits: [
-      "Reduce la inflamación y el edema post quirúrgico",
-      "Previene y trata la fibrosis (dureza post cirugía)",
-      "Mejora la cicatrización y la calidad de la piel",
-      "Acelera la reabsorción de líquidos y hematomas",
-      "Mejora los resultados finales de la cirugía",
-      "Alivia el dolor y la sensación de tensión",
-    ],
-    items: [
-      {
-        title: "Drenaje Linfático Post Operatorio",
-        description:
-          "Técnica de masaje suave y especializada que activa el sistema linfático para eliminar el exceso de líquidos, reducir la hinchazón y acelerar la recuperación. Indicado desde las primeras 48–72 horas post cirugía.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Tratamiento Anti-Fibrosis",
-        description:
-          "Protocolo específico con maniobras de desfibrosis manual y herramientas profesionales para ablandar las zonas duras que se forman bajo la piel tras liposucciones, abdominoplastias u otras cirugías.",
-        duration: "60–75 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Masaje de Recuperación Facial",
-        description:
-          "Protocolo suave diseñado para intervenciones como rinoplastia, bichectomía, lifting facial o cirugía de párpados. Descongestiona el área, reduce moretones y mejora la calidad de la cicatrización.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Protocolo Integral Post Operatorio",
-        description:
-          "Sesión completa que combina drenaje linfático, trabajo anti-fibrosis y aplicación de ultrasonido terapéutico en un solo tratamiento. Ideal para optimizar la recuperación en todas las etapas.",
-        duration: "90 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuándo puedo empezar los masajes tras la cirugía?",
-        answer:
-          "En general, el drenaje linfático suave puede iniciarse a partir de las 48–72 horas post operatorio, previa autorización del cirujano. El trabajo anti-fibrosis se recomienda a partir de la 3ª–4ª semana. En tu primera valoración te indicamos el protocolo exacto según tu caso.",
-      },
-      {
-        question: "¿Cuántas sesiones necesito?",
-        answer:
-          "El número varía según el tipo de cirugía y tu evolución personal. En casos de liposucción o abdominoplastia se recomiendan entre 10 y 15 sesiones. Para cirugías más pequeñas, entre 5 y 8 pueden ser suficientes.",
-      },
-      {
-        question: "¿Es doloroso el masaje post operatorio?",
-        answer:
-          "El drenaje linfático es una técnica muy suave y no debe causar dolor. El trabajo anti-fibrosis puede generar algo de molestia en zonas muy endurecidas, pero siempre adaptamos la presión a tu tolerancia.",
-      },
-      {
-        question: "¿Para qué cirugías está indicado?",
-        answer:
-          "Liposucción, abdominoplastia, mamoplastia, rinoplastia, bichectomía, lifting, cirugía bariátrica y cualquier intervención que genere inflamación o fibrosis. Si tienes dudas sobre tu caso específico, consúltanos.",
-      },
-    ],
-  },
-  {
-    slug: "depilacion-laser",
-    name: "Depilación Láser",
-    tagline: "Piel lisa para siempre, con tecnología avanzada",
-    heroDescription:
-      "Depilación Láser en Turrialba | MJ Estética & Wellness Center<br />Despídete del vello… y vuelve a sentirte cómoda con tu piel<br /><br />Reduce progresivamente el crecimiento del vello, evita irritación constante y luce una piel más suave y uniforme con tecnología de depilación láser profesional en MJ Estética & Wellness Center en Turrialba.",
-    benefits: [
-      "Eliminación permanente del vello",
-      "Piel suave y sin irritaciones",
-      "Ahorro a largo plazo frente a otros métodos",
-      "Tratamiento rápido y cómodo",
-      "Resultados visibles desde las primeras sesiones",
-    ],
-    items: [
-      {
-        title: "Depilación Facial",
-        description:
-          "Tratamiento para labio superior, mentón, patillas y cuello. Elimina el vello de forma progresiva y definitiva.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Axila / Zona Bikini",
-        description:
-          "Zonas delicadas tratadas con máxima precisión y confort. Resultados permanentes con protocolo de 6-8 sesiones.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Piernas Completas",
-        description:
-          "Tratamiento completo de piernas desde las ingles hasta los tobillos. Incluye rodillas y partes posteriores.",
-        duration: "60-90 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Cuerpo Completo",
-        description:
-          "Protocolo integral para la eliminación del vello en todo el cuerpo. El paquete más completo con mayor ahorro.",
-        duration: "120 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuántas sesiones son necesarias?",
-        answer:
-          "Generalmente entre 6 y 8 sesiones, separadas de 4 a 8 semanas, dependiendo de la zona y el tipo de vello. Algunas personas requieren sesiones de mantenimiento posteriores.",
-      },
-      {
-        question: "¿El tratamiento es doloroso?",
-        answer:
-          "La sensación es mínima, similar a un ligero picor o calor. Nuestro equipo dispone de sistema de enfriamiento integrado para maximizar el confort durante el tratamiento.",
-      },
-      {
-        question: "¿Hay alguna contraindicación?",
-        answer:
-          "No está indicado durante el embarazo, si se toma fotosensibilizantes o con bronceado activo. En la consulta previa evaluamos tu caso de forma personalizada.",
-      },
-    ],
-  },
-  {
-    slug: "limpieza-facial",
-    name: "Limpieza Facial",
-    fullTitle: "Limpieza Facial en Turrialba",
-    tagline: "Glow natural, bienestar facial y skincare premium",
-    heroDescription: "En MJ Estética & Wellness Center entendemos que una limpieza facial no se trata solo de “limpiar la piel”.<br />Se trata de ayudarte a recuperar frescura, glow natural y bienestar facial mediante protocolos personalizados y una experiencia skincare premium en Turrialba.",
-    benefits: [
-      "Valoración facial personalizada",
-      "Protocolos adaptados según tu tipo de piel",
-      "Experiencia relajante y profesional",
-      "Productos especializados skincare",
-      "Atención enfocada en bienestar y luminosidad facial",
-      "Glow y luminosidad facial",
-      "Sensación de limpieza profunda",
-      "Bienestar general de la piel",
-      "Apariencia más fresca y revitalizada",
-      "Textura facial más uniforme",
-      "Rutinas de skincare personalizadas",
-      "Cuidado facial preventivo",
-      "Sensación de hidratación y frescura",
-    ],
-    items: [
-      {
-        title: "Limpieza facial profunda",
-        description: "Ideal para quienes buscan una sensación de limpieza intensiva y renovación facial.",
-        features: ["Limpieza profesional", "Bienestar facial", "Sensación de frescura profunda"],
-        linkText: "Consulta disponibilidad",
-      },
-      {
-        title: "Limpieza facial hidratante",
-        description: "Pensada para pieles que buscan hidratación, suavidad y luminosidad natural.",
-        features: ["Glow saludable", "Sensación de hidratación", "Apariencia revitalizada"],
-        linkText: "Agenda tu valoración facial",
-      },
-      {
-        title: "Facial premium glow",
-        description: "Una experiencia skincare orientada al bienestar, relajación y luminosidad facial.",
-        features: ["Experiencia wellness", "Productos especializados", "Cuidado facial premium"],
-        linkText: "Descubre el protocolo ideal para tu piel",
-      },
-      {
-        title: "Protocolos skincare avanzados",
-        description: "Tratamientos personalizados según necesidades específicas evaluadas profesionalmente.",
-        features: ["Valoración individual", "Protocolos personalizados", "Seguimiento profesional"],
-        linkText: "Escríbenos por WhatsApp",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Qué incluye una limpieza facial?",
-        answer: "Incluye valoración facial, limpieza profesional, protocolo personalizado y recomendaciones posteriores.",
-      },
-      {
-        question: "¿Cada cuánto se recomienda?",
-        answer: "Depende del tipo de piel y objetivos individuales. La frecuencia ideal se define en valoración.",
-      },
-      {
-        question: "¿Ayuda con glow facial?",
-        answer: "Muchas personas buscan este tratamiento para apoyar luminosidad y bienestar facial.",
-      },
-      {
-        question: "¿Tiene recuperación?",
-        answer: "Generalmente las personas continúan sus actividades normales el mismo día.",
-      },
-      {
-        question: "¿Qué productos utilizan?",
-        answer: "Utilizamos productos especializados seleccionados según las necesidades de cada piel.",
-      },
-      {
-        question: "¿Se puede combinar con otros tratamientos faciales?",
-        answer: "Sí, dependiendo de la valoración profesional y objetivos skincare.",
-      },
-      {
-        question: "¿Cuánto dura la sesión?",
-        answer: "Entre 60 y 90 minutos aproximadamente.",
-      },
-      {
-        question: "¿Qué cuidados posteriores se recomiendan?",
-        answer: "Hidratación, protector solar y seguimiento de recomendaciones profesionales.",
-      },
-      {
-        question: "¿Duele una limpieza facial?",
-        answer: "Puede haber una ligera molestia al extraer impurezas, pero es un proceso diseñado para ser relajante, profesional y cómodo.",
-      },
-      {
-        question: "¿Puedo maquillarme después del tratamiento?",
-        answer: "Recomendamos esperar 24 horas para permitir que la piel se recupere y absorba mejor los nutrientes y productos aplicados.",
-      },
-      {
-        question: "¿Qué es una limpieza facial?",
-        answer: "Es un tratamiento skincare diseñado para apoyar la limpieza profunda, mejorar la frescura facial y favorecer una apariencia más luminosa y revitalizada.",
-      },
-      {
-        question: "¿Cómo funciona el proceso?",
-        answer: "Incluye valoración personalizada, limpieza profesional, aplicación del protocolo skincare específico y recomendaciones de cuidado posterior.",
-      },
-    ],
-  },
-  {
-    slug: "limpieza-facial-profunda",
-    name: "Limpieza Facial Profunda",
-    tagline: "Limpieza intensiva y renovación facial",
-    heroDescription: "Nuestra limpieza facial profunda está diseñada para quienes buscan una renovación completa de la piel, eliminando impurezas acumuladas y devolviendo la vitalidad perdida.",
-    benefits: [
-      "Eliminación profunda de impurezas",
-      "Renovación celular visible",
-      "Piel más suave y receptiva a productos",
-    ],
-    items: [
-      {
-        title: "Extracción y Purificación",
-        description: "Proceso detallado de eliminación de puntos negros y comedones.",
-      }
-    ],
-  },
-  {
-    slug: "limpieza-facial-hidratante",
-    name: "Limpieza Facial Hidratante",
-    tagline: "Hidratación, suavidad y luminosidad natural",
-    heroDescription: "Protocolo ideal para pieles secas o deshidratadas que necesitan recuperar su equilibrio hídrico y lucir un glow saludable.",
-    benefits: [
-      "Hidratación profunda",
-      "Suavidad inmediata",
-      "Luminosidad natural recuperada",
-    ],
-    items: [
-      {
-        title: "Nutrición Hídrica",
-        description: "Aplicación de activos altamente hidratantes para calmar y nutrir la piel.",
-      }
-    ],
-  },
-  {
-    slug: "microdermoabrasion",
-    name: "Microdermoabrasión",
-    fullTitle: "Facial de Microdermoabrasión en Turrialba",
-    tagline: "Renueva la textura, luminosidad y frescura natural de tu piel con una experiencia premium de skincare avanzado",
-    heroDescription: "¿Sientes tu piel opaca, con textura irregular o sin ese glow saludable que deseas?<br />El Facial de Microdermoabrasión de MJ Estética & Wellness Center está diseñado para apoyar protocolos de renovación facial mediante exfoliación profesional y atención personalizada orientada a mejorar la apariencia, luminosidad y bienestar de tu piel.",
-    benefits: [
-      "Piel más luminosa",
-      "Sensación de frescura facial",
-      "Textura más uniforme",
-      "Glow natural progresivo",
-      "Experiencia wellness premium",
-    ],
-    items: [
-      {
-        title: "Protocolo Microdermoabrasión",
-        description: "Tratamiento de exfoliación profesional orientado a renovación y revitalización de la piel.",
-        duration: "45-60 min",
-        linkText: "Escríbenos por WhatsApp",
-      }
-    ],
-    faq: [
-      {
-        question: "¿La microdermoabrasión duele?",
-        answer: "Generalmente es un procedimiento confortable y bien tolerado.",
-      },
-      {
-        question: "¿Cuándo se ven resultados?",
-        answer: "Muchas personas notan sensación de frescura y luminosidad desde las primeras sesiones, aunque los resultados pueden variar según cada piel.",
-      },
-      {
-        question: "¿Ayuda con textura facial?",
-        answer: "El tratamiento está orientado a apoyar protocolos de renovación facial y apariencia más uniforme de la piel.",
-      },
-      {
-        question: "¿Tiene tiempo de recuperación?",
-        answer: "Normalmente las personas continúan sus actividades habituales siguiendo recomendaciones de hidratación y protección solar.",
-      },
-      {
-        question: "¿Se puede combinar con otros faciales?",
-        answer: "Sí, dependiendo de la valoración profesional y objetivos skincare.",
-      },
-      {
-        question: "¿Cuántas sesiones se recomiendan?",
-        answer: "Cada protocolo es personalizado según las necesidades individuales de la piel.",
-      },
-    ],
-  },
-  {
-    slug: "terapias-faciales",
-    name: "Terapias Faciales",
-    fullTitle: "Terapias Faciales en Turrialba",
-    tagline: "Revitaliza tu rostro con protocolos avanzados",
-    heroDescription: "En MJ Estética & Wellness Center ofrecemos una gama de terapias faciales diseñadas para tratar necesidades específicas de la piel, desde hidratación profunda hasta regeneración celular y armonización estética.",
-    benefits: [
-      "Protocolos personalizados según objetivos",
-      "Técnicas de vanguardia no invasivas",
-      "Mejora visible de la textura y el tono",
-      "Sensación de bienestar y relajación",
-      "Asesoría profesional en cada sesión",
-    ],
-    items: [
-      {
-        title: "Terapia de Hidratación Profunda",
-        description: "Protocolo intensivo para devolver el equilibrio hídrico a la piel y lograr un aspecto jugoso y saludable.",
-        duration: "60 min",
-      },
-      {
-        title: "Terapia Revitalizante Vitamínica",
-        description: "Infusión de activos y vitaminas que aportan luminosidad y energía al rostro cansado.",
-        duration: "60 min",
-      },
-      {
-        title: "Terapia de Armonización Facial",
-        description: "Combinación de técnicas para mejorar la simetría y frescura del rostro sin cirugías.",
-        duration: "Variable",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Qué diferencia hay entre limpieza y terapia facial?",
-        answer: "La limpieza se enfoca en purificar la piel de impurezas y comedones. Las terapias faciales son protocolos específicos para tratar condiciones como deshidratación, falta de luminosidad o envejecimiento incipiente.",
-      },
-      {
-        question: "¿Cuántas sesiones se recomiendan?",
-        answer: "Depende del objetivo y el estado de la piel. En la valoración inicial diseñamos el programa ideal para ti.",
-      },
-    ],
-  },
-  {
-    slug: "peeling-quimico",
-    name: "Peeling Facial",
-    fullTitle: "Peeling Facial en Turrialba",
-    tagline: "Tratamiento de Peeling Facial Profesional en Turrialba para una Piel Más Joven y Luminosa",
-    heroDescription:
-      "El peeling facial profesional es un tratamiento estético que ayuda a renovar la piel, estimular la regeneración celular y devolverle luminosidad a tu rostro en Turrialba.",
-    benefits: [
-      "Eliminación de manchas e hiperpigmentación",
-      "Reducción de arrugas finas",
-      "Mejora de la textura y luminosidad",
-      "Tratamiento del acné y sus marcas",
-      "Estimulación de la renovación celular",
-    ],
-    items: [
-      {
-        title: "Peeling Superficial",
-        description:
-          "Actúa en las capas más externas de la epidermis. Ideal para pieles apagadas, deshidratadas o con leve fotodaño. Sin tiempo de recuperación.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Peeling de Ácido Glicólico",
-        description:
-          "El alfaahidroxiácido más utilizado en estética. Estimula la renovación celular, mejora las manchas y aporta una luminosidad excepcional.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Peeling de Ácido Salicílico",
-        description:
-          "Especialmente indicado para pieles grasas y con acné. Regula la producción de sebo, desobstruye los poros y reduce las imperfecciones.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Peeling Mandélico",
-        description:
-          "Indicado para pieles sensibles y morenas. Acción despigmentante suave, antiaging y antibacteriana. Sin riesgo de hiperpigmentación post-tratamiento.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿El peeling duele?",
-        answer:
-          "Durante la aplicación puede sentirse un leve calor o picor que dura pocos minutos. Es perfectamente tolerable y controlado por nuestra especialista.",
-      },
-      {
-        question: "¿Cuánto tiempo de recuperación necesito?",
-        answer:
-          "Los peelings superficiales no requieren recuperación. Los más intensos pueden producir descamación 2-5 días. Te daremos pautas detalladas de cuidado post-tratamiento.",
-      },
-      {
-        question: "¿Cuándo no se puede hacer un peeling?",
-        answer:
-          "No se realiza con piel bronceada, durante el embarazo, con algunas medicaciones fotosensibilizantes ni en pieles con heridas activas.",
-      },
-    ],
-  },
-  {
-    slug: "botox-full-face",
-    name: "Botox Full Face en Turrialba",
-    tagline: "Recupera la frescura de tu mirada con armonía total",
-    heroDescription: "Apariencia más fresca, descansada y natural sin perder tu esencia<br /><br />Tu rostro habla antes que tú.<br />Las líneas de expresión, el cansancio facial o la tensión acumulada pueden hacerte lucir agotada incluso cuando te sientes bien.",
-    benefits: [
-      "Reducción visible de arrugas de expresión",
-      "Aspecto rejuvenecido y natural",
-      "Sin cicatrices ni tiempo de recuperación",
-      "Efecto preventivo frente a futuras arrugas",
-      "Resultados inmediatos que mejoran en 15 días",
-    ],
-    items: [
-      {
-        title: "Frente y Entrecejo",
-        description:
-          "Suaviza las líneas horizontales de la frente y las arrugas del entrecejo (código de barras y número 11), manteniendo expresividad natural.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Patas de Gallo",
-        description:
-          "Tratamiento de las líneas de expresión en el contorno ocular que aportan un aspecto más joven y descansado.",
-        duration: "20 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Lifting de Cejas",
-        description:
-          "Técnica de botox que eleva el arco de la ceja dando un efecto lifting no quirúrgico. Abre la mirada de forma sutil y armoniosa.",
-        duration: "20 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Full Face Completo",
-        description:
-          "Protocolo integral que trata todas las zonas del tercio superior e inferior del rostro. Resultado global, armónico y completamente natural.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Duele el procedimiento?",
-        answer: "Generalmente las molestias son mínimas y rápidas.",
-      },
-      {
-        question: "¿Cuánto duran los resultados?",
-        answer: "La duración puede variar según cada persona y hábitos individuales.",
-      },
-      {
-        question: "¿Puedo volver a trabajar el mismo día?",
-        answer: "Muchas personas retoman sus actividades normales rápidamente.",
-      },
-      {
-        question: "¿Ayuda a prevenir líneas de expresión?",
-        answer: "Sí, puede ayudar a disminuir la formación de marcas dinámicas.",
-      },
-      {
-        question: "¿Se puede combinar con otros tratamientos?",
-        answer: "Sí, según valoración profesional personalizada.",
-      },
-      {
-        question: "¿Cuáles cuidados debo tener?",
-        answer: "Evitar ciertas actividades durante las primeras horas y seguir recomendaciones posteriores.",
-      },
-    ],
-  },
-  {
-    slug: "nutricion",
-    name: "Nutricionista en Turrialba | Planes Nutricionales Personalizados para Bienestar, Salud y Composición Corporal",
-    tagline: "Alimenta tu cuerpo, transforma tu vida",
-    heroDescription:
-      "Transforma tus hábitos alimenticios con acompañamiento profesional y un plan nutricional diseñado específicamente para ti.",
-    benefits: [
-      "Plan nutricional completamente personalizado",
-      "Mejora del peso y composición corporal",
-      "Mayor energía y vitalidad diaria",
-      "Reducción de enfermedades metabólicas",
-      "Hábitos alimentarios sostenibles a largo plazo",
-    ],
-    items: [
-      {
-        title: "Consulta Nutricional Inicial",
-        description:
-          "Evaluación completa de tu estado de salud, historial alimentario, objetivos y mediciones corporales para diseñar un plan totalmente personalizado.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Plan de Alimentación Personalizado",
-        description:
-          "Diseño de un menú semanal adaptado a tus gustos, necesidades calóricas y objetivos de salud o estética.",
-        duration: "Plan escrito",
-        price: "Consultar precio",
-      },
-      {
-        title: "Seguimiento Nutricional",
-        description:
-          "Sesiones de seguimiento para ajustar el plan según tu evolución, resolver dudas y mantener la motivación.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Nutrición Deportiva",
-        description:
-          "Plan específico para personas activas o deportistas, enfocado en mejorar el rendimiento, la recuperación y la composición corporal.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuántas sesiones necesito?",
-        answer:
-          "Recomendamos una consulta inicial y al menos 2-3 sesiones de seguimiento durante el primer mes para establecer hábitos y ajustar el plan según tu evolución.",
-      },
-      {
-        question: "¿El plan incluye recetas?",
-        answer:
-          "Sí, el plan nutricional incluye sugerencias de recetas sencillas y adaptadas a tus preferencias para facilitar la adherencia al nuevo estilo alimentario.",
-      },
-    ],
-  },
-  {
-    slug: "trasplante-capilar",
-    name: "Trasplante Capilar",
-    fullTitle: "Recupera tu Confianza con un Trasplante Capilar de Apariencia Natural en Turrialba",
-    tagline: "Recupera tu cabello, recupera tu confianza",
-    heroDescription:
-      "El trasplante capilar es la solución definitiva para la alopecia y la pérdida de cabello. Utilizamos las técnicas más avanzadas para resultados naturales, permanentes y de alta densidad.",
-    benefits: [
-      "Resultado permanente y natural",
-      "Técnicas mínimamente invasivas",
-      "Sin cicatrices visibles",
-      "Alta tasa de supervivencia del injerto",
-      "Recuperación rápida y sencilla",
-    ],
-    items: [
-      {
-        title: "Técnica FUE (Follicular Unit Extraction)",
-        description:
-          "Extracción folicular unitaria que obtiene folículos de la zona donante sin incisiones. Sin cicatriz lineal, recuperación rápida y resultados muy naturales.",
-        duration: "4-8 horas",
-        price: "Consultar precio",
-      },
-      {
-        title: "Trasplante de Barba",
-        description:
-          "Diseño y relleno de zonas sin cobertura en la barba o bigote, logrando una barba densa, uniforme y completamente natural.",
-        duration: "3-5 horas",
-        price: "Consultar precio",
-      },
-      {
-        title: "Trasplante de Cejas",
-        description:
-          "Reconstrucción o densificación de las cejas con folículos del área donante, para una apariencia definida y duradera.",
-        duration: "2-4 horas",
-        price: "Consultar precio",
-      },
-      {
-        title: "Consulta y Diagnóstico Capilar",
-        description:
-          "Evaluación del grado de alopecia, análisis del área donante y diseño personalizado de la línea de implantación según tus rasgos faciales.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuándo se ven los resultados definitivos?",
-        answer:
-          "Los injertos entran en un ciclo de reposo durante los primeros 2-3 meses. El crecimiento progresivo comienza alrededor del mes 4 y el resultado definitivo se aprecia entre los 12-18 meses.",
-      },
-      {
-        question: "¿Es doloroso el trasplante capilar?",
-        answer:
-          "El procedimiento se realiza bajo anestesia local, por lo que no se siente dolor durante la intervención. Las molestias post-operatorias son leves y controlables con analgesia convencional.",
-      },
-      {
-        question: "¿Cuánto tiempo de recuperación necesito?",
-        answer:
-          "Puedes retomar actividades cotidianas a los 2-3 días. Se recomienda evitar ejercicio intenso y exposición solar directa durante las primeras 2-4 semanas.",
-      },
-    ],
-  },
-  {
-    slug: "hilos-tensores",
-    name: "Hilos Tensores Turrialba",
-    fullTitle: "Hilos Tensores Turrialba",
-    tagline: "El lifting sin bisturí más efectivo del mercado",
-    heroDescription:
-      "Los hilos tensores son la alternativa no quirúrgica al lifting facial. Devuelven la firmeza y tensión perdida de forma inmediata, estimulando la producción natural de colágeno.",
-    benefits: [
-      "Efecto lifting inmediato y progresivo",
-      "Estimulación de colágeno natural",
-      "Sin cirugía ni cicatrices",
-      "Resultados que mejoran con el tiempo",
-      "Recuperación mínima, rutina normal al día siguiente",
-    ],
-    items: [
-      {
-        title: "Hilos Reabsorbibles Faciales",
-        description:
-          "Utilizamos hilos de PDO o PLLA que se reabsorben solos dejando un andamiaje de colágeno nuevo. Tratan mejillas, mandíbula y cuello.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Tensor de Cejas",
-        description:
-          "Eleva y define las cejas caídas de forma no invasiva, abriendo la mirada y suavizando el aspecto cansado.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Tensor de Cuello",
-        description:
-          "Reafirma y tensa la piel del cuello y el mentón, mejorando la definición de la línea mandibular.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Protocolo Facial Completo",
-        description:
-          "Tratamiento integral con hilos tensores que aborda todo el tercio medio e inferior del rostro para un rejuvenecimiento global y natural.",
-        duration: "90 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuánto duran los hilos tensores?",
-        answer:
-          "Los hilos se reabsorben entre 6 y 18 meses dependiendo del tipo, pero el colágeno estimulado permanece mucho más tiempo, manteniendo el efecto tensor.",
-      },
-      {
-        question: "¿El tratamiento es doloroso?",
-        answer:
-          "Se aplica anestesia local tópica o infiltrada antes del procedimiento. Las molestias post-tratamiento son mínimas y controlables con analgesia convencional.",
-      },
-      {
-        question: "¿Quién es buen candidato para los hilos tensores?",
-        answer:
-          "Personas entre 35 y 65 años con flacidez leve-moderada que quieren un resultado notable sin recurrir a la cirugía.",
-      },
-    ],
-  },
+export const mjCreativoLinks = {
+  es: [{ name: "Arteterapia", href: "/servicios/arteterapia" }],
+  en: [{ name: "Art Therapy", href: "/en/services/art-therapy" }],
+};
 
-  // ── CORPORALES NUEVOS ──────────────────────────────
+export const servicePages: MultiLangServicePageData[] = [
   {
-    slug: "tensado-corporal",
-    name: "Tensado Corporal en Turrialba",
-    tagline: "Reafirma y esculpe tu silueta sin cirugía",
-    heroDescription:
-      "Firmeza, bienestar y remodelación corporal progresiva en un solo protocolo",
-    benefits: [
-      "Reafirmación visible de la piel desde las primeras sesiones",
-      "Estimula la producción de colágeno y elastina",
-      "Sin cirugía, sin anestesia, sin recuperación",
-      "Resultados naturales y progresivos",
-      "Efectivo en abdomen, muslos, brazos y glúteos",
-    ],
-    items: [
-      {
-        title: "Tensado Abdominal",
-        description:
-          "Protocolo específico para reafirmar la piel del abdomen y reducir la flacidez postparto o por pérdida de peso, con tecnología de radiofrecuencia multipolar.",
-        duration: "50 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Tensado de Muslos y Glúteos",
-        description:
-          "Tratamiento enfocado en las zonas de mayor pérdida de firmeza, devolviendo elasticidad y definición a los glúteos y la cara interna y externa de los muslos.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Tensado de Brazos",
-        description:
-          "Protocolo para la zona del tríceps y la cara interna del brazo, ideal para recuperar firmeza y combatir la piel colgante sin cirugía.",
-        duration: "40 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Tensado Corporal Integral",
-        description:
-          "Sesión combinada que trabaja varias zonas en un mismo tratamiento, diseñando un protocolo integral adaptado a las necesidades de cada clienta.",
-        duration: "80 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuántas sesiones necesito?",
-        answer:
-          "Para resultados óptimos recomendamos entre 6 y 10 sesiones, con frecuencia semanal o bisemanal. En la valoración gratuita te indicamos el número exacto según tu caso.",
-      },
-      {
-        question: "¿Es doloroso el tratamiento?",
-        answer:
-          "No. La sensación es de calor agradable en la zona tratada. Es un procedimiento completamente cómodo y relajante que no requiere ningún tiempo de recuperación.",
-      },
-      {
-        question: "¿Cuándo se notan los resultados?",
-        answer:
-          "Muchas clientas notan mayor firmeza desde las primeras sesiones. Los resultados más significativos se aprecian a partir de la 4ª–6ª sesión y continúan mejorando semanas después del tratamiento.",
-      },
-    ],
-  },
-  // ── FACIALES NUEVOS ────────────────────────────────
-  {
-    slug: "hollywood-peel",
-    name: "Hollywood Peel",
-    fullTitle: "Hollywood Peel en Turrialba",
-    tagline: "Piel luminosa, uniforme y rejuvenecida en una sola sesión",
-    heroDescription:
-      "El Hollywood Peel, también conocido como Carbon Laser Peel, es un tratamiento láser no invasivo que revitaliza la piel, unifica el tono, reduce manchas y estimula la producción de colágeno para un aspecto más joven y radiante.",
-    benefits: [
-      "Unificación del tono de la piel desde la primera sesión",
-      "Reducción de manchas, líneas finas y cicatrices de acné",
-      "Estimulación del colágeno para una piel más joven",
-      "Sin tiempo de recuperación ni efectos secundarios",
-      "Apto para todos los tipos de piel",
-    ],
-    items: [
-      {
-        title: "Hollywood Peel Facial",
-        description:
-          "Aplicación de carbono líquido sobre el rostro y posterior tratamiento con láser para exfoliar, unificar el tono y estimular la renovación celular.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Hollywood Peel Cuello y Escote",
-        description:
-          "Extensión del tratamiento al cuello y escote para tratar manchas solares, envejecimiento y mejorar la textura en estas zonas.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Hollywood Peel + Radiofrecuencia",
-        description:
-          "Protocolo combinado para máximos resultados: exfoliación y rejuvenecimiento láser más radiofrecuencia para efecto tensor profundo.",
-        duration: "75 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Duele el Hollywood Peel?",
-        answer:
-          "No, el tratamiento es prácticamente indoloro. Puede notarse una ligera sensación de calor durante la aplicación del láser.",
-      },
-      {
-        question: "¿Con qué frecuencia se puede realizar?",
-        answer:
-          "Se recomienda una sesión mensual para mantenimiento. Para resultados más intensivos, se puede hacer cada 2–3 semanas.",
-      },
-    ],
+    es: {
+      slug: "psicologia-infantil",
+      name: "Psicología Familiar e Infantil",
+      fullTitle: "Psicología Familiar e Infantil Turrialba",
+      tagline: "Cuando tu hijo está teniendo dificultades, no tienes que enfrentarlo solo",
+      heroDescription: "Psicología familiar, conducta infantil, TDAH, TEA y apoyo psicopedagógico con un plan diseñado para las necesidades de cada niño y su familia.<br /><br />A veces no se trata simplemente de que un niño “no quiera obedecer”, “no ponga atención” o “tenga malas notas”. Detrás de una conducta difícil, una crisis emocional, problemas de atención o dificultades escolares puede haber necesidades que todavía no hemos identificado.<br /><br />Y cuando entendemos qué está pasando, por qué está pasando y qué podemos hacer, es posible comenzar a construir cambios reales en casa, en la escuela y en la relación familiar.",
+      benefits: [
+        "Conducta infantil y manejo de emociones",
+        "TDAH y dificultades de atención",
+        "TEA y necesidades relacionadas con el neurodesarrollo",
+        "Dificultades de adaptación y aprendizaje",
+        "Ansiedad y cambios importantes en la vida del niño",
+        "Orientación para padres y familiares"
+      ],
+      items: [
+        {
+          title: "Consulta de Psicología Familiar e Infantil",
+          description: "Sesión personalizada de valoración, orientación y acompañamiento psicológico enfocado en el neurodesarrollo y la dinámica familiar.",
+          duration: "60 min",
+          price: "Consultar precio"
+        }
+      ],
+      faq: [
+        {
+          question: "¿Cómo sé si mi hijo necesita acompañamiento psicológico?",
+          answer: "Si observa dificultades persistentes de atención, conducta, comunicación, interacción social, regulación emocional o adaptación, una valoración profesional puede ayudarle a entender mejor la situación y definir los siguientes pasos."
+        },
+        {
+          question: "¿Cuál es el enfoque del servicio?",
+          answer: "Creemos que cada niño necesita ser comprendido desde su realidad individual y que la familia debe formar parte activa del proceso para aplicar estrategias prácticas en el día a día."
+        }
+      ]
+    },
+    en: {
+      slug: "child-psychology",
+      name: "Family & Child Psychology",
+      fullTitle: "Family & Child Psychology Turrialba",
+      tagline: "When your child is having difficulties, you do not have to face it alone",
+      heroDescription: "Family psychology, child behavior, ADHD, ASD, and psycho-pedagogical support with a plan designed for the needs of each child and their family.<br /><br />Sometimes it's not just about a child 'not wanting to obey', 'not paying attention', or 'having bad grades'. Behind difficult behavior, an emotional crisis, attention problems, or school difficulties, there may be needs that we have not yet identified.<br /><br />And when we understand what is happening, why it is happening, and what we can do, it is possible to begin to build real changes at home, at school, and in the family relationship.",
+      benefits: [
+        "Child behavior and emotional management",
+        "ADHD and attention difficulties",
+        "ASD and neurodevelopmental needs",
+        "Adaptation difficulties and learning",
+        "Anxiety and major life changes in the child",
+        "Guidance for parents and families"
+      ],
+      items: [
+        {
+          title: "Family & Child Psychology Consultation",
+          description: "Personalized session of assessment, guidance, and psychological support focused on neurodevelopment and family dynamics.",
+          duration: "60 min",
+          price: "Consult price"
+        }
+      ],
+      faq: [
+        {
+          question: "How do I know if my child needs psychological support?",
+          answer: "If you notice persistent difficulties in attention, behavior, communication, social interaction, emotional regulation, or adaptation, a professional assessment can help you understand the situation and define next steps."
+        },
+        {
+          question: "What is the approach of this service?",
+          answer: "We believe that every child needs to be understood from their individual reality and that the family must be an active part of the process to apply practical strategies in daily life."
+        }
+      ]
+    }
   },
   {
-    slug: "eliminacion-manchas",
-    name: "Eliminación de Manchas",
-    tagline: "Recupera un tono de piel uniforme y luminoso",
-    heroDescription:
-      "Las manchas en la piel (melasma, manchas solares, hiperpigmentación) son tratadas con métodos de última generación que eliminan la pigmentación de forma segura y efectiva, devolviendo la uniformidad y luminosidad natural de tu piel.",
-    benefits: [
-      "Eliminación definitiva de manchas solares y melasma",
-      "Unificación del tono cutáneo",
-      "Piel más luminosa y uniforme",
-      "Tratamientos seguros y eficaces",
-      "Sin cicatrices ni efectos secundarios severos",
-    ],
-    items: [
-      {
-        title: "Tratamiento con Luz Pulsada (IPL)",
-        description:
-          "La luz pulsada intensa destruye selectivamente las células pigmentadas sin dañar los tejidos circundantes. Ideal para manchas solares y rojeces.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Peeling Despigmentante",
-        description:
-          "Combinación de ácidos específicos que actúan sobre la melanina para aclarar manchas y unificar progresivamente el tono de la piel.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Mesoterapia Despigmentante",
-        description:
-          "Microinfiltración de activos despigmentantes directamente en la zona afectada para resultados más rápidos y precisos.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Protocolo Antimelasma Completo",
-        description:
-          "Programa personalizado de varias sesiones que combina tratamientos en cabina con protocolo domiciliario para combatir el melasma de forma integral.",
-        duration: "Según protocolo",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuántas sesiones son necesarias?",
-        answer:
-          "Depende del tipo y profundidad de la mancha. Las manchas superficiales pueden aclararse en 3–5 sesiones; el melasma requiere un tratamiento más prolongado y constante.",
-      },
-      {
-        question: "¿Debo usar protector solar?",
-        answer:
-          "Sí, es imprescindible. El uso de SPF 50+ a diario es parte fundamental del tratamiento y garantiza que no aparezcan nuevas manchas ni reaparezcan las tratadas.",
-      },
-    ],
+    es: {
+      slug: "masajes-corporales",
+      name: "Masajes Reductor con Hidrolicoplasia Turrialba",
+      tagline: "Libera la tensión, renueva tu energía",
+      heroDescription:
+        "Nuestros masajes corporales combinan técnicas profesionales para aliviar el estrés, reducir tensiones musculares y promover una sensación de bienestar total. Reduce grasa localizada y redefine tu contorno corporal sin cirugía",
+      benefits: [
+        "Reducción del estrés y la ansiedad",
+        "Alivio de dolores musculares",
+        "Mejora de la circulación sanguínea",
+        "Relajación profunda del sistema nervioso",
+        "Recuperación muscular más rápida",
+      ],
+      items: [
+        {
+          title: "Masaje Anticelulítico",
+          description:
+            "Tratamiento específico que trabaja las zonas con celulitis mediante técnicas de amasamiento y drenaje, mejorando la textura de la piel y la circulación local.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Masaje con Piedras Calientes",
+          description:
+            "Técnica de termoterapia con piedras volcánicas que actúan en profundidad para aliviar contracturas y proporcionar una relajación profunda.",
+          duration: "75 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Masaje Drenante",
+          description:
+            "Estimula el sistema linfático para eliminar toxinas y reducir la retención de líquidos, dejando el cuerpo más ligero y definido.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Envoltura Corporal",
+          description:
+            "Tratamiento nutritivo que envuelve el cuerpo con activos altamente hidratantes, dejando la piel suave, tersa y luminosa.",
+          duration: "90 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Con qué frecuencia debo realizarme un masaje corporal?",
+          answer:
+            "Recomendamos una sesión quincenal o mensual para mantenimiento general. Para resultados terapéuticos o reductores, puede ser necesario un programa más intensivo.",
+        },
+        {
+          question: "¿Debo prepararme de alguna forma antes del masaje?",
+          answer:
+            "Aconsejamos llegar bien hidratada y evitar comidas copiosas 2 horas antes. Tras el masaje, beber abundante agua para facilitar la eliminación de toxinas.",
+        },
+      ],
+    },
+    en: {
+      slug: "body-massages",
+      name: "Body Massages with Hydrolipoclasia Turrialba",
+      tagline: "Release tension, renew your energy",
+      heroDescription:
+        "Our body massages combine professional techniques to relieve stress, reduce muscle tension and promote a sense of total well-being. Reduce localized fat and redefine your body contour without surgery.",
+      benefits: [
+        "Reduction of stress and anxiety",
+        "Relief of muscle pain",
+        "Improved blood circulation",
+        "Deep relaxation of the nervous system",
+        "Faster muscle recovery",
+      ],
+      items: [
+        {
+          title: "Anti-Cellulite Massage",
+          description:
+            "Specific treatment that works on areas with cellulite through kneading and drainage techniques, improving skin texture and local circulation.",
+          duration: "60 min",
+          price: "Consult price",
+          faq: [
+        {
+          question: "¿Con qué frecuencia debo realizarme un masaje corporal?",
+          answer:
+            "Recomendamos una sesión quincenal o mensual para mantenimiento general. Para resultados terapéuticos o reductores, puede ser necesario un programa más intensivo.",
+        },
+        {
+          question: "¿Debo prepararme de alguna forma antes del masaje?",
+          answer:
+            "Aconsejamos llegar bien hidratada y evitar comidas copiosas 2 horas antes. Tras el masaje, beber abundante agua para facilitar la eliminación de toxinas.",
+        },
+      ],
+    },
+        {
+          title: "Hot Stone Massage",
+          description:
+            "Thermotherapy technique with volcanic stones that act deeply to relieve contractures and provide deep relaxation.",
+          duration: "75 min",
+          price: "Consult price",
+        },
+      ],
+    },
   },
   {
-    slug: "radiofrecuencia-facial",
-    name: "Radiofrecuencia Facial",
-    tagline: "Reafirmación y rejuvenecimiento sin cirugía",
-    heroDescription:
-      "La radiofrecuencia facial es un tratamiento no invasivo que utiliza energía electromagnética para calentar las capas profundas de la piel, estimulando la producción de colágeno y elastina para un efecto tensor, reafirmante y rejuvenecedor visible.",
-    benefits: [
-      "Reafirmación y efecto lifting visible",
-      "Estimulación natural del colágeno y elastina",
-      "Reducción de arrugas y líneas de expresión",
-      "Sin cirugía, sin agujas, sin recuperación",
-      "Resultados que mejoran progresivamente",
-    ],
-    items: [
-      {
-        title: "Radiofrecuencia Facial Completa",
-        description:
-          "Tratamiento de todo el rostro para mejorar la firmeza, reducir la flacidez y atenuar arrugas de forma global.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Radiofrecuencia de Contorno",
-        description:
-          "Tratamiento focalizado en el óvalo facial, papada y cuello para definir y tensar la línea mandibular.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Radiofrecuencia Ocular",
-        description:
-          "Tratamiento específico para el contorno de ojos: suaviza las patas de gallo, reduce bolsas y ojeras y levanta el párpado caído.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Radiofrecuencia + Mesoterapia",
-        description:
-          "Protocolo combinado de máxima eficacia: la radiofrecuencia abre canales en la piel que potencian la absorción de activos de la mesoterapia.",
-        duration: "75 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuándo se notan los resultados?",
-        answer:
-          "Se aprecia una mejoría inmediata tras la primera sesión. Los mejores resultados se obtienen a partir de la 4ª–6ª sesión y siguen mejorando semanas después.",
-      },
-      {
-        question: "¿Es dolorosa?",
-        answer:
-          "No. La sensación es de calor agradable y confortable. Es un tratamiento muy relajante que muchas clientas comparan con un masaje cálido.",
-      },
-    ],
-  },
-
-  {
-    slug: "hilos-colageno",
-    name: "Hilos de Colágeno",
-    fullTitle: "Hilos de Colágeno en Turrialba",
-    tagline: "Rejuvenecimiento Facial Natural, Firmeza y Glow Premium",
-    heroBg: "https://i5.walmartimages.com/asr/81a8d6ba-e929-41d2-b349-eaaac42faa01.5a1383e330f604e473d84befe6ae4df5.jpeg",
-    heroDescription:
-      "Diseñamos protocolos personalizados con Hilos de Colágeno orientados a rejuvenecimiento progresivo, firmeza facial y armonización estética natural en Turrialba.",
-    benefits: [
-      "Apariencia de firmeza facial",
-      "Rejuvenecimiento progresivo",
-      "Glow y luminosidad natural",
-      "Definición facial elegante",
-      "Armonización estética natural",
-      "Bienestar facial premium",
-      "Apariencia más descansada y fresca",
-      "Protocolos antiaging personalizados",
-    ],
-    items: [
-      {
-        title: "Protocolo Hilos de Colágeno",
-        description: "Sesión personalizada de hilos de colágeno para firmeza y rejuvenecimiento facial.",
-        duration: "45-60 min",
-        price: "Consultar precio",
-      }
-    ],
-    faq: [
-      {
-        question: "¿Qué son los Hilos de Colágeno?",
-        answer: "Son procedimientos estéticos orientados a protocolos de firmeza y rejuvenecimiento facial progresivo."
-      }
-    ]
-  },
-  {
-    slug: "rejuvenecimiento-facial-laser",
-    name: "Rejuvenecimiento Facial Láser",
-    fullTitle: "Rejuvenecimiento Facial con Láser en Turrialba",
-    tagline: "Recupera la Juventud y Luminosidad de tu Piel",
-    heroDescription: "Recupera la Juventud y Luminosidad de tu Piel con tecnología láser de vanguardia en Turrialba.",
-    benefits: [
-      "Estimula la producción natural de colágeno",
-      "Mejora la textura de la piel",
-      "Reduce líneas de expresión",
-      "Disminuye manchas y daños solares",
-      "Resultados progresivos y naturales"
-    ],
-    items: [
-      {
-        title: "Tratamiento de Rejuvenecimiento Facial con Láser",
-        description: "Protocolo personalizado diseñado para estimular el colágeno y mejorar la calidad de la piel desde el interior.",
-        duration: "60 min",
-        price: "Consultar precio"
-      }
-    ],
-    faq: [
-      {
-        question: "¿Quién es candidato para el rejuvenecimiento láser?",
-        answer: "Es ideal para hombres y mujeres que desean mejorar la apariencia de su piel, prevenir el envejecimiento prematuro y reducir líneas finas."
-      },
-      {
-        question: "¿Duele el tratamiento?",
-        answer: "El procedimiento está diseñado para ser profesional y cómodo, adaptando la tecnología a la sensibilidad de cada paciente."
-      }
-    ]
+    es: {
+      slug: "faciales",
+      name: "Tratamientos Faciales",
+      tagline: "Luce una piel radiante y rejuvenecida",
+      heroDescription:
+        "Descubre nuestra gama completa de tratamientos faciales diseñados para cada tipo de piel. Técnicas avanzadas y productos de alta gama para resultados visibles.",
+      benefits: [
+        "Piel más limpia y luminosa",
+        "Reducción de manchas e imperfecciones",
+        "Hidratación profunda y duradera",
+        "Efecto antiedad visible",
+        "Poros minimizados",
+      ],
+      items: [
+        {
+          title: "Limpieza facial profunda",
+          description:
+            "Ideal para quienes buscan una sensación de limpieza intensiva y renovación facial.",
+          features: [
+            "Limpieza profesional",
+            "Bienestar facial",
+            "Sensación de frescura profunda",
+          ],
+          linkText: "Escríbenos por WhatsApp",
+        },
+        {
+          title: "Limpieza facial hidratante",
+          description:
+            "Pensada para pieles que buscan hidratación, suavidad y luminosidad natural.",
+          features: [
+            "Glow saludable",
+            "Sensación de hidratación",
+            "Apariencia revitalizada",
+          ],
+          linkText: "Escríbenos por WhatsApp",
+        },
+        {
+          title: "Facial premium glow",
+          description:
+            "Una experiencia skincare orientada al bienestar, relajación y luminosidad facial.",
+          features: [
+            "Experiencia wellness",
+            "Productos especializados",
+            "Cuidado facial premium",
+          ],
+          linkText: "Escríbenos por WhatsApp",
+        },
+        {
+          title: "Protocolos skincare avanzados",
+          description:
+            "Tratamientos personalizados según necesidades específicas evaluadas profesionalmente.",
+          features: [
+            "Valoración individual",
+            "Protocolos personalizados",
+            "Seguimiento profesional",
+          ],
+          linkText: "Escríbenos por WhatsApp",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuántas sesiones necesito para ver resultados?",
+          answer:
+            "Los resultados son visibles desde la primera sesión, aunque para tratamientos específicos como antiedad o antimanchas recomendamos un mínimo de 4-6 sesiones.",
+        },
+        {
+          question: "¿Con qué frecuencia debo hacerme un facial?",
+          answer:
+            "Una higiene facial cada 4-6 semanas es lo ideal para mantener la piel limpia. Los tratamientos específicos siguen un protocolo personalizado.",
+        },
+      ],
+    },
+    en: {
+      slug: "facials",
+      name: "Facial Treatments",
+      tagline: "Look radiant and rejuvenated",
+      heroDescription:
+        "Discover our full range of facial treatments designed for every skin type. Advanced techniques and high-end products for visible results.",
+      benefits: [
+        "Cleaner and brighter skin",
+        "Reduction of spots and imperfections",
+        "Deep and lasting hydration",
+        "Visible anti-aging effect",
+        "Minimized pores",
+      ],
+      items: [
+        {
+          title: "Deep Facial Cleansing",
+          description:
+            "Ideal for those looking for a feeling of intensive cleansing and facial renewal.",
+          features: ["Professional cleaning", "Facial well-being", "Deep freshness sensation"],
+          linkText: "Message us on WhatsApp",
+          faq: [
+        {
+          question: "¿Cuántas sesiones necesito para ver resultados?",
+          answer:
+            "Los resultados son visibles desde la primera sesión, aunque para tratamientos específicos como antiedad o antimanchas recomendamos un mínimo de 4-6 sesiones.",
+        },
+        {
+          question: "¿Con qué frecuencia debo hacerme un facial?",
+          answer:
+            "Una higiene facial cada 4-6 semanas es lo ideal para mantener la piel limpia. Los tratamientos específicos siguen un protocolo personalizado.",
+        },
+      ],
+    },
+      ],
+    },
   },
   {
-    slug: "microagujas",
-    name: "Microagujas",
-    fullTitle: "Microagujas en Turrialba",
-    tagline: "Renovación, Glow y Skincare Premium",
-    heroDescription: "Glow Facial, Renovación y Skincare Premium en MJ Estética & Wellness Center",
-    benefits: [
-      "Glow y luminosidad facial",
-      "Apariencia de textura más uniforme",
-      "Sensación de renovación facial",
-      "Bienestar y revitalización de la piel",
-      "Protocolos skincare personalizados",
-      "Rejuvenecimiento facial progresivo",
-    ],
-    items: [
-      {
-        title: "Microneedling Facial Premium",
-        description: "Protocolo orientado a renovación facial progresiva y bienestar de la piel.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Qué son las microagujas?",
-        answer: "Son técnicas avanzadas de microneedling facial utilizadas dentro de protocolos skincare orientados a glow, renovación y bienestar facial.",
-      },
-    ],
+    es: {
+      slug: "masajes-relajantes",
+      name: "Masajes Relajantes",
+      fullTitle:
+        "Masajes en Turrialba | Relajantes, Terapéuticos y Descontracturantes",
+      tagline: "Un viaje al bienestar total",
+      heroDescription:
+        "Recupera tu bienestar con masajes profesionales en Turrialba. ¿Buscas un lugar donde puedas relajarte, aliviar tensiones musculares y desconectarte del estrés diario?",
+      benefits: [
+        "Reducción del cortisol (hormona del estrés)",
+        "Mejora del sueño y el descanso",
+        "Liberación de endorfinas naturales",
+        "Relajación muscular profunda",
+        "Sensación de bienestar prolongada",
+      ],
+      items: [
+        {
+          title: "Masaje Relajante",
+          description:
+            "Ideal para reducir estrés, ansiedad y tensión acumulada.",
+          duration: "60-90 min",
+          linkText: "Escríbenos por WhatsApp",
+        },
+        {
+          title: "Masaje Descontracturante",
+          description:
+            "Perfecto para personas con molestias musculares causadas por trabajo físico, deporte o estrés.",
+          duration: "60-90 min",
+          linkText: "Escríbenos por WhatsApp",
+        },
+        {
+          title: "Masaje Terapéutico",
+          description:
+            "Tratamiento enfocado en mejorar la condición muscular y promover el bienestar físico.",
+          duration: "60-90 min",
+          linkText: "Escríbenos por WhatsApp",
+        },
+        {
+          title: "Aromaterapia",
+          description:
+            "Combinamos técnicas de masaje con aceites esenciales para potenciar la relajación.",
+          duration: "60-90 min",
+          linkText: "Escríbenos por WhatsApp",
+        },
+        {
+          title: "Spa para Parejas",
+          description:
+            "Comparte una experiencia única de relajación con alguien especial.",
+          duration: "90 min",
+          linkText: "Escríbenos por WhatsApp",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Necesito reservar con anticipación?",
+          answer:
+            "Sí. Trabajamos con cita previa para brindar una atención personalizada.",
+        },
+        {
+          question: "¿Cuánto dura una sesión?",
+          answer:
+            "Dependiendo del tratamiento, las sesiones pueden durar entre 60 y 90 minutos.",
+        },
+        {
+          question: "¿Cuál masaje recomiendan para el estrés?",
+          answer:
+            "El masaje relajante combinado con aromaterapia suele ser una de las opciones más solicitadas.",
+        },
+        {
+          question: "¿Atienden parejas?",
+          answer: "Sí. Contamos con opciones de Spa y masajes para parejas.",
+        },
+      ],
+    },
+    en: {
+      slug: "relaxing-massages",
+      name: "Relaxing Massages",
+      tagline: "A journey to total well-being",
+      heroDescription:
+        "Recover your well-being with professional massages in Turrialba. Are you looking for a place where you can relax, relieve muscle tension, and disconnect from daily stress?",
+      benefits: [
+        "Cortisol reduction (stress hormone)",
+        "Improved sleep and rest",
+        "Natural endorphin release",
+        "Deep muscle relaxation",
+        "Long-lasting well-being sensation",
+      ],
+      items: [
+        {
+          title: "Relaxing Massage",
+          description: "Ideal for reducing stress, anxiety, and accumulated tension.",
+          duration: "60-90 min",
+          linkText: "Message us on WhatsApp",
+          faq: [
+        {
+          question: "¿Necesito reservar con anticipación?",
+          answer:
+            "Sí. Trabajamos con cita previa para brindar una atención personalizada.",
+        },
+        {
+          question: "¿Cuánto dura una sesión?",
+          answer:
+            "Dependiendo del tratamiento, las sesiones pueden durar entre 60 y 90 minutos.",
+        },
+        {
+          question: "¿Cuál masaje recomiendan para el estrés?",
+          answer:
+            "El masaje relajante combinado con aromaterapia suele ser una de las opciones más solicitadas.",
+        },
+        {
+          question: "¿Atienden parejas?",
+          answer: "Sí. Contamos con opciones de Spa y masajes para parejas.",
+        },
+      ],
+    },
+      ],
+    },
   },
   {
-    slug: "microagujas-ginkgo-biloba",
-    name: "Microagujas con Ginkgo Biloba",
-    fullTitle: "Microagujas con Ginkgo Biloba en Turrialba",
-    tagline: "Glow natural, revitalización facial y skincare avanzado",
-    heroDescription: "Glow natural, revitalización facial y skincare avanzado en un solo protocolo",
-    benefits: [
-      "Glow facial natural",
-      "Apariencia de piel revitalizada",
-      "Textura visualmente más uniforme",
-      "Sensación de hidratación y frescura",
-      "Protocolos adaptados a cada tipo de piel",
-    ],
-    items: [
-      {
-        title: "Protocolo Ginkgo Biloba Premium",
-        description: "Sesión de microagujas combinada con activos de Ginkgo Biloba para revitalización profunda.",
-        duration: "75 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Qué son las Microagujas con Ginkgo Biloba?",
-        answer: "Es un tratamiento que combina microneedling con activos de Ginkgo Biloba para potenciar el glow y la salud de la piel.",
-      },
-    ],
+    es: {
+      slug: "masajes-profundos",
+      name: "Masajes Profundos",
+      fullTitle: "Masajes profundos Turrialba",
+      tagline: "Libera tensión, recupera bienestar",
+      heroDescription:
+        "¿Sientes tu cuerpo cargado, rígido o agotado por el estrés del día a día?",
+      benefits: [
+        "Sensación de relajación muscular",
+        "Bienestar corporal integral",
+        "Descanso físico profundo",
+        "Experiencia wellness premium",
+        "Sensación de alivio corporal",
+        "Complemento ideal para autocuidado",
+      ],
+      items: [
+        {
+          title: "Masaje Profundo Terapéutico",
+          description:
+            "Experiencia corporal orientada a liberar tensión muscular acumulada mediante técnicas personalizadas.",
+          duration: "60-90 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué se siente durante el masaje profundo?",
+          answer:
+            "Una sensación progresiva de relajación muscular y bienestar corporal.",
+        },
+      ],
+    },
+    en: {
+      slug: "deep-tissue-massages",
+      name: "Deep Tissue Massages",
+      tagline: "Release tension, recover well-being",
+      heroDescription:
+        "Do you feel your body is heavy, stiff or exhausted by daily stress? Our deep tissue massages are designed to release accumulated muscle tension.",
+      benefits: [
+        "Muscle relaxation sensation",
+        "Integral body well-being",
+        "Deep physical rest",
+        "Premium wellness experience",
+      ],
+      items: [
+        {
+          title: "Therapeutic Deep Massage",
+          description: "Body experience oriented to release accumulated muscle tension.",
+          duration: "60-90 min",
+          faq: [
+        {
+          question: "¿Qué se siente durante el masaje profundo?",
+          answer:
+            "Una sensación progresiva de relajación muscular y bienestar corporal.",
+        },
+      ],
+    },
+      ],
+    },
   },
   {
-    slug: "laser-acne",
-    name: "Láser para Acné en Turrialba | Mejora Brotes y Marcas",
-    fullTitle: "Láser para Acné en Turrialba | Mejora Brotes, Marcas y Textura de la Piel",
-    tagline: "Mejora la apariencia de brotes, marcas y textura",
-    heroDescription: "¿Te gustaría verte al espejo y sentir más confianza al observar tu piel?<br /><br />En MJ Estética & Wellness Center ofrecemos tratamientos de Láser para Acné en Turrialba diseñados para complementar protocolos profesionales de cuidado facial, ayudando a mejorar progresivamente brotes activos, marcas y poros visibles.",
-    benefits: [
-      "Mejora progresiva de brotes activos",
-      "Reducción visual de marcas de acné",
-      "Control de piel grasa y poros",
-      "Unificación del tono y textura",
-      "Procedimiento seguro y personalizado",
-      "Aumento de bienestar y confianza"
-    ],
-    items: [
-      {
-        title: "Sesión Láser para Acné",
-        description: "Tratamiento láser avanzado enfocado en mejorar la apariencia de pieles con tendencia acneica.",
-        duration: "45 min",
-        price: "Consultar precio"
-      }
-    ],
-    faq: [
-      {
-        question: "¿El láser para acné duele?",
-        answer: "La mayoría de personas describe una sensación tolerable que depende de la sensibilidad individual."
-      },
-      {
-        question: "¿Ayuda con marcas de acné?",
-        answer: "Puede formar parte de protocolos orientados a mejorar su apariencia según valoración profesional."
-      },
-      {
-        question: "¿Cuántas sesiones necesito?",
-        answer: "Cada caso es diferente y requiere evaluación personalizada."
-      },
-      {
-        question: "¿Sirve para piel grasa?",
-        answer: "Muchas personas con piel grasa incorporan este tratamiento dentro de sus protocolos faciales."
-      }
-    ]
+    es: {
+      slug: "masajes-post-operatorios",
+      name: "Masajes Post Operatorios en Turrialba",
+      tagline: "Recuperación más rápida, resultados más visibles",
+      heroDescription:
+        "Recuperación estética con acompañamiento profesional, bienestar y protocolos diseñados para ayudarte a sentirte mejor más rápido<br /><br />Después de una cirugía estética, tu cuerpo necesita mucho más que reposo. Necesita atención especializada, drenaje adecuado y protocolos post operatorios diseñados para favorecer la recuperación, reducir inflamación y ayudarte a mejorar tu proceso de recuperación con mayor comodidad y confianza.",
+      benefits: [
+        "Reduce la inflamación y el edema post quirúrgico",
+        "Previene y trata la fibrosis (dureza post cirugía)",
+        "Mejora la cicatrización y la calidad de la piel",
+        "Acelera la reabsorción de líquidos y hematomas",
+        "Mejora los resultados finales de la cirugía",
+        "Alivia el dolor y la sensación de tensión",
+      ],
+      items: [
+        {
+          title: "Drenaje Linfático Post Operatorio",
+          description:
+            "Técnica de masaje suave y especializada que activa el sistema linfático para eliminar el exceso de líquidos, reducir la hinchazón y acelerar la recuperación. Indicado desde las primeras 48–72 horas post cirugía.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tratamiento Anti-Fibrosis",
+          description:
+            "Protocolo específico con maniobras de desfibrosis manual y herramientas profesionales para ablandar las zonas duras que se forman bajo la piel tras liposucciones, abdominoplastias u otras cirugías.",
+          duration: "60–75 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Masaje de Recuperación Facial",
+          description:
+            "Protocolo suave diseñado para intervenciones como rinoplastia, bichectomía, lifting facial o cirugía de párpados. Descongestiona el área, reduce moretones y mejora la calidad de la cicatrización.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Integral Post Operatorio",
+          description:
+            "Sesión completa que combina drenaje linfático, trabajo anti-fibrosis y aplicación de ultrasonido terapéutico en un solo tratamiento. Ideal para optimizar la recuperación en todas las etapas.",
+          duration: "90 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuándo puedo empezar los masajes tras la cirugía?",
+          answer:
+            "En general, el drenaje linfático suave puede iniciarse a partir de las 48–72 horas post operatorio, previa autorización del cirujano. El trabajo anti-fibrosis se recomienda a partir de la 3ª–4ª semana. En tu primera valoración te indicamos el protocolo exacto según tu caso.",
+        },
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "El número varía según el tipo de cirugía y tu evolución personal. En casos de liposucción o abdominoplastia se recomiendan entre 10 y 15 sesiones. Para cirugías más pequeñas, entre 5 y 8 pueden ser suficientes.",
+        },
+        {
+          question: "¿Es doloroso el masaje post operatorio?",
+          answer:
+            "El drenaje linfático es una técnica muy suave y no debe causar dolor. El trabajo anti-fibrosis puede generar algo de molestia en zonas muy endurecidas, pero siempre adaptamos la presión a tu tolerancia.",
+        },
+        {
+          question: "¿Para qué cirugías está indicado?",
+          answer:
+            "Liposucción, abdominoplastia, mamoplastia, rinoplastia, bichectomía, lifting, cirugía bariátrica y cualquier intervención que genere inflamación o fibrosis. Si tienes dudas sobre tu caso específico, consúltanos.",
+        },
+      ],
+    },
+    en: {
+      slug: "post-operative-massages",
+      name: "Post-Operative Massages in Turrialba",
+      tagline: "Faster recovery, more visible results",
+      heroDescription:
+        "Esthetic recovery with professional support. After esthetic surgery, your body needs specialized attention and proper drainage.",
+      benefits: [
+        "Reduces inflammation and post-surgical edema",
+        "Prevents and treats fibrosis",
+        "Improves healing and skin quality",
+        "Accelerates the reabsorption of fluids and bruises",
+      ],
+      items: [
+        {
+          title: "Post-Operative Lymphatic Drainage",
+          description: "Gentle and specialized massage technique that activates the lymphatic system.",
+          duration: "60 min",
+          faq: [
+        {
+          question: "¿Cuándo puedo empezar los masajes tras la cirugía?",
+          answer:
+            "En general, el drenaje linfático suave puede iniciarse a partir de las 48–72 horas post operatorio, previa autorización del cirujano. El trabajo anti-fibrosis se recomienda a partir de la 3ª–4ª semana. En tu primera valoración te indicamos el protocolo exacto según tu caso.",
+        },
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "El número varía según el tipo de cirugía y tu evolución personal. En casos de liposucción o abdominoplastia se recomiendan entre 10 y 15 sesiones. Para cirugías más pequeñas, entre 5 y 8 pueden ser suficientes.",
+        },
+        {
+          question: "¿Es doloroso el masaje post operatorio?",
+          answer:
+            "El drenaje linfático es una técnica muy suave y no debe causar dolor. El trabajo anti-fibrosis puede generar algo de molestia en zonas muy endurecidas, pero siempre adaptamos la presión a tu tolerancia.",
+        },
+        {
+          question: "¿Para qué cirugías está indicado?",
+          answer:
+            "Liposucción, abdominoplastia, mamoplastia, rinoplastia, bichectomía, lifting, cirugía bariátrica y cualquier intervención que genere inflamación o fibrosis. Si tienes dudas sobre tu caso específico, consúltanos.",
+        },
+      ],
+    },
+      ],
+    },
   },
   {
-    slug: "masaje-maxilofacial",
-    name: "Masaje Maxilofacial en Turrialba | Relajación Facial Profunda",
-    fullTitle: "Masaje Maxilofacial en Turrialba | Relajación Facial Profunda y Bienestar Integral",
-    tagline: "Libera tensión, regálate un momento de bienestar",
-    heroDescription: "¿Sientes tensión en el rostro, mandíbula cargada o simplemente deseas regalarte un momento de relajación y autocuidado?<br /><br />En MJ Estética & Wellness Center hemos desarrollado una experiencia de masaje maxilofacial en Turrialba enfocada en promover bienestar facial, relajación muscular y una sensación profunda de descanso físico y emocional.",
-    benefits: [
-      "Relajación facial profunda",
-      "Alivio de la tensión mandibular",
-      "Bienestar muscular facial",
-      "Experiencia wellness premium",
-      "Relajación física y emocional",
-      "Momento de autocuidado personal"
-    ],
-    items: [
-      {
-        title: "Sesión Masaje Maxilofacial",
-        description: "Protocolo personalizado de masaje facial orientado a la relajación profunda y armonización muscular.",
-        duration: "60 min",
-        price: "Consultar precio"
-      }
-    ],
-    faq: [
-      {
-        question: "¿Qué se siente durante la sesión?",
-        answer: "Generalmente se percibe como una experiencia relajante, confortable y de profundo descanso."
-      },
-      {
-        question: "¿Cuánto dura una cita?",
-        answer: "La duración puede variar según el protocolo, habitualmente entre 45 y 60 minutos."
-      },
-      {
-        question: "¿Es personalizado?",
-        answer: "Sí. Adaptamos cada sesión a las necesidades individuales de cada cliente y su nivel de tensión."
-      },
-      {
-        question: "¿Puedo combinarlo con otros faciales?",
-        answer: "Sí, es el complemento ideal para una limpieza facial o tratamiento de hidratación para potenciar la relajación."
-      }
-    ]
+    es: {
+      slug: "depilacion-laser",
+      name: "Depilación Láser",
+      tagline: "Piel lisa para siempre, con tecnología avanzada",
+      heroDescription:
+        "Depilación Láser en Turrialba | MJ Estética & Wellness Center<br />Despídete del vello… y vuelve a sentirte cómoda con tu piel<br /><br />Reduce progresivamente el crecimiento del vello, evita irritación constante y luce una piel más suave y uniforme con tecnología de depilación láser profesional en MJ Estética & Wellness Center en Turrialba.",
+      benefits: [
+        "Eliminación permanente del vello",
+        "Piel suave y sin irritaciones",
+        "Ahorro a largo plazo frente a otros métodos",
+        "Tratamiento rápido y cómodo",
+        "Resultados visibles desde las primeras sesiones",
+      ],
+      items: [
+        {
+          title: "Depilación Facial",
+          description:
+            "Tratamiento para labio superior, mentón, patillas y cuello. Elimina el vello de forma progresiva y definitiva.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Axila / Zona Bikini",
+          description:
+            "Zonas delicadas tratadas con máxima precisión y confort. Resultados permanentes con protocolo de 6-8 sesiones.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Piernas Completas",
+          description:
+            "Tratamiento completo de piernas desde las ingles hasta los tobillos. Incluye rodillas y partes posteriores.",
+          duration: "60-90 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Cuerpo Completo",
+          description:
+            "Protocolo integral para la eliminación del vello en todo el cuerpo. El paquete más completo con mayor ahorro.",
+          duration: "120 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuántas sesiones son necesarias?",
+          answer:
+            "Generalmente entre 6 y 8 sesiones, separadas de 4 a 8 semanas, dependiendo de la zona y el tipo de vello. Algunas personas requieren sesiones de mantenimiento posteriores.",
+        },
+        {
+          question: "¿El tratamiento es doloroso?",
+          answer:
+            "La sensación es mínima, similar a un ligero picor o calor. Nuestro equipo dispone de sistema de enfriamiento integrado para maximizar el confort durante el tratamiento.",
+        },
+        {
+          question: "¿Hay alguna contraindicación?",
+          answer:
+            "No está indicado durante el embarazo, si se toma fotosensibilizantes o con bronceado activo. En la consulta previa evaluamos tu caso de forma personalizada.",
+        },
+      ],
+    },
+    en: {
+      slug: "laser-hair-removal",
+      name: "Laser Hair Removal",
+      tagline: "Smooth skin forever, with advanced technology",
+      heroDescription:
+        "Laser Hair Removal in Turrialba | MJ Estética & Wellness Center<br />Say goodbye to hair… and feel comfortable in your skin again<br /><br />Progressively reduce hair growth, avoid constant irritation and show off smoother, more even skin with professional laser hair removal technology at MJ Estética & Wellness Center in Turrialba.",
+      benefits: [
+        "Permanent hair removal",
+        "Smooth skin without irritation",
+        "Long-term savings compared to other methods",
+        "Fast and comfortable treatment",
+        "Visible results from the first sessions",
+      ],
+      items: [
+        {
+          title: "Facial Hair Removal",
+          description: "Treatment for upper lip, chin, sideburns and neck.",
+          duration: "30 min",
+          faq: [
+        {
+          question: "¿Cuántas sesiones son necesarias?",
+          answer:
+            "Generalmente entre 6 y 8 sesiones, separadas de 4 a 8 semanas, dependiendo de la zona y el tipo de vello. Algunas personas requieren sesiones de mantenimiento posteriores.",
+        },
+        {
+          question: "¿El tratamiento es doloroso?",
+          answer:
+            "La sensación es mínima, similar a un ligero picor o calor. Nuestro equipo dispone de sistema de enfriamiento integrado para maximizar el confort durante el tratamiento.",
+        },
+        {
+          question: "¿Hay alguna contraindicación?",
+          answer:
+            "No está indicado durante el embarazo, si se toma fotosensibilizantes o con bronceado activo. En la consulta previa evaluamos tu caso de forma personalizada.",
+        },
+      ],
+    },
+      ],
+    },
   },
   {
-    slug: "rejuvenecimiento-facial",
-    name: "Rejuvenecimiento Facial",
-    fullTitle: "Rejuvenecimiento Facial en Turrialba",
-    tagline: "Glow Natural, Armonización Facial y Bienestar Estético Premium",
-    heroDescription: "Glow Natural, Armonización Facial y Bienestar Estético Premium un espacio, Tu piel cuenta tu historia…<br />pero también puede reflejar luminosidad, frescura y bienestar.",
-    benefits: [
-      "Piel más luminosa y revitalizada",
-      "Glow facial progresivo",
-      "Sensación de rejuvenecimiento natural",
-      "Bienestar facial integral",
-      "Resultados personalizados",
-      "Apariencia más fresca y descansada",
-      "Protocolos skincare premium",
-      "Atención estética profesional",
-    ],
-    items: [
-      {
-        title: "Protocolo Rejuvenecimiento Facial",
-        description: "Experiencia personalizada orientada a glow, armonización y bienestar facial.",
-        duration: "Variable",
-        price: "Consultar precio",
-      }
-    ],
-    faq: [
-      {
-        question: "¿Qué es el rejuvenecimiento facial?",
-        answer: "Son protocolos estéticos orientados a apoyar glow facial, bienestar de la piel y rejuvenecimiento progresivo."
-      },
-      {
-        question: "¿Qué beneficios puede aportar?",
-        answer: "Puede apoyar procesos relacionados con luminosidad facial, sensación de renovación y armonización estética."
-      },
-      {
-        question: "¿Qué protocolos utilizan?",
-        answer: "Dependiendo de la valoración personalizada, pueden utilizarse tecnologías y tratamientos skincare avanzados."
-      },
-      {
-        question: "¿Tiene recuperación?",
-        answer: "Cada protocolo es diferente. Durante la valoración explicamos recomendaciones y cuidados posteriores."
-      },
-      {
-        question: "¿Cuántas sesiones se recomiendan?",
-        answer: "Depende de las necesidades individuales y objetivos faciales de cada persona."
-      },
-      {
-        question: "¿Se puede combinar con otros tratamientos?",
-        answer: "Sí, según valoración profesional y protocolo personalizado."
-      },
-      {
-        question: "¿Cuándo se ven resultados?",
-        answer: "Los resultados pueden percibirse progresivamente dependiendo del tratamiento realizado."
-      }
-    ]
+    es: {
+      slug: "limpieza-facial",
+      name: "Limpieza Facial",
+      fullTitle: "Limpieza Facial en Turrialba",
+      tagline: "Glow natural, bienestar facial y skincare premium",
+      heroDescription:
+        "En MJ Estética & Wellness Center entendemos que una limpieza facial no se trata solo de “limpiar la piel”.<br />Se trata de ayudarte a recuperar frescura, glow natural y bienestar facial mediante protocolos personalizados y una experiencia skincare premium en Turrialba.",
+      benefits: [
+        "Valoración facial personalizada",
+        "Protocolos adaptados según tu tipo de piel",
+        "Experiencia relajante y profesional",
+        "Productos especializados skincare",
+        "Atención enfocada en bienestar y luminosidad facial",
+        "Glow y luminosidad facial",
+        "Sensación de limpieza profunda",
+        "Bienestar general de la piel",
+        "Apariencia más fresca y revitalizada",
+        "Textura facial más uniforme",
+        "Rutinas de skincare personalizadas",
+        "Cuidado facial preventivo",
+        "Sensación de hidratación y frescura",
+      ],
+      items: [
+        {
+          title: "Limpieza facial profunda",
+          description:
+            "Ideal para quienes buscan una sensación de limpieza intensiva y renovación facial.",
+          features: [
+            "Limpieza profesional",
+            "Bienestar facial",
+            "Sensación de frescura profunda",
+          ],
+          linkText: "Consulta disponibilidad",
+        },
+        {
+          title: "Limpieza facial hidratante",
+          description:
+            "Pensada para pieles que buscan hidratación, suavidad y luminosidad natural.",
+          features: [
+            "Glow saludable",
+            "Sensación de hidratación",
+            "Apariencia revitalizada",
+          ],
+          linkText: "Agenda tu valoración facial",
+        },
+        {
+          title: "Facial premium glow",
+          description:
+            "Una experiencia skincare orientada al bienestar, relajación y luminosidad facial.",
+          features: [
+            "Experiencia wellness",
+            "Productos especializados",
+            "Cuidado facial premium",
+          ],
+          linkText: "Descubre el protocolo ideal para tu piel",
+        },
+        {
+          title: "Protocolos skincare avanzados",
+          description:
+            "Tratamientos personalizados según necesidades específicas evaluadas profesionalmente.",
+          features: [
+            "Valoración individual",
+            "Protocolos personalizados",
+            "Seguimiento profesional",
+          ],
+          linkText: "Escríbenos por WhatsApp",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué incluye una limpieza facial?",
+          answer:
+            "Incluye valoración facial, limpieza profesional, protocolo personalizado y recomendaciones posteriores.",
+        },
+        {
+          question: "¿Cada cuánto se recomienda?",
+          answer:
+            "Depende del tipo de piel y objetivos individuales. La frecuencia ideal se define en valoración.",
+        },
+        {
+          question: "¿Ayuda con glow facial?",
+          answer:
+            "Muchas personas buscan este tratamiento para apoyar luminosidad y bienestar facial.",
+        },
+        {
+          question: "¿Tiene recuperación?",
+          answer:
+            "Generalmente las personas continúan sus actividades normales el mismo día.",
+        },
+        {
+          question: "¿Qué productos utilizan?",
+          answer:
+            "Utilizamos productos especializados seleccionados según las necesidades de cada piel.",
+        },
+        {
+          question: "¿Se puede combinar con otros tratamientos faciales?",
+          answer:
+            "Sí, dependiendo de la valoración profesional y objetivos skincare.",
+        },
+        {
+          question: "¿Cuánto dura la sesión?",
+          answer: "Entre 60 y 90 minutos aproximadamente.",
+        },
+        {
+          question: "¿Qué cuidados posteriores se recomiendan?",
+          answer:
+            "Hidratación, protector solar y seguimiento de recomendaciones profesionales.",
+        },
+        {
+          question: "¿Duele una limpieza facial?",
+          answer:
+            "Puede haber una ligera molestia al extraer impurezas, pero es un proceso diseñado para ser relajante, profesional y cómodo.",
+        },
+        {
+          question: "¿Puedo maquillarme después del tratamiento?",
+          answer:
+            "Recomendamos esperar 24 horas para permitir que la piel se recupere y absorba mejor los nutrientes y productos aplicados.",
+        },
+        {
+          question: "¿Qué es una limpieza facial?",
+          answer:
+            "Es un tratamiento skincare diseñado para apoyar la limpieza profunda, mejorar la frescura facial y favorecer una apariencia más luminosa y revitalizada.",
+        },
+        {
+          question: "¿Cómo funciona el proceso?",
+          answer:
+            "Incluye valoración personalizada, limpieza profesional, aplicación del protocolo skincare específico y recomendaciones de cuidado posterior.",
+        },
+      ],
+    },
+    en: {
+      slug: "facial-cleansing",
+      name: "Facial Cleansing",
+      tagline: "Natural glow, facial well-being and premium skincare",
+      heroDescription:
+        "At MJ Estética & Wellness Center we understand that a facial cleansing is not just about “cleansing the skin”.<br />It's about helping you regain freshness, natural glow and facial well-being through personalized protocols and a premium skincare experience in Turrialba.",
+      benefits: [
+        "Personalized facial assessment",
+        "Adapted protocols according to your skin type",
+        "Relaxing and professional experience",
+        "Specialized skincare products",
+        "Attention focused on well-being and facial luminosity",
+      ],
+      items: [
+        {
+          title: "Deep Facial Cleansing",
+          description: "Ideal for those looking for a feeling of intensive cleansing and facial renewal.",
+          faq: [
+        {
+          question: "¿Qué incluye una limpieza facial?",
+          answer:
+            "Incluye valoración facial, limpieza profesional, protocolo personalizado y recomendaciones posteriores.",
+        },
+        {
+          question: "¿Cada cuánto se recomienda?",
+          answer:
+            "Depende del tipo de piel y objetivos individuales. La frecuencia ideal se define en valoración.",
+        },
+        {
+          question: "¿Ayuda con glow facial?",
+          answer:
+            "Muchas personas buscan este tratamiento para apoyar luminosidad y bienestar facial.",
+        },
+        {
+          question: "¿Tiene recuperación?",
+          answer:
+            "Generalmente las personas continúan sus actividades normales el mismo día.",
+        },
+        {
+          question: "¿Qué productos utilizan?",
+          answer:
+            "Utilizamos productos especializados seleccionados según las necesidades de cada piel.",
+        },
+        {
+          question: "¿Se puede combinar con otros tratamientos faciales?",
+          answer:
+            "Sí, dependiendo de la valoración profesional y objetivos skincare.",
+        },
+        {
+          question: "¿Cuánto dura la sesión?",
+          answer: "Entre 60 y 90 minutos aproximadamente.",
+        },
+        {
+          question: "¿Qué cuidados posteriores se recomiendan?",
+          answer:
+            "Hidratación, protector solar y seguimiento de recomendaciones profesionales.",
+        },
+        {
+          question: "¿Duele una limpieza facial?",
+          answer:
+            "Puede haber una ligera molestia al extraer impurezas, pero es un proceso diseñado para ser relajante, profesional y cómodo.",
+        },
+        {
+          question: "¿Puedo maquillarme después del tratamiento?",
+          answer:
+            "Recomendamos esperar 24 horas para permitir que la piel se recupere y absorba mejor los nutrientes y productos aplicados.",
+        },
+        {
+          question: "¿Qué es una limpieza facial?",
+          answer:
+            "Es un tratamiento skincare diseñado para apoyar la limpieza profunda, mejorar la frescura facial y favorecer una apariencia más luminosa y revitalizada.",
+        },
+        {
+          question: "¿Cómo funciona el proceso?",
+          answer:
+            "Incluye valoración personalizada, limpieza profesional, aplicación del protocolo skincare específico y recomendaciones de cuidado posterior.",
+        },
+      ],
+    },
+      ],
+    },
   },
   {
-    slug: "microagujas-melanout",
-    name: "Microneedling con MelanOut en Turrialba",
-    fullTitle: "Microneedling con MelanOut en Turrialba | Tratamiento para Manchas, Melasma y Rejuvenecimiento Facial",
-    tagline: "Recupera la uniformidad y luminosidad de tu piel",
-    heroDescription: "¿Te gustaría lucir una piel más luminosa, uniforme y saludable?<br /><br />En MJ Estética & Wellness Center hemos desarrollado protocolos personalizados de Microneedling con MelanOut en Turrialba, diseñados para apoyar tratamientos despigmentantes, mejorar la apariencia de la textura facial y potenciar la luminosidad natural de la piel.",
-    benefits: [
-      "Glow facial natural y luminoso",
-      "Apoyo en protocolos despigmentantes",
-      "Mejora visible de la textura facial",
-      "Reducción de apariencia de manchas",
-      "Rejuvenecimiento facial progresivo",
-      "Complemento ideal para rutina skincare"
-    ],
-    items: [
-      {
-        title: "Protocolo MelanOut Facial",
-        description: "Sesión avanzada de microneedling con activos despigmentantes MelanOut para mejorar tono y textura.",
-        duration: "60-90 min",
-        price: "Consultar precio"
-      }
-    ],
-    faq: [
-      {
-        question: "¿El Microneedling con MelanOut ayuda con manchas faciales?",
-        answer: "Puede formar parte de protocolos despigmentantes personalizados orientados a mejorar la apariencia de manchas y tono desigual."
-      },
-      {
-        question: "¿Cuántas sesiones se recomiendan?",
-        answer: "La cantidad varía según cada piel y los objetivos definidos durante la valoración."
-      },
-      {
-        question: "¿Cuándo se observan resultados?",
-        answer: "Muchas personas comienzan a notar cambios progresivos conforme avanzan las sesiones."
-      },
-      {
-        question: "¿Tiene tiempo de recuperación?",
-        answer: "Generalmente es mínimo, aunque puede variar según la sensibilidad de cada persona (enrojecimiento leve temporal)."
-      }
-    ]
+    es: {
+      slug: "limpieza-facial-profunda",
+      name: "Limpieza Facial Profunda",
+      tagline: "Limpieza intensiva y renovación facial",
+      heroDescription:
+        "Nuestra limpieza facial profunda está diseñada para quienes buscan una renovación completa de la piel, eliminando impurezas acumuladas y devolviendo la vitalidad perdida.",
+      benefits: [
+        "Eliminación profunda de impurezas",
+        "Renovación celular visible",
+        "Piel más suave y receptiva a productos",
+      ],
+      items: [
+        {
+          title: "Extracción y Purificación",
+          description:
+            "Proceso detallado de eliminación de puntos negros y comedones.",
+        },
+      ],
+    },
+    en: {
+      slug: "limpieza-facial-profunda",
+      name: "Limpieza Facial Profunda",
+      tagline: "Limpieza intensiva y renovación facial",
+      heroDescription: "Nuestra limpieza facial profunda está diseñada para quienes buscan una renovación completa de la piel, eliminando impurezas acumuladas y devolviendo la vitalidad perdida.",
+      benefits: [
+        "Eliminación profunda de impurezas",
+        "Renovación celular visible",
+        "Piel más suave y receptiva a productos",
+      ],
+      items: [
+        {
+          title: "Extracción y Purificación",
+          description:
+            "Proceso detallado de eliminación de puntos negros y comedones.",
+        },
+      ],
+    },
   },
   {
-    slug: "microagujas-vitamina-c",
-    heroBg: "microagujas-vitamina-c-bg.jpg",
-    name: "Microagujas con Vitamina C",
-    fullTitle: "Microagujas con Vitamina C en Turrialba",
-    tagline: "Glow facial, luminosidad natural y rejuvenecimiento progresivo",
-    heroDescription: "Glow facial, luminosidad natural y rejuvenecimiento progresivo",
-    benefits: [
-      "Glow facial progresivo",
-      "Sensación de renovación",
-      "Apariencia más luminosa",
-      "Textura facial más uniforme",
-      "Rejuvenecimiento natural y gradual",
-    ],
-    items: [
-      {
-        title: "Protocolo Vitamina C Premium",
-        description: "Sesión de microagujas con aplicación de vitamina C para máxima luminosidad.",
-        duration: "75 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Qué son las microagujas con vitamina C?",
-        answer: "Es un protocolo facial que combina microneedling con vitamina C orientado a apoyar glow, textura uniforme y bienestar de la piel.",
-      },
-    ],
+    es: {
+      slug: "limpieza-facial-hidratante",
+      name: "Limpieza Facial Hidratante",
+      tagline: "Hidratación, suavidad y luminosidad natural",
+      heroDescription:
+        "Protocolo ideal para pieles secas o deshidratadas que necesitan recuperar su equilibrio hídrico y lucir un glow saludable.",
+      benefits: [
+        "Hidratación profunda",
+        "Suavidad inmediata",
+        "Luminosidad natural recuperada",
+      ],
+      items: [
+        {
+          title: "Nutrición Hídrica",
+          description:
+            "Aplicación de activos altamente hidratantes para calmar y nutrir la piel.",
+        },
+      ],
+    },
+    en: {
+      slug: "limpieza-facial-hidratante",
+      name: "Limpieza Facial Hidratante",
+      tagline: "Hidratación, suavidad y luminosidad natural",
+      heroDescription: "Protocolo ideal para pieles secas o deshidratadas que necesitan recuperar su equilibrio hídrico y lucir un glow saludable.",
+      benefits: [
+        "Hidratación profunda",
+        "Suavidad inmediata",
+        "Luminosidad natural recuperada",
+      ],
+      items: [
+        {
+          title: "Nutrición Hídrica",
+          description:
+            "Aplicación de activos altamente hidratantes para calmar y nutrir la piel.",
+        },
+      ],
+    },
   },
   {
-    slug: "adn-salmon",
-    name: "ADN de Salmón",
-    tagline: "Regeneración celular profunda para una piel radiante",
-    heroDescription: "✨ EL SECRETO COREANO QUE ESTÁ REVOLUCIONANDO EL REJUVENECIMIENTO FACIAL YA LLEGÓ A TURRIALBA ✨<br /><br />¿Te imaginas despertar con una piel más luminosa, hidratada y rejuvenecida… sin cirugías ni cambios artificiales?<br /><br />Eso es exactamente lo que muchas personas están logrando gracias al tratamiento de ADN de Salmón, una de las terapias más innovadoras en medicina estética avanzada.<br /><br />Y ahora puedes vivirlo en MJ Estética Wellness Center.<br /><br />👇",
-    benefits: [
-      "Rejuvenece la piel de forma natural",
-      "Mejora líneas finas y signos tempranos de envejecimiento",
-      "Estimula colágeno y elasticidad",
-      "Aporta hidratación profunda",
-      "Mejora textura y luminosidad",
-      "Ayuda a revitalizar piel cansada o estresada",
-      "Efecto “glow” saludable y elegante"
-    ],
-    items: [
-      {
-        title: "ADN de Salmón Facial",
-        description:
-          "Microinyecciones de PDRN en todo el rostro para estimular la producción de colágeno, mejorar la hidratación y recuperar el aspecto joven y luminoso de la piel. Indicado para pieles apagadas, con falta de firmeza o deshidratadas.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "ADN de Salmón Ocular",
-        description:
-          "Protocolo específico para el contorno de ojos: reduce ojeras, bolsas, patas de gallo y la apariencia de cansancio. Una de las zonas que más se beneficia de la regeneración con PDRN.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "ADN de Salmón + Mesoterapia",
-        description:
-          "Combinación de PDRN con cóctel de vitaminas y ácido hialurónico no reticulado para una regeneración máxima. Resultados más visibles y duraderos desde la primera sesión.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "ADN de Salmón Capilar",
-        description:
-          "Aplicación en cuero cabelludo para estimular los folículos pilosos, frenar la caída del cabello y mejorar la densidad y calidad capilar. Ideal como complemento a tratamientos de alopecia.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Es doloroso el tratamiento?",
-        answer:
-          "Se utilizan agujas muy finas y podemos aplicar crema anestésica tópica previamente. La molestia es mínima — la mayoría de las pacientes lo describen como pequeños pellizcos rápidos que se toleran sin problema.",
-      },
-      {
-        question: "¿Cuántas sesiones necesito?",
-        answer:
-          "Para resultados óptimos recomendamos entre 3 y 4 sesiones, con una separación de 2 a 3 semanas entre cada una. Posteriormente, una sesión de mantenimiento cada 3–6 meses es suficiente.",
-      },
-      {
-        question: "¿Cuándo se notan los resultados?",
-        answer:
-          "Desde la primera sesión se aprecia mayor luminosidad e hidratación. Los cambios más significativos en textura, firmeza y arrugas finas se observan a partir de la 2ª–3ª sesión.",
-      },
-      {
-        question: "¿En qué se diferencia del ácido hialurónico?",
-        answer:
-          "El ácido hialurónico rellena y volumiza. El ADN de Salmón actúa a nivel celular regenerando los tejidos y estimulando tu propio colágeno. Son tratamientos complementarios que con frecuencia se combinan para resultados superiores.",
-      },
-    ],
-  },
-
-  // ── PIERNAS ────────────────────────────────────────
-  {
-    slug: "piernas-cansadas",
-    name: "Cuidado de Piernas Cansadas",
-    tagline: "Piernas ligeras, activas y sin pesadez",
-    heroDescription:
-      "La sensación de pesadez, hinchazón y cansancio en las piernas es muy frecuente y puede mejorar significativamente con tratamientos especializados que activan la circulación y el drenaje linfático.",
-    benefits: [
-      "Alivio inmediato de la pesadez y el dolor",
-      "Reducción de la hinchazón en piernas y tobillos",
-      "Mejora de la circulación venosa y linfática",
-      "Tratamientos relajantes y no invasivos",
-      "Prevención de retención de líquidos",
-    ],
-    items: [
-      {
-        title: "Masaje Circulatorio de Piernas",
-        description:
-          "Masaje específico que activa la circulación venosa de retorno y favorece el drenaje de toxinas acumuladas en las piernas.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Presoterapia de Piernas",
-        description:
-          "Botas de presión neumática que comprimen y descomprimen las piernas de forma progresiva para estimular el drenaje linfático y venoso.",
-        duration: "40 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Electro-estimulación Circulatoria",
-        description:
-          "Corrientes de baja frecuencia que activan los músculos de la pantorrilla, mejorando el retorno venoso y reduciendo la sensación de pesadez.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Protocolo Completo Piernas Cansadas",
-        description:
-          "Sesión combinada de presoterapia, masaje circulatorio y aplicación de activos vasotónicos para un resultado global y duradero.",
-        duration: "90 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Con qué frecuencia debo hacer el tratamiento?",
-        answer:
-          "Para mantenimiento, una sesión semanal o quincenal. En épocas de mayor estrés circulatorio (verano, trabajo de pie) se puede intensificar la frecuencia.",
-      },
-    ],
-  },
-
-  // ── MÉDICOS ESTÉTICOS NUEVOS ───────────────────────
-  {
-    slug: "acido-hialuronico",
-    name: "Ácido Hialurónico",
-    tagline: "Volumen, hidratación y relleno natural",
-    heroDescription:
-      "El ácido hialurónico es un componente natural de la piel que se reduce con la edad. Su aplicación mediante infiltración restituye el volumen perdido, rellena arrugas profundas y mejora la hidratación cutánea de forma natural y duradera.",
-    benefits: [
-      "Resultados inmediatos y de aspecto completamente natural",
-      "Relleno de arrugas y recuperación de volúmenes faciales",
-      "Sin cirugía; procedimiento mínimamente invasivo",
-      "Producto biodegradable y reabsorbible",
-      "Efecto hidratante profundo desde dentro",
-    ],
-    items: [
-      {
-        title: "Relleno de Surcos Nasogenianos",
-        description:
-          "Suavizado de los pliegues entre nariz y comisuras labiales (arrugas de amargura) para un aspecto más descansado y joven.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Relleno de Ojeras",
-        description:
-          "Corrección del surco lagrimal y la ojera hundida para eliminar el aspecto de cansancio y oscurecer la zona periocular.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Hidratación Profunda con Bioestimuladores",
-        description:
-          "Ácido hialurónico de baja densidad infiltrado en múltiples puntos para mejorar la hidratación, luminosidad y calidad de la piel.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Remodelación del Óvalo Facial",
-        description:
-          "Aumento y definición de pómulos, mentón y mandíbula mediante rellenos estratégicos para un efecto lifting no quirúrgico.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuánto dura el ácido hialurónico?",
-        answer:
-          "Depende de la zona y el producto utilizado. Por norma general dura entre 9 y 18 meses en zonas estáticas como los pómulos, y algo menos en zonas con mayor movimiento como los labios.",
-      },
-      {
-        question: "¿El resultado es natural?",
-        answer:
-          "Sí, cuando es aplicado por un profesional capacitado. El objetivo es realzar los rasgos propios sin alterar la expresión natural.",
-      },
-    ],
+    es: {
+      slug: "microdermoabrasion",
+      name: "Microdermoabrasión",
+      fullTitle: "Facial de Microdermoabrasión en Turrialba",
+      tagline:
+        "Renueva la textura, luminosidad y frescura natural de tu piel con una experiencia premium de skincare avanzado",
+      heroDescription:
+        "¿Sientes tu piel opaca, con textura irregular o sin ese glow saludable que deseas?<br />El Facial de Microdermoabrasión de MJ Estética & Wellness Center está diseñado para apoyar protocolos de renovación facial mediante exfoliación profesional y atención personalizada orientada a mejorar la apariencia, luminosidad y bienestar de tu piel.",
+      benefits: [
+        "Piel más luminosa",
+        "Sensación de frescura facial",
+        "Textura más uniforme",
+        "Glow natural progresivo",
+        "Experiencia wellness premium",
+      ],
+      items: [
+        {
+          title: "Protocolo Microdermoabrasión",
+          description:
+            "Tratamiento de exfoliación profesional orientado a renovación y revitalización de la piel.",
+          duration: "45-60 min",
+          linkText: "Escríbenos por WhatsApp",
+        },
+      ],
+      faq: [
+        {
+          question: "¿La microdermoabrasión duele?",
+          answer:
+            "Generalmente es un procedimiento confortable y bien tolerado.",
+        },
+        {
+          question: "¿Cuándo se ven resultados?",
+          answer:
+            "Muchas personas notan sensación de frescura y luminosidad desde las primeras sesiones, aunque los resultados pueden variar según cada piel.",
+        },
+        {
+          question: "¿Ayuda con textura facial?",
+          answer:
+            "El tratamiento está orientado a apoyar protocolos de renovación facial y apariencia más uniforme de la piel.",
+        },
+        {
+          question: "¿Tiene tiempo de recuperación?",
+          answer:
+            "Normalmente las personas continúan sus actividades habituales siguiendo recomendaciones de hidratación y protección solar.",
+        },
+        {
+          question: "¿Se puede combinar con otros faciales?",
+          answer:
+            "Sí, dependiendo de la valoración profesional y objetivos skincare.",
+        },
+        {
+          question: "¿Cuántas sesiones se recomiendan?",
+          answer:
+            "Cada protocolo es personalizado según las necesidades individuales de la piel.",
+        },
+      ],
+    },
+    en: {
+      slug: "microdermabrasion",
+      name: "Microdermabrasion",
+      tagline: "Renew the texture, luminosity and natural freshness of your skin",
+      heroDescription:
+        "Our Microdermabrasion treatment is designed to support facial renewal protocols through professional exfoliation and personalized care.",
+      benefits: [
+        "Brighter skin",
+        "Sensation of facial freshness",
+        "More uniform texture",
+        "Progressive natural glow",
+        "Premium wellness experience",
+      ],
+      items: [
+        {
+          title: "Microdermabrasion Protocol",
+          description: "Professional exfoliation treatment oriented towards skin renewal.",
+          duration: "45-60 min",
+          faq: [
+        {
+          question: "¿La microdermoabrasión duele?",
+          answer:
+            "Generalmente es un procedimiento confortable y bien tolerado.",
+        },
+        {
+          question: "¿Cuándo se ven resultados?",
+          answer:
+            "Muchas personas notan sensación de frescura y luminosidad desde las primeras sesiones, aunque los resultados pueden variar según cada piel.",
+        },
+        {
+          question: "¿Ayuda con textura facial?",
+          answer:
+            "El tratamiento está orientado a apoyar protocolos de renovación facial y apariencia más uniforme de la piel.",
+        },
+        {
+          question: "¿Tiene tiempo de recuperación?",
+          answer:
+            "Normalmente las personas continúan sus actividades habituales siguiendo recomendaciones de hidratación y protección solar.",
+        },
+        {
+          question: "¿Se puede combinar con otros faciales?",
+          answer:
+            "Sí, dependiendo de la valoración profesional y objetivos skincare.",
+        },
+        {
+          question: "¿Cuántas sesiones se recomiendan?",
+          answer:
+            "Cada protocolo es personalizado según las necesidades individuales de la piel.",
+        },
+      ],
+    },
+      ],
+    },
   },
   {
-    slug: "biorevitalizacion",
-    name: "Biorevitalización",
-    tagline: "Revitaliza tu piel desde dentro",
-    heroDescription:
-      "La biorevitalización es un tratamiento médico estético que consiste en la infiltración de vitaminas, aminoácidos, oligoelementos y ácido hialurónico no reticulado directamente en la dermis para restaurar la vitalidad, elasticidad y luminosidad de la piel.",
-    benefits: [
-      "Mejora visible de la calidad y textura de la piel",
-      "Aumento de la luminosidad y el tono cutáneo",
-      "Hidratación profunda y duradera",
-      "Estimulación natural del colágeno",
-      "Apto para cara, cuello, escote y manos",
-    ],
-    items: [
-      {
-        title: "Biorevitalización Facial",
-        description:
-          "Infiltración de cocktail vitamínico y ácido hialurónico no reticulado en cara y cuello para restaurar la luminosidad y vitalidad de la piel.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Biorevitalización de Cuello y Escote",
-        description:
-          "Tratamiento específico para rejuvenecer y mejorar la calidad de la piel del cuello y el escote, zonas que suelen envejecer antes.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Biorevitalización de Manos",
-        description:
-          "Las manos son una de las zonas que más delatan la edad. Este tratamiento restaura la hidratación, el volumen y la textura de la piel de las manos.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuántas sesiones son necesarias?",
-        answer:
-          "Para resultados óptimos se recomiendan 3–4 sesiones con 2–3 semanas de separación, seguidas de sesiones de mantenimiento cada 3–6 meses.",
-      },
-      {
-        question: "¿Hay tiempo de recuperación?",
-        answer:
-          "Pueden aparecer pequeñas ronchas o enrojecimiento en los puntos de infiltración que desaparecen en pocas horas. No impide realizar las actividades habituales.",
-      },
-    ],
-  },
-
-  // ── CARBOXITERAPIA ─────────────────────────────────
-  {
-    slug: "carboxiterapia",
-    name: "Carboxiterapia",
-    tagline: "La potencia del CO₂ para renovar y rejuvenecer tu cuerpo",
-    heroBg: "carboxiterapia-bg.webp",
-    heroDescription:
-      "Descubre una piel con apariencia más uniforme y un bienestar corporal más integral <br /> La carboxiterapia es uno de los tratamientos wellness y médico-estéticos más buscados por personas que desean complementar sus objetivos corporales y faciales con protocolos personalizados, naturales y progresivos.",
-    benefits: [
-      "Elimina la celulitis y la grasa localizada de forma eficaz",
-      "Estimula la producción natural de colágeno y elastina",
-      "Mejora la circulación y oxigenación del tejido",
-      "Reafirma y tensa la piel de forma duradera",
-      "Tratamiento corporal y facial: cara, cuello, abdomen, muslos",
-      "Sin anestesia general ni tiempo de inactividad",
-    ],
-    items: [
-      {
-        title: "Carboxiterapia Corporal",
-        description:
-          "Aplicación de CO₂ en zonas corporales (abdomen, flancos, muslos, glúteos) para reducir la celulitis, afinar la silueta y mejorar la textura de la piel. Protocolo intensivo con resultados progresivos y acumulativos.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Carboxiterapia Facial y de Cuello",
-        description:
-          "Inyecciones superficiales de CO₂ en rostro, cuello y escote para estimular la renovación celular, mejorar el tono y reducir ojeras y surcos. Efecto lifting inmediato y mejora progresiva de la calidad de la piel.",
-        duration: "35 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Carboxiterapia para Estrias",
-        description:
-          "Protocolo específico con microinyecciones de CO₂ en la zona de estrías para estimular la síntesis de colágeno, mejorar la vascularización y reducir la visibilidad de estrías tanto blancas como rojas.",
-        duration: "40 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Duele la carboxiterapia?",
-        answer:
-          "Las microinyecciones producen una ligera sensación de presión o calor que desaparece en segundos. La mayoría de las clientas lo describen como completamente tolerable. No se requiere anestesia.",
-      },
-      {
-        question: "¿Cuántas sesiones son necesarias?",
-        answer:
-          "Para resultados óptimos recomendamos entre 8 y 12 sesiones (2 por semana). Los cambios en circulación y textura de piel se notan desde las primeras 3-4 sesiones. Posteriormente se realizan sesiones de mantenimiento mensuales.",
-      },
-      {
-        question: "¿Tiene contraindicaciones?",
-        answer:
-          "No es apta para personas con enfermedades cardiovasculares graves, embarazo o epilepsia. En la valoración inicial revisamos tu historial para garantizar que el tratamiento sea seguro y adecuado para ti.",
-      },
-    ],
-  },
-
-  // ── LEVANTAMIENTO DE GLÚTEO ─────────────────────────
-  {
-    slug: "levantamiento-gluteo",
-    name: "Levantamiento de Glúteo en Turrialba",
-    tagline: "Glúteos firmes y elevados sin cirugía ni implantes",
-    heroBg: "levantamiento-gluteo-bg.webp",
-    heroDescription:
-      "Mejora la apariencia, firmeza y proyección de tus glúteos con un enfoque natural, armónico y personalizado",
-    benefits: [
-      "Apariencia más firme y tonificada",
-      "Mejor proyección visual de los glúteos",
-      "Contorno corporal más armónico",
-      "Complemento ideal para ejercicio y wellness corporal",
-      "Resultados progresivos y naturales",
-      "Sensación de mayor seguridad y confianza corporal",
-      "Protocolos personalizados según objetivos",
-      "Mejor armonización estética corporal"
-    ],
-    items: [
-      {
-        title: "Radiofrecuencia Glútea Focalizada",
-        description:
-          "Calor controlado en profundidad que estimula la síntesis de colágeno y reafirma el tejido cutáneo, consiguiendo un efecto lifting visible y una piel más tersa sobre los glúteos.",
-        duration: "50 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Electroestimulación Muscular Glútea",
-        description:
-          "Corrientes de alta frecuencia que generan contracciones musculares intensas equivalentes a cientos de abdominales. Tonifica, define y da volumen de forma segura y progresiva.",
-        duration: "40 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Protocolo Completo Lifting Glúteo",
-        description:
-          "Combinación de radiofrecuencia + electroestimulación + carboxiterapia en una sola sesión para maximizar el efecto lifting, la firmeza y el volumen. El protocolo estrella de nuestro servicio.",
-        duration: "75 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿El levantamiento de glúteo es invasivo?",
-        answer: "Depende del protocolo recomendado. Durante la valoración corporal explicamos todas las opciones disponibles y cuál se adapta mejor a tus objetivos."
-      },
-      {
-        question: "¿Cuándo se ven resultados?",
-        answer: "Muchas pacientes comienzan a notar cambios progresivos conforme avanzan las sesiones y se complementan hábitos saludables."
-      },
-      {
-        question: "¿Los resultados son naturales?",
-        answer: "Sí. Nuestro enfoque prioriza armonización corporal y apariencia estética natural."
-      },
-      {
-        question: "¿Se puede combinar con ejercicio?",
-        answer: "Sí. De hecho, muchas pacientes utilizan el tratamiento como complemento wellness corporal."
-      },
-      {
-        question: "¿Cuántas sesiones necesito?",
-        answer: "Cada cuerpo es diferente. La cantidad ideal se define durante la evaluación personalizada."
-      },
-      {
-        question: "¿Tiene tiempo de recuperación?",
-        answer: "Muchos protocolos permiten retomar actividades habituales rápidamente."
-      },
-      {
-        question: "¿Ayuda con firmeza?",
-        answer: "Uno de los principales objetivos es contribuir a mejorar la apariencia de firmeza y proyección corporal."
-      },
-      {
-        question: "¿Qué cuidados debo tener?",
-        answer: "Te brindaremos recomendaciones específicas según el protocolo aplicado y tus objetivos corporales."
-      }
-    ],
-  },
-
-  // ── LEVANTAMIENTO DE BUSTO ──────────────────────────
-  {
-    slug: "levantamiento-busto",
-    name: "Levantamiento de Busto en Turrialba",
-    tagline: "Busto firme, elevado y reafirmado sin cirugía",
-    heroBg: "levantamiento-busto-bg.webp",
-    heroDescription: "Recupera armonía, firmeza y confianza con un enfoque wellness femenino.",
-    benefits: [
-      "Lifting y reafirmación visibles sin cirugía ni implantes",
-      "Mejora la elasticidad y calidad de la piel del escote",
-      "Protocolo adaptado al grado de flacidez y objetivo de cada clienta",
-      "Completamente indoloro y sin tiempo de recuperación",
-      "También mejora la apariencia del escote y la piel de la zona pectoral",
-      "Apto tras lactancia y pérdida de peso",
-    ],
-    items: [
-      {
-        title: "Radiofrecuencia Reafirmante de Busto",
-        description:
-          "Calor profundo con radiofrecuencia que estimula el colágeno y reafirma el tejido conjuntivo del busto y el escote, logrando un efecto lifting progresivo y natural.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Ultrasonidos Focalizados",
-        description:
-          "Tecnología de ultrasonidos que actúa en las capas profundas de la piel para tensar el tejido de soporte del busto, corrigiendo la caída y mejorando el contorno.",
-        duration: "40 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Protocolo Reafirmación Completa Busto y Escote",
-        description:
-          "Sesión combinada de radiofrecuencia + ultrasonidos + masaje reafirmante para tratamiento integral del busto, escote y zona pectoral. Máximo resultado en una sola sesión.",
-        duration: "70 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Funciona si tengo mucha flacidez?",
-        answer:
-          "El tratamiento es eficaz en diferentes grados de flacidez. En casos avanzados, adaptamos el protocolo con más sesiones y combinación de técnicas para obtener el mejor resultado posible sin cirugía.",
-      },
-      {
-        question: "¿Es seguro tras la lactancia?",
-        answer:
-          "Sí, está especialmente indicado para recuperar la firmeza después de la lactancia. Recomendamos esperar al menos 3 meses tras el fin de la lactancia antes de comenzar.",
-      },
-      {
-        question: "¿Cuántas sesiones necesito?",
-        answer:
-          "Para resultados visibles y duraderos recomendamos entre 8 y 10 sesiones, 2 por semana. El mantenimiento mensual ayuda a sostener los resultados a largo plazo.",
-      },
-    ],
-  },
-
-  // ── VENDAS FRÍAS ────────────────────────────────────
-  {
-    slug: "vendas-frias",
-    name: "Vendas Frías",
-    fullTitle: "Vendas Frías en Turrialba",
-    tagline: "Pérdida de centímetros y detox corporal en una sola sesión",
-    heroBg: "vendas-frias-bg.webp",
-    heroDescription:
-      "Sensación de frescura, relajación y bienestar corporal en una experiencia wellness premium",
-    benefits: [
-      "Pérdida de centímetros medible desde la primera sesión",
-      "Reduce la retención de líquidos y la inflamación",
-      "Activa la circulación y el drenaje linfático",
-      "Mejora la textura y firmeza de la piel",
-      "Efecto detox que elimina toxinas acumuladas",
-      "Ideal para preparar el cuerpo para eventos especiales",
-    ],
-    items: [
-      {
-        title: "Vendas Frías Reductoras",
-        description:
-          "Aplicación de vendas impregnadas con activos reductores y drenantes en abdomen, cintura, flancos y muslos. La compresión progresiva y los principios activos actúan en sinergia para afinar la silueta.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Vendas Frías Anticelulíticas",
-        description:
-          "Fórmula específica con activos anticelulíticos (cafeína, centella asiática, L-carnitina) que mejoran el aspecto de piel de naranja y la microcirculación. Indicadas para muslos y glúteos.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Vendas Frías Detox Full Body",
-        description:
-          "Tratamiento corporal completo con vendas en todo el cuerpo para una sesión de detox intensiva. Elimina toxinas, activa el metabolismo y deja la piel suave y luminosa.",
-        duration: "75 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuántos centímetros se pierden en una sesión?",
-        answer:
-          "Los resultados varían según cada persona, pero es habitual perder entre 2 y 6 centímetros medibles en la primera sesión. Con el ciclo completo, la reducción acumulada es significativa y duradera.",
-      },
-      {
-        question: "¿Es un tratamiento adecuado antes de un evento?",
-        answer:
-          "Sí, es uno de los más solicitados para preparar el cuerpo antes de bodas, eventos sociales o épocas de playa. Los resultados son visibles el mismo día del tratamiento.",
-      },
-      {
-        question: "¿Hay que seguir alguna dieta o restricción?",
-        answer:
-          "Recomendamos hidratación abundante antes y después de la sesión para potenciar el efecto drenante. No es necesario seguir una dieta especial, aunque combinar el tratamiento con hábitos saludables mejora los resultados.",
-      },
-    ],
-  },
-
-  // ── MADEROTERAPIA ──────────────────────────────────
-  {
-
-  // ── AURICULOTERAPIA ─────────────────────────────────
-    slug: "auriculoterapia",
-    name: "Auriculoterapia",
-    fullTitle: "Auriculoterapia en Turrialba para Ansiedad, Estrés y Control de Peso",
-    tagline: "El equilibrio del cuerpo a través del oído",
-    heroBg: "auriculoterapia-bg.webp",
-    heroDescription:
-      "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
-    benefits: [
-      "Reduce la ansiedad y el apetito emocional de forma natural",
-      "Apoya el control de peso y los hábitos alimenticios",
-      "Alivia el estrés crónico y mejora la calidad del sueño",
-      "Técnica indolora y completamente no invasiva",
-      "Equilibra el sistema nervioso y endocrino",
-      "Compatible con cualquier otro tratamiento estético o médico",
-    ],
-    items: [
-      {
-        title: "Auriculoterapia para Control de Peso",
-        description:
-          "Estimulación de los puntos auriculares relacionados con el metabolismo, el apetito y la ansiedad alimentaria. Especialmente indicada como complemento a programas de alimentación y tratamientos reductores.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Auriculoterapia Antiestres y Bienestar",
-        description:
-          "Protocolo de equilibrio emocional y del sistema nervioso para reducir el estrés crónico, la ansiedad y el insomnio. Produce una sensación de calma profunda y bienestar que se mantiene días después.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Auriculoterapia para Control del Dolor",
-        description:
-          "Estimulación de los puntos auriculares analgésicos para el manejo de dolores musculares, articulares o cefaleas tensionales. Un enfoque complementario natural al tratamiento del dolor crónico.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Es dolorosa la auriculoterapia?",
-        answer:
-          "No. Se utilizan semillas de mostaza o pequeñas agujas muy superficiales que producen una leve presión. La mayoría de las clientas lo viven como un tratamiento relajante y agradable.",
-      },
-      {
-        question: "¿En cuántas sesiones se notan los efectos?",
-        answer:
-          "Muchas clientas sienten cambios desde la primera sesión: menor ansiedad, mejor calidad de sueño o reducción del apetito. Para resultados consolidados recomendamos un ciclo de 6 a 10 sesiones semanales.",
-      },
-      {
-        question: "¿Puedo hacerla junto con otros tratamientos?",
-        answer:
-          "Sí, es perfectamente compatible y de hecho se potencia con tratamientos como el drenaje linfático, la nutrición o cualquier programa de reducción de medidas. Es un excelente complemento holístico.",
-      },
-    ],
-  },
-
-  // ── TRATAMIENTO ANTICELULITIS ──────────────────────
-  {
-    slug: "tratamiento-anticelulitis",
-    name: "Tratamiento Anticelulitis",
-    fullTitle: "Tratamientos Anticelulitis en Turrialba",
-    tagline: "Elimina la celulitis de forma definitiva y sin cirugía",
-    heroBg: "anticelulitis-bg.webp",
-    heroDescription:
-      "Una experiencia diseñada para que vuelvas a sentirte bien con tu cuerpo",
-    benefits: [
-      "Reducción visible de la celulitis desde la primera sesión",
-      "Tecnología de radiofrecuencia + drenaje para resultados duraderos",
-      "Protocolo personalizado según tu tipo y grado de celulitis",
-      "Sin cirugía, sin anestesia, sin tiempo de recuperación",
-      "Mejora la circulación y elimina toxinas acumuladas",
-      "Piel más firme, lisa y uniforme en pocas semanas",
-    ],
-    items: [
-      {
-        title: "Drenaje Linfático Anticelulítico",
-        description:
-          "Técnica manual especializada que activa el sistema linfático, elimina la retención de líquidos y reduce el aspecto de piel de naranja desde las primeras sesiones. Ideal como tratamiento de base para preparar el tejido.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Radiofrecuencia Corporal Focalizada",
-        description:
-          "Aplicamos calor controlado en profundidad para romper los nódulos de grasa, estimular la producción de colágeno y reafirmar la piel de muslos, glúteos y abdomen. Resultado: piel más tersa y visible reducción de medidas.",
-        duration: "50 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Vendas Frías Anticelulíticas",
-        description:
-          "Vendas impregnadas con activos reductores, drenantes y reafirmantes en frío que potencian la pérdida de centímetros y mejoran la textura de la piel en una sola sesión. Efecto inmediato y acumulativo.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Presoterapia + Ultrasonidos",
-        description:
-          "Combinación de presoterapia para drenar y desinflamar, junto con ultrasonidos focalizados que destruyen las células de grasa localizadas. Protocolo de alta eficacia para casos de celulitis resistente.",
-        duration: "55 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿En cuántas sesiones veré resultados reales?",
-        answer:
-          "La mayoría de nuestras clientas notan una mejora visible en textura y firmeza desde la primera sesión. Para resultados duraderos y profundos, recomendamos un ciclo de 8 a 12 sesiones, 2 veces por semana. Al finalizar el ciclo, la reducción de la celulitis es significativa y medible.",
-      },
-      {
-        question: "¿Funciona para todos los tipos y grados de celulitis?",
-        answer:
-          "Sí. Nuestros protocolos están adaptados a los 4 grados de celulitis. Realizamos una valoración inicial gratuita donde evaluamos tu caso y diseñamos el plan de tratamiento más efectivo para ti, combinando las técnicas adecuadas según tu tipo de piel y zona a tratar.",
-      },
-      {
-        question: "¿Necesito dieta o ejercicio para que funcione?",
-        answer:
-          "No es un requisito, pero sí potencia los resultados. Los tratamientos son efectivos por sí solos, y combinados con hidratación adecuada y algo de actividad física los resultados se multiplican y duran más tiempo.",
-      },
-      {
-        question: "¿Es doloroso? ¿Hay tiempo de recuperación?",
-        answer:
-          "Los tratamientos son indoloros o producen una sensación de calor agradable en el caso de la radiofrecuencia. No hay tiempo de recuperación — puedes retomar tus actividades normales inmediatamente después de cada sesión.",
-      },
-      {
-        question: "¿Cuánto duran los resultados?",
-        answer:
-          "Con mantenimiento mensual los resultados se sostienen en el tiempo. Te recomendamos sesiones de mantenimiento cada 3-4 semanas una vez completado el ciclo inicial, especialmente si combinas el tratamiento con hábitos saludables.",
-      },
-    ],
-  },
-
-  // ── IRON BEAUTY FITNESS ────────────────────────────
-  {
-    slug: "iron-beauty-fitness",
-    name: "ESTÉTICA PARA FISICOCULTURISTAS Y ATLETAS EN TURRIALBA",
-    tagline: "Estética especializada para atletas del mundo fitness",
-    heroDescription:
-      "Recuperación, definición corporal y wellness deportivo en un solo protocolo especializado<br /><br />Tu cuerpo entrena fuerte.<br />Tu recuperación también debería hacerlo.",
-    heroBg: "iron-beauty-fitness-bg.webp",
-    benefits: [
-      "Protocolos diseñados exclusivamente para atletas de competencia",
-      "Resultados visibles en la definición muscular y textura de piel",
-      "Tratamientos que complementan tu entrenamiento y dieta",
-      "Atención personalizada según tu categoría de competencia",
-      "Técnicas que aceleran la recuperación muscular post-entrenamiento",
-      "Sin tiempo de recuperación — sigue entrenando al día siguiente",
-    ],
-    items: [
-      {
-        title: "Vendas Frías en Turrialba",
-        description:
-          "Aplicación de vendas con activos reductores, drenantes y tentativos en frío que potencian la pérdida de medidas, reducen la retención de líquidos y marcan la musculatura. Ideal en la fase de definición previa a competencia.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Silicio Orgánico",
-        description:
-          "Tratamiento de aplicación corporal con silicio orgánico que mejora la calidad y elasticidad de la piel, favorece la síntesis de colágeno y da ese acabado de piel tensa y luminosa tan valorado en el escenario.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Tensado Corporal",
-        description:
-          "Protocolo de radiofrecuencia y ultrasonidos focalizado en zonas musculares clave para reafirmar la piel, mejorar la tonicidad y resaltar la definición muscular lograda con el entrenamiento.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Electro-Estimulación Muscular",
-        description:
-          "Corrientes de electro-estimulación aplicadas sobre grupos musculares específicos para potenciar la contracción, mejorar el tono, acelerar la recuperación y complementar el trabajo en el gimnasio.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿En qué momento del proceso de preparación debo empezar?",
-        answer:
-          "Lo ideal es iniciar los tratamientos entre 8 y 12 semanas antes de la competencia, en la fase de definición. Sin embargo, los tratamientos de recuperación y electroestimulación pueden aplicarse durante todo el proceso.",
-      },
-      {
-        question: "¿Puedo entrenar el mismo día del tratamiento?",
-        answer:
-          "Sí. La mayoría de los tratamientos no requieren tiempo de recuperación. En el caso de las vendas frías recomendamos esperar al menos 4 horas antes de una sesión intensa.",
-      },
-      {
-        question: "¿Estos tratamientos son solo para competidores profesionales?",
-        answer:
-          "No. Están diseñados tanto para atletas profesionales como para aficionados al fitness que quieran mejorar su apariencia y sus resultados estéticos. Adaptamos el protocolo a tu nivel y objetivos.",
-      },
-      {
-        question: "¿Cuántas sesiones recomienda para preparar una competencia?",
-        answer:
-          "Generalmente entre 8 y 12 sesiones distribuidas en las semanas previas al evento. Diseñamos un calendario personalizado según la fecha de tu competencia y la categoría en la que participas.",
-      },
-    ],
-  },
-
-  // ── IMPLANTE DE BARBA ───────────────────────────────
-  {
-    slug: "implante-barba",
-    name: "Implante de Barba",
-    tagline: "Barba densa, uniforme y completamente natural sin cirugía agresiva",
-    heroDescription:
-      "El implante de barba es la solución definitiva para hombres que desean una barba completa, uniforme y con aspecto 100% natural. Mediante técnicas de trasplante capilar facial de última generación, redistribuimos folículos de zonas donantes hacia las áreas con escasez de vello para crear una barba permanente y de diseño personalizado.",
-    benefits: [
-      "Barba densa y uniforme de por vida, sin mantenimiento especial",
-      "Diseño personalizado adaptado a tu estructura facial y preferencias",
-      "Técnica mínimamente invasiva con recuperación rápida",
-      "Resultados completamente naturales e imperceptibles",
-      "Solución permanente para alopecia barba y zonas irregulares",
-      "Procedimiento ambulatorio realizado por especialistas certificados",
-    ],
-    items: [
-      {
-        title: "Implante de Barba Completa",
-        description:
-          "Trasplante de folículos capilares en toda la zona de la barba — mentón, mandíbula, mejillas y bigote — para conseguir un aspecto completo y uniforme. Diseñamos la forma y densidad ideal según tu fisonomía.",
-        duration: "4-6 h",
-        price: "Consultar precio",
-      },
-      {
-        title: "Relleno de Zonas Específicas",
-        description:
-          "Intervención focalizada en áreas concretas con escasez de vello — entradas del bigote, calvas en mejillas o zonas irregulares — para uniformar y completar la barba existente.",
-        duration: "2-3 h",
-        price: "Consultar precio",
-      },
-      {
-        title: "Diseño y Definición de Contorno",
-        description:
-          "Implante preciso en el contorno de la barba y la perilla para crear líneas definidas, simétricas y con el aspecto que deseas. Ideal para quienes tienen barba pero sin definición de bordes.",
-        duration: "2 h",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿El implante de barba es permanente?",
-        answer:
-          "Sí. Los folículos trasplantados son de zonas donantes resistentes y crecen de por vida. A los 3-4 meses empiezas a ver el crecimiento definitivo y a los 12 meses el resultado es completo y permanente.",
-      },
-      {
-        question: "¿Cuánto tiempo tarda la recuperación?",
-        answer:
-          "La zona tratada puede presentar pequeñas costras durante 7-10 días. La mayoría de los pacientes retoman su actividad normal en 3-5 días. Se deben evitar actividades de alto impacto durante la primera semana.",
-      },
-      {
-        question: "¿Se nota que es un implante?",
-        answer:
-          "No. Los folículos se implantan uno a uno con ángulos y direcciones que imitan el crecimiento natural del vello. El resultado es completamente indistinguible de una barba natural.",
-      },
-    ],
-  },
-
-  // ── MESOTERAPIA CAPILAR ─────────────────────────────
-  {
-    slug: "mesoterapia-capilar",
-    name: "Mesoterapia Capilar",
-    tagline: "Frena la caída y activa el crecimiento del cabello desde la raíz",
-    heroDescription:
-      "La mesoterapia capilar es uno de los tratamientos más eficaces y seguros para combatir la caída del cabello y estimular su crecimiento. Mediante microinyecciones de vitaminas, minerales, aminoácidos y factores de crecimiento directamente en el cuero cabelludo, nutrimos los folículos y reactivamos su función de forma natural y sin efectos secundarios.",
-    benefits: [
-      "Frena la caída del cabello desde las primeras sesiones",
-      "Estimula el crecimiento de cabello nuevo y refuerza el existente",
-      "Nutre directamente los folículos capilares desde la raíz",
-      "Mejora la circulación del cuero cabelludo y oxigenación folicular",
-      "Sin efectos secundarios sistémicos — acción local y precisa",
-      "Compatible con otros tratamientos capilares y medicamentos",
-    ],
-    items: [
-      {
-        title: "Mesoterapia con Vitaminas y Minerales",
-        description:
-          "Microinyecciones de un cóctel rico en biotina, zinc, silicio, vitaminas del grupo B y aminoácidos esenciales que nutren los folículos debilitados y mejoran la calidad del cabello existente.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Mesoterapia con PRP (Plasma Rico en Plaquetas)",
-        description:
-          "Combinación de mesoterapia con tu propio plasma sanguíneo enriquecido en factores de crecimiento. Estimulación biológica máxima de los folículos capilares para resultados acelerados.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Protocolo Intensivo Anticaída",
-        description:
-          "Ciclo completo de 8 sesiones de mesoterapia capilar con seguimiento fotográfico y ajuste de la fórmula según la respuesta. El protocolo más completo para casos de caída intensa o alopecia incipiente.",
-        duration: "30 min/sesión",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuántas sesiones son necesarias para ver resultados?",
-        answer:
-          "La reducción de caída se nota ya en las primeras 3-4 sesiones. El crecimiento de cabello nuevo es visible a partir de la sesión 6-8. Recomendamos un ciclo inicial de 8-10 sesiones semanales, seguido de mantenimiento mensual.",
-      },
-      {
-        question: "¿Es dolorosa la mesoterapia capilar?",
-        answer:
-          "Las microinyecciones producen una sensación mínima comparable a pequeños pellizcos. Aplicamos anestesia tópica si el paciente lo prefiere para garantizar la mayor comodidad posible.",
-      },
-      {
-        question: "¿Para qué tipos de alopecia es eficaz?",
-        answer:
-          "Es especialmente eficaz para la alopecia androgénica incipiente, alopecia difusa por estrés o carencias nutricionales, y cabello debilitado. No sustituye al trasplante capilar en casos de alopecia avanzada, pero puede complementarlo.",
-      },
-    ],
-  },
-
-  // ── RELLENOS DE LABIOS ──────────────────────────────
-  {
-    slug: "inbody",
-    name: "InBody en Turrialba | Análisis de Composición Corporal Profesional",
-    fullTitle: "InBody en Turrialba | Análisis de Composición Corporal Profesional",
-    tagline: "Conoce tu cuerpo, mide tu progreso, mejora tus resultados",
-    heroDescription: "¿Quieres saber si realmente estás perdiendo grasa, ganando músculo o mejorando tu condición física?<br /><br />Una báscula tradicional solo muestra tu peso, pero no explica qué está pasando dentro de tu cuerpo. En MJ Estética & Wellness Center realizamos análisis de composición corporal InBody, una evaluación profesional para tomar mejores decisiones sobre entrenamiento, alimentación y bienestar.",
-    benefits: [
-      "Conocer porcentaje de grasa corporal real",
-      "Medir masa muscular por segmentos",
-      "Identificar nivel de grasa visceral",
-      "Evaluar hidratación y agua corporal",
-      "Calcular metabolismo basal exacto",
-      "Seguimiento profesional de resultados"
-    ],
-    items: [
-      {
-        title: "Análisis InBody Profesional",
-        description: "Evaluación completa de composición corporal con entrega de reporte e interpretación de resultados.",
-        duration: "10 min",
-        price: "Consultar precio"
-      }
-    ],
-    faq: [
-      {
-        question: "¿Cuánto cuesta un InBody en Turrialba?",
-        answer: "El precio puede variar según el servicio y la orientación incluida. Escríbenos por WhatsApp para conocer disponibilidad y detalles."
-      },
-      {
-        question: "¿Cuánto dura un análisis InBody?",
-        answer: "La medición tarda aproximadamente entre 5 y 10 minutos."
-      },
-      {
-        question: "¿El InBody mide grasa corporal y músculo?",
-        answer: "Sí. Permite conocer porcentaje de grasa, masa muscular, grasa visceral, agua corporal y otros indicadores."
-      },
-      {
-        question: "¿Cada cuánto debo realizar un InBody?",
-        answer: "Depende de tus objetivos. Muchas personas realizan mediciones cada 4 a 8 semanas para evaluar cambios."
-      }
-    ]
+    es: {
+      slug: "terapias-faciales",
+      name: "Terapias Faciales",
+      fullTitle: "Terapias Faciales en Turrialba",
+      tagline: "Revitaliza tu rostro con protocolos avanzados",
+      heroDescription:
+        "En MJ Estética & Wellness Center ofrecemos una gama de terapias faciales diseñadas para tratar necesidades específicas de la piel, desde hidratación profunda hasta regeneración celular y armonización estética.",
+      benefits: [
+        "Protocolos personalizados según objetivos",
+        "Técnicas de vanguardia no invasivas",
+        "Mejora visible de la textura y el tono",
+        "Sensación de bienestar y relajación",
+        "Asesoría profesional en cada sesión",
+      ],
+      items: [
+        {
+          title: "Terapia de Hidratación Profunda",
+          description:
+            "Protocolo intensivo para devolver el equilibrio hídrico a la piel y lograr un aspecto jugoso y saludable.",
+          duration: "60 min",
+        },
+        {
+          title: "Terapia Revitalizante Vitamínica",
+          description:
+            "Infusión de activos y vitaminas que aportan luminosidad y energía al rostro cansado.",
+          duration: "60 min",
+        },
+        {
+          title: "Terapia de Armonización Facial",
+          description:
+            "Combinación de técnicas para mejorar la simetría y frescura del rostro sin cirugías.",
+          duration: "Variable",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué diferencia hay entre limpieza y terapia facial?",
+          answer:
+            "La limpieza se enfoca en purificar la piel de impurezas y comedones. Las terapias faciales son protocolos específicos para tratar condiciones como deshidratación, falta de luminosidad o envejecimiento incipiente.",
+        },
+        {
+          question: "¿Cuántas sesiones se recomiendan?",
+          answer:
+            "Depende del objetivo y el estado de la piel. En la valoración inicial diseñamos el programa ideal para ti.",
+        },
+      ],
+    },
+    en: {
+      slug: "terapias-faciales",
+      name: "Terapias Faciales",
+      tagline: "Revitaliza tu rostro con protocolos avanzados",
+      heroDescription: "En MJ Estética & Wellness Center ofrecemos una gama de terapias faciales diseñadas para tratar necesidades específicas de la piel, desde hidratación profunda hasta regeneración celular y armonización estética.",
+      benefits: [
+        "Protocolos personalizados según objetivos",
+        "Técnicas de vanguardia no invasivas",
+        "Mejora visible de la textura y el tono",
+        "Sensación de bienestar y relajación",
+        "Asesoría profesional en cada sesión",
+      ],
+      items: [
+        {
+          title: "Terapia de Hidratación Profunda",
+          description:
+            "Protocolo intensivo para devolver el equilibrio hídrico a la piel y lograr un aspecto jugoso y saludable.",
+          duration: "60 min",
+        },
+        {
+          title: "Terapia Revitalizante Vitamínica",
+          description:
+            "Infusión de activos y vitaminas que aportan luminosidad y energía al rostro cansado.",
+          duration: "60 min",
+        },
+        {
+          title: "Terapia de Armonización Facial",
+          description:
+            "Combinación de técnicas para mejorar la simetría y frescura del rostro sin cirugías.",
+          duration: "Variable",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué diferencia hay entre limpieza y terapia facial?",
+          answer:
+            "La limpieza se enfoca en purificar la piel de impurezas y comedones. Las terapias faciales son protocolos específicos para tratar condiciones como deshidratación, falta de luminosidad o envejecimiento incipiente.",
+        },
+        {
+          question: "¿Cuántas sesiones se recomiendan?",
+          answer:
+            "Depende del objetivo y el estado de la piel. En la valoración inicial diseñamos el programa ideal para ti.",
+        },
+      ],
+    },
   },
   {
-    slug: "relleno-de-labios",
-    name: "Relleno de Labios en Turrialba",
-    tagline: "Labios con volumen, contorno definido y aspecto completamente natural",
-    heroBg: "acido-hialuronico-bg.webp",
-    heroDescription:
-      "Descubre cómo lograr labios más hidratados, definidos y armoniosos con resultados naturales y personalizados.",
-    benefits: [
-      "Volumen natural y proporcional adaptado a tu rostro",
-      "Contorno labial perfectamente definido y simétrico",
-      "Hidratación profunda y labios más suaves desde el primer día",
-      "Resultado visible inmediato y duradero hasta 12 meses",
-      "Técnica precisa que evita el efecto exagerado o artificial",
-      "Producto biocompatible y reabsorbible — completamente seguro",
-    ],
-    items: [
-      {
-        title: "Relleno de Volumen Labial",
-        description:
-          "Aplicación de ácido hialurónico en el cuerpo de los labios para aumentar el volumen de forma natural y proporcional. Diseñamos el aumento según tus proporciones faciales para un resultado armonioso.",
-        duration: "30 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Definición de Contorno Labial",
-        description:
-          "Relleno preciso en el vermillón y el borde labial para crear un contorno nítido, simétrico y perfectamente definido. Ideal si tus labios tienen buen volumen pero falta de definición o asimetría.",
-        duration: "25 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Tratamiento Completo Volumen + Contorno",
-        description:
-          "Diseño labial integral que combina el relleno de volumen con la definición del contorno para conseguir el resultado más completo. Incluye la corrección de asimetrías y la proyección del arco de cupido.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Cuánto dura el efecto del relleno de labios?",
-        answer:
-          "Dependiendo del tipo de ácido hialurónico utilizado y el metabolismo de cada persona, el efecto dura entre 6 y 12 meses. Se recomienda una sesión de retoque para mantener el resultado óptimo.",
-      },
-      {
-        question: "¿Es doloroso el tratamiento?",
-        answer:
-          "Aplicamos crema anestésica tópica antes del procedimiento para minimizar las molestias. La mayoría de las pacientes lo describen como muy tolerable — solo una pequeña presión durante las inyecciones.",
-      },
-      {
-        question: "¿Se puede ver el resultado inmediatamente?",
-        answer:
-          "Sí, el resultado es visible desde el momento del tratamiento. Los labios pueden presentar una leve inflamación durante 24-48 horas que potencia inicialmente el volumen. El resultado definitivo se aprecia a los 7-10 días.",
-      },
-    ],
-  },
-
-  // ── TRATAMIENTO DE OJERAS ───────────────────────────
-  {
-    slug: "tratamiento-ojeras",
-    name: "Tratamiento para Ojeras en Turrialba",
-    fullTitle: "Tratamiento para Ojeras en Turrialba | Recupera una Mirada Más Fresca y Rejuvenecida",
-    tagline: "Recupera una Mirada Más Fresca y Rejuvenecida",
-    heroDescription:
-      "Descubre cómo nuestro tratamiento de carboxiterapia para ojeras en Turrialba puede ayudarte a mejorar la apariencia de bolsas, pigmentación oscura y signos visibles de fatiga.",
-    benefits: [
-      "Ayuda a disminuir la apariencia de las ojeras",
-      "Favorece una mirada más descansada",
-      "Mejora la luminosidad del contorno de ojos",
-      "Procedimiento mínimamente invasivo",
-      "Sin cirugía",
-      "Sesiones rápidas",
-      "Atención personalizada",
-      "Tratamiento profesional en Turrialba"
-    ],
-    items: [],
-    faq: [
-      {
-        question: "¿Dónde realizan el tratamiento para ojeras en Turrialba?",
-        answer: "En MJ Fisio Estética & Spa, Turrialba, Costa Rica."
-      },
-      {
-        question: "¿La carboxiterapia para ojeras duele?",
-        answer: "Puede generar molestias leves y temporales dependiendo de cada persona."
-      },
-      {
-        question: "¿Cuánto dura una sesión?",
-        answer: "Entre 20 y 40 minutos aproximadamente."
-      },
-      {
-        question: "¿Cuántas sesiones necesito?",
-        answer: "La cantidad varía según cada caso y será definida durante la valoración."
-      },
-      {
-        question: "¿Es un procedimiento quirúrgico?",
-        answer: "No, es un tratamiento estético no quirúrgico."
-      }
-    ],
-  },
-
-  // ── BLANQUEAMIENTO ZONA ÍNTIMA ──────────────────────
-  {
-    slug: "aromaterapia",
-    name: "Aromaterapia en Turrialba",
-    fullTitle: "Aromaterapia en Turrialba | Relajación, Bienestar y Experiencias Wellness Premium",
-    tagline: "Regálate un momento de calma, bienestar y desconexión",
-    heroDescription: "Experiencia wellness que utiliza aceites esenciales y estímulos aromáticos cuidadosamente seleccionados para crear ambientes orientados a la relajación, el bienestar emocional y el descanso.",
-    benefits: [
-      "Sensación de relajación profunda",
-      "Momentos de desconexión y descanso",
-      "Bienestar emocional y físico",
-      "Espacios de calma y armonía",
-      "Experiencias wellness personalizadas",
-      "Autocuidado consciente",
-      "Ambiente premium orientado al bienestar"
-    ],
-    items: [],
-    faq: [
-      {
-        question: "¿Qué es la aromaterapia?",
-        answer: "Es una experiencia wellness que utiliza aromas y aceites esenciales para crear ambientes orientados al bienestar y la relajación."
-      },
-      {
-        question: "¿Cuánto dura la sesión?",
-        answer: "Depende del protocolo seleccionado y de las necesidades de cada persona."
-      },
-      {
-        question: "¿Se puede combinar con masajes?",
-        answer: "Sí. Es una de las combinaciones más solicitadas por nuestros clientes."
-      },
-      {
-        question: "¿Qué aceites esenciales utilizan?",
-        answer: "Seleccionamos opciones según la experiencia deseada y las preferencias individuales."
-      },
-      {
-        question: "¿Necesito preparación previa?",
-        answer: "No. Solo venir con disposición para disfrutar un momento de bienestar."
-      },
-      {
-        question: "¿Dónde están ubicados?",
-        answer: "Nos encontramos en Turrialba, con fácil acceso y parqueo para nuestros visitantes."
-      }
-    ],
+    es: {
+      slug: "peeling-quimico",
+      name: "Peeling Facial",
+      fullTitle: "Peeling Facial en Turrialba",
+      tagline:
+        "Tratamiento de Peeling Facial Profesional en Turrialba para una Piel Más Joven y Luminosa",
+      heroDescription:
+        "El peeling facial profesional es un tratamiento estético que ayuda a renovar la piel, estimular la regeneración celular y devolverle luminosidad a tu rostro en Turrialba.",
+      benefits: [
+        "Eliminación de manchas e hiperpigmentación",
+        "Reducción de arrugas finas",
+        "Mejora de la textura y luminosidad",
+        "Tratamiento del acné y sus marcas",
+        "Estimulación de la renovación celular",
+      ],
+      items: [
+        {
+          title: "Peeling Superficial",
+          description:
+            "Actúa en las capas más externas de la epidermis. Ideal para pieles apagadas, deshidratadas o con leve fotodaño. Sin tiempo de recuperación.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Peeling de Ácido Glicólico",
+          description:
+            "El alfaahidroxiácido más utilizado en estética. Estimula la renovación celular, mejora las manchas y aporta una luminosidad excepcional.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Peeling de Ácido Salicílico",
+          description:
+            "Especialmente indicado para pieles grasas y con acné. Regula la producción de sebo, desobstruye los poros y reduce las imperfecciones.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Peeling Mandélico",
+          description:
+            "Indicado para pieles sensibles y morenas. Acción despigmentante suave, antiaging y antibacteriana. Sin riesgo de hiperpigmentación post-tratamiento.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿El peeling duele?",
+          answer:
+            "Durante la aplicación puede sentirse un leve calor o picor que dura pocos minutos. Es perfectamente tolerable y controlado por nuestra especialista.",
+        },
+        {
+          question: "¿Cuánto tiempo de recuperación necesito?",
+          answer:
+            "Los peelings superficiales no requieren recuperación. Los más intensos pueden producir descamación 2-5 días. Te daremos pautas detalladas de cuidado post-tratamiento.",
+        },
+        {
+          question: "¿Cuándo no se puede hacer un peeling?",
+          answer:
+            "No se realiza con piel bronceada, durante el embarazo, con algunas medicaciones fotosensibilizantes ni en pieles con heridas activas.",
+        },
+      ],
+    },
+    en: {
+      slug: "facial-peeling",
+      name: "Facial Peeling",
+      tagline: "Professional treatment for younger, more radiant skin",
+      heroDescription:
+        "Professional facial peeling is an aesthetic treatment that helps renew the skin, stimulate cellular regeneration, and restore luminosity to your face in Turrialba.",
+      benefits: [
+        "Elimination of spots and hyperpigmentation",
+        "Reduction of fine wrinkles",
+        "Improvement of texture and luminosity",
+        "Treatment of acne and its marks",
+        "Stimulation of cellular renewal",
+      ],
+      items: [
+        {
+          title: "Superfacial Peeling",
+          description: "Acts on the outermost layers of the epidermis. Ideal for dull skin.",
+          duration: "30 min",
+          faq: [
+        {
+          question: "¿El peeling duele?",
+          answer:
+            "Durante la aplicación puede sentirse un leve calor o picor que dura pocos minutos. Es perfectamente tolerable y controlado por nuestra especialista.",
+        },
+        {
+          question: "¿Cuánto tiempo de recuperación necesito?",
+          answer:
+            "Los peelings superficiales no requieren recuperación. Los más intensos pueden producir descamación 2-5 días. Te daremos pautas detalladas de cuidado post-tratamiento.",
+        },
+        {
+          question: "¿Cuándo no se puede hacer un peeling?",
+          answer:
+            "No se realiza con piel bronceada, durante el embarazo, con algunas medicaciones fotosensibilizantes ni en pieles con heridas activas.",
+        },
+      ],
+    },
+      ],
+    },
   },
   {
-    slug: "boda-spa",
-    name: "Boda Spa",
-    fullTitle: "Spa para Novias en Turrialba | Boda Spa Exclusivo para Relajarte Antes de Tu Gran Día 💍",
-    tagline: "El mejor regalo antes de tu boda eres tú",
-    heroDescription: "Vive la experiencia de Boda Spa más relajante en Turrialba. En MJ Estética & Wellness Center hemos diseñado una experiencia exclusiva para ayudarte a recuperar el equilibrio físico y emocional antes de ese momento tan especial.",
-    benefits: [
-      "Relajación profunda del sistema nervioso",
-      "Alivio de tensiones y dolores musculares",
-      "Mejora de la luminosidad y frescura de la piel",
-      "Reducción de la ansiedad y el estrés pre-boda",
-      "Mejora de la calidad del sueño",
-      "Momento de desconexión total para la novia"
-    ],
-    items: [
-      {
-        title: "Paquete Novia Radiante",
-        description: "Protocolo integral que combina exfoliación corporal, masaje relajante y facial express para un brillo espectacular.",
-        duration: "120 min",
-      },
-      {
-        title: "Spa en Pareja Pre-Boda",
-        description: "Experiencia compartida para liberar el estrés de los preparativos juntos en un ambiente de calma absoluta.",
-        duration: "90 min",
-      },
-      {
-        title: "Masaje Anti-Estrés Nupcial",
-        description: "Sesión focalizada en liberar tensión de espalda, cuello y hombros acumulada por la organización del evento.",
-        duration: "60 min",
-      }
-    ],
-    faq: [
-      {
-        question: "¿Con cuánta anticipación debo reservar mi Boda Spa?",
-        answer: "Recomendamos reservar con al menos 2 a 4 semanas de anticipación, especialmente si deseas una fecha cercana al gran día."
-      },
-      {
-        question: "¿Cuántos días antes de la boda es ideal realizar el spa?",
-        answer: "Lo ideal es entre 2 y 5 días antes de la boda para que los efectos de relajación y luminosidad estén en su punto máximo."
-      },
-      {
-        question: "¿Pueden ir mis damas de honor?",
-        answer: "¡Claro! Contamos con paquetes especiales para grupos. Consúltanos por WhatsApp para coordinar una experiencia grupal inolvidable."
-      }
-    ]
+    es: {
+      slug: "botox-full-face",
+      name: "Botox Full Face en Turrialba",
+      tagline: "Recupera la frescura de tu mirada con armonía total",
+      heroDescription:
+        "Apariencia más fresca, descansada y natural sin perder tu esencia<br /><br />Tu rostro habla antes que tú.<br />Las líneas de expresión, el cansancio facial o la tensión acumulada pueden hacerte lucir agotada incluso cuando te sientes bien.",
+      benefits: [
+        "Reducción visible de arrugas de expresión",
+        "Aspecto rejuvenecido y natural",
+        "Sin cicatrices ni tiempo de recuperación",
+        "Efecto preventivo frente a futuras arrugas",
+        "Resultados inmediatos que mejoran en 15 días",
+      ],
+      items: [
+        {
+          title: "Frente y Entrecejo",
+          description:
+            "Suaviza las líneas horizontales de la frente y las arrugas del entrecejo (código de barras y número 11), manteniendo expresividad natural.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Patas de Gallo",
+          description:
+            "Tratamiento de las líneas de expresión en el contorno ocular que aportan un aspecto más joven y descansado.",
+          duration: "20 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Lifting de Cejas",
+          description:
+            "Técnica de botox que eleva el arco de la ceja dando un efecto lifting no quirúrgico. Abre la mirada de forma sutil y armoniosa.",
+          duration: "20 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Full Face Completo",
+          description:
+            "Protocolo integral que trata todas las zonas del tercio superior e inferior del rostro. Resultado global, armónico y completamente natural.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Duele el procedimiento?",
+          answer: "Generalmente las molestias son mínimas y rápidas.",
+        },
+        {
+          question: "¿Cuánto duran los resultados?",
+          answer:
+            "La duración puede variar según cada persona y hábitos individuales.",
+        },
+        {
+          question: "¿Puedo volver a trabajar el mismo día?",
+          answer:
+            "Muchas personas retoman sus actividades normales rápidamente.",
+        },
+        {
+          question: "¿Ayuda a prevenir líneas de expresión?",
+          answer:
+            "Sí, puede ayudar a disminuir la formación de marcas dinámicas.",
+        },
+        {
+          question: "¿Se puede combinar con otros tratamientos?",
+          answer: "Sí, según valoración profesional personalizada.",
+        },
+        {
+          question: "¿Cuáles cuidados debo tener?",
+          answer:
+            "Evitar ciertas actividades durante las primeras horas y seguir recomendaciones posteriores.",
+        },
+      ],
+    },
+    en: {
+      slug: "botox-full-face",
+      name: "Botox Full Face in Turrialba",
+      tagline: "Recover the freshness of your look with total harmony",
+      heroDescription:
+        "Fresher, rested and natural appearance without losing your essence.<br /><br />Your face speaks before you do. Expression lines or facial tension can make you look exhausted even when you feel good.",
+      benefits: [
+        "Visible reduction of expression wrinkles",
+        "Rejuvenated and natural appearance",
+        "No scars or recovery time",
+        "Preventive effect against future wrinkles",
+        "Immediate results that improve in 15 days",
+      ],
+      items: [
+        {
+          title: "Forehead and Frown Lines",
+          description: "Smoothes the horizontal lines of the forehead and the frown wrinkles.",
+          duration: "30 min",
+          faq: [
+        {
+          question: "¿Duele el procedimiento?",
+          answer: "Generalmente las molestias son mínimas y rápidas.",
+        },
+        {
+          question: "¿Cuánto duran los resultados?",
+          answer:
+            "La duración puede variar según cada persona y hábitos individuales.",
+        },
+        {
+          question: "¿Puedo volver a trabajar el mismo día?",
+          answer:
+            "Muchas personas retoman sus actividades normales rápidamente.",
+        },
+        {
+          question: "¿Ayuda a prevenir líneas de expresión?",
+          answer:
+            "Sí, puede ayudar a disminuir la formación de marcas dinámicas.",
+        },
+        {
+          question: "¿Se puede combinar con otros tratamientos?",
+          answer: "Sí, según valoración profesional personalizada.",
+        },
+        {
+          question: "¿Cuáles cuidados debo tener?",
+          answer:
+            "Evitar ciertas actividades durante las primeras horas y seguir recomendaciones posteriores.",
+        },
+      ],
+    },
+      ],
+    },
   },
   {
-    slug: "arteterapia",
-    name: "Arteterapia en Turrialba",
-    fullTitle: "Arteterapia en Turrialba: Pintura de Ositos, Café y Bienestar",
-    tagline: "Libera tu creatividad, reduce el estrés y decora tu propio osito de resina",
-    heroDescription:
-      "¿Buscas una actividad diferente en Turrialba para relajarte, desconectarte del estrés y dedicarte tiempo de calidad?<br /><br />En MJ Estética y Spa Turrialba hemos creado una experiencia única que combina arteterapia, pintura de ositos de resina y café, diseñada para ayudarte a liberar tensiones, estimular tu creatividad y mejorar tu bienestar emocional en un ambiente acogedor y seguro.",
-    benefits: [
-      "Reducción del estrés y la ansiedad",
-      "Decora y personaliza tu propio osito de resina",
-      "Mejora del bienestar emocional",
-      "Estímulo de la creatividad",
-      "Espacio de desconexión y tiempo para ti",
-      "Ambiente relajante y acogedor",
-    ],
-    items: [
-      {
-        title: "Sesión de Pintura de Ositos y Café",
-        description: "Experiencia completa que incluye osito de resina, materiales de pintura, café y acompañamiento guiado.",
-        duration: "120 min",
-        price: "Consultar precio",
-      }
-    ],
-    faq: [
-      {
-        question: "¿Necesito saber pintar?",
-        answer: "No. No buscamos artistas, buscamos ayudarte a sentirte mejor. La experiencia está diseñada para que cualquier persona pueda disfrutarla sin importar su nivel artístico.",
-      },
-      {
-        question: "¿Qué incluye la sesión?",
-        answer: "Incluye todos los materiales de pintura, una deliciosa taza de café (o bebida alternativa), guía durante la actividad y un ambiente diseñado para la relajación.",
-      },
-      {
-        question: "¿Quiénes pueden participar?",
-        answer: "Es ideal para personas con estrés laboral, parejas, grupos de amigos o cualquier persona que quiera dedicar tiempo a su bienestar emocional y salir de la rutina.",
-      }
-    ]
+    es: {
+      slug: "nutricion",
+      name: "Nutricionista en Turrialba | Planes Nutricionales Personalizados para Bienestar, Salud y Composición Corporal",
+      tagline: "Alimenta tu cuerpo, transforma tu vida",
+      heroDescription:
+        "Transforma tus hábitos alimenticios con acompañamiento profesional y un plan nutricional diseñado específicamente para ti.",
+      benefits: [
+        "Plan nutricional completamente personalizado",
+        "Mejora del peso y composición corporal",
+        "Mayor energía y vitalidad diaria",
+        "Reducción de enfermedades metabólicas",
+        "Hábitos alimentarios sostenibles a largo plazo",
+      ],
+      items: [
+        {
+          title: "Consulta Nutricional Inicial",
+          description:
+            "Evaluación completa de tu estado de salud, historial alimentario, objetivos y mediciones corporales para diseñar un plan totalmente personalizado.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Plan de Alimentación Personalizado",
+          description:
+            "Diseño de un menú semanal adaptado a tus gustos, necesidades calóricas y objetivos de salud o estética.",
+          duration: "Plan escrito",
+          price: "Consultar precio",
+        },
+        {
+          title: "Seguimiento Nutricional",
+          description:
+            "Sesiones de seguimiento para ajustar el plan según tu evolución, resolver dudas y mantener la motivación.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Nutrición Deportiva",
+          description:
+            "Plan específico para personas activas o deportistas, enfocado en mejorar el rendimiento, la recuperación y la composición corporal.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "Recomendamos una consulta inicial y al menos 2-3 sesiones de seguimiento durante el primer mes para establecer hábitos y ajustar el plan según tu evolución.",
+        },
+        {
+          question: "¿El plan incluye recetas?",
+          answer:
+            "Sí, el plan nutricional incluye sugerencias de recetas sencillas y adaptadas a tus preferencias para facilitar la adherencia al nuevo estilo alimentario.",
+        },
+      ],
+    },
+    en: {
+      slug: "nutrition",
+      name: "Nutritionist in Turrialba | Personalized Nutritional Plans",
+      tagline: "Feed your body, transform your life",
+      heroDescription:
+        "Transform your eating habits with professional guidance and a nutritional plan designed specifically for you.",
+      benefits: [
+        "Fully personalized nutritional plan",
+        "Improvement in weight and body composition",
+        "Greater energy and daily vitality",
+        "Reduction of metabolic diseases",
+        "Sustainable eating habits in the long term",
+      ],
+      items: [
+        {
+          title: "Initial Nutritional Consultation",
+          description: "Complete assessment of your health status, eating history, goals and body measurements.",
+          duration: "60 min",
+          faq: [
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "Recomendamos una consulta inicial y al menos 2-3 sesiones de seguimiento durante el primer mes para establecer hábitos y ajustar el plan según tu evolución.",
+        },
+        {
+          question: "¿El plan incluye recetas?",
+          answer:
+            "Sí, el plan nutricional incluye sugerencias de recetas sencillas y adaptadas a tus preferencias para facilitar la adherencia al nuevo estilo alimentario.",
+        },
+      ],
+    },
+      ],
+    },
   },
   {
-    slug: "blanqueamiento-zona-intima",
-    name: "Blanqueamiento Zona Íntima",
-    fullTitle: "Blanqueamiento de Zona Íntima en Turrialba",
-    tagline: "Unifica el tono de tus zonas más delicadas con seguridad y confianza",
-    heroDescription:
-      "Recupera la seguridad en ti misma con nuestros protocolos especializados de blanqueamiento para entrepierna, axilas y zona perianal. Tratamientos no invasivos, respetuosos y altamente efectivos en Turrialba.",
-    benefits: [
-      "Unificación del tono de piel en zonas de hiperpigmentación",
-      "Tratamiento 100% seguro y respetuoso con la piel íntima",
-      "Reducción de manchas por fricción, hormonales o post-depilación",
-      "Mayor confianza y comodidad con tu cuerpo",
-      "Sin tiempo de inactividad — retomas tu rutina al instante",
-      "Protocolos personalizados según tu tipo de piel y grado de pigmentación",
-    ],
-    items: [
-      {
-        title: "Blanqueamiento con Peeling Enzimático",
-        description:
-          "Aplicación de enzimas despigmentantes específicas para zonas íntimas que exfolian y aclaran progresivamente la piel sin irritación. Ideal para pieles sensibles.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Tratamiento con Ácidos Despigmentantes",
-        description:
-          "Protocolo con ácidos dérmicos a baja concentración (kójico, mandélico, azelaico) diseñados para aclarar la piel de zonas íntimas de forma segura y eficaz.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Protocolo Intensivo de Luminosidad",
-        description:
-          "Ciclo completo de 6 sesiones que combina exfoliación enzimática, despigmentación ácida y tratamiento antioxidante para resultados óptimos y duraderos en hiperpigmentaciones moderadas o intensas.",
-        duration: "45 min/sesión",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿El blanqueamiento de zona íntima es seguro?",
-        answer:
-          "Sí. Usamos productos específicamente formulados para zonas íntimas, con ingredientes aprobados dermatológicamente. El tratamiento no daña la piel ni las mucosas cuando se aplica correctamente por profesionales.",
-      },
-      {
-        question: "¿Cuántas sesiones son necesarias?",
-        answer:
-          "Para pigmentaciones leves, 3-4 sesiones son suficientes. Para casos moderados o intensos, recomendamos un ciclo completo de 6 sesiones. Los resultados son progresivos y se potencian con cada sesión.",
-      },
-      {
-        question: "¿Hay alguna contraindicación?",
-        answer:
-          "Se recomienda no realizarlo durante el embarazo o lactancia. Tampoco en pieles con heridas, dermatitis activa o infección en la zona. En la consulta previa evaluamos tu caso y adaptamos el protocolo a tu condición.",
-      },
-    ],
-  },
-
-  // ── NUEVOS SERVICIOS (PLANTILLAS VACÍAS) ────────────
-  {
-    slug: "mascarillas-faciales",
-    name: "Mascarillas Faciales",
-    fullTitle: "Mascarillas Faciales en Turrialba",
-    tagline: "La experiencia que ayuda a devolverle a tu piel la hidratación, luminosidad y frescura que el estrés diario le ha quitado.",
-    heroDescription: "Porque una piel luminosa no es casualidad. Es el resultado de cuidarla. De escucharla. Y de darle exactamente lo que necesita.",
-    benefits: [
-      "Sensación de hidratación profunda",
-      "Glow facial natural",
-      "Experiencia relajante",
-      "Momento de autocuidado",
-      "Piel con apariencia más fresca",
-      "Complemento ideal para una rutina skincare premium",
-      "Sensación de bienestar y confianza"
-    ],
-    items: [
-      {
-        title: "Mascarilla Facial Personalizada",
-        description: "Protocolo adaptado según las necesidades específicas de cada cliente para recuperar frescura, luminosidad e hidratación.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Qué hace diferente esta experiencia?",
-        answer: "Combinamos valoración facial personalizada, protocolos adaptados, ambiente relajante y atención individualizada para resultados superiores."
-      },
-      {
-        question: "¿Para quién se recomienda?",
-        answer: "Para cualquier persona que desee mejorar la luminosidad, complementar su rutina facial o simplemente regalarse un momento de bienestar premium."
-      }
-    ]
-  },
-  {
-    slug: "nuevo-servicio-1",
-    name: "Nuevo Servicio 1 (Plantilla)",
-    tagline: "Descripción corta y atractiva del nuevo servicio 1",
-    heroDescription:
-      "Esta es una plantilla de prueba para el Nuevo Servicio 1. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
-    benefits: [
-      "Beneficio destacado número 1 del servicio",
-      "Beneficio destacado número 2 del servicio",
-      "Beneficio destacado número 3 del servicio",
-      "Beneficio destacado número 4 del servicio",
-    ],
-    items: [
-      {
-        title: "Opción de Tratamiento 1",
-        description: "Breve descripción sobre esta variante específica del servicio.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-      {
-        title: "Opción de Tratamiento 2",
-        description: "Breve descripción sobre esta variante específica del servicio.",
-        duration: "60 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Pregunta frecuente de ejemplo 1?",
-        answer: "Respuesta detallada a la pregunta frecuente número 1.",
-      },
-      {
-        question: "¿Pregunta frecuente de ejemplo 2?",
-        answer: "Respuesta detallada a la pregunta frecuente número 2.",
-      },
-    ],
+    es: {
+      slug: "trasplante-capilar",
+      name: "Trasplante Capilar",
+      fullTitle:
+        "Trasplante Capilar Costa Rica",
+      tagline: "Recupera tu cabello, recupera tu confianza",
+      heroDescription:
+        "El trasplante capilar es la solución definitiva para la alopecia y la pérdida de cabello. Utilizamos las técnicas más avanzadas para resultados naturales, permanentes y de alta densidad.",
+      benefits: [
+        "Resultado permanente y natural",
+        "Técnicas mínimamente invasivas",
+        "Sin cicatrices visibles",
+        "Alta tasa de supervivencia del injerto",
+        "Recuperación rápida y sencilla",
+      ],
+      items: [
+        {
+          title: "Técnica FUE (Follicular Unit Extraction)",
+          description:
+            "Extracción folicular unitaria que obtiene folículos de la zona donante sin incisiones. Sin cicatriz lineal, recuperación rápida y resultados muy naturales.",
+          duration: "4-8 horas",
+          price: "Consultar precio",
+        },
+        {
+          title: "Trasplante de Barba",
+          description:
+            "Diseño y relleno de zonas sin cobertura en la barba o bigote, logrando una barba densa, uniforme y completamente natural.",
+          duration: "3-5 horas",
+          price: "Consultar precio",
+        },
+        {
+          title: "Trasplante de Cejas",
+          description:
+            "Reconstrucción o densificación de las cejas con folículos del área donante, para una apariencia definida y duradera.",
+          duration: "2-4 horas",
+          price: "Consultar precio",
+        },
+        {
+          title: "Consulta y Diagnóstico Capilar",
+          description:
+            "Evaluación del grado de alopecia, análisis del área donante y diseño personalizado de la línea de implantación según tus rasgos faciales.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuándo se ven los resultados definitivos?",
+          answer:
+            "Los injertos entran en un ciclo de reposo durante los primeros 2-3 meses. El crecimiento progresivo comienza alrededor del mes 4 y el resultado definitivo se aprecia entre los 12-18 meses.",
+        },
+        {
+          question: "¿Es doloroso el trasplante capilar?",
+          answer:
+            "El procedimiento se realiza bajo anestesia local, por lo que no se siente dolor durante la intervención. Las molestias post-operatorias son leves y controlables con analgesia convencional.",
+        },
+        {
+          question: "¿Cuánto tiempo de recuperación necesito?",
+          answer:
+            "Puedes retomar actividades cotidianas a los 2-3 días. Se recomienda evitar ejercicio intenso y exposición solar directa durante las primeras 2-4 semanas.",
+        },
+      ],
+    },
+    en: {
+      slug: "trasplante-capilar",
+      name: "Trasplante Capilar",
+      tagline: "Recupera tu cabello, recupera tu confianza",
+      heroDescription: "El trasplante capilar es la solución definitiva para la alopecia y la pérdida de cabello. Utilizamos las técnicas más avanzadas para resultados naturales, permanentes y de alta densidad.",
+      benefits: [
+        "Resultado permanente y natural",
+        "Técnicas mínimamente invasivas",
+        "Sin cicatrices visibles",
+        "Alta tasa de supervivencia del injerto",
+        "Recuperación rápida y sencilla",
+      ],
+      items: [
+        {
+          title: "Técnica FUE (Follicular Unit Extraction)",
+          description:
+            "Extracción folicular unitaria que obtiene folículos de la zona donante sin incisiones. Sin cicatriz lineal, recuperación rápida y resultados muy naturales.",
+          duration: "4-8 horas",
+          price: "Consultar precio",
+        },
+        {
+          title: "Trasplante de Barba",
+          description:
+            "Diseño y relleno de zonas sin cobertura en la barba o bigote, logrando una barba densa, uniforme y completamente natural.",
+          duration: "3-5 horas",
+          price: "Consultar precio",
+        },
+        {
+          title: "Trasplante de Cejas",
+          description:
+            "Reconstrucción o densificación de las cejas con folículos del área donante, para una apariencia definida y duradera.",
+          duration: "2-4 horas",
+          price: "Consultar precio",
+        },
+        {
+          title: "Consulta y Diagnóstico Capilar",
+          description:
+            "Evaluación del grado de alopecia, análisis del área donante y diseño personalizado de la línea de implantación según tus rasgos faciales.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuándo se ven los resultados definitivos?",
+          answer:
+            "Los injertos entran en un ciclo de reposo durante los primeros 2-3 meses. El crecimiento progresivo comienza alrededor del mes 4 y el resultado definitivo se aprecia entre los 12-18 meses.",
+        },
+        {
+          question: "¿Es doloroso el trasplante capilar?",
+          answer:
+            "El procedimiento se realiza bajo anestesia local, por lo que no se siente dolor durante la intervención. Las molestias post-operatorias son leves y controlables con analgesia convencional.",
+        },
+        {
+          question: "¿Cuánto tiempo de recuperación necesito?",
+          answer:
+            "Puedes retomar actividades cotidianas a los 2-3 días. Se recomienda evitar ejercicio intenso y exposición solar directa durante las primeras 2-4 semanas.",
+        },
+      ],
+    },
   },
   {
-    slug: "nuevo-servicio-2",
-    name: "Nuevo Servicio 2 (Plantilla)",
-    tagline: "Descripción corta y atractiva del nuevo servicio 2",
-    heroDescription:
-      "Esta es una plantilla de prueba para el Nuevo Servicio 2. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
-    benefits: [
-      "Beneficio destacado número 1 del servicio",
-      "Beneficio destacado número 2 del servicio",
-      "Beneficio destacado número 3 del servicio",
-      "Beneficio destacado número 4 del servicio",
-    ],
-    items: [
-      {
-        title: "Opción de Tratamiento 1",
-        description: "Breve descripción sobre esta variante específica del servicio.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Pregunta frecuente de ejemplo 1?",
-        answer: "Respuesta detallada a la pregunta frecuente número 1.",
-      },
-    ],
+    es: {
+      slug: "hilos-tensores",
+      name: "Hilos Tensores Turrialba",
+      fullTitle: "Hilos Tensores Turrialba",
+      tagline: "El lifting sin bisturí más efectivo del mercado",
+      heroDescription:
+        "Los hilos tensores son la alternativa no quirúrgica al lifting facial. Devuelven la firmeza y tensión perdida de forma inmediata, estimulando la producción natural de colágeno.",
+      benefits: [
+        "Efecto lifting inmediato y progresivo",
+        "Estimulación de colágeno natural",
+        "Sin cirugía ni cicatrices",
+        "Resultados que mejoran con el tiempo",
+        "Recuperación mínima, rutina normal al día siguiente",
+      ],
+      items: [
+        {
+          title: "Hilos Reabsorbibles Faciales",
+          description:
+            "Utilizamos hilos de PDO o PLLA que se reabsorben solos dejando un andamiaje de colágeno nuevo. Tratan mejillas, mandíbula y cuello.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tensor de Cejas",
+          description:
+            "Eleva y define las cejas caídas de forma no invasiva, abriendo la mirada y suavizando el aspecto cansado.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tensor de Cuello",
+          description:
+            "Reafirma y tensa la piel del cuello y el mentón, mejorando la definición de la línea mandibular.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Facial Completo",
+          description:
+            "Tratamiento integral con hilos tensores que aborda todo el tercio medio e inferior del rostro para un rejuvenecimiento global y natural.",
+          duration: "90 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuánto duran los hilos tensores?",
+          answer:
+            "Los hilos se reabsorben entre 6 y 18 meses dependiendo del tipo, pero el colágeno estimulado permanece mucho más tiempo, manteniendo el efecto tensor.",
+        },
+        {
+          question: "¿El tratamiento es doloroso?",
+          answer:
+            "Se aplica anestesia local tópica o infiltrada antes del procedimiento. Las molestias post-tratamiento son mínimas y controlables con analgesia convencional.",
+        },
+        {
+          question: "¿Quién es buen candidato para los hilos tensores?",
+          answer:
+            "Personas entre 35 y 65 años con flacidez leve-moderada que quieren un resultado notable sin recurrir a la cirugía.",
+        },
+      ],
+    },
+    en: {
+      slug: "tension-threads",
+      name: "Tension Threads Turrialba",
+      tagline: "The most effective non-surgical lifting on the market",
+      heroDescription:
+        "Tension threads are the non-surgical alternative to a facelift. They restore firmness and tension immediately, stimulating natural collagen production.",
+      benefits: [
+        "Immediate and progressive lifting effect",
+        "Natural collagen stimulation",
+        "No surgery or scars",
+        "Results that improve over time",
+        "Minimal recovery time",
+      ],
+      items: [
+        {
+          title: "Facial Absorbable Threads",
+          description: "We use PDO or PLLA threads that are reabsorbed by the body.",
+          duration: "60 min",
+          faq: [
+        {
+          question: "¿Cuánto duran los hilos tensores?",
+          answer:
+            "Los hilos se reabsorben entre 6 y 18 meses dependiendo del tipo, pero el colágeno estimulado permanece mucho más tiempo, manteniendo el efecto tensor.",
+        },
+        {
+          question: "¿El tratamiento es doloroso?",
+          answer:
+            "Se aplica anestesia local tópica o infiltrada antes del procedimiento. Las molestias post-tratamiento son mínimas y controlables con analgesia convencional.",
+        },
+        {
+          question: "¿Quién es buen candidato para los hilos tensores?",
+          answer:
+            "Personas entre 35 y 65 años con flacidez leve-moderada que quieren un resultado notable sin recurrir a la cirugía.",
+        },
+      ],
+    },
+      ],
+    },
   },
   {
-    slug: "nuevo-servicio-3",
-    name: "Nuevo Servicio 3 (Plantilla)",
-    tagline: "Descripción corta y atractiva del nuevo servicio 3",
-    heroDescription:
-      "Esta es una plantilla de prueba para el Nuevo Servicio 3. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
-    benefits: [
-      "Beneficio destacado número 1 del servicio",
-      "Beneficio destacado número 2 del servicio",
-      "Beneficio destacado número 3 del servicio",
-      "Beneficio destacado número 4 del servicio",
-    ],
-    items: [
-      {
-        title: "Opción de Tratamiento 1",
-        description: "Breve descripción sobre esta variante específica del servicio.",
-        duration: "45 min",
-        price: "Consultar precio",
-      },
-    ],
-    faq: [
-      {
-        question: "¿Pregunta frecuente de ejemplo 1?",
-        answer: "Respuesta detallada a la pregunta frecuente número 1.",
-      },
-    ],
+    es: {
+      slug: "tensado-corporal",
+      name: "Tensado Corporal en Turrialba",
+      tagline: "Reafirma y esculpe tu silueta sin cirugía",
+      heroDescription:
+        "Firmeza, bienestar y remodelación corporal progresiva en un solo protocolo",
+      benefits: [
+        "Reafirmación visible de la piel desde las primeras sesiones",
+        "Estimula la producción de colágeno y elastina",
+        "Sin cirugía, sin anestesia, sin recuperación",
+        "Resultados naturales y progresivos",
+        "Efectivo en abdomen, muslos, brazos y glúteos",
+      ],
+      items: [
+        {
+          title: "Tensado Abdominal",
+          description:
+            "Protocolo específico para reafirmar la piel del abdomen y reducir la flacidez postparto o por pérdida de peso, con tecnología de radiofrecuencia multipolar.",
+          duration: "50 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tensado de Muslos y Glúteos",
+          description:
+            "Tratamiento enfocado en las zonas de mayor pérdida de firmeza, devolviendo elasticidad y definición a los glúteos y la cara interna y externa de los muslos.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tensado de Brazos",
+          description:
+            "Protocolo para la zona del tríceps y la cara interna del brazo, ideal para recuperar firmeza y combatir la piel colgante sin cirugía.",
+          duration: "40 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tensado Corporal Integral",
+          description:
+            "Sesión combinada que trabaja varias zonas en un mismo tratamiento, diseñando un protocolo integral adaptado a las necesidades de cada clienta.",
+          duration: "80 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "Para resultados óptimos recomendamos entre 6 y 10 sesiones, con frecuencia semanal o bisemanal. En la valoración gratuita te indicamos el número exacto según tu caso.",
+        },
+        {
+          question: "¿Es doloroso el tratamiento?",
+          answer:
+            "No. La sensación es de calor agradable en la zona tratada. Es un procedimiento completamente cómodo y relajante que no requiere ningún tiempo de recuperación.",
+        },
+        {
+          question: "¿Cuándo se notan los resultados?",
+          answer:
+            "Muchas clientas notan mayor firmeza desde las primeras sesiones. Los resultados más significativos se aprecian a partir de la 4ª–6ª sesión y continúan mejorando semanas después del tratamiento.",
+        },
+      ],
+    },
+    en: {
+      slug: "tensado-corporal",
+      name: "Tensado Corporal en Turrialba",
+      tagline: "Reafirma y esculpe tu silueta sin cirugía",
+      heroDescription: "Firmeza, bienestar y remodelación corporal progresiva en un solo protocolo",
+      benefits: [
+        "Reafirmación visible de la piel desde las primeras sesiones",
+        "Estimula la producción de colágeno y elastina",
+        "Sin cirugía, sin anestesia, sin recuperación",
+        "Resultados naturales y progresivos",
+        "Efectivo en abdomen, muslos, brazos y glúteos",
+      ],
+      items: [
+        {
+          title: "Tensado Abdominal",
+          description:
+            "Protocolo específico para reafirmar la piel del abdomen y reducir la flacidez postparto o por pérdida de peso, con tecnología de radiofrecuencia multipolar.",
+          duration: "50 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tensado de Muslos y Glúteos",
+          description:
+            "Tratamiento enfocado en las zonas de mayor pérdida de firmeza, devolviendo elasticidad y definición a los glúteos y la cara interna y externa de los muslos.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tensado de Brazos",
+          description:
+            "Protocolo para la zona del tríceps y la cara interna del brazo, ideal para recuperar firmeza y combatir la piel colgante sin cirugía.",
+          duration: "40 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tensado Corporal Integral",
+          description:
+            "Sesión combinada que trabaja varias zonas en un mismo tratamiento, diseñando un protocolo integral adaptado a las necesidades de cada clienta.",
+          duration: "80 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "Para resultados óptimos recomendamos entre 6 y 10 sesiones, con frecuencia semanal o bisemanal. En la valoración gratuita te indicamos el número exacto según tu caso.",
+        },
+        {
+          question: "¿Es doloroso el tratamiento?",
+          answer:
+            "No. La sensación es de calor agradable en la zona tratada. Es un procedimiento completamente cómodo y relajante que no requiere ningún tiempo de recuperación.",
+        },
+        {
+          question: "¿Cuándo se notan los resultados?",
+          answer:
+            "Muchas clientas notan mayor firmeza desde las primeras sesiones. Los resultados más significativos se aprecian a partir de la 4ª–6ª sesión y continúan mejorando semanas después del tratamiento.",
+        },
+      ],
+    },
   },
+  {
+    es: {
+      slug: "hollywood-peel",
+      name: "Hollywood Peel",
+      fullTitle: "Hollywood Peel en Turrialba",
+      tagline: "Piel luminosa, uniforme y rejuvenecida en una sola sesión",
+      heroDescription:
+        "El Hollywood Peel, también conocido como Carbon Laser Peel, es un tratamiento láser no invasivo que revitaliza la piel, unifica el tono, reduce manchas y estimula la producción de colágeno para un aspecto más joven y radiante.",
+      benefits: [
+        "Unificación del tono de la piel desde la primera sesión",
+        "Reducción de manchas, líneas finas y cicatrices de acné",
+        "Estimulación del colágeno para una piel más joven",
+        "Sin tiempo de recuperación ni efectos secundarios",
+        "Apto para todos los tipos de piel",
+      ],
+      items: [
+        {
+          title: "Hollywood Peel Facial",
+          description:
+            "Aplicación de carbono líquido sobre el rostro y posterior tratamiento con láser para exfoliar, unificar el tono y estimular la renovación celular.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Hollywood Peel Cuello y Escote",
+          description:
+            "Extensión del tratamiento al cuello y escote para tratar manchas solares, envejecimiento y mejorar la textura en estas zonas.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Hollywood Peel + Radiofrecuencia",
+          description:
+            "Protocolo combinado para máximos resultados: exfoliación y rejuvenecimiento láser más radiofrecuencia para efecto tensor profundo.",
+          duration: "75 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Duele el Hollywood Peel?",
+          answer:
+            "No, el tratamiento es prácticamente indoloro. Puede notarse una ligera sensación de calor durante la aplicación del láser.",
+        },
+        {
+          question: "¿Con qué frecuencia se puede realizar?",
+          answer:
+            "Se recomienda una sesión mensual para mantenimiento. Para resultados más intensivos, se puede hacer cada 2–3 semanas.",
+        },
+      ],
+    },
+    en: {
+      slug: "hollywood-peel",
+      name: "Hollywood Peel",
+      tagline: "Piel luminosa, uniforme y rejuvenecida en una sola sesión",
+      heroDescription: "El Hollywood Peel, también conocido como Carbon Laser Peel, es un tratamiento láser no invasivo que revitaliza la piel, unifica el tono, reduce manchas y estimula la producción de colágeno para un aspecto más joven y radiante.",
+      benefits: [
+        "Unificación del tono de la piel desde la primera sesión",
+        "Reducción de manchas, líneas finas y cicatrices de acné",
+        "Estimulación del colágeno para una piel más joven",
+        "Sin tiempo de recuperación ni efectos secundarios",
+        "Apto para todos los tipos de piel",
+      ],
+      items: [
+        {
+          title: "Hollywood Peel Facial",
+          description:
+            "Aplicación de carbono líquido sobre el rostro y posterior tratamiento con láser para exfoliar, unificar el tono y estimular la renovación celular.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Hollywood Peel Cuello y Escote",
+          description:
+            "Extensión del tratamiento al cuello y escote para tratar manchas solares, envejecimiento y mejorar la textura en estas zonas.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Hollywood Peel + Radiofrecuencia",
+          description:
+            "Protocolo combinado para máximos resultados: exfoliación y rejuvenecimiento láser más radiofrecuencia para efecto tensor profundo.",
+          duration: "75 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Duele el Hollywood Peel?",
+          answer:
+            "No, el tratamiento es prácticamente indoloro. Puede notarse una ligera sensación de calor durante la aplicación del láser.",
+        },
+        {
+          question: "¿Con qué frecuencia se puede realizar?",
+          answer:
+            "Se recomienda una sesión mensual para mantenimiento. Para resultados más intensivos, se puede hacer cada 2–3 semanas.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "eliminacion-manchas",
+      name: "Eliminación de Manchas",
+      tagline: "Recupera un tono de piel uniforme y luminoso",
+      heroDescription:
+        "Las manchas en la piel (melasma, manchas solares, hiperpigmentación) son tratadas con métodos de última generación que eliminan la pigmentación de forma segura y efectiva, devolviendo la uniformidad y luminosidad natural de tu piel.",
+      benefits: [
+        "Eliminación definitiva de manchas solares y melasma",
+        "Unificación del tono cutáneo",
+        "Piel más luminosa y uniforme",
+        "Tratamientos seguros y eficaces",
+        "Sin cicatrices ni efectos secundarios severos",
+      ],
+      items: [
+        {
+          title: "Tratamiento con Luz Pulsada (IPL)",
+          description:
+            "La luz pulsada intensa destruye selectivamente las células pigmentadas sin dañar los tejidos circundantes. Ideal para manchas solares y rojeces.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Peeling Despigmentante",
+          description:
+            "Combinación de ácidos específicos que actúan sobre la melanina para aclarar manchas y unificar progresivamente el tono de la piel.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Mesoterapia Despigmentante",
+          description:
+            "Microinfiltración de activos despigmentantes directamente en la zona afectada para resultados más rápidos y precisos.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Antimelasma Completo",
+          description:
+            "Programa personalizado de varias sesiones que combina tratamientos en cabina con protocolo domiciliario para combatir el melasma de forma integral.",
+          duration: "Según protocolo",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuántas sesiones son necesarias?",
+          answer:
+            "Depende del tipo y profundidad de la mancha. Las manchas superficiales pueden aclararse en 3–5 sesiones; el melasma requiere un tratamiento más prolongado y constante.",
+        },
+        {
+          question: "¿Debo usar protector solar?",
+          answer:
+            "Sí, es imprescindible. El uso de SPF 50+ a diario es parte fundamental del tratamiento y garantiza que no aparezcan nuevas manchas ni reaparezcan las tratadas.",
+        },
+      ],
+    },
+    en: {
+      slug: "eliminacion-manchas",
+      name: "Eliminación de Manchas",
+      tagline: "Recupera un tono de piel uniforme y luminoso",
+      heroDescription: "Las manchas en la piel (melasma, manchas solares, hiperpigmentación) son tratadas con métodos de última generación que eliminan la pigmentación de forma segura y efectiva, devolviendo la uniformidad y luminosidad natural de tu piel.",
+      benefits: [
+        "Eliminación definitiva de manchas solares y melasma",
+        "Unificación del tono cutáneo",
+        "Piel más luminosa y uniforme",
+        "Tratamientos seguros y eficaces",
+        "Sin cicatrices ni efectos secundarios severos",
+      ],
+      items: [
+        {
+          title: "Tratamiento con Luz Pulsada (IPL)",
+          description:
+            "La luz pulsada intensa destruye selectivamente las células pigmentadas sin dañar los tejidos circundantes. Ideal para manchas solares y rojeces.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Peeling Despigmentante",
+          description:
+            "Combinación de ácidos específicos que actúan sobre la melanina para aclarar manchas y unificar progresivamente el tono de la piel.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Mesoterapia Despigmentante",
+          description:
+            "Microinfiltración de activos despigmentantes directamente en la zona afectada para resultados más rápidos y precisos.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Antimelasma Completo",
+          description:
+            "Programa personalizado de varias sesiones que combina tratamientos en cabina con protocolo domiciliario para combatir el melasma de forma integral.",
+          duration: "Según protocolo",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuántas sesiones son necesarias?",
+          answer:
+            "Depende del tipo y profundidad de la mancha. Las manchas superficiales pueden aclararse en 3–5 sesiones; el melasma requiere un tratamiento más prolongado y constante.",
+        },
+        {
+          question: "¿Debo usar protector solar?",
+          answer:
+            "Sí, es imprescindible. El uso de SPF 50+ a diario es parte fundamental del tratamiento y garantiza que no aparezcan nuevas manchas ni reaparezcan las tratadas.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "radiofrecuencia-facial",
+      name: "Radiofrecuencia Facial",
+      tagline: "Reafirmación y rejuvenecimiento sin cirugía",
+      heroDescription:
+        "La radiofrecuencia facial es un tratamiento no invasivo que utiliza energía electromagnética para calentar las capas profundas de la piel, estimulando la producción de colágeno y elastina para un efecto tensor, reafirmante y rejuvenecedor visible.",
+      benefits: [
+        "Reafirmación y efecto lifting visible",
+        "Estimulación natural del colágeno y elastina",
+        "Reducción de arrugas y líneas de expresión",
+        "Sin cirugía, sin agujas, sin recuperación",
+        "Resultados que mejoran progresivamente",
+      ],
+      items: [
+        {
+          title: "Radiofrecuencia Facial Completa",
+          description:
+            "Tratamiento de todo el rostro para mejorar la firmeza, reducir la flacidez y atenuar arrugas de forma global.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Radiofrecuencia de Contorno",
+          description:
+            "Tratamiento focalizado en el óvalo facial, papada y cuello para definir y tensar la línea mandibular.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Radiofrecuencia Ocular",
+          description:
+            "Tratamiento específico para el contorno de ojos: suaviza las patas de gallo, reduce bolsas y ojeras y levanta el párpado caído.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Radiofrecuencia + Mesoterapia",
+          description:
+            "Protocolo combinado de máxima eficacia: la radiofrecuencia abre canales en la piel que potencian la absorción de activos de la mesoterapia.",
+          duration: "75 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuándo se notan los resultados?",
+          answer:
+            "Se aprecia una mejoría inmediata tras la primera sesión. Los mejores resultados se obtienen a partir de la 4ª–6ª sesión y siguen mejorando semanas después.",
+        },
+        {
+          question: "¿Es dolorosa?",
+          answer:
+            "No. La sensación es de calor agradable y confortable. Es un tratamiento muy relajante que muchas clientas comparan con un masaje cálido.",
+        },
+      ],
+    },
+    en: {
+      slug: "radiofrecuencia-facial",
+      name: "Radiofrecuencia Facial",
+      tagline: "Reafirmación y rejuvenecimiento sin cirugía",
+      heroDescription: "La radiofrecuencia facial es un tratamiento no invasivo que utiliza energía electromagnética para calentar las capas profundas de la piel, estimulando la producción de colágeno y elastina para un efecto tensor, reafirmante y rejuvenecedor visible.",
+      benefits: [
+        "Reafirmación y efecto lifting visible",
+        "Estimulación natural del colágeno y elastina",
+        "Reducción de arrugas y líneas de expresión",
+        "Sin cirugía, sin agujas, sin recuperación",
+        "Resultados que mejoran progresivamente",
+      ],
+      items: [
+        {
+          title: "Radiofrecuencia Facial Completa",
+          description:
+            "Tratamiento de todo el rostro para mejorar la firmeza, reducir la flacidez y atenuar arrugas de forma global.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Radiofrecuencia de Contorno",
+          description:
+            "Tratamiento focalizado en el óvalo facial, papada y cuello para definir y tensar la línea mandibular.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Radiofrecuencia Ocular",
+          description:
+            "Tratamiento específico para el contorno de ojos: suaviza las patas de gallo, reduce bolsas y ojeras y levanta el párpado caído.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Radiofrecuencia + Mesoterapia",
+          description:
+            "Protocolo combinado de máxima eficacia: la radiofrecuencia abre canales en la piel que potencian la absorción de activos de la mesoterapia.",
+          duration: "75 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuándo se notan los resultados?",
+          answer:
+            "Se aprecia una mejoría inmediata tras la primera sesión. Los mejores resultados se obtienen a partir de la 4ª–6ª sesión y siguen mejorando semanas después.",
+        },
+        {
+          question: "¿Es dolorosa?",
+          answer:
+            "No. La sensación es de calor agradable y confortable. Es un tratamiento muy relajante que muchas clientas comparan con un masaje cálido.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "hilos-colageno",
+      name: "Hilos de Colágeno",
+      fullTitle: "Hilos de Colágeno en Turrialba",
+      tagline: "Rejuvenecimiento Facial Natural, Firmeza y Glow Premium",
+      heroBg:
+        "https://i5.walmartimages.com/asr/81a8d6ba-e929-41d2-b349-eaaac42faa01.5a1383e330f604e473d84befe6ae4df5.jpeg",
+      heroDescription:
+        "Diseñamos protocolos personalizados con Hilos de Colágeno orientados a rejuvenecimiento progresivo, firmeza facial y armonización estética natural en Turrialba.",
+      benefits: [
+        "Apariencia de firmeza facial",
+        "Rejuvenecimiento progresivo",
+        "Glow y luminosidad natural",
+        "Definición facial elegante",
+        "Armonización estética natural",
+        "Bienestar facial premium",
+        "Apariencia más descansada y fresca",
+        "Protocolos antiaging personalizados",
+      ],
+      items: [
+        {
+          title: "Protocolo Hilos de Colágeno",
+          description:
+            "Sesión personalizada de hilos de colágeno para firmeza y rejuvenecimiento facial.",
+          duration: "45-60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué son los Hilos de Colágeno?",
+          answer:
+            "Son procedimientos estéticos orientados a protocolos de firmeza y rejuvenecimiento facial progresivo.",
+        },
+      ],
+    },
+    en: {
+      slug: "hilos-colageno",
+      name: "Hilos de Colágeno",
+      tagline: "Rejuvenecimiento Facial Natural, Firmeza y Glow Premium",
+      heroDescription: "Diseñamos protocolos personalizados con Hilos de Colágeno orientados a rejuvenecimiento progresivo, firmeza facial y armonización estética natural en Turrialba.",
+      benefits: [
+        "Apariencia de firmeza facial",
+        "Rejuvenecimiento progresivo",
+        "Glow y luminosidad natural",
+        "Definición facial elegante",
+        "Armonización estética natural",
+        "Bienestar facial premium",
+        "Apariencia más descansada y fresca",
+        "Protocolos antiaging personalizados",
+      ],
+      items: [
+        {
+          title: "Protocolo Hilos de Colágeno",
+          description:
+            "Sesión personalizada de hilos de colágeno para firmeza y rejuvenecimiento facial.",
+          duration: "45-60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué son los Hilos de Colágeno?",
+          answer:
+            "Son procedimientos estéticos orientados a protocolos de firmeza y rejuvenecimiento facial progresivo.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "rejuvenecimiento-facial-laser",
+      name: "Rejuvenecimiento Facial Láser",
+      fullTitle: "Rejuvenecimiento Facial con Láser en Turrialba",
+      tagline: "Recupera la Juventud y Luminosidad de tu Piel",
+      heroDescription:
+        "Recupera la Juventud y Luminosidad de tu Piel con tecnología láser de vanguardia en Turrialba.",
+      benefits: [
+        "Estimula la producción natural de colágeno",
+        "Mejora la textura de la piel",
+        "Reduce líneas de expresión",
+        "Disminuye manchas y daños solares",
+        "Resultados progresivos y naturales",
+      ],
+      items: [
+        {
+          title: "Tratamiento de Rejuvenecimiento Facial con Láser",
+          description:
+            "Protocolo personalizado diseñado para estimular el colágeno y mejorar la calidad de la piel desde el interior.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Quién es candidato para el rejuvenecimiento láser?",
+          answer:
+            "Es ideal para hombres y mujeres que desean mejorar la apariencia de su piel, prevenir el envejecimiento prematuro y reducir líneas finas.",
+        },
+        {
+          question: "¿Duele el tratamiento?",
+          answer:
+            "El procedimiento está diseñado para ser profesional y cómodo, adaptando la tecnología a la sensibilidad de cada paciente.",
+        },
+      ],
+    },
+    en: {
+      slug: "rejuvenecimiento-facial-laser",
+      name: "Rejuvenecimiento Facial Láser",
+      tagline: "Recupera la Juventud y Luminosidad de tu Piel",
+      heroDescription: "Recupera la Juventud y Luminosidad de tu Piel con tecnología láser de vanguardia en Turrialba.",
+      benefits: [
+        "Estimula la producción natural de colágeno",
+        "Mejora la textura de la piel",
+        "Reduce líneas de expresión",
+        "Disminuye manchas y daños solares",
+        "Resultados progresivos y naturales",
+      ],
+      items: [
+        {
+          title: "Tratamiento de Rejuvenecimiento Facial con Láser",
+          description:
+            "Protocolo personalizado diseñado para estimular el colágeno y mejorar la calidad de la piel desde el interior.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Quién es candidato para el rejuvenecimiento láser?",
+          answer:
+            "Es ideal para hombres y mujeres que desean mejorar la apariencia de su piel, prevenir el envejecimiento prematuro y reducir líneas finas.",
+        },
+        {
+          question: "¿Duele el tratamiento?",
+          answer:
+            "El procedimiento está diseñado para ser profesional y cómodo, adaptando la tecnología a la sensibilidad de cada paciente.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "microagujas",
+      name: "Microagujas",
+      fullTitle: "Microagujas en Turrialba",
+      tagline: "Renovación, Glow y Skincare Premium",
+      heroDescription:
+        "Glow Facial, Renovación y Skincare Premium en MJ Estética & Wellness Center",
+      benefits: [
+        "Glow y luminosidad facial",
+        "Apariencia de textura más uniforme",
+        "Sensación de renovación facial",
+        "Bienestar y revitalización de la piel",
+        "Protocolos skincare personalizados",
+        "Rejuvenecimiento facial progresivo",
+      ],
+      items: [
+        {
+          title: "Microneedling Facial Premium",
+          description:
+            "Protocolo orientado a renovación facial progresiva y bienestar de la piel.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué son las microagujas?",
+          answer:
+            "Son técnicas avanzadas de microneedling facial utilizadas dentro de protocolos skincare orientados a glow, renovación y bienestar facial.",
+        },
+      ],
+    },
+    en: {
+      slug: "microagujas",
+      name: "Microagujas",
+      tagline: "Renovación, Glow y Skincare Premium",
+      heroDescription: "Glow Facial, Renovación y Skincare Premium en MJ Estética & Wellness Center",
+      benefits: [
+        "Glow y luminosidad facial",
+        "Apariencia de textura más uniforme",
+        "Sensación de renovación facial",
+        "Bienestar y revitalización de la piel",
+        "Protocolos skincare personalizados",
+        "Rejuvenecimiento facial progresivo",
+      ],
+      items: [
+        {
+          title: "Microneedling Facial Premium",
+          description:
+            "Protocolo orientado a renovación facial progresiva y bienestar de la piel.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué son las microagujas?",
+          answer:
+            "Son técnicas avanzadas de microneedling facial utilizadas dentro de protocolos skincare orientados a glow, renovación y bienestar facial.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "microagujas-ginkgo-biloba",
+      name: "Microagujas con Ginkgo Biloba",
+      fullTitle: "Microagujas con Ginkgo Biloba en Turrialba",
+      tagline: "Glow natural, revitalización facial y skincare avanzado",
+      heroDescription:
+        "Glow natural, revitalización facial y skincare avanzado en un solo protocolo",
+      benefits: [
+        "Glow facial natural",
+        "Apariencia de piel revitalizada",
+        "Textura visualmente más uniforme",
+        "Sensación de hidratación y frescura",
+        "Protocolos adaptados a cada tipo de piel",
+      ],
+      items: [
+        {
+          title: "Protocolo Ginkgo Biloba Premium",
+          description:
+            "Sesión de microagujas combinada con activos de Ginkgo Biloba para revitalización profunda.",
+          duration: "75 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué son las Microagujas con Ginkgo Biloba?",
+          answer:
+            "Es un tratamiento que combina microneedling con activos de Ginkgo Biloba para potenciar el glow y la salud de la piel.",
+        },
+      ],
+    },
+    en: {
+      slug: "microagujas-ginkgo-biloba",
+      name: "Microagujas con Ginkgo Biloba",
+      tagline: "Glow natural, revitalización facial y skincare avanzado",
+      heroDescription: "Glow natural, revitalización facial y skincare avanzado en un solo protocolo",
+      benefits: [
+        "Glow facial natural",
+        "Apariencia de piel revitalizada",
+        "Textura visualmente más uniforme",
+        "Sensación de hidratación y frescura",
+        "Protocolos adaptados a cada tipo de piel",
+      ],
+      items: [
+        {
+          title: "Protocolo Ginkgo Biloba Premium",
+          description:
+            "Sesión de microagujas combinada con activos de Ginkgo Biloba para revitalización profunda.",
+          duration: "75 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué son las Microagujas con Ginkgo Biloba?",
+          answer:
+            "Es un tratamiento que combina microneedling con activos de Ginkgo Biloba para potenciar el glow y la salud de la piel.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "laser-acne",
+      name: "Láser para Acné en Turrialba | Mejora Brotes y Marcas",
+      fullTitle:
+        "Láser para Acné en Turrialba | Mejora Brotes, Marcas y Textura de la Piel",
+      tagline: "Mejora la apariencia de brotes, marcas y textura",
+      heroDescription:
+        "¿Te gustaría verte al espejo y sentir más confianza al observar tu piel?<br /><br />En MJ Estética & Wellness Center ofrecemos tratamientos de Láser para Acné en Turrialba diseñados para complementar protocolos profesionales de cuidado facial, ayudando a mejorar progresivamente brotes activos, marcas y poros visibles.",
+      benefits: [
+        "Mejora progresiva de brotes activos",
+        "Reducción visual de marcas de acné",
+        "Control de piel grasa y poros",
+        "Unificación del tono y textura",
+        "Procedimiento seguro y personalizado",
+        "Aumento de bienestar y confianza",
+      ],
+      items: [
+        {
+          title: "Sesión Láser para Acné",
+          description:
+            "Tratamiento láser avanzado enfocado en mejorar la apariencia de pieles con tendencia acneica.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿El láser para acné duele?",
+          answer:
+            "La mayoría de personas describe una sensación tolerable que depende de la sensibilidad individual.",
+        },
+        {
+          question: "¿Ayuda con marcas de acné?",
+          answer:
+            "Puede formar parte de protocolos orientados a mejorar su apariencia según valoración profesional.",
+        },
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer: "Cada caso es diferente y requiere evaluación personalizada.",
+        },
+        {
+          question: "¿Sirve para piel grasa?",
+          answer:
+            "Muchas personas con piel grasa incorporan este tratamiento dentro de sus protocolos faciales.",
+        },
+      ],
+    },
+    en: {
+      slug: "laser-acne",
+      name: "Láser para Acné en Turrialba | Mejora Brotes y Marcas",
+      tagline: "Mejora la apariencia de brotes, marcas y textura",
+      heroDescription: "¿Te gustaría verte al espejo y sentir más confianza al observar tu piel?<br /><br />En MJ Estética & Wellness Center ofrecemos tratamientos de Láser para Acné en Turrialba diseñados para complementar protocolos profesionales de cuidado facial, ayudando a mejorar progresivamente brotes activos, marcas y poros visibles.",
+      benefits: [
+        "Mejora progresiva de brotes activos",
+        "Reducción visual de marcas de acné",
+        "Control de piel grasa y poros",
+        "Unificación del tono y textura",
+        "Procedimiento seguro y personalizado",
+        "Aumento de bienestar y confianza",
+      ],
+      items: [
+        {
+          title: "Sesión Láser para Acné",
+          description:
+            "Tratamiento láser avanzado enfocado en mejorar la apariencia de pieles con tendencia acneica.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿El láser para acné duele?",
+          answer:
+            "La mayoría de personas describe una sensación tolerable que depende de la sensibilidad individual.",
+        },
+        {
+          question: "¿Ayuda con marcas de acné?",
+          answer:
+            "Puede formar parte de protocolos orientados a mejorar su apariencia según valoración profesional.",
+        },
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer: "Cada caso es diferente y requiere evaluación personalizada.",
+        },
+        {
+          question: "¿Sirve para piel grasa?",
+          answer:
+            "Muchas personas con piel grasa incorporan este tratamiento dentro de sus protocolos faciales.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "masaje-maxilofacial",
+      name: "Masaje Maxilofacial en Turrialba | Relajación Facial Profunda",
+      fullTitle:
+        "Masaje Maxilofacial en Turrialba | Relajación Facial Profunda y Bienestar Integral",
+      tagline: "Libera tensión, regálate un momento de bienestar",
+      heroDescription:
+        "¿Sientes tensión en el rostro, mandíbula cargada o simplemente deseas regalarte un momento de relajación y autocuidado?<br /><br />En MJ Estética & Wellness Center hemos desarrollado una experiencia de masaje maxilofacial en Turrialba enfocada en promover bienestar facial, relajación muscular y una sensación profunda de descanso físico y emocional.",
+      benefits: [
+        "Relajación facial profunda",
+        "Alivio de la tensión mandibular",
+        "Bienestar muscular facial",
+        "Experiencia wellness premium",
+        "Relajación física y emocional",
+        "Momento de autocuidado personal",
+      ],
+      items: [
+        {
+          title: "Sesión Masaje Maxilofacial",
+          description:
+            "Protocolo personalizado de masaje facial orientado a la relajación profunda y armonización muscular.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué se siente durante la sesión?",
+          answer:
+            "Generalmente se percibe como una experiencia relajante, confortable y de profundo descanso.",
+        },
+        {
+          question: "¿Cuánto dura una cita?",
+          answer:
+            "La duración puede variar según el protocolo, habitualmente entre 45 y 60 minutos.",
+        },
+        {
+          question: "¿Es personalizado?",
+          answer:
+            "Sí. Adaptamos cada sesión a las necesidades individuales de cada cliente y su nivel de tensión.",
+        },
+        {
+          question: "¿Puedo combinarlo con otros faciales?",
+          answer:
+            "Sí, es el complemento ideal para una limpieza facial o tratamiento de hidratación para potenciar la relajación.",
+        },
+      ],
+    },
+    en: {
+      slug: "masaje-maxilofacial",
+      name: "Masaje Maxilofacial en Turrialba | Relajación Facial Profunda",
+      tagline: "Libera tensión, regálate un momento de bienestar",
+      heroDescription: "¿Sientes tensión en el rostro, mandíbula cargada o simplemente deseas regalarte un momento de relajación y autocuidado?<br /><br />En MJ Estética & Wellness Center hemos desarrollado una experiencia de masaje maxilofacial en Turrialba enfocada en promover bienestar facial, relajación muscular y una sensación profunda de descanso físico y emocional.",
+      benefits: [
+        "Relajación facial profunda",
+        "Alivio de la tensión mandibular",
+        "Bienestar muscular facial",
+        "Experiencia wellness premium",
+        "Relajación física y emocional",
+        "Momento de autocuidado personal",
+      ],
+      items: [
+        {
+          title: "Sesión Masaje Maxilofacial",
+          description:
+            "Protocolo personalizado de masaje facial orientado a la relajación profunda y armonización muscular.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué se siente durante la sesión?",
+          answer:
+            "Generalmente se percibe como una experiencia relajante, confortable y de profundo descanso.",
+        },
+        {
+          question: "¿Cuánto dura una cita?",
+          answer:
+            "La duración puede variar según el protocolo, habitualmente entre 45 y 60 minutos.",
+        },
+        {
+          question: "¿Es personalizado?",
+          answer:
+            "Sí. Adaptamos cada sesión a las necesidades individuales de cada cliente y su nivel de tensión.",
+        },
+        {
+          question: "¿Puedo combinarlo con otros faciales?",
+          answer:
+            "Sí, es el complemento ideal para una limpieza facial o tratamiento de hidratación para potenciar la relajación.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "rejuvenecimiento-facial",
+      name: "Rejuvenecimiento Facial",
+      fullTitle: "Rejuvenecimiento Facial en Turrialba",
+      tagline: "Glow Natural, Armonización Facial y Bienestar Estético Premium",
+      heroDescription:
+        "Glow Natural, Armonización Facial y Bienestar Estético Premium un espacio, Tu piel cuenta tu historia…<br />pero también puede reflejar luminosidad, frescura y bienestar.",
+      benefits: [
+        "Piel más luminosa y revitalizada",
+        "Glow facial progresivo",
+        "Sensación de rejuvenecimiento natural",
+        "Bienestar facial integral",
+        "Resultados personalizados",
+        "Apariencia más fresca y descansada",
+        "Protocolos skincare premium",
+        "Atención estética profesional",
+      ],
+      items: [
+        {
+          title: "Protocolo Rejuvenecimiento Facial",
+          description:
+            "Experiencia personalizada orientada a glow, armonización y bienestar facial.",
+          duration: "Variable",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué es el rejuvenecimiento facial?",
+          answer:
+            "Son protocolos estéticos orientados a apoyar glow facial, bienestar de la piel y rejuvenecimiento progresivo.",
+        },
+        {
+          question: "¿Qué beneficios puede aportar?",
+          answer:
+            "Puede apoyar procesos relacionados con luminosidad facial, sensación de renovación y armonización estética.",
+        },
+        {
+          question: "¿Qué protocolos utilizan?",
+          answer:
+            "Dependiendo de la valoración personalizada, pueden utilizarse tecnologías y tratamientos skincare avanzados.",
+        },
+        {
+          question: "¿Tiene recuperación?",
+          answer:
+            "Cada protocolo es diferente. Durante la valoración explicamos recomendaciones y cuidados posteriores.",
+        },
+        {
+          question: "¿Cuántas sesiones se recomiendan?",
+          answer:
+            "Depende de las necesidades individuales y objetivos faciales de cada persona.",
+        },
+        {
+          question: "¿Se puede combinar con otros tratamientos?",
+          answer: "Sí, según valoración profesional y protocolo personalizado.",
+        },
+        {
+          question: "¿Cuándo se ven resultados?",
+          answer:
+            "Los resultados pueden percibirse progresivamente dependiendo del tratamiento realizado.",
+        },
+      ],
+    },
+    en: {
+      slug: "rejuvenecimiento-facial",
+      name: "Rejuvenecimiento Facial",
+      tagline: "Glow Natural, Armonización Facial y Bienestar Estético Premium",
+      heroDescription: "Glow Natural, Armonización Facial y Bienestar Estético Premium un espacio, Tu piel cuenta tu historia…<br />pero también puede reflejar luminosidad, frescura y bienestar.",
+      benefits: [
+        "Piel más luminosa y revitalizada",
+        "Glow facial progresivo",
+        "Sensación de rejuvenecimiento natural",
+        "Bienestar facial integral",
+        "Resultados personalizados",
+        "Apariencia más fresca y descansada",
+        "Protocolos skincare premium",
+        "Atención estética profesional",
+      ],
+      items: [
+        {
+          title: "Protocolo Rejuvenecimiento Facial",
+          description:
+            "Experiencia personalizada orientada a glow, armonización y bienestar facial.",
+          duration: "Variable",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué es el rejuvenecimiento facial?",
+          answer:
+            "Son protocolos estéticos orientados a apoyar glow facial, bienestar de la piel y rejuvenecimiento progresivo.",
+        },
+        {
+          question: "¿Qué beneficios puede aportar?",
+          answer:
+            "Puede apoyar procesos relacionados con luminosidad facial, sensación de renovación y armonización estética.",
+        },
+        {
+          question: "¿Qué protocolos utilizan?",
+          answer:
+            "Dependiendo de la valoración personalizada, pueden utilizarse tecnologías y tratamientos skincare avanzados.",
+        },
+        {
+          question: "¿Tiene recuperación?",
+          answer:
+            "Cada protocolo es diferente. Durante la valoración explicamos recomendaciones y cuidados posteriores.",
+        },
+        {
+          question: "¿Cuántas sesiones se recomiendan?",
+          answer:
+            "Depende de las necesidades individuales y objetivos faciales de cada persona.",
+        },
+        {
+          question: "¿Se puede combinar con otros tratamientos?",
+          answer: "Sí, según valoración profesional y protocolo personalizado.",
+        },
+        {
+          question: "¿Cuándo se ven resultados?",
+          answer:
+            "Los resultados pueden percibirse progresivamente dependiendo del tratamiento realizado.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "microagujas-melanout",
+      name: "Microneedling con MelanOut en Turrialba",
+      fullTitle:
+        "Microneedling con MelanOut en Turrialba | Tratamiento para Manchas, Melasma y Rejuvenecimiento Facial",
+      tagline: "Recupera la uniformidad y luminosidad de tu piel",
+      heroDescription:
+        "¿Te gustaría lucir una piel más luminosa, uniforme y saludable?<br /><br />En MJ Estética & Wellness Center hemos desarrollado protocolos personalizados de Microneedling con MelanOut en Turrialba, diseñados para apoyar tratamientos despigmentantes, mejorar la apariencia de la textura facial y potenciar la luminosidad natural de la piel.",
+      benefits: [
+        "Glow facial natural y luminoso",
+        "Apoyo en protocolos despigmentantes",
+        "Mejora visible de la textura facial",
+        "Reducción de apariencia de manchas",
+        "Rejuvenecimiento facial progresivo",
+        "Complemento ideal para rutina skincare",
+      ],
+      items: [
+        {
+          title: "Protocolo MelanOut Facial",
+          description:
+            "Sesión avanzada de microneedling con activos despigmentantes MelanOut para mejorar tono y textura.",
+          duration: "60-90 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question:
+            "¿El Microneedling con MelanOut ayuda con manchas faciales?",
+          answer:
+            "Puede formar parte de protocolos despigmentantes personalizados orientados a mejorar la apariencia de manchas y tono desigual.",
+        },
+        {
+          question: "¿Cuántas sesiones se recomiendan?",
+          answer:
+            "La cantidad varía según cada piel y los objetivos definidos durante la valoración.",
+        },
+        {
+          question: "¿Cuándo se observan resultados?",
+          answer:
+            "Muchas personas comienzan a notar cambios progresivos conforme avanzan las sesiones.",
+        },
+        {
+          question: "¿Tiene tiempo de recuperación?",
+          answer:
+            "Generalmente es mínimo, aunque puede variar según la sensibilidad de cada persona (enrojecimiento leve temporal).",
+        },
+      ],
+    },
+    en: {
+      slug: "microagujas-melanout",
+      name: "Microneedling con MelanOut en Turrialba",
+      tagline: "Recupera la uniformidad y luminosidad de tu piel",
+      heroDescription: "¿Te gustaría lucir una piel más luminosa, uniforme y saludable?<br /><br />En MJ Estética & Wellness Center hemos desarrollado protocolos personalizados de Microneedling con MelanOut en Turrialba, diseñados para apoyar tratamientos despigmentantes, mejorar la apariencia de la textura facial y potenciar la luminosidad natural de la piel.",
+      benefits: [
+        "Glow facial natural y luminoso",
+        "Apoyo en protocolos despigmentantes",
+        "Mejora visible de la textura facial",
+        "Reducción de apariencia de manchas",
+        "Rejuvenecimiento facial progresivo",
+        "Complemento ideal para rutina skincare",
+      ],
+      items: [
+        {
+          title: "Protocolo MelanOut Facial",
+          description:
+            "Sesión avanzada de microneedling con activos despigmentantes MelanOut para mejorar tono y textura.",
+          duration: "60-90 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question:
+            "¿El Microneedling con MelanOut ayuda con manchas faciales?",
+          answer:
+            "Puede formar parte de protocolos despigmentantes personalizados orientados a mejorar la apariencia de manchas y tono desigual.",
+        },
+        {
+          question: "¿Cuántas sesiones se recomiendan?",
+          answer:
+            "La cantidad varía según cada piel y los objetivos definidos durante la valoración.",
+        },
+        {
+          question: "¿Cuándo se observan resultados?",
+          answer:
+            "Muchas personas comienzan a notar cambios progresivos conforme avanzan las sesiones.",
+        },
+        {
+          question: "¿Tiene tiempo de recuperación?",
+          answer:
+            "Generalmente es mínimo, aunque puede variar según la sensibilidad de cada persona (enrojecimiento leve temporal).",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "microagujas-vitamina-c",
+      heroBg: "microagujas-vitamina-c-bg.jpg",
+      name: "Microagujas con Vitamina C",
+      fullTitle: "Microagujas con Vitamina C en Turrialba",
+      tagline: "Glow facial, luminosidad natural y rejuvenecimiento progresivo",
+      heroDescription:
+        "Glow facial, luminosidad natural y rejuvenecimiento progresivo",
+      benefits: [
+        "Glow facial progresivo",
+        "Sensación de renovación",
+        "Apariencia más luminosa",
+        "Textura facial más uniforme",
+        "Rejuvenecimiento natural y gradual",
+      ],
+      items: [
+        {
+          title: "Protocolo Vitamina C Premium",
+          description:
+            "Sesión de microagujas con aplicación de vitamina C para máxima luminosidad.",
+          duration: "75 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué son las microagujas con vitamina C?",
+          answer:
+            "Es un protocolo facial que combina microneedling con vitamina C orientado a apoyar glow, textura uniforme y bienestar de la piel.",
+        },
+      ],
+    },
+    en: {
+      slug: "microagujas-vitamina-c",
+      name: "Microagujas con Vitamina C",
+      tagline: "Glow facial, luminosidad natural y rejuvenecimiento progresivo",
+      heroDescription: "Glow facial, luminosidad natural y rejuvenecimiento progresivo",
+      benefits: [
+        "Glow facial progresivo",
+        "Sensación de renovación",
+        "Apariencia más luminosa",
+        "Textura facial más uniforme",
+        "Rejuvenecimiento natural y gradual",
+      ],
+      items: [
+        {
+          title: "Protocolo Vitamina C Premium",
+          description:
+            "Sesión de microagujas con aplicación de vitamina C para máxima luminosidad.",
+          duration: "75 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué son las microagujas con vitamina C?",
+          answer:
+            "Es un protocolo facial que combina microneedling con vitamina C orientado a apoyar glow, textura uniforme y bienestar de la piel.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "adn-salmon",
+      name: "ADN de Salmón",
+      tagline: "Regeneración celular profunda para una piel radiante",
+      heroDescription:
+        "✨ EL SECRETO COREANO QUE ESTÁ REVOLUCIONANDO EL REJUVENECIMIENTO FACIAL YA LLEGÓ A TURRIALBA ✨<br /><br />¿Te imaginas despertar con una piel más luminosa, hidratada y rejuvenecida… sin cirugías ni cambios artificiales?<br /><br />Eso es exactamente lo que muchas personas están logrando gracias al tratamiento de ADN de Salmón, una de las terapias más innovadoras en medicina estética avanzada.<br /><br />Y ahora puedes vivirlo en MJ Estética Wellness Center.<br /><br />👇",
+      benefits: [
+        "Rejuvenece la piel de forma natural",
+        "Mejora líneas finas y signos tempranos de envejecimiento",
+        "Estimula colágeno y elasticidad",
+        "Aporta hidratación profunda",
+        "Mejora textura y luminosidad",
+        "Ayuda a revitalizar piel cansada o estresada",
+        "Efecto “glow” saludable y elegante",
+      ],
+      items: [
+        {
+          title: "ADN de Salmón Facial",
+          description:
+            "Microinyecciones de PDRN en todo el rostro para estimular la producción de colágeno, mejorar la hidratación y recuperar el aspecto joven y luminoso de la piel. Indicado para pieles apagadas, con falta de firmeza o deshidratadas.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "ADN de Salmón Ocular",
+          description:
+            "Protocolo específico para el contorno de ojos: reduce ojeras, bolsas, patas de gallo y la apariencia de cansancio. Una de las zonas que más se beneficia de la regeneración con PDRN.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "ADN de Salmón + Mesoterapia",
+          description:
+            "Combinación de PDRN con cóctel de vitaminas y ácido hialurónico no reticulado para una regeneración máxima. Resultados más visibles y duraderos desde la primera sesión.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "ADN de Salmón Capilar",
+          description:
+            "Aplicación en cuero cabelludo para estimular los folículos pilosos, frenar la caída del cabello y mejorar la densidad y calidad capilar. Ideal como complemento a tratamientos de alopecia.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Es doloroso el tratamiento?",
+          answer:
+            "Se utilizan agujas muy finas y podemos aplicar crema anestésica tópica previamente. La molestia es mínima — la mayoría de las pacientes lo describen como pequeños pellizcos rápidos que se toleran sin problema.",
+        },
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "Para resultados óptimos recomendamos entre 3 y 4 sesiones, con una separación de 2 a 3 semanas entre cada una. Posteriormente, una sesión de mantenimiento cada 3–6 meses es suficiente.",
+        },
+        {
+          question: "¿Cuándo se notan los resultados?",
+          answer:
+            "Desde la primera sesión se aprecia mayor luminosidad e hidratación. Los cambios más significativos en textura, firmeza y arrugas finas se observan a partir de la 2ª–3ª sesión.",
+        },
+        {
+          question: "¿En qué se diferencia del ácido hialurónico?",
+          answer:
+            "El ácido hialurónico rellena y volumiza. El ADN de Salmón actúa a nivel celular regenerando los tejidos y estimulando tu propio colágeno. Son tratamientos complementarios que con frecuencia se combinan para resultados superiores.",
+        },
+      ],
+    },
+    en: {
+      slug: "salmon-dna",
+      name: "Salmon DNA",
+      tagline: "Deep cellular regeneration for radiant skin",
+      heroDescription:
+        "The Korean secret that is revolutionizing facial rejuvenation has arrived in Turrialba. PDRN treatment for luminous and hydrated skin without surgery.",
+      benefits: [
+        "Rejuvenates skin naturally",
+        "Improves fine lines and early signs of aging",
+        "Stimulates collagen and elasticity",
+        "Provides deep hydration",
+        "Improves texture and luminosity",
+        "Helps revitalize tired or stressed skin",
+        "Healthy and elegant glow effect",
+      ],
+      items: [
+        {
+          title: "Facial Salmon DNA",
+          description: "Microinjections of PDRN to stimulate collagen and improve skin quality.",
+          duration: "45 min",
+          price: "Consult price",
+          faq: [
+        {
+          question: "¿Es doloroso el tratamiento?",
+          answer:
+            "Se utilizan agujas muy finas y podemos aplicar crema anestésica tópica previamente. La molestia es mínima — la mayoría de las pacientes lo describen como pequeños pellizcos rápidos que se toleran sin problema.",
+        },
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "Para resultados óptimos recomendamos entre 3 y 4 sesiones, con una separación de 2 a 3 semanas entre cada una. Posteriormente, una sesión de mantenimiento cada 3–6 meses es suficiente.",
+        },
+        {
+          question: "¿Cuándo se notan los resultados?",
+          answer:
+            "Desde la primera sesión se aprecia mayor luminosidad e hidratación. Los cambios más significativos en textura, firmeza y arrugas finas se observan a partir de la 2ª–3ª sesión.",
+        },
+        {
+          question: "¿En qué se diferencia del ácido hialurónico?",
+          answer:
+            "El ácido hialurónico rellena y volumiza. El ADN de Salmón actúa a nivel celular regenerando los tejidos y estimulando tu propio colágeno. Son tratamientos complementarios que con frecuencia se combinan para resultados superiores.",
+        },
+      ],
+    },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "piernas-cansadas",
+      name: "Cuidado de Piernas Cansadas",
+      tagline: "Piernas ligeras, activas y sin pesadez",
+      heroDescription:
+        "La sensación de pesadez, hinchazón y cansancio en las piernas es muy frecuente y puede mejorar significativamente con tratamientos especializados que activan la circulación y el drenaje linfático.",
+      benefits: [
+        "Alivio inmediato de la pesadez y el dolor",
+        "Reducción de la hinchazón en piernas y tobillos",
+        "Mejora de la circulación venosa y linfática",
+        "Tratamientos relajantes y no invasivos",
+        "Prevención de retención de líquidos",
+      ],
+      items: [
+        {
+          title: "Masaje Circulatorio de Piernas",
+          description:
+            "Masaje específico que activa la circulación venosa de retorno y favorece el drenaje de toxinas acumuladas en las piernas.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Presoterapia de Piernas",
+          description:
+            "Botas de presión neumática que comprimen y descomprimen las piernas de forma progresiva para estimular el drenaje linfático y venoso.",
+          duration: "40 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Electro-estimulación Circulatoria",
+          description:
+            "Corrientes de baja frecuencia que activan los músculos de la pantorrilla, mejorando el retorno venoso y reduciendo la sensación de pesadez.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Completo Piernas Cansadas",
+          description:
+            "Sesión combinada de presoterapia, masaje circulatorio y aplicación de activos vasotónicos para un resultado global y duradero.",
+          duration: "90 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Con qué frecuencia debo hacer el tratamiento?",
+          answer:
+            "Para mantenimiento, una sesión semanal o quincenal. En épocas de mayor estrés circulatorio (verano, trabajo de pie) se puede intensificar la frecuencia.",
+        },
+      ],
+    },
+    en: {
+      slug: "piernas-cansadas",
+      name: "Cuidado de Piernas Cansadas",
+      tagline: "Piernas ligeras, activas y sin pesadez",
+      heroDescription: "La sensación de pesadez, hinchazón y cansancio en las piernas es muy frecuente y puede mejorar significativamente con tratamientos especializados que activan la circulación y el drenaje linfático.",
+      benefits: [
+        "Alivio inmediato de la pesadez y el dolor",
+        "Reducción de la hinchazón en piernas y tobillos",
+        "Mejora de la circulación venosa y linfática",
+        "Tratamientos relajantes y no invasivos",
+        "Prevención de retención de líquidos",
+      ],
+      items: [
+        {
+          title: "Masaje Circulatorio de Piernas",
+          description:
+            "Masaje específico que activa la circulación venosa de retorno y favorece el drenaje de toxinas acumuladas en las piernas.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Presoterapia de Piernas",
+          description:
+            "Botas de presión neumática que comprimen y descomprimen las piernas de forma progresiva para estimular el drenaje linfático y venoso.",
+          duration: "40 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Electro-estimulación Circulatoria",
+          description:
+            "Corrientes de baja frecuencia que activan los músculos de la pantorrilla, mejorando el retorno venoso y reduciendo la sensación de pesadez.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Completo Piernas Cansadas",
+          description:
+            "Sesión combinada de presoterapia, masaje circulatorio y aplicación de activos vasotónicos para un resultado global y duradero.",
+          duration: "90 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Con qué frecuencia debo hacer el tratamiento?",
+          answer:
+            "Para mantenimiento, una sesión semanal o quincenal. En épocas de mayor estrés circulatorio (verano, trabajo de pie) se puede intensificar la frecuencia.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "acido-hialuronico",
+      name: "Ácido Hialurónico",
+      tagline: "Volumen, hidratación y relleno natural",
+      heroDescription:
+        "El ácido hialurónico es un componente natural de la piel que se reduce con la edad. Su aplicación mediante infiltración restituye el volumen perdido, rellena arrugas profundas y mejora la hidratación cutánea de forma natural y duradera.",
+      benefits: [
+        "Resultados inmediatos y de aspecto completamente natural",
+        "Relleno de arrugas y recuperación de volúmenes faciales",
+        "Sin cirugía; procedimiento mínimamente invasivo",
+        "Producto biodegradable y reabsorbible",
+        "Efecto hidratante profundo desde dentro",
+      ],
+      items: [
+        {
+          title: "Relleno de Surcos Nasogenianos",
+          description:
+            "Suavizado de los pliegues entre nariz y comisuras labiales (arrugas de amargura) para un aspecto más descansado y joven.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Relleno de Ojeras",
+          description:
+            "Corrección del surco lagrimal y la ojera hundida para eliminar el aspecto de cansancio y oscurecer la zona periocular.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Hidratación Profunda con Bioestimuladores",
+          description:
+            "Ácido hialurónico de baja densidad infiltrado en múltiples puntos para mejorar la hidratación, luminosidad y calidad de la piel.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Remodelación del Óvalo Facial",
+          description:
+            "Aumento y definición de pómulos, mentón y mandíbula mediante rellenos estratégicos para un efecto lifting no quirúrgico.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuánto dura el ácido hialurónico?",
+          answer:
+            "Depende de la zona y el producto utilizado. Por norma general dura entre 9 y 18 meses en zonas estáticas como los pómulos, y algo menos en zonas con mayor movimiento como los labios.",
+        },
+        {
+          question: "¿El resultado es natural?",
+          answer:
+            "Sí, cuando es aplicado por un profesional capacitado. El objetivo es realzar los rasgos propios sin alterar la expresión natural.",
+        },
+      ],
+    },
+    en: {
+      slug: "hyaluronic-acid",
+      name: "Hyaluronic Acid",
+      tagline: "Volume, hydration and natural filling",
+      heroDescription:
+        "Hyaluronic acid is a natural component of the skin that decreases with age. Its application restores lost volume and improves skin hydration naturally.",
+      benefits: [
+        "Immediate and completely natural results",
+        "Filling of wrinkles and recovery of facial volumes",
+        "Non-surgical; minimally invasive procedure",
+        "Biodegradable and resorbable product",
+        "Deep moisturizing effect from within",
+      ],
+      items: [
+        {
+          title: "Lip Filler",
+          description: "Increase volume and define the contour of your lips.",
+          duration: "30 min",
+          faq: [
+        {
+          question: "¿Cuánto dura el ácido hialurónico?",
+          answer:
+            "Depende de la zona y el producto utilizado. Por norma general dura entre 9 y 18 meses en zonas estáticas como los pómulos, y algo menos en zonas con mayor movimiento como los labios.",
+        },
+        {
+          question: "¿El resultado es natural?",
+          answer:
+            "Sí, cuando es aplicado por un profesional capacitado. El objetivo es realzar los rasgos propios sin alterar la expresión natural.",
+        },
+      ],
+    },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "biorevitalizacion",
+      name: "Biorevitalización",
+      tagline: "Revitaliza tu piel desde dentro",
+      heroDescription:
+        "La biorevitalización es un tratamiento médico estético que consiste en la infiltración de vitaminas, aminoácidos, oligoelementos y ácido hialurónico no reticulado directamente en la dermis para restaurar la vitalidad, elasticidad y luminosidad de la piel.",
+      benefits: [
+        "Mejora visible de la calidad y textura de la piel",
+        "Aumento de la luminosidad y el tono cutáneo",
+        "Hidratación profunda y duradera",
+        "Estimulación natural del colágeno",
+        "Apto para cara, cuello, escote y manos",
+      ],
+      items: [
+        {
+          title: "Biorevitalización Facial",
+          description:
+            "Infiltración de cocktail vitamínico y ácido hialurónico no reticulado en cara y cuello para restaurar la luminosidad y vitalidad de la piel.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Biorevitalización de Cuello y Escote",
+          description:
+            "Tratamiento específico para rejuvenecer y mejorar la calidad de la piel del cuello y el escote, zonas que suelen envejecer antes.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Biorevitalización de Manos",
+          description:
+            "Las manos son una de las zonas que más delatan la edad. Este tratamiento restaura la hidratación, el volumen y la textura de la piel de las manos.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuántas sesiones son necesarias?",
+          answer:
+            "Para resultados óptimos se recomiendan 3–4 sesiones con 2–3 semanas de separación, seguidas de sesiones de mantenimiento cada 3–6 meses.",
+        },
+        {
+          question: "¿Hay tiempo de recuperación?",
+          answer:
+            "Pueden aparecer pequeñas ronchas o enrojecimiento en los puntos de infiltración que desaparecen en pocas horas. No impide realizar las actividades habituales.",
+        },
+      ],
+    },
+    en: {
+      slug: "biorevitalizacion",
+      name: "Biorevitalización",
+      tagline: "Revitaliza tu piel desde dentro",
+      heroDescription: "La biorevitalización es un tratamiento médico estético que consiste en la infiltración de vitaminas, aminoácidos, oligoelementos y ácido hialurónico no reticulado directamente en la dermis para restaurar la vitalidad, elasticidad y luminosidad de la piel.",
+      benefits: [
+        "Mejora visible de la calidad y textura de la piel",
+        "Aumento de la luminosidad y el tono cutáneo",
+        "Hidratación profunda y duradera",
+        "Estimulación natural del colágeno",
+        "Apto para cara, cuello, escote y manos",
+      ],
+      items: [
+        {
+          title: "Biorevitalización Facial",
+          description:
+            "Infiltración de cocktail vitamínico y ácido hialurónico no reticulado en cara y cuello para restaurar la luminosidad y vitalidad de la piel.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Biorevitalización de Cuello y Escote",
+          description:
+            "Tratamiento específico para rejuvenecer y mejorar la calidad de la piel del cuello y el escote, zonas que suelen envejecer antes.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Biorevitalización de Manos",
+          description:
+            "Las manos son una de las zonas que más delatan la edad. Este tratamiento restaura la hidratación, el volumen y la textura de la piel de las manos.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuántas sesiones son necesarias?",
+          answer:
+            "Para resultados óptimos se recomiendan 3–4 sesiones con 2–3 semanas de separación, seguidas de sesiones de mantenimiento cada 3–6 meses.",
+        },
+        {
+          question: "¿Hay tiempo de recuperación?",
+          answer:
+            "Pueden aparecer pequeñas ronchas o enrojecimiento en los puntos de infiltración que desaparecen en pocas horas. No impide realizar las actividades habituales.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "carboxiterapia",
+      name: "Carboxiterapia",
+      tagline: "La potencia del CO₂ para renovar y rejuvenecer tu cuerpo",
+      heroBg: "carboxiterapia-bg.webp",
+      heroDescription:
+        "Descubre una piel con apariencia más uniforme y un bienestar corporal más integral <br /> La carboxiterapia es uno de los tratamientos wellness y médico-estéticos más buscados por personas que desean complementar sus objetivos corporales y faciales con protocolos personalizados, naturales y progresivos.",
+      benefits: [
+        "Elimina la celulitis y la grasa localizada de forma eficaz",
+        "Estimula la producción natural de colágeno y elastina",
+        "Mejora la circulación y oxigenación del tejido",
+        "Reafirma y tensa la piel de forma duradera",
+        "Tratamiento corporal y facial: cara, cuello, abdomen, muslos",
+        "Sin anestesia general ni tiempo de inactividad",
+      ],
+      items: [
+        {
+          title: "Carboxiterapia Corporal",
+          description:
+            "Aplicación de CO₂ en zonas corporales (abdomen, flancos, muslos, glúteos) para reducir la celulitis, afinar la silueta y mejorar la textura de la piel. Protocolo intensivo con resultados progresivos y acumulativos.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Carboxiterapia Facial y de Cuello",
+          description:
+            "Inyecciones superficiales de CO₂ en rostro, cuello y escote para estimular la renovación celular, mejorar el tono y reducir ojeras y surcos. Efecto lifting inmediato y mejora progresiva de la calidad de la piel.",
+          duration: "35 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Carboxiterapia para Estrias",
+          description:
+            "Protocolo específico con microinyecciones de CO₂ en la zona de estrías para estimular la síntesis de colágeno, mejorar la vascularización y reducir la visibilidad de estrías tanto blancas como rojas.",
+          duration: "40 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Duele la carboxiterapia?",
+          answer:
+            "Las microinyecciones producen una ligera sensación de presión o calor que desaparece en segundos. La mayoría de las clientas lo describen como completamente tolerable. No se requiere anestesia.",
+        },
+        {
+          question: "¿Cuántas sesiones son necesarias?",
+          answer:
+            "Para resultados óptimos recomendamos entre 8 y 12 sesiones (2 por semana). Los cambios en circulación y textura de piel se notan desde las primeras 3-4 sesiones. Posteriormente se realizan sesiones de mantenimiento mensuales.",
+        },
+        {
+          question: "¿Tiene contraindicaciones?",
+          answer:
+            "No es apta para personas con enfermedades cardiovasculares graves, embarazo o epilepsia. En la valoración inicial revisamos tu historial para garantizar que el tratamiento sea seguro y adecuado para ti.",
+        },
+      ],
+    },
+    en: {
+      slug: "carboxytherapy",
+      name: "Carboxytherapy",
+      tagline: "The power of CO2 to renew and rejuvenate your body",
+      heroDescription:
+        "Discover skin with a more uniform appearance and a more integral body well-being. Carboxytherapy is one of the most sought-after treatments for body and facial objectives.",
+      benefits: [
+        "Effectively eliminates cellulite and localized fat",
+        "Stimulates natural collagen and elastin production",
+        "Improves circulation and tissue oxygenation",
+        "Firms and tightens the skin in a lasting way",
+      ],
+      items: [
+        {
+          title: "Body Carboxytherapy",
+          description: "Application of CO2 in body areas to reduce cellulite and refine the silhouette.",
+          duration: "45 min",
+          faq: [
+        {
+          question: "¿Duele la carboxiterapia?",
+          answer:
+            "Las microinyecciones producen una ligera sensación de presión o calor que desaparece en segundos. La mayoría de las clientas lo describen como completamente tolerable. No se requiere anestesia.",
+        },
+        {
+          question: "¿Cuántas sesiones son necesarias?",
+          answer:
+            "Para resultados óptimos recomendamos entre 8 y 12 sesiones (2 por semana). Los cambios en circulación y textura de piel se notan desde las primeras 3-4 sesiones. Posteriormente se realizan sesiones de mantenimiento mensuales.",
+        },
+        {
+          question: "¿Tiene contraindicaciones?",
+          answer:
+            "No es apta para personas con enfermedades cardiovasculares graves, embarazo o epilepsia. En la valoración inicial revisamos tu historial para garantizar que el tratamiento sea seguro y adecuado para ti.",
+        },
+      ],
+    },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "levantamiento-gluteo",
+      name: "Levantamiento de Glúteo en Turrialba",
+      tagline: "Glúteos firmes y elevados sin cirugía ni implantes",
+      heroBg: "levantamiento-gluteo-bg.webp",
+      heroDescription:
+        "Mejora la apariencia, firmeza y proyección de tus glúteos con un enfoque natural, armónico y personalizado",
+      benefits: [
+        "Apariencia más firme y tonificada",
+        "Mejor proyección visual de los glúteos",
+        "Contorno corporal más armónico",
+        "Complemento ideal para ejercicio y wellness corporal",
+        "Resultados progresivos y naturales",
+        "Sensación de mayor seguridad y confianza corporal",
+        "Protocolos personalizados según objetivos",
+        "Mejor armonización estética corporal",
+      ],
+      items: [
+        {
+          title: "Radiofrecuencia Glútea Focalizada",
+          description:
+            "Calor controlado en profundidad que estimula la síntesis de colágeno y reafirma el tejido cutáneo, consiguiendo un efecto lifting visible y una piel más tersa sobre los glúteos.",
+          duration: "50 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Electroestimulación Muscular Glútea",
+          description:
+            "Corrientes de alta frecuencia que generan contracciones musculares intensas equivalentes a cientos de abdominales. Tonifica, define y da volumen de forma segura y progresiva.",
+          duration: "40 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Completo Lifting Glúteo",
+          description:
+            "Combinación de radiofrecuencia + electroestimulación + carboxiterapia en una sola sesión para maximizar el efecto lifting, la firmeza y el volumen. El protocolo estrella de nuestro servicio.",
+          duration: "75 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿El levantamiento de glúteo es invasivo?",
+          answer:
+            "Depende del protocolo recomendado. Durante la valoración corporal explicamos todas las opciones disponibles y cuál se adapta mejor a tus objetivos.",
+        },
+        {
+          question: "¿Cuándo se ven resultados?",
+          answer:
+            "Muchas pacientes comienzan a notar cambios progresivos conforme avanzan las sesiones y se complementan hábitos saludables.",
+        },
+        {
+          question: "¿Los resultados son naturales?",
+          answer:
+            "Sí. Nuestro enfoque prioriza armonización corporal y apariencia estética natural.",
+        },
+        {
+          question: "¿Se puede combinar con ejercicio?",
+          answer:
+            "Sí. De hecho, muchas pacientes utilizan el tratamiento como complemento wellness corporal.",
+        },
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "Cada cuerpo es diferente. La cantidad ideal se define durante la evaluación personalizada.",
+        },
+        {
+          question: "¿Tiene tiempo de recuperación?",
+          answer:
+            "Muchos protocolos permiten retomar actividades habituales rápidamente.",
+        },
+        {
+          question: "¿Ayuda con firmeza?",
+          answer:
+            "Uno de los principales objetivos es contribuir a mejorar la apariencia de firmeza y proyección corporal.",
+        },
+        {
+          question: "¿Qué cuidados debo tener?",
+          answer:
+            "Te brindaremos recomendaciones específicas según el protocolo aplicado y tus objetivos corporales.",
+        },
+      ],
+    },
+    en: {
+      slug: "levantamiento-gluteo",
+      name: "Levantamiento de Glúteo en Turrialba",
+      tagline: "Glúteos firmes y elevados sin cirugía ni implantes",
+      heroDescription: "Mejora la apariencia, firmeza y proyección de tus glúteos con un enfoque natural, armónico y personalizado",
+      benefits: [
+        "Apariencia más firme y tonificada",
+        "Mejor proyección visual de los glúteos",
+        "Contorno corporal más armónico",
+        "Complemento ideal para ejercicio y wellness corporal",
+        "Resultados progresivos y naturales",
+        "Sensación de mayor seguridad y confianza corporal",
+        "Protocolos personalizados según objetivos",
+        "Mejor armonización estética corporal",
+      ],
+      items: [
+        {
+          title: "Radiofrecuencia Glútea Focalizada",
+          description:
+            "Calor controlado en profundidad que estimula la síntesis de colágeno y reafirma el tejido cutáneo, consiguiendo un efecto lifting visible y una piel más tersa sobre los glúteos.",
+          duration: "50 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Electroestimulación Muscular Glútea",
+          description:
+            "Corrientes de alta frecuencia que generan contracciones musculares intensas equivalentes a cientos de abdominales. Tonifica, define y da volumen de forma segura y progresiva.",
+          duration: "40 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Completo Lifting Glúteo",
+          description:
+            "Combinación de radiofrecuencia + electroestimulación + carboxiterapia en una sola sesión para maximizar el efecto lifting, la firmeza y el volumen. El protocolo estrella de nuestro servicio.",
+          duration: "75 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿El levantamiento de glúteo es invasivo?",
+          answer:
+            "Depende del protocolo recomendado. Durante la valoración corporal explicamos todas las opciones disponibles y cuál se adapta mejor a tus objetivos.",
+        },
+        {
+          question: "¿Cuándo se ven resultados?",
+          answer:
+            "Muchas pacientes comienzan a notar cambios progresivos conforme avanzan las sesiones y se complementan hábitos saludables.",
+        },
+        {
+          question: "¿Los resultados son naturales?",
+          answer:
+            "Sí. Nuestro enfoque prioriza armonización corporal y apariencia estética natural.",
+        },
+        {
+          question: "¿Se puede combinar con ejercicio?",
+          answer:
+            "Sí. De hecho, muchas pacientes utilizan el tratamiento como complemento wellness corporal.",
+        },
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "Cada cuerpo es diferente. La cantidad ideal se define durante la evaluación personalizada.",
+        },
+        {
+          question: "¿Tiene tiempo de recuperación?",
+          answer:
+            "Muchos protocolos permiten retomar actividades habituales rápidamente.",
+        },
+        {
+          question: "¿Ayuda con firmeza?",
+          answer:
+            "Uno de los principales objetivos es contribuir a mejorar la apariencia de firmeza y proyección corporal.",
+        },
+        {
+          question: "¿Qué cuidados debo tener?",
+          answer:
+            "Te brindaremos recomendaciones específicas según el protocolo aplicado y tus objetivos corporales.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "levantamiento-busto",
+      name: "Levantamiento de Busto en Turrialba",
+      tagline: "Busto firme, elevado y reafirmado sin cirugía",
+      heroBg: "levantamiento-busto-bg.webp",
+      heroDescription:
+        "Recupera armonía, firmeza y confianza con un enfoque wellness femenino.",
+      benefits: [
+        "Lifting y reafirmación visibles sin cirugía ni implantes",
+        "Mejora la elasticidad y calidad de la piel del escote",
+        "Protocolo adaptado al grado de flacidez y objetivo de cada clienta",
+        "Completamente indoloro y sin tiempo de recuperación",
+        "También mejora la apariencia del escote y la piel de la zona pectoral",
+        "Apto tras lactancia y pérdida de peso",
+      ],
+      items: [
+        {
+          title: "Radiofrecuencia Reafirmante de Busto",
+          description:
+            "Calor profundo con radiofrecuencia que estimula el colágeno y reafirma el tejido conjuntivo del busto y el escote, logrando un efecto lifting progresivo y natural.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Ultrasonidos Focalizados",
+          description:
+            "Tecnología de ultrasonidos que actúa en las capas profundas de la piel para tensar el tejido de soporte del busto, corrigiendo la caída y mejorando el contorno.",
+          duration: "40 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Reafirmación Completa Busto y Escote",
+          description:
+            "Sesión combinada de radiofrecuencia + ultrasonidos + masaje reafirmante para tratamiento integral del busto, escote y zona pectoral. Máximo resultado en una sola sesión.",
+          duration: "70 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Funciona si tengo mucha flacidez?",
+          answer:
+            "El tratamiento es eficaz en diferentes grados de flacidez. En casos avanzados, adaptamos el protocolo con más sesiones y combinación de técnicas para obtener el mejor resultado posible sin cirugía.",
+        },
+        {
+          question: "¿Es seguro tras la lactancia?",
+          answer:
+            "Sí, está especialmente indicado para recuperar la firmeza después de la lactancia. Recomendamos esperar al menos 3 meses tras el fin de la lactancia antes de comenzar.",
+        },
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "Para resultados visibles y duraderos recomendamos entre 8 y 10 sesiones, 2 por semana. El mantenimiento mensual ayuda a sostener los resultados a largo plazo.",
+        },
+      ],
+    },
+    en: {
+      slug: "levantamiento-busto",
+      name: "Levantamiento de Busto en Turrialba",
+      tagline: "Busto firme, elevado y reafirmado sin cirugía",
+      heroDescription: "Recupera armonía, firmeza y confianza con un enfoque wellness femenino.",
+      benefits: [
+        "Lifting y reafirmación visibles sin cirugía ni implantes",
+        "Mejora la elasticidad y calidad de la piel del escote",
+        "Protocolo adaptado al grado de flacidez y objetivo de cada clienta",
+        "Completamente indoloro y sin tiempo de recuperación",
+        "También mejora la apariencia del escote y la piel de la zona pectoral",
+        "Apto tras lactancia y pérdida de peso",
+      ],
+      items: [
+        {
+          title: "Radiofrecuencia Reafirmante de Busto",
+          description:
+            "Calor profundo con radiofrecuencia que estimula el colágeno y reafirma el tejido conjuntivo del busto y el escote, logrando un efecto lifting progresivo y natural.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Ultrasonidos Focalizados",
+          description:
+            "Tecnología de ultrasonidos que actúa en las capas profundas de la piel para tensar el tejido de soporte del busto, corrigiendo la caída y mejorando el contorno.",
+          duration: "40 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Reafirmación Completa Busto y Escote",
+          description:
+            "Sesión combinada de radiofrecuencia + ultrasonidos + masaje reafirmante para tratamiento integral del busto, escote y zona pectoral. Máximo resultado en una sola sesión.",
+          duration: "70 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Funciona si tengo mucha flacidez?",
+          answer:
+            "El tratamiento es eficaz en diferentes grados de flacidez. En casos avanzados, adaptamos el protocolo con más sesiones y combinación de técnicas para obtener el mejor resultado posible sin cirugía.",
+        },
+        {
+          question: "¿Es seguro tras la lactancia?",
+          answer:
+            "Sí, está especialmente indicado para recuperar la firmeza después de la lactancia. Recomendamos esperar al menos 3 meses tras el fin de la lactancia antes de comenzar.",
+        },
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "Para resultados visibles y duraderos recomendamos entre 8 y 10 sesiones, 2 por semana. El mantenimiento mensual ayuda a sostener los resultados a largo plazo.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "vendas-frias",
+      name: "Vendas Frías",
+      fullTitle: "Vendas Frías en Turrialba",
+      tagline: "Pérdida de centímetros y detox corporal en una sola sesión",
+      heroBg: "vendas-frias-bg.webp",
+      heroDescription:
+        "Sensación de frescura, relajación y bienestar corporal en una experiencia wellness premium",
+      benefits: [
+        "Pérdida de centímetros medible desde la primera sesión",
+        "Reduce la retención de líquidos y la inflamación",
+        "Activa la circulación y el drenaje linfático",
+        "Mejora la textura y firmeza de la piel",
+        "Efecto detox que elimina toxinas acumuladas",
+        "Ideal para preparar el cuerpo para eventos especiales",
+      ],
+      items: [
+        {
+          title: "Vendas Frías Reductoras",
+          description:
+            "Aplicación de vendas impregnadas con activos reductores y drenantes en abdomen, cintura, flancos y muslos. La compresión progresiva y los principios activos actúan en sinergia para afinar la silueta.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Vendas Frías Anticelulíticas",
+          description:
+            "Fórmula específica con activos anticelulíticos (cafeína, centella asiática, L-carnitina) que mejoran el aspecto de piel de naranja y la microcirculación. Indicadas para muslos y glúteos.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Vendas Frías Detox Full Body",
+          description:
+            "Tratamiento corporal completo con vendas en todo el cuerpo para una sesión de detox intensiva. Elimina toxinas, activa el metabolismo y deja la piel suave y luminosa.",
+          duration: "75 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuántos centímetros se pierden en una sesión?",
+          answer:
+            "Los resultados varían según cada persona, pero es habitual perder entre 2 y 6 centímetros medibles en la primera sesión. Con el ciclo completo, la reducción acumulada es significativa y duradera.",
+        },
+        {
+          question: "¿Es un tratamiento adecuado antes de un evento?",
+          answer:
+            "Sí, es uno de los más solicitados para preparar el cuerpo antes de bodas, eventos sociales o épocas de playa. Los resultados son visibles el mismo día del tratamiento.",
+        },
+        {
+          question: "¿Hay que seguir alguna dieta o restricción?",
+          answer:
+            "Recomendamos hidratación abundante antes y después de la sesión para potenciar el efecto drenante. No es necesario seguir una dieta especial, aunque combinar el tratamiento con hábitos saludables mejora los resultados.",
+        },
+      ],
+    },
+    en: {
+      slug: "vendas-frias",
+      name: "Vendas Frías",
+      tagline: "Pérdida de centímetros y detox corporal en una sola sesión",
+      heroDescription: "Sensación de frescura, relajación y bienestar corporal en una experiencia wellness premium",
+      benefits: [
+        "Pérdida de centímetros medible desde la primera sesión",
+        "Reduce la retención de líquidos y la inflamación",
+        "Activa la circulación y el drenaje linfático",
+        "Mejora la textura y firmeza de la piel",
+        "Efecto detox que elimina toxinas acumuladas",
+        "Ideal para preparar el cuerpo para eventos especiales",
+      ],
+      items: [
+        {
+          title: "Vendas Frías Reductoras",
+          description:
+            "Aplicación de vendas impregnadas con activos reductores y drenantes en abdomen, cintura, flancos y muslos. La compresión progresiva y los principios activos actúan en sinergia para afinar la silueta.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Vendas Frías Anticelulíticas",
+          description:
+            "Fórmula específica con activos anticelulíticos (cafeína, centella asiática, L-carnitina) que mejoran el aspecto de piel de naranja y la microcirculación. Indicadas para muslos y glúteos.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Vendas Frías Detox Full Body",
+          description:
+            "Tratamiento corporal completo con vendas en todo el cuerpo para una sesión de detox intensiva. Elimina toxinas, activa el metabolismo y deja la piel suave y luminosa.",
+          duration: "75 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuántos centímetros se pierden en una sesión?",
+          answer:
+            "Los resultados varían según cada persona, pero es habitual perder entre 2 y 6 centímetros medibles en la primera sesión. Con el ciclo completo, la reducción acumulada es significativa y duradera.",
+        },
+        {
+          question: "¿Es un tratamiento adecuado antes de un evento?",
+          answer:
+            "Sí, es uno de los más solicitados para preparar el cuerpo antes de bodas, eventos sociales o épocas de playa. Los resultados son visibles el mismo día del tratamiento.",
+        },
+        {
+          question: "¿Hay que seguir alguna dieta o restricción?",
+          answer:
+            "Recomendamos hidratación abundante antes y después de la sesión para potenciar el efecto drenante. No es necesario seguir una dieta especial, aunque combinar el tratamiento con hábitos saludables mejora los resultados.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      // ── AURICULOTERAPIA ─────────────────────────────────
+      slug: "auriculoterapia",
+      name: "Auriculoterapia",
+      fullTitle:
+        "Auriculoterapia en Turrialba para Ansiedad, Estrés y Control de Peso",
+      tagline: "El equilibrio del cuerpo a través del oído",
+      heroBg: "auriculoterapia-bg.webp",
+      heroDescription:
+        "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
+      benefits: [
+        "Reduce la ansiedad y el apetito emocional de forma natural",
+        "Apoya el control de peso y los hábitos alimenticios",
+        "Alivia el estrés crónico y mejora la calidad del sueño",
+        "Técnica indolora y completamente no invasiva",
+        "Equilibra el sistema nervioso y endocrino",
+        "Compatible con cualquier otro tratamiento estético o médico",
+      ],
+      items: [
+        {
+          title: "Auriculoterapia para Control de Peso",
+          description:
+            "Estimulación de los puntos auriculares relacionados con el metabolismo, el apetito y la ansiedad alimentaria. Especialmente indicada como complemento a programas de alimentación y tratamientos reductores.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Auriculoterapia Antiestres y Bienestar",
+          description:
+            "Protocolo de equilibrio emocional y del sistema nervioso para reducir el estrés crónico, la ansiedad y el insomnio. Produce una sensación de calma profunda y bienestar que se mantiene días después.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Auriculoterapia para Control del Dolor",
+          description:
+            "Estimulación de los puntos auriculares analgésicos para el manejo de dolores musculares, articulares o cefaleas tensionales. Un enfoque complementario natural al tratamiento del dolor crónico.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Es dolorosa la auriculoterapia?",
+          answer:
+            "No. Se utilizan semillas de mostaza o pequeñas agujas muy superficiales que producen una leve presión. La mayoría de las clientas lo viven como un tratamiento relajante y agradable.",
+        },
+        {
+          question: "¿En cuántas sesiones se notan los efectos?",
+          answer:
+            "Muchas clientas sienten cambios desde la primera sesión: menor ansiedad, mejor calidad de sueño o reducción del apetito. Para resultados consolidados recomendamos un ciclo de 6 a 10 sesiones semanales.",
+        },
+        {
+          question: "¿Puedo hacerla junto con otros tratamientos?",
+          answer:
+            "Sí, es perfectamente compatible y de hecho se potencia con tratamientos como el drenaje linfático, la nutrición o cualquier programa de reducción de medidas. Es un excelente complemento holístico.",
+        },
+      ],
+    },
+    en: {
+      slug: "auriculoterapia",
+      name: "Auriculoterapia",
+      tagline: "El equilibrio del cuerpo a través del oído",
+      heroDescription: "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
+      benefits: [
+        "Reduce la ansiedad y el apetito emocional de forma natural",
+        "Apoya el control de peso y los hábitos alimenticios",
+        "Alivia el estrés crónico y mejora la calidad del sueño",
+        "Técnica indolora y completamente no invasiva",
+        "Equilibra el sistema nervioso y endocrino",
+        "Compatible con cualquier otro tratamiento estético o médico",
+      ],
+      items: [
+        {
+          title: "Auriculoterapia para Control de Peso",
+          description:
+            "Estimulación de los puntos auriculares relacionados con el metabolismo, el apetito y la ansiedad alimentaria. Especialmente indicada como complemento a programas de alimentación y tratamientos reductores.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Auriculoterapia Antiestres y Bienestar",
+          description:
+            "Protocolo de equilibrio emocional y del sistema nervioso para reducir el estrés crónico, la ansiedad y el insomnio. Produce una sensación de calma profunda y bienestar que se mantiene días después.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Auriculoterapia para Control del Dolor",
+          description:
+            "Estimulación de los puntos auriculares analgésicos para el manejo de dolores musculares, articulares o cefaleas tensionales. Un enfoque complementario natural al tratamiento del dolor crónico.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Es dolorosa la auriculoterapia?",
+          answer:
+            "No. Se utilizan semillas de mostaza o pequeñas agujas muy superficiales que producen una leve presión. La mayoría de las clientas lo viven como un tratamiento relajante y agradable.",
+        },
+        {
+          question: "¿En cuántas sesiones se notan los efectos?",
+          answer:
+            "Muchas clientas sienten cambios desde la primera sesión: menor ansiedad, mejor calidad de sueño o reducción del apetito. Para resultados consolidados recomendamos un ciclo de 6 a 10 sesiones semanales.",
+        },
+        {
+          question: "¿Puedo hacerla junto con otros tratamientos?",
+          answer:
+            "Sí, es perfectamente compatible y de hecho se potencia con tratamientos como el drenaje linfático, la nutrición o cualquier programa de reducción de medidas. Es un excelente complemento holístico.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "tratamiento-anticelulitis",
+      name: "Tratamiento Anticelulitis",
+      fullTitle: "Tratamientos Anticelulitis en Turrialba",
+      tagline: "Elimina la celulitis de forma definitiva y sin cirugía",
+      heroBg: "anticelulitis-bg.webp",
+      heroDescription:
+        "Una experiencia diseñada para que vuelvas a sentirte bien con tu cuerpo",
+      benefits: [
+        "Reducción visible de la celulitis desde la primera sesión",
+        "Tecnología de radiofrecuencia + drenaje para resultados duraderos",
+        "Protocolo personalizado según tu tipo y grado de celulitis",
+        "Sin cirugía, sin anestesia, sin tiempo de recuperación",
+        "Mejora la circulación y elimina toxinas acumuladas",
+        "Piel más firme, lisa y uniforme en pocas semanas",
+      ],
+      items: [
+        {
+          title: "Drenaje Linfático Anticelulítico",
+          description:
+            "Técnica manual especializada que activa el sistema linfático, elimina la retención de líquidos y reduce el aspecto de piel de naranja desde las primeras sesiones. Ideal como tratamiento de base para preparar el tejido.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Radiofrecuencia Corporal Focalizada",
+          description:
+            "Aplicamos calor controlado en profundidad para romper los nódulos de grasa, estimular la producción de colágeno y reafirmar la piel de muslos, glúteos y abdomen. Resultado: piel más tersa y visible reducción de medidas.",
+          duration: "50 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Vendas Frías Anticelulíticas",
+          description:
+            "Vendas impregnadas con activos reductores, drenantes y reafirmantes en frío que potencian la pérdida de centímetros y mejoran la textura de la piel en una sola sesión. Efecto inmediato y acumulativo.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Presoterapia + Ultrasonidos",
+          description:
+            "Combinación de presoterapia para drenar y desinflamar, junto con ultrasonidos focalizados que destruyen las células de grasa localizadas. Protocolo de alta eficacia para casos de celulitis resistente.",
+          duration: "55 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿En cuántas sesiones veré resultados reales?",
+          answer:
+            "La mayoría de nuestras clientas notan una mejora visible en textura y firmeza desde la primera sesión. Para resultados duraderos y profundos, recomendamos un ciclo de 8 a 12 sesiones, 2 veces por semana. Al finalizar el ciclo, la reducción de la celulitis es significativa y medible.",
+        },
+        {
+          question: "¿Funciona para todos los tipos y grados de celulitis?",
+          answer:
+            "Sí. Nuestros protocolos están adaptados a los 4 grados de celulitis. Realizamos una valoración inicial gratuita donde evaluamos tu caso y diseñamos el plan de tratamiento más efectivo para ti, combinando las técnicas adecuadas según tu tipo de piel y zona a tratar.",
+        },
+        {
+          question: "¿Necesito dieta o ejercicio para que funcione?",
+          answer:
+            "No es un requisito, pero sí potencia los resultados. Los tratamientos son efectivos por sí solos, y combinados con hidratación adecuada y algo de actividad física los resultados se multiplican y duran más tiempo.",
+        },
+        {
+          question: "¿Es doloroso? ¿Hay tiempo de recuperación?",
+          answer:
+            "Los tratamientos son indoloros o producen una sensación de calor agradable en el caso de la radiofrecuencia. No hay tiempo de recuperación — puedes retomar tus actividades normales inmediatamente después de cada sesión.",
+        },
+        {
+          question: "¿Cuánto duran los resultados?",
+          answer:
+            "Con mantenimiento mensual los resultados se sostienen en el tiempo. Te recomendamos sesiones de mantenimiento cada 3-4 semanas una vez completado el ciclo inicial, especialmente si combinas el tratamiento con hábitos saludables.",
+        },
+      ],
+    },
+    en: {
+      slug: "tratamiento-anticelulitis",
+      name: "Tratamiento Anticelulitis",
+      tagline: "Elimina la celulitis de forma definitiva y sin cirugía",
+      heroDescription: "Una experiencia diseñada para que vuelvas a sentirte bien con tu cuerpo",
+      benefits: [
+        "Reducción visible de la celulitis desde la primera sesión",
+        "Tecnología de radiofrecuencia + drenaje para resultados duraderos",
+        "Protocolo personalizado según tu tipo y grado de celulitis",
+        "Sin cirugía, sin anestesia, sin tiempo de recuperación",
+        "Mejora la circulación y elimina toxinas acumuladas",
+        "Piel más firme, lisa y uniforme en pocas semanas",
+      ],
+      items: [
+        {
+          title: "Drenaje Linfático Anticelulítico",
+          description:
+            "Técnica manual especializada que activa el sistema linfático, elimina la retención de líquidos y reduce el aspecto de piel de naranja desde las primeras sesiones. Ideal como tratamiento de base para preparar el tejido.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Radiofrecuencia Corporal Focalizada",
+          description:
+            "Aplicamos calor controlado en profundidad para romper los nódulos de grasa, estimular la producción de colágeno y reafirmar la piel de muslos, glúteos y abdomen. Resultado: piel más tersa y visible reducción de medidas.",
+          duration: "50 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Vendas Frías Anticelulíticas",
+          description:
+            "Vendas impregnadas con activos reductores, drenantes y reafirmantes en frío que potencian la pérdida de centímetros y mejoran la textura de la piel en una sola sesión. Efecto inmediato y acumulativo.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Presoterapia + Ultrasonidos",
+          description:
+            "Combinación de presoterapia para drenar y desinflamar, junto con ultrasonidos focalizados que destruyen las células de grasa localizadas. Protocolo de alta eficacia para casos de celulitis resistente.",
+          duration: "55 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿En cuántas sesiones veré resultados reales?",
+          answer:
+            "La mayoría de nuestras clientas notan una mejora visible en textura y firmeza desde la primera sesión. Para resultados duraderos y profundos, recomendamos un ciclo de 8 a 12 sesiones, 2 veces por semana. Al finalizar el ciclo, la reducción de la celulitis es significativa y medible.",
+        },
+        {
+          question: "¿Funciona para todos los tipos y grados de celulitis?",
+          answer:
+            "Sí. Nuestros protocolos están adaptados a los 4 grados de celulitis. Realizamos una valoración inicial gratuita donde evaluamos tu caso y diseñamos el plan de tratamiento más efectivo para ti, combinando las técnicas adecuadas según tu tipo de piel y zona a tratar.",
+        },
+        {
+          question: "¿Necesito dieta o ejercicio para que funcione?",
+          answer:
+            "No es un requisito, pero sí potencia los resultados. Los tratamientos son efectivos por sí solos, y combinados con hidratación adecuada y algo de actividad física los resultados se multiplican y duran más tiempo.",
+        },
+        {
+          question: "¿Es doloroso? ¿Hay tiempo de recuperación?",
+          answer:
+            "Los tratamientos son indoloros o producen una sensación de calor agradable en el caso de la radiofrecuencia. No hay tiempo de recuperación — puedes retomar tus actividades normales inmediatamente después de cada sesión.",
+        },
+        {
+          question: "¿Cuánto duran los resultados?",
+          answer:
+            "Con mantenimiento mensual los resultados se sostienen en el tiempo. Te recomendamos sesiones de mantenimiento cada 3-4 semanas una vez completado el ciclo inicial, especialmente si combinas el tratamiento con hábitos saludables.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "iron-beauty-fitness",
+      name: "ESTÉTICA PARA FISICOCULTURISTAS Y ATLETAS EN TURRIALBA",
+      tagline: "Estética especializada para atletas del mundo fitness",
+      heroDescription:
+        "Recuperación, definición corporal y wellness deportivo en un solo protocolo especializado<br /><br />Tu cuerpo entrena fuerte.<br />Tu recuperación también debería hacerlo.",
+      heroBg: "iron-beauty-fitness-bg.webp",
+      benefits: [
+        "Protocolos diseñados exclusivamente para atletas de competencia",
+        "Resultados visibles en la definición muscular y textura de piel",
+        "Tratamientos que complementan tu entrenamiento y dieta",
+        "Atención personalizada según tu categoría de competencia",
+        "Técnicas que aceleran la recuperación muscular post-entrenamiento",
+        "Sin tiempo de recuperación — sigue entrenando al día siguiente",
+      ],
+      items: [
+        {
+          title: "Vendas Frías en Turrialba",
+          description:
+            "Aplicación de vendas con activos reductores, drenantes y tentativos en frío que potencian la pérdida de medidas, reducen la retención de líquidos y marcan la musculatura. Ideal en la fase de definición previa a competencia.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Silicio Orgánico",
+          description:
+            "Tratamiento de aplicación corporal con silicio orgánico que mejora la calidad y elasticidad de la piel, favorece la síntesis de colágeno y da ese acabado de piel tensa y luminosa tan valorado en el escenario.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tensado Corporal",
+          description:
+            "Protocolo de radiofrecuencia y ultrasonidos focalizado en zonas musculares clave para reafirmar la piel, mejorar la tonicidad y resaltar la definición muscular lograda con el entrenamiento.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Electro-Estimulación Muscular",
+          description:
+            "Corrientes de electro-estimulación aplicadas sobre grupos musculares específicos para potenciar la contracción, mejorar el tono, acelerar la recuperación y complementar el trabajo en el gimnasio.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿En qué momento del proceso de preparación debo empezar?",
+          answer:
+            "Lo ideal es iniciar los tratamientos entre 8 y 12 semanas antes de la competencia, en la fase de definición. Sin embargo, los tratamientos de recuperación y electroestimulación pueden aplicarse durante todo el proceso.",
+        },
+        {
+          question: "¿Puedo entrenar el mismo día del tratamiento?",
+          answer:
+            "Sí. La mayoría de los tratamientos no requieren tiempo de recuperación. En el caso de las vendas frías recomendamos esperar al menos 4 horas antes de una sesión intensa.",
+        },
+        {
+          question:
+            "¿Estos tratamientos son solo para competidores profesionales?",
+          answer:
+            "No. Están diseñados tanto para atletas profesionales como para aficionados al fitness que quieran mejorar su apariencia y sus resultados estéticos. Adaptamos el protocolo a tu nivel y objetivos.",
+        },
+        {
+          question:
+            "¿Cuántas sesiones recomienda para preparar una competencia?",
+          answer:
+            "Generalmente entre 8 y 12 sesiones distribuidas en las semanas previas al evento. Diseñamos un calendario personalizado según la fecha de tu competencia y la categoría en la que participas.",
+        },
+      ],
+    },
+    en: {
+      slug: "iron-beauty-fitness",
+      name: "ESTÉTICA PARA FISICOCULTURISTAS Y ATLETAS EN TURRIALBA",
+      tagline: "Estética especializada para atletas del mundo fitness",
+      heroDescription: "Recuperación, definición corporal y wellness deportivo en un solo protocolo especializado<br /><br />Tu cuerpo entrena fuerte.<br />Tu recuperación también debería hacerlo.",
+      benefits: [
+        "Protocolos diseñados exclusivamente para atletas de competencia",
+        "Resultados visibles en la definición muscular y textura de piel",
+        "Tratamientos que complementan tu entrenamiento y dieta",
+        "Atención personalizada según tu categoría de competencia",
+        "Técnicas que aceleran la recuperación muscular post-entrenamiento",
+        "Sin tiempo de recuperación — sigue entrenando al día siguiente",
+      ],
+      items: [
+        {
+          title: "Vendas Frías en Turrialba",
+          description:
+            "Aplicación de vendas con activos reductores, drenantes y tentativos en frío que potencian la pérdida de medidas, reducen la retención de líquidos y marcan la musculatura. Ideal en la fase de definición previa a competencia.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Silicio Orgánico",
+          description:
+            "Tratamiento de aplicación corporal con silicio orgánico que mejora la calidad y elasticidad de la piel, favorece la síntesis de colágeno y da ese acabado de piel tensa y luminosa tan valorado en el escenario.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tensado Corporal",
+          description:
+            "Protocolo de radiofrecuencia y ultrasonidos focalizado en zonas musculares clave para reafirmar la piel, mejorar la tonicidad y resaltar la definición muscular lograda con el entrenamiento.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Electro-Estimulación Muscular",
+          description:
+            "Corrientes de electro-estimulación aplicadas sobre grupos musculares específicos para potenciar la contracción, mejorar el tono, acelerar la recuperación y complementar el trabajo en el gimnasio.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿En qué momento del proceso de preparación debo empezar?",
+          answer:
+            "Lo ideal es iniciar los tratamientos entre 8 y 12 semanas antes de la competencia, en la fase de definición. Sin embargo, los tratamientos de recuperación y electroestimulación pueden aplicarse durante todo el proceso.",
+        },
+        {
+          question: "¿Puedo entrenar el mismo día del tratamiento?",
+          answer:
+            "Sí. La mayoría de los tratamientos no requieren tiempo de recuperación. En el caso de las vendas frías recomendamos esperar al menos 4 horas antes de una sesión intensa.",
+        },
+        {
+          question:
+            "¿Estos tratamientos son solo para competidores profesionales?",
+          answer:
+            "No. Están diseñados tanto para atletas profesionales como para aficionados al fitness que quieran mejorar su apariencia y sus resultados estéticos. Adaptamos el protocolo a tu nivel y objetivos.",
+        },
+        {
+          question:
+            "¿Cuántas sesiones recomienda para preparar una competencia?",
+          answer:
+            "Generalmente entre 8 y 12 sesiones distribuidas en las semanas previas al evento. Diseñamos un calendario personalizado según la fecha de tu competencia y la categoría en la que participas.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "implante-barba",
+      name: "Implante de Barba",
+      tagline:
+        "Barba densa, uniforme y completamente natural sin cirugía agresiva",
+      heroDescription:
+        "El implante de barba es la solución definitiva para hombres que desean una barba completa, uniforme y con aspecto 100% natural. Mediante técnicas de trasplante capilar facial de última generación, redistribuimos folículos de zonas donantes hacia las áreas con escasez de vello para crear una barba permanente y de diseño personalizado.",
+      benefits: [
+        "Barba densa y uniforme de por vida, sin mantenimiento especial",
+        "Diseño personalizado adaptado a tu estructura facial y preferencias",
+        "Técnica mínimamente invasiva con recuperación rápida",
+        "Resultados completamente naturales e imperceptibles",
+        "Solución permanente para alopecia barba y zonas irregulares",
+        "Procedimiento ambulatorio realizado por especialistas certificados",
+      ],
+      items: [
+        {
+          title: "Implante de Barba Completa",
+          description:
+            "Trasplante de folículos capilares en toda la zona de la barba — mentón, mandíbula, mejillas y bigote — para conseguir un aspecto completo y uniforme. Diseñamos la forma y densidad ideal según tu fisonomía.",
+          duration: "4-6 h",
+          price: "Consultar precio",
+        },
+        {
+          title: "Relleno de Zonas Específicas",
+          description:
+            "Intervención focalizada en áreas concretas con escasez de vello — entradas del bigote, calvas en mejillas o zonas irregulares — para uniformar y completar la barba existente.",
+          duration: "2-3 h",
+          price: "Consultar precio",
+        },
+        {
+          title: "Diseño y Definición de Contorno",
+          description:
+            "Implante preciso en el contorno de la barba y la perilla para crear líneas definidas, simétricas y con el aspecto que deseas. Ideal para quienes tienen barba pero sin definición de bordes.",
+          duration: "2 h",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿El implante de barba es permanente?",
+          answer:
+            "Sí. Los folículos trasplantados son de zonas donantes resistentes y crecen de por vida. A los 3-4 meses empiezas a ver el crecimiento definitivo y a los 12 meses el resultado es completo y permanente.",
+        },
+        {
+          question: "¿Cuánto tiempo tarda la recuperación?",
+          answer:
+            "La zona tratada puede presentar pequeñas costras durante 7-10 días. La mayoría de los pacientes retoman su actividad normal en 3-5 días. Se deben evitar actividades de alto impacto durante la primera semana.",
+        },
+        {
+          question: "¿Se nota que es un implante?",
+          answer:
+            "No. Los folículos se implantan uno a uno con ángulos y direcciones que imitan el crecimiento natural del vello. El resultado es completamente indistinguible de una barba natural.",
+        },
+      ],
+    },
+    en: {
+      slug: "implante-barba",
+      name: "Implante de Barba",
+      tagline: "",
+      heroDescription: "El implante de barba es la solución definitiva para hombres que desean una barba completa, uniforme y con aspecto 100% natural. Mediante técnicas de trasplante capilar facial de última generación, redistribuimos folículos de zonas donantes hacia las áreas con escasez de vello para crear una barba permanente y de diseño personalizado.",
+      benefits: [
+        "Barba densa y uniforme de por vida, sin mantenimiento especial",
+        "Diseño personalizado adaptado a tu estructura facial y preferencias",
+        "Técnica mínimamente invasiva con recuperación rápida",
+        "Resultados completamente naturales e imperceptibles",
+        "Solución permanente para alopecia barba y zonas irregulares",
+        "Procedimiento ambulatorio realizado por especialistas certificados",
+      ],
+      items: [
+        {
+          title: "Implante de Barba Completa",
+          description:
+            "Trasplante de folículos capilares en toda la zona de la barba — mentón, mandíbula, mejillas y bigote — para conseguir un aspecto completo y uniforme. Diseñamos la forma y densidad ideal según tu fisonomía.",
+          duration: "4-6 h",
+          price: "Consultar precio",
+        },
+        {
+          title: "Relleno de Zonas Específicas",
+          description:
+            "Intervención focalizada en áreas concretas con escasez de vello — entradas del bigote, calvas en mejillas o zonas irregulares — para uniformar y completar la barba existente.",
+          duration: "2-3 h",
+          price: "Consultar precio",
+        },
+        {
+          title: "Diseño y Definición de Contorno",
+          description:
+            "Implante preciso en el contorno de la barba y la perilla para crear líneas definidas, simétricas y con el aspecto que deseas. Ideal para quienes tienen barba pero sin definición de bordes.",
+          duration: "2 h",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿El implante de barba es permanente?",
+          answer:
+            "Sí. Los folículos trasplantados son de zonas donantes resistentes y crecen de por vida. A los 3-4 meses empiezas a ver el crecimiento definitivo y a los 12 meses el resultado es completo y permanente.",
+        },
+        {
+          question: "¿Cuánto tiempo tarda la recuperación?",
+          answer:
+            "La zona tratada puede presentar pequeñas costras durante 7-10 días. La mayoría de los pacientes retoman su actividad normal en 3-5 días. Se deben evitar actividades de alto impacto durante la primera semana.",
+        },
+        {
+          question: "¿Se nota que es un implante?",
+          answer:
+            "No. Los folículos se implantan uno a uno con ángulos y direcciones que imitan el crecimiento natural del vello. El resultado es completamente indistinguible de una barba natural.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "mesoterapia-capilar",
+      name: "Mesoterapia Capilar",
+      tagline:
+        "Frena la caída y activa el crecimiento del cabello desde la raíz",
+      heroDescription:
+        "La mesoterapia capilar es uno de los tratamientos más eficaces y seguros para combatir la caída del cabello y estimular su crecimiento. Mediante microinyecciones de vitaminas, minerales, aminoácidos y factores de crecimiento directamente en el cuero cabelludo, nutrimos los folículos y reactivamos su función de forma natural y sin efectos secundarios.",
+      benefits: [
+        "Frena la caída del cabello desde las primeras sesiones",
+        "Estimula el crecimiento de cabello nuevo y refuerza el existente",
+        "Nutre directamente los folículos capilares desde la raíz",
+        "Mejora la circulación del cuero cabelludo y oxigenación folicular",
+        "Sin efectos secundarios sistémicos — acción local y precisa",
+        "Compatible con otros tratamientos capilares y medicamentos",
+      ],
+      items: [
+        {
+          title: "Mesoterapia con Vitaminas y Minerales",
+          description:
+            "Microinyecciones de un cóctel rico en biotina, zinc, silicio, vitaminas del grupo B y aminoácidos esenciales que nutren los folículos debilitados y mejoran la calidad del cabello existente.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Mesoterapia con PRP (Plasma Rico en Plaquetas)",
+          description:
+            "Combinación de mesoterapia con tu propio plasma sanguíneo enriquecido en factores de crecimiento. Estimulación biológica máxima de los folículos capilares para resultados acelerados.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Intensivo Anticaída",
+          description:
+            "Ciclo completo de 8 sesiones de mesoterapia capilar con seguimiento fotográfico y ajuste de la fórmula según la respuesta. El protocolo más completo para casos de caída intensa o alopecia incipiente.",
+          duration: "30 min/sesión",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuántas sesiones son necesarias para ver resultados?",
+          answer:
+            "La reducción de caída se nota ya en las primeras 3-4 sesiones. El crecimiento de cabello nuevo es visible a partir de la sesión 6-8. Recomendamos un ciclo inicial de 8-10 sesiones semanales, seguido de mantenimiento mensual.",
+        },
+        {
+          question: "¿Es dolorosa la mesoterapia capilar?",
+          answer:
+            "Las microinyecciones producen una sensación mínima comparable a pequeños pellizcos. Aplicamos anestesia tópica si el paciente lo prefiere para garantizar la mayor comodidad posible.",
+        },
+        {
+          question: "¿Para qué tipos de alopecia es eficaz?",
+          answer:
+            "Es especialmente eficaz para la alopecia androgénica incipiente, alopecia difusa por estrés o carencias nutricionales, y cabello debilitado. No sustituye al trasplante capilar en casos de alopecia avanzada, pero puede complementarlo.",
+        },
+      ],
+    },
+    en: {
+      slug: "mesoterapia-capilar",
+      name: "Mesoterapia Capilar",
+      tagline: "",
+      heroDescription: "La mesoterapia capilar es uno de los tratamientos más eficaces y seguros para combatir la caída del cabello y estimular su crecimiento. Mediante microinyecciones de vitaminas, minerales, aminoácidos y factores de crecimiento directamente en el cuero cabelludo, nutrimos los folículos y reactivamos su función de forma natural y sin efectos secundarios.",
+      benefits: [
+        "Frena la caída del cabello desde las primeras sesiones",
+        "Estimula el crecimiento de cabello nuevo y refuerza el existente",
+        "Nutre directamente los folículos capilares desde la raíz",
+        "Mejora la circulación del cuero cabelludo y oxigenación folicular",
+        "Sin efectos secundarios sistémicos — acción local y precisa",
+        "Compatible con otros tratamientos capilares y medicamentos",
+      ],
+      items: [
+        {
+          title: "Mesoterapia con Vitaminas y Minerales",
+          description:
+            "Microinyecciones de un cóctel rico en biotina, zinc, silicio, vitaminas del grupo B y aminoácidos esenciales que nutren los folículos debilitados y mejoran la calidad del cabello existente.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Mesoterapia con PRP (Plasma Rico en Plaquetas)",
+          description:
+            "Combinación de mesoterapia con tu propio plasma sanguíneo enriquecido en factores de crecimiento. Estimulación biológica máxima de los folículos capilares para resultados acelerados.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Intensivo Anticaída",
+          description:
+            "Ciclo completo de 8 sesiones de mesoterapia capilar con seguimiento fotográfico y ajuste de la fórmula según la respuesta. El protocolo más completo para casos de caída intensa o alopecia incipiente.",
+          duration: "30 min/sesión",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuántas sesiones son necesarias para ver resultados?",
+          answer:
+            "La reducción de caída se nota ya en las primeras 3-4 sesiones. El crecimiento de cabello nuevo es visible a partir de la sesión 6-8. Recomendamos un ciclo inicial de 8-10 sesiones semanales, seguido de mantenimiento mensual.",
+        },
+        {
+          question: "¿Es dolorosa la mesoterapia capilar?",
+          answer:
+            "Las microinyecciones producen una sensación mínima comparable a pequeños pellizcos. Aplicamos anestesia tópica si el paciente lo prefiere para garantizar la mayor comodidad posible.",
+        },
+        {
+          question: "¿Para qué tipos de alopecia es eficaz?",
+          answer:
+            "Es especialmente eficaz para la alopecia androgénica incipiente, alopecia difusa por estrés o carencias nutricionales, y cabello debilitado. No sustituye al trasplante capilar en casos de alopecia avanzada, pero puede complementarlo.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "inbody",
+      name: "InBody en Turrialba | Análisis de Composición Corporal Profesional",
+      fullTitle:
+        "InBody en Turrialba | Análisis de Composición Corporal Profesional",
+      tagline: "Conoce tu cuerpo, mide tu progreso, mejora tus resultados",
+      heroDescription:
+        "¿Quieres saber si realmente estás perdiendo grasa, ganando músculo o mejorando tu condición física?<br /><br />Una báscula tradicional solo muestra tu peso, pero no explica qué está pasando dentro de tu cuerpo. En MJ Estética & Wellness Center realizamos análisis de composición corporal InBody, una evaluación profesional para tomar mejores decisiones sobre entrenamiento, alimentación y bienestar.",
+      benefits: [
+        "Conocer porcentaje de grasa corporal real",
+        "Medir masa muscular por segmentos",
+        "Identificar nivel de grasa visceral",
+        "Evaluar hidratación y agua corporal",
+        "Calcular metabolismo basal exacto",
+        "Seguimiento profesional de resultados",
+      ],
+      items: [
+        {
+          title: "Análisis InBody Profesional",
+          description:
+            "Evaluación completa de composición corporal con entrega de reporte e interpretación de resultados.",
+          duration: "10 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuánto cuesta un InBody en Turrialba?",
+          answer:
+            "El precio puede variar según el servicio y la orientación incluida. Escríbenos por WhatsApp para conocer disponibilidad y detalles.",
+        },
+        {
+          question: "¿Cuánto dura un análisis InBody?",
+          answer: "La medición tarda aproximadamente entre 5 y 10 minutos.",
+        },
+        {
+          question: "¿El InBody mide grasa corporal y músculo?",
+          answer:
+            "Sí. Permite conocer porcentaje de grasa, masa muscular, grasa visceral, agua corporal y otros indicadores.",
+        },
+        {
+          question: "¿Cada cuánto debo realizar un InBody?",
+          answer:
+            "Depende de tus objetivos. Muchas personas realizan mediciones cada 4 a 8 semanas para evaluar cambios.",
+        },
+      ],
+    },
+    en: {
+      slug: "spa-brides",
+      name: "Spa for Brides",
+      tagline: "The best gift before your wedding is you",
+      heroDescription:
+        "Live the most relaxing Bride Spa experience in Turrialba. Exclusive experience designed to help you regain physical and emotional balance before your special day.",
+      benefits: [
+        "Deep relaxation of the nervous system",
+        "Relief of tension and muscle pain",
+        "Improvement of skin luminosity and freshness",
+        "Reduction of pre-wedding anxiety and stress",
+        "Better sleep quality",
+        "Total disconnection moment for the bride",
+      ],
+      items: [
+        {
+          title: "Radiant Bride Package",
+          description: "Integral protocol combining body exfoliation, relaxing massage, and express facial.",
+          duration: "120 min",
+          faq: [
+        {
+          question: "¿Cuánto cuesta un InBody en Turrialba?",
+          answer:
+            "El precio puede variar según el servicio y la orientación incluida. Escríbenos por WhatsApp para conocer disponibilidad y detalles.",
+        },
+        {
+          question: "¿Cuánto dura un análisis InBody?",
+          answer: "La medición tarda aproximadamente entre 5 y 10 minutos.",
+        },
+        {
+          question: "¿El InBody mide grasa corporal y músculo?",
+          answer:
+            "Sí. Permite conocer porcentaje de grasa, masa muscular, grasa visceral, agua corporal y otros indicadores.",
+        },
+        {
+          question: "¿Cada cuánto debo realizar un InBody?",
+          answer:
+            "Depende de tus objetivos. Muchas personas realizan mediciones cada 4 a 8 semanas para evaluar cambios.",
+        },
+      ],
+    },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "relleno-de-labios",
+      name: "Relleno de Labios en Turrialba",
+      tagline:
+        "Labios con volumen, contorno definido y aspecto completamente natural",
+      heroBg: "acido-hialuronico-bg.webp",
+      heroDescription:
+        "Descubre cómo lograr labios más hidratados, definidos y armoniosos con resultados naturales y personalizados.",
+      benefits: [
+        "Volumen natural y proporcional adaptado a tu rostro",
+        "Contorno labial perfectamente definido y simétrico",
+        "Hidratación profunda y labios más suaves desde el primer día",
+        "Resultado visible inmediato y duradero hasta 12 meses",
+        "Técnica precisa que evita el efecto exagerado o artificial",
+        "Producto biocompatible y reabsorbible — completamente seguro",
+      ],
+      items: [
+        {
+          title: "Relleno de Volumen Labial",
+          description:
+            "Aplicación de ácido hialurónico en el cuerpo de los labios para aumentar el volumen de forma natural y proporcional. Diseñamos el aumento según tus proporciones faciales para un resultado armonioso.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Definición de Contorno Labial",
+          description:
+            "Relleno preciso en el vermillón y el borde labial para crear un contorno nítido, simétrico y perfectamente definido. Ideal si tus labios tienen buen volumen pero falta de definición o asimetría.",
+          duration: "25 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tratamiento Completo Volumen + Contorno",
+          description:
+            "Diseño labial integral que combina el relleno de volumen con la definición del contorno para conseguir el resultado más completo. Incluye la corrección de asimetrías y la proyección del arco de cupido.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuánto dura el efecto del relleno de labios?",
+          answer:
+            "Dependiendo del tipo de ácido hialurónico utilizado y el metabolismo de cada persona, el efecto dura entre 6 y 12 meses. Se recomienda una sesión de retoque para mantener el resultado óptimo.",
+        },
+        {
+          question: "¿Es doloroso el tratamiento?",
+          answer:
+            "Aplicamos crema anestésica tópica antes del procedimiento para minimizar las molestias. La mayoría de las pacientes lo describen como muy tolerable — solo una pequeña presión durante las inyecciones.",
+        },
+        {
+          question: "¿Se puede ver el resultado inmediatamente?",
+          answer:
+            "Sí, el resultado es visible desde el momento del tratamiento. Los labios pueden presentar una leve inflamación durante 24-48 horas que potencia inicialmente el volumen. El resultado definitivo se aprecia a los 7-10 días.",
+        },
+      ],
+    },
+    en: {
+      slug: "relleno-de-labios",
+      name: "Relleno de Labios en Turrialba",
+      tagline: "",
+      heroDescription: "Descubre cómo lograr labios más hidratados, definidos y armoniosos con resultados naturales y personalizados.",
+      benefits: [
+        "Volumen natural y proporcional adaptado a tu rostro",
+        "Contorno labial perfectamente definido y simétrico",
+        "Hidratación profunda y labios más suaves desde el primer día",
+        "Resultado visible inmediato y duradero hasta 12 meses",
+        "Técnica precisa que evita el efecto exagerado o artificial",
+        "Producto biocompatible y reabsorbible — completamente seguro",
+      ],
+      items: [
+        {
+          title: "Relleno de Volumen Labial",
+          description:
+            "Aplicación de ácido hialurónico en el cuerpo de los labios para aumentar el volumen de forma natural y proporcional. Diseñamos el aumento según tus proporciones faciales para un resultado armonioso.",
+          duration: "30 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Definición de Contorno Labial",
+          description:
+            "Relleno preciso en el vermillón y el borde labial para crear un contorno nítido, simétrico y perfectamente definido. Ideal si tus labios tienen buen volumen pero falta de definición o asimetría.",
+          duration: "25 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tratamiento Completo Volumen + Contorno",
+          description:
+            "Diseño labial integral que combina el relleno de volumen con la definición del contorno para conseguir el resultado más completo. Incluye la corrección de asimetrías y la proyección del arco de cupido.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Cuánto dura el efecto del relleno de labios?",
+          answer:
+            "Dependiendo del tipo de ácido hialurónico utilizado y el metabolismo de cada persona, el efecto dura entre 6 y 12 meses. Se recomienda una sesión de retoque para mantener el resultado óptimo.",
+        },
+        {
+          question: "¿Es doloroso el tratamiento?",
+          answer:
+            "Aplicamos crema anestésica tópica antes del procedimiento para minimizar las molestias. La mayoría de las pacientes lo describen como muy tolerable — solo una pequeña presión durante las inyecciones.",
+        },
+        {
+          question: "¿Se puede ver el resultado inmediatamente?",
+          answer:
+            "Sí, el resultado es visible desde el momento del tratamiento. Los labios pueden presentar una leve inflamación durante 24-48 horas que potencia inicialmente el volumen. El resultado definitivo se aprecia a los 7-10 días.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "tratamiento-ojeras",
+      name: "Tratamiento para Ojeras en Turrialba",
+      fullTitle:
+        "Tratamiento para Ojeras en Turrialba | Recupera una Mirada Más Fresca y Rejuvenecida",
+      tagline: "Recupera una Mirada Más Fresca y Rejuvenecida",
+      heroDescription:
+        "Descubre cómo nuestro tratamiento de carboxiterapia para ojeras en Turrialba puede ayudarte a mejorar la apariencia de bolsas, pigmentación oscura y signos visibles de fatiga.",
+      benefits: [
+        "Ayuda a disminuir la apariencia de las ojeras",
+        "Favorece una mirada más descansada",
+        "Mejora la luminosidad del contorno de ojos",
+        "Procedimiento mínimamente invasivo",
+        "Sin cirugía",
+        "Sesiones rápidas",
+        "Atención personalizada",
+        "Tratamiento profesional en Turrialba",
+      ],
+      items: [],
+      faq: [
+        {
+          question: "¿Dónde realizan el tratamiento para ojeras en Turrialba?",
+          answer: "En MJ Fisio Estética & Spa, Turrialba, Costa Rica.",
+        },
+        {
+          question: "¿La carboxiterapia para ojeras duele?",
+          answer:
+            "Puede generar molestias leves y temporales dependiendo de cada persona.",
+        },
+        {
+          question: "¿Cuánto dura una sesión?",
+          answer: "Entre 20 y 40 minutos aproximadamente.",
+        },
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "La cantidad varía según cada caso y será definida durante la valoración.",
+        },
+        {
+          question: "¿Es un procedimiento quirúrgico?",
+          answer: "No, es un tratamiento estético no quirúrgico.",
+        },
+      ],
+    },
+    en: {
+      slug: "tratamiento-ojeras",
+      name: "Tratamiento para Ojeras en Turrialba",
+      tagline: "Recupera una Mirada Más Fresca y Rejuvenecida",
+      heroDescription: "Descubre cómo nuestro tratamiento de carboxiterapia para ojeras en Turrialba puede ayudarte a mejorar la apariencia de bolsas, pigmentación oscura y signos visibles de fatiga.",
+      benefits: [
+        "Ayuda a disminuir la apariencia de las ojeras",
+        "Favorece una mirada más descansada",
+        "Mejora la luminosidad del contorno de ojos",
+        "Procedimiento mínimamente invasivo",
+        "Sin cirugía",
+        "Sesiones rápidas",
+        "Atención personalizada",
+        "Tratamiento profesional en Turrialba",
+      ],
+      items: [],
+      faq: [
+        {
+          question: "¿Dónde realizan el tratamiento para ojeras en Turrialba?",
+          answer: "En MJ Fisio Estética & Spa, Turrialba, Costa Rica.",
+        },
+        {
+          question: "¿La carboxiterapia para ojeras duele?",
+          answer:
+            "Puede generar molestias leves y temporales dependiendo de cada persona.",
+        },
+        {
+          question: "¿Cuánto dura una sesión?",
+          answer: "Entre 20 y 40 minutos aproximadamente.",
+        },
+        {
+          question: "¿Cuántas sesiones necesito?",
+          answer:
+            "La cantidad varía según cada caso y será definida durante la valoración.",
+        },
+        {
+          question: "¿Es un procedimiento quirúrgico?",
+          answer: "No, es un tratamiento estético no quirúrgico.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "aromaterapia",
+      name: "Aromaterapia en Turrialba",
+      fullTitle:
+        "Aromaterapia en Turrialba | Relajación, Bienestar y Experiencias Wellness Premium",
+      tagline: "Regálate un momento de calma, bienestar y desconexión",
+      heroDescription:
+        "Experiencia wellness que utiliza aceites esenciales y estímulos aromáticos cuidadosamente seleccionados para crear ambientes orientados a la relajación, el bienestar emocional y el descanso.",
+      benefits: [
+        "Sensación de relajación profunda",
+        "Momentos de desconexión y descanso",
+        "Bienestar emocional y físico",
+        "Espacios de calma y armonía",
+        "Experiencias wellness personalizadas",
+        "Autocuidado consciente",
+        "Ambiente premium orientado al bienestar",
+      ],
+      items: [],
+      faq: [
+        {
+          question: "¿Qué es la aromaterapia?",
+          answer:
+            "Es una experiencia wellness que utiliza aromas y aceites esenciales para crear ambientes orientados al bienestar y la relajación.",
+        },
+        {
+          question: "¿Cuánto dura la sesión?",
+          answer:
+            "Depende del protocolo seleccionado y de las necesidades de cada persona.",
+        },
+        {
+          question: "¿Se puede combinar con masajes?",
+          answer:
+            "Sí. Es una de las combinaciones más solicitadas por nuestros clientes.",
+        },
+        {
+          question: "¿Qué aceites esenciales utilizan?",
+          answer:
+            "Seleccionamos opciones según la experiencia deseada y las preferencias individuales.",
+        },
+        {
+          question: "¿Necesito preparación previa?",
+          answer:
+            "No. Solo venir con disposición para disfrutar un momento de bienestar.",
+        },
+        {
+          question: "¿Dónde están ubicados?",
+          answer:
+            "Nos encontramos en Turrialba, con fácil acceso y parqueo para nuestros visitantes.",
+        },
+      ],
+    },
+    en: {
+      slug: "aromaterapia",
+      name: "Aromaterapia en Turrialba",
+      tagline: "Regálate un momento de calma, bienestar y desconexión",
+      heroDescription: "Experiencia wellness que utiliza aceites esenciales y estímulos aromáticos cuidadosamente seleccionados para crear ambientes orientados a la relajación, el bienestar emocional y el descanso.",
+      benefits: [
+        "Sensación de relajación profunda",
+        "Momentos de desconexión y descanso",
+        "Bienestar emocional y físico",
+        "Espacios de calma y armonía",
+        "Experiencias wellness personalizadas",
+        "Autocuidado consciente",
+        "Ambiente premium orientado al bienestar",
+      ],
+      items: [],
+      faq: [
+        {
+          question: "¿Qué es la aromaterapia?",
+          answer:
+            "Es una experiencia wellness que utiliza aromas y aceites esenciales para crear ambientes orientados al bienestar y la relajación.",
+        },
+        {
+          question: "¿Cuánto dura la sesión?",
+          answer:
+            "Depende del protocolo seleccionado y de las necesidades de cada persona.",
+        },
+        {
+          question: "¿Se puede combinar con masajes?",
+          answer:
+            "Sí. Es una de las combinaciones más solicitadas por nuestros clientes.",
+        },
+        {
+          question: "¿Qué aceites esenciales utilizan?",
+          answer:
+            "Seleccionamos opciones según la experiencia deseada y las preferencias individuales.",
+        },
+        {
+          question: "¿Necesito preparación previa?",
+          answer:
+            "No. Solo venir con disposición para disfrutar un momento de bienestar.",
+        },
+        {
+          question: "¿Dónde están ubicados?",
+          answer:
+            "Nos encontramos en Turrialba, con fácil acceso y parqueo para nuestros visitantes.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "arteterapia",
+      name: "Arteterapia en Turrialba",
+      fullTitle:
+        "Clases de Pintura Turrialba: Arteterapia y un cafésito para tu bienestar",
+      tagline:
+        "Libera tu creatividad, reduce el estrés y decora tu propio osito de resina",
+      heroDescription:
+        "¿Buscas una actividad diferente en Turrialba para relajarte, desconectarte del estrés y dedicarte tiempo de calidad?<br /><br />En Mj estética and Wellness Center hemos creado una experiencia única que combina arteterapia, pintura de ositos de resina y café, diseñada para ayudarte a liberar tensiones, estimular tu creatividad y mejorar tu bienestar emocional en un ambiente acogedor y seguro.",
+      benefits: [
+        "Reducción del estrés y la ansiedad",
+        "Decora y personaliza tu propio osito de resina",
+        "Mejora del bienestar emocional",
+        "Estímulo de la creatividad",
+        "Espacio de desconexión y tiempo para ti",
+        "Ambiente relajante y acogedor",
+      ],
+      items: [
+        {
+          title: "Sesión de Pintura de Ositos y Café",
+          description:
+            "Experiencia completa que incluye osito de resina, materiales de pintura, café y acompañamiento guiado.",
+          duration: "120 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Necesito saber pintar?",
+          answer:
+            "No. No buscamos artistas, buscamos ayudarte a sentirte mejor. La experiencia está diseñada para que cualquier persona pueda disfrutarla sin importar su nivel artístico.",
+        },
+        {
+          question: "¿Qué incluye la sesión?",
+          answer:
+            "Incluye todos los materiales de pintura, una deliciosa taza de café (o bebida alternativa), guía durante la actividad y un ambiente diseñado para la relajación.",
+        },
+        {
+          question: "¿Quiénes pueden participar?",
+          answer:
+            "Es ideal para personas con estrés laboral, parejas, grupos de amigos o cualquier persona que quiera dedicar tiempo a su bienestar emocional y salir de la rutina.",
+        },
+      ],
+    },
+    en: {
+      slug: "art-therapy",
+      name: "Art Therapy in Turrialba",
+      tagline: "Release your creativity, reduce stress and decorate your own resin bear",
+      heroDescription:
+        "Looking for a different activity in Turrialba to relax and disconnect? Our experience combines art therapy, resin bear painting and coffee.",
+      benefits: [
+        "Stress and anxiety reduction",
+        "Decorate and personalize your own resin bear",
+        "Emotional well-being improvement",
+        "Creativity stimulus",
+        "Space for disconnection and time for yourself",
+      ],
+      items: [
+        {
+          title: "Painting and Coffee Session",
+          description: "Complete experience including resin bear, materials, and coffee.",
+          duration: "120 min",
+          faq: [
+        {
+          question: "¿Necesito saber pintar?",
+          answer:
+            "No. No buscamos artistas, buscamos ayudarte a sentirte mejor. La experiencia está diseñada para que cualquier persona pueda disfrutarla sin importar su nivel artístico.",
+        },
+        {
+          question: "¿Qué incluye la sesión?",
+          answer:
+            "Incluye todos los materiales de pintura, una deliciosa taza de café (o bebida alternativa), guía durante la actividad y un ambiente diseñado para la relajación.",
+        },
+        {
+          question: "¿Quiénes pueden participar?",
+          answer:
+            "Es ideal para personas con estrés laboral, parejas, grupos de amigos o cualquier persona que quiera dedicar tiempo a su bienestar emocional y salir de la rutina.",
+        },
+      ],
+    },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "blanqueamiento-zona-intima",
+      name: "Blanqueamiento Zona Íntima",
+      fullTitle: "Blanqueamiento de Zona Íntima en Turrialba",
+      tagline:
+        "Unifica el tono de tus zonas más delicadas con seguridad y confianza",
+      heroDescription:
+        "Recupera la seguridad en ti misma con nuestros protocolos especializados de blanqueamiento para entrepierna, axilas y zona perianal. Tratamientos no invasivos, respetuosos y altamente efectivos en Turrialba.",
+      benefits: [
+        "Unificación del tono de piel en zonas de hiperpigmentación",
+        "Tratamiento 100% seguro y respetuoso con la piel íntima",
+        "Reducción de manchas por fricción, hormonales o post-depilación",
+        "Mayor confianza y comodidad con tu cuerpo",
+        "Sin tiempo de inactividad — retomas tu rutina al instante",
+        "Protocolos personalizados según tu tipo de piel y grado de pigmentación",
+      ],
+      items: [
+        {
+          title: "Blanqueamiento con Peeling Enzimático",
+          description:
+            "Aplicación de enzimas despigmentantes específicas para zonas íntimas que exfolian y aclaran progresivamente la piel sin irritación. Ideal para pieles sensibles.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tratamiento con Ácidos Despigmentantes",
+          description:
+            "Protocolo con ácidos dérmicos a baja concentración (kójico, mandélico, azelaico) diseñados para aclarar la piel de zonas íntimas de forma segura y eficaz.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Intensivo de Luminosidad",
+          description:
+            "Ciclo completo de 6 sesiones que combina exfoliación enzimática, despigmentación ácida y tratamiento antioxidante para resultados óptimos y duraderos en hiperpigmentaciones moderadas o intensas.",
+          duration: "45 min/sesión",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿El blanqueamiento de zona íntima es seguro?",
+          answer:
+            "Sí. Usamos productos específicamente formulados para zonas íntimas, con ingredientes aprobados dermatológicamente. El tratamiento no daña la piel ni las mucosas cuando se aplica correctamente por profesionales.",
+        },
+        {
+          question: "¿Cuántas sesiones son necesarias?",
+          answer:
+            "Para pigmentaciones leves, 3-4 sesiones son suficientes. Para casos moderados o intensos, recomendamos un ciclo completo de 6 sesiones. Los resultados son progresivos y se potencian con cada sesión.",
+        },
+        {
+          question: "¿Hay alguna contraindicación?",
+          answer:
+            "Se recomienda no realizarlo durante el embarazo o lactancia. Tampoco en pieles con heridas, dermatitis activa o infección en la zona. En la consulta previa evaluamos tu caso y adaptamos el protocolo a tu condición.",
+        },
+      ],
+    },
+    en: {
+      slug: "blanqueamiento-zona-intima",
+      name: "Blanqueamiento Zona Íntima",
+      tagline: "",
+      heroDescription: "Recupera la seguridad en ti misma con nuestros protocolos especializados de blanqueamiento para entrepierna, axilas y zona perianal. Tratamientos no invasivos, respetuosos y altamente efectivos en Turrialba.",
+      benefits: [
+        "Unificación del tono de piel en zonas de hiperpigmentación",
+        "Tratamiento 100% seguro y respetuoso con la piel íntima",
+        "Reducción de manchas por fricción, hormonales o post-depilación",
+        "Mayor confianza y comodidad con tu cuerpo",
+        "Sin tiempo de inactividad — retomas tu rutina al instante",
+        "Protocolos personalizados según tu tipo de piel y grado de pigmentación",
+      ],
+      items: [
+        {
+          title: "Blanqueamiento con Peeling Enzimático",
+          description:
+            "Aplicación de enzimas despigmentantes específicas para zonas íntimas que exfolian y aclaran progresivamente la piel sin irritación. Ideal para pieles sensibles.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Tratamiento con Ácidos Despigmentantes",
+          description:
+            "Protocolo con ácidos dérmicos a baja concentración (kójico, mandélico, azelaico) diseñados para aclarar la piel de zonas íntimas de forma segura y eficaz.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Protocolo Intensivo de Luminosidad",
+          description:
+            "Ciclo completo de 6 sesiones que combina exfoliación enzimática, despigmentación ácida y tratamiento antioxidante para resultados óptimos y duraderos en hiperpigmentaciones moderadas o intensas.",
+          duration: "45 min/sesión",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿El blanqueamiento de zona íntima es seguro?",
+          answer:
+            "Sí. Usamos productos específicamente formulados para zonas íntimas, con ingredientes aprobados dermatológicamente. El tratamiento no daña la piel ni las mucosas cuando se aplica correctamente por profesionales.",
+        },
+        {
+          question: "¿Cuántas sesiones son necesarias?",
+          answer:
+            "Para pigmentaciones leves, 3-4 sesiones son suficientes. Para casos moderados o intensos, recomendamos un ciclo completo de 6 sesiones. Los resultados son progresivos y se potencian con cada sesión.",
+        },
+        {
+          question: "¿Hay alguna contraindicación?",
+          answer:
+            "Se recomienda no realizarlo durante el embarazo o lactancia. Tampoco en pieles con heridas, dermatitis activa o infección en la zona. En la consulta previa evaluamos tu caso y adaptamos el protocolo a tu condición.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "mascarillas-faciales",
+      name: "Mascarillas Faciales",
+      fullTitle: "Mascarillas Faciales en Turrialba",
+      tagline:
+        "La experiencia que ayuda a devolverle a tu piel la hidratación, luminosidad y frescura que el estrés diario le ha quitado.",
+      heroDescription:
+        "Porque una piel luminosa no es casualidad. Es el resultado de cuidarla. De escucharla. Y de darle exactamente lo que necesita.",
+      benefits: [
+        "Sensación de hidratación profunda",
+        "Glow facial natural",
+        "Experiencia relajante",
+        "Momento de autocuidado",
+        "Piel con apariencia más fresca",
+        "Complemento ideal para una rutina skincare premium",
+        "Sensación de bienestar y confianza",
+      ],
+      items: [
+        {
+          title: "Mascarilla Facial Personalizada",
+          description:
+            "Protocolo adaptado según las necesidades específicas de cada cliente para recuperar frescura, luminosidad e hidratación.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué hace diferente esta experiencia?",
+          answer:
+            "Combinamos valoración facial personalizada, protocolos adaptados, ambiente relajante y atención individualizada para resultados superiores.",
+        },
+        {
+          question: "¿Para quién se recomienda?",
+          answer:
+            "Para cualquier persona que desee mejorar la luminosidad, complementar su rutina facial o simplemente regalarse un momento de bienestar premium.",
+        },
+      ],
+    },
+    en: {
+      slug: "mascarillas-faciales",
+      name: "Mascarillas Faciales",
+      tagline: "",
+      heroDescription: "Porque una piel luminosa no es casualidad. Es el resultado de cuidarla. De escucharla. Y de darle exactamente lo que necesita.",
+      benefits: [
+        "Sensación de hidratación profunda",
+        "Glow facial natural",
+        "Experiencia relajante",
+        "Momento de autocuidado",
+        "Piel con apariencia más fresca",
+        "Complemento ideal para una rutina skincare premium",
+        "Sensación de bienestar y confianza",
+      ],
+      items: [
+        {
+          title: "Mascarilla Facial Personalizada",
+          description:
+            "Protocolo adaptado según las necesidades específicas de cada cliente para recuperar frescura, luminosidad e hidratación.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Qué hace diferente esta experiencia?",
+          answer:
+            "Combinamos valoración facial personalizada, protocolos adaptados, ambiente relajante y atención individualizada para resultados superiores.",
+        },
+        {
+          question: "¿Para quién se recomienda?",
+          answer:
+            "Para cualquier persona que desee mejorar la luminosidad, complementar su rutina facial o simplemente regalarse un momento de bienestar premium.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "nuevo-servicio-1",
+      name: "Nuevo Servicio 1 (Plantilla)",
+      tagline: "Descripción corta y atractiva del nuevo servicio 1",
+      heroDescription:
+        "Esta es una plantilla de prueba para el Nuevo Servicio 1. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
+      benefits: [
+        "Beneficio destacado número 1 del servicio",
+        "Beneficio destacado número 2 del servicio",
+        "Beneficio destacado número 3 del servicio",
+        "Beneficio destacado número 4 del servicio",
+      ],
+      items: [
+        {
+          title: "Opción de Tratamiento 1",
+          description:
+            "Breve descripción sobre esta variante específica del servicio.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Opción de Tratamiento 2",
+          description:
+            "Breve descripción sobre esta variante específica del servicio.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Pregunta frecuente de ejemplo 1?",
+          answer: "Respuesta detallada a la pregunta frecuente número 1.",
+        },
+        {
+          question: "¿Pregunta frecuente de ejemplo 2?",
+          answer: "Respuesta detallada a la pregunta frecuente número 2.",
+        },
+      ],
+    },
+    en: {
+      slug: "nuevo-servicio-1",
+      name: "Nuevo Servicio 1 (Plantilla)",
+      tagline: "Descripción corta y atractiva del nuevo servicio 1",
+      heroDescription: "Esta es una plantilla de prueba para el Nuevo Servicio 1. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
+      benefits: [
+        "Beneficio destacado número 1 del servicio",
+        "Beneficio destacado número 2 del servicio",
+        "Beneficio destacado número 3 del servicio",
+        "Beneficio destacado número 4 del servicio",
+      ],
+      items: [
+        {
+          title: "Opción de Tratamiento 1",
+          description:
+            "Breve descripción sobre esta variante específica del servicio.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+        {
+          title: "Opción de Tratamiento 2",
+          description:
+            "Breve descripción sobre esta variante específica del servicio.",
+          duration: "60 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Pregunta frecuente de ejemplo 1?",
+          answer: "Respuesta detallada a la pregunta frecuente número 1.",
+        },
+        {
+          question: "¿Pregunta frecuente de ejemplo 2?",
+          answer: "Respuesta detallada a la pregunta frecuente número 2.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "nuevo-servicio-2",
+      name: "Nuevo Servicio 2 (Plantilla)",
+      tagline: "Descripción corta y atractiva del nuevo servicio 2",
+      heroDescription:
+        "Esta es una plantilla de prueba para el Nuevo Servicio 2. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
+      benefits: [
+        "Beneficio destacado número 1 del servicio",
+        "Beneficio destacado número 2 del servicio",
+        "Beneficio destacado número 3 del servicio",
+        "Beneficio destacado número 4 del servicio",
+      ],
+      items: [
+        {
+          title: "Opción de Tratamiento 1",
+          description:
+            "Breve descripción sobre esta variante específica del servicio.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Pregunta frecuente de ejemplo 1?",
+          answer: "Respuesta detallada a la pregunta frecuente número 1.",
+        },
+      ],
+    },
+    en: {
+      slug: "nuevo-servicio-2",
+      name: "Nuevo Servicio 2 (Plantilla)",
+      tagline: "Descripción corta y atractiva del nuevo servicio 2",
+      heroDescription: "Esta es una plantilla de prueba para el Nuevo Servicio 2. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
+      benefits: [
+        "Beneficio destacado número 1 del servicio",
+        "Beneficio destacado número 2 del servicio",
+        "Beneficio destacado número 3 del servicio",
+        "Beneficio destacado número 4 del servicio",
+      ],
+      items: [
+        {
+          title: "Opción de Tratamiento 1",
+          description:
+            "Breve descripción sobre esta variante específica del servicio.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Pregunta frecuente de ejemplo 1?",
+          answer: "Respuesta detallada a la pregunta frecuente número 1.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "nuevo-servicio-3",
+      name: "Nuevo Servicio 3 (Plantilla)",
+      tagline: "Descripción corta y atractiva del nuevo servicio 3",
+      heroDescription:
+        "Esta es una plantilla de prueba para el Nuevo Servicio 3. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
+      benefits: [
+        "Beneficio destacado número 1 del servicio",
+        "Beneficio destacado número 2 del servicio",
+        "Beneficio destacado número 3 del servicio",
+        "Beneficio destacado número 4 del servicio",
+      ],
+      items: [
+        {
+          title: "Opción de Tratamiento 1",
+          description:
+            "Breve descripción sobre esta variante específica del servicio.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Pregunta frecuente de ejemplo 1?",
+          answer: "Respuesta detallada a la pregunta frecuente número 1.",
+        },
+      ],
+    },
+    en: {
+      slug: "nuevo-servicio-3",
+      name: "Nuevo Servicio 3 (Plantilla)",
+      tagline: "Descripción corta y atractiva del nuevo servicio 3",
+      heroDescription: "Esta es una plantilla de prueba para el Nuevo Servicio 3. Aquí podrás agregar la descripción detallada sobre en qué consiste, para quién es ideal y los beneficios principales. Puedes editar este texto más adelante con la información final.",
+      benefits: [
+        "Beneficio destacado número 1 del servicio",
+        "Beneficio destacado número 2 del servicio",
+        "Beneficio destacado número 3 del servicio",
+        "Beneficio destacado número 4 del servicio",
+      ],
+      items: [
+        {
+          title: "Opción de Tratamiento 1",
+          description:
+            "Breve descripción sobre esta variante específica del servicio.",
+          duration: "45 min",
+          price: "Consultar precio",
+        },
+      ],
+      faq: [
+        {
+          question: "¿Pregunta frecuente de ejemplo 1?",
+          answer: "Respuesta detallada a la pregunta frecuente número 1.",
+        },
+      ],
+    },
+  }
 ];

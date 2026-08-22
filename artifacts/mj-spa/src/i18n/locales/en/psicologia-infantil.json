@@ -1,0 +1,89 @@
+{
+  "recommend": {
+    "title": "When your child is having difficulties, you do not have to face it alone",
+    "intro": "Family psychology, child behavior, ADHD, ASD, and psycho-pedagogical support with a plan designed for the needs of each child and their family.",
+    "items": [],
+    "note": ""
+  },
+  "problem": {
+    "title": "Sometimes it's not just about a child \"not wanting to obey\"",
+    "p1": "Sometimes it's not just about a child \"not wanting to obey\", \"not paying attention\", or \"having bad grades\".",
+    "p2": "Behind difficult behavior, an emotional crisis, attention problems, or school difficulties, there may be needs that we have not yet identified.",
+    "p3": "And when we understand what is happening, why it is happening, and what we can do, it is possible to begin to build real changes at home, at school, and in the family relationship.",
+    "closing": "Support that goes beyond a consultation",
+    "closingDesc": "Our approach does not only seek to identify a problem. We seek to understand the child or adolescent within their family, emotional, behavioral, and learning context, to establish priorities and develop practical tools that the family can apply in their daily lives. Therefore, we work through a structured process of 10 sessions, adapted to the reason for consultation and the particular needs of each family."
+  },
+  "psychology_consultation": {
+    "title": "Psychology Consultation",
+    "citas": [
+      { "t": "Session 1 — Getting to know the family", "d": "We start with an interview with parents or caregivers to learn about the reason for consultation, developmental history, family dynamics, main concerns, strengths of the child and family, and expectations of the process." },
+      { "t": "Session 2 — Getting to know the child or adolescent", "d": "We create a space of trust to get to know them from their own perspective. We observe their bond, interests, emotional and behavioral functioning, as well as the way they perceive the situations that are generating concern." },
+      { "t": "Session 3 — Functional assessment", "d": "We seek to understand what happens before, during, and after difficulties. We analyze triggers, needs, behavioral patterns, emotional regulation, executive skills, and factors that may be maintaining the problem." },
+      { "t": "Session 4 — Feedback and family plan", "d": "Parents receive a clear explanation of what we are observing. Together we define 2 or 3 priority objectives and establish the intervention plan." },
+      { "t": "Sessions 5 to 9 — Intervention", "d": "We apply strategies according to the reason for consultation and the objectives established. The work includes:", "items": [
+          { "t": "Emotional regulation", "d": "Teach the child and family strategies to recognize emotions, anticipate crises, handle difficult situations, and restore calm." },
+          { "t": "Limits and behavior management", "d": "Work on clear instructions, consequences, positive reinforcement, consistent limits, and responses to difficult behaviors." },
+          { "t": "Routines, structure and autonomy", "d": "Organize schedules, responsibilities, transitions, screen use, sleep, and other areas that may be affecting coexistence." },
+          { "t": "Family communication and connection", "d": "Strengthen listening, emotional validation, conflict resolution, and the relationship between parents and children." },
+          { "t": "Caring for the caregiver", "d": "Work on the exhaustion, frustration, and guilt of adults, incorporating self-care and co-regulation strategies." }
+        ]
+      },
+      { "t": "Session 10 — Closure and maintenance plan", "d": "We review progress, remaining difficulties, and the tools that worked best. Finally, we establish a concrete plan for the next 2–3 months, with recommendations to maintain and strengthen progress." }
+    ]
+  },
+  "psychopedagogical_consultation": {
+    "title": "Psychopedagogical Consultation",
+    "intro": "When difficulties appear mainly in learning, it is important to understand how the child learns, what their strengths are, and what may be interfering with their performance.",
+    "citas": [
+      { "t": "Session 1 — Interview with parents or caregivers", "d": "We learn about the reason for consultation, developmental history, family dynamics, concerns, strengths, and expectations." },
+      { "t": "Session 2 — Getting to know the child or adolescent", "d": "We establish an initial bond and observe their interests, perception of the problem, and emotional and behavioral functioning." },
+      { "t": "Session 3 — Assessment of learning skills", "d": "We explore aspects such as attention, working memory, following instructions, perception, processing speed, and executive functions." },
+      { "t": "Session 4 — Integration of the psychopedagogical profile", "d": "We integrate the information to identify strengths and needs. The goal is to understand what may be interfering with learning and where to start intervening." },
+      { "t": "Session 5 — Feedback to parents + intervention plan", "d": "We explain the findings in a clear and practical language. We define priority objectives and teach the first strategies that can be applied at home." },
+      { "t": "Sessions 6 to 9 — Intervention", "d": "We develop a plan according to identified needs:", "items": [
+          { "t": "Learning", "d": "Attention, working memory, following instructions, perception, processing speed, and executive functions." },
+          { "t": "Literacy", "d": "Phonological awareness, letter and sound recognition, decoding, fluency, reading comprehension, spelling, and written expression, according to the child's age and needs." },
+          { "t": "Logical-mathematical thinking", "d": "Number sense, calculation, problem solving, logical reasoning, and strategies used by the child." },
+          { "t": "Skills and self-perception", "d": "We strengthen the child's skills, identify their needs, and work on a more positive perception of their own capabilities." }
+        ]
+      },
+      { "t": "Session 10 — Closure and maintenance plan", "d": "We review results, progress, and pending difficulties. We identify the strategies that worked best and leave a concrete follow-up plan for the next 2–3 months." }
+    ]
+  },
+  "when_to_seek": {
+    "title": "When to seek support?",
+    "desc": "You can consider an assessment when we observe situations such as:",
+    "items": [
+      "Frequent difficulties in regulating emotions.",
+      "Crises or difficult behaviors that you don't know how to handle.",
+      "Problems establishing limits.",
+      "Attention or concentration difficulties.",
+      "Suspicion or diagnosis of ADHD or ASD.",
+      "Adaptation or coexistence issues.",
+      "Difficulties in the relationship between parents and children.",
+      "Reading, writing, or math difficulties.",
+      "Low school performance.",
+      "Difficulties following instructions.",
+      "Problems with organization, routines, or autonomy.",
+      "Frequent frustration with schoolwork.",
+      "Changes in behavior that generate concern."
+    ],
+    "note": "You do not need to wait for the situation to become more difficult to seek guidance."
+  },
+  "philosophy": {
+    "title": "It is not about changing who your child is",
+    "subtitle": "It is about understanding them better.",
+    "p1": "Every child has a different way of learning, communicating, relating, and responding to difficulties.",
+    "p2": "Therefore, our goal is not to apply a generic solution, but to understand their needs, recognize their strengths, and build together with the family tools that they can use in daily life.",
+    "p3": "Because when parents have greater clarity about what is happening, they can also respond differently. And when the child feels understood, accompanied, and guided, we can begin to build new paths."
+  },
+  "final_cta": {
+    "title": "Take the first step",
+    "desc": "If something in your child's behavior, emotions, or learning worries you, you do not have to figure out the answer on your own. Schedule a first consultation and let's start by understanding what is happening and what the best options are for your family.",
+    "cta_label": "📲 Schedule your assessment appointment",
+    "cta_desc": "Request your Psychology or Psychopedagogical Consultation today.",
+    "cta_btn": "SCHEDULE MY APPOINTMENT",
+    "cta_note": "Write us on WhatsApp and briefly tell us what situation you are experiencing. We will guide you on the most appropriate process to begin. Your family does not need to have all the answers. It just needs to take the first step.",
+    "quote": "Because behind every behavior, there is a story. And understanding it can be the first step to help."
+  }
+}

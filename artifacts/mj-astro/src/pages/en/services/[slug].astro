@@ -1,0 +1,19 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ServicePage from '../../../components/pages/ServicePage';
+import { servicePages } from '../../../data/services';
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return servicePages.map(service => ({
+    params: { slug: service.en.slug },
+    props: { service: service.en },
+  }));
+}
+
+const { service } = Astro.props;
+---
+<Layout lang="en" title={`${service.name} | MJ Fisio Estética y Spa`}>
+  <ServicePage service={service} lang="en" client:load />
+</Layout>

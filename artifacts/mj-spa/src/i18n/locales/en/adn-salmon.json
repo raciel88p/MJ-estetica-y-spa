@@ -1,0 +1,60 @@
+{
+  "recommend": {
+    "title": "FOR WHOM IS IT RECOMMENDED?",
+    "intro": "This protocol is ideal for people with:",
+    "items": [
+      "Dehydrated skin",
+      "Lack of facial brightness",
+      "Fine lines",
+      "Mild flaccidity",
+      "Irregular texture",
+      "Sensitive or tired skin",
+      "Early signs of aging"
+    ],
+    "note": "It is also excellent as a preventive anti-aging treatment."
+  },
+  "includes": {
+    "title": "What it includes",
+    "desc": "At MJ Estética Wellness Center we perform a personalized assessment to adapt the protocol to your skin's needs.",
+    "label": "Your session includes",
+    "items": [
+      "Professional facial cleansing",
+      "Salmon DNA application",
+      "Microneedling or biostimulation",
+      "Soothing and hydrating protocol",
+      "Post-treatment recommendations"
+    ],
+    "note": "It is a minimally invasive procedure and recovery is usually fast."
+  },
+  "why": {
+    "title": "WHY ARE SO MANY PEOPLE TALKING ABOUT SALMON DNA?",
+    "intro": "Because the results feel natural.",
+    "desc": "The skin begins to look more hydrated and luminous from the first sessions, while firmness and regeneration improve progressively.",
+    "quote": "It is not an artificial change. It is a better version of your skin."
+  },
+  "whyUs": {
+    "title": "WHY CHOOSE MJ ESTÉTICA WELLNESS CENTER?",
+    "desc": "At MJ Estética Wellness Center we combine well-being, advanced aesthetics and personalized protocols to help you achieve real and natural results.",
+    "items": [
+      "Personalized attention",
+      "Modern rejuvenation protocols",
+      "Advanced aesthetic technology",
+      "Integral wellness experience",
+      "Progressive and safe results"
+    ],
+    "footer1": "Your skin deserves more than a treatment.",
+    "footer2": "It deserves professional care and an approach designed for you."
+  },
+  "leadMagnet": {
+    "label": "Exclusive Gift",
+    "title": "🎁 FREE BEAUTY GUIDE",
+    "desc": "By commenting the word “ADN” or “Salmon”, we want to give you our exclusive facial care and rejuvenation guide.",
+    "cta": "DOWNLOAD FREE GUIDE"
+  },
+  "finalCta": {
+    "title": "🔥 SCHEDULE YOUR ASSESSMENT",
+    "desc": "If you wish to improve the quality of your skin, recover luminosity and experience one of the most innovative treatments in modern medical aesthetics…",
+    "quote": "This could be the perfect moment to start.",
+    "cta": "Book now"
+  }
+}

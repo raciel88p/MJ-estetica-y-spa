@@ -13,6 +13,7 @@ import {
 import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { Marquee } from "@/components/Marquee";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { GoogleMap, MAPS_LINK, GOOGLE_REVIEW_LINK } from "@/components/GoogleMap";
 import { StatsBar } from "@/components/StatsBar";
@@ -20,6 +21,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslations } from "@/i18n/ui";
+import esLoc from "@/i18n/locales/es/home.json";
+import enLoc from "@/i18n/locales/en/home.json";
+import { urlFor } from "@/sanity/lib/image";
+import { PortableText } from "@portabletext/react";
 
 const WA_LINK = "https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0";
 
@@ -39,7 +45,9 @@ const formSchema = z.object({
   message: z.string().min(10, "El mensaje es muy corto"),
 });
 
-function Home() {
+function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | 'en', latestPosts?: any[], authors?: any[] }) {
+  const t = useTranslations(lang);
+  const content = lang === 'es' ? esLoc : enLoc;
   const [mounted, setMounted] = useState(false);
   const { toast } = useToast();
 
@@ -63,11 +71,12 @@ function Home() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden selection:bg-primary/20">
       <SEO
-        title="MJ Fisio Estética & Spa | Centro de Bienestar en Turrialba"
-        description="Descubre tu mejor versión en MJ Fisio Estética y Spa. Tratamientos médicos, faciales y corporales de vanguardia en Turrialba, Costa Rica."
-        canonical="/"
+        title={lang === 'es' ? "MJ Fisio Estética & Spa | Centro de Bienestar en Turrialba" : "MJ Fisio Estética & Spa | Wellness Center in Turrialba"}
+        description={lang === 'es' ? "Descubre tu mejor versión en MJ Fisio Estética y Spa. Tratamientos médicos, faciales y corporales de vanguardia en Turrialba, Costa Rica." : "Discover your best version at MJ Fisio Estética & Spa. Avant-garde medical, facial, and body treatments in Turrialba, Costa Rica."}
+        canonical={lang === 'es' ? "/" : "/en"}
+        lang={lang}
       />
-      <Navbar />
+      <Navbar lang={lang} />
       <FloatingWhatsApp />
 
       {/* ── HERO SECTION ────────────────────────────────── */}
@@ -90,33 +99,33 @@ function Home() {
           >
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-6">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase">Estética Avanzada & Wellness</span>
+              <span className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase">{t('home.hero.tagline')}</span>
             </motion.div>
 
             <motion.h1
               variants={fadeUp}
               className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] mb-8"
             >
-              Realza tu <br />
-              <span className="italic font-light text-primary">belleza natural</span>
+              {t('home.hero.title')} <br />
+              <span className="italic font-light text-primary">{t('home.hero.title_italic')}</span>
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
               className="text-lg md:text-xl text-white/80 mb-10 max-w-xl leading-relaxed font-light"
             >
-              En MJ Fisio Estética & Spa combinamos ciencia médica y tecnología de vanguardia para ofrecerte resultados visibles en un ambiente de total relajación.
+              {t('home.hero.desc')}
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5">
-              <a href="#especialidades">
+              <a href="#tratamientos-destacados">
                 <Button size="lg" className="h-14 px-10 text-sm tracking-widest uppercase font-bold bg-primary hover:bg-primary/90 transition-all shadow-xl shadow-primary/20">
-                  Ver tratamientos
+                  {t('home.hero.cta_primary')}
                 </Button>
               </a>
               <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg" className="h-14 px-10 text-sm tracking-widest uppercase font-bold bg-white/5 text-white border-white/20 hover:bg-white hover:text-stone-900 transition-all backdrop-blur-sm">
-                  Agendar Cita
+                  {t('home.hero.cta_secondary')}
                 </Button>
               </a>
             </motion.div>
@@ -139,89 +148,128 @@ function Home() {
       <section className="bg-[#050c14] py-12 border-b border-white/5">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { icon: ShieldCheck, title: "Profesionales", sub: "Certificados" },
-              { icon: Star, title: "Resultados", sub: "Garantizados" },
-              { icon: Heart, title: "Atención", sub: "Personalizada" },
-              { icon: Award, title: "Tecnología", sub: "Médica" },
-            ].map((item, i) => (
+            {content.trust.map((item, i) => {
+              const icons = [ShieldCheck, Star, Heart, Award];
+              const Icon = icons[i];
+              return (
               <div key={i} className="flex items-center gap-4 justify-center">
-                <item.icon className="w-8 h-8 text-primary" />
+                <Icon className="w-8 h-8 text-primary" />
                 <div className="text-left">
                   <p className="text-white font-bold text-sm uppercase tracking-wider leading-tight">{item.title}</p>
                   <p className="text-white/40 text-[10px] uppercase tracking-[0.2em]">{item.sub}</p>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* ── ESPECIALIDADES ─────────────────────────────── */}
-      <section id="especialidades" className="py-24 md:py-32 bg-stone-50">
+      {/* ── INFINITE MARQUEE RIBBON ────────────────────── */}
+      <Marquee
+        items={
+          lang === "es"
+            ? [
+                "Fisioterapia",
+                "Estética Avanzada",
+                "Spa & Relajación",
+                "Masajes Profesionales",
+                "Tratamientos Médicos",
+                "Bienestar Integral",
+                "Depilación Láser",
+                "Nutrición",
+              ]
+            : [
+                "Physiotherapy",
+                "Advanced Aesthetics",
+                "Spa & Relaxation",
+                "Professional Massage",
+                "Medical Treatments",
+                "Holistic Wellness",
+                "Laser Hair Removal",
+                "Nutrition",
+              ]
+        }
+      />
+
+      {/* ── VENTAJAS (Advantages CRO Block) ───────────── */}
+      <section id="advantages" className="py-24 bg-stone-50 border-y border-stone-100">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-stone-400 text-xs font-bold tracking-[0.3em] uppercase mb-4">MJ Fisio Estética & Spa</h2>
-            <h3 className="text-4xl md:text-6xl font-serif text-stone-900 mb-6">Nuestras Especialidades</h3>
-            <div className="w-20 h-1 bg-primary mx-auto" />
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+            <div>
+              <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">
+                {lang === 'es' ? 'Tu salud, nuestra especialidad' : 'Your health, our specialty'}
+              </p>
+              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">
+                {lang === 'es' ? 'Nuestras ventajas' : 'Our advantages'} <br />
+                <span className="italic font-light text-primary">{lang === 'es' ? 'Por qué elegirnos' : 'Why choose us'}</span>
+              </h2>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Depilación Láser",
-                slug: "depilacion-laser",
-                img: "depilacion-laser-bg.webp",
-                desc: "Piel lisa y sin vello para siempre.",
-                link: "/servicios/depilacion-laser"
+                title: lang === 'es' ? 'Soluciones de salud personalizadas' : 'Personalized health solutions',
+                num: '01',
+                icon: '👤',
+                description: lang === 'es' ? 'Planes diagnósticos a medida diseñados en torno a tu perfil genético único y tus objetivos de salud.' : 'Tailored diagnostic plans designed around your unique genetic profile and health goals.',
               },
               {
-                title: "Faciales",
-                slug: "faciales",
-                img: "faciales-bg.webp",
-                desc: "Limpieza y rejuvenecimiento facial.",
-                link: "/servicios/faciales"
+                title: lang === 'es' ? 'Precisión y exactitud' : 'Precision and accuracy',
+                num: '02',
+                icon: '✦',
+                description: lang === 'es' ? 'Resultados certificados por laboratorio con precisión líder en el sector. Cada lectura, verificada.' : 'Laboratory certified results with industry-leading precision. Every reading, verified.',
               },
               {
-                title: "Piernas",
-                slug: "piernas",
-                img: "anticelulitis-bg.webp",
-                desc: "Tratamientos circulatorios.",
-                link: "/servicios/piernas-cansadas"
+                title: lang === 'es' ? 'Innovación científica' : 'Scientific innovation',
+                num: '03',
+                icon: '🔬',
+                description: lang === 'es' ? 'En la frontera de la investigación genómica y molecular, transformando la ciencia en cuidado real.' : 'At the frontier of genomic and molecular research, transforming science into real care.',
               },
-              {
-                title: "Arteterapia",
-                slug: "arteterapia",
-                img: "about-us.webp",
-                desc: "Creatividad y bienestar emocional.",
-                link: "/servicios/arteterapia"
-              },
-            ].map((cat, i) => (
-              <motion.a
-                key={i}
-                href={cat.link}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                className="group relative h-[450px] overflow-hidden rounded-sm"
+            ].map((adv, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-8 border border-stone-100 shadow-sm flex flex-col justify-between min-h-[280px] hover:translate-y-[-4px] hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 relative overflow-hidden group"
               >
-                <img
-                  src={`/images/${cat.img}`}
-                  alt={cat.title}
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/20 to-transparent opacity-80 group-hover:opacity-70 transition-opacity" />
-                <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                  <h4 className="text-2xl font-serif text-white mb-2">{cat.title}</h4>
-                  <p className="text-white/60 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                    {cat.desc}
-                  </p>
-                  <div className="flex items-center gap-2 text-primary font-bold text-[10px] tracking-widest uppercase">
-                    Ver más <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                {/* Top row */}
+                <div className="flex items-center justify-between mb-6">
+                  <span className="px-3.5 py-1 text-[10px] uppercase tracking-widest font-bold text-stone-400 bg-stone-50 border border-stone-100 rounded-full">
+                    {lang === 'es' ? 'Ventaja' : 'Advantage'}
+                  </span>
+                  <span className="text-primary text-xl font-bold group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
                 </div>
-              </motion.a>
+
+                {/* Content */}
+                <div className="mb-6 flex-1">
+                  <h3 className="text-xl font-serif font-bold text-stone-900 leading-tight mb-3">
+                    {adv.title}
+                  </h3>
+                  <p className="text-stone-500 text-sm leading-relaxed max-w-[240px]">
+                    {adv.description}
+                  </p>
+                </div>
+
+                {/* Bottom row */}
+                <div className="flex items-end justify-between mt-auto">
+                  <div className="inline-flex items-center gap-1.5 px-3.5 py-1 bg-stone-50 border border-stone-100 rounded-full text-[10px] font-bold text-stone-700 uppercase tracking-wider">
+                    <span>{lang === 'es' ? 'Explorar' : 'Explore'}</span>
+                    <span className="text-xs">{adv.icon}</span>
+                  </div>
+                  <span
+                    className="text-7xl font-extrabold select-none pointer-events-none leading-none tracking-tighter"
+                    style={{
+                      color: 'transparent',
+                      WebkitTextStroke: '1px #e2e2e7',
+                      marginBottom: '-0.3rem',
+                      marginRight: '-0.1rem',
+                    }}
+                    aria-hidden="true"
+                  >
+                    {adv.num}
+                  </span>
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -232,61 +280,19 @@ function Home() {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
-              <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">Tratamientos Destacados</p>
-              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">Nuestros resultados <br /><span className="italic font-light text-primary">más buscados</span></h2>
+              <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">{content.featured.label}</p>
+              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">{t('home.featured.title')} <br /><span className="italic font-light text-primary">{t('home.featured.subtitle')}</span></h2>
             </div>
-            <a href="/servicios/masajes-corporales" className="text-sm font-bold tracking-widest uppercase border-b border-stone-200 pb-2 hover:text-primary hover:border-primary transition-colors">
-              Ver todos los servicios
+            <a href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"} className="text-sm font-bold tracking-widest uppercase border-b border-stone-200 pb-2 hover:text-primary hover:border-primary transition-colors">
+              {content.featured.viewAll}
             </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-            {[
-              {
-                title: "Botox Full Face",
-                category: "Médico Estético",
-                desc: "Suaviza arrugas de expresión manteniendo tu naturalidad.",
-                link: "/servicios/botox-full-face",
-                img: "botox-full-face-bg.webp"
-              },
-              {
-                title: "Hidrolipoclasia",
-                category: "Corporal",
-                desc: "Elimina grasa localizada sin cirugía en una sesión.",
-                link: "/servicios/masajes-corporales",
-                isComparison: true,
-                before: "corporales-antes-bg.webp",
-                after: "corporales-despues-bg.webp"
-              },
-              {
-                title: "Limpieza Facial Profunda",
-                category: "Facial",
-                desc: "Renovación completa para una piel radiante y sin impurezas.",
-                link: "/servicios/limpieza-facial",
-                img: "faciales-bg.webp"
-              },
-              {
-                title: "Hilos Tensores",
-                category: "Médico Estético",
-                desc: "Efecto lifting inmediato estimulando tu propio colágeno.",
-                link: "/servicios/hilos-tensores",
-                img: "hilos-tensores-bg.webp"
-              },
-              {
-                title: "Depilación Láser",
-                category: "Premium",
-                desc: "Despídete del vello para siempre con tecnología de punta.",
-                link: "/servicios/depilacion-laser",
-                img: "depilacion-laser-bg.webp"
-              },
-              {
-                title: "Levantamiento de Glúteo",
-                category: "Corporal",
-                desc: "Tonifica y proyecta tu figura de forma no invasiva.",
-                link: "/servicios/levantamiento-gluteo",
-                img: "levantamiento-gluteo-bg.webp"
-              },
-            ].map((item, i) => (
+            {content.featured.items.map((item, i) => {
+              const imgs = ["botox-full-face-bg.webp", "corporales-antes-bg.webp", "faciales-bg.webp", "hilos-tensores-bg.webp", "depilacion-laser-bg.webp", "levantamiento-gluteo-bg.webp"];
+              const isComparison = i === 1;
+              return (
               <motion.div
                 key={i}
                 initial="hidden"
@@ -296,19 +302,19 @@ function Home() {
                 className="group"
               >
                 <div className="mb-6 overflow-hidden bg-stone-100 aspect-video relative rounded-sm shadow-md group-hover:shadow-xl transition-all duration-500">
-                   {item.isComparison ? (
+                   {isComparison ? (
                      <div className="flex h-full w-full">
                        <div className="relative flex-1 overflow-hidden border-r border-white/20">
-                         <img src={`/images/${item.before}`} className="absolute inset-0 w-full h-full object-cover" alt="Antes" />
-                         <span className="absolute top-2 left-2 bg-black/60 text-[8px] font-bold text-white px-2 py-0.5 uppercase tracking-widest">Antes</span>
+                         <img src={`/images/corporales-antes-bg.webp`} className="absolute inset-0 w-full h-full object-cover" alt="Antes" />
+                         <span className="absolute top-2 left-2 bg-black/60 text-[8px] font-bold text-white px-2 py-0.5 uppercase tracking-widest">{lang === 'es' ? 'Antes' : 'Before'}</span>
                        </div>
                        <div className="relative flex-1 overflow-hidden">
-                         <img src={`/images/${item.after}`} className="absolute inset-0 w-full h-full object-cover" alt="Después" />
-                         <span className="absolute top-2 left-2 bg-primary text-[8px] font-bold text-white px-2 py-0.5 uppercase tracking-widest">Después</span>
+                         <img src={`/images/corporales-despues-bg.webp`} className="absolute inset-0 w-full h-full object-cover" alt="Después" />
+                         <span className="absolute top-2 left-2 bg-primary text-[8px] font-bold text-white px-2 py-0.5 uppercase tracking-widest">{lang === 'es' ? 'Después' : 'After'}</span>
                        </div>
                      </div>
                    ) : (
-                     <img src={`/images/${item.img}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={item.title} />
+                     <img src={`/images/${imgs[i]}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt={item.title} />
                    )}
                    <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
                 </div>
@@ -318,13 +324,69 @@ function Home() {
                   {item.desc}
                 </p>
                 <a href={item.link} className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors">
-                  Conocer más <ArrowRight className="w-3.5 h-3.5" />
+                  {lang === 'es' ? 'Conocer más' : 'Learn more'} <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </motion.div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
+
+      {/* ── EQUIPO MÉDICO / LIDERAZGO ──────────────────── */}
+      {authors.length > 0 && (
+        <section className="py-24 md:py-32 bg-stone-50 overflow-hidden">
+          <div className="container mx-auto px-6">
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div className="relative">
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="aspect-[4/5] rounded-sm overflow-hidden shadow-2xl relative group"
+                >
+                  <img
+                    src="/images/janneth-molina.webp"
+                    alt="Lic Maria Molina Madrigal"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors" />
+                </motion.div>
+                <div className="absolute -bottom-6 -right-6 bg-primary p-8 hidden md:block">
+                  <p className="text-white font-serif text-2xl font-bold">Lic Maria Molina Madrigal</p>
+                  <p className="text-white/70 text-[10px] font-bold tracking-widest uppercase">{lang === 'es' ? 'Directora & Especialista' : 'Director & Specialist'}</p>
+                </div>
+              </div>
+
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+              >
+                <h2 className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">{lang === 'es' ? 'Liderazgo Profesional' : 'Professional Leadership'}</h2>
+                <h3 className="text-4xl md:text-5xl font-serif text-stone-900 mb-8 leading-tight">
+                  {lang === 'es' ? 'Excelencia Médica en' : 'Medical Excellence in'} <br />
+                  <span className="italic font-light text-stone-400">{lang === 'es' ? 'cada tratamiento' : 'every treatment'}</span>
+                </h3>
+
+                <div className="prose prose-stone prose-sm text-stone-500 max-w-none mb-10">
+                  <p className="text-lg font-light leading-relaxed">Lic Maria Molina Madrigal lidera nuestro equipo con una visión integral de la salud y la belleza.</p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-6 mt-12">
+                  <a href={lang === 'es' ? "/nosotros" : "/en/about-us"}>
+                    <Button variant="outline" className="h-12 px-8 tracking-widest uppercase text-[10px] font-bold border-stone-200 text-stone-900 hover:bg-stone-900 hover:text-white transition-all">
+                       {lang === 'es' ? 'Ver Perfil Profesional' : 'View Professional Profile'}
+                    </Button>
+                  </a>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── EXPERIENCIA MJ ─────────────────────────────── */}
       <section className="py-24 md:py-32 bg-white text-stone-900 relative overflow-hidden">
@@ -338,19 +400,19 @@ function Home() {
               viewport={{ once: true }}
               variants={fadeUp}
             >
-              <h2 className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">Experiencia Wellness</h2>
-              <h3 className="text-4xl md:text-6xl font-serif text-stone-900 mb-8 leading-tight">Mucho más que un <br /><span className="italic font-light text-stone-400">centro de estética</span></h3>
+              <h2 className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">{lang === 'es' ? 'Experiencia Wellness' : 'Wellness Experience'}</h2>
+              <h3 className="text-4xl md:text-6xl font-serif text-stone-900 mb-8 leading-tight">{t('home.experience.title')} <br /><span className="italic font-light text-stone-400">{t('home.experience.subtitle')}</span></h3>
               <div className="space-y-6 text-stone-500 text-lg font-light leading-relaxed">
-                <p>Ubicados en el corazón de Turrialba, en MJ Estética & Wellness Center diseñamos cada tratamiento como un ritual de cuidado personal.</p>
-                <p>Nuestra misión es ayudarte a sentirte bien contigo misma, fusionando protocolos médicos de alta eficiencia con una experiencia sensorial única.</p>
+                <p>{t('home.experience.p1')}</p>
+                <p>{t('home.experience.p2')}</p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
                 {[
-                  "Valoración profesional previa",
-                  "Protocolos 100% personalizados",
-                  "Tecnología de última generación",
-                  "Ambiente privado y relajante"
+                  t('home.experience.f1'),
+                  t('home.experience.f2'),
+                  t('home.experience.f3'),
+                  t('home.experience.f4')
                 ].map((feature, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary" />
@@ -360,9 +422,9 @@ function Home() {
               </div>
 
               <div className="mt-14">
-                 <a href="/nosotros">
+                 <a href={lang === 'es' ? "/nosotros" : "/en/nosotros"}>
                     <Button variant="outline" className="h-12 px-8 tracking-widest uppercase text-[10px] font-bold border-stone-200 text-stone-900 hover:bg-stone-900 hover:text-white transition-all">
-                       Conoce nuestra historia
+                       {t('home.experience.cta')}
                     </Button>
                  </a>
               </div>
@@ -374,7 +436,7 @@ function Home() {
               </div>
               <div className="absolute -bottom-10 -left-10 bg-primary p-10 hidden md:block">
                  <p className="text-white text-5xl font-serif font-bold mb-1">10+</p>
-                 <p className="text-white/80 text-[10px] font-bold tracking-widest uppercase">Años de experiencia</p>
+                 <p className="text-white/80 text-[10px] font-bold tracking-widest uppercase">{content.experience.stat}</p>
               </div>
             </div>
           </div>
@@ -388,21 +450,21 @@ function Home() {
             <div className="flex justify-center gap-1 mb-8">
               {[1,2,3,4,5].map(i => <Star key={i} className="w-6 h-6 fill-primary text-primary" />)}
             </div>
-            <h2 className="text-3xl md:text-5xl font-serif text-stone-900 mb-12">Lo que nuestras clientas dicen</h2>
+            <h2 className="text-3xl md:text-5xl font-serif text-stone-900 mb-12">{t('home.testimonials.title')}</h2>
 
             <div className="bg-white p-10 md:p-16 shadow-xl rounded-sm relative">
               <p className="text-xl md:text-2xl text-stone-600 font-light italic leading-relaxed mb-8">
-                "Excelente atención, el personal es muy profesional y amable. Las instalaciones son de primer nivel y los resultados de los tratamientos son visibles desde la primera sesión. 100% recomendado para quienes buscan calidad."
+                {content.testimonials.quote}
               </p>
               <p className="text-stone-900 font-bold uppercase tracking-widest text-sm">— María V.</p>
             </div>
 
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
-               <a href="/testimonios">
-                  <Button variant="ghost" className="tracking-widest uppercase text-xs font-bold">Ver más testimonios</Button>
+               <a href={lang === 'es' ? "/testimonios" : "/en/testimonials"}>
+                  <Button variant="ghost" className="tracking-widest uppercase text-xs font-bold">{content.testimonials.viewMore}</Button>
                </a>
                <a href={GOOGLE_REVIEW_LINK} target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" className="tracking-widest uppercase text-xs font-bold border-stone-200">Dejar reseña en Google</Button>
+                  <Button variant="outline" className="tracking-widest uppercase text-xs font-bold border-stone-200">{content.testimonials.leaveReview}</Button>
                </a>
             </div>
           </div>
@@ -410,12 +472,77 @@ function Home() {
       </section>
 
       {/* ── CONTACTO ──────────────────────────────────── */}
+      {/* ── ÚLTIMAS ENTRADAS DEL BLOG ─────────────────── */}
+      {latestPosts.length > 0 && (
+        <section className="py-24 md:py-32 bg-stone-50">
+          <div className="container mx-auto px-6">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+              <div>
+                <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">{lang === 'es' ? 'Nuestro Blog' : 'Our Blog'}</p>
+                <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">
+                  {lang === 'es' ? 'Consejos de' : 'Wellness'} <br />
+                  <span className="italic font-light text-primary">{lang === 'es' ? 'bienestar y estética' : 'tips & trends'}</span>
+                </h2>
+              </div>
+              <a href={lang === 'es' ? "/blog" : "/en/blog"} className="text-sm font-bold tracking-widest uppercase border-b border-stone-200 pb-2 hover:text-primary hover:border-primary transition-colors">
+                {lang === 'es' ? 'Ver todo el blog' : 'View all blog'}
+              </a>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {latestPosts.map((post, i) => (
+                <motion.div
+                  key={i}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="bg-white rounded-2xl shadow-sm border border-border overflow-hidden hover:shadow-md transition-shadow flex flex-col"
+                >
+                  {post.mainImage && (
+                    <a href={lang === 'es' ? `/blog/${post.slug.current}` : `/en/blog/${post.slug.current}`}>
+                      <img
+                        src={urlFor(post.mainImage).width(600).height(400).url()}
+                        alt={post.title}
+                        className="w-full h-48 object-cover"
+                      />
+                    </a>
+                  )}
+                  <div className="p-6 flex flex-col flex-1">
+                    <h4 className="text-xl font-serif mb-2 text-stone-900">
+                      <a href={lang === 'es' ? `/blog/${post.slug.current}` : `/en/blog/${post.slug.current}`} className="hover:text-primary transition-colors line-clamp-2">
+                        {post.title}
+                      </a>
+                    </h4>
+                    <div className="flex items-center gap-2 mb-4">
+                      {post.author?.image && (
+                        <img
+                          src={urlFor(post.author.image).width(40).height(40).url()}
+                          alt={post.author.name}
+                          className="w-5 h-5 rounded-full object-cover"
+                        />
+                      )}
+                      <p className="text-[10px] text-muted-foreground uppercase tracking-widest">
+                        <span className="font-bold text-stone-700">{post.author?.name}</span> • {new Date(post.publishedAt).toLocaleDateString(lang === 'es' ? 'es-ES' : 'en-US', { day: 'numeric', month: 'long', year: 'numeric' })}
+                      </p>
+                    </div>
+                    <a href={lang === 'es' ? `/blog/${post.slug.current}` : `/en/blog/${post.slug.current}`} className="mt-auto text-primary text-xs font-bold tracking-widest uppercase hover:underline">
+                      {lang === 'es' ? 'Leer más →' : 'Read more →'}
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <section id="contacto" className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-16">
             <div className="flex-1">
-              <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">Contacto</p>
-              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-8 leading-tight">¿Lista para empezar <br />tu transformación?</h2>
+              <p className="text-primary text-xs font-bold tracking-[0.3em] uppercase mb-6">{lang === 'es' ? 'Contacto' : 'Contact'}</p>
+              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-8 leading-tight">{t('home.contact.title')}</h2>
 
               <div className="space-y-8 mt-12">
                 <div className="flex gap-5">
@@ -423,8 +550,8 @@ function Home() {
                       <MapPin className="w-5 h-5 text-primary" />
                    </div>
                    <div>
-                      <p className="font-bold text-stone-900 text-lg">Visítanos</p>
-                      <p className="text-stone-500 leading-relaxed">Turrialba Centro, 150m este de la Iglesia Católica, Cartago, Costa Rica.</p>
+                      <p className="font-bold text-stone-900 text-lg">{t('home.contact.visit')}</p>
+                      <p className="text-stone-500 leading-relaxed">{content.contact.address}</p>
                    </div>
                 </div>
                 <div className="flex gap-5">
@@ -432,8 +559,8 @@ function Home() {
                       <Phone className="w-5 h-5 text-primary" />
                    </div>
                    <div>
-                      <p className="font-bold text-stone-900 text-lg">Llámanos</p>
-                      <p className="text-stone-500">+506 8888-8888</p>
+                      <p className="font-bold text-stone-900 text-lg">{t('home.contact.call')}</p>
+                      <p className="text-stone-500">+506 8690-7757</p>
                    </div>
                 </div>
                 <div className="flex gap-5">
@@ -441,8 +568,8 @@ function Home() {
                       <Clock className="w-5 h-5 text-primary" />
                    </div>
                    <div>
-                      <p className="font-bold text-stone-900 text-lg">Horario</p>
-                      <p className="text-stone-500">Lun - Vie: 9:00 - 20:00 / Sáb: 8:00 - 15:00</p>
+                      <p className="font-bold text-stone-900 text-lg">{t('home.contact.hours')}</p>
+                      <p className="text-stone-500">{content.contact.schedule}</p>
                    </div>
                 </div>
               </div>
@@ -464,17 +591,17 @@ function Home() {
             variants={fadeUp}
             className="flex flex-col md:flex-row items-center justify-center gap-6"
           >
-            <p className="text-white/40 text-sm font-light tracking-wide">¿Tienes alguna idea para mejorar nuestra página?</p>
-            <a href="/buzon-sugerencias">
+            <p className="text-white/40 text-sm font-light tracking-wide">{content.suggestion.text}</p>
+            <a href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"}>
               <Button variant="outline" className="border-primary/30 text-primary hover:bg-primary hover:text-white transition-all text-[10px] tracking-widest uppercase font-bold h-10 px-6 rounded-full">
-                💡 Enviar Sugerencia
+                💡 {content.suggestion.cta}
               </Button>
             </a>
           </motion.div>
         </div>
       </section>
 
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

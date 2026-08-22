@@ -1,16 +1,26 @@
 ---
 import "../styles/global.css";
 import { WebMCPRegistry } from "../components/WebMCPRegistry";
+import { CookieBanner } from "../components/CookieBanner";
+
+interface Props {
+	title?: string;
+	lang?: string;
+}
+
+const { title, lang = "es" } = Astro.props;
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<title>{title}</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="/src/styles/global.css" />
+    <slot name="seo" />
 	<!-- Google Tag Manager -->
 <script type="text/plain" data-consent="marketing" is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -26,6 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 		<slot />
+		<CookieBanner client:load lang={lang as "es" | "en"} />
 	</body>
 </html>
 
