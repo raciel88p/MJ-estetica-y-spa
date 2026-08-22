@@ -53,6 +53,7 @@ import { NutricionServiceContent } from "@/components/services/NutricionServiceC
 import { RejuvenecimientoLaserContent } from "@/components/services/RejuvenecimientoLaserContent";
 import { BodaSpaContent } from "@/components/services/BodaSpaContent";
 import { ArteterapiaContent } from "@/components/services/ArteterapiaContent";
+import { PsicologiaInfantilContent } from "@/components/services/PsicologiaInfantilContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
 
 import AnticelulitisServiceContent from "@/components/services/AnticelulitisServiceContent";
@@ -395,11 +396,14 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
 
   const isNutritionEspecialist = service.slug === "nutricion" || service.slug === "inbody";
   const isPeelingSpecialist = service.slug === "peeling-quimico" || service.slug === "microdermoabrasion";
+  const isPsychologySpecialist = service.slug === "psicologia-infantil";
 
   const specialistName = isPeelingSpecialist
     ? "Maria Molina Madrigal"
     : isNutritionEspecialist
     ? "Dr. Johan"
+    : isPsychologySpecialist
+    ? "Linc. Cristina Pérez Ibarra"
     : "Janneth Maria Molina Madrigal";
 
   const breadcrumbItems = category
@@ -521,11 +525,11 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
             <div className="px-6 py-6 flex flex-col sm:flex-row items-center sm:items-start gap-5">
               <div className="shrink-0 w-20 h-20 rounded-full overflow-hidden border-2 border-primary/30">
                 <img
-                  src={isNutritionEspecialist ? "/images/dr-johan.webp" : isPeelingSpecialist ? "/images/maria-molina.webp" : "/images/janneth-molina.webp"}
+                  src={isNutritionEspecialist ? "/images/dr-johan.webp" : isPeelingSpecialist ? "/images/maria-molina.webp" : isPsychologySpecialist ? "https://cdn.sanity.io/images/c7ltnbh1/production/4e8f015f6997a29f0ac99c3b232c9ed35f40ba63-800x800.jpg?w=300" : "/images/janneth-molina.webp"}
                   alt={specialistName}
                   className="w-full h-full object-cover object-top"
                   onError={(e) => {
-                    // Fallback to janneth if maria image is missing, but with a console note
+                    // Fallback to janneth if maria image is missing
                     if (isPeelingSpecialist) {
                       (e.target as HTMLImageElement).src = "/images/janneth-molina.webp";
                     }
@@ -539,15 +543,15 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
                 <div className="flex flex-wrap justify-center sm:justify-start gap-2 mt-3">
                   <span className="inline-flex items-center gap-1.5 bg-primary/8 text-primary text-xs font-semibold px-3 py-1.5 rounded-full border border-primary/20">
                     <BadgeCheck className="w-3.5 h-3.5" />
-                    {isNutritionEspecialist ? `${t('service.professional.code')}: 3667-25` : t('service.professional.linc')}
+                    {isNutritionEspecialist ? `${t('service.professional.code')}: 3667-25` : isPsychologySpecialist ? `${t('service.professional.code')}: 13889` : t('service.professional.linc')}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <GraduationCap className="w-3.5 h-3.5" />
-                    {isNutritionEspecialist ? (lang === 'es' ? "Nutricionista Deportivo" : "Sports Nutritionist") : t('service.professional.aesthetic')}
+                    {isNutritionEspecialist ? (lang === 'es' ? "Nutricionista Deportivo" : "Sports Nutritionist") : isPsychologySpecialist ? (lang === 'es' ? "Psicología Infantil y Familiar" : "Child & Family Psychology") : t('service.professional.aesthetic')}
                   </span>
                   <span className="inline-flex items-center gap-1.5 bg-stone-100 text-stone-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-stone-200">
                     <Award className="w-3.5 h-3.5 text-primary" />
-                    {isNutritionEspecialist ? t('service.professional.personalized') : t('service.professional.hospital')}
+                    {isNutritionEspecialist ? t('service.professional.personalized') : isPsychologySpecialist ? (lang === 'es' ? "Centro de Especialidades Omega" : "Omega Specialty Center") : t('service.professional.hospital')}
                   </span>
                 </div>
                 <p className="text-stone-500 text-sm leading-relaxed mt-4 max-w-xl">
@@ -555,6 +559,10 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
                     ? (lang === 'es'
                         ? "Con amplia experiencia en medicina estética, Maria Molina Madrigal se especializa en protocolos de renovación cutánea y tratamientos avanzados para manchas y acné, brindando resultados seguros y personalizados."
                         : "With extensive experience in medical aesthetics, Maria Molina Madrigal specializes in skin renewal protocols and advanced treatments for spots and acne, providing safe and personalized results.")
+                    : service.slug === "psicologia-infantil"
+                    ? (lang === 'es'
+                        ? "Especialista en psicología infantil y familiar, con un enfoque cálido, empático y profesional. Cristina Pérez Ibarra acompaña a los niños y sus familias a comprender el origen de sus retos conductuales o del neurodesarrollo y construir herramientas prácticas para la vida diaria."
+                        : "Specialist in child and family psychology, with a warm, empathetic, and professional approach. Cristina Pérez Ibarra accompanies children and their families to understand the origin of their behavioral or neurodevelopmental challenges and build practical tools for daily life.")
                     : service.slug === "tratamiento-ojeras"
                     ? (lang === 'es'
                         ? "¿Tus ojeras te hacen lucir cansada aunque descanses bien? Descubre cómo nuestro tratamiento de carboxiterapia para ojeras en Turrialba puede ayudarte a mejorar la apariencia de bolsas, pigmentación oscura y signos visibles de fatiga."
@@ -775,6 +783,10 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
 
       {service.slug === "arteterapia" && (
         <ArteterapiaContent waLink={WA} lang={lang} />
+      )}
+
+      {service.slug === "psicologia-infantil" && (
+        <PsicologiaInfantilContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "nutricion" && (
@@ -1093,6 +1105,50 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
                     </a>
                   </motion.div>
                 ))}
+                {service.slug === "psicologia-infantil" && (
+                  <motion.div
+                    variants={fadeUp}
+                    className="bg-white p-6 md:p-8 flex items-center justify-center overflow-hidden"
+                  >
+                    <div className="relative w-full h-full min-h-[280px] md:min-h-[340px] max-h-[420px] rounded-sm overflow-hidden bg-stone-50 border border-stone-100 flex items-center justify-center group">
+                      <img
+                        src="https://cdn.sanity.io/images/c7ltnbh1/production/4e8f015f6997a29f0ac99c3b232c9ed35f40ba63-800x800.jpg?w=800"
+                        alt={lang === 'es' ? "Consulta de Psicología Familiar e Infantil - Linc. Cristina Pérez Ibarra" : "Family & Child Psychology Consultation - Linc. Cristina Pérez Ibarra"}
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = "/images/cristina-perez.webp";
+                        }}
+                      />
+                    </div>
+                  </motion.div>
+                )}
+              </motion.div>
+            )}
+
+            {/* OTRAS UBICACIONES DONDE BRINDO CONSULTAS */}
+            {service.slug === "psicologia-infantil" && (
+              <motion.div
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
+                className="mt-16 bg-stone-50 border border-stone-200 p-8 rounded-sm"
+              >
+                <h3 className="text-2xl font-serif font-bold text-stone-900 mb-6 text-center">
+                  📍 {lang === 'es' ? "Otras ubicaciones donde brindo consultas" : "Other locations where I offer consultations"}
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                  <div className="bg-white p-6 border border-stone-150 rounded-sm">
+                    <h4 className="font-serif font-bold text-lg text-primary mb-2">🌴 Jacó</h4>
+                    <ul className="space-y-1 text-sm text-stone-600">
+                      <li>• Neurotek</li>
+                      <li>• Pequeños Angelitos</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-6 border border-stone-150 rounded-sm">
+                    <h4 className="font-serif font-bold text-lg text-primary mb-2">🏞 Tres Ríos</h4>
+                    <ul className="space-y-1 text-sm text-stone-600">
+                      <li>• Centro de Especialidades Omega</li>
+                    </ul>
+                  </div>
+                </div>
               </motion.div>
             )}
           </div>

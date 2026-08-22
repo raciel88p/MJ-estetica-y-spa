@@ -1105,6 +1105,23 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
                     </a>
                   </motion.div>
                 ))}
+                {service.slug === "psicologia-infantil" && (
+                  <motion.div
+                    variants={fadeUp}
+                    className="bg-white p-6 md:p-8 flex items-center justify-center overflow-hidden"
+                  >
+                    <div className="relative w-full h-full min-h-[280px] md:min-h-[340px] max-h-[420px] rounded-sm overflow-hidden bg-stone-50 border border-stone-100 flex items-center justify-center group">
+                      <img
+                        src="https://cdn.sanity.io/images/c7ltnbh1/production/4e8f015f6997a29f0ac99c3b232c9ed35f40ba63-800x800.jpg?w=800"
+                        alt={lang === 'es' ? "Consulta de Psicología Familiar e Infantil - Linc. Cristina Pérez Ibarra" : "Family & Child Psychology Consultation - Linc. Cristina Pérez Ibarra"}
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = "/images/cristina-perez.webp";
+                        }}
+                      />
+                    </div>
+                  </motion.div>
+                )}
               </motion.div>
             )}
 
