@@ -496,7 +496,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
             { icon: <Star className="w-4 h-4 fill-primary text-primary" />, text: lang === 'es' ? "5★ en Google" : "5★ on Google" },
             { icon: <ShieldCheck className="w-4 h-4 text-primary" />,       text: lang === 'es' ? "100% no invasivo" : "100% non-invasive" },
             { icon: <Award className="w-4 h-4 text-primary" />,             text: lang === 'es' ? "Profesionales certificados" : "Certified professionals" },
-            { icon: <MessageCircle className="w-4 h-4 text-primary" />,     text: lang === 'es' ? "Valoración gratuita" : "Free assessment" },
+            { icon: <MessageCircle className="w-4 h-4 text-primary" />,     text: lang === 'es' ? (service.slug === "botox-full-face" ? "Agenda una cita de valoración" : "Valoración gratuita") : "Free assessment" },
           ].map((t_item) => (
             <div key={t_item.text} className="flex items-center justify-center gap-2">
               {t_item.icon}
