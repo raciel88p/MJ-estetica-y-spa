@@ -8,6 +8,7 @@ import {
   tratamientosCorporalesLinks,
   tratamientosFacialesLinks,
   tratamientosPiernasLinks,
+  ritualesSpaLinks,
   mjCreativoLinks,
 } from "@/data/services";
 import { useTranslations } from "@/i18n/ui";
@@ -300,6 +301,23 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                                 {link.name}
                               </a>
                             ))}
+
+                            {/* Rituales SPA */}
+                            <div className="mt-4">
+                              <span className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest mb-1">
+                                {lang === 'es' ? 'Rituales SPA' : 'SPA Rituals'}
+                              </span>
+                              {ritualesSpaLinks[lang].map((link) => (
+                                <a
+                                  key={link.name}
+                                  href={link.href}
+                                  className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
+                                  onClick={() => setOpenDropdown(null)}
+                                >
+                                  {link.name}
+                                </a>
+                              ))}
+                            </div>
 
                             {/* MJ Creativo */}
                             <div className="mt-4">
@@ -597,6 +615,23 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                               {link.name}
                             </a>
                           ))}
+
+                          {/* Rituales SPA (Mobile) */}
+                          <div className="mt-3 pl-2">
+                            <span className="block py-1 text-[10px] font-bold text-primary uppercase tracking-widest mb-1">
+                              {lang === 'es' ? 'Rituales SPA' : 'SPA Rituals'}
+                            </span>
+                            {ritualesSpaLinks[lang].map((link) => (
+                              <a
+                                key={link.name}
+                                href={link.href}
+                                className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors"
+                                onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
+                              >
+                                {link.name}
+                              </a>
+                            ))}
+                          </div>
 
                           {/* MJ Creativo (Mobile) */}
                           <div className="mt-3 pl-2">

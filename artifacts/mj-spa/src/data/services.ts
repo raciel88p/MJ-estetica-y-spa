@@ -194,6 +194,17 @@ export const tratamientosPiernasLinks = {
   ],
 };
 
+export const ritualesSpaLinks = {
+  es: [
+    { name: "Boda Spa", href: "/servicios/boda-spa" },
+    { name: "Aromaterapia", href: "/servicios/aromaterapia" },
+  ],
+  en: [
+    { name: "Spa for Brides", href: "/en/services/spa-brides" },
+    { name: "Aromatherapy", href: "/en/services/aromatherapy" },
+  ],
+};
+
 export const mjCreativoLinks = {
   es: [{ name: "Arteterapia", href: "/servicios/arteterapia" }],
   en: [{ name: "Art Therapy", href: "/en/services/art-therapy" }],
