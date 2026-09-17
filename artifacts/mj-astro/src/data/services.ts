@@ -198,10 +198,20 @@ export const tratamientosPiernasLinks = {
 
 export const ritualesSpaLinks = {
   es: [
+    { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
+    { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
+    { name: "Masajes Profundos", href: "/servicios/masajes-profundos" },
+    { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios" },
+    { name: "Masaje Maxilofacial", href: "/servicios/masaje-maxilofacial" },
     { name: "Boda Spa", href: "/servicios/boda-spa" },
     { name: "Aromaterapia", href: "/servicios/aromaterapia" },
   ],
   en: [
+    { name: "Body Massages", href: "/en/services/body-massages" },
+    { name: "Relaxing Massages", href: "/en/services/relaxing-massages" },
+    { name: "Deep Tissue Massages", href: "/en/services/deep-tissue-massages" },
+    { name: "Post-Operative Massages", href: "/en/services/post-operative-massages" },
+    { name: "Maxillofacial Massage", href: "/en/services/maxillofacial-massage" },
     { name: "Spa for Brides", href: "/en/services/spa-brides" },
     { name: "Aromatherapy", href: "/en/services/aromatherapy" },
   ],
