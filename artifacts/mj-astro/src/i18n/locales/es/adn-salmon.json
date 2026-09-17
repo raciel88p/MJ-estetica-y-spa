@@ -1,0 +1,60 @@
+{
+  "recommend": {
+    "title": "¿PARA QUIÉN ESTÁ RECOMENDADO?",
+    "intro": "Este protocolo es ideal para personas con:",
+    "items": [
+      "Piel deshidratada",
+      "Falta de brillo facial",
+      "Líneas finas",
+      "Flacidez leve",
+      "Textura irregular",
+      "Piel sensible o cansada",
+      "Signos tempranos de envejecimiento"
+    ],
+    "note": "También es excelente como tratamiento preventivo antiaging."
+  },
+  "includes": {
+    "title": "Qué incluye",
+    "desc": "En MJ Estética Wellness Center realizamos una valoración personalizada para adaptar el protocolo a las necesidades de tu piel.",
+    "label": "Tu sesión incluye",
+    "items": [
+      "Limpieza facial profesional",
+      "Aplicación de ADN de Salmón",
+      "Microneedling o bioestimulación",
+      "Protocolo calmante e hidratante",
+      "Recomendaciones post tratamiento"
+    ],
+    "note": "Es un procedimiento mínimamente invasivo y la recuperación suele ser rápida."
+  },
+  "why": {
+    "title": "¿POR QUÉ TANTAS PERSONAS ESTÁN HABLANDO DEL ADN DE SALMÓN?",
+    "intro": "Porque los resultados se sienten naturales.",
+    "desc": "La piel comienza a verse más hidratada y luminosa desde las primeras sesiones, mientras que la firmeza y regeneración mejoran progresivamente.",
+    "quote": "No es un cambio artificial. Es una mejor versión de tu piel."
+  },
+  "whyUs": {
+    "title": "¿POR QUÉ ELEGIR MJ ESTÉTICA WELLNESS CENTER?",
+    "desc": "En MJ Estética Wellness Center combinamos bienestar, estética avanzada y protocolos personalizados para ayudarte a lograr resultados reales y naturales.",
+    "items": [
+      "Atención personalizada",
+      "Protocolos modernos de rejuvenecimiento",
+      "Tecnología estética avanzada",
+      "Experiencia wellness integral",
+      "Resultados progresivos y seguros"
+    ],
+    "footer1": "Tu piel merece más que un tratamiento.",
+    "footer2": "Merece cuidado profesional y un enfoque pensado para ti."
+  },
+  "leadMagnet": {
+    "label": "Regalo Exclusivo",
+    "title": "🎁 GUÍA GRATUITA DE BELLEZA",
+    "desc": "Por comentar la palabra “ADN” o “Salmón”, queremos regalarte nuestra guía exclusiva de cuidado facial y rejuvenecimiento.",
+    "cta": "DESCARGAR GUÍA GRATUITA"
+  },
+  "finalCta": {
+    "title": "🔥 AGENDA TU VALORACIÓN",
+    "desc": "Si deseas mejorar la calidad de tu piel, recuperar luminosidad y experimentar uno de los tratamientos más innovadores de la medicina estética moderna…",
+    "quote": "Este puede ser el momento perfecto para comenzar.",
+    "cta": "Reservar ahora"
+  }
+}

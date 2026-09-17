@@ -1,0 +1,177 @@
+{
+  "intro": {
+    "tagline": "Confianza y Bienestar",
+    "p1": "En MJ Estética & Wellness Center entendemos que sentirte bien con tu cuerpo también impacta tu confianza, seguridad y bienestar. Por eso creamos protocolos de levantamiento de glúteo enfocados en resultados progresivos, naturales y visualmente armónicos.",
+    "items": [
+      "Tratamientos corporales personalizados",
+      "Evaluación individual profesional",
+      "Resultados progresivos y naturales",
+      "Ambiente cómodo, privado y premium",
+      "Protocolos adaptados a cada cuerpo"
+    ],
+    "highlight": "🍑 Descubre cómo mejorar la apariencia de tus glúteos sin perder naturalidad"
+  },
+  "desires": {
+    "title": "Muchas personas desean:",
+    "items": [
+      "Mejorar firmeza",
+      "Aumentar proyección visual",
+      "Lograr una apariencia más armónica",
+      "Complementar sus rutinas fitness",
+      "Sentirse más seguras con su cuerpo",
+      "Recuperar confianza corporal"
+    ],
+    "problem": "El problema es que no todos los tratamientos ofrecen resultados naturales o personalizados.",
+    "approach": "Nuestro enfoque Wellness integral prioriza:",
+    "approachItems": ["Naturalidad", "Seguridad", "Armonización corporal", "Evaluación individual", "Resultados progresivos"]
+  },
+  "whatIs": {
+    "title": "¿Qué es el levantamiento de glúteo?",
+    "desc": "El levantamiento de glúteo es un tratamiento corporal estético diseñado para ayudar a mejorar la apariencia, firmeza y contorno de los glúteos mediante protocolos personalizados orientados a resultados armónicos y naturales.",
+    "note": "Cada cuerpo responde diferente. Por eso en MJ realizamos una valoración corporal previa para diseñar un protocolo adaptado a tus objetivos, hábitos y tipo corporal.",
+    "apps": "El enfoque puede incluir distintas técnicas corporales, aparatología estética y protocolos complementarios orientados a:",
+    "appItems": [
+      "mejorar firmeza de glúteos",
+      "estimular apariencia más elevada",
+      "favorecer contorno corporal",
+      "complementar rutinas fitness",
+      "potenciar armonización corporal"
+    ],
+    "closing": "Lo más importante: buscamos resultados progresivos y reales, evitando apariencias exageradas o artificiales."
+  },
+  "benefits": {
+    "label": "✨ Beneficios",
+    "title": "Beneficios más buscados por nuestras pacientes",
+    "items": [
+      "Apariencia más firme y tonificada",
+      "Mejor proyección visual de los glúteos",
+      "Contorno corporal más armónico",
+      "Complemento ideal para ejercicio y wellness corporal",
+      "Resultados progresivos y naturales",
+      "Sensación de mayor seguridad y confianza corporal",
+      "Protocolos personalizados según objetivos",
+      "Mejor armonización estética corporal"
+    ],
+    "footer": "Muchas pacientes ben buscando sentirse mejor con su cuerpo sin necesidad de procedimientos invasivos extremos."
+  },
+  "who": {
+    "title": "💬 ¿Para quién se recomienda?",
+    "intro": "El levantamiento de glúteo puede recomendarse para personas que desean:",
+    "items": [
+      { "t": "Mejorar la firmeza corporal", "d": "Con el tiempo, cambios de peso o sedentarismo, los glúteos pueden perder firmeza y forma." },
+      { "t": "Mejorar el contorno corporal", "d": "Ideal para quienes desean una apariencia más armónica y proporcionada." },
+      { "t": "Complementar entrenamiento físico", "d": "Muchas personas entrenan constantemente pero desean potenciar visualmente sus resultados." },
+      { "t": "Buscar resultados naturales", "d": "Pacientes que prefieren una estética corporal elegante, progresiva y realista." },
+      { "t": "Mejorar confianza física", "d": "Cuando te sientes bien con tu cuerpo, eso también se refleja en tu seguridad personal." }
+    ]
+  },
+  "process": {
+    "label": "🔬 El Proceso",
+    "title": "¿Cómo funciona una sesión de levantamiento de glúteo?",
+    "steps": [
+      { "s": "Paso 1", "t": "Evaluación corporal personalizada", "d": "Analizamos objetivos, hábitos, composición corporal y expectativas para definir el mejor protocolo." },
+      { "s": "Paso 2", "t": "Diseño del protocolo", "d": "Creamos un enfoque adaptado a tus necesidades corporales y nivel de proyección deseado." },
+      { "s": "Paso 3", "t": "Aplicación del tratamiento", "d": "Dependiendo del protocolo, pueden utilizarse técnicas corporales, aparatología estética y procedimientos complementarios." },
+      { "s": "Paso 4", "t": "Seguimiento y recomendaciones", "d": "Te guiamos con hábitos complementarios para potenciar resultados progresivos y naturales." }
+    ],
+    "items": [
+      { "l": "Duración aproximada", "v": "Entre 45 y 90 minutos por sesión." },
+      { "l": "Frecuencia recomendada", "v": "Varía según evaluación corporal y objetivos individuales." },
+      { "l": "Recuperación", "v": "La mayoría de protocolos permiten reincorporarse rápidamente." }
+    ]
+  },
+  "sessions": {
+    "title": "📈 ¿Cuántas sesiones se recomiendan?",
+    "intro": "La cantidad de sesiones depende de:",
+    "factors": [
+      "Objetivos estéticos",
+      "Estado corporal actual",
+      "Hábitos diarios",
+      "Rutina física",
+      "Nivel de firmeza deseado",
+      "Evaluación profesional"
+    ],
+    "note": "Muchas pacientes optan por programas corporales completos para potenciar resultados y mantener la armonización corporal a largo plazo.",
+    "alsoLabel": "También contamos con:",
+    "alsoItems": ["✨ paquetes corporales", "✨ programas wellness", "✨ protocolos combinados", "✨ seguimiento personalizado"]
+  },
+  "leadMagnet": {
+    "label": "Recurso Exclusivo",
+    "title": "🎁 GUÍA GRATUITA",
+    "subtitle": "Cómo mejorar la apariencia y firmeza de los glúteos",
+    "learn": "Aprenderás:",
+    "items": [
+      "hábitos que ayudan a mejorar firmeza",
+      "recomendaciones corporales",
+      "errores que afectan resultados",
+      "tips wellness",
+      "cómo potenciar tratamientos estéticos",
+      "cuidados corporales complementarios"
+    ],
+    "info": "Además recibirás información sobre nuestros protocolos personalizados de levantamiento de glúteo en Turrialba.",
+    "ctaLabel": "Comenta la palabra:",
+    "word": "GLÚTEO",
+    "directLabel": "Instagram Direct",
+    "directCta": "📸 Ir a nuestro perfil",
+    "footer": "Recibe tu guía al instante vía mensaje directo."
+  },
+  "philosophy": {
+    "title": "📸 Resultados reales y naturales",
+    "intro": "En MJ Estética & Wellness Center creemos en:",
+    "items": ["armonía corporal", "naturalidad", "evolución progresiva", "estética elegante y realista"],
+    "closing": "Por eso evitamos resultados exagerados o artificiales. Nuestros protocolos buscan que te sientas cómoda, segura y auténtica con tu cuerpo."
+  },
+  "testimonials": {
+    "title": "❤️ Historias reales de transformación",
+    "items": [
+      "“Buscaba algo natural que complementara mi entrenamiento y realmente noté una mejor apariencia y firmeza.”",
+      "“Me encantó el enfoque personalizado. Sentí acompañamiento durante todo el proceso.”",
+      "“No quería algo exagerado, solo sentirme más segura con mi cuerpo, y el resultado fue exactamente lo que buscaba.”"
+    ],
+    "author": "Paciente MJ"
+  },
+  "faqs": {
+    "title": "❓ Preguntas frecuentes",
+    "items": [
+      { "q": "¿El levantamiento de glúteo es invasivo?", "a": "Depende del protocolo recomendado. Durante la valoración corporal explicamos todas las opciones disponibles y cuál se adapta mejor a tus objetivos." },
+      { "q": "¿Cuándo se ven resultados?", "a": "Muchas pacientes comienzan a notar cambios progresivos conforme avanzan las sesiones y se complementan hábitos saludables." },
+      { "q": "¿Los resultados son naturales?", "a": "Sí. Nuestro enfoque prioriza armonización corporal y apariencia estética natural." },
+      { "q": "¿Se puede combinar con ejercicio?", "a": "Sí. De hecho, muchas pacientes utilizan el tratamiento como complemento wellness corporal." },
+      { "q": "¿Cuántas sesiones necesito?", "a": "Cada cuerpo es diferente. La cantidad ideal se define durante la evaluación personalizada." },
+      { "q": "¿Tiene tiempo de recuperación?", "a": "Muchos protocolos permiten retomar actividades habituales rápidamente." },
+      { "q": "¿Ayuda con firmeza?", "a": "Uno de los principales objetivos es contribuir a mejorar la apariencia de firmeza y proyección corporal." },
+      { "q": "¿Qué cuidados debo tener?", "a": "Te brindaremos recomendaciones específicas según el protocolo aplicado y tus objetivos corporales." }
+    ]
+  },
+  "whyUs": {
+    "title": "💎 ¿Por qué elegir MJ Estética & Wellness Center?",
+    "intro": "Porque no trabajamos con soluciones genéricas.",
+    "listLabel": "Trabajamos con:",
+    "items": [
+      "evaluación corporal individual",
+      "protocolos personalizados",
+      "enfoque wellness integral",
+      "experiencia en estética corporal",
+      "ambiente premium y cómodo",
+      "seguimiento profesional",
+      "resultados progresivos y armónicos"
+    ],
+    "closing": "Nuestro objetivo es ayudarte a sentirte mejor contigo misma de manera natural y segura."
+  },
+  "location": {
+    "title": "📍 Levantamiento de Glúteo en Turrialba",
+    "items": [
+      "Ubicación accesible en Turrialba",
+      "Parqueo cercano",
+      "Atención por WhatsApp",
+      "Horarios flexibles",
+      "Ambiente cómodo y profesional"
+    ],
+    "ctaTagline": "🚨 Agenda tu valoración corporal hoy",
+    "ctaTitle": "Tu cuerpo merece un enfoque personalizado, natural y profesional.",
+    "ctaHighlight": "🍑 Descubre el protocolo ideal para ti",
+    "cta": "CONSULTAR DISPONIBILIDAD HOY",
+    "ctaFooter": "💬 Escríbenos por WhatsApp y agenda tu valoración en MJ",
+    "visit": "👉 VISITA AHORA: MJ ESTÉTICA & WELLNESS CENTER"
+  }
+}

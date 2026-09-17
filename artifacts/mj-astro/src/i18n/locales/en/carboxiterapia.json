@@ -1,0 +1,133 @@
+{
+  "intro": {
+    "title": "Experiences focused on your aesthetic well-being",
+    "desc": "At MJ Estética & Wellness Center we design experiences focused on helping you improve the appearance of your skin, support body protocols and enhance your aesthetic well-being in a professional, comfortable and totally personalized environment.",
+    "items": [
+      "Individualized attention",
+      "Personalized protocols",
+      "Natural and progressive results",
+      "Professional and comfortable environment",
+      "Integral wellness focus"
+    ]
+  },
+  "leadMagnet": {
+    "label": "Exclusive Gift",
+    "title": "🎁 FREE GUIDE",
+    "instagram": "Comment the word “Carbo” on our Instagram and receive our guide for FREE:",
+    "guideTitle": "“How to improve Carboxytherapy results”",
+    "learn": "You will learn:",
+    "items": [
+      "How to boost your results",
+      "What habits help the treatment",
+      "Recommended care",
+      "How to complement body and facial sessions",
+      "Wellness tips for better progressive results"
+    ],
+    "instaCta": "Go to Instagram"
+  },
+  "ctaCard": {
+    "title": "👉 Schedule your assessment today",
+    "waLabel": "WhatsApp Business",
+    "waCta": "📲 Write to us now",
+    "locLabel": "Location",
+    "locValue": "📍 Service in Turrialba",
+    "dateLabel": "Appointments",
+    "dateValue": "🗓️ Check availability"
+  },
+  "whatIs": {
+    "title": "What is Carboxytherapy?",
+    "desc": "Carboxytherapy is a complementary treatment used in facial and body aesthetics that is part of wellness protocols aimed at improving skin appearance and supporting different aesthetic goals.",
+    "focus": "At MJ Estética & Wellness Center, each protocol is adapted to the individual need of each person, considering:",
+    "items": [
+      { "t": "Area to treat" },
+      { "t": "Aesthetic goals" },
+      { "t": "Habits" },
+      { "t": "Skin type" },
+      { "t": "General well-being" }
+    ],
+    "applications": "Support in treatments related to:",
+    "appItems": [
+      "Cellulite appearance",
+      "Flaccidity",
+      "Stretch marks",
+      "Dark circles",
+      "Skin texture",
+      "Facial and body rejuvenation",
+      "Integral aesthetic well-being"
+    ],
+    "note": "Most importantly, results are usually progressive and personalized, seeking a more natural and harmonic appearance."
+  },
+  "zones": {
+    "title": "What areas or concerns can it help improve?",
+    "desc": "Carboxytherapy can be part of protocols oriented to different body and facial needs.",
+    "bodyTitle": "Body areas",
+    "bodyItems": ["Abdomen", "Legs", "Buttocks", "Arms", "Back", "Waist"],
+    "facialTitle": "Facial areas",
+    "facialItems": ["Dark circles", "Facial contour", "Skin texture", "Facial flaccidity appearance"],
+    "commonTitle": "Common goals",
+    "commonItems": [
+      "Improve cellulite appearance",
+      "Complement flaccidity protocols",
+      "Support stretch mark treatments",
+      "Improve general skin appearance",
+      "Enhance body well-being",
+      "Favor rejuvenation protocols",
+      "Complement body wellness treatments"
+    ]
+  },
+  "benefits": {
+    "title": "Benefits of Carboxytherapy",
+    "desc": "At MJ Estética & Wellness Center we believe in real, progressive and personalized results. That is why our protocols are oriented to:",
+    "items": [
+      "Improve overall skin appearance",
+      "Complement body and facial treatments",
+      "Favor a more uniform appearance",
+      "Support personalized aesthetic goals",
+      "Enhance integral body well-being",
+      "Work with naturalness and aesthetic harmony",
+      "Create wellness experiences focused on integral care"
+    ],
+    "note": "Each person experiences the treatment differently and that is why we perform an individual assessment before starting any protocol."
+  },
+  "methodology": {
+    "label": "MJ Methodology",
+    "title": "What your session includes",
+    "desc": "Your session includes:",
+    "steps": [
+      { "s": "Step 1", "t": "Personalized assessment", "d": "We analyze your goals, areas to work on and specific needs." },
+      { "s": "Step 2", "t": "Protocol design", "d": "We create a personalized protocol according to your case." },
+      { "s": "Step 3", "t": "Treatment application", "d": "The session is performed in a professional and comfortable environment." },
+      { "s": "Step 4", "t": "Recommendations and follow-up", "d": "We guide you with wellness recommendations to help boost progressive results." }
+    ]
+  },
+  "info": {
+    "title": "Important information",
+    "items": [
+      { "l": "Approximate duration", "v": "30 to 60 minutes" },
+      { "l": "Frequency", "v": "according to personalized assessment" },
+      { "l": "Aftercare", "v": "indicated by the specialist" },
+      { "l": "Recovery", "v": "normally fast" }
+    ],
+    "note": "* Results and the number of sessions vary by individual."
+  },
+  "sessions": {
+    "title": "How many sessions are recommended?",
+    "desc": "The number of sessions depends on various factors that we analyze in your first appointment:",
+    "factors": ["personal goals", "treated area", "complementary habits", "individual assessment", "recommended protocol"],
+    "orient": "During the assessment we can guide you on the best option for you.",
+    "optionsTitle": "Common options",
+    "options": [
+      { "t": "Body packages", "d": "Intensive protocols for specific goals." },
+      { "t": "Wellness maintenance", "d": "Periodic sessions to preserve results." },
+      { "t": "Combined protocols", "d": "Synergy with other treatments at our center." },
+      { "t": "Personalized follow-up", "d": "Continuous adjustment according to evolution." }
+    ]
+  },
+  "philosophy": {
+    "title": "Real and progressive results",
+    "desc": "Our aesthetic wellness philosophy focuses on accompanying you during the process so that each protocol adapts to your real needs.",
+    "tags": ["natural", "harmonic", "progressive", "personalized"],
+    "ctaTitle": "Ready to start your protocol?",
+    "cta": "SCHEDULE APPOINTMENT VIA WHATSAPP"
+  }
+}

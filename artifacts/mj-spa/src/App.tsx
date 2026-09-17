@@ -1,9 +1,10 @@
 import { lazy, Suspense, useEffect } from "react";
-import { Switch, Route, Router as WouterRouter } from "wouter";
+import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import Home from "@/pages/home";
 import { servicePages } from "@/data/services";
+import AdminPage from "@/pages/AdminPage";
 
 const NotFound          = lazy(() => import("@/pages/not-found"));
 const ServicePage       = lazy(() => import("@/pages/ServicePage"));
@@ -20,6 +21,8 @@ const Paquetes          = lazy(() => import("@/pages/Paquetes"));
 const LandingReductivos = lazy(() => import("@/pages/LandingReductivos"));
 const LandingFaciales   = lazy(() => import("@/pages/LandingFaciales"));
 const LandingMedicos    = lazy(() => import("@/pages/LandingMedicos"));
+const Blog              = lazy(() => import("@/pages/Blog"));
+const PostDetail        = lazy(() => import("@/pages/PostDetail"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -34,9 +37,19 @@ const PageLoader = () => (
 );
 
 function Router() {
+  const [location] = useLocation();
+
+  // High-priority short-circuit for Sanity Studio
+  // This ensures that /admin and all sub-paths (/admin/structure/post, etc.)
+  // are handled by Sanity Studio's internal router without wouter interference.
+  if (location.startsWith('/admin')) {
+    return <AdminPage />;
+  }
+
   return (
     <Suspense fallback={<PageLoader />}>
       <Switch>
+        {/* ES Routes */}
         <Route path="/" component={Home} />
         <Route path="/politica-de-datos" component={PoliticaDatos} />
         <Route path="/medicos-esteticos" component={MedicosEsteticos} />
@@ -51,45 +64,53 @@ function Router() {
         <Route path="/reductivos-turrialba" component={LandingReductivos} />
         <Route path="/faciales" component={LandingFaciales} />
         <Route path="/medicina-estetica" component={LandingMedicos} />
+        <Route path="/blog" component={Blog} />
+        <Route path="/blog/:slug">{(params) => <PostDetail slug={params.slug} lang="es" />}</Route>
+
+        {/* EN Routes */}
+        <Route path="/en"><Home lang="en" /></Route>
+        <Route path="/en/data-policy"><PoliticaDatos lang="en" /></Route>
+        <Route path="/en/medical-aesthetic"><MedicosEsteticos lang="en" /></Route>
+        <Route path="/en/about-us"><Nosotros lang="en" /></Route>
+        <Route path="/en/testimonials"><Testimonios lang="en" /></Route>
+        <Route path="/en/suggestion-box"><BuzonSugerencias lang="en" /></Route>
+        <Route path="/en/sitemap"><SitemapPage lang="en" /></Route>
+        <Route path="/en/packages"><Paquetes lang="en" /></Route>
+        <Route path="/en/services/body-treatments"><TratamientosCorporales lang="en" /></Route>
+        <Route path="/en/services/facials"><TratamientosFaciales lang="en" /></Route>
+        <Route path="/en/services/leg-treatments"><TratamientosPiernas lang="en" /></Route>
+        <Route path="/en/facial-harmonization"><LandingMedicos lang="en" /></Route>
+        <Route path="/en/blog"><Blog lang="en" /></Route>
+        <Route path="/en/blog/:slug">{(params) => <PostDetail slug={params.slug} lang="en" />}</Route>
+
+        {/* Dynamic Service Routes */}
         {servicePages.map((service) => (
           <Route
-            key={service.slug}
-            path={`/servicios/${service.slug}`}
-            component={() => <ServicePage service={service} />}
-          />
+            key={`es-${service.es.slug}`}
+            path={`/servicios/${service.es.slug}`}
+          >
+            <ServicePage service={service.es} lang="es" />
+          </Route>
         ))}
+        {servicePages.map((service) => (
+          <Route
+            key={`en-${service.en.slug}`}
+            path={`/en/services/${service.en.slug}`}
+          >
+            <ServicePage service={service.en} lang="en" />
+          </Route>
+        ))}
+
         <Route component={NotFound} />
       </Switch>
     </Suspense>
   );
 }
 
-// Prefetch the most-visited secondary pages during browser idle time
-function usePrefetchRoutes() {
-  useEffect(() => {
-    const prefetch = () => {
-      // Trigger lazy imports so browsers download chunks in the background
-      void import("@/pages/ServicePage");
-      void import("@/pages/MedicosEsteticos");
-      void import("@/pages/LandingMedicos");
-      void import("@/pages/TratamientosCorporales");
-      void import("@/pages/TratamientosFaciales");
-    };
-    if ("requestIdleCallback" in window) {
-      const id = requestIdleCallback(prefetch, { timeout: 4000 });
-      return () => cancelIdleCallback(id);
-    } else {
-      const t = setTimeout(prefetch, 3000);
-      return () => clearTimeout(t);
-    }
-  }, []);
-}
-
 function App() {
-  usePrefetchRoutes();
   return (
     <QueryClientProvider client={queryClient}>
-      <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+      <WouterRouter>
         <Router />
       </WouterRouter>
       <Toaster />

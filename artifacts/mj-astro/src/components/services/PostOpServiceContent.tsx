@@ -13,6 +13,8 @@ import {
   Check,
   ArrowRight
 } from "lucide-react";
+import es from "@/i18n/locales/es/post-op.json";
+import en from "@/i18n/locales/en/post-op.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -24,7 +26,8 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.09 } },
 };
 
-export function PostOpServiceContent({ waLink }: { waLink: string }) {
+export function PostOpServiceContent({ waLink, lang = "es" }: { waLink: string; lang?: "es" | "en" }) {
+  const content = lang === "es" ? es : en;
   return (
     <div className="bg-white">
       {/* ── SECCIÓN 1: SÍNTOMAS (Debajo del profesional) ── */}
@@ -39,14 +42,12 @@ export function PostOpServiceContent({ waLink }: { waLink: string }) {
           >
             <div className="flex items-center justify-center gap-3 mb-5">
               <div className="w-8 h-0.5 bg-primary" />
-              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">Síntomas a tratar</p>
+              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">{content.symptoms.label}</p>
               <div className="w-8 h-0.5 bg-primary" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight mb-8">
-              ¿Notas durezas, inflamación o <span className="font-light italic text-primary">molestias tras tu cirugía?</span>
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 leading-tight mb-8" dangerouslySetInnerHTML={{ __html: content.symptoms.title }} />
             <p className="text-stone-600 text-lg leading-relaxed mb-12">
-              Es completamente normal que tras una intervención aparezcan hematomas, edema o fibrosis. Nuestro objetivo es tratarlos a tiempo para asegurar que el resultado final sea el que siempre soñaste.
+              {content.symptoms.desc}
             </p>
           </motion.div>
 
@@ -57,29 +58,16 @@ export function PostOpServiceContent({ waLink }: { waLink: string }) {
             variants={stagger}
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
-            {[
-              {
-                icon: <AlertCircle className="w-8 h-8 text-primary" />,
-                title: "Fibrosis Quirúrgica",
-                desc: "Tratamos las acumulaciones de tejido cicatricial que generan durezas e irregularidades bajo la piel."
-              },
-              {
-                icon: <Clock className="w-8 h-8 text-primary" />,
-                title: "Edema e Inflamación",
-                desc: "Aceleramos la eliminación de líquidos acumulados para reducir el volumen y la presión."
-              },
-              {
-                icon: <Search className="w-8 h-8 text-primary" />,
-                title: "Hematomas",
-                desc: "Mejoramos la circulación local para que los moretones desaparezcan de forma más rápida."
-              },
-            ].map((item, i) => (
+            {content.symptoms.items.map((item, i) => {
+              const icons = [<AlertCircle className="w-8 h-8 text-primary" />, <Clock className="w-8 h-8 text-primary" />, <Search className="w-8 h-8 text-primary" />];
+              return (
               <motion.div key={i} variants={fadeUp} className="p-8 border border-stone-100 bg-stone-50 rounded-sm hover:shadow-sm transition-all">
-                <div className="mb-6 flex justify-center">{item.icon}</div>
+                <div className="mb-6 flex justify-center">{icons[i]}</div>
                 <h3 className="text-xl font-serif font-bold text-stone-900 mb-4">{item.title}</h3>
                 <p className="text-stone-500 text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
-            ))}
+              );
+            })}
           </motion.div>
         </div>
       </section>
@@ -94,18 +82,10 @@ export function PostOpServiceContent({ waLink }: { waLink: string }) {
               viewport={{ once: true }}
               variants={fadeUp}
             >
-              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">¿Por qué es vital?</p>
-              <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8 leading-tight">
-                El post operatorio es el <span className="font-light italic text-primary">50% del éxito de tu cirugía</span>
-              </h2>
+              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">{content.vital.label}</p>
+              <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8 leading-tight" dangerouslySetInnerHTML={{ __html: content.vital.title }} />
               <ul className="space-y-6">
-                {[
-                  "Resultados más uniformes y sin irregularidades",
-                  "Reducción significativa del dolor y la tensión",
-                  "Mejor cicatrización y calidad de la piel",
-                  "Retorno más rápido a tus actividades diarias",
-                  "Prevención de complicaciones a largo plazo",
-                ].map((text, i) => (
+                {content.vital.items.map((text, i) => (
                   <li key={i} className="flex items-start gap-4">
                     <CheckCircle2 className="w-6 h-6 text-primary shrink-0" />
                     <span className="text-stone-700 font-medium">{text}</span>
@@ -120,7 +100,7 @@ export function PostOpServiceContent({ waLink }: { waLink: string }) {
                   className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 text-sm font-bold tracking-widest uppercase hover:bg-stone-900 transition-colors group"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  CONSULTAR DISPONIBILIDAD
+                  {content.vital.cta}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>
@@ -139,7 +119,7 @@ export function PostOpServiceContent({ waLink }: { waLink: string }) {
               />
               <div className="absolute -bottom-6 -left-6 bg-white p-8 shadow-xl border border-stone-100 max-w-xs">
                 <p className="text-primary font-bold text-4xl mb-2">98%</p>
-                <p className="text-stone-500 text-xs font-bold tracking-widest uppercase">Satisfacción en recuperación guiada</p>
+                <p className="text-stone-500 text-xs font-bold tracking-widest uppercase">{content.vital.stats}</p>
               </div>
             </motion.div>
           </div>
@@ -150,19 +130,14 @@ export function PostOpServiceContent({ waLink }: { waLink: string }) {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 text-center mb-16">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">Nuestro Protocolo</p>
-            <h2 className="text-4xl font-serif font-bold text-stone-900">4 Pasos hacia tu mejor versión</h2>
+            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">{content.protocol.label}</p>
+            <h2 className="text-4xl font-serif font-bold text-stone-900">{content.protocol.title}</h2>
           </motion.div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-px bg-stone-100 border border-stone-100">
-            {[
-              { num: "01", title: "Valoración", desc: "Analizamos tu tipo de cirugía y el estado actual de los tejidos." },
-              { num: "02", title: "Drenaje", desc: "Activamos el sistema linfático para evacuar líquidos y toxinas." },
-              { num: "03", title: "Desfibrosis", desc: "Trabajamos manualmente las zonas de dureza para ablandarlas." },
-              { num: "04", title: "Seguimiento", desc: "Monitoreamos tu evolución hasta que el tejido esté 100% sano." },
-            ].map((step, i) => (
+            {content.protocol.steps.map((step, i) => (
               <div key={i} className="bg-white p-10 group hover:bg-stone-50 transition-colors">
                 <span className="text-primary/30 text-5xl font-serif font-bold block mb-6 group-hover:text-primary/50 transition-colors">{step.num}</span>
                 <h3 className="text-xl font-serif font-bold text-stone-900 mb-4">{step.title}</h3>
@@ -186,13 +161,11 @@ export function PostOpServiceContent({ waLink }: { waLink: string }) {
             <div className="relative z-10">
               <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-8">
                 <Star className="w-4 h-4 fill-primary" />
-                <span className="text-[10px] font-bold tracking-[0.2em] uppercase">Recurso Exclusivo</span>
+                <span className="text-[10px] font-bold tracking-[0.2em] uppercase">{content.leadMagnet.label}</span>
               </div>
-              <h2 className="text-4xl font-serif font-bold text-stone-900 mb-6 max-w-2xl mx-auto leading-tight">
-                Descarga nuestra <span className="text-primary italic font-light">Guía de Cuidados</span> Post Operatorios en Casa
-              </h2>
+              <h2 className="text-4xl font-serif font-bold text-stone-900 mb-6 max-w-2xl mx-auto leading-tight" dangerouslySetInnerHTML={{ __html: content.leadMagnet.title }} />
               <p className="text-stone-500 mb-10 max-w-lg mx-auto leading-relaxed">
-                Aprende qué hacer y qué evitar los primeros días para no comprometer tus resultados. Totalmente gratis.
+                {content.leadMagnet.desc}
               </p>
               <a
                 href={waLink}
@@ -200,7 +173,7 @@ export function PostOpServiceContent({ waLink }: { waLink: string }) {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 bg-stone-900 text-white px-10 py-4 text-sm font-bold tracking-widest uppercase hover:bg-primary transition-colors"
               >
-                SOLICITAR GUÍA POR WHATSAPP
+                {content.leadMagnet.cta}
               </a>
             </div>
           </motion.div>
@@ -212,37 +185,22 @@ export function PostOpServiceContent({ waLink }: { waLink: string }) {
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center mb-16">
             <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">Confianza & Experiencia</p>
-              <h2 className="text-4xl font-serif font-bold text-stone-900 leading-tight">
-                ¿Por qué confiar en <span className="font-light italic text-primary">MJ Wellness Center?</span>
-              </h2>
+              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">{content.whyUs.label}</p>
+              <h2 className="text-4xl font-serif font-bold text-stone-900 leading-tight" dangerouslySetInnerHTML={{ __html: content.whyUs.title }} />
             </motion.div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            {[
-              {
-                icon: <ShieldCheck className="w-10 h-10 text-primary" />,
-                title: "Experiencia Hospitalaria",
-                desc: "Contamos con años de experiencia trabajando con cirujanos de renombre en el Hospital La Católica."
-              },
-              {
-                icon: <Zap className="w-10 h-10 text-primary" />,
-                title: "Técnicas de Vanguardia",
-                desc: "Protocolos actualizados que combinan drenaje manual con aparatología de última generación."
-              },
-              {
-                icon: <Users className="w-10 h-10 text-primary" />,
-                title: "Atención 1 a 1",
-                desc: "No somos una clínica de volumen. Cada paciente recibe el tiempo y la atención que su cirugía requiere."
-              },
-            ].map((item, i) => (
+            {content.whyUs.items.map((item, i) => {
+              const icons = [<ShieldCheck className="w-10 h-10 text-primary" />, <Zap className="w-10 h-10 text-primary" />, <Users className="w-10 h-10 text-primary" />];
+              return (
               <motion.div key={i} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center">
-                <div className="flex justify-center mb-6">{item.icon}</div>
+                <div className="flex justify-center mb-6">{icons[i]}</div>
                 <h3 className="text-xl font-serif font-bold text-stone-900 mb-4">{item.title}</h3>
                 <p className="text-stone-500 text-sm leading-relaxed">{item.desc}</p>
               </motion.div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -251,24 +209,11 @@ export function PostOpServiceContent({ waLink }: { waLink: string }) {
       <section className="py-20 bg-stone-50 border-t border-stone-100">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">Resolviendo tus dudas</p>
-            <h2 className="text-4xl font-serif font-bold text-stone-900 leading-tight">Preguntas Frecuentes</h2>
+            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">{content.faq.label}</p>
+            <h2 className="text-4xl font-serif font-bold text-stone-900 leading-tight">{content.faq.title}</h2>
           </div>
           <div className="space-y-4">
-            {[
-              {
-                q: "¿Cuándo debo iniciar mis masajes?",
-                a: "Generalmente a partir de las 48-72 horas para drenaje linfático suave. Para trabajo de fibrosis, solemos iniciar a partir de la 3ª semana."
-              },
-              {
-                q: "¿Los masajes post operatorios duelen?",
-                a: "El drenaje linfático es una técnica muy suave e indolora. El trabajo de desfibrosis puede generar algo de molestia, pero siempre se adapta a tu sensibilidad."
-              },
-              {
-                q: "¿Cuántas sesiones voy a necesitar?",
-                a: "Depende de la cirugía y de cómo responda tu cuerpo. El promedio para una liposucción o abdominoplastia es de 10 a 15 sesiones."
-              }
-            ].map((faq, i) => (
+            {content.faq.items.map((faq, i) => (
               <details key={i} className="group bg-white border border-stone-200 rounded-sm overflow-hidden transition-all duration-300 open:shadow-md">
                 <summary className="p-6 cursor-pointer flex justify-between items-center list-none font-serif font-bold text-stone-900 group-hover:text-primary">
                   {faq.q}
@@ -287,10 +232,8 @@ export function PostOpServiceContent({ waLink }: { waLink: string }) {
       <section className="py-24 bg-primary relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <p className="text-white/60 text-[10px] font-bold tracking-[0.4em] uppercase mb-6">Tu recuperación empieza aquí</p>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-10 leading-tight">
-              ¿Lista para asegurar los <span className="italic font-light opacity-80">mejores resultados de tu cirugía?</span>
-            </h2>
+            <p className="text-white/60 text-[10px] font-bold tracking-[0.4em] uppercase mb-6">{content.finalCta.label}</p>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-10 leading-tight" dangerouslySetInnerHTML={{ __html: content.finalCta.title }} />
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={waLink}
@@ -299,7 +242,7 @@ export function PostOpServiceContent({ waLink }: { waLink: string }) {
                 className="bg-white text-primary px-10 py-5 text-sm font-bold tracking-widest uppercase hover:bg-stone-100 transition-all flex items-center justify-center gap-3 shadow-xl"
               >
                 <MessageCircle className="w-5 h-5" />
-                AGENDAR VALORACIÓN
+                {content.finalCta.cta1}
               </a>
               <a
                 href={waLink}
@@ -307,11 +250,11 @@ export function PostOpServiceContent({ waLink }: { waLink: string }) {
                 rel="noopener noreferrer"
                 className="bg-transparent border border-white/30 text-white px-10 py-5 text-sm font-bold tracking-widest uppercase hover:bg-white/5 transition-all flex items-center justify-center gap-3"
               >
-                CONSULTA POR WHATSAPP
+                {content.finalCta.cta2}
               </a>
             </div>
             <p className="mt-8 text-white/40 text-[10px] font-bold tracking-widest uppercase">
-              Cupos limitados por semana para garantizar atención personalizada
+              {content.finalCta.footer}
             </p>
           </motion.div>
         </div>

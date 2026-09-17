@@ -40,7 +40,10 @@ function MessageBubble({ msg, index }: { msg: ChatMessage; index: number }) {
   );
 }
 
-export function ChatProof({ messages, title = "Lo que dicen en WhatsApp" }: Props) {
+export function ChatProof({ messages, title = "Lo que dicen en WhatsApp", lang = 'es' }: Props & { lang?: 'es' | 'en' }) {
+  const t_placeholder = lang === 'es' ? 'Escribe un mensaje...' : 'Write a message...';
+  const t_pill = lang === 'es' ? 'Testimonios reales de clientas' : 'Real client testimonials';
+
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-stone-100 overflow-hidden">
       {/* WhatsApp header */}
@@ -69,7 +72,7 @@ export function ChatProof({ messages, title = "Lo que dicen en WhatsApp" }: Prop
         {/* Date pill */}
         <div className="flex justify-center">
           <span className="text-[11px] bg-white/80 text-stone-500 rounded-full px-3 py-0.5 shadow-sm">
-            Testimonios reales de clientas
+            {t_pill}
           </span>
         </div>
 
@@ -81,7 +84,7 @@ export function ChatProof({ messages, title = "Lo que dicen en WhatsApp" }: Prop
       {/* Footer */}
       <div className="bg-[#f0f0f0] px-4 py-2 flex items-center gap-2">
         <div className="flex-1 bg-white rounded-full px-4 py-2 text-xs text-stone-400 border border-stone-200">
-          Escribe un mensaje...
+          {t_placeholder}
         </div>
         <div className="w-8 h-8 rounded-full bg-[#075e54] flex items-center justify-center">
           <span className="text-white text-xs">➤</span>

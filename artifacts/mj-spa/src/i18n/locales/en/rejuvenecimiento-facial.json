@@ -1,0 +1,209 @@
+{
+  "intro": {
+    "title": "Natural Glow, Facial Harmonization and Premium Aesthetic Wellness",
+    "quote": "\"Your skin tells your story… but it can also reflect radiance, freshness and well-being.\"",
+    "p1": "At MJ Estética & Wellness Center we design personalized facial rejuvenation protocols oriented towards natural glow, aesthetic harmonization and progressive skin revitalization.",
+    "p2": "Because true rejuvenation is not about changing who you are. It's about helping you look rested, radiant and confident.",
+    "items": [
+      "Healthy facial glow",
+      "Premium skincare protocols",
+      "Personalized care",
+      "Elegant and natural rejuvenation",
+      "Integral facial well-being",
+      "Advanced aesthetic experience in Turrialba"
+    ],
+    "ctaBox": {
+      "title": "Schedule your personalized facial assessment",
+      "p1": "👉 Write to us on WhatsApp",
+      "p2": "👉 Check availability",
+      "p3": "👉 Discover the ideal protocol for your skin",
+      "cta": "BOOK NOW"
+    }
+  },
+  "concept": {
+    "label": "Concept",
+    "title": "What is facial rejuvenation?",
+    "p1": "Facial rejuvenation is a set of aesthetic protocols designed to support the appearance of a more radiant, harmonized and revitalized skin.",
+    "p2": "At MJ Estética & Wellness Center we use personalized treatments oriented towards facial glow, skin well-being and progressive rejuvenation using advanced technologies and skincare protocols.",
+    "p3": "Every skin has different needs. That's why we carry out personalized assessments to design experiences adapted to each patient.",
+    "focus": {
+      "title": "Our approach seeks:",
+      "items": ["Naturalness", "Healthy glow", "Facial harmonization", "Elegant radiance", "Integral aesthetic well-being"]
+    }
+  },
+  "results": {
+    "label": "Results",
+    "title": "What can facial rejuvenation help to improve?",
+    "desc": "Our protocols can support processes oriented towards:",
+    "items": [
+      "Facial glow and radiance",
+      "Appearance of facial firmness",
+      "Feeling of renewal and freshness",
+      "More uniform facial texture",
+      "Skin well-being",
+      "Progressive rejuvenation",
+      "Revitalized and rested appearance",
+      "Personalized antiaging protocols"
+    ],
+    "footer": "Each protocol is adapted according to the individual needs and objectives of each person."
+  },
+  "benefits": {
+    "label": "MJ Wellness Experience",
+    "title": "Benefits of Facial Rejuvenation",
+    "p1": "At MJ Estética & Wellness Center we believe in progressive, natural and elegant results.",
+    "p2": "Our patients seek to look better… without losing their essence.",
+    "list": {
+      "title": "What those who visit us value most:",
+      "items": [
+        "More radiant and revitalized skin",
+        "Progressive facial glow",
+        "Feeling of natural rejuvenation",
+        "Integral facial well-being",
+        "Personalized results",
+        "Fresher and more rested appearance",
+        "Premium skincare protocols",
+        "Professional aesthetic care"
+      ],
+      "footer": "Because skincare can also become a wellness experience."
+    }
+  },
+  "catalog": {
+    "label": "Premium Catalog",
+    "title": "Available Facial Rejuvenation Protocols",
+    "items": [
+      {
+        "title": "Facial Laser",
+        "desc": "Protocols aimed at improving the appearance of radiance, texture and facial revitalization.",
+        "tags": ["Natural glow", "More uniform appearance", "Progressive rejuvenation"]
+      },
+      {
+        "title": "Microneedling",
+        "desc": "Advanced skincare treatment focused on supporting facial renewal processes and skin well-being.",
+        "tags": ["Feeling of renewal", "Healthy glow", "Personalized protocols"]
+      },
+      {
+        "title": "Facial Radiofrequency",
+        "desc": "Protocol aimed at supporting processes of firmness and progressive facial harmonization.",
+        "tags": ["Facial firmness", "Aesthetic well-being", "Elegant rejuvenation"]
+      },
+      {
+        "title": "Hollywood Peel",
+        "desc": "Premium experience designed to boost facial radiance and revitalized appearance.",
+        "tags": ["Immediate glow", "Radiant skin", "Premium skincare experience"]
+      },
+      {
+        "title": "Premium Skincare Protocols",
+        "desc": "Personalized combinations according to facial objectives and individual needs.",
+        "tags": ["Glow memberships", "Antiaging bundles", "Rejuvenation programs"]
+      }
+    ],
+    "cta": "Check availability"
+  },
+  "process": {
+    "label": "The MJ Experience",
+    "title": "How does the facial rejuvenation experience work?",
+    "desc": "We want you to enjoy the process with peace of mind, clarity and professional guidance.",
+    "items": [
+      { "step": "01", "title": "Personalized facial assessment", "desc": "We analyze your skin, goals and specific needs." },
+      { "step": "02", "title": "Design of the ideal protocol", "desc": "We create a personalized experience oriented towards glow and facial harmonization." },
+      { "step": "03", "title": "Application of the treatment", "desc": "We perform the procedure under professional and personalized protocols." },
+      { "step": "04", "title": "Follow-up and recommendations", "desc": "We accompany you with post-care and individualized follow-up." }
+    ],
+    "stats": {
+      "duration": "Duration",
+      "durationValue": "Variable according to protocol",
+      "recovery": "Recovery",
+      "recoveryValue": "Depends on each treatment",
+      "care": "Post-care",
+      "careValue": "Explained during your assessment"
+    }
+  },
+  "forWho": {
+    "title": "For whom is facial rejuvenation recommended?",
+    "items": [
+      "Natural facial glow",
+      "Progressive rejuvenation",
+      "Skin well-being",
+      "Premium antiaging protocols",
+      "Elegant facial harmonization",
+      "Personalized advanced skincare",
+      "Fresh and radiant appearance"
+    ],
+    "footer": "\"Each experience is adapted individually according to the needs of the skin.\""
+  },
+  "natural": {
+    "title": "Natural Results and Healthy Glow",
+    "p1": "At MJ Estética & Wellness Center we believe in elegant and harmonious aesthetics.",
+    "p2": "We don't look for exaggerated results. We seek to help you enhance your natural beauty with protocols designed to provide facial well-being and a healthy glow.",
+    "focus": {
+      "title": "That's why we prioritize:",
+      "items": ["Natural radiance", "Progressive rejuvenation", "Uniform texture", "Aesthetic well-being", "Premium facial harmonization"]
+    }
+  },
+  "testimonials": {
+    "label": "MJ Voices",
+    "title": "What our patients say",
+    "items": [
+      "My skin looked much more radiant and fresh.",
+      "I loved that the result looked natural and elegant.",
+      "I felt my face revitalized without looking different.",
+      "The experience was super personalized and relaxing."
+    ]
+  },
+  "faq": {
+    "label": "Resolving doubts",
+    "title": "Frequently Asked Questions"
+  },
+  "programs": {
+    "title": "Premium Facial Rejuvenation Programs",
+    "p1": "At MJ Estética & Wellness Center we have:",
+    "items": [
+      "Rejuvenation programs",
+      "Glow memberships",
+      "Premium skincare protocols",
+      "Antiaging bundles",
+      "Facial wellness experiences"
+    ],
+    "footer": "\"Check availability during your personalized assessment.\""
+  },
+  "whyUs": {
+    "title": "Why choose MJ Estética & Wellness Center?",
+    "p1": "Because we understand that every skin deserves a personalized experience.",
+    "items": [
+      "Individualized protocols",
+      "Modern aesthetic technology",
+      "Professional care",
+      "Premium skincare experience",
+      "Comfortable and safe environment",
+      "Personalized follow-up",
+      "Natural and progressive approach"
+    ],
+    "footer": "\"We focus on helping you feel good about yourself while taking care of the naturalness of your skin.\""
+  },
+  "leadMagnet": {
+    "label": "Free Resource",
+    "title": "Download the Guide for FREE: <br /> <span className=\"text-primary italic font-light block mt-2\">“How to improve the results of your facial rejuvenation”</span>",
+    "learn": "Learn:",
+    "items": [
+      "How to boost facial glow",
+      "Habits that support skin well-being",
+      "Post-treatment skincare recommendations",
+      "Tips to prolong facial radiance",
+      "Wellness tips for progressive rejuvenation"
+    ],
+    "cta": "REQUEST GUIDE VIA WHATSAPP",
+    "footer": "Exclusive gift for our patients"
+  },
+  "final": {
+    "title": "Schedule your facial assessment today",
+    "p1": "If you are looking for advanced facial rejuvenation, natural glow and premium skincare protocols in Turrialba, we are ready to help you.",
+    "items": [
+      "Schedule your facial assessment",
+      "Discover the ideal protocol for your skin",
+      "Check availability",
+      "Write to us on WhatsApp today"
+    ],
+    "cta": "SCHEDULE TODAY",
+    "footer": "✨ Natural glow, facial harmonization and premium aesthetic wellness"
+  }
+}

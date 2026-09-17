@@ -1,0 +1,177 @@
+{
+  "intro": {
+    "tagline": "Confidence and Well-being",
+    "p1": "At MJ Estética & Wellness Center we understand that feeling good about your body also impacts your confidence, security and well-being. That's why we create butt lift protocols focused on progressive, natural and visually harmonic results.",
+    "items": [
+      "Personalized body treatments",
+      "Professional individual assessment",
+      "Progressive and natural results",
+      "Comfortable, private and premium environment",
+      "Protocols adapted to each body"
+    ],
+    "highlight": "🍑 Discover how to improve the appearance of your buttocks without losing naturalness"
+  },
+  "desires": {
+    "title": "Many people desire:",
+    "items": [
+      "Improve firmness",
+      "Increase visual projection",
+      "Achieve a more harmonic appearance",
+      "Complement their fitness routines",
+      "Feel more secure with their body",
+      "Recover body confidence"
+    ],
+    "problem": "The problem is that not all treatments offer natural or personalized results.",
+    "approach": "Our integral Wellness approach prioritizes:",
+    "approachItems": ["Naturalness", "Safety", "Body harmonization", "Individual assessment", "Progressive results"]
+  },
+  "whatIs": {
+    "title": "What is a butt lift?",
+    "desc": "A butt lift is an aesthetic body treatment designed to help improve the appearance, firmness and contour of the buttocks through personalized protocols oriented towards harmonic and natural results.",
+    "note": "Every body responds differently. That's why at MJ we perform a prior body assessment to design a protocol adapted to your goals, habits and body type.",
+    "apps": "The approach may include different body techniques, aesthetic technology and complementary protocols aimed at:",
+    "appItems": [
+      "improve buttock firmness",
+      "stimulate a more lifted appearance",
+      "favor body contour",
+      "complement fitness routines",
+      "enhance body harmonization"
+    ],
+    "closing": "Most importantly: we seek progressive and real results, avoiding exaggerated or artificial appearances."
+  },
+  "benefits": {
+    "label": "✨ Benefits",
+    "title": "Benefits most sought after by our patients",
+    "items": [
+      "Firmer and more toned appearance",
+      "Better visual projection of the buttocks",
+      "More harmonic body contour",
+      "Ideal complement for exercise and body wellness",
+      "Progressive and natural results",
+      "Feeling of greater security and body confidence",
+      "Personalized protocols according to goals",
+      "Better body aesthetic harmonization"
+    ],
+    "footer": "Many patients come seeking to feel better about their body without the need for extreme invasive procedures."
+  },
+  "who": {
+    "title": "💬 Who is it recommended for?",
+    "intro": "A butt lift can be recommended for people who want to:",
+    "items": [
+      { "t": "Improve body firmness", "d": "Over time, with weight changes or a sedentary lifestyle, buttocks can lose firmness and shape." },
+      { "t": "Improve body contour", "d": "Ideal for those who want a more harmonic and proportionate appearance." },
+      { "t": "Complement physical training", "d": "Many people train constantly but wish to visually enhance their results." },
+      { "t": "Seek natural results", "d": "Patients who prefer an elegant, progressive and realistic body aesthetic." },
+      { "t": "Improve physical confidence", "d": "When you feel good about your body, that is also reflected in your personal security." }
+    ]
+  },
+  "process": {
+    "label": "🔬 The Process",
+    "title": "How does a butt lift session work?",
+    "steps": [
+      { "s": "Step 1", "t": "Personalized body assessment", "d": "We analyze goals, habits, body composition and expectations to define the best protocol." },
+      { "s": "Step 2", "t": "Protocol design", "d": "We create an approach adapted to your body needs and desired projection level." },
+      { "s": "Step 3", "t": "Treatment application", "d": "Depending on the protocol, body techniques, aesthetic technology and complementary procedures may be used." },
+      { "s": "Step 4", "t": "Follow-up and recommendations", "d": "We guide you with complementary habits to enhance progressive and natural results." }
+    ],
+    "items": [
+      { "l": "Approximate duration", "v": "Between 45 and 90 minutes per session." },
+      { "l": "Recommended frequency", "v": "Varies according to body assessment and individual goals." },
+      { "l": "Recovery", "v": "Most protocols allow for a quick return to daily activities." }
+    ]
+  },
+  "sessions": {
+    "title": "📈 How many sessions are recommended?",
+    "intro": "The number of sessions depends on:",
+    "factors": [
+      "Aesthetic goals",
+      "Current body status",
+      "Daily habits",
+      "Physical routine",
+      "Desired level of firmness",
+      "Professional assessment"
+    ],
+    "note": "Many patients opt for full body programs to boost results and maintain body harmonization in the long term.",
+    "alsoLabel": "We also have:",
+    "alsoItems": ["✨ body packages", "✨ wellness programs", "✨ combined protocols", "✨ personalized follow-up"]
+  },
+  "leadMagnet": {
+    "label": "Exclusive Resource",
+    "title": "🎁 FREE GUIDE",
+    "subtitle": "How to improve the appearance and firmness of the buttocks",
+    "learn": "You will learn:",
+    "items": [
+      "habits that help improve firmness",
+      "body recommendations",
+      "errors that affect results",
+      "wellness tips",
+      "how to boost aesthetic treatments",
+      "complementary body care"
+    ],
+    "info": "You will also receive information about our personalized butt lift protocols in Turrialba.",
+    "ctaLabel": "Comment the word:",
+    "word": "GLÚTEO",
+    "directLabel": "Instagram Direct",
+    "directCta": "📸 Go to our profile",
+    "footer": "Receive your guide instantly via direct message."
+  },
+  "philosophy": {
+    "title": "📸 Real and natural results",
+    "intro": "At MJ Estética & Wellness Center we believe in:",
+    "items": ["body harmony", "naturalness", "progressive evolution", "elegant and realistic aesthetics"],
+    "closing": "That's why we avoid exaggerated or artificial results. Our protocols seek for you to feel comfortable, secure and authentic with your body."
+  },
+  "testimonials": {
+    "title": "❤️ Real stories of transformation",
+    "items": [
+      "“I was looking for something natural to complement my training and I really noticed a better appearance and firmness.”",
+      "“I loved the personalized approach. I felt supported throughout the entire process.”",
+      "“I didn't want anything exaggerated, just to feel more secure with my body, and the result was exactly what I was looking for.”"
+    ],
+    "author": "MJ Patient"
+  },
+  "faqs": {
+    "title": "❓ Frequently asked questions",
+    "items": [
+      { "q": "Is the butt lift invasive?", "a": "It depends on the recommended protocol. During the body assessment we explain all available options and which best suits your goals." },
+      { "q": "When are results seen?", "a": "Many patients begin to notice progressive changes as sessions advance and healthy habits are maintained." },
+      { "q": "Are results natural?", "a": "Yes. Our approach prioritizes body harmonization and a natural aesthetic appearance." },
+      { "q": "Can it be combined with exercise?", "a": "Yes. In fact, many patients use the treatment as a body wellness complement." },
+      { "q": "How many sessions do I need?", "a": "Every body is different. The ideal number is defined during the personalized evaluation." },
+      { "q": "Is there recovery time?", "a": "Many protocols allow for a quick return to habitual activities." },
+      { "q": "Does it help with firmness?", "a": "One of the main objectives is to contribute to improving the appearance of firmness and body projection." },
+      { "q": "What care should I take?", "a": "We will provide you with specific recommendations according to the protocol applied and your body goals." }
+    ]
+  },
+  "whyUs": {
+    "title": "💎 Why choose MJ Estética & Wellness Center?",
+    "intro": "Because we don't work with generic solutions.",
+    "listLabel": "We work with:",
+    "items": [
+      "individual body assessment",
+      "personalized protocols",
+      "integral wellness focus",
+      "experience in body aesthetics",
+      "premium and comfortable environment",
+      "professional follow-up",
+      "progressive and harmonic results"
+    ],
+    "closing": "Our goal is to help you feel better about yourself in a natural and safe way."
+  },
+  "location": {
+    "title": "📍 Butt Lift in Turrialba",
+    "items": [
+      "Accessible location in Turrialba",
+      "Nearby parking",
+      "WhatsApp service",
+      "Flexible hours",
+      "Comfortable and professional environment"
+    ],
+    "ctaTagline": "🚨 Schedule your body assessment today",
+    "ctaTitle": "Your body deserves a personalized, natural and professional approach.",
+    "ctaHighlight": "🍑 Discover the ideal protocol for you",
+    "cta": "CHECK AVAILABILITY TODAY",
+    "ctaFooter": "💬 Write us on WhatsApp and schedule your assessment at MJ",
+    "visit": "👉 VISIT NOW: MJ ESTÉTICA & WELLNESS CENTER"
+  }
+}

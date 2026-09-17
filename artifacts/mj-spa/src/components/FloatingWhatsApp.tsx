@@ -15,7 +15,7 @@ export function FloatingWhatsApp() {
       aria-label="Contactar por WhatsApp"
     >
       <MessageCircle className="w-7 h-7 group-hover:scale-110 transition-transform" />
-      
+
       {/* Pulse effect */}
       <span className="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"></span>
     </motion.a>

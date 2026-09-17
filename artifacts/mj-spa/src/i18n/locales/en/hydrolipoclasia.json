@@ -1,0 +1,84 @@
+{
+  "whatIs": {
+    "title": "What is hydrolipoclasia?",
+    "p1": "Hydrolipoclasia is a non-invasive body treatment designed to help reduce localized fat and improve body contour through specialized protocols that combine different technologies and aesthetic techniques.",
+    "p2": "This treatment is usually applied in areas where fat tends to accumulate and is difficult to reduce through diet or exercise alone.",
+    "important": "It is important to understand that:",
+    "importantItems": ["It does not replace surgery", "It does not substitute healthy habits", "Results are progressive", "Requires professional follow-up"],
+    "zonesTitle": "Common areas:",
+    "zones": ["Abdomen", "Waist", "Flanks", "Back", "Arms", "Legs", "Lumbar area"]
+  },
+  "who": {
+    "title": "For whom is this treatment recommended?",
+    "items": [
+      "Want to improve their body contour",
+      "Seek to reduce localized fat accumulations",
+      "Want a non-invasive treatment",
+      "Wish to complement exercise and healthy eating",
+      "Seek to visually improve certain areas of the body"
+    ],
+    "frustrationTitle": "If you feel like you are making efforts and yet there are areas that don't change… you are not alone.",
+    "frustrationLabel": "Many people come to MJ frustrated because:",
+    "frustrations": [
+      "“I exercise and my abdomen doesn't go down”",
+      "“My waist doesn't improve even if I take care of myself”",
+      "“I feel accumulation on flanks or back”",
+      "“I want to look better without surgery”"
+    ],
+    "frustrationNote": "And that's precisely where a professional assessment can help you discover the right protocol for your body."
+  },
+  "howItWorks": {
+    "title": "How does a hydrolipoclasia session work?",
+    "steps": [
+      {
+        "s": "Step 1",
+        "t": "Personalized assessment",
+        "d": "We analyze goals, areas, habits and type of accumulation to give you personalized recommendations."
+      },
+      {
+        "s": "Step 2",
+        "t": "Protocol application",
+        "d": "The treatment is performed according to the area and specific need of your body."
+      },
+      {
+        "s": "Step 3",
+        "t": "Additional protocols",
+        "d": "Depending on the case, additional protocols may be recommended to boost results."
+      },
+      {
+        "s": "Step 4",
+        "t": "Improve your results",
+        "d": "We guide you on hydration, nutrition, physical activity and aftercare."
+      }
+    ]
+  },
+  "includes": {
+    "title": "What it includes",
+    "desc": "Your session includes:",
+    "items": [
+      "Initial body assessment",
+      "Specialized Hydrolipoclasia protocol",
+      "Lymphatic drainage or ultrasound (depending on case)",
+      "Post-session recommendations"
+    ],
+    "note": "* Results and number of sessions vary by individual."
+  },
+  "info": {
+    "title": "Important information",
+    "durationLabel": "Approximate duration",
+    "durationValue": "45–90 minutes",
+    "freqLabel": "Frequency",
+    "freqValue": "According to professional assessment",
+    "recoveryLabel": "Recovery",
+    "recoveryValue": "Minimal in most cases",
+    "resultsLabel": "Results",
+    "resultsValue": "Progressive and personalized"
+  },
+  "sessions": {
+    "title": "How many sessions are recommended?",
+    "desc": "The number of sessions depends on the treated area, your body goal, personal habits, professional assessment and your body's individual response.",
+    "quote": "\"Many people observe progressive changes as sessions progress and they maintain healthy habits.\"",
+    "featureLabel": "At MJ we have:",
+    "features": ["Personalized body packages", "Professional follow-up", "Protocols adapted to each body"]
+  }
+}

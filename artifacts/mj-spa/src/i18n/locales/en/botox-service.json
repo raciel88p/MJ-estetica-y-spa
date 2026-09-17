@@ -1,0 +1,149 @@
+{
+  "intro": {
+    "quote": "\"At MJ Estética & Wellness Center, we design Botox Full Face protocols focused on achieving a more harmonious, elegant, and natural appearance, while fully respecting your face's expression.\"",
+    "items": [
+      "Subtle and sophisticated results",
+      "Personalized facial evaluation",
+      "Individualized protocols",
+      "Professional care in a premium and safe environment",
+      "Focus on naturalness and facial harmonization"
+    ]
+  },
+  "leadMagnet": {
+    "label": "Exclusive Resource",
+    "title": "FREE Guide: <br className=\"md:hidden\" /> <span className=\"text-primary italic font-light\">“How to make your Botox last longer”</span>",
+    "desc": "Comment the word <span className=\"text-white font-bold\">“BOTOX”</span> on our Instagram and receive immediate access to our exclusive guide with:",
+    "items": [
+      "Post-care tips",
+      "Habits that prolong results",
+      "Errors you should avoid",
+      "Professional tips for maintaining a fresh and natural look"
+    ],
+    "cta": "GO TO INSTAGRAM"
+  },
+  "whatIs": {
+    "title": "What is <span className=\"text-primary italic font-light\">Botox Full Face?</span>",
+    "p1": "Botox Full Face is a facial harmonization protocol designed to help smooth expression lines and provide a more rested appearance through strategic and personalized applications.",
+    "highlight": "Unlike exaggerated approaches, the goal is NOT to freeze the face or eliminate your natural expression.",
+    "objectiveLabel": "The true goal is:",
+    "items": [
+      "Smooth dynamic lines",
+      "Relax facial tensions",
+      "Maintain naturalness",
+      "Improve facial harmony",
+      "Help prevent future expression marks"
+    ],
+    "imageQuote": "\"At MJ, each face is evaluated individually because we understand that natural beauty should not look artificial.\""
+  },
+  "zones": {
+    "title": "What areas can it help treat?",
+    "desc": "Our protocol can help work on different facial areas according to professional evaluation:",
+    "items": [
+      "Forehead", "Between eyebrows", "Crow's feet", "Gummy smile",
+      "Chin", "Neck", "Dynamic lines", "Complete harmonization"
+    ],
+    "footer": "Each application is performed strategically to preserve natural movement and expressiveness."
+  },
+  "narrative": {
+    "title": "Imagine looking rested… <br /> <span className=\"text-primary italic font-light\">even on your busiest days</span>",
+    "items": [
+      "Looking fresher",
+      "Reducing signs of fatigue",
+      "Preventing expression lines",
+      "Maintaining an elegant and natural face",
+      "Improving facial harmonization without surgery"
+    ],
+    "quote": "\"The best Botox is the one that is NOT noticed… but IS perceived.\"",
+    "desc": "When the protocol is well-designed, people notice that you look better, more relaxed, and rejuvenated, without understanding exactly why. That is intelligent facial harmonization."
+  },
+  "benefits": {
+    "title": "Benefits of Botox Full Face",
+    "items": [
+      "More rested appearance",
+      "More relaxed facial expression",
+      "Smoothing of expression lines",
+      "Natural and subtle results",
+      "Prevention of dynamic marks",
+      "Elegant facial harmonization",
+      "Quick recovery",
+      "Minimally invasive procedure"
+    ]
+  },
+  "process": {
+    "title": "How does a session work?",
+    "desc": "A protocol designed for your comfort and safety.",
+    "steps": [
+      { "step": "Step 1", "title": "Personalized facial evaluation", "desc": "We analyze your expressions, facial symmetry, and aesthetic goals." },
+      { "step": "Step 2", "title": "Protocol design", "desc": "An individualized plan is defined according to the areas to be treated and the expected result." },
+      { "step": "Step 3", "title": "Application", "desc": "The procedure is usually quick and with minimal discomfort." },
+      { "step": "Step 4", "title": "Post-care", "desc": "We provide specific recommendations to optimize duration and results." }
+    ],
+    "duration": "20–40 minutes",
+    "durationLabel": "Duration",
+    "recovery": "Immediate / Quick",
+    "recoveryLabel": "Recovery",
+    "results": "Progressive and natural",
+    "resultsLabel": "Results"
+  },
+  "timing": {
+    "title": "When do you start noticing results?",
+    "desc": "Changes usually begin to be perceived progressively during the days following the procedure.",
+    "factorLabel": "The final result will depend on:",
+    "factors": ["Facial evaluation", "Skin type", "Muscular expressiveness", "Patient habits", "Post-care"],
+    "tags": ["Naturalness", "Harmonious expression", "Elegant results"]
+  },
+  "testimonials": {
+    "label": "The voice of our patients",
+    "title": "What they love most",
+    "items": [
+      "“I looked tired all the time and now my face looks fresh but completely natural.”",
+      "“I was afraid of looking stiff, but the result was super subtle.”",
+      "“You can really see the difference in facial harmony without losing expression.”",
+      "“I loved that everything was explained to me and that the approach was so natural.”"
+    ]
+  },
+  "myth": {
+    "title": "Does Botox Full Face leave the face stiff?",
+    "highlight": "\"Not necessarily.\"",
+    "desc": "When the treatment is performed correctly and personally, the goal is to maintain natural movement and harmonious facial expression.",
+    "footer": "At MJ Estética & Wellness Center, we prioritize subtle and elegant results."
+  },
+  "whyUs": {
+    "title": "Why choose MJ Estética & Wellness Center?",
+    "quote": "\"Because we understand that modern aesthetics is not about changing your face… but about enhancing it intelligently and naturally.\"",
+    "items": [
+      "Personalized facial protocols",
+      "Professional aesthetic care",
+      "Premium and human focus",
+      "Results oriented to naturalness",
+      "Comfortable, elegant, and safe environment",
+      "Experience in facial harmonization"
+    ],
+    "footer": "Our goal is to help you look fresh, rested, and confident… without losing your essence."
+  },
+  "location": {
+    "label": "Strategic Location",
+    "title": "Botox Full Face in Turrialba 📍",
+    "desc": "We serve patients in Turrialba and nearby areas seeking high-level results in a trusted clinical environment.",
+    "items": [
+      "Natural facial rejuvenation",
+      "Prevention of expression lines",
+      "Rested appearance",
+      "Premium facial harmonization",
+      "Personalized and safe protocols"
+    ],
+    "tags": [
+      "🚗 Parking available",
+      "📲 WhatsApp support",
+      "🕒 Flexible schedules"
+    ],
+    "cta": "Book My Assessment"
+  },
+  "faqs": {
+    "label": "Answering questions",
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "Does Botox hurt?", "a": "The procedure is usually quick and with minimal discomfort." }
+    ]
+  }
+}

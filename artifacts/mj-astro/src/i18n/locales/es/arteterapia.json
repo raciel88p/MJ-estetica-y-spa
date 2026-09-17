@@ -1,0 +1,120 @@
+{
+  "problem": {
+    "title": "Clases de Pintura Turrialba: Arteterapia y un cafésito para tu bienestar",
+    "desc": "¿Buscas una actividad diferente en Turrialba para relajarte, desconectarte del estrés y dedicarte tiempo de calidad?",
+    "instagram": "Si comentaste la palabra ARTETERAPIA en nuestro Instagram, llegaste al lugar indicado.",
+    "p1": "Vivimos en una época donde el estrés, las preocupaciones y la sobrecarga mental forman parte de la rutina diaria. Muchas personas en Turrialba buscan actividades para reducir el estrés y salir de la rutina.",
+    "p2": "En Mj estética and Wellness Center hemos creado una experiencia única que combina arteterapia, pintura de ositos de resina y café, diseñada para ayudarte a liberar tensiones, estimular tu creatividad y mejorar tu bienestar emocional en un ambiente acogedor y seguro."
+  },
+  "whatIs": {
+    "title": "¿Qué es la Arteterapia?",
+    "desc": "La arteterapia es una técnica de bienestar que utiliza el proceso creativo como herramienta para expresar emociones, reducir el estrés y mejorar la salud emocional.",
+    "points": [
+      "No necesitas experiencia artística.",
+      "No importa si nunca has tomado un pincel.",
+      "Aquí no buscamos artistas. Buscamos ayudarte a sentirte mejor."
+    ],
+    "items": [
+      "Pintura de ositos de resina",
+      "Café de especialidad",
+      "Bienestar emocional",
+      "Conexión personal",
+      "Reducción de ansiedad",
+      "Espacio creativo libre",
+      "Ambiente wellness"
+    ]
+  },
+  "whyJoin": {
+    "title": "¿Por Qué Participar en una Sesión?",
+    "cards": [
+      { "t": "Reduce el Estrés", "d": "La pintura ayuda a enfocar la atención en el presente, disminuyendo pensamientos repetitivos." },
+      { "t": "Mejora Tu Bienestar", "d": "El arte permite expresar emociones de forma natural y segura en un ambiente acogedor." },
+      { "t": "Estimula la Creatividad", "d": "Desarrolla nuevas ideas y fortalece tu capacidad de resolución de problemas." }
+    ],
+    "details": [
+      "Sesiones de 120 min",
+      "Osito de resina y materiales",
+      "Café incluido",
+      "Turrialba Centro"
+    ]
+  },
+  "who": {
+    "title": "¿Quiénes Pueden Participar?",
+    "desc": "Nuestra experiencia de Arteterapia en Turrialba es ideal para cualquier persona que quiera relajarse y disfrutar un momento para sí misma.",
+    "items": [
+      "Personas con estrés laboral",
+      "Parejas buscando algo diferente",
+      "Emprendedores y profesionales",
+      "Grupos de amigos o amigas",
+      "Amantes del café y el arte",
+      "Personas en búsqueda wellness",
+      "Cualquier persona que quiera relajarse",
+      "Buscadores de bienestar emocional"
+    ]
+  },
+  "includes": {
+    "title": "¿Qué Incluye Tu Experiencia?",
+    "items": [
+      "Osito de resina para decorar",
+      "Materiales de pintura (pinceles, acrílicos)",
+      "Café de especialidad durante la actividad",
+      "Guía y acompañamiento durante la sesión",
+      "Ambiente relajante y sensorial",
+      "Tu obra finalizada para llevar a casa"
+    ],
+    "quote": "No existen reglas estrictas. No existe presión. Solo existe el momento presente.",
+    "cta": "RESERVAR MI SESIÓN"
+  },
+  "whyUs": {
+    "title": "¿Por Qué Elegir Mj estética and Wellness Center?",
+    "desc": "En Mj estética and Wellness Center entendemos que el bienestar va mucho más allá de la estética. Creemos que sentirse bien por dentro también se refleja por fuera.",
+    "items": [
+      "Bienestar Integral",
+      "Atención Empática",
+      "Ambiente Seguro",
+      "Calidad Premium",
+      "Conexión Personal",
+      "Ubicación en Turrialba"
+    ]
+  },
+  "testimonials": {
+    "title": "Descubriendo el Bienestar",
+    "items": [
+      "Llegué diciendo 'No sé pintar' y terminé descubriendo que lo importante era cómo me sentía. Salí mucho más tranquila.",
+      "Una forma diferente de conectar conmigo misma. El café delicioso y el ambiente es simplemente mágico.",
+      "Me ayudó a soltar el estrés de la semana. No necesitas ser artista, solo necesitas querer sentirte bien."
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      { "q": "¿Necesito saber pintar?", "a": "No. No buscamos artistas, buscamos ayudarte a sentirte mejor. La experiencia está diseñada para que cualquier persona pueda disfrutarla sin importar su nivel artístico." },
+      { "q": "¿Qué incluye la sesión?", "a": "Incluye todos los materiales de pintura, una deliciosa taza de café (o bebida alternativa), guía durante la actividad y un ambiente diseñado para la relajación." },
+      { "q": "¿Quiénes pueden participar?", "a": "Es ideal para personas con estrés laboral, parejas, grupos de amigos o cualquier persona que quiera dedicar tiempo a su bienestar emocional y salir de la rutina." },
+      { "q": "¿Dónde están ubicados?", "a": "En Mj estética and Wellness Center, en el centro de Turrialba, con parqueo disponible." }
+    ]
+  },
+  "leadMagnet": {
+    "tagline": "🎁 RECURSO GRATUITO EXCLUSIVO",
+    "title": "Mejora Tu Bienestar Emocional",
+    "subtitle": "\"Descarga gratis nuestra guía exclusiva de Arteterapia\"",
+    "wordLabel": "💌 Comenta la palabra:",
+    "word": "ARTETERAPIA",
+    "desc": "Dentro encontrarás:",
+    "items": [
+      "Técnicas básicas de arteterapia para casa.",
+      "Beneficios científicos para reducir el estrés.",
+      "Ejercicios prácticos de conexión emocional.",
+      "Consejos para aprovechar mejor cada sesión."
+    ],
+    "cta": "SOLICITAR GUÍA GRATUITA"
+  },
+  "finalCta": {
+    "title": "Vive una Experiencia Diferente: Pintura de Ositos y Café",
+    "desc": "Da el primer paso hacia tu bienestar hoy mismo. Los espacios son limitados para garantizar una experiencia personalizada.",
+    "location": "Mj estética and Wellness Center",
+    "city": "Turrialba Centro, Cartago",
+    "cta1": "RESERVAR SESIÓN",
+    "cta2": "SOLICITAR INFORMACIÓN"
+  }
+}

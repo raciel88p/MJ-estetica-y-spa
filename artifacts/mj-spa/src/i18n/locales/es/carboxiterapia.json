@@ -1,0 +1,133 @@
+{
+  "intro": {
+    "title": "Experiencias enfocadas en tu bienestar estético",
+    "desc": "En MJ Estética & Wellness Center diseñamos experiencias enfocadas en ayudarte a mejorar la apariencia de la piel, apoyar protocolos corporales y potenciar tu bienestar estético en un ambiente profesional, cómodo y totalmente personalizado.",
+    "items": [
+      "Atención individualizada",
+      "Protocolos personalizados",
+      "Resultados progresivos y naturales",
+      "Ambiente profesional y cómodo",
+      "Enfoque wellness integral"
+    ]
+  },
+  "leadMagnet": {
+    "label": "Regalo Exclusivo",
+    "title": "🎁 GUÍA GRATUITA",
+    "instagram": "Comenta la palabra “Carbo” en nuestro Instagram y recibe GRATIS nuestra guía:",
+    "guideTitle": "“Cómo mejorar los resultados de la Carboxiterapia”",
+    "learn": "Aprenderás:",
+    "items": [
+      "Cómo potenciar tus resultados",
+      "Qué hábitos ayudan al tratamiento",
+      "Cuidados recomendados",
+      "Cómo complementar sesiones corporales y faciales",
+      "Consejos wellness para mejores resultados progresivos"
+    ],
+    "instaCta": "Ir a Instagram"
+  },
+  "ctaCard": {
+    "title": "👉 Agenda tu valoración hoy",
+    "waLabel": "WhatsApp Business",
+    "waCta": "📲 Escríbenos ahora",
+    "locLabel": "Ubicación",
+    "locValue": "📍 Atención en Turrialba",
+    "dateLabel": "Citas",
+    "dateValue": "🗓️ Consulta disponibilidad"
+  },
+  "whatIs": {
+    "title": "¿Qué es la Carboxiterapia?",
+    "desc": "La carboxiterapia es un tratamiento complementario utilizado en estética facial y corporal que forma parte de protocolos wellness orientados a mejorar la apariencia de la piel y apoyar distintos objetivos estéticos.",
+    "focus": "En MJ Estética & Wellness Center cada protocolo se adapta a la necesidad individual de cada persona, considerando:",
+    "items": [
+      { "t": "Zona a tratar" },
+      { "t": "Objetivos estéticos" },
+      { "t": "Hábitos" },
+      { "t": "Tipo de piel" },
+      { "t": "Bienestar general" }
+    ],
+    "applications": "Apoyo en tratamientos relacionados con:",
+    "appItems": [
+      "Apariencia de celulitis",
+      "Flacidez",
+      "Estrías",
+      "Ojeras",
+      "Textura de piel",
+      "Rejuvenecimiento facial y corporal",
+      "Bienestar estético integral"
+    ],
+    "note": "Lo más importante es que los resultados suelen ser progresivos y personalizados, buscando una apariencia más natural y armónica."
+  },
+  "zones": {
+    "title": "¿Qué zonas o preocupaciones puede ayudar a mejorar?",
+    "desc": "La carboxiterapia puede formar parte de protocolos orientados a distintas necesidades corporales y faciales.",
+    "bodyTitle": "Zonas corporales",
+    "bodyItems": ["Abdomen", "Piernas", "Glúteos", "Brazos", "Espalda", "Cintura"],
+    "facialTitle": "Zonas faciales",
+    "facialItems": ["Ojeras", "Contorno facial", "Textura de piel", "Apariencia de flacidez facial"],
+    "commonTitle": "Objetivos comunes",
+    "commonItems": [
+      "Mejorar apariencia de celulitis",
+      "Complementar protocolos de flacidez",
+      "Apoyar tratamientos de estrías",
+      "Mejorar apariencia general de la piel",
+      "Potenciar bienestar corporal",
+      "Favorecer protocolos de rejuvenecimiento",
+      "Complementar tratamientos corporales wellness"
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios de la Carboxiterapia",
+    "desc": "En MJ Estética & Wellness Center creemos en resultados reales, progresivos y personalizados. Por eso nuestros protocolos están orientados a:",
+    "items": [
+      "Mejorar la apariencia general de la piel",
+      "Complementar tratamientos corporales y faciales",
+      "Favorecer una apariencia más uniforme",
+      "Apoyar objetivos estéticos personalizados",
+      "Potenciar bienestar corporal integral",
+      "Trabajar con naturalidad y armonía estética",
+      "Crear experiencias wellness enfocadas en el cuidado integral"
+    ],
+    "note": "Cada persona vive el tratamiento de forma distinta y por eso realizamos una evaluación individual antes de iniciar cualquier protocolo."
+  },
+  "methodology": {
+    "label": "Metodología MJ",
+    "title": "Qué incluye tu sesión",
+    "desc": "Tu sesión incluye:",
+    "steps": [
+      { "s": "Paso 1", "t": "Evaluación personalizada", "d": "Analizamos tus objetivos, zonas a trabajar y necesidades específicas." },
+      { "s": "Paso 2", "t": "Diseño del protocolo", "d": "Creamos un protocolo personalizado según tu caso." },
+      { "s": "Paso 3", "t": "Aplicación del tratamiento", "d": "La sesión se realiza en un ambiente profesional y cómodo." },
+      { "s": "Paso 4", "t": "Recomendaciones y seguimiento", "d": "Te guiamos con recomendaciones wellness para ayudar a potenciar resultados progresivos." }
+    ]
+  },
+  "info": {
+    "title": "Información importante",
+    "items": [
+      { "l": "Duración aproximada", "v": "30 a 60 minutos" },
+      { "l": "Frecuencia", "v": "según valoración personalizada" },
+      { "l": "Cuidados posteriores", "v": "indicados por el especialista" },
+      { "l": "Recuperación", "v": "normalmente rápida" }
+    ],
+    "note": "* Los resultados y la cantidad de sesiones varían según cada individuo."
+  },
+  "sessions": {
+    "title": "¿Cuántas sesiones se recomiendan?",
+    "desc": "La cantidad de sesiones depende de diversos factores que analizamos en tu primera cita:",
+    "factors": ["objetivos personales", "zona tratada", "hábitos complementarios", "evaluación individual", "protocolo recomendado"],
+    "orient": "Durante la valoración podremos orientarte sobre la mejor opción para ti.",
+    "optionsTitle": "Opciones comunes",
+    "options": [
+      { "t": "Paquetes corporales", "d": "Protocolos intensivos para objetivos específicos." },
+      { "t": "Mantenimiento wellness", "d": "Sesiones periódicas para preservar resultados." },
+      { "t": "Protocolos combinados", "d": "Sinergia con otros tratamientos de nuestro centro." },
+      { "t": "Seguimiento personalizado", "d": "Ajuste continuo según evolución." }
+    ]
+  },
+  "philosophy": {
+    "title": "Resultados reales y progresivos",
+    "desc": "Nuestra filosofía wellness estética se enfoca en acompañarte durante el proceso para que cada protocolo se adapte a tus necesidades reales.",
+    "tags": ["naturales", "armónicos", "progresivos", "personalizados"],
+    "ctaTitle": "¿Lista para iniciar tu protocolo?",
+    "cta": "AGENDAR CITA POR WHATSAPP"
+  }
+}

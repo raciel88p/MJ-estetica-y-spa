@@ -1,0 +1,176 @@
+{
+  "intro": {
+    "tagline": "Confianza y Armonía",
+    "title": "Tratamiento corporal diseñado para apoyar la apariencia y firmeza del busto mediante protocolos personalizados orientados a resultados naturales, progresivos y armónicos.",
+    "items": [
+      "Atención personalizada",
+      "Protocolos individualizados",
+      "Resultados naturales",
+      "Ambiente premium y cómodo",
+      "Enfoque wellness femenino"
+    ],
+    "cta1": "Agenda tu valoración corporal hoy",
+    "cta2": "Consulta disponibilidad vía WhatsApp",
+    "footer": "👉 Descubre el protocolo ideal para ti"
+  },
+  "empathy": {
+    "title": "¿Sientes que tu busto perdió firmeza o armonía?",
+    "p1": "El paso del tiempo, los cambios hormonales, el embarazo, la lactancia o la pérdida de peso pueden modificar la apariencia del busto y afectar cómo te sientes contigo misma.",
+    "quote": "\"Muchas mujeres no buscan verse perfectas. Buscan volver a sentirse cómodas, femeninas y seguras frente al espejo.\"",
+    "p2": "En <span className=\"font-bold\">MJ Estética & Wellness Center</span> entendemos que cada cuerpo es distinto. Por eso desarrollamos protocolos personalizados enfocados en bienestar corporal, naturalidad y armonización femenina.",
+    "p3": "Aquí no trabajamos cambios exagerados. Trabajamos resultados progresivos, elegantes y alineados con tu cuerpo."
+  },
+  "leadMagnet": {
+    "label": "Recurso Gratuito",
+    "title": "Descarga GRATIS la guía:",
+    "subtitle": "“Cómo mejorar la apariencia y firmeza del busto naturalmente”",
+    "learn": "Dentro de esta guía descubrirás:",
+    "items": [
+      "Hábitos que ayudan a mejorar la firmeza corporal",
+      "Errores que aceleran la pérdida de elasticidad",
+      "Cómo funcionan los protocolos wellness corporales",
+      "Qué esperar de un tratamiento profesional",
+      "Recomendaciones post embarazo y cambios hormonales",
+      "Consejos para mantener resultados naturales"
+    ],
+    "ctaLabel": "¿Cómo obtenerla?",
+    "wordIntro": "Comenta la palabra:",
+    "words": ["“BUSTO”", "“PECHO”"],
+    "wordOr": "o",
+    "footer": "en nuestro Instagram y recibirás automáticamente acceso a la guía + información exclusiva del tratamiento.",
+    "cta": "IR A INSTAGRAM"
+  },
+  "definition": {
+    "title": "¿Qué es un levantamiento de busto?",
+    "desc": "El levantamiento de busto es un tratamiento corporal orientado a mejorar visualmente la apariencia, armonía y firmeza del área del busto mediante protocolos personalizados de bienestar estético.",
+    "highlight": "El objetivo NO es transformar tu cuerpo artificialmente.",
+    "goalTitle": "El objetivo es ayudarte a:",
+    "items": [
+      "mejorar la apariencia de firmeza",
+      "armonizar el contorno corporal",
+      "apoyar el bienestar femenino",
+      "potenciar la confianza física",
+      "mantener resultados naturales"
+    ],
+    "quote": "\"Cada cuerpo requiere una evaluación individual. Por eso en MJ Estética & Wellness Center realizamos valoraciones personalizadas para diseñar protocolos adaptados a tus objetivos corporales y bienestar general.\""
+  },
+  "improvement": {
+    "title": "¿Qué puede ayudar a mejorar este tratamiento?",
+    "intro": "Nuestros protocolos están orientados a apoyar:",
+    "items": [
+      "Apariencia de firmeza corporal",
+      "Armonización femenina",
+      "Contorno corporal",
+      "Cambios post embarazo",
+      "Pérdida de elasticidad",
+      "Bienestar corporal femenino",
+      "Confianza física",
+      "Apariencia estética natural"
+    ]
+  },
+  "benefits": {
+    "label": "Filosofía MJ",
+    "title": "Beneficios del levantamiento de busto<br /><span className=\"text-primary font-light italic\">Resultados progresivos y naturales</span>",
+    "intro": "En MJ creemos en una estética elegante y armónica. Por eso nuestros tratamientos buscan:",
+    "items": [
+      "Apariencia corporal más firme",
+      "Resultados naturales",
+      "Protocolos personalizados",
+      "Bienestar estético femenino",
+      "Armonización corporal",
+      "Experiencia wellness premium",
+      "Acompañamiento individualizado"
+    ]
+  },
+  "methodology": {
+    "title": "¿Cómo funciona una sesión?",
+    "steps": [
+      { "s": "Paso 1", "t": "Valoración corporal", "d": "Analizamos tu caso, objetivos y características corporales para crear un protocolo individualizado." },
+      { "s": "Paso 2", "t": "Diseño del protocolo", "d": "Seleccionamos técnicas y sesiones orientadas a bienestar, firmeza y armonización corporal." },
+      { "s": "Paso 3", "t": "Aplicación del tratamiento", "d": "La sesión se realiza en un ambiente cómodo, privado y relajante." },
+      { "s": "Paso 4", "t": "Seguimiento personalizado", "d": "Te brindamos recomendaciones y hábitos complementarios para apoyar la evolución progresiva de los resultados." }
+    ],
+    "items": [
+      { "l": "Duración aproximada", "v": "45 a 60 minutos" },
+      { "l": "Recuperación", "v": "Mínima o inmediata" },
+      { "l": "Frecuencia", "v": "Personalizada según valoración" },
+      { "l": "Resultados", "v": "Progresivos y variables" }
+    ]
+  },
+  "recommended": {
+    "title": "¿Para quién se recomienda?",
+    "intro": "Este tratamiento puede ser ideal para personas que buscan:",
+    "items": [
+      "Mejorar la apariencia de firmeza corporal",
+      "Recuperar armonía femenina post embarazo",
+      "Apoyar el bienestar estético corporal",
+      "Mantener resultados naturales",
+      "Mejorar confianza física y bienestar corporal",
+      "Complementar protocolos wellness femeninos"
+    ]
+  },
+  "testimonials": {
+    "title": "❤️ Historias reales de transformación",
+    "items": [
+      { "q": "“Volví a sentirme cómoda conmigo misma”", "t": "“Después del embarazo sentía muchos cambios en mi cuerpo. Me encantó que el enfoque fuera natural y femenino. Me sentí acompañada durante todo el proceso.”" },
+      { "q": "“Los resultados se ven armónicos”", "t": "“Buscaba algo elegante y progresivo, no algo exagerado. Me encantó la experiencia y la atención personalizada.”" },
+      { "q": "“Me devolvió confianza”", "t": "“El ambiente, el trato y el protocolo hicieron toda la diferencia. Me sentí segura desde la primera valoración.”" }
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      { "q": "¿El levantamiento de busto es invasivo?", "a": "Dependerá del protocolo recomendado durante la valoración corporal. Nuestro enfoque prioriza bienestar, seguridad y naturalidad." },
+      { "q": "¿Ayuda con la apariencia de firmeza?", "a": "Los protocolos están diseñados para apoyar visualmente la armonía y apariencia corporal de forma progresiva." },
+      { "q": "¿Cuántas sesiones se recomiendan?", "a": "Cada caso es diferente. La cantidad de sesiones dependerá de la valoración individual." },
+      { "q": "¿Cuándo se ven resultados?", "a": "Muchas personas comienzan a notar cambios progresivos conforme avanzan las sesiones y hábitos complementarios." },
+      { "q": "¿Los resultados se ven naturales?", "a": "Sí. En MJ buscamos armonización corporal y bienestar estético femenino con resultados elegantes y naturales." },
+      { "q": "¿Se puede combinar con otros tratamientos?", "a": "Sí. Dependiendo de tu valoración, puede combinarse con otros protocolos corporales wellness." },
+      { "q": "¿Tiene recuperación?", "a": "La recuperación depende del protocolo aplicado. Durante tu valoración te explicaremos cada detalle." }
+    ]
+  },
+  "whyUs": {
+    "title": "¿Por qué elegir MJ Estética & Wellness Center?",
+    "intro": "Porque creemos que la estética femenina debe sentirse natural, segura y armónica.",
+    "listLabel": "En MJ encontrarás:",
+    "items": [
+      "Atención individualizada",
+      "Protocolos corporales personalizados",
+      "Experiencia wellness femenina",
+      "Ambiente premium y cómodo",
+      "Acompañamiento cercano",
+      "Enfoque en bienestar corporal",
+      "Resultados progresivos y naturales"
+    ],
+    "quote": "\"No buscamos cambios exagerados. Buscamos ayudarte a sentirte bien contigo misma.\""
+  },
+  "planes": {
+    "title": "Planes y valoración personalizada",
+    "items": [
+      "Protocolos individualizados",
+      "Programas wellness corporales",
+      "Paquetes corporales femeninos",
+      "Seguimiento personalizado",
+      "Memberships wellness"
+    ],
+    "intro": "La mejor forma de conocer el tratamiento ideal para ti es mediante una valoración profesional.",
+    "locationTitle": "MJ Estética & Wellness Center — Turrialba",
+    "locationItems": [
+      "Atención en Turrialba",
+      "WhatsApp disponible",
+      "Parqueo cercano",
+      "Horarios personalizados",
+      "Ambiente cómodo y privado"
+    ],
+    "patientLabel": "Atendemos pacientes de:",
+    "patientItems": ["Turrialba centro", "Cartago", "Siquirres", "Juan Viñas", "Tucurrique", "Zonas cercanas"]
+  },
+  "finalCta": {
+    "tagline": "Tu bienestar también merece atención",
+    "title": "Descubre un enfoque diferente de armonización corporal femenina.",
+    "cta1": "Agenda tu valoración corporal",
+    "cta2": "Consulta disponibilidad hoy",
+    "footer": "Escríbenos por WhatsApp y recibe la guía gratuita",
+    "highlight": "Descubre el protocolo ideal para ti 👉"
+  }
+}

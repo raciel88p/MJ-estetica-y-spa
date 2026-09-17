@@ -16,6 +16,8 @@ import {
   UserCheck,
   ArrowRight
 } from "lucide-react";
+import es from "@/i18n/locales/es/rejuvenecimiento-facial.json";
+import en from "@/i18n/locales/en/rejuvenecimiento-facial.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -29,11 +31,14 @@ const stagger = {
 
 export function RejuvenecimientoFacialContent({
   waLink,
-  faq
+  faq,
+  lang = "es"
 }: {
   waLink: string;
-  faq?: { question: string; answer: string }[]
+  faq?: { question: string; answer: string }[];
+  lang?: "es" | "en";
 }) {
+  const content = lang === "es" ? es : en;
   return (
     <div className="bg-white">
       {/* ── SECCIÓN: INTRODUCCIÓN ────────────────────── */}
@@ -45,31 +50,24 @@ export function RejuvenecimientoFacialContent({
                 <Sparkles className="w-6 h-6 text-primary" />
               </div>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6 uppercase tracking-tight">
-                Glow Natural, Armonización Facial y Bienestar Estético Premium
+                {content.intro.title}
               </h2>
               <p className="text-stone-800 text-xl md:text-2xl font-serif leading-relaxed italic max-w-3xl">
-                "Tu piel cuenta tu historia… pero también puede reflejar luminosidad, frescura y bienestar."
+                {content.intro.quote}
               </p>
             </div>
 
             <div className="space-y-6 text-stone-600 text-lg leading-relaxed text-center max-w-3xl mx-auto mb-16">
               <p>
-                En MJ Estética & Wellness Center diseñamos protocolos de rejuvenecimiento facial personalizados orientados a glow natural, armonización estética y revitalización progresiva de la piel.
+                {content.intro.p1}
               </p>
               <p className="font-serif italic text-stone-900">
-                Porque el verdadero rejuvenecimiento no se trata de cambiar quién eres. Se trata de ayudarte a verte descansada, luminosa y segura de ti misma.
+                {content.intro.p2}
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-16">
-              {[
-                "Glow facial saludable",
-                "Protocolos skincare premium",
-                "Atención personalizada",
-                "Rejuvenecimiento elegante y natural",
-                "Bienestar facial integral",
-                "Experiencia estética avanzada en Turrialba"
-              ].map((item, i) => (
+              {content.intro.items.map((item, i) => (
                 <div key={i} className="flex items-center gap-3 bg-stone-50 p-4 border border-stone-100 rounded-sm">
                   <Sparkles className="w-4 h-4 text-primary shrink-0" />
                   <span className="text-stone-700 text-sm font-bold uppercase tracking-tight">{item}</span>
@@ -78,11 +76,11 @@ export function RejuvenecimientoFacialContent({
             </div>
 
             <div className="text-center bg-stone-900 text-white p-10 rounded-sm">
-               <h3 className="text-2xl font-serif font-bold mb-6">Agenda tu valoración facial personalizada</h3>
+               <h3 className="text-2xl font-serif font-bold mb-6">{content.intro.ctaBox.title}</h3>
                <div className="space-y-4 mb-8">
-                  <p className="flex items-center justify-center gap-2">👉 Escríbenos por WhatsApp</p>
-                  <p className="flex items-center justify-center gap-2">👉 Consulta disponibilidad</p>
-                  <p className="flex items-center justify-center gap-2">👉 Descubre el protocolo ideal para tu piel</p>
+                  <p className="flex items-center justify-center gap-2">{content.intro.ctaBox.p1}</p>
+                  <p className="flex items-center justify-center gap-2">{content.intro.ctaBox.p2}</p>
+                  <p className="flex items-center justify-center gap-2">{content.intro.ctaBox.p3}</p>
                </div>
                <a
                   href={waLink}
@@ -91,7 +89,7 @@ export function RejuvenecimientoFacialContent({
                   className="inline-flex items-center gap-3 bg-primary text-white px-10 py-4 font-bold tracking-[0.2em] uppercase hover:bg-white hover:text-stone-900 transition-all shadow-xl"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  RESERVAR AHORA
+                  {content.intro.ctaBox.cta}
                 </a>
             </div>
           </motion.div>
@@ -103,17 +101,17 @@ export function RejuvenecimientoFacialContent({
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">Concepto</p>
-              <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8 uppercase tracking-tighter">¿Qué es el rejuvenecimiento facial?</h2>
+              <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">{content.concept.label}</p>
+              <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8 uppercase tracking-tighter">{content.concept.title}</h2>
               <div className="space-y-6 text-stone-600 leading-relaxed text-lg">
                 <p>
-                  El rejuvenecimiento facial es un conjunto de protocolos estéticos diseñados para apoyar la apariencia de una piel más luminosa, armonizada y revitalizada.
+                  {content.concept.p1}
                 </p>
                 <p>
-                  En MJ Estética & Wellness Center utilizamos tratamientos personalizados orientados a glow facial, bienestar de la piel y rejuvenecimiento progresivo mediante tecnologías y protocolos skincare avanzados.
+                  {content.concept.p2}
                 </p>
                 <p className="font-serif italic">
-                  Cada piel tiene necesidades diferentes. Por eso realizamos valoraciones personalizadas para diseñar experiencias adaptadas a cada paciente.
+                  {content.concept.p3}
                 </p>
               </div>
             </motion.div>
@@ -121,9 +119,9 @@ export function RejuvenecimientoFacialContent({
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
               className="bg-white p-10 border border-stone-200 rounded-sm relative shadow-sm"
             >
-              <h3 className="text-xl font-serif font-bold text-stone-900 mb-6 uppercase tracking-tight text-center">Nuestro enfoque busca:</h3>
+              <h3 className="text-xl font-serif font-bold text-stone-900 mb-6 uppercase tracking-tight text-center">{content.concept.focus.title}</h3>
               <div className="space-y-4">
-                {["Naturalidad", "Glow saludable", "Armonización facial", "Luminosidad elegante", "Bienestar estético integral"].map((item, i) => (
+                {content.concept.focus.items.map((item, i) => (
                    <div key={i} className="flex items-center gap-3 border-b border-stone-100 pb-3 last:border-0">
                       <Check className="w-5 h-5 text-primary shrink-0" />
                       <span className="text-stone-700 font-bold uppercase tracking-widest text-xs">{item}</span>
@@ -142,22 +140,13 @@ export function RejuvenecimientoFacialContent({
         </div>
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">Resultados</p>
-            <h2 className="text-4xl font-serif font-bold mb-6 uppercase tracking-tighter text-white">¿Qué puede ayudar a mejorar el rejuvenecimiento facial?</h2>
-            <p className="text-stone-400 max-w-2xl mx-auto">Nuestros protocolos pueden apoyar procesos orientados a:</p>
+            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">{content.results.label}</p>
+            <h2 className="text-4xl font-serif font-bold mb-6 uppercase tracking-tighter text-white">{content.results.title}</h2>
+            <p className="text-stone-400 max-w-2xl mx-auto">{content.results.desc}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              "Glow y luminosidad facial",
-              "Apariencia de firmeza facial",
-              "Sensación de renovación y frescura",
-              "Textura facial más uniforme",
-              "Bienestar de la piel",
-              "Rejuvenecimiento progresivo",
-              "Apariencia revitalizada y descansada",
-              "Protocolos antiaging personalizados"
-            ].map((item, i) => (
+            {content.results.items.map((item, i) => (
               <motion.div
                 key={i} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
                 className="bg-white/5 border border-white/10 p-6 rounded-sm hover:bg-white/10 transition-colors flex items-center gap-3"
@@ -168,7 +157,7 @@ export function RejuvenecimientoFacialContent({
             ))}
           </div>
           <p className="mt-16 text-center text-primary font-serif text-xl italic text-white">
-            Cada protocolo se adapta según las necesidades individuales y objetivos de cada persona.
+            {content.results.footer}
           </p>
         </div>
       </section>
@@ -177,29 +166,20 @@ export function RejuvenecimientoFacialContent({
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-             <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">MJ Wellness Experience</p>
+             <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">{content.benefits.label}</p>
              <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6 uppercase tracking-tight">
-               Beneficios del Rejuvenecimiento Facial
+               {content.benefits.title}
              </h2>
              <div className="space-y-4 text-stone-600 text-lg">
-                <p>En MJ Estética & Wellness Center creemos en resultados progresivos, naturales y elegantes.</p>
-                <p className="font-serif italic font-bold text-stone-900">Nuestros pacientes buscan verse mejor… sin perder su esencia.</p>
+                <p>{content.benefits.p1}</p>
+                <p className="font-serif italic font-bold text-stone-900">{content.benefits.p2}</p>
              </div>
           </motion.div>
 
           <div className="bg-stone-50 p-10 md:p-16 border border-stone-100 rounded-sm">
-             <h3 className="text-2xl font-serif font-bold text-stone-900 mb-8 text-center uppercase tracking-tight">Lo que más valoran quienes nos visitan:</h3>
+             <h3 className="text-2xl font-serif font-bold text-stone-900 mb-8 text-center uppercase tracking-tight">{content.benefits.list.title}</h3>
              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-               {[
-                 "Piel más luminosa y revitalizada",
-                 "Glow facial progresivo",
-                 "Sensación de rejuvenecimiento natural",
-                 "Bienestar facial integral",
-                 "Resultados personalizados",
-                 "Apariencia más fresca y descansada",
-                 "Protocolos skincare premium",
-                 "Atención estética profesional"
-               ].map((item, i) => (
+               {content.benefits.list.items.map((item, i) => (
                  <div key={i} className="flex items-center gap-4">
                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
                    <span className="text-stone-700 text-sm font-bold uppercase tracking-tight">{item}</span>
@@ -207,7 +187,7 @@ export function RejuvenecimientoFacialContent({
                ))}
              </div>
              <p className="mt-12 text-center text-stone-500 font-serif italic text-lg">
-                Porque el skincare también puede convertirse en una experiencia de bienestar.
+                {content.benefits.list.footer}
              </p>
           </div>
         </div>
@@ -217,38 +197,12 @@ export function RejuvenecimientoFacialContent({
       <section className="py-24 bg-stone-50">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4 text-primary">Catálogo Premium</p>
-            <h2 className="text-4xl font-serif font-bold text-stone-900 uppercase tracking-tighter mb-4">Protocolos de Rejuvenecimiento Facial Disponibles</h2>
+            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4 text-primary">{content.catalog.label}</p>
+            <h2 className="text-4xl font-serif font-bold text-stone-900 uppercase tracking-tighter mb-4">{content.catalog.title}</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Láser Facial",
-                desc: "Protocolos orientados a mejorar la apariencia de luminosidad, textura y revitalización facial.",
-                tags: ["Glow natural", "Apariencia más uniforme", "Rejuvenecimiento progresivo"]
-              },
-              {
-                title: "Microagujas",
-                desc: "Tratamiento skincare avanzado enfocado en apoyar procesos de renovación facial y bienestar de la piel.",
-                tags: ["Sensación de renovación", "Glow saludable", "Protocolos personalizados"]
-              },
-              {
-                title: "Radiofrecuencia Facial",
-                desc: "Protocolo orientado a apoyar procesos de firmeza y armonización facial progresiva.",
-                tags: ["Firmeza facial", "Bienestar estético", "Rejuvenecimiento elegante"]
-              },
-              {
-                title: "Hollywood Peel",
-                desc: "Experiencia premium diseñada para potenciar luminosidad facial y apariencia revitalizada.",
-                tags: ["Glow inmediato", "Piel luminosa", "Experiencia skincare premium"]
-              },
-              {
-                title: "Protocolos Skincare Premium",
-                desc: "Combinaciones personalizadas según objetivos faciales y necesidades individuales.",
-                tags: ["Glow memberships", "Antiaging bundles", "Rejuvenation programs"]
-              }
-            ].map((item, i) => (
+            {content.catalog.items.map((item, i) => (
               <motion.div
                 key={i} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
                 className="bg-white p-8 border border-stone-200 rounded-sm shadow-sm flex flex-col justify-between"
@@ -271,7 +225,7 @@ export function RejuvenecimientoFacialContent({
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.2em] uppercase text-primary border-b border-primary/30 pb-0.5 hover:border-primary transition-all w-fit"
                 >
-                  Consulta disponibilidad <ArrowRight className="w-3 h-3" />
+                  {content.catalog.cta} <ArrowRight className="w-3 h-3" />
                 </a>
               </motion.div>
             ))}
@@ -283,18 +237,13 @@ export function RejuvenecimientoFacialContent({
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">La Experiencia MJ</p>
-            <h2 className="text-4xl font-serif font-bold text-stone-900 uppercase tracking-tighter mb-4">¿Cómo funciona la experiencia de rejuvenecimiento facial?</h2>
-            <p className="text-stone-500 max-w-2xl mx-auto text-lg">Queremos que disfrutes el proceso con tranquilidad, claridad y acompañamiento profesional.</p>
+            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">{content.process.label}</p>
+            <h2 className="text-4xl font-serif font-bold text-stone-900 uppercase tracking-tighter mb-4">{content.process.title}</h2>
+            <p className="text-stone-500 max-w-2xl mx-auto text-lg">{content.process.desc}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { step: "01", title: "Valoración facial personalizada", desc: "Analizamos tu piel, objetivos y necesidades específicas." },
-              { step: "02", title: "Diseño del protocolo ideal", desc: "Creamos una experiencia personalizada orientada a glow y armonización facial." },
-              { step: "03", title: "Aplicación del tratamiento", desc: "Realizamos el procedimiento bajo protocolos profesionales y personalizados." },
-              { step: "04", title: "Seguimiento y recomendaciones", desc: "Te acompañamos con cuidados posteriores y seguimiento individualizado." }
-            ].map((item, i) => (
+            {content.process.items.map((item, i) => (
               <div key={i} className="relative p-8 bg-stone-50 border border-stone-100 rounded-sm hover:translate-y-[-4px] transition-all duration-300">
                 <span className="text-5xl font-serif font-bold text-primary/10 absolute top-4 right-6">{item.step}</span>
                 <h3 className="text-lg font-serif font-bold text-stone-900 mb-4 relative z-10 uppercase tracking-tight">{item.title}</h3>
@@ -306,18 +255,18 @@ export function RejuvenecimientoFacialContent({
           <div className="mt-16 bg-[#071e2e] p-8 rounded-sm grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
              <div className="flex flex-col items-center gap-2">
                 <Clock className="w-6 h-6 text-primary" />
-                <span className="text-xs font-bold uppercase tracking-widest text-stone-400">Duración</span>
-                <p className="text-sm">Variable según protocolo</p>
+                <span className="text-xs font-bold uppercase tracking-widest text-stone-400">{content.process.stats.duration}</span>
+                <p className="text-sm">{content.process.stats.durationValue}</p>
              </div>
              <div className="flex flex-col items-center gap-2">
                 <ShieldCheck className="w-6 h-6 text-primary" />
-                <span className="text-xs font-bold uppercase tracking-widest text-stone-400">Recuperación</span>
-                <p className="text-sm">Depende de cada tratamiento</p>
+                <span className="text-xs font-bold uppercase tracking-widest text-stone-400">{content.process.stats.recovery}</span>
+                <p className="text-sm">{content.process.stats.recoveryValue}</p>
              </div>
              <div className="flex flex-col items-center gap-2">
                 <CheckCircle2 className="w-6 h-6 text-primary" />
-                <span className="text-xs font-bold uppercase tracking-widest text-stone-400">Cuidados posteriores</span>
-                <p className="text-sm px-4">Explicados durante tu valoración</p>
+                <span className="text-xs font-bold uppercase tracking-widest text-stone-400">{content.process.stats.care}</span>
+                <p className="text-sm px-4">{content.process.stats.careValue}</p>
              </div>
           </div>
         </div>
@@ -327,17 +276,9 @@ export function RejuvenecimientoFacialContent({
       <section className="py-24 bg-stone-900 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12 uppercase tracking-tight text-white">¿Para quién se recomienda el rejuvenecimiento facial?</h2>
+             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12 uppercase tracking-tight text-white">{content.forWho.title}</h2>
              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto mb-16">
-               {[
-                 "Glow facial natural",
-                 "Rejuvenecimiento progresivo",
-                 "Bienestar de la piel",
-                 "Protocolos antiaging premium",
-                 "Armonización facial elegante",
-                 "Skincare avanzado personalizado",
-                 "Apariencia fresca y luminosa"
-               ].map((item, i) => (
+               {content.forWho.items.map((item, i) => (
                  <div key={i} className="flex items-center gap-3 bg-white/5 p-4 border border-white/10 rounded-sm">
                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
                    <span className="text-stone-200 text-[10px] font-bold uppercase tracking-widest">{item}</span>
@@ -345,7 +286,7 @@ export function RejuvenecimientoFacialContent({
                ))}
              </div>
              <p className="text-stone-400 italic text-lg max-w-2xl mx-auto">
-                "Cada experiencia se adapta individualmente según las necesidades de la piel."
+                {content.forWho.footer}
              </p>
           </motion.div>
         </div>
@@ -356,20 +297,20 @@ export function RejuvenecimientoFacialContent({
         <div className="max-w-4xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-8 uppercase tracking-tighter">Resultados Naturales y Glow Saludable</h2>
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-8 uppercase tracking-tighter">{content.natural.title}</h2>
                 <div className="space-y-6 text-stone-600 leading-relaxed text-lg">
                   <p>
-                    En MJ Estética & Wellness Center creemos en una estética elegante y armónica.
+                    {content.natural.p1}
                   </p>
                   <p>
-                    No buscamos resultados exagerados. Buscamos ayudarte a potenciar tu belleza natural con protocolos diseñados para brindar bienestar facial y glow saludable.
+                    {content.natural.p2}
                   </p>
                 </div>
              </motion.div>
              <div className="bg-stone-50 p-10 border border-stone-100 rounded-sm">
-                <h3 className="text-xl font-serif font-bold text-stone-900 mb-6 uppercase tracking-tight text-center">Por eso priorizamos:</h3>
+                <h3 className="text-xl font-serif font-bold text-stone-900 mb-6 uppercase tracking-tight text-center">{content.natural.focus.title}</h3>
                 <div className="space-y-4">
-                  {["Luminosidad natural", "Rejuvenecimiento progresivo", "Textura uniforme", "Bienestar estético", "Armonización facial premium"].map((item, i) => (
+                  {content.natural.focus.items.map((item, i) => (
                      <div key={i} className="flex items-center gap-3 border-b border-stone-200 pb-3 last:border-0">
                         <Sparkles className="w-5 h-5 text-primary shrink-0" />
                         <span className="text-stone-700 font-bold uppercase tracking-widest text-xs">{item}</span>
@@ -385,17 +326,12 @@ export function RejuvenecimientoFacialContent({
       <section className="py-24 bg-stone-50">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">Voces MJ</p>
-            <h2 className="text-4xl font-serif font-bold text-stone-900 uppercase tracking-tighter">Lo que dicen nuestras pacientes</h2>
+            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">{content.testimonials.label}</p>
+            <h2 className="text-4xl font-serif font-bold text-stone-900 uppercase tracking-tighter">{content.testimonials.title}</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              "Mi piel se veía mucho más luminosa y fresca.",
-              "Me encantó que el resultado se viera natural y elegante.",
-              "Sentí mi rostro revitalizado sin verme diferente.",
-              "La experiencia fue súper personalizada y relajante."
-            ].map((quote, i) => (
+            {content.testimonials.items.map((quote, i) => (
               <motion.div
                 key={i} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
                 className="bg-white p-8 border border-stone-100 rounded-sm relative shadow-sm"
@@ -412,8 +348,8 @@ export function RejuvenecimientoFacialContent({
       <section className="py-24 bg-white">
         <div className="max-w-3xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">Resolviendo dudas</p>
-            <h2 className="text-4xl font-serif font-bold text-stone-900 leading-tight uppercase tracking-tighter">Preguntas Frecuentes</h2>
+            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-4">{content.faq.label}</p>
+            <h2 className="text-4xl font-serif font-bold text-stone-900 leading-tight uppercase tracking-tighter">{content.faq.title}</h2>
           </motion.div>
 
           <div className="space-y-4">
@@ -440,16 +376,10 @@ export function RejuvenecimientoFacialContent({
       <section className="py-24 bg-[#071e2e] text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12 uppercase tracking-tight text-white font-serif">Programas Premium de Rejuvenecimiento Facial</h2>
-             <p className="text-stone-400 mb-12 text-lg">En MJ Estética & Wellness Center contamos con:</p>
+             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12 uppercase tracking-tight text-white font-serif">{content.programs.title}</h2>
+             <p className="text-stone-400 mb-12 text-lg">{content.programs.p1}</p>
              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16 text-left">
-               {[
-                 "Rejuvenation programs",
-                 "Glow memberships",
-                 "Protocolos skincare premium",
-                 "Antiaging bundles",
-                 "Experiencias wellness faciales"
-               ].map((item, i) => (
+               {content.programs.items.map((item, i) => (
                  <div key={i} className="flex items-center gap-3 bg-white/5 p-4 border border-white/10 rounded-sm">
                    <Sparkles className="w-4 h-4 text-primary shrink-0" />
                    <span className="text-stone-200 text-[10px] font-bold uppercase tracking-widest">{item}</span>
@@ -457,7 +387,7 @@ export function RejuvenecimientoFacialContent({
                ))}
              </div>
              <p className="text-stone-400 italic text-lg max-w-2xl mx-auto">
-                "Consulta disponibilidad durante tu valoración personalizada."
+                {content.programs.footer}
              </p>
           </motion.div>
         </div>
@@ -468,21 +398,13 @@ export function RejuvenecimientoFacialContent({
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
              <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6 uppercase tracking-tight">
-               ¿Por qué elegir MJ Estética & Wellness Center?
+               {content.whyUs.title}
              </h2>
-             <p className="text-stone-500 text-lg">Porque entendemos que cada piel merece una experiencia personalizada.</p>
+             <p className="text-stone-500 text-lg">{content.whyUs.p1}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 max-w-3xl mx-auto">
-            {[
-              "Protocolos individualizados",
-              "Tecnología estética moderna",
-              "Atención profesional",
-              "Experiencia skincare premium",
-              "Ambiente cómodo y seguro",
-              "Seguimiento personalizado",
-              "Enfoque natural y progresivo"
-            ].map((item, i) => (
+            {content.whyUs.items.map((item, i) => (
               <div key={i} className="flex items-center gap-4">
                 <ShieldCheck className="w-5 h-5 text-primary shrink-0" />
                 <span className="text-stone-700 text-sm font-bold uppercase tracking-tight">{item}</span>
@@ -491,7 +413,7 @@ export function RejuvenecimientoFacialContent({
           </div>
 
           <p className="mt-16 text-center text-stone-400 text-base italic font-serif max-w-2xl mx-auto">
-            "Nos enfocamos en ayudarte a sentirte bien contigo misma mientras cuidamos la naturalidad de tu piel."
+            {content.whyUs.footer}
           </p>
         </div>
       </section>
@@ -505,22 +427,13 @@ export function RejuvenecimientoFacialContent({
           >
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-8">
               <Gift className="w-4 h-4" />
-              <span className="text-[10px] font-bold tracking-[0.2em] uppercase">Recurso Gratuito</span>
+              <span className="text-[10px] font-bold tracking-[0.2em] uppercase">{content.leadMagnet.label}</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6 leading-tight">
-              Descarga GRATIS la Guía: <br />
-              <span className="text-primary italic font-light block mt-2">“Cómo mejorar los resultados de tu rejuvenecimiento facial”</span>
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: content.leadMagnet.title }} />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 text-left max-w-2xl mx-auto mb-12 py-8 border-y border-stone-100">
-               <div className="col-span-full mb-2 text-stone-400 text-[10px] font-bold uppercase tracking-widest">Aprende:</div>
-              {[
-                "Cómo potenciar el glow facial",
-                "Hábitos que apoyan el bienestar de la piel",
-                "Recomendaciones skincare post tratamiento",
-                "Consejos para prolongar luminosidad facial",
-                "Tips wellness para rejuvenecimiento progresivo"
-              ].map((item, i) => (
+               <div className="col-span-full mb-2 text-stone-400 text-[10px] font-bold uppercase tracking-widest">{content.leadMagnet.learn}</div>
+              {content.leadMagnet.items.map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                   <span className="text-stone-600 text-sm">{item}</span>
@@ -536,10 +449,10 @@ export function RejuvenecimientoFacialContent({
                 className="inline-flex items-center gap-3 bg-primary text-white px-10 py-5 font-bold tracking-[0.2em] uppercase hover:bg-stone-900 transition-all shadow-xl group"
               >
                 <MessageCircle className="w-5 h-5" />
-                SOLICITAR GUÍA POR WHATSAPP
+                {content.leadMagnet.cta}
               </a>
               <p className="text-stone-400 text-[10px] tracking-widest uppercase flex items-center gap-2">
-                <Gift className="w-3 h-3 text-primary" /> Regalo exclusivo para nuestros pacientes
+                <Gift className="w-3 h-3 text-primary" /> {content.leadMagnet.footer}
               </p>
             </div>
           </motion.div>
@@ -550,18 +463,13 @@ export function RejuvenecimientoFacialContent({
       <section className="py-24 bg-white text-center">
         <div className="max-w-4xl mx-auto px-6">
            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-             <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8 uppercase tracking-tighter">Agenda tu valoración facial hoy</h2>
+             <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8 uppercase tracking-tighter">{content.final.title}</h2>
              <p className="text-stone-500 text-lg mb-12 max-w-2xl mx-auto">
-                Si estás buscando rejuvenecimiento facial avanzado, glow natural y protocolos skincare premium en Turrialba, estamos listas para ayudarte.
+                {content.final.p1}
              </p>
 
              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-lg mx-auto mb-16 text-left">
-               {[
-                 "Agenda tu valoración facial",
-                 "Descubre el protocolo ideal para tu piel",
-                 "Consulta disponibilidad",
-                 "Escríbenos por WhatsApp hoy"
-               ].map((item, i) => (
+               {content.final.items.map((item, i) => (
                  <div key={i} className="flex items-center gap-3 bg-stone-50 p-4 border border-stone-100 rounded-sm">
                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0" />
                    <span className="text-stone-600 text-[10px] font-bold uppercase tracking-widest">{item}</span>
@@ -582,10 +490,10 @@ export function RejuvenecimientoFacialContent({
                   className="inline-flex items-center gap-3 bg-primary text-white px-12 py-5 font-bold tracking-[0.2em] uppercase hover:bg-stone-900 transition-all shadow-2xl hover:-translate-y-1 active:translate-y-0"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  AGENDAR HOY
+                  {content.final.cta}
                 </a>
                 <p className="mt-8 text-primary font-bold text-[10px] tracking-widest uppercase">
-                  ✨ Glow natural, armonización facial y bienestar estético premium
+                  {content.final.footer}
                 </p>
              </div>
            </motion.div>

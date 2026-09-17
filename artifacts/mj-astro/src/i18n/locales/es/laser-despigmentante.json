@@ -1,0 +1,142 @@
+{
+  "intro": {
+    "tagline": "Renovación Facial",
+    "p1": "¿Sientes que las manchas, el tono irregular o la falta de luminosidad hacen que tu piel luzca cansada o apagada?",
+    "p2": "En <span class=\"font-bold text-stone-900\">MJ Estética & Wellness Center</span> desarrollamos protocolos personalizados de láser despigmentante orientados a apoyar la apariencia de una piel más luminosa, uniforme y revitalizada mediante tecnología estética avanzada y skincare premium.",
+    "items": [
+      "✨ Glow natural",
+      "✨ Luminosidad facial progresiva",
+      "✨ Protocolos personalizados",
+      "✨ Experiencia estética premium",
+      "✨ Atención profesional en Turrialba"
+    ]
+  },
+  "whatIs": {
+    "title": "Descubre cómo mejorar la apariencia de tu piel con tecnología estética avanzada",
+    "desc": "El láser despigmentante es un tratamiento facial diseñado para apoyar protocolos de luminosidad, apariencia de tono uniforme y rejuvenecimiento facial mediante tecnología orientada al bienestar y cuidado avanzado de la piel.",
+    "desc2": "Cada piel tiene necesidades diferentes, por eso en MJ realizamos una valoración personalizada para recomendar el protocolo más adecuado según objetivos, textura, sensibilidad y tipo de piel.",
+    "boxTitle": "¿Qué puede ayudar a mejorar este tratamiento?",
+    "items": [
+      "Apariencia de tono uniforme",
+      "Glow y luminosidad facial",
+      "Sensación de renovación facial",
+      "Apariencia revitalizada",
+      "Textura visualmente más uniforme",
+      "Protocolos de skincare avanzado",
+      "Bienestar y cuidado de la piel",
+      "Experiencia facial premium"
+    ]
+  },
+  "why": {
+    "title": "¿Por qué muchas personas eligen el láser despigmentante?",
+    "intro": "Porque buscan verse más frescas, luminosas y seguras sin necesidad de cambios exagerados.",
+    "p1": "Muchas veces las manchas faciales, el tono desigual o la pérdida de glow hacen que la piel se vea más cansada de lo que realmente está.",
+    "p2": "El problema no siempre es la edad. Muchas veces es acumulación de sol, estrés, cambios hormonales o simplemente falta de protocolos adecuados para la piel.",
+    "p3": "Y aunque existen muchísimos productos, mascarillas o rutinas virales… la mayoría no trabajan de manera personalizada.",
+    "p4": "Ahí es donde un protocolo profesional puede marcar una gran diferencia.",
+    "p5": "En MJ Estética & Wellness Center combinamos experiencia skincare premium, evaluación individualizada y tecnología estética avanzada para crear protocolos orientados a luminosidad facial y bienestar de la piel."
+  },
+  "methodology": {
+    "title": "¿Cómo funciona el tratamiento con láser despigmentante?",
+    "steps": [
+      { "s": "Paso 1", "t": "Valoración facial personalizada", "d": "Analizamos tu piel, objetivos y necesidades específicas para recomendar el protocolo más adecuado." },
+      { "s": "Paso 2", "t": "Preparación de la piel", "d": "Se prepara la piel mediante protocolos orientados a confort y cuidado facial." },
+      { "s": "Paso 3", "t": "Aplicación del protocolo láser", "d": "La sesión se realiza de forma profesional y personalizada según sensibilidad y objetivos." },
+      { "s": "Paso 4", "t": "Recomendaciones posteriores", "d": "Te guiamos con cuidados posteriores, protección solar y seguimiento profesional para apoyar mejores resultados." }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios del láser despigmentante",
+    "items": [
+      "Apariencia más luminosa",
+      "Glow facial progresivo",
+      "Sensación de renovación",
+      "Experiencia skincare premium",
+      "Bienestar facial",
+      "Protocolos personalizados",
+      "Rejuvenecimiento facial orientado a luminosidad",
+      "Atención profesional y seguimiento individualizado"
+    ]
+  },
+  "who": {
+    "title": "¿Para quién se recomienda este tratamiento?",
+    "desc": "Este tratamiento puede ser ideal para personas que buscan:",
+    "items": [
+      "Glow facial natural",
+      "Apariencia más uniforme",
+      "Protocolos de skincare avanzado",
+      "Luminosidad facial",
+      "Bienestar de la piel",
+      "Rejuvenecimiento facial progresivo",
+      "Experiencias estéticas premium"
+    ]
+  },
+  "whyUs": {
+    "title": "Lo que hace diferente a MJ Estética & Wellness Center",
+    "p1": "No creemos en tratamientos genéricos. Creemos que cada piel merece un protocolo personalizado.",
+    "p2": "Por eso nuestra experiencia está orientada a:",
+    "items": [
+      { "t": "Tecnología estética avanzada" },
+      { "t": "Protocolos individualizados" },
+      { "t": "Atención profesional" },
+      { "t": "Ambiente cómodo y seguro" },
+      { "t": "Experiencia skincare premium" },
+      { "t": "Seguimiento personalizado" },
+      { "t": "Evaluación facial profesional" }
+    ],
+    "closing": "Nuestro objetivo no es solamente realizar un tratamiento. Buscamos ayudarte a sentirte más cómoda, segura y feliz con la apariencia de tu piel."
+  },
+  "testimonials": {
+    "title": "Testimonios de experiencias reales",
+    "items": [
+      "“Sentí mi piel mucho más luminosa y fresca después de las sesiones.”",
+      "“Me encantó que el protocolo fuera personalizado y explicaran cada paso.”",
+      "“La experiencia fue súper profesional y el glow facial se veía muy natural.”"
+    ],
+    "author": "Paciente MJ"
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      { "q": "¿Qué es el láser despigmentante?", "a": "Es un protocolo facial orientado a apoyar la apariencia de tono uniforme y luminosidad mediante tecnología estética avanzada." },
+      { "q": "¿Ayuda con manchas faciales?", "a": "Puede apoyar protocolos relacionados con apariencia uniforme y glow facial según evaluación personalizada." },
+      { "q": "¿Tiene recuperación?", "a": "Dependiendo de cada piel, pueden existir recomendaciones posteriores y uso importante de protector solar." },
+      { "q": "¿Cuántas sesiones se recomiendan?", "a": "La cantidad puede variar según objetivos y evaluación facial individualizada." },
+      { "q": "¿Se puede combinar con otros tratamientos?", "a": "Sí, muchas personas combinan protocolos faciales y skincare avanzado según recomendación profesional." },
+      { "q": "¿Cuándo se observan cambios?", "a": "Cada piel responde diferente. Los resultados suelen percibirse progresivamente." },
+      { "q": "¿Qué cuidados posteriores requiere?", "a": "Protección solar, hidratación y seguimiento profesional." }
+    ]
+  },
+  "programs": {
+    "title": "Programas y valoraciones",
+    "items": [
+      "✨ Valoraciones faciales personalizadas",
+      "✨ Programas glow facial",
+      "✨ Protocolos skincare premium",
+      "✨ Advanced facial care",
+      "✨ Paquetes de cuidado facial"
+    ],
+    "note": "Consulta disponibilidad y opciones según tu piel"
+  },
+  "leadMagnet": {
+    "label": "🎁 RECURSO GRATUITO EXCLUSIVO",
+    "title": "Guía Gratuita:",
+    "subtitle": "“Cómo mejorar los resultados de tu tratamiento despigmentante”",
+    "wordLabel": "💌 Comenta la palabra:",
+    "word": "DESPIGMENTANTE",
+    "desc": "y recibe GRATIS nuestra guía con recomendaciones para apoyar:",
+    "items": ["Glow facial", "Luminosidad", "Cuidado posterior", "Protección solar", "Rutinas skincare", "Bienestar de la piel"],
+    "cta": "IR A INSTAGRAM"
+  },
+  "finalCta": {
+    "title": "Agenda tu valoración facial hoy",
+    "desc": "Tu piel merece atención profesional, protocolos personalizados y una experiencia premium orientada a bienestar y luminosidad facial.",
+    "location": "📍 MJ Estética & Wellness Center — Turrialba",
+    "items": [
+      "✅ Agenda tu valoración facial",
+      "✅ Descubre el protocolo ideal",
+      "✅ Consulta disponibilidad"
+    ],
+    "cta": "ESCRIBIR POR WHATSAPP HOY"
+  }
+}

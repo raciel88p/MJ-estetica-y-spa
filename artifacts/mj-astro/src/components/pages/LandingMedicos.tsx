@@ -96,17 +96,41 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } },
 };
 
-function LandingMedicos() {
+function LandingMedicos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const faqs_localized = lang === 'es' ? faqs : [
+    {
+      q: "Do the results look natural?",
+      a: "Yes. Our approach is oriented towards harmonization and progressive naturalness.",
+    },
+    {
+      q: "Do I need a prior assessment?",
+      a: "Yes. Each person requires individual evaluation to design a suitable protocol.",
+    },
+    {
+      q: "When are results seen?",
+      a: "It depends on the treatment and each person, but many protocols show progressive improvements.",
+    },
+    {
+      q: "Can treatments be combined?",
+      a: "Yes. Many wellness and facial protocols can complement each other.",
+    },
+    {
+      q: "Which treatment is ideal for me?",
+      a: "Personalized assessment helps us recommend the most suitable protocol based on your goals.",
+    },
+  ];
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title="Tratamientos Médico-Estéticos en Turrialba | Armonización Facial"
-        description="Armonización facial y bienestar estético con resultados naturales en Turrialba. Botox, rellenos, bioestimuladores y protocolos personalizados. MJ Estética."
-        canonical="/medicina-estetica"
+        title={lang === 'es' ? "Tratamientos Médico-Estéticos en Turrialba | Armonización Facial" : "Medical Aesthetic Treatments in Turrialba | Facial Harmonization"}
+        description={lang === 'es' ? "Armonización facial y bienestar estético con resultados naturales en Turrialba. Botox, rellenos, bioestimuladores y protocolos personalizados. MJ Estética." : "Facial harmonization and aesthetic well-being with natural results in Turrialba. Botox, fillers, biostimulators, and personalized protocols. MJ Estética."}
+        canonical={lang === 'es' ? "/medicina-estetica" : "/en/facial-harmonization"}
+        lang={lang}
       />
-      <Navbar />
+      <Navbar lang={lang} alternateLink={lang === 'es' ? '/en/facial-harmonization' : '/medicina-estetica'} />
 
       {/* ───── 1. HERO ───── */}
       <section className="relative min-h-[85vh] flex items-center justify-center bg-[#071e2e] overflow-hidden pt-20">
@@ -125,7 +149,7 @@ function LandingMedicos() {
             className="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 text-primary rounded-full px-4 py-2 text-xs font-bold uppercase tracking-widest mb-8"
           >
             <Stethoscope className="w-3.5 h-3.5" />
-            Medicina Estética Avanzada
+            {lang === 'es' ? "Medicina Estética Avanzada" : "Advanced Medical Aesthetics"}
           </motion.div>
 
           <motion.h1
@@ -134,7 +158,7 @@ function LandingMedicos() {
             transition={{ delay: 0.1, duration: 0.6 }}
             className="text-5xl sm:text-6xl md:text-7xl font-serif text-white leading-tight mb-6"
           >
-            Tratamientos <span className="text-primary italic">Médico-Estéticos</span> en Turrialba
+            {lang === 'es' ? "Tratamientos" : "Medical-Aesthetic"} <span className="text-primary italic">{lang === 'es' ? "Médico-Estéticos" : "Treatments"}</span> {lang === 'es' ? "en Turrialba" : "in Turrialba"}
           </motion.h1>
 
           <motion.p
@@ -143,7 +167,7 @@ function LandingMedicos() {
             transition={{ delay: 0.2 }}
             className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            Armonización facial y bienestar estético con resultados naturales y progresivos.
+            {lang === 'es' ? "Armonización facial y bienestar estético con resultados naturales y progresivos." : "Facial harmonization and aesthetic well-being with natural and progressive results."}
           </motion.p>
 
           <motion.div
@@ -151,7 +175,7 @@ function LandingMedicos() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4 }}
           >
-            <CTAButton label="Quiero mi valoración estética" id="hero-cta-medicos" className="text-lg px-10 py-5" />
+            <CTAButton label={lang === 'es' ? "Quiero mi valoración estética" : "I want my aesthetic assessment"} id="hero-cta-medicos" className="text-lg px-10 py-5" />
           </motion.div>
 
           <motion.div
@@ -160,7 +184,7 @@ function LandingMedicos() {
             transition={{ delay: 0.6 }}
             className="flex flex-wrap justify-center gap-6 mt-12 text-white/50 text-xs"
           >
-            {["Resultados naturales", "Protocolos médicos", "Atención personalizada"].map((t) => (
+            {(lang === 'es' ? ["Resultados naturales", "Protocolos médicos", "Atención personalizada"] : ["Natural results", "Medical protocols", "Personalized attention"]).map((t) => (
               <span key={t} className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-primary/60" /> {t}
               </span>
@@ -169,7 +193,7 @@ function LandingMedicos() {
         </div>
       </section>
 
-      <StatsBar />
+      <StatsBar lang={lang} />
 
       {/* ───── 2. INTRO ───── */}
       <section className="py-24 px-4 sm:px-6">
@@ -181,20 +205,30 @@ function LandingMedicos() {
             variants={fadeUp}
           >
             <h2 className="text-3xl md:text-4xl font-serif text-stone-800 mb-8 leading-snug">
-              En MJ Estética & Wellness Center creemos que la medicina estética moderna no se trata de cambiar quién eres… sino de ayudarte a sentirte más seguro(a), fresco(a) y en armonía contigo mismo(a).
+              {lang === 'es'
+                ? "En MJ Estética & Wellness Center creemos que la medicina estética moderna no se trata de cambiar quién eres… sino de ayudarte a sentirte más seguro(a), fresco(a) y en armonía contigo mismo(a)."
+                : "At MJ Estética & Wellness Center we believe that modern medical aesthetics is not about changing who you are… but about helping you feel more confident, fresh, and in harmony with yourself."}
             </h2>
             <p className="text-stone-600 text-lg mb-12">
-              Nuestros protocolos médico-estéticos están diseñados para apoyar el bienestar facial y corporal mediante tratamientos personalizados, enfocados en naturalidad, seguridad y resultados progresivos.
+              {lang === 'es'
+                ? "Nuestros protocolos médico-estéticos están diseñados para apoyar el bienestar facial y corporal mediante tratamientos personalizados, enfocados en naturalidad, seguridad y resultados progresivos."
+                : "Our medical-aesthetic protocols are designed to support facial and body well-being through personalized treatments, focused on naturalness, safety, and progressive results."}
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
-              {[
+              {(lang === 'es' ? [
                 "Atención personalizada",
                 "Protocolos adaptados individualmente",
                 "Enfoque wellness y estético",
                 "Ambiente premium y seguro",
                 "Resultados naturales y progresivos",
-              ].map((item, i) => (
+              ] : [
+                "Personalized attention",
+                "Individually adapted protocols",
+                "Wellness and aesthetic focus",
+                "Premium and safe environment",
+                "Natural and progressive results",
+              ]).map((item, i) => (
                 <div key={i} className="flex items-center gap-3 bg-stone-50 border border-stone-100 p-4 rounded-xl">
                   <Sparkles className="w-5 h-5 text-primary shrink-0" />
                   <span className="text-stone-700 font-medium text-sm">{item}</span>
@@ -218,13 +252,19 @@ function LandingMedicos() {
               <p className="text-primary text-sm font-bold uppercase tracking-widest mb-4">Descubre una nueva forma de cuidar tu imagen</p>
               <h2 className="text-4xl font-serif mb-6 text-white">Muchas personas desean verse mejor… pero también tienen miedo de:</h2>
               <ul className="space-y-4">
-                {[
+              {(lang === 'es' ? [
                   "Verse artificiales",
                   "Perder naturalidad",
                   "Tratamientos exagerados",
                   "Malas experiencias",
                   "Procedimientos poco personalizados",
-                ].map((fear, i) => (
+              ] : [
+                "Looking artificial",
+                "Losing naturalness",
+                "Exaggerated treatments",
+                "Bad experiences",
+                "Non-personalized procedures",
+              ]).map((fear, i) => (
                   <li key={i} className="flex items-center gap-3 text-white">
                     <XCircle className="w-5 h-5 text-red-400 shrink-0" />
                     {fear}
@@ -262,18 +302,22 @@ function LandingMedicos() {
             variants={fadeUp}
           >
             <HelpCircle className="w-12 h-12 text-primary mx-auto mb-6" />
-            <h2 className="text-4xl font-serif text-stone-800 mb-6">¿Qué son los tratamientos médico-estéticos?</h2>
+            <h2 className="text-4xl font-serif text-stone-800 mb-6">{lang === 'es' ? "¿Qué son los tratamientos médico-estéticos?" : "What are medical-aesthetic treatments?"}</h2>
             <p className="text-stone-600 text-lg mb-8 leading-relaxed">
-              Los tratamientos médico-estéticos son protocolos personalizados orientados al bienestar facial y corporal que buscan mejorar la apariencia, luminosidad y armonización estética mediante procedimientos avanzados y atención profesional.
+              {lang === 'es'
+                ? "Los tratamientos médico-estéticos son protocolos personalizados orientados al bienestar facial y corporal que buscan mejorar la apariencia, luminosidad y armonización estética mediante procedimientos avanzados y atención profesional."
+                : "Medical-aesthetic treatments are personalized protocols oriented towards facial and body well-being that seek to improve appearance, luminosity, and aesthetic harmonization through advanced procedures and professional care."}
             </p>
             <p className="text-stone-500 mb-12">
-              Cada persona tiene necesidades diferentes. Por eso, realizamos valoraciones personalizadas para diseñar protocolos adaptados a cada caso.
+              {lang === 'es'
+                ? "Cada persona tiene necesidades diferentes. Por eso, realizamos valoraciones personalizadas para diseñar protocolos adaptados a cada caso."
+                : "Each person has different needs. That's why we perform personalized assessments to design protocols adapted to each case."}
             </p>
             <div className="inline-block bg-primary/10 border border-primary/20 px-8 py-4 rounded-full">
-              <p className="text-primary font-bold">El objetivo NO es exagerar resultados.</p>
+              <p className="text-primary font-bold">{lang === 'es' ? "El objetivo NO es exagerar resultados." : "The goal is NOT to exaggerate results."}</p>
             </div>
             <p className="mt-4 text-stone-700 font-serif text-xl italic">
-              El objetivo es ayudarte a verte descansado(a), saludable y naturalmente armonizado(a).
+              {lang === 'es' ? "El objetivo es ayudarte a verte descansado(a), saludable y naturalmente armonizado(a)." : "The goal is to help you look rested, healthy, and naturally harmonized."}
             </p>
           </motion.div>
         </div>
@@ -283,10 +327,10 @@ function LandingMedicos() {
       <section className="py-24 px-4 sm:px-6 bg-stone-50">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif text-stone-800">¿Qué pueden ayudar a mejorar los tratamientos médico-estéticos?</h2>
+            <h2 className="text-3xl md:text-4xl font-serif text-stone-800">{lang === 'es' ? "¿Qué pueden ayudar a mejorar los tratamientos médico-estéticos?" : "What can medical-aesthetic treatments help improve?"}</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {[
+            {(lang === 'es' ? [
               "Apariencia facial y corporal",
               "Glow y luminosidad de la piel",
               "Bienestar estético integral",
@@ -295,7 +339,16 @@ function LandingMedicos() {
               "Armonización facial natural",
               "Confianza estética",
               "Complemento de autocuidado wellness",
-            ].map((item, i) => (
+            ] : [
+              "Facial and body appearance",
+              "Skin glow and luminosity",
+              "Integral aesthetic well-being",
+              "Progressive rejuvenation",
+              "Facial fatigue appearance",
+              "Natural facial harmonization",
+              "Aesthetic confidence",
+              "Wellness self-care complement",
+            ]).map((item, i) => (
               <motion.div
                 key={i}
                 initial="hidden"
@@ -321,11 +374,11 @@ function LandingMedicos() {
       {/* ───── 6. FOCUS ───── */}
       <section className="py-24 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-serif text-stone-800 mb-4">Resultados naturales, no artificiales</h2>
-          <p className="text-stone-500 mb-12">En MJ Estética & Wellness Center creemos en la estética inteligente y equilibrada.</p>
+          <h2 className="text-4xl font-serif text-stone-800 mb-4">{lang === 'es' ? "Resultados naturales, no artificiales" : "Natural results, not artificial"}</h2>
+          <p className="text-stone-500 mb-12">{lang === 'es' ? "En MJ Estética & Wellness Center creemos en la estética inteligente y equilibrada." : "At MJ Estética & Wellness Center we believe in intelligent and balanced aesthetics."}</p>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {["Naturalidad", "Bienestar", "Armonización", "Prevención", "Personalización", "Seguridad estética"].map((item, i) => (
+            {(lang === 'es' ? ["Naturalidad", "Bienestar", "Armonización", "Prevención", "Personalización", "Seguridad estética"] : ["Naturalness", "Well-being", "Harmonization", "Prevention", "Personalization", "Aesthetic safety"]).map((item, i) => (
               <div key={i} className="flex items-center justify-center gap-2 text-stone-700 font-semibold border border-stone-200 py-4 rounded-2xl hover:bg-stone-50 transition-colors">
                 <CheckCircle2 className="w-5 h-5 text-primary" />
                 {item}
@@ -342,18 +395,23 @@ function LandingMedicos() {
       <section className="py-24 px-4 sm:px-6 bg-[#071e2e] text-white overflow-hidden">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-primary text-sm font-bold uppercase tracking-widest mb-3">El Proceso</p>
-            <h2 className="text-4xl font-serif text-white">¿Cómo funciona una valoración médico-estética?</h2>
+            <p className="text-primary text-sm font-bold uppercase tracking-widest mb-3">{lang === 'es' ? "El Proceso" : "The Process"}</p>
+            <h2 className="text-4xl font-serif text-white">{lang === 'es' ? "¿Cómo funciona una valoración médico-estética?" : "How does a medical-aesthetic assessment work?"}</h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
             <div className="hidden md:block absolute top-12 left-0 right-0 h-px bg-white/10" />
-            {[
+            {(lang === 'es' ? [
               { step: "Paso 1", title: "Evaluación personalizada", desc: "Analizamos tu piel, objetivos estéticos, estilo de vida y expectativas para entender qué protocolo puede ayudarte mejor." },
               { step: "Paso 2", title: "Diseño del protocolo", desc: "Creamos un plan personalizado orientado a resultados naturales y progresivos." },
               { step: "Paso 3", title: "Aplicación del tratamiento", desc: "Los procedimientos se realizan bajo atención profesional, en un ambiente seguro, cómodo y wellness premium." },
               { step: "Paso 4", title: "Seguimiento y recomendaciones", desc: "Te guiamos con cuidados posteriores y recomendaciones para apoyar tus resultados y bienestar estético." },
-            ].map((step, i) => (
+            ] : [
+              { step: "Step 1", title: "Personalized assessment", desc: "We analyze your skin, aesthetic goals, lifestyle, and expectations to understand which protocol can best help you." },
+              { step: "Step 2", title: "Protocol design", desc: "We create a personalized plan oriented towards natural and progressive results." },
+              { step: "Step 3", title: "Treatment application", desc: "Procedures are performed under professional care, in a safe, comfortable, and premium wellness environment." },
+              { step: "Step 4", title: "Follow-up and recommendations", desc: "We guide you with post-care and recommendations to support your results and aesthetic well-being." },
+            ]).map((step, i) => (
               <motion.div
                 key={i}
                 initial="hidden"
@@ -382,12 +440,14 @@ function LandingMedicos() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-serif text-stone-800 mb-6">¿Para quién se recomiendan estos tratamientos?</h2>
+              <h2 className="text-4xl font-serif text-stone-800 mb-6">{lang === 'es' ? "¿Para quién se recomiendan estos tratamientos?" : "Who are these treatments recommended for?"}</h2>
               <p className="text-stone-500 mb-8 leading-relaxed">
-                Estos protocolos pueden ser ideales para personas que buscan mejorar su apariencia de forma elegante y sutil, priorizando la salud de su piel y su bienestar integral.
+                {lang === 'es'
+                  ? "Estos protocolos pueden ser ideales para personas que buscan mejorar su apariencia de forma elegante y sutil, priorizando la salud de su piel y su bienestar integral."
+                  : "These protocols can be ideal for people looking to improve their appearance in an elegant and subtle way, prioritizing the health of their skin and their overall well-being."}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
+                {(lang === 'es' ? [
                   "Rejuvenecimiento facial natural",
                   "Glow y luminosidad saludable",
                   "Armonización facial",
@@ -395,7 +455,15 @@ function LandingMedicos() {
                   "Bienestar estético integral",
                   "Mantenimiento facial premium",
                   "Complementar su rutina de skincare avanzado",
-                ].map((item, i) => (
+                ] : [
+                  "Natural facial rejuvenation",
+                  "Healthy glow and luminosity",
+                  "Facial harmonization",
+                  "Preventive anti-aging protocols",
+                  "Integral aesthetic well-being",
+                  "Premium facial maintenance",
+                  "Complement advanced skincare routine",
+                ]).map((item, i) => (
                   <div key={i} className="flex items-center gap-2 text-stone-700 text-sm font-medium">
                     <Sparkles className="w-4 h-4 text-primary shrink-0" />
                     {item}
@@ -404,18 +472,25 @@ function LandingMedicos() {
               </div>
             </div>
             <div className="bg-stone-50 rounded-3xl p-8 border border-stone-200">
-              <h3 className="text-2xl font-serif text-stone-800 mb-4">Lo que hace diferente a MJ Estética & Wellness Center</h3>
-              <p className="text-stone-600 mb-6 font-medium">No buscamos que te veas “operado(a)” o exagerado(a).</p>
-              <p className="text-stone-500 text-sm mb-6">Nuestro enfoque está basado en:</p>
+              <h3 className="text-2xl font-serif text-stone-800 mb-4">{lang === 'es' ? "Lo que hace diferente a MJ Estética & Wellness Center" : "What makes MJ Estética & Wellness Center different"}</h3>
+              <p className="text-stone-600 mb-6 font-medium">{lang === 'es' ? "No buscamos que te veas “operado(a)” o exagerado(a)." : "We don't want you to look \"operated\" or exaggerated."}</p>
+              <p className="text-stone-500 text-sm mb-6">{lang === 'es' ? "Nuestro enfoque está basado en:" : "Our approach is based on:"}</p>
               <ul className="space-y-3">
-                {[
+                {(lang === 'es' ? [
                   "Atención personalizada",
                   "Protocolos adaptados individualmente",
                   "Experiencia wellness premium",
                   "Ambiente seguro y profesional",
                   "Resultados progresivos y naturales",
                   "Bienestar facial y corporal integral",
-                ].map((item, i) => (
+                ] : [
+                  "Personalized attention",
+                  "Individually adapted protocols",
+                  "Premium wellness experience",
+                  "Safe and professional environment",
+                  "Progressive and natural results",
+                  "Integral facial and body well-being",
+                ]).map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-stone-700 text-sm">
                     <CheckCircle2 className="w-4 h-4 text-[#25D366] shrink-0" />
                     {item}
@@ -432,11 +507,11 @@ function LandingMedicos() {
       <section className="py-24 px-4 sm:px-6 bg-stone-50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <p className="text-primary text-sm font-bold uppercase tracking-widest mb-3">Experiencias</p>
-            <h2 className="text-4xl font-serif text-stone-800">Testimonios de pacientes</h2>
+            <p className="text-primary text-sm font-bold uppercase tracking-widest mb-3">{lang === 'es' ? "Experiencias" : "Experiences"}</p>
+            <h2 className="text-4xl font-serif text-stone-800">{lang === 'es' ? "Testimonios de pacientes" : "Patient Testimonials"}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
+            {(lang === 'es' ? [
               {
                 text: "“Me encantó porque los resultados se veían súper naturales. Me sentía más fresca y descansada, pero seguía viéndome yo.”",
                 author: "Paciente MJ"
@@ -449,7 +524,20 @@ function LandingMedicos() {
                 text: "“Buscaba glow y bienestar facial sin exagerar resultados… y justamente eso encontré en MJ.”",
                 author: "Paciente MJ"
               }
-            ].map((t, i) => (
+            ] : [
+              {
+                text: "“I loved it because the results looked super natural. I felt fresher and more rested, but I still looked like me.”",
+                author: "MJ Patient"
+              },
+              {
+                text: "“From the assessment, I felt a lot of trust. Everything was personalized and very professional.”",
+                author: "MJ Patient"
+              },
+              {
+                text: "“I was looking for glow and facial well-being without exaggerating results… and that's exactly what I found at MJ.”",
+                author: "MJ Patient"
+              }
+            ]).map((t, i) => (
               <motion.div
                 key={i}
                 initial="hidden"
@@ -481,11 +569,11 @@ function LandingMedicos() {
       <section className="py-24 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-primary text-sm font-bold uppercase tracking-widest mb-3">Preguntas frecuentes</p>
-            <h2 className="text-3xl font-serif text-stone-800">Resolvemos tus dudas</h2>
+            <p className="text-primary text-sm font-bold uppercase tracking-widest mb-3">{lang === 'es' ? "Preguntas frecuentes" : "Frequently Asked Questions"}</p>
+            <h2 className="text-3xl font-serif text-stone-800">{lang === 'es' ? "Resolvemos tus dudas" : "We answer your questions"}</h2>
           </div>
           <div className="flex flex-col gap-3">
-            {faqs.map((faq, i) => (
+            {faqs_localized.map((faq, i) => (
               <FAQ key={i} q={faq.q} a={faq.a} open={openFaq === i} toggle={() => setOpenFaq(openFaq === i ? null : i)} />
             ))}
           </div>
@@ -497,16 +585,23 @@ function LandingMedicos() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl font-serif mb-8 text-white">Programas y protocolos disponibles</h2>
+              <h2 className="text-3xl font-serif mb-8 text-white">{lang === 'es' ? "Programas y protocolos disponibles" : "Available programs and protocols"}</h2>
               <ul className="grid grid-cols-1 gap-4">
-                {[
+                {(lang === 'es' ? [
                   "Programas wellness premium",
                   "Protocolos faciales personalizados",
                   "Rejuvenecimiento facial natural",
                   "Skincare avanzado profesional",
                   "Armonización estética personalizada",
                   "Paquetes faciales y corporales",
-                ].map((prog, i) => (
+                ] : [
+                  "Premium wellness programs",
+                  "Personalized facial protocols",
+                  "Natural facial rejuvenation",
+                  "Professional advanced skincare",
+                  "Personalized aesthetic harmonization",
+                  "Facial and body packages",
+                ]).map((prog, i) => (
                   <li key={i} className="flex items-center gap-3 bg-white/5 border border-white/10 p-4 rounded-xl">
                     <Sparkles className="w-5 h-5 text-primary shrink-0" />
                     <span className="text-white font-medium text-sm">{prog}</span>
@@ -518,12 +613,12 @@ function LandingMedicos() {
             <div className="bg-white rounded-3xl p-8 text-stone-800 text-center flex flex-col justify-center border-t-8 border-primary shadow-2xl">
               <div className="inline-flex items-center gap-2 bg-primary/10 text-primary rounded-full px-4 py-2 text-xs font-bold uppercase tracking-widest mb-6 mx-auto">
                 <Award className="w-3.5 h-3.5" />
-                Regalo para ti
+                {lang === 'es' ? "Regalo para ti" : "Gift for you"}
               </div>
-              <h3 className="text-2xl font-serif mb-2">🎁 GUÍA GRATUITA</h3>
-              <p className="text-stone-600 font-semibold mb-6">Cómo mejorar los resultados de tus limpiezas faciales</p>
+              <h3 className="text-2xl font-serif mb-2">🎁 {lang === 'es' ? "GUÍA GRATUITA" : "FREE GUIDE"}</h3>
+              <p className="text-stone-600 font-semibold mb-6">{lang === 'es' ? "Cómo mejorar los resultados de tus limpiezas faciales" : "How to improve the results of your facial cleansings"}</p>
               <p className="text-stone-500 text-sm mb-8">
-                Comenta la palabra <span className="text-primary font-bold text-lg px-2">MÉDICOS</span> en nuestro WhatsApp y recibe GRATIS nuestra guía práctica.
+                {lang === 'es' ? "Comenta la palabra" : "Comment the word"} <span className="text-primary font-bold text-lg px-2">MÉDICOS</span> {lang === 'es' ? "en nuestro WhatsApp y recibe GRATIS nuestra guía práctica." : "on our WhatsApp and receive our practical guide for FREE."}
               </p>
               <a
                 href={WA_CTA}
@@ -532,7 +627,7 @@ function LandingMedicos() {
                 onClick={() => trackWA("lead-magnet-medicos")}
                 className="bg-primary text-white font-bold rounded-full py-4 px-8 hover:bg-stone-900 transition-all flex items-center justify-center gap-2 group shadow-xl"
               >
-                Quiero mi guía GRATIS
+                {lang === 'es' ? "Quiero mi guía GRATIS" : "I want my FREE guide"}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -549,16 +644,21 @@ function LandingMedicos() {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <h2 className="text-4xl md:text-5xl font-serif text-stone-800 mb-6 leading-tight">Agenda tu valoración estética hoy</h2>
-            <p className="text-stone-600 text-lg mb-10">Tu bienestar también merece atención profesional, personalizada y natural.</p>
+            <h2 className="text-4xl md:text-5xl font-serif text-stone-800 mb-6 leading-tight">{lang === 'es' ? "Agenda tu valoración estética hoy" : "Schedule your aesthetic assessment today"}</h2>
+            <p className="text-stone-600 text-lg mb-10">{lang === 'es' ? "Tu bienestar también merece atención profesional, personalizada y natural." : "Your well-being also deserves professional, personalized, and natural attention."}</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-xl mx-auto mb-12">
-              {[
+              {(lang === 'es' ? [
                 "Descubre el protocolo ideal para ti",
                 "Consulta disponibilidad",
                 "Agenda tu valoración estética",
                 "Escríbenos por WhatsApp hoy",
-              ].map((item, i) => (
+              ] : [
+                "Discover the ideal protocol for you",
+                "Check availability",
+                "Schedule your aesthetic assessment",
+                "Write us on WhatsApp today",
+              ]).map((item, i) => (
                 <div key={i} className="flex items-center gap-2 text-stone-700 text-sm font-semibold">
                   <Zap className="w-4 h-4 text-primary shrink-0" />
                   {item}
@@ -566,17 +666,17 @@ function LandingMedicos() {
               ))}
             </div>
 
-            <CTAButton label="Agendar valoración por WhatsApp" id="final-cta-medicos" className="text-lg px-12 py-5 shadow-2xl" />
+            <CTAButton label={lang === 'es' ? "Agendar valoración por WhatsApp" : "Schedule assessment by WhatsApp"} id="final-cta-medicos" className="text-lg px-12 py-5 shadow-2xl" />
 
             <div className="mt-16 pt-8 border-t border-stone-200">
               <p className="text-stone-900 font-serif font-bold text-lg mb-1">📍 MJ Estética & Wellness Center — Turrialba</p>
-              <p className="text-stone-500 text-sm">Atención wellness y médico-estética premium orientada a resultados naturales y progresivos.</p>
+              <p className="text-stone-500 text-sm">{lang === 'es' ? "Atención wellness y médico-estética premium orientada a resultados naturales y progresivos." : "Premium wellness and medical-aesthetic care oriented towards natural and progressive results."}</p>
             </div>
           </motion.div>
         </div>
       </section>
 
-      <Footer />
+      <Footer lang={lang} />
       <FloatingWhatsApp />
     </div>
   );

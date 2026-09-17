@@ -1,0 +1,43 @@
+{
+  "values": [
+    {
+      "title": "Vocación de Servicio",
+      "description": "Cada tratamiento está diseñado con dedicación y empatía. Tu bienestar es nuestra mayor motivación y satisfacción."
+    },
+    {
+      "title": "Excelencia Profesional",
+      "description": "Nuestro equipo cuenta con formación especializada y se actualiza continuamente para ofrecerte técnicas y tecnologías de vanguardia."
+    },
+    {
+      "title": "Trato Personalizado",
+      "description": "Cada persona es única. Por eso escuchamos, evaluamos y diseñamos un plan a medida para cada cliente."
+    },
+    {
+      "title": "Ambiente de Bienestar",
+      "description": "Hemos creado un espacio pensado para que desde el momento en que entras, te desconectes del mundo y disfrutes."
+    }
+  ],
+  "team": [
+    {
+      "name": "María Jeanneth",
+      "role": "Directora & Especialista en Estética",
+      "description": "Fundadora de MJ Fisio Estética y Spa, con más de 15 años de experiencia en tratamientos estéticos y bienestar. Su pasión por el cuidado personal la llevó a crear un espacio de referencia en Turrialba."
+    },
+    {
+      "name": "Equipo de Fisioterapia",
+      "role": "Fisioterapeutas Certificados",
+      "description": "Profesionales certificados especializados en técnicas de rehabilitación, masajes terapéuticos y tratamientos corporales. Con experiencia en deporte, lesiones y bienestar general."
+    },
+    {
+      "name": "Equipo Médico Estético",
+      "role": "Médicos y Especialistas",
+      "description": "Médicos especialistas en estética avanzada: botox, hilos tensores, rellenos y trasplante capilar. Comprometidos con resultados naturales y seguros."
+    },
+    {
+      "name": "Nutricionista",
+      "role": "Especialista en Nutrición",
+      "description": "Experta en diseño de planes nutricionales personalizados para objetivos de salud, peso y rendimiento deportivo."
+    }
+  ],
+  "experience": "Años de Experiencia"
+}
