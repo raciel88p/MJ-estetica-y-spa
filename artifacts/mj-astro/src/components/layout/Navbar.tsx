@@ -125,7 +125,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
           : "bg-gradient-to-b from-black/80 via-black/20 to-transparent py-3.5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center w-full">
           {/* Large prominent Brand Logo on the left with zero side margins */}
           <a href={lang === 'es' ? "/" : "/en"} className="flex items-center cursor-pointer group shrink-0 mx-0 px-0">
@@ -193,7 +193,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
 
             {/* ── Servicios Dropdown ── */}
             <div
-              className="relative"
+              className=""
               onMouseEnter={() => { servicios.cancelClose(); servicios.open(); }}
               onMouseLeave={servicios.scheduleClose}
             >
@@ -213,7 +213,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                     onMouseEnter={servicios.cancelClose}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >
-                    <div className="w-[1000px] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden m-[5px]">
+                    <div className="w-[1000px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden m-[5px]">
                       <div className="px-5 pt-5 pb-5">
                         <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-4">
                           Nuestros Servicios
