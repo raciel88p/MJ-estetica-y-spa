@@ -1,99 +1,168 @@
 {
-  "leadMagnet": {
-    "tagline": "💍 REGALO EXCLUSIVO PARA NOVIAS",
-    "title": "Descarga GRATIS Nuestra Guía:",
-    "subtitle": "\"Cómo Llegar Relajada, Radiante y Sin Estrés al Día de Tu Boda\"",
-    "wordLabel": "💌 Comenta la palabra:",
-    "word": "BODA",
-    "desc": "En esta guía descubrirás:",
+  "hero": {
+    "title": "Ritual Spa Prenatal para Embarazadas en Turrialba",
+    "subtitle": "Un momento para desconectarte, respirar y disfrutar de esta etapa tan especial",
+    "p1": "Durante el embarazo, tu cuerpo cambia, tu rutina cambia y tus prioridades cambian.",
+    "p2": "Y mientras todos preguntan cómo está el bebé, hay una persona que también necesita cuidado:",
+    "p2Highlight": "TÚ. ❤️",
+    "p3": "El Ritual Spa Prenatal de MJ Estética & Spa fue creado para que puedas detenerte por un momento, descansar y disfrutar de una experiencia de bienestar especialmente pensada para futuras mamás.",
+    "p4": "Un espacio donde no tienes que hacer nada. Solo relajarte, respirar y dejarte consentir.",
+    "cta": "QUIERO RESERVAR MI RITUAL PRENATAL",
+    "subcta": "📲 Consulta disponibilidad por WhatsApp."
+  },
+  "moreThanMassage": {
+    "title": "Más que un masaje: un momento dedicado a ti",
+    "p1": "El embarazo puede venir acompañado de cansancio, tensión muscular, sensación de pesadez y muchas responsabilidades.",
+    "p2": "Por eso creamos una experiencia diferente.",
+    "p3": "El Ritual Spa Prenatal combina relajación, cuidado y atención personalizada para ayudarte a disfrutar de un momento de tranquilidad durante tu embarazo.",
+    "priorityTitle": "Nuestra prioridad es tu comodidad",
+    "priorityDesc": "Adaptamos la experiencia a tu etapa de embarazo y a tus necesidades, buscando que cada momento sea agradable y confortable.",
     "items": [
-      "Consejos para disfrutar los días previos.",
-      "Cómo potenciar los beneficios de un Spa Pre Boda.",
-      "Secretos para una piel radiante el gran día.",
-      "Técnicas de relajación para novias."
-    ],
-    "cta": "DESCARGAR GUÍA POR WHATSAPP",
-    "footer": "Además recibirás información exclusiva sobre nuestros paquetes."
+      "🌸 Ambiente tranquilo",
+      "🤰 Atención adaptada al embarazo",
+      "💆‍♀️ Técnicas suaves de masaje",
+      "🧘‍♀️ Espacio para relajarte",
+      "❤️ Atención personalizada"
+    ]
   },
-  "problem": {
-    "title": "El Mejor Regalo Antes de Tu Boda Eres Tú",
-    "p1": "Durante meses organizas cada detalle: Vestido, Fotografía, Invitados, Maquillaje, Decoración.",
-    "p2": "Pero muchas novias olvidan cuidar a la persona más importante de ese día: Ellas mismas.",
-    "p3": "Si estás sintiendo alguno de estos síntomas, es momento de hacer una pausa:",
-    "symptoms": [
-      "Estrés constante",
-      "Ansiedad",
-      "Dolores musculares",
-      "Cansancio acumulado",
-      "Dificultad para dormir",
-      "Piel apagada"
+  "whyDeserve": {
+    "title": "¿Por qué mereces este momento?",
+    "p1": "Porque has estado cuidando de todo.",
+    "list": [
+      "Cuidando tu alimentación.",
+      "Cuidando tus citas.",
+      "Preparando la llegada del bebé.",
+      "Pensando en cada detalle."
     ],
-    "closing": "Todo esto puede afectar cómo te sientes y cómo luces el día de tu boda. En MJ Estética & Wellness Center hemos diseñado una experiencia exclusiva para ayudarte a recuperar el equilibrio físico y emocional."
+    "asked": "Y probablemente has escuchado muchas veces: “¿Cómo está el bebé?”",
+    "question": "¿Cómo estás tú? ❤️",
+    "invitation": "El Ritual Spa Prenatal es una invitación a hacer una pausa. A respirar. A relajarte. A sentirte cuidada. A disfrutar de tu embarazo.",
+    "tagline": "🌷 Porque cuidar de ti también es importante.",
+    "cta": "QUIERO REGALARME ESTE MOMENTO"
   },
-  "benefits": {
-    "title": "Vive la Experiencia de Boda Spa Más Relajante en Turrialba",
-    "desc": "Nuestros protocolos para novias están diseñados para que llegues al altar sintiéndote ligera, renovada y con un brillo natural inigualable.",
-    "listTitle": "Lo que vivirás con nosotros:",
-    "items": [
-      "Relajación profunda del sistema nervioso",
-      "Alivio de tensiones musculares por estrés",
-      "Preparación cutánea para un maquillaje perfecto",
-      "Drenaje linfático para reducir inflamación",
-      "Ambiente privado y exclusivo para novias",
-      "Atención 100% personalizada por profesionales"
-    ],
-    "quote": "Te mereces este momento solo para ti."
-  },
-  "packages": {
-    "title": "Nuestros Paquetes Exclusivos",
-    "desc": "Selecciona la experiencia que mejor se adapte a tus necesidades antes del gran día.",
+  "includes": {
+    "title": "¿Qué incluye tu Ritual Spa Prenatal?",
+    "desc": "Hemos diseñado la experiencia para que desde que llegues puedas olvidarte por un momento de la rutina.",
     "items": [
       {
-        "t": "Novia Radiante",
-        "p": "El Favorito",
-        "d": "Protocolo integral que combina exfoliación corporal de seda, masaje relajante con aromaterapia y facial express 'Bridal Glow'.",
-        "time": "120 min"
+        "t": "💗 Recepción y atención personalizada",
+        "d": "Antes de comenzar conversamos contigo para conocer tu etapa de embarazo, necesidades y preferencias."
       },
       {
-        "t": "Spa en Pareja Pre-Boda",
-        "p": "Compartir la Calma",
-        "d": "Experiencia compartida para liberar el estrés de los preparativos juntos en un ambiente de calma absoluta, velas y música suave.",
-        "time": "90 min"
+        "t": "🤰 Preparación para tu comodidad",
+        "d": "La experiencia se adapta buscando que puedas permanecer cómoda y relajada durante el tratamiento."
       },
       {
-        "t": "Masaje Anti-Estrés Nupcial",
-        "p": "Alivio Directo",
-        "d": "Sesión focalizada en liberar tensión profunda de espalda, cuello y hombros acumulada por la organización del evento.",
-        "time": "60 min"
+        "t": "💆‍♀️ Masaje prenatal",
+        "d": "Aplicamos técnicas suaves orientadas al bienestar y relajación, adaptadas a las necesidades de la futura mamá."
+      },
+      {
+        "t": "🧘‍♀️ Ambiente de relajación",
+        "d": "Un espacio privado y tranquilo donde puedes desconectarte de las responsabilidades del día."
+      },
+      {
+        "t": "🌸 Experiencia sensorial",
+        "d": "Cada detalle está pensado para convertir una sesión de masaje en un verdadero ritual de bienestar."
+      },
+      {
+        "t": "❤️ Tiempo para ti",
+        "d": "Porque no todo tiene que girar alrededor de preparar la llegada del bebé. Este momento es para ti."
       }
     ]
   },
+  "expectation": {
+    "title": "¿Qué puedes esperar de la experiencia?",
+    "p1": "Cuando llegues a MJ Estética & Spa queremos que sientas que acabas de entrar en un espacio donde puedes bajar el ritmo. Dejar atrás el teléfono. Respirar profundamente. Cerrar los ojos. Y permitirte descansar.",
+    "p2": "El objetivo no es solamente realizar un masaje.",
+    "highlight": "Queremos que salgas sintiéndote cuidada, relajada y especial."
+  },
   "whyUs": {
-    "title": "¿Por Qué Confiar Tu Relajación a MJ Estética?",
-    "desc": "Entendemos la importancia de tu boda. No solo te brindamos un servicio, creamos un refugio de paz para ti.",
+    "title": "¿Por qué elegir MJ Estética & Spa?",
     "items": [
-      { "t": "Experiencia Premium" },
-      { "t": "Especialistas en Novias" },
-      { "t": "Privacidad Garantizada" },
-      { "t": "Resultados Visibles" },
-      { "t": "Atención al Detalle" },
-      { "t": "Turrialba Centro" }
+      {
+        "t": "Atención personalizada",
+        "d": "Cada embarazo es diferente. Por eso escuchamos tus necesidades y adaptamos la experiencia a tu comodidad."
+      },
+      {
+        "t": "Un espacio pensado para tu bienestar",
+        "d": "Creamos un ambiente donde puedas desconectarte de la rutina y dedicarte un tiempo exclusivamente para ti."
+      },
+      {
+        "t": "Experiencia de Spa",
+        "d": "No queremos que simplemente vengas a recibir un masaje. Queremos que vivas un ritual de bienestar."
+      },
+      {
+        "t": "En Turrialba",
+        "d": "Encuéntranos en Turrialba, Cartago, Costa Rica, para disfrutar de una experiencia de bienestar sin tener que desplazarte fuera de la zona."
+      }
     ]
+  },
+  "gift": {
+    "title": "¿Buscas un regalo para una futura mamá?",
+    "p1": "Hay regalos que se usan. Y hay regalos que se recuerdan. 🎁",
+    "p2": "El Ritual Spa Prenatal puede ser una opción especial para sorprender a una futura mamá.",
+    "perfectFor": "Perfecto para:",
+    "occasions": [
+      "🎀 Baby shower",
+      "🎂 Cumpleaños",
+      "❤️ Aniversario",
+      "🌷 Día de la Madre",
+      "🎁 Regalo de pareja",
+      "💗 Un detalle simplemente porque sí"
+    ],
+    "tagline": "Regálale algo que realmente pueda disfrutar: un momento para ella.",
+    "cta": "QUIERO REGALAR UN RITUAL PRENATAL"
+  },
+  "experienceNotRace": {
+    "title": "Una experiencia para disfrutar, no una carrera por terminar",
+    "p1": "No tienes que esperar a sentirte agotada para darte permiso de descansar. Puedes hacerlo simplemente porque quieres cuidarte. Puedes regalarte una hora para desconectarte.",
+    "quote": "“Hoy este momento es para mí.”",
+    "tagline": "🌸 Tu embarazo es una etapa que recordarás toda la vida. Haz espacio también para disfrutarla."
   },
   "faqs": {
-    "title": "Preguntas para Novias",
+    "title": "Preguntas frecuentes",
     "items": [
-      { "q": "¿Con cuánta anticipación debo reservar mi Boda Spa?", "a": "Recomendamos reservar con al menos 2 a 4 semanas de anticipación para asegurar tu espacio en nuestra agenda." },
-      { "q": "¿Cuántos días antes de la boda es ideal realizar el spa?", "a": "Lo ideal es entre 2 y 5 días antes de la boda. Así estarás relajada y los beneficios estéticos en tu piel estarán en su punto máximo el día del evento." },
-      { "q": "¿Pueden ir mis damas de honor o mamá?", "a": "¡Claro! Podemos coordinar una experiencia grupal para que compartas este momento con tus personas más cercanas." },
-      { "q": "¿Tienen paquetes que incluyan faciales?", "a": "Sí, nuestro paquete estrella 'Novia Radiante' incluye un facial diseñado específicamente para aportar luminosidad inmediata." },
-      { "q": "¿Qué debo llevar el día de mi sesión?", "a": "Solo tu disposición para relajarte. Nosotros te proporcionamos todo lo necesario: bata, pantuflas y una bebida de cortesía." }
+      {
+        "q": "¿Qué es un Ritual Spa Prenatal?",
+        "a": "Es una experiencia de bienestar diseñada especialmente para futuras mamás, combinando masaje adaptado al embarazo, relajación y atención personalizada."
+      },
+      {
+        "q": "¿El masaje prenatal es diferente a un masaje convencional?",
+        "a": "Sí. La experiencia debe considerar los cambios físicos propios del embarazo, incluyendo comodidad, posiciones, intensidad y zonas de trabajo."
+      },
+      {
+        "q": "¿Desde qué etapa del embarazo puedo realizarlo?",
+        "a": "Cada embarazo es diferente. Antes de reservar, recomendamos consultar con tu profesional de salud y comunicar al equipo de MJ Estética & Spa tu etapa de gestación."
+      },
+      {
+        "q": "¿Puedo recibir el ritual si tengo alguna molestia durante el embarazo?",
+        "a": "Es importante informar previamente cualquier molestia, condición o recomendación recibida durante tu control prenatal. Si existe alguna situación que requiera valoración médica, consulta primero con tu profesional de salud."
+      },
+      {
+        "q": "¿Dónde está ubicado MJ Estética & Spa?",
+        "a": "Estamos ubicados en Turrialba, Cartago, Costa Rica, en la zona de Ciudadela Jorge Debravo."
+      },
+      {
+        "q": "¿Necesito reservar?",
+        "a": "Sí. Recomendamos reservar previamente para asegurar disponibilidad."
+      },
+      {
+        "q": "¿Puedo comprarlo como regalo?",
+        "a": "Sí. Puedes consultar por nuestros certificados de regalo para sorprender a una futura mamá."
+      }
     ]
   },
-  "finalCta": {
-    "title": "Reserva Hoy Tu Boda Spa en Turrialba",
-    "desc": "No dejes tu bienestar para el último momento. Llega al altar sintiéndote la mejor versión de ti misma.",
-    "cta1": "Agendar por WhatsApp",
-    "cta2": "Ver Disponibilidad"
+  "final": {
+    "p1": "Tu cuerpo está viviendo un momento extraordinario.",
+    "p2": "Permítete disfrutarlo.",
+    "p3": "No esperes a tener tiempo.",
+    "highlight": "Haz tiempo para ti. ❤️",
+    "invite": "Ven a disfrutar una experiencia creada especialmente para futuras mamás en MJ Estética & Spa, Turrialba.",
+    "badge": "🌸 RITUAL SPA PRENATAL",
+    "subbadge": "Un momento para mamá.",
+    "cta": "📲 QUIERO RESERVAR MI RITUAL PRENATAL",
+    "waMsg": "O escríbenos por WhatsApp: “Hola, quiero información sobre el Ritual Spa Prenatal.”",
+    "location": "📍 Turrialba, Cartago, Costa Rica",
+    "brand": "MJ Estética & Spa"
   }
 }
