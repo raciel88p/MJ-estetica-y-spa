@@ -191,10 +191,22 @@ export const ritualesSpaLinks = {
   es: [
     { name: "Boda Spa", href: "/servicios/boda-spa" },
     { name: "Aromaterapia", href: "/servicios/aromaterapia" },
+    { name: "Masajes para Embarazadas", href: "/servicios/masaje-embarazadas" },
+    { name: "Tropical Extreme", href: "/servicios/tropical-extreme" },
+    { name: "Masaje con Café", href: "/servicios/masaje-cafe" },
+    { name: "Masaje con Chocolate", href: "/servicios/masaje-chocolate" },
+    { name: "Masaje de Barro", href: "/servicios/masaje-barro" },
+    { name: "Masaje de Descarga Muscular", href: "/servicios/masaje-descarga-muscular" },
   ],
   en: [
     { name: "Spa for Brides", href: "/en/services/spa-brides" },
     { name: "Aromatherapy", href: "/en/services/aromatherapy" },
+    { name: "Prenatal Massage", href: "/en/services/prenatal-massage" },
+    { name: "Tropical Extreme", href: "/en/services/tropical-extreme" },
+    { name: "Coffee Massage", href: "/en/services/coffee-massage" },
+    { name: "Chocolate Massage", href: "/en/services/chocolate-massage" },
+    { name: "Mud Massage", href: "/en/services/mud-massage" },
+    { name: "Muscle Release Massage", href: "/en/services/muscle-release-massage" },
   ],
 };
 
@@ -5421,5 +5433,343 @@ export const servicePages: MultiLangServicePageData[] = [
         },
       ],
     },
+  },
+  {
+    es: {
+      slug: "masaje-embarazadas",
+      name: "Masajes para Embarazadas",
+      fullTitle: "Masajes para Embarazadas en Turrialba",
+      tagline: "Alivio, confort y descanso seguro para ti y tu bebé",
+      heroDescription: "Un masaje especialmente adaptado para las necesidades de la gestante, enfocado en aliviar la tensión acumulada en espalda y piernas, reducir la hinchazón y promover una relajación profunda y segura en un entorno cómodo y amigable.",
+      benefits: [
+        "Alivio de la tensión lumbar y muscular",
+        "Reducción de la retención de líquidos en piernas y pies",
+        "Mejora de la calidad del descanso y el sueño",
+        "Posturas adaptadas de forma segura y confortable",
+        "Efecto relajante para la madre y el bebé"
+      ],
+      items: [
+        {
+          title: "Masaje Prenatal Relajante",
+          description: "Técnica suave y especializada para gestantes a partir del segundo trimestre.",
+          duration: "60 min",
+          price: "Consultar precio"
+        }
+      ],
+      faq: [
+        {
+          question: "¿A partir de qué mes de embarazo puedo realizarme este masaje?",
+          answer: "Se recomienda realizarlo a partir del segundo trimestre (semana 12 en adelante) con previa autorización médica si existen condiciones especiales."
+        }
+      ]
+    },
+    en: {
+      slug: "prenatal-massage",
+      name: "Prenatal Massage",
+      fullTitle: "Prenatal Massage in Turrialba",
+      tagline: "Relief, comfort, and safe rest for you and your baby",
+      heroDescription: "A massage specially tailored for expectant mothers, focused on relieving tension in the back and legs, reducing swelling, and promoting deep, safe relaxation in a comfortable environment.",
+      benefits: [
+        "Relief from lower back and muscle tension",
+        "Reduction of fluid retention in legs and feet",
+        "Improved rest and sleep quality",
+        "Safely and comfortably adapted postures",
+        "Relaxing effect for both mother and baby"
+      ],
+      items: [
+        {
+          title: "Relaxing Prenatal Massage",
+          description: "Gentle and specialized technique for expectant mothers from the second trimester onwards.",
+          duration: "60 min",
+          price: "Consult price"
+        }
+      ],
+      faq: [
+        {
+          question: "When during pregnancy can I get this massage?",
+          answer: "It is recommended from the second trimester (week 12 onwards), with medical clearance if special conditions exist."
+        }
+      ]
+    }
+  },
+  {
+    es: {
+      slug: "tropical-extreme",
+      name: "Tropical Extreme",
+      fullTitle: "Ritual Tropical Extreme en Turrialba",
+      tagline: "Una explosión sensorial de exfoliación y nutrición tropical",
+      heroDescription: "Siente la frescura y energía del trópico con nuestro ritual exclusivo Tropical Extreme. Combina una exfoliación corporal profunda con esencias frutales y una hidratación nutritiva que restaura la vitalidad de tu piel.",
+      benefits: [
+        "Renovación celular y exfoliación profunda",
+        "Piel suave, luminosa y altamente hidratada",
+        "Aromaterapia con esencias tropicales revitalizantes",
+        "Sensación de frescura y relajación corporal integral"
+      ],
+      items: [
+        {
+          title: "Ritual Corporal Tropical Extreme",
+          description: "Experiencia exfoliante e hidratante con aroma y textura tropical.",
+          duration: "75 min",
+          price: "Consultar precio"
+        }
+      ],
+      faq: [
+        {
+          question: "¿Para qué tipo de piel está recomendado?",
+          answer: "Está recomendado para todo tipo de piel que busque renovación, suavidad, hidratación y frescura."
+        }
+      ]
+    },
+    en: {
+      slug: "tropical-extreme",
+      name: "Tropical Extreme",
+      fullTitle: "Tropical Extreme Ritual in Turrialba",
+      tagline: "A sensory explosion of tropical exfoliation and nourishment",
+      heroDescription: "Feel the freshness and energy of the tropics with our exclusive Tropical Extreme ritual. Combines deep body exfoliation with fruit essences and a nourishing hydration that restores your skin's vitality.",
+      benefits: [
+        "Cellular renewal and deep exfoliation",
+        "Smooth, luminous, and deeply hydrated skin",
+        "Aromatherapy with revitalizing tropical essences",
+        "Sensory freshness and complete body relaxation"
+      ],
+      items: [
+        {
+          title: "Tropical Extreme Body Ritual",
+          description: "Exfoliating and hydrating experience with tropical aromas and textures.",
+          duration: "75 min",
+          price: "Consult price"
+        }
+      ],
+      faq: [
+        {
+          question: "What skin type is this recommended for?",
+          answer: "It is recommended for all skin types looking for renewal, smoothness, hydration, and freshness."
+        }
+      ]
+    }
+  },
+  {
+    es: {
+      slug: "masaje-cafe",
+      name: "Masaje con Café",
+      fullTitle: "Masaje y Ritual con Café en Turrialba",
+      tagline: "Estimulación, desintoxicación y poder antioxidante",
+      heroDescription: "Aprovecha las propiedades estimulantes y antioxidantes del café en una experiencia corporal tonificante. Ayuda a activar la microcirculación, combatir la celulitis y dejar la piel firme y suave.",
+      benefits: [
+        "Activación de la microcirculación sanguínea",
+        "Efecto antioxidante y reafirmante",
+        "Exfoliación natural que elimina células muertas",
+        "Aroma estimulante que revitaliza cuerpo y mente"
+      ],
+      items: [
+        {
+          title: "Ritual Corporal de Café",
+          description: "Exfoliación y masaje estimulante con activos de café puro.",
+          duration: "60 min",
+          price: "Consultar precio"
+        }
+      ],
+      faq: [
+        {
+          question: "¿Ayuda el café con la celulitis y la firmeza de la piel?",
+          answer: "Sí, la cafeína estimula la circulación y promueve el drenaje, apoyando la firmeza y suavidad del tejido."
+        }
+      ]
+    },
+    en: {
+      slug: "coffee-massage",
+      name: "Coffee Massage",
+      fullTitle: "Coffee Massage & Ritual in Turrialba",
+      tagline: "Stimulation, detoxification, and antioxidant power",
+      heroDescription: "Harness the stimulating and antioxidant properties of coffee in an invigorating body experience. Helps activate microcirculation, combat cellulite, and leave skin firm and smooth.",
+      benefits: [
+        "Blood microcirculation activation",
+        "Antioxidant and firming effect",
+        "Natural exfoliation removing dead skin cells",
+        "Invigorating scent that revitalizes body and mind"
+      ],
+      items: [
+        {
+          title: "Coffee Body Ritual",
+          description: "Exfoliation and stimulating massage with pure coffee extracts.",
+          duration: "60 min",
+          price: "Consult price"
+        }
+      ],
+      faq: [
+        {
+          question: "Does coffee help with cellulite and skin firmness?",
+          answer: "Yes, caffeine stimulates circulation and drainage, supporting skin firmness and smoothness."
+        }
+      ]
+    }
+  },
+  {
+    es: {
+      slug: "masaje-chocolate",
+      name: "Masaje con Chocolate (Chocoterapia)",
+      fullTitle: "Masaje con Chocolate y Chocoterapia en Turrialba",
+      tagline: "Nutrición intensa y bienestar sensorial para tu piel",
+      heroDescription: "Sumérgete en el placer de la chocoterapia. El cacao puro nutre e hidrata profundamente la piel mientras estimula la liberación de endorfinas, brindando una sensación inigualable de relajación y bienestar.",
+      benefits: [
+        "Nutrición e hidratación profunda con cacao puro",
+        "Estimulación de endorfinas para reducir el estrés",
+        "Piel extremadamente suave y aterciopelada",
+        "Experiencia aromática highly relajante"
+      ],
+      items: [
+        {
+          title: "Chocoterapia Corporal Completa",
+          description: "Envoltura y masaje corporal con mascarilla de cacao natural.",
+          duration: "75 min",
+          price: "Consultar precio"
+        }
+      ],
+      faq: [
+        {
+          question: "¿El chocolate deja la piel grasosa?",
+          answer: "No, la mascarilla de cacao se absorbe nutriendo la piel y el exceso se retira dejando una textura suave y sedosa."
+        }
+      ]
+    },
+    en: {
+      slug: "chocolate-massage",
+      name: "Chocolate Massage (Chocotherapy)",
+      fullTitle: "Chocolate Massage & Chocotherapy in Turrialba",
+      tagline: "Intense nourishment and sensory well-being for your skin",
+      heroDescription: "Immerse yourself in the pleasure of chocotherapy. Pure cocoa deeply nourishes and hydrates the skin while stimulating the release of endorphins, bringing an unmatched feeling of relaxation and well-being.",
+      benefits: [
+        "Deep nourishment and hydration with pure cocoa",
+        "Endorphin stimulation to reduce stress",
+        "Extremely smooth and velvety skin texture",
+        "Highly relaxing aromatic experience"
+      ],
+      items: [
+        {
+          title: "Full Body Chocotherapy",
+          description: "Body wrap and massage with natural cocoa mask.",
+          duration: "75 min",
+          price: "Consult price"
+        }
+      ],
+      faq: [
+        {
+          question: "Does chocolate leave the skin greasy?",
+          answer: "No, the cocoa mask absorbs deeply into the skin, and any excess is rinsed off leaving skin silky and soft."
+        }
+      ]
+    }
+  },
+  {
+    es: {
+      slug: "masaje-barro",
+      name: "Masaje de Barro (Lodoterapia)",
+      fullTitle: "Masaje de Barro y Lodoterapia en Turrialba",
+      tagline: "Desintoxicación mineral y purificación corporal profunda",
+      heroDescription: "Un tratamiento purificante y remineralizante que utiliza barros terapéuticos ricos en oligoelementos. Desintoxica la piel, alivia la tensión muscular y devuelve el equilibrio natural al cuerpo.",
+      benefits: [
+        "Desintoxicación profunda de poros y tejidos",
+        "Aporte de minerales y oligoelementos esenciales",
+        "Alivio de contracturas y tensión muscular",
+        "Sensación de ligereza y purificación corporal"
+      ],
+      items: [
+        {
+          title: "Masaje y Envoltura de Barro Terapéutico",
+          description: "Aplicación de lodo termal rica en minerales combinada con masaje relajante.",
+          duration: "75 min",
+          price: "Consultar precio"
+        }
+      ],
+      faq: [
+        {
+          question: "¿Cuáles son los beneficios del barro terapéutico?",
+          answer: "Ayuda a extraer impurezas, desintoxicar la piel, aportar minerales y calmar molestias musculares."
+        }
+      ]
+    },
+    en: {
+      slug: "mud-massage",
+      name: "Mud Massage (Mud Therapy)",
+      fullTitle: "Mud Massage & Mud Therapy in Turrialba",
+      tagline: "Mineral detoxification and deep body purification",
+      heroDescription: "A purifying and remineralizing treatment using therapeutic mud rich in trace elements. Detoxifies the skin, relieves muscle tension, and restores natural body balance.",
+      benefits: [
+        "Deep detoxification of pores and tissue",
+        "Supply of essential minerals and trace elements",
+        "Relief of muscle tension and tightness",
+        "Sense of lightness and complete body purification"
+      ],
+      items: [
+        {
+          title: "Therapeutic Mud Massage & Wrap",
+          description: "Application of mineral-rich thermal mud combined with a relaxing massage.",
+          duration: "75 min",
+          price: "Consult price"
+        }
+      ],
+      faq: [
+        {
+          question: "What are the benefits of therapeutic mud?",
+          answer: "It helps extract impurities, detoxify the skin, provide essential minerals, and soothe muscle soreness."
+        }
+      ]
+    }
+  },
+  {
+    es: {
+      slug: "masaje-descarga-muscular",
+      name: "Masaje de Descarga Muscular",
+      fullTitle: "Masaje de Descarga Muscular en Turrialba",
+      tagline: "Liberación intensa de tensión, contracturas y fatiga",
+      heroDescription: "Especialmente diseñado para deportistas o personas con alta carga de estrés físico y laboral. Combina técnicas de presión profunda y estiramientos para liberar sobrecargas musculares y acelerar la recuperación.",
+      benefits: [
+        "Liberación efectiva de contracturas y nudos musculares",
+        "Recuperación acelerada tras esfuerzo físico intenso",
+        "Reducción del riesgo de lesiones y mejora de la flexibilidad",
+        "Sensación de alivio y descanso muscular profundo"
+      ],
+      items: [
+        {
+          title: "Sesión de Descarga Muscular Profunda",
+          description: "Trabajo localizado e intenso sobre grupos musculares sobrecargados.",
+          duration: "60 min",
+          price: "Consultar precio"
+        }
+      ],
+      faq: [
+        {
+          question: "¿Es adecuado este masaje si hago deporte frecuentemente?",
+          answer: "Sí, es el tratamiento ideal para atletas o personas activas que buscan prevenir lesiones y acelerar la recuperación muscular."
+        }
+      ]
+    },
+    en: {
+      slug: "muscle-release-massage",
+      name: "Muscle Release Massage",
+      fullTitle: "Muscle Release Massage in Turrialba",
+      tagline: "Intense release of tension, contractures, and fatigue",
+      heroDescription: "Specially designed for athletes or individuals with heavy physical or work stress. Combines deep pressure techniques and stretching to release muscle overload and accelerate recovery.",
+      benefits: [
+        "Effective release of contractures and muscle knots",
+        "Accelerated recovery after intense physical exertion",
+        "Reduced risk of injury and improved flexibility",
+        "Deep relief and muscle rest"
+      ],
+      items: [
+        {
+          title: "Deep Muscle Release Session",
+          description: "Targeted and intense work on overloaded muscle groups.",
+          duration: "60 min",
+          price: "Consult price"
+        }
+      ],
+      faq: [
+        {
+          question: "Is this massage suitable if I exercise frequently?",
+          answer: "Yes, it is the ideal treatment for athletes or active people looking to prevent injury and speed up muscle recovery."
+        }
+      ]
+    }
   }
 ];
