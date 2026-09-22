@@ -52,6 +52,7 @@ import { InBodyServiceContent } from "@/components/services/InBodyServiceContent
 import { NutricionServiceContent } from "@/components/services/NutricionServiceContent";
 import { RejuvenecimientoLaserContent } from "@/components/services/RejuvenecimientoLaserContent";
 import { BodaSpaContent } from "@/components/services/BodaSpaContent";
+import { MasajeEmbarazadasContent } from "@/components/services/MasajeEmbarazadasContent";
 import { ArteterapiaContent } from "@/components/services/ArteterapiaContent";
 import { PsicologiaInfantilContent } from "@/components/services/PsicologiaInfantilContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
@@ -779,6 +780,10 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
 
       {service.slug === "boda-spa" && (
         <BodaSpaContent waLink={WA} lang={lang} />
+      )}
+
+      {service.slug === "masaje-embarazadas" && (
+        <MasajeEmbarazadasContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "arteterapia" && (
