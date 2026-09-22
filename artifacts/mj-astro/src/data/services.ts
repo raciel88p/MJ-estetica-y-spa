@@ -5611,54 +5611,66 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "tropical-extreme",
       name: "Tropical Extreme",
-      fullTitle: "Ritual Tropical Extreme en Turrialba",
-      tagline: "Una explosión sensorial de exfoliación y nutrición tropical",
-      heroDescription: "Siente la frescura y energía del trópico con nuestro ritual exclusivo Tropical Extreme. Combina una exfoliación corporal profunda con esencias frutales y una hidratación nutritiva que restaura la vitalidad de tu piel.",
+      fullTitle: "Masaje Tropical Extreme en Turrialba | MJ Estética & Spa",
+      tagline: "Un momento para desconectarte, relajarte y volver a conectar contigo",
+      heroDescription: "Disfruta el Ritual Tropical Extreme en Turrialba, una experiencia de masaje y spa diseñada para relajarte y desconectarte de la rutina combinando elementos sensoriales del trópico.",
       benefits: [
-        "Renovación celular y exfoliación profunda",
-        "Piel suave, luminosa y altamente hidratada",
-        "Aromaterapia con esencias tropicales revitalizantes",
-        "Sensación de frescura y relajación corporal integral"
+        "Un ambiente exclusivo para desconectarte",
+        "Experiencia de masaje orientada a la relajación profunda",
+        "Atención personalizada adaptada a tus necesidades",
+        "Aromaterapia e inspiración tropical relajante"
       ],
       items: [
         {
-          title: "Ritual Corporal Tropical Extreme",
-          description: "Experiencia exfoliante e hidratante con aroma y textura tropical.",
+          title: "Ritual Tropical Extreme",
+          description: "Experiencia completa de masaje de spa con elementos sensoriales e inspiración tropical.",
           duration: "75 min",
           price: "Consultar precio"
         }
       ],
       faq: [
         {
-          question: "¿Para qué tipo de piel está recomendado?",
-          answer: "Está recomendado para todo tipo de piel que busque renovación, suavidad, hidratación y frescura."
+          question: "¿Qué es el Ritual Tropical Extreme?",
+          answer: "Es una experiencia de spa que combina un masaje con elementos sensoriales inspirados en el ambiente tropical, diseñada para favorecer una sensación de relajación y bienestar."
+        },
+        {
+          question: "¿Dónde puedo recibir un masaje Tropical Extreme?",
+          answer: "Puedes disfrutar del Ritual Tropical Extreme en MJ Estética & Spa en Turrialba, Cartago, Costa Rica."
+        },
+        {
+          question: "¿Es un masaje relajante?",
+          answer: "Sí. Tropical Extreme está planteado como una experiencia orientada principalmente a la relajación y el bienestar."
+        },
+        {
+          question: "¿Necesito reservar con anticipación?",
+          answer: "Sí, recomendamos reservar previamente para confirmar disponibilidad y horario."
         }
       ]
     },
     en: {
       slug: "tropical-extreme",
       name: "Tropical Extreme",
-      fullTitle: "Tropical Extreme Ritual in Turrialba",
-      tagline: "A sensory explosion of tropical exfoliation and nourishment",
-      heroDescription: "Feel the freshness and energy of the tropics with our exclusive Tropical Extreme ritual. Combines deep body exfoliation with fruit essences and a nourishing hydration that restores your skin's vitality.",
+      fullTitle: "Tropical Extreme Massage in Turrialba | MJ Estética & Spa",
+      tagline: "A moment to disconnect, relax, and reconnect with yourself",
+      heroDescription: "Enjoy the Tropical Extreme Ritual in Turrialba, a massage and spa experience designed to relax and disconnect from daily routine.",
       benefits: [
-        "Cellular renewal and deep exfoliation",
-        "Smooth, luminous, and deeply hydrated skin",
-        "Aromatherapy with revitalizing tropical essences",
-        "Sensory freshness and complete body relaxation"
+        "Exclusive environment to disconnect",
+        "Massage experience focused on deep relaxation",
+        "Personalized care tailored to your needs",
+        "Aromatherapy and relaxing tropical inspiration"
       ],
       items: [
         {
-          title: "Tropical Extreme Body Ritual",
-          description: "Exfoliating and hydrating experience with tropical aromas and textures.",
+          title: "Tropical Extreme Ritual",
+          description: "Full spa massage experience with sensory elements and tropical inspiration.",
           duration: "75 min",
           price: "Consult price"
         }
       ],
       faq: [
         {
-          question: "What skin type is this recommended for?",
-          answer: "It is recommended for all skin types looking for renewal, smoothness, hydration, and freshness."
+          question: "What is the Tropical Extreme Ritual?",
+          answer: "It is a spa experience that combines massage with sensory elements inspired by a tropical atmosphere."
         }
       ]
     }
