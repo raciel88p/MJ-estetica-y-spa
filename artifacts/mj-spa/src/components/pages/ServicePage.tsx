@@ -55,6 +55,7 @@ import { BodaSpaContent } from "@/components/services/BodaSpaContent";
 import { MasajeEmbarazadasContent } from "@/components/services/MasajeEmbarazadasContent";
 import { TropicalExtremeContent } from "@/components/services/TropicalExtremeContent";
 import { MasajeCafeContent } from "@/components/services/MasajeCafeContent";
+import { MasajeChocolateContent } from "@/components/services/MasajeChocolateContent";
 import { ArteterapiaContent } from "@/components/services/ArteterapiaContent";
 import { PsicologiaInfantilContent } from "@/components/services/PsicologiaInfantilContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
@@ -794,6 +795,10 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
 
       {service.slug === "masaje-cafe" && (
         <MasajeCafeContent waLink={WA} lang={lang} />
+      )}
+
+      {service.slug === "masaje-chocolate" && (
+        <MasajeChocolateContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "arteterapia" && (
