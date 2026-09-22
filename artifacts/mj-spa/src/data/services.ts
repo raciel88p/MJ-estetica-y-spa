@@ -5676,55 +5676,67 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "masaje-chocolate",
-      name: "Masaje con Chocolate (Chocoterapia)",
-      fullTitle: "Masaje con Chocolate y Chocoterapia en Turrialba",
-      tagline: "Nutrición intensa y bienestar sensorial para tu piel",
-      heroDescription: "Sumérgete en el placer de la chocoterapia. El cacao puro nutre e hidrata profundamente la piel mientras estimula la liberación de endorfinas, brindando una sensación inigualable de relajación y bienestar.",
+      name: "Masaje de Chocolate (Chocoterapia)",
+      fullTitle: "Masaje de Chocolate en Turrialba | Chocolaterapia Relajante | MJ Estética",
+      tagline: "Una experiencia de chocolate para relajarte, desconectarte y consentirte",
+      heroDescription: "Disfruta un Masaje de Chocolate en Turrialba con chocolaterapia, masaje relajante y una experiencia sensorial de bienestar.",
       benefits: [
-        "Nutrición e hidratación profunda con cacao puro",
-        "Estimulación de endorfinas para reducir el estrés",
-        "Piel extremadamente suave y aterciopelada",
-        "Experiencia aromática highly relajante"
+        "Experiencia sensorial envolvente con aroma a cacao",
+        "Sensación de suavidad e hidratación profunda en la piel",
+        "Relajación corporal total y descanso físico y mental",
+        "Atención personalizada en un ambiente spa confortable"
       ],
       items: [
         {
-          title: "Chocoterapia Corporal Completa",
-          description: "Envoltura y masaje corporal con mascarilla de cacao natural.",
-          duration: "75 min",
+          title: "Chocolaterapia Corporal",
+          description: "Ritual completo con productos cosméticos de cacao, masaje relajante e hidratación.",
+          duration: "60 min",
           price: "Consultar precio"
         }
       ],
       faq: [
         {
-          question: "¿El chocolate deja la piel grasosa?",
-          answer: "No, la mascarilla de cacao se absorbe nutriendo la piel y el exceso se retira dejando una textura suave y sedosa."
+          question: "¿Qué es un Masaje de Chocolate?",
+          answer: "Es una experiencia corporal de spa que combina masaje relajante con productos cosméticos inspirados en el cacao y elementos sensoriales relacionados con el chocolate."
+        },
+        {
+          question: "¿La chocolaterapia es relajante?",
+          answer: "La experiencia está diseñada principalmente alrededor del masaje, el ambiente y los elementos sensoriales para favorecer una sensación de relajación y bienestar."
+        },
+        {
+          question: "¿Qué productos se utilizan?",
+          answer: "Se utilizan productos cosméticos especializados para el protocolo de chocolaterapia. No se trata de chocolate alimenticio aplicado directamente sobre la piel."
+        },
+        {
+          question: "¿El chocolate mancha la piel?",
+          answer: "Los productos cosméticos utilizados están diseñados para tratamientos corporales y se retiran dejando la piel suave y limpia."
         }
       ]
     },
     en: {
       slug: "chocolate-massage",
       name: "Chocolate Massage (Chocotherapy)",
-      fullTitle: "Chocolate Massage & Chocotherapy in Turrialba",
-      tagline: "Intense nourishment and sensory well-being for your skin",
-      heroDescription: "Immerse yourself in the pleasure of chocotherapy. Pure cocoa deeply nourishes and hydrates the skin while stimulating the release of endorphins, bringing an unmatched feeling of relaxation and well-being.",
+      fullTitle: "Chocolate Massage in Turrialba | Relaxing Chocotherapy",
+      tagline: "A chocolate experience to relax, disconnect, and pamper yourself",
+      heroDescription: "Enjoy a Chocolate Massage in Turrialba with chocotherapy, relaxing massage, and a sensory wellness experience.",
       benefits: [
-        "Deep nourishment and hydration with pure cocoa",
-        "Endorphin stimulation to reduce stress",
-        "Extremely smooth and velvety skin texture",
-        "Highly relaxing aromatic experience"
+        "Enveloping sensory experience with cocoa aroma",
+        "Deep skin smoothness and hydration sensation",
+        "Full body relaxation and physical & mental rest",
+        "Personalized care in a comfortable spa environment"
       ],
       items: [
         {
           title: "Full Body Chocotherapy",
-          description: "Body wrap and massage with natural cocoa mask.",
-          duration: "75 min",
+          description: "Complete ritual with specialized cocoa cosmetic products, relaxing massage, and hydration.",
+          duration: "60 min",
           price: "Consult price"
         }
       ],
       faq: [
         {
-          question: "Does chocolate leave the skin greasy?",
-          answer: "No, the cocoa mask absorbs deeply into the skin, and any excess is rinsed off leaving skin silky and soft."
+          question: "What is a Chocolate Massage?",
+          answer: "It is a spa body experience combining relaxing massage with cocoa-inspired cosmetic products."
         }
       ]
     }
