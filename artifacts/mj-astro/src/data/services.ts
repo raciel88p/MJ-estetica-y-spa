@@ -4693,48 +4693,118 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
     en: {
-      slug: "spa-brides",
-      name: "Spa for Brides",
-      tagline: "The best gift before your wedding is you",
+      slug: "inbody",
+      name: "InBody in Turrialba | Professional Body Composition Analysis",
+      tagline: "Know your body, measure your progress, improve your results",
       heroDescription:
-        "Live the most relaxing Bride Spa experience in Turrialba. Exclusive experience designed to help you regain physical and emotional balance before your special day.",
+        "Do you want to know if you're really losing fat, gaining muscle, or improving your physical condition? A traditional scale only shows your weight, but doesn't explain what's happening inside your body.",
+      benefits: [
+        "Know real body fat percentage",
+        "Measure segmental muscle mass",
+        "Identify visceral fat level",
+        "Evaluate hydration and body water",
+        "Calculate exact basal metabolism",
+        "Professional progress tracking"
+      ],
+      items: [
+        {
+          title: "Professional InBody Analysis",
+          description:
+            "Complete body composition evaluation with report delivery and results interpretation.",
+          duration: "10 min",
+          price: "Consult price",
+        },
+      ],
+      faq: [
+        {
+          question: "How long does an InBody analysis take?",
+          answer: "The measurement takes approximately 5 to 10 minutes.",
+        },
+      ],
+    },
+  },
+  {
+    es: {
+      slug: "boda-spa",
+      name: "Ritual Spa Prenatal para Embarazadas en Turrialba",
+      fullTitle: "Ritual Spa Prenatal para Embarazadas en Turrialba",
+      tagline: "Un momento para desconectarte, respirar y disfrutar de esta etapa tan especial",
+      heroDescription:
+        "Durante el embarazo, tu cuerpo cambia, tu rutina cambia y tus prioridades cambian.<br /><br />Y mientras todos preguntan cómo está el bebé, hay una persona que también necesita cuidado: <strong>TÚ. ❤️</strong><br /><br />El <strong>Ritual Spa Prenatal de MJ Estética & Spa</strong> fue creado para que puedas detenerte por un momento, descansar y disfrutar de una experiencia de bienestar especialmente pensada para futuras mamás.<br /><br />Un espacio donde no tienes que hacer nada. Solo relajarte, respirar y dejarte consentir.",
+      benefits: [
+        "Ambiente tranquilo y acogedor",
+        "Atención adaptada a tu etapa de embarazo",
+        "Técnicas suaves de masaje prenatal",
+        "Espacio de relajación y desconexión total",
+        "Atención personalizada para tu comodidad"
+      ],
+      items: [
+        {
+          title: "Experiencia Ritual Spa Prenatal Completa",
+          description: "Incluye recepción personalizada, preparación adaptada, masaje prenatal suave, ambiente privado de relajación y experiencia sensorial.",
+          duration: "90 min",
+          price: "Consultar precio"
+        }
+      ],
+      faq: [
+        {
+          question: "¿Qué es un Ritual Spa Prenatal?",
+          answer: "Es una experiencia de bienestar diseñada especialmente para futuras mamás, combinando masaje adaptado al embarazo, relajación y atención personalizada."
+        },
+        {
+          question: "¿El masaje prenatal es diferente a un masaje convencional?",
+          answer: "Sí. La experiencia considera los cambios físicos propios del embarazo, incluyendo comodidad, posiciones, intensidad y zonas de trabajo."
+        },
+        {
+          question: "¿Desde qué etapa del embarazo puedo realizarlo?",
+          answer: "Cada embarazo es diferente. Antes de reservar, recomendamos consultar con tu profesional de salud y comunicar al equipo de MJ Estética & Spa tu etapa de gestación."
+        },
+        {
+          question: "¿Puedo recibir el ritual si tengo alguna molestia durante el embarazo?",
+          answer: "Es importante informar previamente cualquier molestia, condición o recomendación recibida durante tu control prenatal. Si existe alguna situación que requiera valoración médica, consulta primero con tu profesional de salud."
+        },
+        {
+          question: "¿Dónde está ubicado MJ Estética & Spa?",
+          answer: "Estamos ubicados en Turrialba, Cartago, Costa Rica, en la zona de Ciudadela Jorge Debravo."
+        },
+        {
+          question: "¿Necesito reservar?",
+          answer: "Sí. Recomendamos reservar previamente para asegurar disponibilidad."
+        },
+        {
+          question: "¿Puedo comprarlo como regalo?",
+          answer: "Sí. Puedes consultar por nuestros certificados de regalo para sorprender a una futura mamá."
+        }
+      ]
+    },
+    en: {
+      slug: "spa-brides",
+      name: "Spa for Brides & Prenatal Spa Ritual",
+      tagline: "The best gift for you and your special moment",
+      heroDescription:
+        "Live the most relaxing Spa experience in Turrialba. An exclusive experience designed to help you regain physical and emotional balance during life's most special moments.",
       benefits: [
         "Deep relaxation of the nervous system",
         "Relief of tension and muscle pain",
         "Improvement of skin luminosity and freshness",
-        "Reduction of pre-wedding anxiety and stress",
-        "Better sleep quality",
-        "Total disconnection moment for the bride",
+        "Total disconnection moment",
+        "Personalized care"
       ],
       items: [
         {
-          title: "Radiant Bride Package",
-          description: "Integral protocol combining body exfoliation, relaxing massage, and express facial.",
+          title: "Radiant Bride & Prenatal Package",
+          description: "Integral protocol combining body exfoliation, relaxing massage, and facial care.",
           duration: "120 min",
-          faq: [
-        {
-          question: "¿Cuánto cuesta un InBody en Turrialba?",
-          answer:
-            "El precio puede variar según el servicio y la orientación incluida. Escríbenos por WhatsApp para conocer disponibilidad y detalles.",
-        },
-        {
-          question: "¿Cuánto dura un análisis InBody?",
-          answer: "La medición tarda aproximadamente entre 5 y 10 minutos.",
-        },
-        {
-          question: "¿El InBody mide grasa corporal y músculo?",
-          answer:
-            "Sí. Permite conocer porcentaje de grasa, masa muscular, grasa visceral, agua corporal y otros indicadores.",
-        },
-        {
-          question: "¿Cada cuánto debo realizar un InBody?",
-          answer:
-            "Depende de tus objetivos. Muchas personas realizan mediciones cada 4 a 8 semanas para evaluar cambios.",
-        },
+          price: "Consult price"
+        }
       ],
-    },
-      ],
-    },
+      faq: [
+        {
+          question: "Do I need to book in advance?",
+          answer: "Yes, we recommend booking in advance to ensure availability."
+        }
+      ]
+    }
   },
   {
     es: {
