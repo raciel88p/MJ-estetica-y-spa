@@ -5679,54 +5679,66 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "masaje-cafe",
       name: "Masaje con Café",
-      fullTitle: "Masaje y Ritual con Café en Turrialba",
-      tagline: "Estimulación, desintoxicación y poder antioxidante",
-      heroDescription: "Aprovecha las propiedades estimulantes y antioxidantes del café en una experiencia corporal tonificante. Ayuda a activar la microcirculación, combatir la celulitis y dejar la piel firme y suave.",
+      fullTitle: "Masaje con Café en Turrialba | Ritual Corporal Anticelulítico y Relajante | MJ Estética",
+      tagline: "Dale a tu cuerpo una pausa… y a tu piel una experiencia diferente",
+      heroDescription: "Disfruta un Masaje con Café en Turrialba: exfoliación corporal, masaje, hidratación y relajación en MJ Fisio Estética & Spa.",
       benefits: [
-        "Activación de la microcirculación sanguínea",
-        "Efecto antioxidante y reafirmante",
-        "Exfoliación natural que elimina células muertas",
-        "Aroma estimulante que revitaliza cuerpo y mente"
+        "Una piel con apariencia más suave mediante exfoliación natural",
+        "Una experiencia sensorial y relajante diferente",
+        "Relajación corporal profunda y desconexión de la rutina",
+        "Cuidado e hidratación integral de la piel"
       ],
       items: [
         {
-          title: "Ritual Corporal de Café",
-          description: "Exfoliación y masaje estimulante con activos de café puro.",
+          title: "Masaje y Ritual con Café",
+          description: "Experiencia completa de exfoliación corporal con café, masaje relajante e hidratación intensiva.",
           duration: "60 min",
           price: "Consultar precio"
         }
       ],
       faq: [
         {
-          question: "¿Ayuda el café con la celulitis y la firmeza de la piel?",
-          answer: "Sí, la cafeína estimula la circulación y promueve el drenaje, apoyando la firmeza y suavidad del tejido."
+          question: "¿Qué es un Masaje con Café?",
+          answer: "Es un tratamiento corporal que combina exfoliación con café, masaje e hidratación dentro de una experiencia orientada al cuidado de la piel y la relajación."
+        },
+        {
+          question: "¿El Masaje con Café elimina la celulitis?",
+          answer: "No. No existe una garantía de eliminación permanente de la celulitis. El tratamiento puede ayudar temporalmente a mejorar la apariencia y sensación de la piel."
+        },
+        {
+          question: "¿El Masaje con Café es relajante?",
+          answer: "Sí. El servicio incorpora masaje corporal y está diseñado para proporcionar una experiencia de relajación y bienestar."
+        },
+        {
+          question: "¿Cuánto dura el Masaje con Café?",
+          answer: "La sesión tiene una duración aproximada de 60 minutos."
         }
       ]
     },
     en: {
       slug: "coffee-massage",
       name: "Coffee Massage",
-      fullTitle: "Coffee Massage & Ritual in Turrialba",
-      tagline: "Stimulation, detoxification, and antioxidant power",
-      heroDescription: "Harness the stimulating and antioxidant properties of coffee in an invigorating body experience. Helps activate microcirculation, combat cellulite, and leave skin firm and smooth.",
+      fullTitle: "Coffee Massage in Turrialba | Body Treatment & Relaxation",
+      tagline: "Give your body a break and your skin a unique experience",
+      heroDescription: "Enjoy a Coffee Massage in Turrialba: body exfoliation, massage, hydration, and relaxation at MJ Fisio Estética & Spa.",
       benefits: [
-        "Blood microcirculation activation",
-        "Antioxidant and firming effect",
-        "Natural exfoliation removing dead skin cells",
-        "Invigorating scent that revitalizes body and mind"
+        "Smoother skin appearance through natural exfoliation",
+        "A different, invigorating sensory experience",
+        "Deep body relaxation and disconnection from routine",
+        "Comprehensive skin care and hydration"
       ],
       items: [
         {
-          title: "Coffee Body Ritual",
-          description: "Exfoliation and stimulating massage with pure coffee extracts.",
+          title: "Coffee Massage & Ritual",
+          description: "Full body experience combining coffee scrub exfoliation, relaxing massage, and intensive hydration.",
           duration: "60 min",
           price: "Consult price"
         }
       ],
       faq: [
         {
-          question: "Does coffee help with cellulite and skin firmness?",
-          answer: "Yes, caffeine stimulates circulation and drainage, supporting skin firmness and smoothness."
+          question: "What is a Coffee Massage?",
+          answer: "It is a body treatment combining coffee exfoliation, massage, and skin hydration for wellness and relaxation."
         }
       ]
     }
