@@ -29,6 +29,7 @@ export type MultiLangServicePageData = {
 export const medicoEsteticosLinks = {
   es: [
     { name: "Nutrición", href: "/servicios/nutricion" },
+    { name: "Psicología Familiar e Infantil", href: "/servicios/psicologia-infantil" },
     { name: "Botox Full Face", href: "/servicios/botox-full-face" },
     { name: "Hilos Tensores Turrialba", href: "/servicios/hilos-tensores" },
     { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
@@ -41,6 +42,7 @@ export const medicoEsteticosLinks = {
   ],
   en: [
     { name: "Nutrition", href: "/en/services/nutrition" },
+    { name: "Family & Child Psychology", href: "/en/services/child-psychology" },
     { name: "Botox Full Face", href: "/en/services/botox-full-face" },
     { name: "Tension Threads", href: "/en/services/tension-threads" },
     { name: "Hair Transplant", href: "/en/services/hair-transplant" },
@@ -197,6 +199,7 @@ export const ritualesSpaLinks = {
     { name: "Masaje con Chocolate", href: "/servicios/masaje-chocolate" },
     { name: "Masaje de Barro", href: "/servicios/masaje-barro" },
     { name: "Masaje de Descarga Muscular", href: "/servicios/masaje-descarga-muscular" },
+    { name: "Masajes para Parejas", href: "/servicios/masaje-parejas" },
   ],
   en: [
     { name: "Spa for Brides", href: "/en/services/spa-brides" },
@@ -207,6 +210,7 @@ export const ritualesSpaLinks = {
     { name: "Chocolate Massage", href: "/en/services/chocolate-massage" },
     { name: "Mud Massage", href: "/en/services/mud-massage" },
     { name: "Muscle Release Massage", href: "/en/services/muscle-release-massage" },
+    { name: "Couples Massage", href: "/en/services/couples-massage" },
   ],
 };
 
@@ -216,6 +220,74 @@ export const mjCreativoLinks = {
 };
 
 export const servicePages: MultiLangServicePageData[] = [
+  {
+    es: {
+      slug: "psicologia-infantil",
+      name: "Psicología Familiar e Infantil",
+      fullTitle: "Psicología Familiar e Infantil Turrialba",
+      tagline: "Cuando tu hijo está teniendo dificultades, no tienes que enfrentarlo solo",
+      heroDescription: "Psicología familiar, conducta infantil, TDAH, TEA y apoyo psicopedagógico con un plan diseñado para las necesidades de cada niño y su familia.<br /><br />A veces no se trata simplemente de que un niño “no quiera obedecer”, “no ponga atención” o “tenga malas notas”. Detrás de una conducta difícil, una crisis emocional, problemas de atención o dificultades escolares puede haber necesidades que todavía no hemos identificado.<br /><br />Y cuando entendemos qué está pasando, por qué está pasando y qué podemos hacer, es posible comenzar a construir cambios reales en casa, en la escuela y en la relación familiar.",
+      benefits: [
+        "Conducta infantil y manejo de emociones",
+        "TDAH y dificultades de atención",
+        "TEA y necesidades relacionadas con el neurodesarrollo",
+        "Dificultades de adaptación y aprendizaje",
+        "Ansiedad y cambios importantes en la vida del niño",
+        "Orientación para padres y familiares"
+      ],
+      items: [
+        {
+          title: "Consulta de Psicología Familiar e Infantil",
+          description: "Sesión personalizada de valoración, orientación y acompañamiento psicológico enfocado en el neurodesarrollo y la dinámica familiar.",
+          duration: "60 min",
+          price: "Consultar precio"
+        }
+      ],
+      faq: [
+        {
+          question: "¿Cómo sé si mi hijo necesita acompañamiento psicológico?",
+          answer: "Si observa dificultades persistentes de atención, conducta, comunicación, interacción social, regulación emocional o adaptación, una valoración profesional puede ayudarle a entender mejor la situación y definir los siguientes pasos."
+        },
+        {
+          question: "¿Cuál es el enfoque del servicio?",
+          answer: "Creemos que cada niño necesita ser comprendido desde su realidad individual y que la familia debe formar parte activa del proceso para aplicar estrategias prácticas en el día a día."
+        }
+      ]
+    },
+    en: {
+      slug: "child-psychology",
+      name: "Family & Child Psychology",
+      fullTitle: "Family & Child Psychology Turrialba",
+      tagline: "When your child is having difficulties, you do not have to face it alone",
+      heroDescription: "Family psychology, child behavior, ADHD, ASD, and psycho-pedagogical support with a plan designed for the needs of each child and their family.<br /><br />Sometimes it's not just about a child 'not wanting to obey', 'not paying attention', or 'having bad grades'. Behind difficult behavior, an emotional crisis, attention problems, or school difficulties, there may be needs that we have not yet identified.<br /><br />And when we understand what is happening, why it is happening, and what we can do, it is possible to begin to build real changes at home, at school, and in the family relationship.",
+      benefits: [
+        "Child behavior and emotional management",
+        "ADHD and attention difficulties",
+        "ASD and neurodevelopmental needs",
+        "Adaptation difficulties and learning",
+        "Anxiety and major life changes in the child",
+        "Guidance for parents and families"
+      ],
+      items: [
+        {
+          title: "Family & Child Psychology Consultation",
+          description: "Personalized session of assessment, guidance, and psychological support focused on neurodevelopment and family dynamics.",
+          duration: "60 min",
+          price: "Consult price"
+        }
+      ],
+      faq: [
+        {
+          question: "How do I know if my child needs psychological support?",
+          answer: "If you notice persistent difficulties in attention, behavior, communication, social interaction, emotional regulation, or adaptation, a professional assessment can help you understand the situation and define next steps."
+        },
+        {
+          question: "What is the approach of this service?",
+          answer: "We believe that every child needs to be understood from their individual reality and that the family must be an active part of the process to apply practical strategies in daily life."
+        }
+      ]
+    }
+  },
   {
     es: {
       slug: "masajes-corporales",
@@ -5793,6 +5865,74 @@ export const servicePages: MultiLangServicePageData[] = [
         {
           question: "What are the benefits of therapeutic mud?",
           answer: "It helps extract impurities, detoxify the skin, provide essential minerals, and soothe muscle soreness."
+        }
+      ]
+    }
+  },
+  {
+    es: {
+      slug: "masaje-parejas",
+      name: "Masajes para Parejas",
+      fullTitle: "Masajes para Parejas en Turrialba | MJ Estética & Wellness Center",
+      tagline: "Conecten, relajen y disfruten una experiencia wellness premium juntos",
+      heroDescription: "En MJ Estética & Wellness Center creamos experiencias de masajes para parejas en Turrialba, pensadas para disfrutar relajación, bienestar y comodidad en un ambiente acogedor y privado.",
+      benefits: [
+        "Ambiente wellness premium",
+        "Atención personalizada",
+        "Experiencia compartida",
+        "Ideal para aniversarios",
+        "Excelente opción de regalo",
+        "Espacio cómodo y relajante"
+      ],
+      items: [
+        {
+          title: "Experiencia Masaje para Parejas",
+          description: "Sesión compartida para dos personas en un ambiente privado y relajante con atención personalizada.",
+          duration: "60 - 90 min",
+          price: "Consultar precio"
+        }
+      ],
+      faq: [
+        {
+          question: "¿Qué incluyen los masajes para parejas?",
+          answer: "Incluyen una experiencia wellness para dos personas con atención personalizada y un ambiente preparado para favorecer la relajación."
+        },
+        {
+          question: "¿Necesito reservar con anticipación?",
+          answer: "Sí. Recomendamos reservar previamente para confirmar disponibilidad para dos personas."
+        }
+      ]
+    },
+    en: {
+      slug: "couples-massage",
+      name: "Couples Massage",
+      fullTitle: "Couples Massage in Turrialba | MJ Estética & Wellness Center",
+      tagline: "Connect, relax, and enjoy a premium wellness experience together",
+      heroDescription: "At MJ Estética & Wellness Center we create couples massage experiences in Turrialba, designed to enjoy relaxation, well-being, and comfort in a cozy and private environment.",
+      benefits: [
+        "Premium wellness atmosphere",
+        "Personalized care",
+        "Shared experience",
+        "Ideal for anniversaries",
+        "Great gift option",
+        "Comfortable and relaxing space"
+      ],
+      items: [
+        {
+          title: "Couples Massage Experience",
+          description: "Shared session for two people in a private and relaxing environment with personalized care.",
+          duration: "60 - 90 min",
+          price: "Consult price"
+        }
+      ],
+      faq: [
+        {
+          question: "What does a couples massage include?",
+          answer: "It includes a wellness experience for two people with personalized attention and a setting prepared for relaxation."
+        },
+        {
+          question: "Do I need to book in advance?",
+          answer: "Yes. We recommend booking in advance to confirm availability for two."
         }
       ]
     }

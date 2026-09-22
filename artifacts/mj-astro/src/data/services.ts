@@ -199,6 +199,7 @@ export const ritualesSpaLinks = {
     { name: "Masaje con Chocolate", href: "/servicios/masaje-chocolate" },
     { name: "Masaje de Barro", href: "/servicios/masaje-barro" },
     { name: "Masaje de Descarga Muscular", href: "/servicios/masaje-descarga-muscular" },
+    { name: "Masajes para Parejas", href: "/servicios/masaje-parejas" },
   ],
   en: [
     { name: "Spa for Brides", href: "/en/services/spa-brides" },
@@ -209,6 +210,7 @@ export const ritualesSpaLinks = {
     { name: "Chocolate Massage", href: "/en/services/chocolate-massage" },
     { name: "Mud Massage", href: "/en/services/mud-massage" },
     { name: "Muscle Release Massage", href: "/en/services/muscle-release-massage" },
+    { name: "Couples Massage", href: "/en/services/couples-massage" },
   ],
 };
 
@@ -5863,6 +5865,74 @@ export const servicePages: MultiLangServicePageData[] = [
         {
           question: "What are the benefits of therapeutic mud?",
           answer: "It helps extract impurities, detoxify the skin, provide essential minerals, and soothe muscle soreness."
+        }
+      ]
+    }
+  },
+  {
+    es: {
+      slug: "masaje-parejas",
+      name: "Masajes para Parejas",
+      fullTitle: "Masajes para Parejas en Turrialba | MJ Estética & Wellness Center",
+      tagline: "Conecten, relajen y disfruten una experiencia wellness premium juntos",
+      heroDescription: "En MJ Estética & Wellness Center creamos experiencias de masajes para parejas en Turrialba, pensadas para disfrutar relajación, bienestar y comodidad en un ambiente acogedor y privado.",
+      benefits: [
+        "Ambiente wellness premium",
+        "Atención personalizada",
+        "Experiencia compartida",
+        "Ideal para aniversarios",
+        "Excelente opción de regalo",
+        "Espacio cómodo y relajante"
+      ],
+      items: [
+        {
+          title: "Experiencia Masaje para Parejas",
+          description: "Sesión compartida para dos personas en un ambiente privado y relajante con atención personalizada.",
+          duration: "60 - 90 min",
+          price: "Consultar precio"
+        }
+      ],
+      faq: [
+        {
+          question: "¿Qué incluyen los masajes para parejas?",
+          answer: "Incluyen una experiencia wellness para dos personas con atención personalizada y un ambiente preparado para favorecer la relajación."
+        },
+        {
+          question: "¿Necesito reservar con anticipación?",
+          answer: "Sí. Recomendamos reservar previamente para confirmar disponibilidad para dos personas."
+        }
+      ]
+    },
+    en: {
+      slug: "couples-massage",
+      name: "Couples Massage",
+      fullTitle: "Couples Massage in Turrialba | MJ Estética & Wellness Center",
+      tagline: "Connect, relax, and enjoy a premium wellness experience together",
+      heroDescription: "At MJ Estética & Wellness Center we create couples massage experiences in Turrialba, designed to enjoy relaxation, well-being, and comfort in a cozy and private environment.",
+      benefits: [
+        "Premium wellness atmosphere",
+        "Personalized care",
+        "Shared experience",
+        "Ideal for anniversaries",
+        "Great gift option",
+        "Comfortable and relaxing space"
+      ],
+      items: [
+        {
+          title: "Couples Massage Experience",
+          description: "Shared session for two people in a private and relaxing environment with personalized care.",
+          duration: "60 - 90 min",
+          price: "Consult price"
+        }
+      ],
+      faq: [
+        {
+          question: "What does a couples massage include?",
+          answer: "It includes a wellness experience for two people with personalized attention and a setting prepared for relaxation."
+        },
+        {
+          question: "Do I need to book in advance?",
+          answer: "Yes. We recommend booking in advance to confirm availability for two."
         }
       ]
     }
