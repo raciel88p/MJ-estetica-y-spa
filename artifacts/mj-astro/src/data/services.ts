@@ -1772,7 +1772,7 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
     en: {
-      slug: "trasplante-capilar",
+      slug: "hair-transplant",
       name: "Hair Transplant",
       fullTitle: "Hair Transplant in Turrialba",
       tagline: "Restore Your Confidence with a Natural-Looking Hair Transplant",
