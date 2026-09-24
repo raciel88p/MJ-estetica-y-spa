@@ -1773,61 +1773,62 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "trasplante-capilar",
-      name: "Trasplante Capilar",
-      tagline: "Recupera tu cabello, recupera tu confianza",
-      heroDescription: "El trasplante capilar es la solución definitiva para la alopecia y la pérdida de cabello. Utilizamos las técnicas más avanzadas para resultados naturales, permanentes y de alta densidad.",
+      name: "Hair Transplant",
+      fullTitle: "Hair Transplant in Turrialba",
+      tagline: "Restore Your Confidence with a Natural-Looking Hair Transplant",
+      heroDescription: "Hair transplantation is a procedure designed to support hair restoration by strategically redistributing hair follicles to improve density, strengthen the hairline, and restore your confidence.",
       benefits: [
-        "Resultado permanente y natural",
-        "Técnicas mínimamente invasivas",
-        "Sin cicatrices visibles",
-        "Alta tasa de supervivencia del injerto",
-        "Recuperación rápida y sencilla",
+        "Natural-Looking Appearance",
+        "Improved Visual Hair Density",
+        "Progressive Results",
+        "Greater Confidence",
+        "Personalized Restoration",
       ],
       items: [
         {
-          title: "Técnica FUE (Follicular Unit Extraction)",
+          title: "FUE Technique (Follicular Unit Extraction)",
           description:
-            "Extracción folicular unitaria que obtiene folículos de la zona donante sin incisiones. Sin cicatriz lineal, recuperación rápida y resultados muy naturales.",
-          duration: "4-8 horas",
-          price: "Consultar precio",
+            "Follicular extraction that obtains follicles from the donor area without incisions. No linear scar, fast recovery, and natural-looking results.",
+          duration: "4-8 hours",
+          price: "Consult price",
         },
         {
-          title: "Trasplante de Barba",
+          title: "Beard Transplant",
           description:
-            "Diseño y relleno de zonas sin cobertura en la barba o bigote, logrando una barba densa, uniforme y completamente natural.",
-          duration: "3-5 horas",
-          price: "Consultar precio",
+            "Design and filling of areas without coverage in the beard or mustache, achieving a dense, uniform, and natural-looking beard.",
+          duration: "3-5 hours",
+          price: "Consult price",
         },
         {
-          title: "Trasplante de Cejas",
+          title: "Eyebrow Transplant",
           description:
-            "Reconstrucción o densificación de las cejas con folículos del área donante, para una apariencia definida y duradera.",
-          duration: "2-4 horas",
-          price: "Consultar precio",
+            "Reconstruction or densification of eyebrows with donor follicles for a defined and long-lasting appearance.",
+          duration: "2-4 hours",
+          price: "Consult price",
         },
         {
-          title: "Consulta y Diagnóstico Capilar",
+          title: "Hair Assessment & Consultation",
           description:
-            "Evaluación del grado de alopecia, análisis del área donante y diseño personalizado de la línea de implantación según tus rasgos faciales.",
+            "Evaluation of hair loss stage, donor area analysis, and personalized hairline design tailored to your facial features.",
           duration: "45 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿Cuándo se ven los resultados definitivos?",
+          question: "Does a hair transplant hurt?",
           answer:
-            "Los injertos entran en un ciclo de reposo durante los primeros 2-3 meses. El crecimiento progresivo comienza alrededor del mes 4 y el resultado definitivo se aprecia entre los 12-18 meses.",
+            "The experience may vary from patient to patient. During your assessment, we explain the procedure and what you can expect in detail.",
         },
         {
-          question: "¿Es doloroso el trasplante capilar?",
+          question: "Will it look natural?",
           answer:
-            "El procedimiento se realiza bajo anestesia local, por lo que no se siente dolor durante la intervención. Las molestias post-operatorias son leves y controlables con analgesia convencional.",
+            "The primary goal is to achieve a harmonious, natural-looking appearance adapted to each individual.",
         },
         {
-          question: "¿Cuánto tiempo de recuperación necesito?",
+          question: "How long is the recovery?",
           answer:
-            "Puedes retomar actividades cotidianas a los 2-3 días. Se recomienda evitar ejercicio intenso y exposición solar directa durante las primeras 2-4 semanas.",
+            "Recovery time varies depending on each case and the recommended aftercare.",
         },
       ],
     },
