@@ -916,7 +916,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
       )}
 
       {/* ── CUSTOM CONTENT: TRASPLANTE CAPILAR ─────────── */}
-      {service.slug === "trasplante-capilar" && (
+      {(service.slug === "trasplante-capilar" || service.slug === "hair-transplant") && (
         <TrasplanteCapilarContent service={service} waLink={WA} lang={lang} />
       )}
 
