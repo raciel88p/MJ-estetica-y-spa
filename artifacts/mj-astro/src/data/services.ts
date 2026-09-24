@@ -4843,56 +4843,50 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
     en: {
-      slug: "relleno-de-labios",
-      name: "Relleno de Labios en Turrialba",
-      tagline: "",
-      heroDescription: "Descubre cómo lograr labios más hidratados, definidos y armoniosos con resultados naturales y personalizados.",
+      slug: "lip-filler",
+      name: "Lip Fillers in Turrialba",
+      tagline: "Discover how to achieve more hydrated, defined, and harmonious lips with natural-looking, personalized results",
+      heroBg: "acido-hialuronico-bg.webp",
+      heroDescription: "Would you love to have more defined, hydrated, and beautiful lips without losing your natural essence?",
       benefits: [
-        "Volumen natural y proporcional adaptado a tu rostro",
-        "Contorno labial perfectamente definido y simétrico",
-        "Hidratación profunda y labios más suaves desde el primer día",
-        "Resultado visible inmediato y duradero hasta 12 meses",
-        "Técnica precisa que evita el efecto exagerado o artificial",
-        "Producto biocompatible y reabsorbible — completamente seguro",
+        "Natural-looking results adapted to your features",
+        "Personalized consultation and lip design",
+        "Professional facial harmonization approach",
+        "Individualized protocols and aftercare",
+        "Premium aesthetic experience in Turrialba",
       ],
       items: [
         {
-          title: "Relleno de Volumen Labial",
-          description:
-            "Aplicación de ácido hialurónico en el cuerpo de los labios para aumentar el volumen de forma natural y proporcional. Diseñamos el aumento según tus proporciones faciales para un resultado armonioso.",
+          title: "Natural Lip Hydration",
+          description: "Ideal for those looking for lips with a healthier, more hydrated appearance.",
           duration: "30 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Definición de Contorno Labial",
-          description:
-            "Relleno preciso en el vermillón y el borde labial para crear un contorno nítido, simétrico y perfectamente definido. Ideal si tus labios tienen buen volumen pero falta de definición o asimetría.",
-          duration: "25 min",
-          price: "Consultar precio",
+          title: "Lip Contouring",
+          description: "Designed for those who want to enhance and define their lip contour with precision.",
+          duration: "30 min",
+          price: "Consult price",
         },
         {
-          title: "Tratamiento Completo Volumen + Contorno",
-          description:
-            "Diseño labial integral que combina el relleno de volumen con la definición del contorno para conseguir el resultado más completo. Incluye la corrección de asimetrías y la proyección del arco de cupido.",
+          title: "Subtle & Elegant Volume",
+          description: "Designed for those who want to enhance lip volume without an exaggerated appearance.",
           duration: "45 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿Cuánto dura el efecto del relleno de labios?",
-          answer:
-            "Dependiendo del tipo de ácido hialurónico utilizado y el metabolismo de cada persona, el efecto dura entre 6 y 12 meses. Se recomienda una sesión de retoque para mantener el resultado óptimo.",
+          question: "What are lip fillers?",
+          answer: "Lip fillers are an aesthetic treatment designed to enhance lip hydration, definition, and volume through a personalized approach.",
         },
         {
-          question: "¿Es doloroso el tratamiento?",
-          answer:
-            "Aplicamos crema anestésica tópica antes del procedimiento para minimizar las molestias. La mayoría de las pacientes lo describen como muy tolerable — solo una pequeña presión durante las inyecciones.",
+          question: "Will my results look natural?",
+          answer: "The goal is to achieve facial harmony and results that complement each individual's natural features.",
         },
         {
-          question: "¿Se puede ver el resultado inmediatamente?",
-          answer:
-            "Sí, el resultado es visible desde el momento del tratamiento. Los labios pueden presentar una leve inflamación durante 24-48 horas que potencia inicialmente el volumen. El resultado definitivo se aprecia a los 7-10 días.",
+          question: "How long does the procedure take?",
+          answer: "Treatment time may vary depending on each person's needs and professional assessment, usually around 30 to 45 minutes.",
         },
       ],
     },
