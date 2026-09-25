@@ -4213,72 +4213,73 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "tratamiento-anticelulitis",
-      name: "Tratamiento Anticelulitis",
-      tagline: "Elimina la celulitis de forma definitiva y sin cirugía",
-      heroDescription: "Una experiencia diseñada para que vuelvas a sentirte bien con tu cuerpo",
+      name: "Anti-Cellulite Treatments in Turrialba",
+      fullTitle: "Anti-Cellulite Treatments in Turrialba",
+      tagline: "An experience designed to help you feel good about your body again.",
+      heroDescription: "An experience designed to help you feel good about your body again.",
       benefits: [
-        "Reducción visible de la celulitis desde la primera sesión",
-        "Tecnología de radiofrecuencia + drenaje para resultados duraderos",
-        "Protocolo personalizado según tu tipo y grado de celulitis",
-        "Sin cirugía, sin anestesia, sin tiempo de recuperación",
-        "Mejora la circulación y elimina toxinas acumuladas",
-        "Piel más firme, lisa y uniforme en pocas semanas",
+        "Visible reduction of cellulite from the first session",
+        "Radiofrequency technology + drainage for long-lasting results",
+        "Personalized protocol tailored to your type and degree of cellulite",
+        "Non-surgical, non-invasive, no downtime required",
+        "Improves circulation and removes accumulated toxins",
+        "Firmer, smoother, and more even skin within weeks",
       ],
       items: [
         {
-          title: "Drenaje Linfático Anticelulítico",
+          title: "Anti-Cellulite Lymphatic Drainage",
           description:
-            "Técnica manual especializada que activa el sistema linfático, elimina la retención de líquidos y reduce el aspecto de piel de naranja desde las primeras sesiones. Ideal como tratamiento de base para preparar el tejido.",
+            "Specialized manual technique that activates the lymphatic system, reduces fluid retention, and diminishes orange-peel skin appearance from early sessions.",
           duration: "60 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Radiofrecuencia Corporal Focalizada",
+          title: "Focalized Body Radiofrequency",
           description:
-            "Aplicamos calor controlado en profundidad para romper los nódulos de grasa, estimular la producción de colágeno y reafirmar la piel de muslos, glúteos y abdomen. Resultado: piel más tersa y visible reducción de medidas.",
+            "Controlled deep heating to target fat nodules, stimulate collagen production, and firm skin on thighs, buttocks, and abdomen. Result: smoother skin and visible contour refinement.",
           duration: "50 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Vendas Frías Anticelulíticas",
+          title: "Anti-Cellulite Cold Body Wraps",
           description:
-            "Vendas impregnadas con activos reductores, drenantes y reafirmantes en frío que potencian la pérdida de centímetros y mejoran la textura de la piel en una sola sesión. Efecto inmediato y acumulativo.",
+            "Wraps infused with cooling, reducing, and firming active ingredients that enhance inch loss and improve skin texture in a single session.",
           duration: "60 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Presoterapia + Ultrasonidos",
+          title: "Pressotherapy + Ultrasound",
           description:
-            "Combinación de presoterapia para drenar y desinflamar, junto con ultrasonidos focalizados que destruyen las células de grasa localizadas. Protocolo de alta eficacia para casos de celulitis resistente.",
+            "A high-efficacy protocol combining pressotherapy for drainage and inflammation reduction with targeted ultrasound to break down stubborn fat cells.",
           duration: "55 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿En cuántas sesiones veré resultados reales?",
+          question: "How many sessions will I need to see real results?",
           answer:
-            "La mayoría de nuestras clientas notan una mejora visible en textura y firmeza desde la primera sesión. Para resultados duraderos y profundos, recomendamos un ciclo de 8 a 12 sesiones, 2 veces por semana. Al finalizar el ciclo, la reducción de la celulitis es significativa y medible.",
+            "Most clients notice visible improvement in skin texture and firmness after the very first session. For deep and long-lasting results, we recommend a series of 8 to 12 sessions, twice a week.",
         },
         {
-          question: "¿Funciona para todos los tipos y grados de celulitis?",
+          question: "Does it work for all types and degrees of cellulite?",
           answer:
-            "Sí. Nuestros protocolos están adaptados a los 4 grados de celulitis. Realizamos una valoración inicial gratuita donde evaluamos tu caso y diseñamos el plan de tratamiento más efectivo para ti, combinando las técnicas adecuadas según tu tipo de piel y zona a tratar.",
+            "Yes. Our protocols are tailored to all 4 degrees of cellulite. We perform an initial evaluation to design the most effective treatment plan for your specific needs.",
         },
         {
-          question: "¿Necesito dieta o ejercicio para que funcione?",
+          question: "Do I need special diet or exercise for it to work?",
           answer:
-            "No es un requisito, pero sí potencia los resultados. Los tratamientos son efectivos por sí solos, y combinados con hidratación adecuada y algo de actividad física los resultados se multiplican y duran más tiempo.",
+            "While not strictly mandatory, maintaining healthy hydration and exercise will amplify and extend your results.",
         },
         {
-          question: "¿Es doloroso? ¿Hay tiempo de recuperación?",
+          question: "Is it painful? Is there any downtime?",
           answer:
-            "Los tratamientos son indoloros o producen una sensación de calor agradable en el caso de la radiofrecuencia. No hay tiempo de recuperación — puedes retomar tus actividades normales inmediatamente después de cada sesión.",
+            "Treatments are completely painless and comfortable. There is no downtime—you can return to your daily activities immediately after each session.",
         },
         {
-          question: "¿Cuánto duran los resultados?",
+          question: "How long do the results last?",
           answer:
-            "Con mantenimiento mensual los resultados se sostienen en el tiempo. Te recomendamos sesiones de mantenimiento cada 3-4 semanas una vez completado el ciclo inicial, especialmente si combinas el tratamiento con hábitos saludables.",
+            "With monthly maintenance sessions and healthy lifestyle habits, results are long-lasting and easily maintained.",
         },
       ],
     },
