@@ -1,84 +1,216 @@
 {
+  "intro": {
+    "title": "Hydrolipoclasia in Turrialba",
+    "subtitle": "Reduce Localized Fat and Redefine Your Body Contour Without Surgery",
+    "desc": "At MJ Estética & Wellness Center, we combine specialized body contouring protocols, personalized attention, and advanced aesthetic technology to help improve the appearance of areas with localized fat and help you regain confidence in your body.",
+    "items": [
+      "Non-invasive treatment",
+      "Safe and personalized protocols",
+      "Progressive and natural-looking results",
+      "Professional care in Turrialba",
+      "Quick and comfortable sessions"
+    ],
+    "question": "Would you like to know if this treatment is right for you?",
+    "ctaItems": [
+      "Book your personalized body assessment today",
+      "Ask about our current packages and promotions",
+      "Message us on WhatsApp and receive immediate assistance"
+    ]
+  },
   "whatIs": {
-    "title": "What is hydrolipoclasia?",
-    "p1": "Hydrolipoclasia is a non-invasive body treatment designed to help reduce localized fat and improve body contour through specialized protocols that combine different technologies and aesthetic techniques.",
-    "p2": "This treatment is usually applied in areas where fat tends to accumulate and is difficult to reduce through diet or exercise alone.",
-    "important": "It is important to understand that:",
-    "importantItems": ["It does not replace surgery", "It does not substitute healthy habits", "Results are progressive", "Requires professional follow-up"],
-    "zonesTitle": "Common areas:",
-    "zones": ["Abdomen", "Waist", "Flanks", "Back", "Arms", "Legs", "Lumbar area"]
+    "title": "What Is Hydrolipoclasia?",
+    "p1": "Hydrolipoclasia is a non-invasive body contouring treatment designed to help reduce localized fat and improve body contours through specialized protocols that combine different aesthetic technologies and techniques.",
+    "p2": "This treatment is commonly used on areas where fat tends to accumulate and may be difficult to reduce through diet and exercise alone.",
+    "important": "Hydrolipoclasia can complement healthy habits and body wellness programs, but it is important to understand that:",
+    "importantItems": [
+      "It does not replace surgery",
+      "It does not replace healthy lifestyle habits",
+      "Results are progressive",
+      "Professional follow-up is recommended"
+    ],
+    "zonesTitle": "Common treatment areas:",
+    "zones": ["Abdomen", "Waist", "Flanks", "Back", "Arms", "Legs", "Lower back"]
   },
   "who": {
-    "title": "For whom is this treatment recommended?",
+    "title": "Who Is This Treatment Recommended For?",
     "items": [
-      "Want to improve their body contour",
-      "Seek to reduce localized fat accumulations",
+      "Want to improve their body contours",
+      "Are looking to reduce localized fat accumulation",
       "Want a non-invasive treatment",
-      "Wish to complement exercise and healthy eating",
-      "Seek to visually improve certain areas of the body"
+      "Want to complement exercise and healthy eating",
+      "Want to improve the appearance of specific areas of their body"
     ],
-    "frustrationTitle": "If you feel like you are making efforts and yet there are areas that don't change… you are not alone.",
-    "frustrationLabel": "Many people come to MJ frustrated because:",
+    "frustrationTitle": "If you feel like you're making an effort but certain areas still aren't changing… you're not alone.",
+    "frustrationLabel": "Many people come to MJ feeling frustrated because:",
     "frustrations": [
-      "“I exercise and my abdomen doesn't go down”",
-      "“My waist doesn't improve even if I take care of myself”",
-      "“I feel accumulation on flanks or back”",
-      "“I want to look better without surgery”"
+      "“I exercise, but my abdomen doesn't seem to change.”",
+      "“My waist doesn't improve even though I take care of myself.”",
+      "“I feel like I have stubborn fat around my flanks or back.”",
+      "“I want to improve my body without surgery.”"
     ],
-    "frustrationNote": "And that's precisely where a professional assessment can help you discover the right protocol for your body."
+    "frustrationNote": "And that's precisely where a professional assessment can help determine the right protocol for your body."
+  },
+  "benefits": {
+    "title": "Real Benefits of Hydrolipoclasia",
+    "desc": "At MJ, we believe in realistic expectations and honest results.",
+    "items": [
+      "Improve your body contours",
+      "Visually reduce localized volume",
+      "Complement healthy lifestyle habits",
+      "Improve the appearance of specific areas",
+      "Feel more comfortable and confident in your body",
+      "Enjoy quick sessions with minimal downtime"
+    ],
+    "note": "Most importantly, we focus on natural-looking, progressive results rather than unrealistic promises."
   },
   "howItWorks": {
-    "title": "How does a hydrolipoclasia session work?",
+    "title": "How Does a Hydrolipoclasia Session Work?",
     "steps": [
       {
         "s": "Step 1",
-        "t": "Personalized assessment",
-        "d": "We analyze goals, areas, habits and type of accumulation to give you personalized recommendations."
+        "t": "Personalized Body Assessment",
+        "d": "We assess your body contouring goals, treatment areas, lifestyle habits, type of localized fat, and personalized recommendations."
       },
       {
         "s": "Step 2",
-        "t": "Protocol application",
-        "d": "The treatment is performed according to the area and specific need of your body."
+        "t": "Body Contouring Protocol",
+        "d": "The treatment is performed according to the patient's specific area and individual needs."
       },
       {
         "s": "Step 3",
-        "t": "Additional protocols",
-        "d": "Depending on the case, additional protocols may be recommended to boost results."
+        "t": "Complementary Treatments",
+        "d": "Depending on your individual needs, additional protocols may be recommended to complement treatment."
       },
       {
         "s": "Step 4",
-        "t": "Improve your results",
-        "d": "We guide you on hydration, nutrition, physical activity and aftercare."
+        "t": "Nutritional & Wellness Guidance",
+        "d": "We guide you on hydration, nutrition, physical activity, recommended frequency, and post-treatment care."
       }
     ]
   },
   "includes": {
-    "title": "What it includes",
+    "title": "What It Includes",
     "desc": "Your session includes:",
     "items": [
       "Initial body assessment",
       "Specialized Hydrolipoclasia protocol",
-      "Lymphatic drainage or ultrasound (depending on case)",
-      "Post-session recommendations"
+      "Lymphatic drainage or targeted technology (depending on case)",
+      "Post-session recommendations & follow-up"
     ],
-    "note": "* Results and number of sessions vary by individual."
+    "note": "* Results and required sessions vary based on individual assessment."
   },
   "info": {
-    "title": "Important information",
+    "title": "Important Information",
     "durationLabel": "Approximate duration",
     "durationValue": "45–90 minutes",
     "freqLabel": "Frequency",
-    "freqValue": "According to professional assessment",
-    "recoveryLabel": "Recovery",
+    "freqValue": "Based on professional assessment",
+    "recoveryLabel": "Downtime",
     "recoveryValue": "Minimal in most cases",
     "resultsLabel": "Results",
     "resultsValue": "Progressive and personalized"
   },
   "sessions": {
-    "title": "How many sessions are recommended?",
-    "desc": "The number of sessions depends on the treated area, your body goal, personal habits, professional assessment and your body's individual response.",
-    "quote": "\"Many people observe progressive changes as sessions progress and they maintain healthy habits.\"",
-    "featureLabel": "At MJ we have:",
-    "features": ["Personalized body packages", "Professional follow-up", "Protocols adapted to each body"]
+    "title": "How Many Sessions Are Recommended?",
+    "desc": "The number of sessions depends on the treatment area, your body contouring goals, personal lifestyle habits, professional assessment, and your body's individual response.",
+    "quote": "“Many people notice progressive changes as they continue their sessions while maintaining healthy lifestyle habits.”",
+    "featureLabel": "At MJ, we offer:",
+    "features": [
+      "Personalized body contouring packages",
+      "Professional follow-up",
+      "Protocols adapted to each individual body"
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "items": [
+      {
+        "quote": "“I felt very insecure about myself. Very good results in a short time, and the staff was extremely attentive. Highly recommended.”"
+      },
+      {
+        "quote": "“My waist looked more defined. It has been so beneficial ❤️ I love the results from everything they've done for me. 🙏”"
+      },
+      {
+        "quote": "“I felt supported throughout the entire process. The service was extremely professional and personalized.”"
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Does Hydrolipoclasia hurt?",
+        "a": "The sensation can vary from person to person and depending on the protocol used. Many people describe the procedure as tolerable."
+      },
+      {
+        "q": "Is Hydrolipoclasia invasive?",
+        "a": "It is a non-surgical body contouring treatment."
+      },
+      {
+        "q": "Does it help with weight loss?",
+        "a": "It is designed to help improve areas with localized fat and body contours. It does not replace medical weight-loss programs or treatments."
+      },
+      {
+        "q": "When will I see results?",
+        "a": "Changes are generally progressive and can depend on lifestyle habits, the number of sessions, and your body's individual response."
+      },
+      {
+        "q": "Can I exercise after the treatment?",
+        "a": "In many cases, yes. However, recommendations may vary depending on your individual assessment and the protocol performed."
+      },
+      {
+        "q": "What areas can be treated?",
+        "a": "The abdomen, waist, flanks, back, arms, legs, lower back, and other areas may be treated depending on your individual assessment."
+      }
+    ]
+  },
+  "packages": {
+    "title": "Packages & Body Assessment",
+    "items": [
+      "Individual sessions",
+      "Area-based packages",
+      "Personalized protocols",
+      "Pre-treatment body assessment"
+    ]
+  },
+  "promo": {
+    "title": "Special Promotion",
+    "subtitle": "🎁 Book your assessment and receive a FREE guide:",
+    "guideTitle": "“How to Lose Weight and Improve Your Body Wellness”",
+    "learnTitle": "Includes:",
+    "items": [
+      "Habits that can genuinely support your goals",
+      "Common mistakes people make when trying to lose weight",
+      "Nutrition and wellness tips",
+      "Recommendations to complement your body contouring treatments"
+    ],
+    "cta": "BOOK ASSESSMENT + FREE GUIDE"
+  },
+  "whyUs": {
+    "title": "Why Choose MJ Estética & Wellness Center?",
+    "desc": "Because we don't believe in selling you illusions. We focus on helping you through:",
+    "items": [
+      "Personalized attention",
+      "Professional body contouring protocols",
+      "Genuine support throughout your journey",
+      "Comfortable and private environment",
+      "Honest assessment",
+      "Holistic wellness approach",
+      "Specialized aesthetic technology"
+    ],
+    "footer": "Our goal is for you to feel supported, informed, and confident throughout every stage of your journey."
+  },
+  "location": {
+    "title": "Location & Appointments",
+    "locationText": "Turrialba, Costa Rica",
+    "whatsappText": "WhatsApp appointments",
+    "parkingText": "Easy access and nearby parking",
+    "scheduleText": "Personalized appointment times"
+  },
+  "finalCta": {
+    "title": "Your Body Transformation Can Start Today",
+    "subtitle": "You don't have to wait for the “perfect moment” to start feeling better about yourself.",
+    "quote": "Your journey toward feeling more confident in your body can begin with one decision: taking care of yourself.",
+    "footerCenter": "MJ Estética & Wellness Center — Turrialba, Costa Rica"
   }
 }

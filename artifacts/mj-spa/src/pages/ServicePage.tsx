@@ -52,6 +52,13 @@ import { InBodyServiceContent } from "@/components/services/InBodyServiceContent
 import { NutricionServiceContent } from "@/components/services/NutricionServiceContent";
 import { RejuvenecimientoLaserContent } from "@/components/services/RejuvenecimientoLaserContent";
 import { BodaSpaContent } from "@/components/services/BodaSpaContent";
+import { MasajeEmbarazadasContent } from "@/components/services/MasajeEmbarazadasContent";
+import { TropicalExtremeContent } from "@/components/services/TropicalExtremeContent";
+import { MasajeCafeContent } from "@/components/services/MasajeCafeContent";
+import { MasajeChocolateContent } from "@/components/services/MasajeChocolateContent";
+import { MasajeBarroContent } from "@/components/services/MasajeBarroContent";
+import { MasajeParejasContent } from "@/components/services/MasajeParejasContent";
+import { MasajeDescargaMuscularContent } from "@/components/services/MasajeDescargaMuscularContent";
 import { ArteterapiaContent } from "@/components/services/ArteterapiaContent";
 import { PsicologiaInfantilContent } from "@/components/services/PsicologiaInfantilContent";
 import { BeforeAfterSlider } from "@/components/testimonials/BeforeAfterSlider";
@@ -779,6 +786,34 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
 
       {service.slug === "boda-spa" && (
         <BodaSpaContent waLink={WA} lang={lang} />
+      )}
+
+      {service.slug === "masaje-embarazadas" && (
+        <MasajeEmbarazadasContent waLink={WA} lang={lang} />
+      )}
+
+      {service.slug === "tropical-extreme" && (
+        <TropicalExtremeContent waLink={WA} lang={lang} />
+      )}
+
+      {service.slug === "masaje-cafe" && (
+        <MasajeCafeContent waLink={WA} lang={lang} />
+      )}
+
+      {service.slug === "masaje-chocolate" && (
+        <MasajeChocolateContent waLink={WA} lang={lang} />
+      )}
+
+      {service.slug === "masaje-barro" && (
+        <MasajeBarroContent waLink={WA} lang={lang} />
+      )}
+
+      {service.slug === "masaje-parejas" && (
+        <MasajeParejasContent waLink={WA} lang={lang} />
+      )}
+
+      {service.slug === "masaje-descarga-muscular" && (
+        <MasajeDescargaMuscularContent waLink={WA} lang={lang} />
       )}
 
       {service.slug === "arteterapia" && (
