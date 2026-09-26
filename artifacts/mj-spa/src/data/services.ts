@@ -752,43 +752,52 @@ export const servicePages: MultiLangServicePageData[] = [
     en: {
       slug: "post-operative-massages",
       name: "Post-Operative Massages in Turrialba",
-      tagline: "Faster recovery, more visible results",
+      fullTitle: "Post-Operative Massages in Turrialba",
+      tagline: "Aesthetic recovery with professional support, wellness, and protocols designed to help you feel better throughout your recovery journey.",
       heroDescription:
-        "Esthetic recovery with professional support. After esthetic surgery, your body needs specialized attention and proper drainage.",
+        "After cosmetic surgery, your body needs much more than rest. It needs specialized care, proper lymphatic drainage, and post-operative protocols designed to support recovery, help reduce swelling, and make your recovery process more comfortable and reassuring.",
       benefits: [
-        "Reduces inflammation and post-surgical edema",
-        "Prevents and treats fibrosis",
-        "Improves healing and skin quality",
-        "Accelerates the reabsorption of fluids and bruises",
+        "Reduces post-surgical swelling and fluid retention",
+        "Prevents and treats tissue hardness / fibrosis",
+        "Improves physical comfort and mobility",
+        "Accelerates healing and skin tissue quality",
+        "Provides compassionate and personalized guidance",
       ],
       items: [
         {
           title: "Post-Operative Lymphatic Drainage",
-          description: "Gentle and specialized massage technique that activates the lymphatic system.",
+          description: "Gentle and specialized massage technique that activates the lymphatic system, facilitates fluid removal, and reduces swelling.",
           duration: "60 min",
-          faq: [
-        {
-          question: "¿Cuándo puedo empezar los masajes tras la cirugía?",
-          answer:
-            "En general, el drenaje linfático suave puede iniciarse a partir de las 48–72 horas post operatorio, previa autorización del cirujano. El trabajo anti-fibrosis se recomienda a partir de la 3ª–4ª semana. En tu primera valoración te indicamos el protocolo exacto según tu caso.",
+          price: "Consult price",
         },
         {
-          question: "¿Cuántas sesiones necesito?",
-          answer:
-            "El número varía según el tipo de cirugía y tu evolución personal. En casos de liposucción o abdominoplastia se recomiendan entre 10 y 15 sesiones. Para cirugías más pequeñas, entre 5 y 8 pueden ser suficientes.",
-        },
-        {
-          question: "¿Es doloroso el masaje post operatorio?",
-          answer:
-            "El drenaje linfático es una técnica muy suave y no debe causar dolor. El trabajo anti-fibrosis puede generar algo de molestia en zonas muy endurecidas, pero siempre adaptamos la presión a tu tolerancia.",
-        },
-        {
-          question: "¿Para qué cirugías está indicado?",
-          answer:
-            "Liposucción, abdominoplastia, mamoplastia, rinoplastia, bichectomía, lifting, cirugía bariátrica y cualquier intervención que genere inflamación o fibrosis. Si tienes dudas sobre tu caso específico, consúltanos.",
+          title: "Anti-Fibrosis & Tissue Care Protocol",
+          description: "Manual techniques designed to soften hardened areas, prevent subcutaneous adhesions, and improve skin smoothness.",
+          duration: "60 min",
+          price: "Consult price",
         },
       ],
-    },
+      faq: [
+        {
+          question: "When can I start post-operative massages?",
+          answer:
+            "It depends on the procedure and your medical provider's instructions. We always recommend an initial assessment before beginning any post-operative care.",
+        },
+        {
+          question: "Are the protocols personalized?",
+          answer:
+            "Yes. Each experience is adapted according to your recovery progress, procedure, and individual needs.",
+        },
+        {
+          question: "How many sessions will I need?",
+          answer:
+            "The number of sessions can vary depending on the procedure, your recovery process, and your individual recovery goals.",
+        },
+        {
+          question: "Can post-operative massages help with swelling?",
+          answer:
+            "Many patients choose these protocols to support lymphatic drainage and physical well-being during their recovery.",
+        },
       ],
     },
   },
