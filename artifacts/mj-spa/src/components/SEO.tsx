@@ -4,8 +4,10 @@ interface SEOProps {
   title?: string;
   description?: string;
   canonical?: string;
+  alternateUrl?: string;
   image?: string;
   type?: "website" | "article";
+  lang?: "es" | "en";
 }
 
 const SITE_NAME = "MJ Fisio Estética y Spa";
@@ -14,7 +16,7 @@ const DEFAULT_DESC =
   "Centro de estética, bienestar y tratamientos médico-estéticos en Turrialba, Costa Rica. Faciales, corporales, piernas cansadas, botox, hilos tensores y más. Reserva por WhatsApp.";
 const DEFAULT_IMAGE = `${BASE_URL}/images/logo-mj.png`;
 
-export function SEO({ title, description, canonical, image, type = "website" }: SEOProps) {
+export function SEO({ title, description, canonical, alternateUrl, image, type = "website", lang = "es" }: SEOProps) {
   const fullTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Turrialba, Costa Rica`;
   const desc = description ?? DEFAULT_DESC;
 
@@ -44,9 +46,23 @@ export function SEO({ title, description, canonical, image, type = "website" }: 
 
   const ogImage = image ?? DEFAULT_IMAGE;
 
+  const alternateLang = lang === "es" ? "en" : "es";
+
+  let finalAlternateUrl = "";
+  if (alternateUrl) {
+    finalAlternateUrl = alternateUrl.startsWith("http")
+      ? alternateUrl
+      : `${BASE_URL}${alternateUrl.startsWith("/") ? "" : "/"}${alternateUrl}`;
+  } else {
+    // Simple alternate URL logic (assumes /en prefix for English)
+    finalAlternateUrl = lang === "es"
+      ? `${BASE_URL}/en${currentPath === "/" ? "" : currentPath}`
+      : `${BASE_URL}${currentPath.replace(/^\/en/, "") || "/"}`;
+  }
+
   return (
     <Helmet>
-      <html lang="es" />
+      <html lang={lang} />
       <title>{fullTitle}</title>
       <meta name="description" content={desc} />
       <link rel="canonical" href={canonicalUrl} />
@@ -71,9 +87,13 @@ export function SEO({ title, description, canonical, image, type = "website" }: 
       <meta name="twitter:description" content={desc} />
       <meta name="twitter:image" content={ogImage} />
 
+      <link rel="alternate" hrefLang={lang} href={canonicalUrl} />
+      <link rel="alternate" hrefLang={alternateLang} href={finalAlternateUrl} />
+      <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}/`} />
+
       <meta name="robots" content="index, follow" />
       <meta name="author" content={SITE_NAME} />
-      <meta name="language" content="Spanish" />
+      <meta name="language" content={lang === "es" ? "Spanish" : "English"} />
     </Helmet>
   );
 }

@@ -1,17 +1,26 @@
 import { motion } from "framer-motion";
 
-const STATS = [
-  { n: "2335+", label: "Clientes atendidas" },
-  { n: "85%",   label: "Clientes satisfechas" },
-  { n: "82+",   label: "Tratamientos disponibles" },
-  { n: "3+",    label: "Años de experiencia" },
-];
+const STATS = {
+  es: [
+    { n: "2335+", label: "Clientes atendidas" },
+    { n: "85%",   label: "Clientes satisfechas" },
+    { n: "82+",   label: "Tratamientos disponibles" },
+    { n: "3+",    label: "Años de experiencia" },
+  ],
+  en: [
+    { n: "2335+", label: "Clients served" },
+    { n: "85%",   label: "Satisfied clients" },
+    { n: "82+",   label: "Treatments available" },
+    { n: "3+",    label: "Years of experience" },
+  ]
+};
 
-export function StatsBar() {
+export function StatsBar({ lang = "es" }: { lang?: "es" | "en" }) {
+  const stats = lang === "es" ? STATS.es : STATS.en;
   return (
     <section className="bg-[#071e2e] border-b border-white/5">
       <div className="max-w-4xl mx-auto px-6 py-5 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
-        {STATS.map((s, i) => (
+        {stats.map((s, i) => (
           <motion.div
             key={s.n}
             initial={{ opacity: 0, y: 8 }}

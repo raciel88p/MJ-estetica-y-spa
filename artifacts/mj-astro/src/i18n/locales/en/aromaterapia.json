@@ -1,0 +1,118 @@
+{
+  "intro": {
+    "title": "Why Are More and More People Seeking Aromatherapy in Turrialba?",
+    "tags": ["Work", "Family", "Responsibilities", "Screens", "Stress"],
+    "p1": "Modern life keeps us constantly busy. That's why more and more people are looking for experiences that allow them to disconnect for a moment and reconnect with themselves.",
+    "p2": "Aromatherapy is a wellness experience that uses carefully selected essential oils and aromatic stimuli to create environments oriented towards relaxation, emotional well-being, and rest.",
+    "highlight": "At MJ Estética & Wellness Center, we personalize each experience because we understand that everyone experiences well-being differently."
+  },
+  "benefits": {
+    "title": "Aromatherapy in Turrialba: Much More Than a Pleasant Scent",
+    "desc": "Our experience is designed to stimulate the senses and create a space where you can feel comfortable, relaxed, and accompanied.",
+    "subtitle": "Benefits our clients value:",
+    "items": [
+      "Deep relaxation",
+      "Disconnection and rest",
+      "Emotional well-being",
+      "Calm and harmony",
+      "Personalized experiences",
+      "Conscious self-care",
+      "Premium atmosphere"
+    ]
+  },
+  "process": {
+    "title": "How Does Our Experience Work?",
+    "steps": [
+      { "s": "Step 1", "t": "Personalized Assessment", "d": "We learn about your preferences and well-being goals." },
+      { "s": "Step 2", "t": "Aromatic Selection", "d": "We choose the scents and essential oils that best suit the experience you want to live." },
+      { "s": "Step 3", "t": "Wellness Experience", "d": "You enjoy a session designed to favor relaxation and well-being in a comfortable and private environment." },
+      { "s": "Step 4", "t": "Recommendations", "d": "You receive tips to prolong the feeling of well-being after your visit." }
+    ],
+    "items": [
+      "Duration according to protocol",
+      "Central location",
+      "Parking available",
+      "Easy booking"
+    ]
+  },
+  "who": {
+    "title": "Who is Aromatherapy Recommended For?",
+    "intro": "This experience is ideal for people looking to incorporate moments of self-care and integral well-being into their routine.",
+    "items": [
+      "People who want to relax.",
+      "People seeking integral well-being.",
+      "Those interested in premium spa experiences.",
+      "Desire for conscious self-care.",
+      "Spaces for disconnection and rest.",
+      "Complement to wellness programs."
+    ]
+  },
+  "combinations": {
+    "title": "Aromatherapy and Relaxing Massages in Turrialba",
+    "desc": "Many of our clients combine aromatherapy with other wellness services to enhance the experience.",
+    "items": [
+      "Relaxing aromatherapy",
+      "Relaxing massages",
+      "Premium spa experiences",
+      "Integral well-being",
+      "Self-care protocols"
+    ],
+    "quote": "Ask which is the best combination according to your goals.",
+    "cta": "CONSULT COMBINATIONS"
+  },
+  "whyUs": {
+    "title": "Why Choose MJ Estética & Wellness Center?",
+    "desc": "We seek to offer you a space where you can truly disconnect from the outside and dedicate time to your well-being.",
+    "items": [
+      { "t": "Personalized attention" },
+      { "t": "Adapted protocols" },
+      { "t": "Comfortable and relaxing environment" },
+      { "t": "Private facilities" },
+      { "t": "Committed team" },
+      { "t": "Strategic location" }
+    ]
+  },
+  "testimonials": {
+    "title": "Client Reviews",
+    "items": [
+      "An incredible experience. From the moment I arrived, I felt peace and relaxation.",
+      "I loved the attention and the atmosphere. You can see the care in every detail.",
+      "Perfect for disconnecting from daily stress and focusing on yourself."
+    ],
+    "author": "MJ Patient"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "What is aromatherapy?", "a": "It is a wellness experience that uses scents and essential oils to create environments oriented towards well-being and relaxation." },
+      { "q": "How long is the session?", "a": "It depends on the selected protocol and each person's needs." },
+      { "q": "Can it be combined with massages?", "a": "Yes. It is one of the most requested combinations by our clients." },
+      { "q": "What essential oils do you use?", "a": "We select options according to the desired experience and individual preferences." },
+      { "q": "Do I need any prior preparation?", "a": "No. Just come with a willingness to enjoy a moment of well-being." },
+      { "q": "Where are you located?", "a": "We are located in Turrialba, with easy access and parking for our visitors." }
+    ]
+  },
+  "leadMagnet": {
+    "label": "🎁 EXCLUSIVE FREE RESOURCE",
+    "title": "Download Your Free Well-being Guide",
+    "subtitle": "\"How to enhance your well-being and self-care results\"",
+    "ctaLabel": "💌 Comment the word:",
+    "word": "SCENT",
+    "learn": "You will learn:",
+    "items": [
+      "Habits to improve your moments of relaxation.",
+      "Tips to enhance wellness experiences.",
+      "Daily self-care recommendations.",
+      "Strategies to reduce daily stress."
+    ],
+    "cta": "REQUEST GUIDE VIA WHATSAPP"
+  },
+  "finalCta": {
+    "title": "Book Your Aromatherapy Experience in Turrialba",
+    "desc": "Thousands of people spend time on work, responsibilities, and commitments. Today might be the perfect moment to invest time in yourself.",
+    "location": "MJ Estética & Wellness Center",
+    "address": "Turrialba, Cartago, Costa Rica",
+    "cta": "Book via WhatsApp",
+    "cta2": "CHECK AVAILABILITY"
+  }
+}

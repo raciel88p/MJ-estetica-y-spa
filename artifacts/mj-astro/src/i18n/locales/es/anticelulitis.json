@@ -1,0 +1,152 @@
+{
+  "intro": {
+    "title": "¿Te gustaría lucir una piel más lisa, firme y uniforme?",
+    "subtitle": "Descubre nuestro Tratamiento Anticelulitis en MJ Estética & Wellness Center",
+    "p1": "La celulitis es una de las preocupaciones estéticas más comunes en mujeres de todas las edades. Aunque es completamente natural, muchas personas desean mejorar la apariencia de su piel para sentirse más cómodas, seguras y confiadas.",
+    "p2": "En MJ Estética & Wellness Center hemos desarrollado protocolos corporales personalizados que ayudan a mejorar progresivamente la apariencia de la piel, promoviendo una sensación de bienestar, autocuidado y confianza."
+  },
+  "leadMagnet": {
+    "label": "Regalo Exclusivo",
+    "title": "Por comentar la palabra ANTICELULITIS",
+    "subtitle": "Queremos obsequiarte nuestra guía gratuita:",
+    "guideTitle": "\"7 hábitos que potencian los resultados de cualquier tratamiento anticelulitis\"",
+    "desc": "Descubre recomendaciones simples que pueden ayudarte a complementar tus tratamientos corporales y mejorar tu experiencia de bienestar.",
+    "ctaLabel": "Solicítala ahora",
+    "ctaDesc": "Haz clic en el botón al finalizar esta página o contáctanos por Instagram.",
+    "cta": "Ir a Instagram"
+  },
+  "painPoints": {
+    "title": "¿Te identificas con alguna de estas situaciones?",
+    "items": [
+      "Sientes que la apariencia de tu piel ha cambiado con el tiempo.",
+      "Has probado cremas o productos sin notar cambios visibles.",
+      "Te incomoda usar vestidos, shorts o ropa ajustada.",
+      "Deseas mejorar la textura y apariencia de ciertas zonas corporales.",
+      "Buscas una profesional acompañada por especialistas."
+    ],
+    "closing": "Si respondiste sí a alguna de ellas, este tratamiento puede ser ideal para ti."
+  },
+  "whatIs": {
+    "label": "La ciencia del bienestar",
+    "title": "¿Qué es nuestro tratamiento anticelulitis?",
+    "p1": "Es un protocolo corporal personalizado diseñado para mejorar progresivamente la apariencia de la piel mediante técnicas estéticas no invasivas que buscan favorecer la circulación, estimular tejidos y complementar procesos de remodelación corporal.",
+    "p2": "Cada persona presenta características distintas, por eso realizamos una valoración previa para determinar el protocolo más adecuado según tus objetivos."
+  },
+  "benefits": {
+    "title": "Beneficios que nuestras pacientes suelen valorar",
+    "items": [
+      { "t": "Piel más uniforme", "d": "Apariencia de la piel visiblemente más lisa y suave.", "i": "✨" },
+      { "t": "Firmeza corporal", "d": "Mejora la sensación de tonicidad en las zonas tratadas.", "i": "💪" },
+      { "t": "Bienestar integral", "d": "Complemento ideal para tus programas de cuidado personal.", "i": "🌿" },
+      { "t": "Autocuidado", "d": "Una experiencia relajante enfocada 100% en ti.", "i": "🧖‍♀️" },
+      { "t": "Adaptado a ti", "d": "Protocolos que se ajustan a tus necesidades individuales.", "i": "🎯" },
+      { "t": "Atención experta", "d": "Acompañamiento profesional durante todo el proceso.", "i": "👩‍⚕️" }
+    ]
+  },
+  "vision": {
+    "title": "Imagina cómo podrías sentirte",
+    "items": [
+      "Visualiza usar esa ropa que tanto te gusta sin preocuparte por la apariencia de tu piel.",
+      "Imagina mirarte al espejo y sentirte más cómoda con tu imagen.",
+      "Piensa en dedicarte un espacio para ti, para tu bienestar y autocuidado."
+    ],
+    "closing1": "No se trata únicamente de estética.",
+    "closing2": "Se trata de sentirte bien contigo misma."
+  },
+  "failure": {
+    "title": "¿Por qué muchas personas no obtienen resultados?",
+    "desc1": "Porque suelen enfocarse únicamente en productos cosméticos o soluciones aisladas.",
+    "desc2": "La apariencia de la piel está influenciada por múltiples factores:",
+    "factors": [
+      "Hábitos diarios", "Hidratación",
+      "Actividad física", "Alimentación",
+      "Cuidados corporales", "Protocolos estéticos"
+    ],
+    "closing": "Por eso en MJ trabajamos desde un enfoque integral y personalizado.",
+    "commitmentLabel": "Compromiso MJ",
+    "commitmentQuote": "“Abordamos la celulitis no como un problema aislado, sino como parte de tu bienestar corporal total.”"
+  },
+  "wellness": {
+    "title": "Nuestra Experiencia Wellness Corporal",
+    "desc": "Cuando agendas tu cita no solo recibes un tratamiento. Recibes una experiencia diseñada para tu bienestar.",
+    "items": [
+      "Espacios cómodos",
+      "Atención individual",
+      "Protocolos únicos",
+      "Ambiente relajante",
+      "Acompañamiento",
+      "Recomendaciones"
+    ],
+    "footer": "Cada sesión está pensada para convertirse en un momento de autocuidado y renovación."
+  },
+  "howItWorks": {
+    "title": "¿Cómo funciona?",
+    "steps": [
+      { "s": "Paso 1", "t": "Valoración personalizada", "d": "Analizamos tus objetivos y características individuales." },
+      { "s": "Paso 2", "t": "Diseño del protocolo", "d": "Seleccionamos el tratamiento más adecuado para ti." },
+      { "s": "Paso 3", "t": "Aplicación del procedimiento", "d": "Realizamos la sesión siguiendo protocolos profesionales." },
+      { "s": "Paso 4", "t": "Recomendaciones complementarias", "d": "Te orientamos sobre hábitos que pueden ayudar a potenciar tu experiencia." }
+    ]
+  },
+  "who": {
+    "title": "¿Para quién está recomendado?",
+    "items": [
+      "Personas que desean mejorar la apariencia de la piel.",
+      "Mujeres que buscan tratamientos corporales personalizados.",
+      "Personas interesadas en wellness y autocuidado.",
+      "Quienes desean complementar programas de remodelación corporal.",
+      "Personas que valoran experiencias premium de bienestar."
+    ]
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestras pacientes",
+    "items": [
+      "Me encantó la atención y el acompañamiento durante todo el proceso.",
+      "Las sesiones se sienten relajantes y me ayudaron a dedicarme tiempo para mí.",
+      "Desde la valoración entendieron exactamente lo que buscaba.",
+      "El ambiente es hermoso y la atención excelente."
+    ]
+  },
+  "whyUs": {
+    "title": "¿Por qué elegir MJ Estética & Wellness Center?",
+    "desc": "Porque entendemos que cada cuerpo es diferente. No aplicamos protocolos genéricos.",
+    "subtitle": "Diseñamos experiencias personalizadas enfocadas en bienestar, autocuidado y atención integral.",
+    "items": [
+      "Valoración individual",
+      "Protocolos corporales personalizados",
+      "Atención cercana y profesional",
+      "Ambiente premium",
+      "Experiencia wellness integral",
+      "Ubicación accesible en Turrialba"
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      { "q": "¿Cuántas sesiones necesito?", "a": "La cantidad de sesiones puede variar según cada persona y sus objetivos. Durante la valoración te orientaremos." },
+      { "q": "¿Es doloroso?", "a": "La experiencia suele ser cómoda y adaptada a cada paciente." },
+      { "q": "¿Puedo combinarlo con otros tratamientos?", "a": "Sí. Existen protocolos complementarios que pueden evaluarse durante tu consulta." },
+      { "q": "¿Cuánto dura una sesión?", "a": "La duración depende del tratamiento seleccionado y se explica durante la valoración." },
+      { "q": "¿Los resultados son inmediatos?", "a": "Cada persona responde de forma diferente y los resultados suelen observarse progresivamente." }
+    ]
+  },
+  "finalLead": {
+    "label": "🎁 REGALO EXCLUSIVO",
+    "title": "Reclama tu guía gratuita",
+    "p1": "\"7 hábitos que potencian los resultados de cualquier tratamiento anticelulitis\"",
+    "p2": "Además, recibe información sobre nuestras promociones y disponibilidad de citas.",
+    "wordLabel": "💌 Comenta la palabra:",
+    "word": "ANTICELULITIS",
+    "desc": "y recibe automáticamente la guía gratuita + información exclusiva de nuestras sesiones.",
+    "cta": "IR A INSTAGRAM"
+  },
+  "finalCta": {
+    "title": "Agenda tu Valoración Corporal Hoy",
+    "desc": "Las citas son limitadas para garantizar una atención personalizada.",
+    "cta1": "Haz clic aquí y agenda tu valoración",
+    "cta2": "Consulta disponibilidad por WhatsApp",
+    "cta3": "Descubre cuál es el protocolo ideal para ti",
+    "footerTitle": "MJ Estética & Wellness Center",
+    "footerDesc": "Bienestar, autocuidado y experiencias corporales premium en Turrialba."
+  }
+}

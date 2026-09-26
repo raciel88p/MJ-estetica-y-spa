@@ -5,9 +5,15 @@ import type { Testimonial } from "@/data/testimonials";
 interface Props {
   testimonial: Testimonial;
   index?: number;
+  lang?: 'es' | 'en';
 }
 
-export function TestimonialCard({ testimonial, index = 0 }: Props) {
+export function TestimonialCard({ testimonial, index = 0, lang = 'es' }: Props) {
+  const t_verified = lang === 'es' ? 'Caso verificado' : 'Verified case';
+  const t_resultIn = lang === 'es' ? 'Resultado en' : 'Result in';
+  const t_realPatient = lang === 'es' ? 'Paciente real MJ Estética' : 'Real MJ Estética patient';
+  const t_years = lang === 'es' ? 'años' : 'years old';
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -21,7 +27,7 @@ export function TestimonialCard({ testimonial, index = 0 }: Props) {
       <div className="flex flex-wrap gap-2">
         {testimonial.verified && (
           <span className="inline-flex items-center gap-1 text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-3 py-1">
-            <CheckCircle2 className="w-3 h-3" /> Caso verificado
+            <CheckCircle2 className="w-3 h-3" /> {t_verified}
           </span>
         )}
         <span className="inline-flex items-center gap-1 text-xs font-semibold text-primary bg-primary/10 rounded-full px-3 py-1">
@@ -32,7 +38,7 @@ export function TestimonialCard({ testimonial, index = 0 }: Props) {
       {/* Result highlight */}
       <div className="bg-primary/5 border border-primary/15 rounded-xl px-4 py-3">
         <p className="text-xs text-primary/70 font-medium uppercase tracking-wider mb-0.5">
-          Resultado en {testimonial.duration}
+          {t_resultIn} {testimonial.duration}
         </p>
         <p className="text-lg font-bold text-primary font-serif">{testimonial.result}</p>
       </div>
@@ -56,12 +62,12 @@ export function TestimonialCard({ testimonial, index = 0 }: Props) {
         </div>
         <div>
           <p className="text-sm font-semibold text-stone-800">
-            Paciente real MJ Estética
+            {t_realPatient}
           </p>
           <div className="flex items-center gap-1 text-xs text-stone-500">
             <MapPin className="w-3 h-3" />
             <span>
-              {testimonial.location}, {testimonial.age} años · {testimonial.treatment}
+              {testimonial.location}, {testimonial.age} {t_years} · {testimonial.treatment}
             </span>
           </div>
         </div>

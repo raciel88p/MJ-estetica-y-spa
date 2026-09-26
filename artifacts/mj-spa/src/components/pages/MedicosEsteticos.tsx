@@ -1,0 +1,286 @@
+import { useTranslations } from "@/i18n/ui";
+import { withAppProviders } from "@/components/ReactAppWrapper";
+import { SEO } from "@/components/SEO";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { motion } from "framer-motion";
+
+import { ArrowRight, Stethoscope, BadgeCheck } from "lucide-react";
+import { StatsBar } from "@/components/StatsBar";
+import { medicoEsteticosLinks } from "@/data/services";
+import { servicePages } from "@/data/services";
+
+const BASE = import.meta.env.BASE_URL;
+
+function MedicosEsteticos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
+  const t = useTranslations(lang);
+
+  const doctors = [
+    {
+      name: "Dr. Ricard Araya",
+      linc: "323106",
+      specialty: lang === 'es' ? "Armonizador Facial" : "Facial Harmonizer",
+      photo: "dr-ricard-araya.webp",
+      bio: lang === 'es'
+        ? "Médico especialista en medicina estética y tratamientos faciales mínimamente invasivos. Experto en toxina botulínica, ácido hialurónico e hilos tensores con enfoque en resultados naturales."
+        : "Specialist doctor in medical aesthetics and minimally invasive facial treatments. Expert in botulinum toxin, hyaluronic acid, and tensor threads with a focus on natural results.",
+      services: lang === 'es'
+        ? ["/servicios/botox-full-face", "/servicios/hilos-tensores", "/servicios/acido-hialuronico", "/servicios/relleno-de-labios"]
+        : ["/en/services/botox-full-face", "/en/services/tension-threads", "/en/services/hyaluronic-acid", "/en/services/relleno-de-labios"],
+      serviceLabels: lang === 'es'
+        ? ["Botox Full Face", "Hilos Tensores Turrialba", "Ácido Hialurónico", "Relleno de Labios", "Microagujas"]
+        : ["Full Face Botox", "Tensor Threads Turrialba", "Hyaluronic Acid", "Lip Filler", "Microneedling"],
+    },
+    {
+      name: "Dr. Ruddy Jiménez Montero",
+      linc: "13583",
+      specialty: lang === 'es' ? "Master en Cirugía Capilar" : "Master in Hair Surgery",
+      photo: "dr-ruddy-jimenez.webp",
+      bio: lang === 'es'
+        ? "Especialista con formación de posgrado en cirugía capilar. Realiza cada procedimiento con técnicas de última generación garantizando resultados naturales, seguros y permanentes."
+        : "Specialist with postgraduate training in hair surgery. Performs each procedure with state-of-the-art techniques guaranteeing natural, safe, and permanent results.",
+      services: lang === 'es'
+        ? ["/servicios/trasplante-capilar", "/servicios/implante-barba", "/servicios/mesoterapia-capilar"]
+        : ["/en/services/trasplante-capilar", "/en/services/implante-barba", "/en/services/capillary-mesotherapy"],
+      serviceLabels: lang === 'es'
+        ? ["Trasplante Capilar Natural", "Implante de Barba", "Mesoterapia Capilar"]
+        : ["Natural Hair Transplant", "Beard Implant", "Hair Mesotherapy"],
+    },
+    {
+      name: "Dr. Johan",
+      linc: "3667-25",
+      specialty: lang === 'es' ? "Nutricionista Deportivo" : "Sports Nutritionist",
+      photo: "dr-johan.webp",
+      bio: lang === 'es'
+        ? "Especialista en nutrición clínica y deportiva. Diseña planes alimentarios personalizados orientados a objetivos de salud, rendimiento y composición corporal."
+        : "Specialist in clinical and sports nutrition. Designs personalized food plans oriented towards health, performance, and body composition goals.",
+      services: lang === 'es' ? ["/servicios/nutricion"] : ["/en/services/nutrition"],
+      serviceLabels: lang === 'es' ? ["Nutrición Clínica"] : ["Clinical Nutrition"],
+    },
+  ];
+
+  const descriptions: Record<string, string> = {
+    nutricion: lang === 'es'
+      ? "Planes nutricionales personalizados para alcanzar tus objetivos de salud, peso y bienestar con el acompañamiento de nuestros especialistas."
+      : "Personalized nutritional plans to achieve your health, weight, and well-being goals with the guidance of our specialists.",
+    "botox-full-face": lang === 'es'
+      ? "Tratamiento con toxina botulínica para reducir arrugas de expresión y rejuvenecer el rostro de forma natural y sin cirugía."
+      : "Botulinum toxin treatment to reduce expression wrinkles and rejuvenate the face naturally and without surgery.",
+    "hilos-tensores": lang === 'es'
+      ? "Lifting no quirúrgico con hilos reabsorbibles que devuelven firmeza y tensión a la piel estimulando la producción de colágeno."
+      : "Non-surgical lifting with absorbable threads that restore firmness and tension to the skin by stimulating collagen production.",
+    "trasplante-capilar": lang === 'es'
+      ? "Solución definitiva para la alopecia con técnicas mínimamente invasivas, resultados permanentes y aspecto completamente natural."
+      : "Definitive solution for alopecia with minimally invasive techniques, permanent results, and a completely natural appearance.",
+    "implante-barba": lang === 'es'
+      ? "Técnica de trasplante capilar facial para obtener una barba densa, uniforme y completamente natural adaptada a tu estructura facial."
+      : "Facial hair transplant technique to obtain a dense, uniform, and completely natural beard adapted to your facial structure.",
+    "mesoterapia-capilar": lang === 'es'
+      ? "Microinyecciones de vitaminas, minerales y factores de crecimiento directamente en el cuero cabelludo para frenar la caída y estimular el crecimiento."
+      : "Micro-injections of vitamins, minerals, and growth factors directly into the scalp to stop hair loss and stimulate growth.",
+    "relleno-de-labios": lang === 'es'
+      ? "Procedimientos especializados de relleno labial con ácido hialurónico orientados a volumen, hidratación y perfilado natural en Turrialba."
+      : "Specialized lip filler procedures with hyaluronic acid oriented towards volume, hydration, and natural contouring in Turrialba.",
+  };
+
+const icons: Record<string, string> = {
+  nutricion: "🥗",
+  "botox-full-face": "💉",
+  "hilos-tensores": "✨",
+  "trasplante-capilar": "💆",
+  "implante-barba": "🧔",
+  "mesoterapia-capilar": "💊",
+  "relleno-de-labios": "👄",
+};
+
+  const services = medicoEsteticosLinks[lang].map((link) => {
+    // Correctly extract slug regardless of language prefix
+    const parts = link.href.split('/');
+    const slug = parts[parts.length - 1] || "";
+    // Find the service entry by looking at both ES and EN slugs
+    const data = servicePages.find((s) => s.es.slug === slug || s.en.slug === slug);
+    const serviceData = data ? data[lang] : null;
+    const esSlug = data?.es.slug || slug;
+
+    return {
+      ...link,
+      slug: esSlug, // Use ES slug for icons mapping
+      tagline: serviceData?.tagline ?? "",
+      description: descriptions[esSlug] ?? ""
+    };
+  });
+
+  return (
+    <div className="min-h-screen flex flex-col bg-background">
+      <SEO
+        title={lang === 'es' ? "Tratamientos Médicos Estéticos" : "Medical Aesthetic Treatments"}
+        description={lang === 'es' ? "Tratamientos médicos estéticos en Turrialba: botox, rellenos, hilos tensores, trasplante capilar y nutrición. Especialistas certificados en MJ Fisio Estética y Spa." : "Medical aesthetic treatments in Turrialba: botox, fillers, thread lifts, hair transplant, and nutrition. Certified specialists at MJ Fisio Estética & Spa."}
+        canonical={lang === 'es' ? "/medicos-esteticos" : "/en/medical-aesthetic"}
+        lang={lang}
+      />
+      <Navbar lang={lang} alternateLink={lang === 'es' ? '/en/medical-aesthetic' : '/medicos-esteticos'} />
+
+      {/* Hero */}
+      <section className="relative pt-36 pb-20 bg-foreground overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <div className="flex justify-center mb-6">
+            <Breadcrumb items={[{ label: t('nav.medico') }]} />
+          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 text-primary text-sm font-medium tracking-widest uppercase mb-6">
+              <Stethoscope className="w-4 h-4" />
+              {t('medical.hero.tagline')}
+            </div>
+            <h1 className="text-5xl md:text-6xl font-serif text-white mb-6">
+              {t('medical.hero.title')}
+            </h1>
+            <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+              {t('medical.hero.desc')}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <StatsBar lang={lang} />
+
+      {/* ── Nuestros Especialistas ── */}
+      <section className="py-20 bg-[#071e2e]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-14"
+          >
+            <p className="text-primary text-xs font-semibold tracking-[0.3em] uppercase mb-3">{t('medical.team.tagline')}</p>
+            <h2 className="text-4xl font-serif text-white">{t('medical.team.title')}</h2>
+            <p className="text-white/60 mt-3 max-w-xl mx-auto text-sm">
+              {t('medical.team.desc')}
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {doctors.map((doc, i) => (
+              <motion.div
+                key={doc.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.12 }}
+                className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-primary/40 transition-colors"
+              >
+                {/* Photo */}
+                <div className="relative h-64 bg-[#0a2a3d] overflow-hidden">
+                  <img
+                    src={`${BASE}images/${doc.photo}`}
+                    alt={doc.name}
+                    className="w-full h-full object-cover object-top"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#071e2e]/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-4 left-4">
+                    <span className="inline-flex items-center gap-1.5 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full tracking-wider uppercase">
+                      <BadgeCheck className="w-3 h-3" />
+                      {doc.specialty}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Info */}
+                <div className="p-6">
+                  <h3 className="text-lg font-serif font-bold text-white mb-1">{doc.name}</h3>
+                  <p className="text-primary/80 text-xs font-medium tracking-widest uppercase mb-4">
+                    Linc {doc.linc}
+                  </p>
+                  <p className="text-white/60 text-sm leading-relaxed mb-5">{doc.bio}</p>
+
+                  {/* Service tags */}
+                  <div className="flex flex-wrap gap-2">
+                    {doc.serviceLabels.map((label, j) => (
+                      <a key={j} href={doc.services[j]}>
+                        <span className="inline-block bg-white/8 border border-white/10 text-white/70 text-[11px] font-medium px-3 py-1 rounded-full hover:bg-primary/20 hover:text-white hover:border-primary/30 transition-colors cursor-pointer">
+                          {label}
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, i) => (
+              <motion.div
+                key={service.slug}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <a href={service.href}>
+                  <div className="group cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-border hover:-translate-y-1 h-full">
+                    <div className="bg-gradient-to-br from-primary/5 to-secondary/20 p-8 flex items-center gap-4">
+                      <span className="text-5xl">{icons[service.slug]}</span>
+                      <div>
+                        <h2 className="text-2xl font-serif text-foreground group-hover:text-primary transition-colors">
+                          {service.name}
+                        </h2>
+                        <p className="text-sm text-primary/80 italic mt-1">{service.tagline}</p>
+                      </div>
+                    </div>
+                    <div className="p-8 pt-6">
+                      <p className="text-muted-foreground leading-relaxed mb-6">
+                        {service.description}
+                      </p>
+                      <div className="flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
+                        {t('medical.services.view')}
+                        <ArrowRight className="w-4 h-4" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-secondary/20">
+        <div className="max-w-2xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-serif text-foreground mb-4">{t('medical.cta.title')}</h2>
+          <p className="text-muted-foreground mb-8">
+            {t('medical.cta.desc')}
+          </p>
+          <a
+            id="cta-medicos-asesoria"
+            href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-primary text-white rounded-full px-8 py-4 text-base font-semibold hover:bg-primary/90 transition-colors shadow-lg hover:shadow-primary/30"
+          >
+            {t('medical.cta.button')}
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </div>
+      </section>
+
+      <Footer lang={lang} />
+      <FloatingWhatsApp />
+    </div>
+  );
+}
+
+export default withAppProviders(MedicosEsteticos);

@@ -1,0 +1,233 @@
+{
+  "intro": {
+    "title": "Carboxytherapy in Turrialba | MJ Estética & Wellness Center",
+    "subtitle": "Discover more even-looking skin and a more holistic approach to body wellness",
+    "desc": "Carboxytherapy is one of the most sought-after wellness and aesthetic treatments for people looking to complement their body and facial goals through personalized, natural-looking, and progressive protocols. At MJ Estética & Wellness Center, we create personalized experiences designed to help improve the appearance of your skin, support body contouring and aesthetic protocols, and enhance your overall aesthetic wellness in a professional, comfortable, and fully personalized environment.",
+    "items": [
+      "Personalized attention",
+      "Customized protocols",
+      "Progressive, natural-looking results",
+      "Professional and comfortable environment",
+      "Holistic wellness approach"
+    ]
+  },
+  "leadMagnet": {
+    "label": "FREE GUIDE",
+    "title": "🎁 FREE GUIDE",
+    "instagram": "Comment the word “Carbo” on our Instagram and receive our FREE guide:",
+    "guideTitle": "“How to Enhance Your Carboxytherapy Results”",
+    "learn": "You will learn:",
+    "items": [
+      "How to enhance your results",
+      "Which habits can support your treatment",
+      "Recommended aftercare",
+      "How to combine body and facial sessions",
+      "Wellness tips to support progressive results"
+    ],
+    "instaCta": "Go to Instagram"
+  },
+  "ctaCard": {
+    "title": "👉 Book your personalized consultation today",
+    "waLabel": "WhatsApp Business",
+    "waCta": "📲 Message us on WhatsApp",
+    "locLabel": "Location",
+    "locValue": "📍 Serving clients in Turrialba",
+    "dateLabel": "Availability",
+    "dateValue": "🗓️ Ask about availability"
+  },
+  "whatIs": {
+    "title": "What Is Carboxytherapy?",
+    "desc": "Carboxytherapy is a complementary aesthetic treatment used in facial and body aesthetics. It can be incorporated into wellness protocols designed to improve the appearance of the skin and support different aesthetic goals.",
+    "focus": "At MJ Estética & Wellness Center, every protocol is tailored to each individual's needs, taking into consideration:",
+    "items": [
+      { "t": "Treatment area" },
+      { "t": "Aesthetic goals" },
+      { "t": "Complementary lifestyle habits" },
+      { "t": "Skin type" },
+      { "t": "Overall body wellness" }
+    ],
+    "applications": "Many people seek carboxytherapy as part of protocols focused on:",
+    "appItems": [
+      "The appearance of cellulite",
+      "Skin laxity",
+      "Stretch marks",
+      "Under-eye concerns",
+      "Skin texture",
+      "Facial and body rejuvenation",
+      "Holistic aesthetic wellness"
+    ],
+    "note": "The goal is to achieve progressive, personalized, natural-looking, and harmonious results."
+  },
+  "zones": {
+    "title": "What Areas or Concerns Can Carboxytherapy Help Improve?",
+    "desc": "Carboxytherapy can be incorporated into protocols designed to address different body and facial aesthetic concerns.",
+    "bodyTitle": "Body Areas",
+    "bodyItems": ["Abdomen", "Legs", "Buttocks", "Arms", "Back", "Waist"],
+    "facialTitle": "Facial Areas",
+    "facialItems": ["Under-eye area", "Facial contour", "Skin texture", "Appearance of facial laxity"],
+    "commonTitle": "Common Aesthetic Goals",
+    "commonItems": [
+      "Improve the appearance of cellulite",
+      "Complement skin-firming protocols",
+      "Support stretch-mark treatments",
+      "Improve the overall appearance of the skin",
+      "Enhance overall body wellness",
+      "Support facial and body rejuvenation protocols",
+      "Complement wellness-focused body treatments"
+    ]
+  },
+  "benefits": {
+    "title": "Benefits of Carboxytherapy",
+    "desc": "At MJ Estética & Wellness Center, we believe in real, progressive, and personalized results. That is why our protocols are designed to:",
+    "items": [
+      "Improve the overall appearance of the skin",
+      "Complement facial and body aesthetic treatments",
+      "Promote a more even-looking appearance",
+      "Support personalized aesthetic goals",
+      "Enhance overall body wellness",
+      "Maintain natural-looking and harmonious results",
+      "Create wellness experiences focused on comprehensive self-care"
+    ],
+    "note": "Every person experiences treatment differently. That is why we perform an individual assessment before beginning any protocol."
+  },
+  "methodology": {
+    "label": "How It Works",
+    "title": "How Does a Carboxytherapy Session Work?",
+    "desc": "Your session takes place in a professional, comfortable, and welcoming environment:",
+    "steps": [
+      { "s": "Step 1", "t": "Personalized Assessment", "d": "We discuss your goals, treatment areas, and specific needs." },
+      { "s": "Step 2", "t": "Customized Protocol", "d": "We create a personalized protocol based on your individual needs and aesthetic goals." },
+      { "s": "Step 3", "t": "Treatment Application", "d": "Your session takes place in a professional, comfortable, and welcoming environment." },
+      { "s": "Step 4", "t": "Recommendations & Follow-Up", "d": "We provide wellness and aftercare recommendations designed to support your progressive results." }
+    ]
+  },
+  "info": {
+    "title": "Important Information",
+    "items": [
+      { "l": "Approximate duration", "v": "30–60 minutes" },
+      { "l": "Frequency", "v": "Based on your personalized assessment" },
+      { "l": "Aftercare", "v": "Recommended according to your individual protocol" },
+      { "l": "Recovery", "v": "Generally quick, depending on each individual" }
+    ],
+    "note": "* Results and required sessions vary based on individual assessment."
+  },
+  "sessions": {
+    "title": "How Many Carboxytherapy Sessions Are Recommended?",
+    "desc": "The number of sessions depends on several factors evaluated during your consultation:",
+    "factors": ["Your personal goals", "Treatment area", "Complementary lifestyle habits", "Individual assessment", "Recommended protocol"],
+    "orient": "During your consultation, we can help determine the most appropriate option for you.",
+    "optionsTitle": "Commonly Chosen Programs",
+    "options": [
+      { "t": "Body treatment packages", "d": "Intensive protocols for specific aesthetic goals." },
+      { "t": "Wellness maintenance programs", "d": "Periodic sessions to preserve and enhance results." },
+      { "t": "Combined protocols", "d": "Synergy with complementary facial and body treatments." },
+      { "t": "Personalized follow-up programs", "d": "Continuous adjustments tailored to your evolution." }
+    ]
+  },
+  "philosophy": {
+    "title": "Real & Progressive Results",
+    "desc": "Our aesthetic wellness philosophy focuses on supporting you throughout your journey, ensuring that every protocol is adapted to your individual needs.",
+    "tags": ["Natural-looking", "Harmonious", "Progressive", "Personalized"],
+    "ctaTitle": "Ready to Begin Your Aesthetic Wellness Experience?",
+    "cta": "MESSAGE US ON WHATSAPP"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "items": [
+      {
+        "title": "“I felt supported throughout the entire process.”",
+        "quote": "“I wanted to improve the appearance of my skin, and I loved that the protocol was personalized to my needs.”"
+      },
+      {
+        "title": "“The environment is very professional and comfortable.”",
+        "quote": "“From the initial assessment, I could tell that their approach focuses on wellness and natural-looking results.”"
+      },
+      {
+        "title": "“I noticed progressive changes.”",
+        "quote": "“I really appreciated that they explained how every body responds differently and that the process takes time.”"
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions About Carboxytherapy",
+    "items": [
+      {
+        "q": "Does carboxytherapy hurt?",
+        "a": "The sensation can vary depending on the individual and the treatment area. The procedure is generally well tolerated and relatively quick."
+      },
+      {
+        "q": "What areas can be treated?",
+        "a": "Carboxytherapy may be incorporated into facial and body protocols depending on an individual assessment."
+      },
+      {
+        "q": "How many sessions will I need?",
+        "a": "The number of sessions depends on your goals and the protocol recommended for you."
+      },
+      {
+        "q": "Can carboxytherapy help with the appearance of cellulite?",
+        "a": "Many people use carboxytherapy as a complementary treatment within body protocols designed to improve the appearance of the skin."
+      },
+      {
+        "q": "Can it be used for the under-eye area?",
+        "a": "Yes. Some clients seek carboxytherapy as part of personalized facial protocols for the under-eye area."
+      },
+      {
+        "q": "Is there any downtime?",
+        "a": "Recovery is generally quick, although this can vary from person to person and depending on the treatment area."
+      },
+      {
+        "q": "Can carboxytherapy be combined with other treatments?",
+        "a": "Yes. It can often be incorporated into wellness programs and complementary facial or body protocols, depending on the individual's needs."
+      },
+      {
+        "q": "When can I expect to see results?",
+        "a": "Results are generally progressive and can vary depending on the individual, treatment area, and protocol."
+      }
+    ]
+  },
+  "prices": {
+    "title": "Prices & Packages",
+    "subtitle": "Protocols starting at ₡XX",
+    "desc": "A personalized assessment allows us to recommend the most appropriate protocol for you.",
+    "items": [
+      "Body treatment packages",
+      "Facial programs",
+      "Wellness maintenance programs",
+      "Individual sessions",
+      "Customized protocols"
+    ]
+  },
+  "whyUs": {
+    "title": "Why Choose MJ Estética & Wellness Center?",
+    "desc": "Because we believe modern aesthetics should focus on natural-looking results, wellness, personalization, a genuine client experience, and human connection and support.",
+    "items": [
+      "Personalized attention",
+      "Customized protocols",
+      "A holistic wellness approach",
+      "Experience in facial and body aesthetics",
+      "Personalized follow-up",
+      "A comfortable and professional environment"
+    ],
+    "footer": "We don't believe in one-size-fits-all treatments. We believe in creating an aesthetic wellness experience that feels right for you."
+  },
+  "location": {
+    "title": "Location & Services in Turrialba",
+    "center": "MJ Estética & Wellness Center",
+    "items": [
+      "Nearby parking available",
+      "WhatsApp support",
+      "Flexible scheduling based on availability",
+      "Serving Turrialba and surrounding areas"
+    ]
+  },
+  "finalCta": {
+    "title": "✨ Book Your Personalized Consultation Today",
+    "subtitle": "Discover the protocol that best fits your goals and begin your aesthetic wellness experience with personalized attention.",
+    "actions": [
+      "Message us on WhatsApp",
+      "Check availability",
+      "Book your personalized consultation"
+    ],
+    "giftNotice": "And remember: Comment “Carbo” on our Instagram to receive our FREE guide: “How to Enhance Your Carboxytherapy Results”"
+  }
+}

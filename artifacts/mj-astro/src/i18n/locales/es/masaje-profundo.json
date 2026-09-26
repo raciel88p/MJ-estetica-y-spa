@@ -1,0 +1,122 @@
+{
+  "intro": {
+    "quote": "\"¿Sientes tu cuerpo cargado, rígido o agotado por el estrés del día a día? En MJ Estética & Wellness Center creamos una experiencia de masaje profundo diseñada para ayudarte a desconectar, liberar tensión muscular y recuperar una verdadera sensación de bienestar corporal.\"",
+    "instagram": "✨ Si llegaste aquí después de comentar la palabra “PROFUNDO”, tenemos algo especial para ti.",
+    "instagramSub": "\"Porque entendemos que muchas veces el cuerpo habla antes que la mente: dolor, cansancio, tensión acumulada, estrés físico, mala postura, agotamiento… y la sensación constante de no poder descansar realmente.\"",
+    "focus": "Nuestro Masaje Profundo en Turrialba no es simplemente un masaje. Es una experiencia wellness premium enfocada en:",
+    "items": ["relajación profunda", "descanso físico", "alivio de tensión", "bienestar muscular", "autocuidado consciente", "recuperación personalizada"]
+  },
+  "imagine": {
+    "title": "Imagina por un momento…",
+    "items": [
+      "Llegar a un ambiente tranquilo.",
+      "Música relajante.",
+      "Aromas suaves.",
+      "Iluminación wellness.",
+      "Una camilla cómoda.",
+      "Protocolo adaptado a ti."
+    ],
+    "closing": "Eso es exactamente lo que buscamos crear para ti."
+  },
+  "whatIs": {
+    "title": "¿QUÉ ES UN MASAJE PROFUNDO?",
+    "desc": "El masaje profundo es una experiencia corporal orientada a liberar tensión muscular acumulada mediante técnicas personalizadas que buscan brindar relajación, descanso físico y bienestar corporal.",
+    "adaptLabel": "Cada sesión se adapta individualmente según:",
+    "adaptItems": ["nivel de tensión", "sensibilidad corporal", "presión deseada", "zonas de mayor carga", "necesidades de relajación"],
+    "quote": "\"No se trata de aplicar presión extrema. Se trata de ayudarte a sentir alivio, relajación y desconexión física.\"",
+    "cta": "Reservar Mi Experiencia"
+  },
+  "benefits": {
+    "title": "¿QUÉ BENEFICIOS PUEDE APORTAR?",
+    "items": [
+      "Sensación de relajación muscular",
+      "Bienestar corporal integral",
+      "Descanso físico profundo",
+      "Experiencia wellness premium",
+      "Sensación de alivio corporal",
+      "Complemento ideal para autocuidado",
+      "Relajación física y mental",
+      "Momento de desconexión personal",
+      "Sensación de renovación corporal"
+    ]
+  },
+  "forWhom": {
+    "title": "¿PARA QUIÉN SE RECOMIENDA?",
+    "items": [
+      "sienten tensión corporal frecuente",
+      "pasan muchas horas sentadas o trabajando",
+      "viven con altos niveles de estrés físico",
+      "entrenan o realizan actividad física",
+      "desean relajación profunda",
+      "buscan autocuidado corporal",
+      "desean regalarse un momento de bienestar real"
+    ]
+  },
+  "experience": {
+    "title": "¿CÓMO ES LA EXPERIENCIA EN MJ?",
+    "steps": [
+      { "s": "01", "t": "Evaluación personalizada", "d": "Analizamos contigo las zonas de tensión y el nivel de presión ideal." },
+      { "s": "02", "t": "Ambiente wellness", "d": "Creamos un entorno diseñado para ayudarte a desconectar completamente." },
+      { "s": "03", "t": "Aplicación personalizada", "d": "Cada movimiento y protocolo se adapta a tus necesidades corporales." },
+      { "s": "04", "t": "Seguimiento", "d": "Te brindamos recomendaciones para potenciar la sensación de bienestar." }
+    ],
+    "durationLabel": "Duración",
+    "durationValue": "60 a 90 minutos",
+    "pressureLabel": "Presión",
+    "pressureValue": "Totalmente Personalizada"
+  },
+  "philosophy": {
+    "title": "UNA EXPERIENCIA ENFOCADA EN BIENESTAR REAL",
+    "quote": "\"En MJ Estética & Wellness Center creemos que el bienestar no es un lujo. Es una necesidad.\"",
+    "items": ["relajación profunda", "descanso físico", "bienestar corporal", "desconexión emocional", "autocuidado premium"],
+    "exitLabel": "Nuestro objetivo es que salgas sintiéndote:",
+    "exitItems": ["más ligero,", "más relajado,", "más tranquilo,", "y con bienestar real."]
+  },
+  "whyUs": {
+    "title": "¿POR QUÉ ELEGIR MJ ESTÉTICA & WELLNESS CENTER?",
+    "items": [
+      { "t": "Atención", "d": "Personalizada y humana." },
+      { "t": "Protocolos", "d": "Adaptados individualmente." },
+      { "t": "Ambiente", "d": "Relajante, privado y wellness." },
+      { "t": "Experiencia", "d": "Cálida y profesional." }
+    ]
+  },
+  "testimonials": {
+    "title": "TESTIMONIOS",
+    "subtitle": "La voz de nuestras clientas",
+    "items": [
+      { "text": "“Sentí una relajación increíble desde la primera sesión. El ambiente transmite demasiada paz.”", "author": "Cliente MJ" },
+      { "text": "“Llegué con demasiada tensión corporal y salí sintiéndome muchísimos más liviana.”", "author": "Cliente Wellness" },
+      { "text": "“Más que un masaje, fue una experiencia completa de descanso.”", "author": "Cliente MJ" }
+    ]
+  },
+  "faqs": {
+    "title": "PREGUNTAS FRECUENTES",
+    "items": [
+      { "q": "¿Qué se siente durante el masaje profundo?", "a": "Una sensación progresiva de relajación muscular y bienestar corporal intenso." },
+      { "q": "¿La presión se adapta?", "a": "Sí. Cada sesión se personaliza completamente según tu umbral de dolor y necesidad." },
+      { "q": "¿Cuánto dura?", "a": "Entre 60 y 90 minutos dependiendo del protocolo seleccionado." },
+      { "q": "¿Es relajante?", "a": "Sí. Aunque trabajamos el músculo, el enfoque principal es bienestar y relajación profunda." },
+      { "q": "¿Se puede combinar con otros tratamientos?", "a": "Sí. Puede complementarse perfectamente con exfoliaciones o envolturas corporales." }
+    ]
+  },
+  "leadMagnet": {
+    "label": "Regalo Exclusivo",
+    "title": "REGALO ESPECIAL POR COMENTAR “PROFUNDO”",
+    "quote": "\"Queremos ayudarte a potenciar tu bienestar y autocuidado.\"",
+    "guideTitle": "“Cómo mejorar los resultados de tus tratamientos faciales y wellness”",
+    "items": ["cuidar mejor tu piel", "potenciar tus resultados", "mejorar tu rutina", "complementar tus sesiones"],
+    "cta": "Reclamar Mi Guía Gratuita"
+  },
+  "finalCta": {
+    "label": "Agenda Hoy",
+    "title": "🔥 AGENDA TU EXPERIENCIA WELLNESS HOY",
+    "p1": "Tu cuerpo merece descanso.",
+    "p2": "Tu mente merece desconexión.",
+    "p3": "Y tú mereces sentirte bien otra vez.",
+    "cta": "Agendar Mi Masaje Profundo",
+    "location": "Turrialba, Costa Rica",
+    "appointment": "Cita Previa",
+    "footerDesc": "Bienestar corporal, relajación profunda y experiencias wellness premium en Turrialba."
+  }
+}

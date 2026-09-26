@@ -1,0 +1,80 @@
+{
+  "intro": {
+    "tagline": "Estética Íntima Avanzada",
+    "p1": "¿Sientes inseguridad por el oscurecimiento de tus zonas íntimas? No estás sola.",
+    "p2": "En <span className=\"font-bold text-stone-900\">MJ Estética & Wellness Center</span> ofrecemos protocolos de <span className=\"font-bold text-primary\">Blanqueamiento de Zona Íntima</span> diseñados para unificar el tono de la piel en áreas delicadas (entreingle, axilas, zona perianal) de forma segura, respetuosa y profesional.",
+    "items": [
+      "✨ Unificación del tono",
+      "✨ Tratamiento 100% seguro",
+      "✨ Privacidad y confort total",
+      "✨ Sin dolor ni recuperación",
+      "✨ Resultados progresivos"
+    ]
+  },
+  "causes": {
+    "title": "¿Por qué se oscurece la zona íntima?",
+    "intro": "El oscurecimiento (hiperpigmentación) en zonas íntimas es muy común y puede deberse a múltiples factores que afectan tu confianza diaria:",
+    "items": [
+      { "t": "Fricción constante", "d": "El roce de la ropa ajustada o el contacto de la piel con piel genera una respuesta defensiva de melanina." },
+      { "t": "Cambios hormonales", "d": "Embarazos, uso de anticonceptivos o menopausia pueden oscurecer áreas específicas." },
+      { "t": "Depilación agresiva", "d": "El uso constante de rastrillos o ceras calientes irrita la zona y provoca manchas post-inflamatorias." },
+      { "t": "Predisposición genética", "d": "Algunos tipos de piel tienden a pigmentarse con mayor facilidad en pliegues corporales." }
+    ]
+  },
+  "protocol": {
+    "title": "Nuestro Protocolo de Blanqueamiento",
+    "desc": "Combinamos tecnología estética y peelings enzimáticos específicos para zonas sensibles.",
+    "steps": [
+      {
+        "t": "Evaluación Privada",
+        "d": "Analizamos el grado de pigmentación y el estado de la piel para personalizar el número de sesiones."
+      },
+      {
+        "t": "Peeling Enzimático",
+        "d": "Aplicamos activos despigmentantes que aclaran la zona sin causar quemaduras ni irritaciones severas."
+      },
+      {
+        "t": "Cuidado Post-Sesión",
+        "d": "Te entregamos las pautas para mantener los resultados y evitar que la zona vuelva a oscurecerse."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Beneficios de la Despigmentación Íntima",
+    "items": [
+      "Recupera la luminosidad natural de tu piel",
+      "Siéntete más cómoda usando bikini o ropa interior",
+      "Elimina manchas por roce o post-depilación",
+      "Tratamiento indoloro y no invasivo",
+      "Mejora la textura y suavidad de la zona tratada",
+      "Protocolos respetuosos con tu privacidad"
+    ],
+    "cta": "Consultar disponibilidad",
+    "privacyQuote": "\"Tu privacidad es nuestra prioridad absoluta.\"",
+    "badge": "Protocolos<br />Médicos"
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      { "q": "¿Es seguro para pieles sensibles?", "a": "Totalmente. Utilizamos peelings enzimáticos y activos de última generación diseñados específicamente para zonas delicadas, evitando irritaciones agresivas." },
+      { "q": "¿Cuántas sesiones necesito?", "a": "Depende del grado de pigmentación. Generalmente se recomiendan entre 4 y 6 sesiones para resultados óptimos y duraderos." },
+      { "q": "¿Se puede realizar en axilas también?", "a": "Sí, el protocolo es excelente para axilas, entrepierna, zona perianal y rodillas/codos oscurecidos." },
+      { "q": "¿El vello interfiere con el tratamiento?", "a": "Recomendamos que la zona esté depilada (preferiblemente 48h antes) para que los activos penetren mejor en la piel." },
+      { "q": "¿Duele?", "a": "No. Es un tratamiento tópico no invasivo. Puedes sentir un ligero cosquilleo o calor momentáneo." }
+    ]
+  },
+  "leadMagnet": {
+    "label": "Ebook Gratuito",
+    "title": "Guía de Cuidados Íntimos",
+    "desc": "Aprende a prevenir el oscurecimiento de tus zonas íntimas y cómo mantener los resultados de tu tratamiento profesional.",
+    "wordLabel": "Palabra Clave",
+    "word": "ÍNTIMA",
+    "cta": "Pedir por Instagram"
+  },
+  "finalCta": {
+    "title": "Siéntete cómoda en tu propia piel",
+    "desc": "No dejes que las manchas limiten tu seguridad. Agenda una valoración privada en MJ Estética y descubre cómo podemos ayudarte.",
+    "cta1": "Agendar Valoración",
+    "cta2": "Preguntar precios"
+  }
+}

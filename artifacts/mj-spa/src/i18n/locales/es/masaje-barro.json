@@ -1,0 +1,230 @@
+{
+  "hero": {
+    "title": "RITUAL WELLNESS DE RELAJACIÓN",
+    "subtitle": "Masaje de Barro en Turrialba",
+    "p1": "¿Hace cuánto no te regalas un momento realmente para ti?",
+    "p2": "Vivimos con prisa. El trabajo, las responsabilidades y el ritmo diario pueden hacer que acumulemos tensión y que cada vez sea más difícil encontrar un momento para simplemente parar.",
+    "p3": "En MJ Estética & Wellness Center creamos el Ritual de Masaje de Barro en Turrialba, una experiencia wellness diseñada para combinar masaje, barro y ambiente sensorial en un momento dedicado al descanso y al autocuidado.",
+    "bullets": [
+      "🌿 Relajación",
+      "🧖‍♀️ Ritual corporal",
+      "✨ Experiencia spa",
+      "🤍 Autocuidado",
+      "🌺 Bienestar"
+    ],
+    "cta": "RESERVAR MASAJE DE BARRO POR WHATSAPP"
+  },
+  "whatIs": {
+    "title": "🌿 ¿Qué es un Masaje de Barro?",
+    "p1": "El Masaje de Barro en Turrialba es una experiencia de spa que combina un protocolo corporal con barro y técnicas de masaje orientadas a la relajación y el bienestar.",
+    "p2": "En MJ Estética & Wellness Center buscamos que cada sesión sea mucho más que un masaje convencional.",
+    "p3": "Creamos una experiencia donde puedas: Parar. Respirar. Relajarte. Disfrutar.",
+    "description": "El ambiente, la aplicación del protocolo corporal y el masaje se integran para crear un ritual de autocuidado pensado para quienes necesitan hacer una pausa de la rutina.",
+    "cta": "QUIERO VIVIR LA EXPERIENCIA"
+  },
+  "benefits": {
+    "title": "🧖‍♀️ Beneficios de la experiencia de Masaje de Barro",
+    "subtitle": "El objetivo principal de este ritual es ofrecer una experiencia de relajación y bienestar corporal.",
+    "items": [
+      {
+        "t": "🌿 Relajación",
+        "d": "Un momento para reducir el ritmo y disfrutar de una experiencia tranquila."
+      },
+      {
+        "t": "✨ Autocuidado",
+        "d": "Un espacio dedicado exclusivamente a ti y a tu bienestar."
+      },
+      {
+        "t": "🧖‍♀️ Experiencia sensorial",
+        "d": "La combinación del barro, masaje y ambiente spa crea una experiencia diferente y envolvente."
+      },
+      {
+        "t": "🤍 Sensación de bienestar corporal",
+        "d": "El masaje y el ambiente relajante pueden proporcionar una agradable sensación de descanso y bienestar."
+      },
+      {
+        "t": "🌺 Renovación",
+        "d": "Un momento para salir de la rutina y disfrutar de una experiencia diferente."
+      }
+    ]
+  },
+  "environment": {
+    "title": "🕯️ Una experiencia diseñada para relajar cuerpo y mente",
+    "p1": "Desde que entras a MJ Estética & Wellness Center queremos que puedas comenzar a cambiar el ritmo.",
+    "p2": "Cuidamos los detalles que forman parte de la experiencia:",
+    "items": [
+      "🌿 Aromas agradables",
+      "🕯️ Iluminación cálida",
+      "🎵 Ambiente tranquilo",
+      "✨ Espacios cómodos",
+      "🤍 Atención personalizada"
+    ],
+    "conclusion": "Porque la relajación no depende únicamente del masaje. También depende del ambiente."
+  },
+  "session": {
+    "title": "💆‍♀️ ¿Cómo es una sesión de Masaje de Barro?",
+    "steps": [
+      {
+        "num": "1",
+        "t": "Recepción y preparación",
+        "d": "Te recibimos en un ambiente tranquilo y te explicamos el protocolo de la experiencia."
+      },
+      {
+        "num": "2",
+        "t": "Preparación corporal",
+        "d": "Preparamos la piel y el área a trabajar de acuerdo con el protocolo seleccionado."
+      },
+      {
+        "num": "3",
+        "t": "Aplicación del ritual de barro",
+        "d": "Se aplica el barro siguiendo el protocolo correspondiente y se incorpora el masaje dentro de la experiencia."
+      },
+      {
+        "num": "4",
+        "t": "Momento de relajación",
+        "d": "Disfrutas de un ambiente tranquilo mientras se desarrolla el ritual corporal."
+      },
+      {
+        "num": "5",
+        "t": "Finalización",
+        "d": "Terminamos la experiencia y te proporcionamos recomendaciones generales de autocuidado según el servicio realizado."
+      }
+    ],
+    "duration": "⏰ Duración según protocolo seleccionado. Consulta por WhatsApp la duración exacta."
+  },
+  "forWhom": {
+    "title": "🌺 ¿Para quién es el Ritual de Masaje de Barro?",
+    "subtitle": "Esta experiencia puede ser una buena opción para personas que desean:",
+    "items": [
+      "💆‍♀️ Relajarse después de una semana intensa.",
+      "🌿 Disfrutar de un momento de autocuidado.",
+      "🧖‍♀️ Vivir una experiencia diferente de spa.",
+      "✨ Dedicar tiempo a su bienestar.",
+      "🤍 Disfrutar de un momento tranquilo.",
+      "🎁 Regalar una experiencia especial.",
+      "🌺 Complementar su rutina de bienestar."
+    ],
+    "disclaimer": "Si tienes piel sensible, alergias, alguna condición dermatológica, estás embarazada o tienes alguna condición de salud particular, consulta previamente antes de reservar."
+  },
+  "whyUs": {
+    "title": "✨ ¿Por qué elegir MJ Estética & Wellness Center?",
+    "subtitle": "Porque aquí no vienes solamente a recibir un masaje. Vienes a vivir una experiencia. En MJ Estética & Wellness Center combinamos tratamientos estéticos y experiencias de bienestar dentro de un ambiente pensado para que puedas disfrutar de tu tiempo.",
+    "items": [
+      {
+        "t": "🌿 Atención personalizada",
+        "d": "Escuchamos tus necesidades para ofrecerte una experiencia acorde con el servicio que reservas."
+      },
+      {
+        "t": "✨ Ambiente wellness",
+        "d": "Cuidamos los detalles para crear una atmósfera agradable y relajante."
+      },
+      {
+        "t": "🤍 Espacios cómodos",
+        "d": "Queremos que puedas disfrutar de privacidad y tranquilidad durante tu experiencia."
+      },
+      {
+        "t": "🧖‍♀️ Experiencias corporales",
+        "d": "Integramos diferentes servicios de estética, masajes y bienestar para que puedas encontrar opciones según tus objetivos."
+      },
+      {
+        "t": "📍 En Turrialba",
+        "d": "Disfruta de una experiencia wellness sin tener que desplazarte fuera de Turrialba."
+      }
+    ]
+  },
+  "gift": {
+    "title": "🎁 Regala una experiencia de bienestar",
+    "subtitle": "¿Buscas un regalo diferente? En lugar de regalar otro objeto, puedes regalarle a alguien especial un momento para descansar y disfrutar. El Ritual de Masaje de Barro puede ser una opción para:",
+    "occasions": [
+      "🎂 Cumpleaños",
+      "💝 Aniversarios",
+      "💐 Día de la Madre",
+      "❤️ Parejas",
+      "🎉 Celebraciones",
+      "✨ Regalos especiales"
+    ],
+    "cta": "CONSULTAR CERTIFICADOS DE REGALO"
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestras clientas",
+    "items": [
+      {
+        "text": "La experiencia fue increíblemente relajante. Salí renovada.",
+        "stars": 5
+      },
+      {
+        "text": "El ambiente transmite demasiada paz.",
+        "stars": 5
+      },
+      {
+        "text": "Más que un masaje, fue una experiencia wellness completa.",
+        "stars": 5
+      },
+      {
+        "text": "Fue uno de los momentos de autocuidado que más he disfrutado.",
+        "stars": 5
+      }
+    ],
+    "cta": "CONSULTAR DISPONIBILIDAD"
+  },
+  "location": {
+    "title": "📍 Masaje de Barro en Turrialba, Cartago",
+    "subtitle": "Si estás buscando un Masaje de Barro en Turrialba, un masaje relajante en Turrialba o una experiencia de spa y bienestar, puedes visitar MJ Estética & Wellness Center.",
+    "address": "MJ Estética & Wellness Center\nCiudadela Jorge Debravo\nCalle 4, Casa #58\nTurrialba, Cartago, Costa Rica\n\nReferencia: aproximadamente 200 metros al sur de Coopenae y 75 metros al sur del Salón de Cinthya.",
+    "communities": "Atendemos personas de Turrialba y comunidades cercanas.",
+    "cta": "RESERVAR MASAJE DE BARRO"
+  },
+  "faqs": {
+    "title": "❓ Preguntas frecuentes sobre el Masaje de Barro",
+    "items": [
+      {
+        "q": "¿Qué es un Masaje de Barro?",
+        "a": "Es una experiencia corporal de spa que combina barro y masaje dentro de un protocolo orientado principalmente a la relajación y el bienestar."
+      },
+      {
+        "q": "¿Qué beneficios ofrece un Masaje de Barro?",
+        "a": "El principal objetivo es proporcionar una experiencia de relajación, autocuidado y bienestar corporal. La experiencia puede variar según la persona y el protocolo utilizado."
+      },
+      {
+        "q": "¿El Masaje de Barro es relajante?",
+        "a": "Sí. El ritual está diseñado alrededor de una experiencia de masaje y un ambiente de spa orientado a la relajación."
+      },
+      {
+        "q": "¿Qué se siente durante un Masaje de Barro?",
+        "a": "La sensación puede variar según la persona y el protocolo. Generalmente, la experiencia combina la sensación del barro sobre la piel con el masaje y un ambiente tranquilo."
+      },
+      {
+        "q": "¿Cuánto dura el Masaje de Barro?",
+        "a": "La duración depende del protocolo seleccionado. Consulta por WhatsApp la duración exacta del ritual disponible."
+      },
+      {
+        "q": "¿Puedo combinar el Masaje de Barro con otros tratamientos?",
+        "a": "Dependiendo de tus objetivos y del protocolo, puede ser posible combinarlo con otros servicios de bienestar, masajes o tratamientos estéticos. Nuestro equipo puede orientarte sobre las opciones disponibles."
+      },
+      {
+        "q": "¿Puedo regalar un Masaje de Barro?",
+        "a": "Sí. Puedes consultar por nuestros certificados de regalo y sorprender a alguien especial con una experiencia wellness."
+      },
+      {
+        "q": "¿Necesito reservar?",
+        "a": "Sí. Recomendamos reservar previamente para confirmar disponibilidad y horario."
+      },
+      {
+        "q": "¿Dónde puedo hacerme un Masaje de Barro en Turrialba?",
+        "a": "Puedes disfrutar de esta experiencia en MJ Estética & Wellness Center, Turrialba, Cartago, Costa Rica."
+      },
+      {
+        "q": "¿Cómo puedo reservar?",
+        "a": "Puedes escribirnos por WhatsApp para consultar disponibilidad, precio y horarios."
+      }
+    ]
+  },
+  "final": {
+    "title": "🌿 Tu bienestar también necesita una pausa",
+    "p1": "Tu agenda puede esperar un momento. Tus responsabilidades pueden esperar.",
+    "p2": "Pero tú también necesitas tiempo para respirar y disfrutar.",
+    "badge": "🧖‍♀️ Vive el Ritual de Masaje de Barro",
+    "subbadge": "Una experiencia de bienestar creada para que puedas parar, relajarte y dedicarte un momento.",
+    "cta": "RESERVAR MI RITUAL DE MASAJE DE BARRO"
+  }
+}

@@ -6,6 +6,8 @@ import {
   Star
 } from "lucide-react";
 import type { ServicePageData } from "@/data/services";
+import es from "@/i18n/locales/es/hollywood-peel.json";
+import en from "@/i18n/locales/en/hollywood-peel.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -17,7 +19,8 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.09 } },
 };
 
-export function HollywoodPeelContent({ service, waLink }: { service: ServicePageData; waLink: string }) {
+export function HollywoodPeelContent({ service, waLink, lang = "es" }: { service: ServicePageData; waLink: string; lang?: "es" | "en" }) {
+  const content = lang === "es" ? es : en;
   return (
     <div className="bg-white">
       {/* ── INTRO SECTION ────────────────────────────── */}
@@ -26,31 +29,29 @@ export function HollywoodPeelContent({ service, waLink }: { service: ServicePage
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-px bg-primary" />
-              <span className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">Glow Inmediato</span>
+              <span className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">{content.intro.tagline}</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-8 leading-tight">
-              Recupera el Glow Natural de Tu Piel Desde la Primera Sesión
+              {content.intro.title}
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-6">
-              ¿Te miras al espejo y sientes que tu piel luce cansada, opaca o con manchas que ya no puedes ocultar ni con maquillaje?
+              {content.intro.p1}
             </p>
             <p className="text-stone-600 text-lg leading-relaxed mb-6">
-              Quizá has probado cremas, mascarillas o rutinas que prometen mucho… pero los resultados duran poco o simplemente no llegan.
+              {content.intro.p2}
             </p>
             <p className="text-stone-600 text-lg leading-relaxed mb-10">
-              La realidad es que el estrés, el sol, la contaminación y el paso del tiempo afectan tu piel más rápido de lo que imaginas. Pero hoy puedes devolverle luminosidad, suavidad y vida a tu rostro sin cirugía, sin dolor y sin largos tiempos de recuperación.
+              {content.intro.p3}
             </p>
 
             <div className="p-8 bg-stone-50 border-l-4 border-primary mb-12">
                <h3 className="text-xl font-serif font-bold text-stone-900 mb-4 flex items-center gap-2">
                  <Sparkles className="w-5 h-5 text-primary" />
-                 Descubre el Tratamiento Favorito de las Celebridades: Hollywood Peel
+                 {content.intro.boxTitle}
                </h3>
-               <p className="text-stone-600 leading-relaxed">
-                 En <a href="https://mjesteticayspa.com?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:underline">MJ Fisio Estética & Spa</a> te ofrecemos el exclusivo tratamiento de <strong>Hollywood Peel en Turrialba</strong>, una tecnología avanzada que combina carbón activado y láser para rejuvenecer profundamente la piel mientras recuperas un efecto glow inmediato.
-               </p>
+               <p className="text-stone-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.intro.boxDesc }} />
                <p className="mt-4 text-stone-600 italic">
-                 Sí… esa piel luminosa, limpia y uniforme que ves en redes sociales o alfombras rojas ahora también puede ser tuya.
+                 {content.intro.boxClosing}
                </p>
             </div>
           </motion.div>
@@ -63,22 +64,13 @@ export function HollywoodPeelContent({ service, waLink }: { service: ServicePage
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6 flex items-center justify-center gap-3">
               <Star className="w-8 h-8 text-primary fill-primary" />
-              ¿Qué Hace el Hollywood Peel?
+              {content.whatItDoes.title}
             </h2>
-            <p className="text-stone-500 text-lg">El tratamiento trabaja profundamente en la piel para:</p>
+            <p className="text-stone-500 text-lg">{content.whatItDoes.desc}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mb-16">
-             {[
-               "Reducir manchas solares y marcas de acné",
-               "Minimizar poros abiertos",
-               "Controlar grasa facial",
-               "Mejorar textura y suavidad",
-               "Estimular producción natural de colágeno",
-               "Disminuir líneas finas de expresión",
-               "Aportar luminosidad inmediata",
-               "Lograr una piel más uniforme y rejuvenecida"
-             ].map((item, i) => (
+             {content.whatItDoes.items.map((item, i) => (
                <div key={i} className="flex items-center gap-4 p-4 bg-white border border-stone-200 shadow-sm rounded-sm group hover:border-primary/30 transition-colors">
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <CheckCircle2 className="w-4 h-4 text-primary" />
@@ -89,7 +81,7 @@ export function HollywoodPeelContent({ service, waLink }: { service: ServicePage
           </div>
 
           <div className="flex flex-wrap justify-center gap-6">
-            {["🔥 Sin incapacidad", "🔥 Sin recuperación prolongada", "🔥 Resultados visibles desde la primera sesión"].map((item, i) => (
+            {content.whatItDoes.tags.map((item, i) => (
                <span key={i} className="px-6 py-3 bg-stone-900 text-white font-bold rounded-full text-xs tracking-widest uppercase">
                  {item}
                </span>
@@ -102,22 +94,22 @@ export function HollywoodPeelContent({ service, waLink }: { service: ServicePage
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-10">😍 Imagina Esto…</h2>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-10">{content.imagine.title}</h2>
               <div className="space-y-6 text-stone-600 text-lg leading-relaxed mb-16">
-                <p>Salir de tu sesión y notar inmediatamente tu piel más limpia, luminosa y fresca.</p>
-                <p>Sentirte segura al verte al espejo.</p>
-                <p>Usar menos maquillaje porque tu piel comienza a verse naturalmente saludable.</p>
+                <p>{content.imagine.p1}</p>
+                <p>{content.imagine.p2}</p>
+                <p>{content.imagine.p3}</p>
               </div>
 
-              <p className="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-8">Recibir comentarios como:</p>
+              <p className="text-primary font-bold uppercase tracking-[0.2em] text-xs mb-8">{content.imagine.quoteLabel}</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-                {["✨ “¿Qué te hiciste en la cara?”", "✨ “Tu piel se ve hermosa”", "✨ “Te ves más descansada y joven”"].map((item, i) => (
+                {content.imagine.quotes.map((item, i) => (
                   <div key={i} className="p-6 border border-stone-100 bg-stone-50 italic text-stone-800 font-serif">
                     {item}
                   </div>
                 ))}
               </div>
-              <p className="text-stone-500 italic">Eso es exactamente lo que muchas personas están logrando con Hollywood Peel.</p>
+              <p className="text-stone-500 italic">{content.imagine.footer}</p>
            </motion.div>
         </div>
       </section>
@@ -126,21 +118,12 @@ export function HollywoodPeelContent({ service, waLink }: { service: ServicePage
       <section className="py-24 bg-stone-900 text-white">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white">💎 ¿Para Quién es Ideal Este Tratamiento?</h2>
-            <p className="text-white/60 text-lg">El Hollywood Peel es perfecto si tienes:</p>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-white">{content.idealFor.title}</h2>
+            <p className="text-white/60 text-lg">{content.idealFor.desc}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
-            {[
-              "Manchas solares",
-              "Piel opaca o cansada",
-              "Acné o marcas faciales",
-              "Poros dilatados",
-              "Textura irregular",
-              "Líneas finas",
-              "Eventos especiales próximos",
-              "Deseas un efecto glow inmediato"
-            ].map((item, i) => (
+            {content.idealFor.items.map((item, i) => (
               <div key={i} className="flex items-center gap-3 p-4 border border-white/10 bg-white/5 rounded-sm">
                 <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span className="text-white/80 font-medium text-xs">{item}</span>
@@ -149,7 +132,7 @@ export function HollywoodPeelContent({ service, waLink }: { service: ServicePage
           </div>
 
           <p className="text-center text-white/50 italic text-sm">
-            Incluso si nunca te has realizado tratamientos faciales, este procedimiento puede adaptarse a tu tipo de piel gracias a nuestros protocolos personalizados.
+            {content.idealFor.footer}
           </p>
         </div>
       </section>
@@ -158,17 +141,15 @@ export function HollywoodPeelContent({ service, waLink }: { service: ServicePage
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-8">🧖‍♀️ Atención Profesional y Personalizada en Turrialba</h2>
-            <p className="text-stone-600 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
-              En <a href="https://mjesteticayspa.com?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer" className="text-primary font-bold hover:underline">MJ Fisio Estética & Spa</a> no trabajamos con tratamientos genéricos. Cada piel es diferente.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-8">{content.differentiator.title}</h2>
+            <p className="text-stone-600 text-lg leading-relaxed mb-10 max-w-2xl mx-auto" dangerouslySetInnerHTML={{ __html: content.differentiator.desc }} />
 
             <div className="bg-stone-50 p-10 border border-stone-200 mb-12">
                <p className="text-stone-700 leading-relaxed mb-6">
-                 Por eso realizamos una valoración personalizada para ayudarte a alcanzar resultados reales, naturales y seguros según tus necesidades.
+                 {content.differentiator.p2}
                </p>
-               <p className="text-xl font-serif text-stone-900 italic">Nuestro objetivo no es solamente mejorar tu piel…</p>
-               <p className="text-2xl font-serif text-primary font-bold mt-2">Es ayudarte a recuperar confianza, bienestar y seguridad en ti misma.</p>
+               <p className="text-xl font-serif text-stone-900 italic">{content.differentiator.quote}</p>
+               <p className="text-2xl font-serif text-primary font-bold mt-2">{content.differentiator.highlight}</p>
             </div>
           </motion.div>
         </div>
@@ -178,21 +159,15 @@ export function HollywoodPeelContent({ service, waLink }: { service: ServicePage
       <section className="py-24 bg-primary text-white overflow-hidden relative">
         <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <p className="text-white/60 text-xs font-bold tracking-[0.4em] uppercase mb-4">🎁 RECURSO GRATUITO EXCLUSIVO</p>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Guía Gratuita:</h2>
-              <p className="text-2xl font-serif mb-10 italic">“Cómo Potenciar los Resultados del Hollywood Peel”</p>
+              <p className="text-white/60 text-xs font-bold tracking-[0.4em] uppercase mb-4">{content.leadMagnet.label}</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">{content.leadMagnet.title}</h2>
+              <p className="text-2xl font-serif mb-10 italic">{content.leadMagnet.subtitle}</p>
 
               <div className="max-w-md mx-auto bg-white p-10 text-stone-900 shadow-2xl">
-                 <p className="text-sm text-stone-500 leading-relaxed mb-8">Solo por escribir la palabra clave en Instagram recibirás GRATIS nuestra guía exclusiva donde aprenderás:</p>
+                 <p className="text-sm text-stone-500 leading-relaxed mb-8">{content.leadMagnet.desc}</p>
 
                  <div className="space-y-3 mb-10 text-left">
-                   {[
-                     "Qué hacer antes y después del tratamiento",
-                     "Cómo prolongar el efecto glow",
-                     "Errores que dañan tu piel sin darte cuenta",
-                     "Recomendaciones profesionales",
-                     "Tips para mantener una piel luminosa"
-                   ].map((item, i) => (
+                   {content.leadMagnet.items.map((item, i) => (
                      <div key={i} className="flex items-center gap-2">
                        <CheckCircle2 className="w-3 h-3 text-primary" />
                        <span className="text-[10px] font-bold text-stone-700">{item}</span>
@@ -200,8 +175,8 @@ export function HollywoodPeelContent({ service, waLink }: { service: ServicePage
                    ))}
                  </div>
 
-                 <p className="text-[10px] font-bold text-primary tracking-[0.3em] uppercase mb-4">💌 Comenta la palabra:</p>
-                 <p className="text-5xl font-serif font-bold text-primary mb-10 underline decoration-stone-200">“HOLLYWOOD”</p>
+                 <p className="text-[10px] font-bold text-primary tracking-[0.3em] uppercase mb-4">{content.leadMagnet.ctaLabel}</p>
+                 <p className="text-5xl font-serif font-bold text-primary mb-10 underline decoration-stone-200">“{content.leadMagnet.word}”</p>
 
                  <a
                     href="https://www.instagram.com/mj_fisioestetica/"
@@ -210,9 +185,9 @@ export function HollywoodPeelContent({ service, waLink }: { service: ServicePage
                     className="flex items-center justify-center gap-3 bg-stone-900 text-white py-4 font-bold tracking-widest uppercase hover:bg-primary transition-colors text-xs"
                  >
                     <Instagram className="w-4 h-4" />
-                    IR A INSTAGRAM
+                    {content.leadMagnet.cta}
                  </a>
-                 <p className="mt-6 text-[10px] text-stone-400 font-bold uppercase tracking-widest">🎁 Totalmente gratis por tiempo limitado</p>
+                 <p className="mt-6 text-[10px] text-stone-400 font-bold uppercase tracking-widest">{content.leadMagnet.footer}</p>
               </div>
            </motion.div>
         </div>
@@ -224,12 +199,12 @@ export function HollywoodPeelContent({ service, waLink }: { service: ServicePage
       <section className="py-20 bg-white border-t border-stone-100">
         <div className="max-w-4xl mx-auto px-6 text-center">
            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <h2 className="text-2xl font-serif font-bold text-stone-900 mb-8 uppercase tracking-widest">HOLLYWOOD PEEL EN TURRIALBA COSTA RICA</h2>
+              <h2 className="text-2xl font-serif font-bold text-stone-900 mb-8 uppercase tracking-widest">{content.seoBand.title}</h2>
               <p className="text-stone-600 leading-relaxed mb-10 max-w-2xl mx-auto">
-                Una piel más limpia, uniforme, luminosa y rejuvenecida sí es posible. Tu glow natural todavía está ahí… solo necesita el tratamiento correcto para volver a brillar.
+                {content.seoBand.desc}
               </p>
               <p className="text-primary font-bold">
-                🔥 Agenda hoy tu cita y descubre por qué el Hollywood Peel se ha convertido en uno de los tratamientos favoritos para rejuvenecer la piel en Turrialba.
+                {content.seoBand.footer}
               </p>
            </motion.div>
         </div>

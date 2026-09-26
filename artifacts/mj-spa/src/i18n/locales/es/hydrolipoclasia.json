@@ -1,0 +1,84 @@
+{
+  "whatIs": {
+    "title": "¿Qué es la hidrolipoclasia?",
+    "p1": "La hidrolipoclasia es un tratamiento corporal no invasivo diseñado para ayudar a reducir grasa localizada y mejorar el contorno corporal mediante protocolos especializados que combinan diferentes tecnologías y técnicas estéticas.",
+    "p2": "Este tratamiento suele aplicarse en zonas donde la grasa tiende a acumularse y es difícil de reducir únicamente con dieta o ejercicio.",
+    "important": "Es importante entender que:",
+    "importantItems": ["No reemplaza una cirugía", "No sustituye hábitos saludables", "Los resultados son progresivos", "Requiere seguimiento profesional"],
+    "zonesTitle": "Zonas más comunes:",
+    "zones": ["Abdomen", "Cintura", "Flancos", "Espalda", "Brazos", "Piernas", "Zona lumbar"]
+  },
+  "who": {
+    "title": "¿Para quién está recomendado este tratamiento?",
+    "items": [
+      "Desean mejorar su contorno corporal",
+      "Buscan reducir acumulaciones localizadas de grasa",
+      "Quieren un tratamiento no invasivo",
+      "Desean complementar ejercicio y alimentación saludable",
+      "Buscan mejorar visualmente ciertas zonas del cuerpo"
+    ],
+    "frustrationTitle": "Si sientes que haces esfuerzos y aun así hay áreas que no cambian… no estás solo(a).",
+    "frustrationLabel": "Muchas personas llegan a MJ frustradas porque:",
+    "frustrations": [
+      "“Hago ejercicio y mi abdomen no baja”",
+      "“La cintura no mejora aunque me cuide”",
+      "“Siento acumulación en flancos o espalda”",
+      "“Quiero verme mejor sin cirugía”"
+    ],
+    "frustrationNote": "Y precisamente ahí es donde una valoración profesional puede ayudarte a descubrir el protocolo correcto para tu cuerpo."
+  },
+  "howItWorks": {
+    "title": "¿Cómo funciona una sesión de hidrolipoclasia?",
+    "steps": [
+      {
+        "s": "Paso 1",
+        "t": "Valoración personalizada",
+        "d": "Analizamos objetivos, zonas, hábitos y tipo de acumulación para darte recomendaciones personalizadas."
+      },
+      {
+        "s": "Paso 2",
+        "t": "Aplicación del protocolo",
+        "d": "Se realiza el tratamiento según la zona y necesidad específica de tu cuerpo."
+      },
+      {
+        "s": "Paso 3",
+        "t": "Protocolos adicionales",
+        "d": "Dependiendo del caso, pueden recomendarse protocolos adicionales para potenciar resultados."
+      },
+      {
+        "s": "Paso 4",
+        "t": "Mejora tus resultados",
+        "d": "Te orientamos sobre hidratación, alimentación, actividad física y cuidados posteriores."
+      }
+    ]
+  },
+  "includes": {
+    "title": "Qué incluye",
+    "desc": "Tu sesión incluye:",
+    "items": [
+      "Valoración corporal inicial",
+      "Protocolo de Hidrolipoclasia especializado",
+      "Drenaje linfático o ultrasonido (según caso)",
+      "Recomendaciones post-sesión"
+    ],
+    "note": "* Los resultados y la cantidad de sesiones varían según cada individuo."
+  },
+  "info": {
+    "title": "Información importante",
+    "durationLabel": "Duración aproximada",
+    "durationValue": "45–90 minutos",
+    "freqLabel": "Frecuencia",
+    "freqValue": "Según valoración profesional",
+    "recoveryLabel": "Recuperación",
+    "recoveryValue": "Mínima en la mayoría de casos",
+    "resultsLabel": "Resultados",
+    "resultsValue": "Progresivos y personalizados"
+  },
+  "sessions": {
+    "title": "¿Cuántas sesiones se recomiendan?",
+    "desc": "La cantidad de sesiones depende de la zona tratada, tu objetivo corporal, hábitos personales, evaluación profesional y la respuesta individual de tu cuerpo.",
+    "quote": "\"Muchas personas observan cambios progresivos conforme avanzan las sesiones y mantienen hábitos saludables.\"",
+    "featureLabel": "En MJ contamos con:",
+    "features": ["Paquetes corporales personalizados", "Seguimiento profesional", "Protocolos adaptados a cada cuerpo"]
+  }
+}

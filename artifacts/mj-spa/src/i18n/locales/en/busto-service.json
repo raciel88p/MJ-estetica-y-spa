@@ -1,0 +1,176 @@
+{
+  "intro": {
+    "tagline": "Confidence and Harmony",
+    "title": "Body treatment designed to support the appearance and firmness of the bust through personalized protocols oriented towards natural, progressive, and harmonious results.",
+    "items": [
+      "Personalized attention",
+      "Individualized protocols",
+      "Natural results",
+      "Premium and comfortable environment",
+      "Female wellness focus"
+    ],
+    "cta1": "Schedule your body assessment today",
+    "cta2": "Check availability via WhatsApp",
+    "footer": "👉 Discover the ideal protocol for you"
+  },
+  "empathy": {
+    "title": "Do you feel your bust has lost firmness or harmony?",
+    "p1": "The passage of time, hormonal changes, pregnancy, breastfeeding, or weight loss can modify the appearance of the bust and affect how you feel about yourself.",
+    "quote": "\"Many women are not looking to look perfect. They seek to feel comfortable, feminine, and confident in front of the mirror again.\"",
+    "p2": "At <span className=\"font-bold\">MJ Estética & Wellness Center</span> we understand that every body is different. That's why we develop personalized protocols focused on body well-being, naturalness, and female harmonization.",
+    "p3": "We don't work on exaggerated changes here. We work on progressive, elegant results aligned with your body."
+  },
+  "leadMagnet": {
+    "label": "Free Resource",
+    "title": "FREE Guide Download:",
+    "subtitle": "“How to improve bust appearance and firmness naturally”",
+    "learn": "Inside this guide you will discover:",
+    "items": [
+      "Habits that help improve body firmness",
+      "Errors that accelerate the loss of elasticity",
+      "How body wellness protocols work",
+      "What to expect from a professional treatment",
+      "Post-pregnancy and hormonal changes recommendations",
+      "Tips for maintaining natural results"
+    ],
+    "ctaLabel": "How to get it?",
+    "wordIntro": "Comment the word:",
+    "words": ["“BUST”", "“CHEST”"],
+    "wordOr": "or",
+    "footer": "on our Instagram and you will automatically receive access to the guide + exclusive treatment information.",
+    "cta": "GO TO INSTAGRAM"
+  },
+  "definition": {
+    "title": "What is a bust lift?",
+    "desc": "A bust lift is a body treatment aimed at visually improving the appearance, harmony, and firmness of the bust area through personalized aesthetic wellness protocols.",
+    "highlight": "The goal is NOT to transform your body artificially.",
+    "goalTitle": "The goal is to help you:",
+    "items": [
+      "improve the appearance of firmness",
+      "harmonize body contour",
+      "support female well-being",
+      "enhance physical confidence",
+      "maintain natural results"
+    ],
+    "quote": "\"Each body requires an individual evaluation. That's why at MJ Estética & Wellness Center we perform personalized assessments to design protocols adapted to your body goals and general well-being.\""
+  },
+  "improvement": {
+    "title": "What can this treatment help improve?",
+    "intro": "Our protocols are oriented to support:",
+    "items": [
+      "Appearance of body firmness",
+      "Female harmonization",
+      "Body contour",
+      "Post-pregnancy changes",
+      "Loss of elasticity",
+      "Female body well-being",
+      "Physical confidence",
+      "Natural aesthetic appearance"
+    ]
+  },
+  "benefits": {
+    "label": "MJ Philosophy",
+    "title": "Bust lift benefits<br /><span className=\"text-primary font-light italic\">Progressive and natural results</span>",
+    "intro": "At MJ we believe in an elegant and harmonious aesthetic. That's why our treatments seek:",
+    "items": [
+      "Firmer body appearance",
+      "Natural results",
+      "Personalized protocols",
+      "Female aesthetic well-being",
+      "Body harmonization",
+      "Premium wellness experience",
+      "Individualized accompaniment"
+    ]
+  },
+  "methodology": {
+    "title": "How does a session work?",
+    "steps": [
+      { "s": "Step 1", "t": "Body Assessment", "d": "We analyze your case, goals, and body characteristics to create an individualized protocol." },
+      { "s": "Step 2", "t": "Protocol Design", "d": "We select techniques and sessions oriented towards well-being, firmness, and body harmonization." },
+      { "s": "Step 3", "t": "Treatment Application", "d": "The session is held in a comfortable, private, and relaxing environment." },
+      { "s": "Step 4", "t": "Personalized Follow-up", "d": "We provide recommendations and complementary habits to support the progressive evolution of the results." }
+    ],
+    "items": [
+      { "l": "Approximate Duration", "v": "45 to 60 minutes" },
+      { "l": "Recovery", "v": "Minimal or immediate" },
+      { "l": "Frequency", "v": "Personalized according to assessment" },
+      { "l": "Results", "v": "Progressive and variable" }
+    ]
+  },
+  "recommended": {
+    "title": "Who is it recommended for?",
+    "intro": "This treatment can be ideal for people looking for:",
+    "items": [
+      "Improve body firmness appearance",
+      "Recover post-pregnancy female harmony",
+      "Support body aesthetic well-being",
+      "Maintain natural results",
+      "Improve physical confidence and body well-being",
+      "Complement female wellness protocols"
+    ]
+  },
+  "testimonials": {
+    "title": "❤️ Real transformation stories",
+    "items": [
+      { "q": "“I felt comfortable with myself again”", "t": "“After pregnancy I felt many changes in my body. I loved that the approach was natural and feminine. I felt accompanied throughout the process.”" },
+      { "q": "“The results look harmonious”", "t": "“I was looking for something elegant and progressive, not something exaggerated. I loved the experience and the personalized attention.”" },
+      { "q": "“It gave me confidence back”", "t": "“The environment, the treatment, and the protocol made all the difference. I felt safe from the first assessment.”" }
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "Is the bust lift invasive?", "a": "It will depend on the protocol recommended during the body assessment. Our approach prioritizes well-being, safety, and naturalness." },
+      { "q": "Does it help with firmness appearance?", "a": "The protocols are designed to visually support body harmony and appearance progressively." },
+      { "q": "How many sessions are recommended?", "a": "Each case is different. The number of sessions will depend on the individual assessment." },
+      { "q": "When are results seen?", "a": "Many people begin to notice progressive changes as the sessions and complementary habits progress." },
+      { "q": "Do the results look natural?", "a": "Yes. At MJ we seek body harmonization and female aesthetic well-being with elegant and natural results." },
+      { "q": "Can it be combined with other treatments?", "a": "Yes. Depending on your assessment, it can be combined with other body wellness protocols." },
+      { "q": "Is there a recovery time?", "a": "Recovery depends on the protocol applied. During your assessment, we will explain every detail." }
+    ]
+  },
+  "whyUs": {
+    "title": "Why choose MJ Estética & Wellness Center?",
+    "intro": "Because we believe female aesthetics should feel natural, safe, and harmonious.",
+    "listLabel": "At MJ you will find:",
+    "items": [
+      "Individualized attention",
+      "Personalized body protocols",
+      "Female wellness experience",
+      "Premium and comfortable environment",
+      "Close accompaniment",
+      "Body wellness focus",
+      "Progressive and natural results"
+    ],
+    "quote": "\"We don't seek exaggerated changes. We seek to help you feel good about yourself.\""
+  },
+  "planes": {
+    "title": "Plans and personalized assessment",
+    "items": [
+      "Individualized protocols",
+      "Body wellness programs",
+      "Female body packages",
+      "Personalized follow-up",
+      "Wellness memberships"
+    ],
+    "intro": "The best way to know the ideal treatment for you is through a professional assessment.",
+    "locationTitle": "MJ Estética & Wellness Center — Turrialba",
+    "locationItems": [
+      "Care in Turrialba",
+      "WhatsApp available",
+      "Parking nearby",
+      "Personalized schedules",
+      "Comfortable and private environment"
+    ],
+    "patientLabel": "We serve patients from:",
+    "patientItems": ["Turrialba center", "Cartago", "Siquirres", "Juan Viñas", "Tucurrique", "Nearby areas"]
+  },
+  "finalCta": {
+    "tagline": "Your well-being also deserves attention",
+    "title": "Discover a different approach to female body harmonization.",
+    "cta1": "Book your body assessment",
+    "cta2": "Check availability today",
+    "footer": "Write to us on WhatsApp and receive the free guide",
+    "highlight": "Discover the ideal protocol for you 👉"
+  }
+}
