@@ -21,6 +21,7 @@ import { GluteoServiceContent } from "@/components/services/GluteoServiceContent
 import { PostOpServiceContent } from "@/components/services/PostOpServiceContent";
 import { BotoxServiceContent } from "@/components/services/BotoxServiceContent";
 import { BustoServiceContent } from "@/components/services/BustoServiceContent";
+import { TensadoCorporalContent } from "@/components/services/TensadoCorporalContent";
 import { TensadoServiceContent } from "@/components/services/TensadoServiceContent";
 import { IronBeautyServiceContent } from "@/components/services/IronBeautyServiceContent";
 import { VendasFriasContent } from "@/components/services/VendasFriasContent";
