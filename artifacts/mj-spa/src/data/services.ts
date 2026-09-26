@@ -3859,55 +3859,56 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "levantamiento-busto",
-      name: "Levantamiento de Busto en Turrialba",
-      tagline: "Busto firme, elevado y reafirmado sin cirugía",
-      heroDescription: "Recupera armonía, firmeza y confianza con un enfoque wellness femenino.",
+      name: "Breast Lift in Turrialba",
+      fullTitle: "Breast Lift in Turrialba",
+      tagline: "Restore harmony, firmness, and confidence with a feminine wellness approach",
+      heroDescription: "A body treatment designed to support the appearance and firmness of the breast area through personalized protocols focused on natural, progressive, and harmonious results.",
       benefits: [
-        "Lifting y reafirmación visibles sin cirugía ni implantes",
-        "Mejora la elasticidad y calidad de la piel del escote",
-        "Protocolo adaptado al grado de flacidez y objetivo de cada clienta",
-        "Completamente indoloro y sin tiempo de recuperación",
-        "También mejora la apariencia del escote y la piel de la zona pectoral",
-        "Apto tras lactancia y pérdida de peso",
+        "Visible lifting and firming without surgery or implants",
+        "Improves elasticity and skin quality on the neckline and chest area",
+        "Personalized protocol adapted to each client's degree of laxity and goals",
+        "Completely painless with no downtime required",
+        "Suitable after breastfeeding and weight loss",
+        "Focus on natural-looking, elegant results",
       ],
       items: [
         {
-          title: "Radiofrecuencia Reafirmante de Busto",
+          title: "Bust Firming Radiofrequency",
           description:
-            "Calor profundo con radiofrecuencia que estimula el colágeno y reafirma el tejido conjuntivo del busto y el escote, logrando un efecto lifting progresivo y natural.",
+            "Deep thermal technology that stimulates collagen and firms connective tissue on the bust and cleavage for a progressive, natural lifting effect.",
           duration: "45 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Ultrasonidos Focalizados",
+          title: "Focalized Ultrasound",
           description:
-            "Tecnología de ultrasonidos que actúa en las capas profundas de la piel para tensar el tejido de soporte del busto, corrigiendo la caída y mejorando el contorno.",
+            "Targeted ultrasound acting on deep skin layers to tighten supportive tissues and refine breast contour.",
           duration: "40 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Protocolo Reafirmación Completa Busto y Escote",
+          title: "Complete Bust & Cleavage Firming Protocol",
           description:
-            "Sesión combinada de radiofrecuencia + ultrasonidos + masaje reafirmante para tratamiento integral del busto, escote y zona pectoral. Máximo resultado en una sola sesión.",
+            "Combined session of radiofrequency + targeted ultrasound + firming massage for comprehensive care of bust, neckline, and chest area.",
           duration: "70 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿Funciona si tengo mucha flacidez?",
+          question: "Is a breast lift treatment invasive?",
           answer:
-            "El tratamiento es eficaz en diferentes grados de flacidez. En casos avanzados, adaptamos el protocolo con más sesiones y combinación de técnicas para obtener el mejor resultado posible sin cirugía.",
+            "This depends on the protocol recommended during your body assessment. Our approach prioritizes wellness, safety, and natural-looking results.",
         },
         {
-          question: "¿Es seguro tras la lactancia?",
+          question: "Can it help improve the appearance of firmness?",
           answer:
-            "Sí, está especialmente indicado para recuperar la firmeza después de la lactancia. Recomendamos esperar al menos 3 meses tras el fin de la lactancia antes de comenzar.",
+            "Our protocols are designed to support the visual appearance of body harmony and firmness progressively.",
         },
         {
-          question: "¿Cuántas sesiones necesito?",
+          question: "How many sessions are recommended?",
           answer:
-            "Para resultados visibles y duraderos recomendamos entre 8 y 10 sesiones, 2 por semana. El mantenimiento mensual ayuda a sostener los resultados a largo plazo.",
+            "Every case is different. The number of sessions will depend on your individual assessment and goals.",
         },
       ],
     },
