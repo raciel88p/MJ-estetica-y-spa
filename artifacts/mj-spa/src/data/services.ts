@@ -3720,82 +3720,63 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "levantamiento-gluteo",
-      name: "Levantamiento de Glúteo en Turrialba",
-      tagline: "Glúteos firmes y elevados sin cirugía ni implantes",
-      heroDescription: "Mejora la apariencia, firmeza y proyección de tus glúteos con un enfoque natural, armónico y personalizado",
+      name: "Buttock Lift in Turrialba",
+      fullTitle: "Buttock Lift in Turrialba",
+      tagline: "Enhance the appearance, firmness, and projection of your buttocks with a natural, harmonious, and personalized approach",
+      heroDescription: "At MJ Estética & Wellness Center, we understand that feeling good about your body also affects your confidence, self-esteem, and overall well-being. That is why we have created buttock-lifting protocols focused on progressive, natural, and aesthetically harmonious results.",
       benefits: [
-        "Apariencia más firme y tonificada",
-        "Mejor proyección visual de los glúteos",
-        "Contorno corporal más armónico",
-        "Complemento ideal para ejercicio y wellness corporal",
-        "Resultados progresivos y naturales",
-        "Sensación de mayor seguridad y confianza corporal",
-        "Protocolos personalizados según objetivos",
-        "Mejor armonización estética corporal",
+        "Firmer, more toned-looking buttocks",
+        "Enhanced visual projection",
+        "A more harmonious body contour",
+        "An ideal complement to exercise and body wellness",
+        "Progressive, natural-looking results",
+        "A greater sense of confidence and body satisfaction",
+        "Personalized protocols based on individual goals",
+        "Improved overall aesthetic body harmony",
       ],
       items: [
         {
-          title: "Radiofrecuencia Glútea Focalizada",
+          title: "Targeted Gluteal Radiofrequency",
           description:
-            "Calor controlado en profundidad que estimula la síntesis de colágeno y reafirma el tejido cutáneo, consiguiendo un efecto lifting visible y una piel más tersa sobre los glúteos.",
+            "Controlled deep thermal energy that stimulates collagen synthesis and firms cutaneous tissue, achieving a visible lifting effect and smoother skin.",
           duration: "50 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Electroestimulación Muscular Glútea",
+          title: "Gluteal Muscle Electro-Stimulation",
           description:
-            "Corrientes de alta frecuencia que generan contracciones musculares intensas equivalentes a cientos de abdominales. Tonifica, define y da volumen de forma segura y progresiva.",
+            "High-frequency currents generating targeted muscular contractions to tone, define, and enhance shape safely and progressively.",
           duration: "40 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Protocolo Completo Lifting Glúteo",
+          title: "Complete Gluteal Lift Protocol",
           description:
-            "Combinación de radiofrecuencia + electroestimulación + carboxiterapia en una sola sesión para maximizar el efecto lifting, la firmeza y el volumen. El protocolo estrella de nuestro servicio.",
+            "Synergistic combination of radiofrequency + muscle electro-stimulation + targeted therapy for maximum firming and lifting in comprehensive sessions.",
           duration: "75 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿El levantamiento de glúteo es invasivo?",
+          question: "Is a buttock lift treatment invasive?",
           answer:
-            "Depende del protocolo recomendado. Durante la valoración corporal explicamos todas las opciones disponibles y cuál se adapta mejor a tus objetivos.",
+            "It depends on the protocol recommended. During your body assessment, we explain all available options and which one may be best suited to your individual goals.",
         },
         {
-          question: "¿Cuándo se ven resultados?",
+          question: "When will I see results?",
           answer:
-            "Muchas pacientes comienzan a notar cambios progresivos conforme avanzan las sesiones y se complementan hábitos saludables.",
+            "Many clients begin to notice progressive changes as they continue with their sessions and maintain healthy complementary habits.",
         },
         {
-          question: "¿Los resultados son naturales?",
+          question: "Will the results look natural?",
           answer:
-            "Sí. Nuestro enfoque prioriza armonización corporal y apariencia estética natural.",
+            "Yes. Our approach prioritizes body harmonization and a natural-looking aesthetic appearance.",
         },
         {
-          question: "¿Se puede combinar con ejercicio?",
+          question: "Can I combine the treatment with exercise?",
           answer:
-            "Sí. De hecho, muchas pacientes utilizan el tratamiento como complemento wellness corporal.",
-        },
-        {
-          question: "¿Cuántas sesiones necesito?",
-          answer:
-            "Cada cuerpo es diferente. La cantidad ideal se define durante la evaluación personalizada.",
-        },
-        {
-          question: "¿Tiene tiempo de recuperación?",
-          answer:
-            "Muchos protocolos permiten retomar actividades habituales rápidamente.",
-        },
-        {
-          question: "¿Ayuda con firmeza?",
-          answer:
-            "Uno de los principales objetivos es contribuir a mejorar la apariencia de firmeza y proyección corporal.",
-        },
-        {
-          question: "¿Qué cuidados debo tener?",
-          answer:
-            "Te brindaremos recomendaciones específicas según el protocolo aplicado y tus objetivos corporales.",
+            "Yes. In fact, many clients use the treatment as a complement to their body wellness and fitness routine.",
         },
       ],
     },
