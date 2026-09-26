@@ -3720,82 +3720,63 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "levantamiento-gluteo",
-      name: "Levantamiento de Glúteo en Turrialba",
-      tagline: "Glúteos firmes y elevados sin cirugía ni implantes",
-      heroDescription: "Mejora la apariencia, firmeza y proyección de tus glúteos con un enfoque natural, armónico y personalizado",
+      name: "Buttock Lift in Turrialba",
+      fullTitle: "Buttock Lift in Turrialba",
+      tagline: "Enhance the appearance, firmness, and projection of your buttocks with a natural, harmonious, and personalized approach",
+      heroDescription: "At MJ Estética & Wellness Center, we understand that feeling good about your body also affects your confidence, self-esteem, and overall well-being. That is why we have created buttock-lifting protocols focused on progressive, natural, and aesthetically harmonious results.",
       benefits: [
-        "Apariencia más firme y tonificada",
-        "Mejor proyección visual de los glúteos",
-        "Contorno corporal más armónico",
-        "Complemento ideal para ejercicio y wellness corporal",
-        "Resultados progresivos y naturales",
-        "Sensación de mayor seguridad y confianza corporal",
-        "Protocolos personalizados según objetivos",
-        "Mejor armonización estética corporal",
+        "Firmer, more toned-looking buttocks",
+        "Enhanced visual projection",
+        "A more harmonious body contour",
+        "An ideal complement to exercise and body wellness",
+        "Progressive, natural-looking results",
+        "A greater sense of confidence and body satisfaction",
+        "Personalized protocols based on individual goals",
+        "Improved overall aesthetic body harmony",
       ],
       items: [
         {
-          title: "Radiofrecuencia Glútea Focalizada",
+          title: "Targeted Gluteal Radiofrequency",
           description:
-            "Calor controlado en profundidad que estimula la síntesis de colágeno y reafirma el tejido cutáneo, consiguiendo un efecto lifting visible y una piel más tersa sobre los glúteos.",
+            "Controlled deep thermal energy that stimulates collagen synthesis and firms cutaneous tissue, achieving a visible lifting effect and smoother skin.",
           duration: "50 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Electroestimulación Muscular Glútea",
+          title: "Gluteal Muscle Electro-Stimulation",
           description:
-            "Corrientes de alta frecuencia que generan contracciones musculares intensas equivalentes a cientos de abdominales. Tonifica, define y da volumen de forma segura y progresiva.",
+            "High-frequency currents generating targeted muscular contractions to tone, define, and enhance shape safely and progressively.",
           duration: "40 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Protocolo Completo Lifting Glúteo",
+          title: "Complete Gluteal Lift Protocol",
           description:
-            "Combinación de radiofrecuencia + electroestimulación + carboxiterapia en una sola sesión para maximizar el efecto lifting, la firmeza y el volumen. El protocolo estrella de nuestro servicio.",
+            "Synergistic combination of radiofrequency + muscle electro-stimulation + targeted therapy for maximum firming and lifting in comprehensive sessions.",
           duration: "75 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿El levantamiento de glúteo es invasivo?",
+          question: "Is a buttock lift treatment invasive?",
           answer:
-            "Depende del protocolo recomendado. Durante la valoración corporal explicamos todas las opciones disponibles y cuál se adapta mejor a tus objetivos.",
+            "It depends on the protocol recommended. During your body assessment, we explain all available options and which one may be best suited to your individual goals.",
         },
         {
-          question: "¿Cuándo se ven resultados?",
+          question: "When will I see results?",
           answer:
-            "Muchas pacientes comienzan a notar cambios progresivos conforme avanzan las sesiones y se complementan hábitos saludables.",
+            "Many clients begin to notice progressive changes as they continue with their sessions and maintain healthy complementary habits.",
         },
         {
-          question: "¿Los resultados son naturales?",
+          question: "Will the results look natural?",
           answer:
-            "Sí. Nuestro enfoque prioriza armonización corporal y apariencia estética natural.",
+            "Yes. Our approach prioritizes body harmonization and a natural-looking aesthetic appearance.",
         },
         {
-          question: "¿Se puede combinar con ejercicio?",
+          question: "Can I combine the treatment with exercise?",
           answer:
-            "Sí. De hecho, muchas pacientes utilizan el tratamiento como complemento wellness corporal.",
-        },
-        {
-          question: "¿Cuántas sesiones necesito?",
-          answer:
-            "Cada cuerpo es diferente. La cantidad ideal se define durante la evaluación personalizada.",
-        },
-        {
-          question: "¿Tiene tiempo de recuperación?",
-          answer:
-            "Muchos protocolos permiten retomar actividades habituales rápidamente.",
-        },
-        {
-          question: "¿Ayuda con firmeza?",
-          answer:
-            "Uno de los principales objetivos es contribuir a mejorar la apariencia de firmeza y proyección corporal.",
-        },
-        {
-          question: "¿Qué cuidados debo tener?",
-          answer:
-            "Te brindaremos recomendaciones específicas según el protocolo aplicado y tus objetivos corporales.",
+            "Yes. In fact, many clients use the treatment as a complement to their body wellness and fitness routine.",
         },
       ],
     },
@@ -3859,55 +3840,56 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "levantamiento-busto",
-      name: "Levantamiento de Busto en Turrialba",
-      tagline: "Busto firme, elevado y reafirmado sin cirugía",
-      heroDescription: "Recupera armonía, firmeza y confianza con un enfoque wellness femenino.",
+      name: "Breast Lift in Turrialba",
+      fullTitle: "Breast Lift in Turrialba",
+      tagline: "Restore harmony, firmness, and confidence with a feminine wellness approach",
+      heroDescription: "A body treatment designed to support the appearance and firmness of the breast area through personalized protocols focused on natural, progressive, and harmonious results.",
       benefits: [
-        "Lifting y reafirmación visibles sin cirugía ni implantes",
-        "Mejora la elasticidad y calidad de la piel del escote",
-        "Protocolo adaptado al grado de flacidez y objetivo de cada clienta",
-        "Completamente indoloro y sin tiempo de recuperación",
-        "También mejora la apariencia del escote y la piel de la zona pectoral",
-        "Apto tras lactancia y pérdida de peso",
+        "Visible lifting and firming without surgery or implants",
+        "Improves elasticity and skin quality on the neckline and chest area",
+        "Personalized protocol adapted to each client's degree of laxity and goals",
+        "Completely painless with no downtime required",
+        "Suitable after breastfeeding and weight loss",
+        "Focus on natural-looking, elegant results",
       ],
       items: [
         {
-          title: "Radiofrecuencia Reafirmante de Busto",
+          title: "Bust Firming Radiofrequency",
           description:
-            "Calor profundo con radiofrecuencia que estimula el colágeno y reafirma el tejido conjuntivo del busto y el escote, logrando un efecto lifting progresivo y natural.",
+            "Deep thermal technology that stimulates collagen and firms connective tissue on the bust and cleavage for a progressive, natural lifting effect.",
           duration: "45 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Ultrasonidos Focalizados",
+          title: "Focalized Ultrasound",
           description:
-            "Tecnología de ultrasonidos que actúa en las capas profundas de la piel para tensar el tejido de soporte del busto, corrigiendo la caída y mejorando el contorno.",
+            "Targeted ultrasound acting on deep skin layers to tighten supportive tissues and refine breast contour.",
           duration: "40 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Protocolo Reafirmación Completa Busto y Escote",
+          title: "Complete Bust & Cleavage Firming Protocol",
           description:
-            "Sesión combinada de radiofrecuencia + ultrasonidos + masaje reafirmante para tratamiento integral del busto, escote y zona pectoral. Máximo resultado en una sola sesión.",
+            "Combined session of radiofrequency + targeted ultrasound + firming massage for comprehensive care of bust, neckline, and chest area.",
           duration: "70 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿Funciona si tengo mucha flacidez?",
+          question: "Is a breast lift treatment invasive?",
           answer:
-            "El tratamiento es eficaz en diferentes grados de flacidez. En casos avanzados, adaptamos el protocolo con más sesiones y combinación de técnicas para obtener el mejor resultado posible sin cirugía.",
+            "This depends on the protocol recommended during your body assessment. Our approach prioritizes wellness, safety, and natural-looking results.",
         },
         {
-          question: "¿Es seguro tras la lactancia?",
+          question: "Can it help improve the appearance of firmness?",
           answer:
-            "Sí, está especialmente indicado para recuperar la firmeza después de la lactancia. Recomendamos esperar al menos 3 meses tras el fin de la lactancia antes de comenzar.",
+            "Our protocols are designed to support the visual appearance of body harmony and firmness progressively.",
         },
         {
-          question: "¿Cuántas sesiones necesito?",
+          question: "How many sessions are recommended?",
           answer:
-            "Para resultados visibles y duraderos recomendamos entre 8 y 10 sesiones, 2 por semana. El mantenimiento mensual ayuda a sostener los resultados a largo plazo.",
+            "Every case is different. The number of sessions will depend on your individual assessment and goals.",
         },
       ],
     },
