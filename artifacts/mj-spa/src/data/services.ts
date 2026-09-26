@@ -4361,9 +4361,10 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "iron-beauty-fitness",
-      name: "ESTÉTICA PARA FISICOCULTURISTAS Y ATLETAS EN TURRIALBA",
-      tagline: "Estética especializada para atletas del mundo fitness",
-      heroDescription: "Recuperación, definición corporal y wellness deportivo en un solo protocolo especializado<br /><br />Tu cuerpo entrena fuerte.<br />Tu recuperación también debería hacerlo.",
+      name: "AESTHETICS FOR BODYBUILDERS & ATHLETES IN TURRIALBA",
+      fullTitle: "AESTHETICS FOR BODYBUILDERS & ATHLETES IN TURRIALBA",
+      tagline: "Recovery, body definition & sports wellness in one specialized protocol",
+      heroDescription: "Recovery, body definition & sports wellness in one specialized protocol<br /><br />Your body trains hard.<br />Your recovery should too.",
       benefits: [
         "Protocolos diseñados exclusivamente para atletas de competencia",
         "Resultados visibles en la definición muscular y textura de piel",
