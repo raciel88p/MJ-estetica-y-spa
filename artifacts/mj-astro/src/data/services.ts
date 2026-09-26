@@ -2012,61 +2012,55 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "tensado-corporal",
-      name: "Tensado Corporal en Turrialba",
-      tagline: "Reafirma y esculpe tu silueta sin cirugía",
-      heroDescription: "Firmeza, bienestar y remodelación corporal progresiva en un solo protocolo",
+      name: "Body Tightening in Turrialba",
+      fullTitle: "Body Tightening in Turrialba",
+      tagline: "Firmness, wellness, and progressive body contouring in one personalized protocol",
+      heroDescription: "Would you like to improve the appearance of skin firmness and feel more comfortable and confident in your body without invasive procedures? At MJ Estética & Wellness Center, we design personalized body tightening protocols focused on supporting firmer-looking skin, aesthetic wellness, and progressive body contouring through advanced aesthetic technologies and professional care.",
       benefits: [
-        "Reafirmación visible de la piel desde las primeras sesiones",
-        "Estimula la producción de colágeno y elastina",
-        "Sin cirugía, sin anestesia, sin recuperación",
-        "Resultados naturales y progresivos",
-        "Efectivo en abdomen, muslos, brazos y glúteos",
+        "Personalized body assessment",
+        "Protocols tailored to your goals",
+        "Advanced aesthetic technology",
+        "Premium wellness experience",
+        "Professional care and individualized follow-up",
       ],
       items: [
         {
-          title: "Tensado Abdominal",
-          description:
-            "Protocolo específico para reafirmar la piel del abdomen y reducir la flacidez postparto o por pérdida de peso, con tecnología de radiofrecuencia multipolar.",
+          title: "Abdominal Tightening",
+          description: "Targeted protocol to firm abdominal skin and support post-pregnancy or post-weight-loss elasticity through multipolar radiofrequency technology.",
           duration: "50 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Tensado de Muslos y Glúteos",
-          description:
-            "Tratamiento enfocado en las zonas de mayor pérdida de firmeza, devolviendo elasticidad y definición a los glúteos y la cara interna y externa de los muslos.",
+          title: "Thigh & Gluteal Tightening",
+          description: "Treatment focused on areas prone to elasticity loss, restoring firmness and definition to thighs and buttocks.",
           duration: "60 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Tensado de Brazos",
-          description:
-            "Protocolo para la zona del tríceps y la cara interna del brazo, ideal para recuperar firmeza y combatir la piel colgante sin cirugía.",
+          title: "Arm Tightening",
+          description: "Protocol for the triceps and inner arm area, ideal for restoring skin firmness without surgery.",
           duration: "40 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Tensado Corporal Integral",
-          description:
-            "Sesión combinada que trabaja varias zonas en un mismo tratamiento, diseñando un protocolo integral adaptado a las necesidades de cada clienta.",
+          title: "Comprehensive Body Tightening",
+          description: "Combined multi-area session designing an all-in-one protocol tailored to individual goals.",
           duration: "80 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿Cuántas sesiones necesito?",
-          answer:
-            "Para resultados óptimos recomendamos entre 6 y 10 sesiones, con frecuencia semanal o bisemanal. En la valoración gratuita te indicamos el número exacto según tu caso.",
+          question: "What is body tightening?",
+          answer: "It is an aesthetic protocol designed to support the appearance of firmer-looking skin through personalized treatments and advanced aesthetic technologies.",
         },
         {
-          question: "¿Es doloroso el tratamiento?",
-          answer:
-            "No. La sensación es de calor agradable en la zona tratada. Es un procedimiento completamente cómodo y relajante que no requiere ningún tiempo de recuperación.",
+          question: "Does it help with skin firmness?",
+          answer: "It may support aesthetic firming and progressive body contouring protocols depending on each individual's needs and assessment.",
         },
         {
-          question: "¿Cuándo se notan los resultados?",
-          answer:
-            "Muchas clientas notan mayor firmeza desde las primeras sesiones. Los resultados más significativos se aprecian a partir de la 4ª–6ª sesión y continúan mejorando semanas después del tratamiento.",
+          question: "How many sessions are recommended?",
+          answer: "The recommended number of sessions depends on each person's goals and personalized assessment.",
         },
       ],
     },
