@@ -3979,16 +3979,18 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "vendas-frias",
-      name: "Vendas Frías",
-      tagline: "Pérdida de centímetros y detox corporal en una sola sesión",
-      heroDescription: "Sensación de frescura, relajación y bienestar corporal en una experiencia wellness premium",
+      name: "Cold Wraps in Turrialba",
+      tagline: "A refreshing, relaxing wellness experience designed to promote a sense of freshness and overall body well-being",
+      heroDescription: "Your body also needs moments of rest, freshness, and self-care.<br /><br />At MJ Estética & Wellness Center, we have designed cold wrap protocols focused on providing a relaxing, personalized body experience centered on women’s overall wellness and self-care.",
       benefits: [
-        "Pérdida de centímetros medible desde la primera sesión",
-        "Reduce la retención de líquidos y la inflamación",
-        "Activa la circulación y el drenaje linfático",
-        "Mejora la textura y firmeza de la piel",
-        "Efecto detox que elimina toxinas acumuladas",
-        "Ideal para preparar el cuerpo para eventos especiales",
+        "A refreshing body sensation",
+        "Relaxation and overall well-being",
+        "A feeling of bodily lightness",
+        "A complement to aesthetic body protocols",
+        "A premium spa wellness experience",
+        "Personalized body care",
+        "A moment to disconnect and practice self-care",
+        "A revitalizing body sensation",
       ],
       items: [
         {
