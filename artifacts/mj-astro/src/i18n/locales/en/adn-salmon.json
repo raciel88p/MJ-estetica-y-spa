@@ -1,60 +1,60 @@
 {
   "recommend": {
-    "title": "FOR WHOM IS IT RECOMMENDED?",
-    "intro": "This protocol is ideal for people with:",
+    "title": "WHO IS THIS TREATMENT RECOMMENDED FOR?",
+    "intro": "This treatment may be ideal for people with:",
     "items": [
       "Dehydrated skin",
-      "Lack of facial brightness",
+      "Dull or lacklustre complexion",
       "Fine lines",
-      "Mild flaccidity",
-      "Irregular texture",
-      "Sensitive or tired skin",
-      "Early signs of aging"
+      "Mild skin laxity",
+      "Uneven skin texture",
+      "Sensitive or tired-looking skin",
+      "Early signs of ageing"
     ],
-    "note": "It is also excellent as a preventive anti-aging treatment."
+    "note": "It is also an excellent preventative anti-ageing treatment for maintaining healthy, youthful-looking skin."
   },
   "includes": {
-    "title": "What it includes",
-    "desc": "At MJ Estética Wellness Center we perform a personalized assessment to adapt the protocol to your skin's needs.",
-    "label": "Your session includes",
+    "title": "What Does the Treatment Involve?",
+    "desc": "At MJ Estética & Wellness Center, every treatment begins with a personalised skin consultation to ensure the protocol is tailored to your individual needs.",
+    "label": "Your session may include",
     "items": [
       "Professional facial cleansing",
-      "Salmon DNA application",
-      "Microneedling or biostimulation",
-      "Soothing and hydrating protocol",
-      "Post-treatment recommendations"
+      "Application of Salmon DNA",
+      "Microneedling or skin biostimulation",
+      "Hydrating skincare protocol",
+      "Personalised aftercare recommendations"
     ],
-    "note": "It is a minimally invasive procedure and recovery is usually fast."
+    "note": "The procedure is minimally invasive, and recovery is generally quick."
   },
   "why": {
-    "title": "WHY ARE SO MANY PEOPLE TALKING ABOUT SALMON DNA?",
-    "intro": "Because the results feel natural.",
-    "desc": "The skin begins to look more hydrated and luminous from the first sessions, while firmness and regeneration improve progressively.",
-    "quote": "It is not an artificial change. It is a better version of your skin."
+    "title": "WHY IS EVERYONE TALKING ABOUT SALMON DNA THERAPY?",
+    "intro": "Because the results look completely natural.",
+    "desc": "Many clients notice brighter, more hydrated skin after their first sessions, while improvements in firmness and skin regeneration continue to develop over time.",
+    "quote": "It isn't an artificial transformation. It's simply a healthier, more radiant version of your own skin."
   },
   "whyUs": {
-    "title": "WHY CHOOSE MJ ESTÉTICA WELLNESS CENTER?",
-    "desc": "At MJ Estética Wellness Center we combine well-being, advanced aesthetics and personalized protocols to help you achieve real and natural results.",
+    "title": "WHY CHOOSE MJ ESTÉTICA & WELLNESS CENTER?",
+    "desc": "At MJ Estética & Wellness Center, we combine advanced aesthetic medicine, personalised skincare and holistic wellness to help you achieve natural, long-lasting results.",
     "items": [
-      "Personalized attention",
-      "Modern rejuvenation protocols",
+      "Personalised care",
+      "Modern facial rejuvenation protocols",
       "Advanced aesthetic technology",
-      "Integral wellness experience",
-      "Progressive and safe results"
+      "A complete wellness experience",
+      "Safe, gradual and natural-looking results"
     ],
-    "footer1": "Your skin deserves more than a treatment.",
-    "footer2": "It deserves professional care and an approach designed for you."
+    "footer1": "Your skin deserves more than just another treatment.",
+    "footer2": "It deserves professional care designed specifically for you."
   },
   "leadMagnet": {
     "label": "Exclusive Gift",
-    "title": "🎁 FREE BEAUTY GUIDE",
-    "desc": "By commenting the word “ADN” or “Salmon”, we want to give you our exclusive facial care and rejuvenation guide.",
-    "cta": "DOWNLOAD FREE GUIDE"
+    "title": "🎁 FREE Beauty Guide",
+    "desc": "Comment “DNA” or “Salmon”, and we'll send you our exclusive guide to facial rejuvenation and professional skincare—completely free.",
+    "cta": "DOWNLOAD YOUR FREE GUIDE"
   },
   "finalCta": {
-    "title": "🔥 SCHEDULE YOUR ASSESSMENT",
-    "desc": "If you wish to improve the quality of your skin, recover luminosity and experience one of the most innovative treatments in modern medical aesthetics…",
-    "quote": "This could be the perfect moment to start.",
-    "cta": "Book now"
+    "title": "🔥 Book Your Personalised Consultation",
+    "desc": "If you'd like to improve your skin quality, restore your natural radiance and experience one of the most innovative treatments in modern aesthetic medicine…",
+    "quote": "This could be the perfect time to begin.",
+    "cta": "Book your consultation here"
   }
 }
