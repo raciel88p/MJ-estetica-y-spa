@@ -3207,7 +3207,7 @@ export const servicePages: MultiLangServicePageData[] = [
       name: "Salmon DNA",
       tagline: "Deep cellular regeneration for radiant skin",
       heroDescription:
-        "The Korean secret that is revolutionizing facial rejuvenation has arrived in Turrialba. PDRN treatment for luminous and hydrated skin without surgery.",
+        "✨ THE KOREAN SKINCARE SECRET REVOLUTIONIZING FACIAL REJUVENATION HAS ARRIVED IN TURRIALBA ✨<br /><br />Can you imagine waking up to more luminous, deeply hydrated, and naturally rejuvenated skin... without surgery or artificial changes?<br /><br />That is exactly what many people are achieving thanks to Salmon DNA Therapy (PDRN), one of the most innovative protocols in modern medical aesthetics.<br /><br />And now you can experience it at MJ Estética & Wellness Center.<br /><br />👇",
       benefits: [
         "Rejuvenates skin naturally",
         "Improves fine lines and early signs of aging",
@@ -3220,32 +3220,54 @@ export const servicePages: MultiLangServicePageData[] = [
       items: [
         {
           title: "Facial Salmon DNA",
-          description: "Microinjections of PDRN to stimulate collagen and improve skin quality.",
+          description:
+            "PDRN microinjections across the face to stimulate collagen production, improve hydration, and restore a youthful, radiant appearance. Ideal for dull, sagging, or dehydrated skin.",
           duration: "45 min",
           price: "Consult price",
-          faq: [
-        {
-          question: "¿Es doloroso el tratamiento?",
-          answer:
-            "Se utilizan agujas muy finas y podemos aplicar crema anestésica tópica previamente. La molestia es mínima — la mayoría de las pacientes lo describen como pequeños pellizcos rápidos que se toleran sin problema.",
         },
         {
-          question: "¿Cuántas sesiones necesito?",
-          answer:
-            "Para resultados óptimos recomendamos entre 3 y 4 sesiones, con una separación de 2 a 3 semanas entre cada una. Posteriormente, una sesión de mantenimiento cada 3–6 meses es suficiente.",
+          title: "Eye Contour Salmon DNA",
+          description:
+            "Targeted protocol for the eye contour area: reduces dark circles, puffiness, crow's feet, and signs of fatigue. One of the areas that benefits most from PDRN regeneration.",
+          duration: "30 min",
+          price: "Consult price",
         },
         {
-          question: "¿Cuándo se notan los resultados?",
-          answer:
-            "Desde la primera sesión se aprecia mayor luminosidad e hidratación. Los cambios más significativos en textura, firmeza y arrugas finas se observan a partir de la 2ª–3ª sesión.",
+          title: "Salmon DNA + Mesotherapy",
+          description:
+            "Combination of PDRN with a vitamin cocktail and non-crosslinked hyaluronic acid for maximum regeneration. Noticeable, long-lasting results from the very first session.",
+          duration: "60 min",
+          price: "Consult price",
         },
         {
-          question: "¿En qué se diferencia del ácido hialurónico?",
-          answer:
-            "El ácido hialurónico rellena y volumiza. El ADN de Salmón actúa a nivel celular regenerando los tejidos y estimulando tu propio colágeno. Son tratamientos complementarios que con frecuencia se combinan para resultados superiores.",
+          title: "Hair Salmon DNA",
+          description:
+            "Scalp application to stimulate hair follicles, reduce hair loss, and improve hair density and quality. Ideal as a complementary treatment for hair loss.",
+          duration: "45 min",
+          price: "Consult price",
         },
       ],
-    },
+      faq: [
+        {
+          question: "Is the treatment painful?",
+          answer:
+            "Very fine needles are used, and topical numbing cream can be applied beforehand. Discomfort is minimal — most patients describe it as brief, quick pinpricks that are easily tolerated.",
+        },
+        {
+          question: "How many sessions will I need?",
+          answer:
+            "For optimal results, we recommend 3 to 4 sessions spaced 2 to 3 weeks apart. Afterward, a maintenance session every 3 to 6 months is sufficient.",
+        },
+        {
+          question: "When will I see results?",
+          answer:
+            "Increased luminosity and hydration are noticeable from the first session. The most significant improvements in texture, firmness, and fine lines appear after the 2nd or 3rd session.",
+        },
+        {
+          question: "How does it differ from hyaluronic acid?",
+          answer:
+            "Hyaluronic acid fills and restores volume. Salmon DNA works at a cellular level, regenerating tissue and stimulating your own collagen. They are complementary treatments often combined for superior results.",
+        },
       ],
     },
   },
