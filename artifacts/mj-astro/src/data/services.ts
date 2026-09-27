@@ -865,40 +865,71 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "laser-hair-removal",
-      name: "Laser Hair Removal",
-      tagline: "Smooth skin forever, with advanced technology",
+      name: "Laser Hair Removal in Turrialba",
+      tagline: "Say goodbye to unwanted hair… and feel free in your own skin again",
       heroDescription:
-        "Laser Hair Removal in Turrialba | MJ Estética & Wellness Center<br />Say goodbye to hair… and feel comfortable in your skin again<br /><br />Progressively reduce hair growth, avoid constant irritation and show off smoother, more even skin with professional laser hair removal technology at MJ Estética & Wellness Center in Turrialba.",
+        "Imagine getting dressed without wondering if you need to shave first. Going to the beach, the gym, or wearing your favorite outfit without constantly thinking about unwanted hair.<br /><br />With professional laser hair removal technology at MJ Estética & Wellness Center in Turrialba, you can progressively reduce hair growth, minimize constant irritation, and enjoy skin that feels smoother, softer, and more comfortable.",
       benefits: [
-        "Permanent hair removal",
-        "Smooth skin without irritation",
-        "Long-term savings compared to other methods",
-        "Fast and comfortable treatment",
-        "Visible results from the first sessions",
+        "Less time spent shaving",
+        "Smoother, more even-looking skin",
+        "Less day-to-day irritation",
+        "Progressive, visible results",
+        "Greater comfort and confidence",
+        "Fewer ingrown hairs",
+        "A simpler, more convenient beauty routine",
+        "A lasting feeling of freshness and cleanliness",
       ],
       items: [
         {
-          title: "Facial Hair Removal",
-          description: "Treatment for upper lip, chin, sideburns and neck.",
+          title: "Facial & Small Areas",
+          description: "Upper lip, chin, sideburns, neck, or underarms.",
+          duration: "15 min",
+          price: "Consult price",
+        },
+        {
+          title: "Medium Areas",
+          description: "Bikini area, half arms, or half legs.",
           duration: "30 min",
-          faq: [
-        {
-          question: "¿Cuántas sesiones son necesarias?",
-          answer:
-            "Generalmente entre 6 y 8 sesiones, separadas de 4 a 8 semanas, dependiendo de la zona y el tipo de vello. Algunas personas requieren sesiones de mantenimiento posteriores.",
+          price: "Consult price",
         },
         {
-          question: "¿El tratamiento es doloroso?",
-          answer:
-            "La sensación es mínima, similar a un ligero picor o calor. Nuestro equipo dispone de sistema de enfriamiento integrado para maximizar el confort durante el tratamiento.",
-        },
-        {
-          question: "¿Hay alguna contraindicación?",
-          answer:
-            "No está indicado durante el embarazo, si se toma fotosensibilizantes o con bronceado activo. En la consulta previa evaluamos tu caso de forma personalizada.",
+          title: "Large Areas & Combos",
+          description: "Full legs, back, chest, or 3-area package (underarms, full legs & bikini).",
+          duration: "60 min",
+          price: "Plans from ₡113,000",
         },
       ],
-    },
+      faq: [
+        {
+          question: "Does laser hair removal hurt?",
+          answer:
+            "Laser hair removal is generally well tolerated and relatively quick. Most people describe the sensation as small warm touches or mild little pinches. The sensation varies depending on individual sensitivity and the treatment area.",
+        },
+        {
+          question: "Is laser hair removal suitable for darker skin tones?",
+          answer:
+            "Yes. Depending on your skin type, a professional assessment helps determine the appropriate protocol and technology for your treatment.",
+        },
+        {
+          question: "Can I shave between sessions?",
+          answer:
+            "Yes. Shaving is generally allowed between sessions. Other hair-removal methods, such as waxing, are usually avoided because they remove the hair from the follicle.",
+        },
+        {
+          question: "How long do the results last?",
+          answer:
+            "Many people experience a long-term reduction in hair growth and may require maintenance sessions over time.",
+        },
+        {
+          question: "Which areas can be treated?",
+          answer:
+            "Common treatment areas include legs, underarms, bikini area, face, back, chest, and many more.",
+        },
+        {
+          question: "Can I have laser hair removal during summer?",
+          answer:
+            "Yes, provided you follow the recommended sun-care and skin-protection guidelines before and after your treatment.",
+        },
       ],
     },
   },
