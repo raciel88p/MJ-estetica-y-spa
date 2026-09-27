@@ -3207,15 +3207,15 @@ export const servicePages: MultiLangServicePageData[] = [
       name: "Salmon DNA",
       tagline: "Deep cellular regeneration for radiant skin",
       heroDescription:
-        "✨ THE KOREAN SKINCARE SECRET REVOLUTIONIZING FACIAL REJUVENATION HAS ARRIVED IN TURRIALBA ✨<br /><br />Can you imagine waking up to more luminous, deeply hydrated, and naturally rejuvenated skin... without surgery or artificial changes?<br /><br />That is exactly what many people are achieving thanks to Salmon DNA Therapy (PDRN), one of the most innovative protocols in modern medical aesthetics.<br /><br />And now you can experience it at MJ Estética & Wellness Center.<br /><br />👇",
+        "✨ THE KOREAN SKINCARE SECRET REVOLUTIONISING FACIAL REJUVENATION HAS ARRIVED IN TURRIALBA ✨<br /><br />Imagine waking up with brighter, deeply hydrated and more youthful-looking skin—without surgery or artificial-looking results.<br /><br />That's exactly what many people are experiencing with Salmon DNA Therapy, one of the most innovative treatments in advanced aesthetic medicine.<br /><br />And now, you can experience it at MJ Estética & Wellness Center.<br /><br />👇",
       benefits: [
-        "Rejuvenates skin naturally",
-        "Improves fine lines and early signs of aging",
-        "Stimulates collagen and elasticity",
-        "Provides deep hydration",
-        "Improves texture and luminosity",
-        "Helps revitalize tired or stressed skin",
-        "Healthy and elegant glow effect",
+        "Naturally rejuvenates the skin",
+        "Improves fine lines and early signs of ageing",
+        "Stimulates collagen production and skin elasticity",
+        "Provides deep, long-lasting hydration",
+        "Enhances skin texture and radiance",
+        "Revitalises tired or stressed skin",
+        "Delivers a healthy, natural glow",
       ],
       items: [
         {
