@@ -1,0 +1,111 @@
+{
+  "intro": {
+    "title": "Would you like to look in the mirror and feel more confident about your skin?",
+    "p1": "At MJ Estética & Wellness Center, we understand that acne affects more than just your appearance. It can also impact your self-esteem, confidence and the way you interact with others.",
+    "p2": "That's why we offer Acne Laser Treatments in Turrialba, designed to complement professional facial skincare protocols and help progressively improve the appearance of:",
+    "items": [
+      "Active acne breakouts",
+      "Acne-related marks",
+      "Oily skin",
+      "Uneven skin texture",
+      "Visible pores",
+      "Facial inflammation",
+      "Uneven skin tone",
+      "Dull-looking skin"
+    ],
+    "cta": "Book Your Personalised Consultation Today"
+  },
+  "problem": {
+    "title": "Looking for an Acne Treatment in Turrialba?",
+    "p1": "Thousands of people try creams, skincare products and home routines without achieving the results they hope for.",
+    "p2": "The reason is simple—every case of acne is different. At MJ Estética & Wellness Center, we begin with a professional skin assessment to evaluate:",
+    "items": [
+      "Skin type",
+      "Level of inflammation",
+      "Presence of acne marks",
+      "Current skincare routine",
+      "Personal goals"
+    ],
+    "whatIsTitle": "What Is Acne Laser Treatment?",
+    "whatIsDesc": "Acne laser treatment is an advanced facial procedure that forms part of professional skincare protocols for acne-prone skin. Its purpose is to complement professional skincare strategies by progressively improving the overall appearance of the skin.",
+    "whatIsItems": [
+      "Improve the appearance of active breakouts.",
+      "Visibly reduce acne marks.",
+      "Enhance skin texture.",
+      "Achieve a healthier, more even-looking complexion."
+    ]
+  },
+  "benefits": {
+    "label": "MJ FACIAL AESTHETICS",
+    "title": "Benefits of Acne Laser Treatment",
+    "items": [
+      { "t": "Progressive Improvement", "d": "A smoother, healthier-looking complexion can help improve confidence and overall wellbeing." },
+      { "t": "Supports Acne Mark Treatments", "d": "Laser therapy can complement skincare protocols designed to improve the appearance of acne-related marks." },
+      { "t": "Even Complexion", "d": "Helps improve the visible texture and overall appearance of the skin." },
+      { "t": "Complements Skincare", "d": "Can be incorporated into personalised facial care programmes." },
+      { "t": "Personalised Treatment", "d": "Every session is tailored to your skin's unique needs." },
+      { "t": "Holistic Wellbeing", "d": "Because feeling good is an important part of looking your best." }
+    ]
+  },
+  "methodology": {
+    "title": "What Happens During an Acne Laser Treatment?",
+    "subtitle": "A professional and caring protocol for your face.",
+    "steps": [
+      { "s": "Step 1", "t": "Professional Skin Consultation", "d": "We assess your skin and discuss your treatment goals." },
+      { "s": "Step 2", "t": "Skin Preparation", "d": "Your skin is professionally cleansed and prepared for treatment." },
+      { "s": "Step 3", "t": "Laser Treatment", "d": "The procedure is performed by trained professionals using advanced aesthetic technology." },
+      { "s": "Step 4", "t": "Personalised Aftercare", "d": "You'll receive individual aftercare recommendations and follow-up guidance." }
+    ],
+    "stats": [
+      "Treatment time: 30–60 min",
+      "Recovery: Minimal"
+    ]
+  },
+  "beforeAfter": {
+    "title": "Before & After Acne Laser Treatment",
+    "desc": "Here you can view real patient cases treated with personalised acne laser protocols at MJ Estética & Wellness Center.",
+    "tags": ["Even-looking complexion", "Progressive skin improvement", "Natural-looking results", "Facial wellbeing"],
+    "caption": "Real Cases at MJ Estética"
+  },
+  "whyUs": {
+    "title": "Why Choose MJ Estética & Wellness Center?",
+    "subtitle": "“Because we don't just treat skin. We care for people.”",
+    "items": [
+      "Individual treatment protocols",
+      "Personalised professional care",
+      "Advanced aesthetic technology",
+      "Comfortable clinical environment",
+      "Ongoing follow-up support",
+      "Professional skincare education"
+    ]
+  },
+  "leadMagnet": {
+    "label": "🎁 FREE RESOURCE",
+    "title": "Free Guide: 7 Habits That Can Help Improve the Appearance of Acne-Prone Skin",
+    "learnTitle": "What you'll discover inside:",
+    "items": [
+      "Common mistakes that may worsen breakouts.",
+      "Recommended post-treatment skincare.",
+      "How to complement your daily skincare routine.",
+      "Tips to maximise your facial treatment results.",
+      "Professional advice for maintaining healthier-looking skin."
+    ],
+    "cta": "REQUEST YOUR FREE GUIDE VIA WHATSAPP"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions About Acne Laser Treatment",
+    "items": [
+      { "q": "Does acne laser treatment hurt?", "a": "Most people describe the sensation as mild and well tolerated, although this varies depending on individual sensitivity." },
+      { "q": "Can it improve acne marks?", "a": "It can form part of a personalised treatment plan designed to improve their appearance following a professional assessment." },
+      { "q": "How many sessions will I need?", "a": "Every case is unique. The recommended number of sessions will depend on your skin assessment." },
+      { "q": "Is it suitable for oily skin?", "a": "Yes. Many people with oily skin include laser therapy as part of their personalised skincare programme." },
+      { "q": "When will I see results?", "a": "Results are usually progressive and vary according to individual skin characteristics and the recommended treatment plan." }
+    ]
+  },
+  "final": {
+    "title": "Book Your Skin Consultation Today",
+    "desc": "Your skin deserves professional care. The sooner you begin the right treatment plan, the sooner you can work towards healthier, clearer and more even-looking skin.",
+    "cta": "Book an Appointment",
+    "location": "📍 Specialist Acne Treatment Clinic in Turrialba, Cartago, Costa Rica"
+  }
+}

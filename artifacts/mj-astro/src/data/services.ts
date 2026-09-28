@@ -2740,45 +2740,51 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "laser-acne",
-      name: "Láser para Acné en Turrialba | Mejora Brotes y Marcas",
-      tagline: "Mejora la apariencia de brotes, marcas y textura",
-      heroDescription: "¿Te gustaría verte al espejo y sentir más confianza al observar tu piel?<br /><br />En MJ Estética & Wellness Center ofrecemos tratamientos de Láser para Acné en Turrialba diseñados para complementar protocolos profesionales de cuidado facial, ayudando a mejorar progresivamente brotes activos, marcas y poros visibles.",
+      name: "Acne Laser Treatment in Turrialba",
+      tagline: "Improve the Appearance of Breakouts, Acne Marks and Skin Texture",
+      heroDescription: "Would you like to look in the mirror and feel more confident about your skin?<br /><br />At MJ Estética & Wellness Center, we understand that acne affects more than just your appearance. That's why we offer Acne Laser Treatments in Turrialba, designed to complement professional facial skincare protocols and help progressively improve breakouts, marks, and texture.",
       benefits: [
-        "Mejora progresiva de brotes activos",
-        "Reducción visual de marcas de acné",
-        "Control de piel grasa y poros",
-        "Unificación del tono y textura",
-        "Procedimiento seguro y personalizado",
-        "Aumento de bienestar y confianza",
+        "Progressive improvement in active breakouts",
+        "Visual reduction of acne-related marks",
+        "Supports oil and pore control",
+        "Enhances skin texture and tone",
+        "Personalized professional treatment",
+        "Boosts confidence and skin wellbeing",
       ],
       items: [
         {
-          title: "Sesión Láser para Acné",
+          title: "Acne Laser Session",
           description:
-            "Tratamiento láser avanzado enfocado en mejorar la apariencia de pieles con tendencia acneica.",
+            "Advanced facial procedure designed to complement professional skincare strategies for acne-prone skin.",
           duration: "45 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿El láser para acné duele?",
+          question: "Does acne laser treatment hurt?",
           answer:
-            "La mayoría de personas describe una sensación tolerable que depende de la sensibilidad individual.",
+            "Most people describe the sensation as mild and well tolerated, although this varies depending on individual sensitivity.",
         },
         {
-          question: "¿Ayuda con marcas de acné?",
+          question: "Can it improve acne marks?",
           answer:
-            "Puede formar parte de protocolos orientados a mejorar su apariencia según valoración profesional.",
+            "It can form part of a personalised treatment plan designed to improve their appearance following a professional assessment.",
         },
         {
-          question: "¿Cuántas sesiones necesito?",
-          answer: "Cada caso es diferente y requiere evaluación personalizada.",
+          question: "How many sessions will I need?",
+          answer:
+            "Every case is unique. The recommended number of sessions will depend on your skin assessment.",
         },
         {
-          question: "¿Sirve para piel grasa?",
+          question: "Is it suitable for oily skin?",
           answer:
-            "Muchas personas con piel grasa incorporan este tratamiento dentro de sus protocolos faciales.",
+            "Yes. Many people with oily skin include laser therapy as part of their personalised skincare programme.",
+        },
+        {
+          question: "When will I see results?",
+          answer:
+            "Results are usually progressive and vary according to individual skin characteristics and the recommended treatment plan.",
         },
       ],
     },
