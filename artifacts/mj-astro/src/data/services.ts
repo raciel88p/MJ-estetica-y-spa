@@ -2531,35 +2531,36 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "rejuvenecimiento-facial-laser",
-      name: "Rejuvenecimiento Facial Láser",
-      tagline: "Recupera la Juventud y Luminosidad de tu Piel",
-      heroDescription: "Recupera la Juventud y Luminosidad de tu Piel con tecnología láser de vanguardia en Turrialba.",
+      name: "Laser Facial Rejuvenation",
+      fullTitle: "Laser Facial Rejuvenation in Turrialba | Restore Your Skin’s Youthful Glow",
+      tagline: "Looking for laser facial rejuvenation in Turrialba?",
+      heroDescription: "If you have started noticing fine lines, wrinkles, sun spots, or a loss of firmness in your skin, you are not alone.",
       benefits: [
-        "Estimula la producción natural de colágeno",
-        "Mejora la textura de la piel",
-        "Reduce líneas de expresión",
-        "Disminuye manchas y daños solares",
-        "Resultados progresivos y naturales",
+        "Supports natural collagen production",
+        "Improves skin texture and smoothness",
+        "Reduces fine lines and expression lines",
+        "Minimizes sun spots and sun damage",
+        "Progressive and natural-looking results",
       ],
       items: [
         {
-          title: "Tratamiento de Rejuvenecimiento Facial con Láser",
+          title: "Laser Facial Rejuvenation Treatment",
           description:
-            "Protocolo personalizado diseñado para estimular el colágeno y mejorar la calidad de la piel desde el interior.",
+            "Personalized protocol designed to stimulate collagen and improve skin quality from within.",
           duration: "60 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿Quién es candidato para el rejuvenecimiento láser?",
+          question: "Who is a candidate for laser facial rejuvenation?",
           answer:
-            "Es ideal para hombres y mujeres que desean mejorar la apariencia de su piel, prevenir el envejecimiento prematuro y reducir líneas finas.",
+            "It is ideal for men and women looking to improve their skin appearance, prevent premature aging, and reduce fine lines.",
         },
         {
-          question: "¿Duele el tratamiento?",
+          question: "Is the treatment painful?",
           answer:
-            "El procedimiento está diseñado para ser profesional y cómodo, adaptando la tecnología a la sensibilidad de cada paciente.",
+            "The procedure is designed to be professional and comfortable, adapting technology to each patient's skin sensitivity.",
         },
       ],
     },
