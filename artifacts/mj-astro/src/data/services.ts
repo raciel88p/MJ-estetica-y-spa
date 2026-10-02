@@ -2532,9 +2532,9 @@ export const servicePages: MultiLangServicePageData[] = [
     en: {
       slug: "rejuvenecimiento-facial-laser",
       name: "Laser Facial Rejuvenation",
-      fullTitle: "Laser Facial Rejuvenation in Turrialba | Restore Your Skin’s Youthful Glow",
+      fullTitle: "Laser Facial Rejuvenation in Turrialba",
       tagline: "Looking for laser facial rejuvenation in Turrialba?",
-      heroDescription: "If you have started noticing fine lines, wrinkles, sun spots, or a loss of firmness in your skin, you are not alone.",
+      heroDescription: "Restore Your Skin’s Youthful Glow<br /><br />If you have started noticing fine lines, wrinkles, sun spots, or a loss of firmness in your skin, you are not alone.",
       benefits: [
         "Supports natural collagen production",
         "Improves skin texture and smoothness",
