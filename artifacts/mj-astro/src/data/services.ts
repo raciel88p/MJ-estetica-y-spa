@@ -579,44 +579,67 @@ export const servicePages: MultiLangServicePageData[] = [
     en: {
       slug: "relaxing-massages",
       name: "Relaxing Massages",
-      tagline: "A journey to total well-being",
+      fullTitle: "Massages in Turrialba | Relaxing, Therapeutic & Deep Tissue",
+      tagline: "Restore Your Well-Being with Professional Massages in Turrialba",
       heroDescription:
-        "Recover your well-being with professional massages in Turrialba. Are you looking for a place where you can relax, relieve muscle tension, and disconnect from daily stress?",
+        "Looking for a place where you can relax, release muscle tension, and disconnect from the stress of everyday life?<br /><br />At <strong>MJ Estética & Wellness Center</strong>, we offer relaxing, therapeutic, and deep tissue massages in Turrialba, designed to help you feel better physically and mentally from your very first session.",
       benefits: [
-        "Cortisol reduction (stress hormone)",
-        "Improved sleep and rest",
-        "Natural endorphin release",
-        "Deep muscle relaxation",
-        "Long-lasting well-being sensation",
+        "Reduce stress and promote relaxation",
+        "Support better sleep and rest",
+        "Relieve muscle tension and stiffness",
+        "Promote healthy circulation",
+        "Support physical and emotional well-being",
+        "Recover from everyday physical fatigue",
       ],
       items: [
         {
           title: "Relaxing Massage",
-          description: "Ideal for reducing stress, anxiety, and accumulated tension.",
+          description: "Ideal for reducing stress, promoting relaxation, and releasing accumulated tension.",
           duration: "60-90 min",
           linkText: "Message us on WhatsApp",
-          faq: [
-        {
-          question: "¿Necesito reservar con anticipación?",
-          answer:
-            "Sí. Trabajamos con cita previa para brindar una atención personalizada.",
         },
         {
-          question: "¿Cuánto dura una sesión?",
-          answer:
-            "Dependiendo del tratamiento, las sesiones pueden durar entre 60 y 90 minutos.",
+          title: "Deep Tissue Massage",
+          description: "A great option for people experiencing muscle tightness or discomfort associated with physical work, exercise, or everyday stress.",
+          duration: "60-90 min",
+          linkText: "Message us on WhatsApp",
         },
         {
-          question: "¿Cuál masaje recomiendan para el estrés?",
-          answer:
-            "El masaje relajante combinado con aromaterapia suele ser una de las opciones más solicitadas.",
+          title: "Therapeutic Massage",
+          description: "A personalized massage experience focused on addressing areas of muscular tension and promoting physical well-being.",
+          duration: "60-90 min",
+          linkText: "Message us on WhatsApp",
         },
         {
-          question: "¿Atienden parejas?",
-          answer: "Sí. Contamos con opciones de Spa y masajes para parejas.",
+          title: "Aromatherapy",
+          description: "We combine massage techniques with essential oils to enhance relaxation and create a deeper sense of well-being.",
+          duration: "60-90 min",
+          linkText: "Message us on WhatsApp",
+        },
+        {
+          title: "Couples Spa",
+          description: "Share a unique relaxation experience with someone special while disconnecting from everyday stress.",
+          duration: "90 min",
+          linkText: "Message us on WhatsApp",
         },
       ],
-    },
+      faq: [
+        {
+          question: "Do I need to book in advance?",
+          answer: "Yes. We work by appointment to provide each client with personalized attention and a comfortable experience.",
+        },
+        {
+          question: "How long does a massage session last?",
+          answer: "Depending on the treatment selected, sessions may last between 60 and 90 minutes.",
+        },
+        {
+          question: "Which massage do you recommend for stress?",
+          answer: "A relaxing massage combined with aromatherapy is one of our most requested options for people looking to unwind and enjoy a deeper sense of relaxation.",
+        },
+        {
+          question: "Do you offer couples' treatments?",
+          answer: "Yes. We offer spa and massage experiences designed for couples.",
+        },
       ],
     },
   },
