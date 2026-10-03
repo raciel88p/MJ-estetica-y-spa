@@ -1,0 +1,164 @@
+{
+  "intro": {
+    "label": "Wellness and Self-care",
+    "title": "Your body also needs moments of rest, freshness, and self-care.",
+    "p1": "At <span className=\"font-bold text-stone-900\">MJ Estética & Wellness Center</span>, we have designed cold wrap protocols focused on providing a relaxing, personalized body experience centered on women’s overall wellness and self-care.",
+    "items": [
+      "✨ Refreshing sensation",
+      "✨ Body wellness experience",
+      "✨ Personalized protocols",
+      "✨ Relaxing and comfortable environment",
+      "✨ Individualized attention"
+    ],
+    "box": {
+      "title": "Discover a New Wellness Experience",
+      "p1": "Stress, daily routines, a feeling of bodily heaviness, or simply the need to disconnect can make your body ask for a pause."
+    }
+  },
+  "core": {
+    "p1": "Cold wraps are a body wellness protocol designed to provide a refreshing, relaxing, and soothing experience through techniques focused on aesthetic care and women’s self-care.",
+    "p2": "At MJ Estética & Wellness Center, every session is individually adapted to your needs, goals, and desired wellness experience.",
+    "items": [
+      "✅ Ideal as a wellness complement",
+      "✅ Perfect for body self-care",
+      "✅ Relaxing and refreshing experience",
+      "✅ Premium spa atmosphere in Turrialba"
+    ]
+  },
+  "whatIs": {
+    "title": "What Are Cold Wraps?",
+    "p1": "Cold wraps are a body wellness protocol that uses specialized techniques designed to create a refreshing, relaxing, and soothing body experience.",
+    "p2": "During the session, wraps infused with refreshing components are carefully applied as part of a personalized protocol focused on:",
+    "items": [
+      "✔️ Body wellness",
+      "✔️ Women’s relaxation",
+      "✔️ A feeling of lightness",
+      "✔️ Wellness self-care",
+      "✔️ Premium body spa experience"
+    ],
+    "footer": "Each protocol is individually customized, making it an excellent option for those who want to give themselves a moment of relaxation and personal care."
+  },
+  "benefits": {
+    "title": "What Benefits Can Cold Wraps Provide?",
+    "desc": "Cold wraps have become a favorite body wellness experience among women looking to disconnect, relax, and feel better physically and emotionally.",
+    "items": [
+      "A refreshing body sensation",
+      "Relaxation and overall well-being",
+      "A feeling of bodily lightness",
+      "A complement to aesthetic body protocols",
+      "A premium spa wellness experience",
+      "Personalized body care",
+      "A moment to disconnect and practice self-care",
+      "A revitalizing body sensation"
+    ]
+  },
+  "recommended": {
+    "title": "Who Are Cold Wraps Recommended For?",
+    "desc": "This wellness protocol is ideal for:",
+    "items": [
+      { "t": "Women Looking for Body Relaxation", "d": "If you want to give yourself a moment of physical and mental rest, cold wraps can become a deeply relaxing experience." },
+      { "t": "People Experiencing a Feeling of Bodily Heaviness", "d": "Many clients seek wellness protocols that help them feel lighter, refreshed, and revitalized." },
+      { "t": "As a Complement to Body Treatments", "d": "Cold wraps can be incorporated into personalized wellness programs and complementary body protocols." },
+      { "t": "People Focused on Self-Care and Well-Being", "d": "Because taking care of your body is also part of feeling good about yourself." }
+    ]
+  },
+  "methodology": {
+    "title": "How Does a Cold Wrap Session Work?",
+    "items": [
+      { "s": "Step 1", "t": "Personalized Assessment", "d": "We learn about your needs and goals in order to customize the ideal protocol for you." },
+      { "s": "Step 2", "t": "Application of the Cold Wraps", "d": "The wraps are carefully applied in a relaxing and comfortable environment." },
+      { "s": "Step 3", "t": "Relaxation and Wellness", "d": "During the session, many people experience a feeling of freshness, rest, and physical disconnection from the stress of everyday life." },
+      { "s": "Step 4", "t": "Complementary Recommendations", "d": "We provide guidance regarding recommended frequency and complementary wellness protocols." }
+    ],
+    "stats": [
+      "⏱️ Approximate duration: 45–60 minutes",
+      "🌿 Relaxing spa-style environment",
+      "💆‍♀️ Personalized wellness experience"
+    ]
+  },
+  "philosophy": {
+    "title": "An Experience Focused on Body Wellness",
+    "p1": "At MJ Estética & Wellness Center, we believe modern aesthetics should also be about wellness, relaxation, and self-care.",
+    "label": "That is why we have created a space designed to help you:",
+    "items": [
+      "✨ Disconnect from stress",
+      "✨ Feel comfortable and cared for",
+      "✨ Enjoy a premium wellness experience",
+      "✨ Experience personalized body protocols",
+      "✨ Reconnect with yourself"
+    ],
+    "footerTitle": "You are not simply coming in for a treatment…",
+    "footerDesc": "You are giving yourself a moment that is just for you."
+  },
+  "sensations": {
+    "title": "What Does a Cold Wrap Session Feel Like?",
+    "desc": "Many of our clients describe the experience as:",
+    "items": ["💙 Refreshing", "💙 Relaxing", "💙 Comfortable", "💙 Revitalizing", "💙 Perfect for disconnecting from everyday stress"],
+    "footer": "Every experience may vary depending on the personalized protocol provided."
+  },
+  "testimonials": {
+    "title": "Real Client Testimonials",
+    "items": [
+      "“I loved the refreshing and relaxing sensation. I left feeling lighter and more at ease.”",
+      "“The atmosphere is incredibly relaxing, and the personalized attention makes all the difference.”",
+      "“It felt like much more than a treatment—it was a true self-care experience.”"
+    ],
+    "badge": "MJ Client"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "What does a cold wrap session feel like?", "a": "You will generally experience a refreshing and relaxing sensation designed to promote a sense of body comfort and well-being." },
+      { "q": "Can cold wraps help with a feeling of bodily heaviness?", "a": "Many people choose cold wraps because of the feeling of freshness and lightness they can provide." },
+      { "q": "How long does a session last?", "a": "Approximately 45 to 60 minutes." },
+      { "q": "Can cold wraps be combined with other treatments?", "a": "Yes. They can often be incorporated into wellness programs and complementary body treatments." },
+      { "q": "Are cold wraps relaxing?", "a": "Yes. They are designed to provide a relaxing, comfortable, and refreshing body experience." },
+      { "q": "How many sessions are recommended?", "a": "This depends on your individual goals and personalized protocol." }
+    ]
+  },
+  "packages": {
+    "title": "Wellness Packages & Sessions",
+    "items": [
+      "✨ Individual sessions",
+      "✨ Body wellness programs",
+      "✨ Premium spa experiences",
+      "✨ Personalized packages"
+    ],
+    "footer": "Plans available",
+    "subFooter": "Personalized assessment included"
+  },
+  "whyUs": {
+    "title": "Why Choose MJ Estética & Wellness Center?",
+    "label": "Because here, every experience is adapted to you.",
+    "items": [
+      "Personalized wellness protocols",
+      "Individualized attention",
+      "Relaxing and premium environment",
+      "Body experience focused on wellness",
+      "Comfortable and professional spaces",
+      "Holistic approach to women’s self-care"
+    ],
+    "footer": "At MJ Estética & Wellness Center, our goal is for every visit to become a genuine moment of wellness."
+  },
+  "location": {
+    "title": "📍 Located in Turrialba",
+    "items": ["✔️ Easy access", "✔️ Personalized attention", "✔️ Premium wellness environment", "✔️ WhatsApp available for reservations", "✔️ Nearby parking"]
+  },
+  "leadMagnet": {
+    "label": "🎁 EXCLUSIVE FREE RESOURCE",
+    "title": "Free Guide:",
+    "desc": "“How to Lift Your Bust and Improve Your Body Wellness”",
+    "p1": "Discover wellness tips, self-care habits, and complementary recommendations designed to help you feel better and more confident in your body.",
+    "keywordLabel": "💌 Comment the word:",
+    "keyword": "“COLD WRAPS”",
+    "footer": "and automatically receive your free guide + exclusive information about our wellness sessions.",
+    "cta": "GET FREE GUIDE"
+  },
+  "final": {
+    "title": "Book Your Wellness Experience Today",
+    "p1": "Your body deserves rest.",
+    "p2": "Your mind deserves a moment to disconnect.",
+    "p3": "And you deserve to feel good.",
+    "cta": "✨ Book Your Cold Wrap Experience at MJ Today ✨"
+  }
+}

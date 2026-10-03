@@ -1,0 +1,113 @@
+{
+  "problem": {
+    "title": "Do You Identify with Any of These Situations?",
+    "items": [
+      "You look tired even after a good night's sleep.",
+      "Dark circles affect your confidence.",
+      "Bags under the eyes make you look older.",
+      "You've tried creams and makeup without getting the expected results.",
+      "You feel like your eyes have lost their radiance."
+    ],
+    "footer": "The reality is that dark circles can make your face reflect tiredness, stress, or premature aging."
+  },
+  "solution": {
+    "label": "The Solution",
+    "title": "Dark Circle Treatment with Carboxitherapy in Turrialba",
+    "p1": "At <span className=\"font-bold text-stone-900\">MJ Fisio Estética & Spa</span>, we offer a specialized treatment that helps improve the appearance of the eye contour through the controlled application of medicinal carbon dioxide (CO₂).",
+    "p2": "Carboxitherapy is one of the most used procedures to revitalize the eye area without the need for surgery."
+  },
+  "benefits": {
+    "title": "Benefits of Carboxitherapy for Dark Circles",
+    "items": [
+      "Helps diminish the appearance of dark circles.",
+      "Promotes a more rested look.",
+      "Improves the radiance of the eye contour.",
+      "Minimally invasive procedure.",
+      "No surgery.",
+      "Quick sessions.",
+      "Personalized care.",
+      "Professional treatment in Turrialba."
+    ]
+  },
+  "howItWorks": {
+    "title": "How Does the Treatment Work?",
+    "p1": "Carboxitherapy consists of the controlled application of medicinal CO₂ in the treated area to stimulate processes related to circulation, oxygenation, and natural skin regeneration.",
+    "p2": "It is frequently used to help improve:",
+    "items": ["Dark circles", "Bags under the eyes", "Tired appearance", "Mild sagging", "Skin radiance"]
+  },
+  "idealFor": {
+    "title": "This Treatment May Be Ideal for You If You Present:",
+    "items": [
+      "Dark circles.",
+      "Bags under the eyes.",
+      "Tired look.",
+      "Dull skin in the eye contour.",
+      "Mild signs of aging.",
+      "Fine lines around the eyes."
+    ]
+  },
+  "whyUs": {
+    "title": "Why Choose MJ Fisio Estética & Spa in Turrialba?",
+    "items": [
+      "Personalized care.",
+      "Professional facial protocols.",
+      "Advanced aesthetic treatments.",
+      "Comfortable and safe environment.",
+      "Individualized assessment.",
+      "Excellent location in Turrialba.",
+      "Professional follow-up."
+    ],
+    "footer": "We focus on helping you improve the appearance of your skin through personalized treatments and modern aesthetic technology."
+  },
+  "coverage": {
+    "title": "We Serve Patients from All Over Turrialba and Cartago",
+    "p1": "We receive patients from all these nearby areas, providing the best care in aesthetic medicine and wellness.",
+    "zones": [
+      "Turrialba Center", "La Suiza", "Santa Cruz", "Pavones", "Tucurrique",
+      "Juan Viñas", "Pacayitas", "Cartago Center", "Paraíso", "Cervantes", "Jiménez"
+    ],
+    "footer": "If you are looking for a dark circle treatment near Turrialba, we will be happy to help you.",
+    "cta": "CHECK AVAILABILITY"
+  },
+  "firstVisit": {
+    "title": "What Is Your First Assessment Like?",
+    "items": [
+      { "s": "Step 1", "t": "Schedule your appointment via WhatsApp.", "d": "The first step for your transformation." },
+      { "s": "Step 2", "t": "We perform a personalized evaluation.", "d": "We analyze your specific case and goals." },
+      { "s": "Step 3", "t": "We determine the recommended protocol.", "d": "We design the ideal session plan for you." },
+      { "s": "Step 4", "t": "We start your treatment.", "d": "Your journey to a revitalized look begins." }
+    ]
+  },
+  "leadMagnet": {
+    "label": "🎁 EXCLUSIVE FREE RESOURCE",
+    "title": "Free Download Our Guide:",
+    "p1": "\"7 Tips to Improve the Appearance of Dark Circles\"",
+    "keywordLabel": "💌 Request it by sending the word:",
+    "keyword": "“OJERAS”",
+    "p2": "You will learn:",
+    "items": [
+      "Habits that can influence dark circles.",
+      "Recommended care for the eye contour.",
+      "How to complement your aesthetic treatments."
+    ],
+    "cta": "REQUEST GUIDE VIA WHATSAPP"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "Where do they perform the dark circle treatment in Turrialba?", "a": "At MJ Fisio Estética & Spa, Turrialba, Costa Rica." },
+      { "q": "Does carboxitherapy for dark circles hurt?", "a": "It can cause mild and temporary discomfort depending on each person." },
+      { "q": "How long does a session last?", "a": "Between 20 and 40 minutes approximately." },
+      { "q": "How many sessions do I need?", "a": "The quantity varies according to each case and will be defined during the assessment." },
+      { "q": "Is it a surgical procedure?", "a": "No, it is a non-surgical aesthetic treatment." }
+    ]
+  },
+  "finalCta": {
+    "title": "Schedule Your Assessment for Dark Circles in Turrialba",
+    "p1": "Recover a fresher, more radiant and rested look with our professional and personalized approach.",
+    "location": "📍 MJ Fisio Estética & Spa",
+    "subLocation": "Turrialba, Cartago, Costa Rica",
+    "cta1": "Book via WhatsApp",
+    "cta2": "I Want to Schedule My Assessment"
+  }
+}

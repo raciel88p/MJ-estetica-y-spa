@@ -5,9 +5,15 @@ import type { BeforeAfterItem } from "@/data/testimonials";
 interface Props {
   item: BeforeAfterItem;
   index?: number;
+  lang?: 'es' | 'en';
 }
 
-export function BeforeAfterCard({ item, index = 0 }: Props) {
+export function BeforeAfterCard({ item, index = 0, lang = 'es' }: Props) {
+  const t_before = lang === 'es' ? 'Antes' : 'Before';
+  const t_after = lang === 'es' ? 'Después' : 'After';
+  const t_resultIn = lang === 'es' ? 'Resultado en' : 'Result in';
+  const t_realResult = lang === 'es' ? '✔ Resultado real · Sin filtros' : '✔ Real result · No filters';
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.97 }}
@@ -23,12 +29,12 @@ export function BeforeAfterCard({ item, index = 0 }: Props) {
         <div className="relative bg-stone-100 flex flex-col items-center justify-center gap-3 p-4 border-r border-stone-200">
           <div className="text-4xl opacity-40 grayscale">{item.areaIcon}</div>
           <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">Antes</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-1">{t_before}</p>
             <div className="w-12 h-1.5 bg-stone-300 rounded-full mx-auto" />
           </div>
           <div className="absolute top-3 left-3">
             <span className="text-[10px] font-bold uppercase tracking-wider text-stone-400 bg-white border border-stone-200 rounded-full px-2 py-0.5">
-              Antes
+              {t_before}
             </span>
           </div>
         </div>
@@ -37,12 +43,12 @@ export function BeforeAfterCard({ item, index = 0 }: Props) {
         <div className="relative bg-primary/8 flex flex-col items-center justify-center gap-3 p-4">
           <div className="text-4xl">{item.areaIcon}</div>
           <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-1">Después</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-1">{t_after}</p>
             <div className="w-12 h-1.5 bg-primary rounded-full mx-auto" />
           </div>
           <div className="absolute top-3 right-3">
             <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary/10 border border-primary/20 rounded-full px-2 py-0.5">
-              Después
+              {t_after}
             </span>
           </div>
           {/* Sparkle badge */}
@@ -61,7 +67,7 @@ export function BeforeAfterCard({ item, index = 0 }: Props) {
       <div className="p-5">
         <div className="flex items-center gap-2 mb-3">
           <Clock className="w-3.5 h-3.5 text-primary/60" />
-          <span className="text-xs text-stone-500">Resultado en {item.duration}</span>
+          <span className="text-xs text-stone-500">{t_resultIn} {item.duration}</span>
         </div>
         <p className="text-xs text-stone-500 mb-1 uppercase tracking-wider font-medium">{item.area}</p>
         <p className="text-base font-bold text-stone-800 font-serif leading-snug mb-1">{item.result}</p>
@@ -71,7 +77,7 @@ export function BeforeAfterCard({ item, index = 0 }: Props) {
       {/* Footer badge */}
       <div className="px-5 pb-4">
         <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-3 py-1">
-          ✔ Resultado real · Sin filtros
+          {t_realResult}
         </span>
       </div>
     </motion.div>

@@ -1,0 +1,111 @@
+{
+  "intro": {
+    "title": "¿Te gustaría verte al espejo y sentir más confianza al observar tu piel?",
+    "p1": "En MJ Estética & Wellness Center entendemos que el acné no solo afecta la apariencia física. También puede impactar la autoestima y la seguridad personal.",
+    "p2": "Por eso ofrecemos tratamientos de Láser para Acné en Turrialba diseñados para complementar protocolos profesionales de cuidado facial, ayudando a mejorar progresivamente la apariencia de:",
+    "items": [
+      "Brotes activos",
+      "Marcas de acné",
+      "Piel grasa",
+      "Textura irregular",
+      "Poros visibles",
+      "Inflamación facial",
+      "Tono desigual",
+      "Apariencia opaca"
+    ],
+    "cta": "Agenda tu valoración personalizada hoy"
+  },
+  "problem": {
+    "title": "¿Buscas un Tratamiento para Acné en Turrialba?",
+    "p1": "Miles de personas prueban productos sin lograr los resultados que esperan porque el origen del acné es diferente en cada persona.",
+    "p2": "Por eso, analizamos tu piel para recomendar un protocolo personalizado evaluando:",
+    "items": [
+      "Tipo de piel",
+      "Nivel de inflamación",
+      "Presencia de marcas",
+      "Hábitos de cuidado facial",
+      "Objetivos del paciente"
+    ],
+    "whatIsTitle": "¿Qué es el Láser para Acné?",
+    "whatIsDesc": "Es un tratamiento facial avanzado que complementa estrategias de skincare profesional ayudando a mejorar progresivamente la apariencia de la piel con tendencia acneica.",
+    "whatIsItems": [
+      "Mejorar la apariencia de brotes.",
+      "Reducir visualmente marcas de acné.",
+      "Mejorar la textura facial.",
+      "Mantener una apariencia saludable y uniforme."
+    ]
+  },
+  "benefits": {
+    "label": "MJ ESTÉTICA FACIAL",
+    "title": "Beneficios del Láser para Acné",
+    "items": [
+      { "t": "Mejora progresiva", "d": "Una piel con apariencia más uniforme aumenta la confianza y bienestar personal." },
+      { "t": "Apoyo para marcas", "d": "Ayuda a apoyar tratamientos orientados a mejorar la apariencia de marcas visibles." },
+      { "t": "Textura uniforme", "d": "Contribuye a mejorar visualmente la textura de la piel de manera eficaz." },
+      { "t": "Aliado Skincare", "d": "Puede integrarse con otros protocolos de cuidado facial profesional." },
+      { "t": "Personalizado", "d": "Cada sesión se adapta según las necesidades detectadas en tu piel." },
+      { "t": "Bienestar integral", "d": "Porque sentirse bien también forma parte de verse bien cada día." }
+    ]
+  },
+  "methodology": {
+    "title": "¿Cómo es una Sesión de Láser para Acné?",
+    "subtitle": "Un protocolo profesional y cuidado para tu rostro.",
+    "steps": [
+      { "s": "Paso 1", "t": "Valoración Profesional", "d": "Analizamos tu piel y objetivos detalladamente." },
+      { "s": "Paso 2", "t": "Preparación Facial", "d": "Limpieza y acondicionamiento previo de la piel." },
+      { "s": "Paso 3", "t": "Aplicación del Protocolo", "d": "Tratamiento realizado por profesionales capacitados." },
+      { "s": "Paso 4", "t": "Recomendaciones", "d": "Cuidados posteriores y seguimiento personalizado." }
+    ],
+    "stats": [
+      "Duración: 30–60 min",
+      "Recuperación rápida"
+    ]
+  },
+  "beforeAfter": {
+    "title": "Antes y Después",
+    "desc": "Observa casos reales de pacientes que siguieron protocolos personalizados. Buscamos resultados naturales y una mejora progresiva de la apariencia facial.",
+    "tags": ["Apariencia uniforme", "Mejora progresiva", "Resultados naturales", "Bienestar facial"],
+    "caption": "Casos Reales MJ Estética"
+  },
+  "whyUs": {
+    "title": "¿Por Qué Elegir MJ Estética?",
+    "subtitle": "“Porque no tratamos únicamente la piel. Tratamos personas.”",
+    "items": [
+      "Protocolos personalizados",
+      "Atención individualizada",
+      "Tecnología especializada",
+      "Ambiente profesional",
+      "Seguimiento continuo",
+      "Educación en skincare"
+    ]
+  },
+  "leadMagnet": {
+    "label": "🎁 RECURSO GRATUITO",
+    "title": "Guía: 7 Hábitos que Ayudan a Mejorar una Piel con Tendencia al Acné",
+    "learnTitle": "Lo que aprenderás:",
+    "items": [
+      "Errores que empeoran los brotes.",
+      "Cuidados posteriores recomendados.",
+      "Cómo complementar tu rutina diaria.",
+      "Consejos para potenciar resultados.",
+      "Mantenimiento de apariencia saludable."
+    ],
+    "cta": "SOLICITAR GUÍA POR WHATSAPP"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      { "q": "¿El láser para acné duele?", "a": "La mayoría describe una sensación tolerable que depende de la sensibilidad individual." },
+      { "q": "¿Ayuda con marcas de acné?", "a": "Puede formar parte de protocolos orientados a mejorar su apariencia según valoración profesional." },
+      { "q": "¿Cuántas sesiones necesito?", "a": "Cada caso es diferente y requiere evaluación personalizada." },
+      { "q": "¿Sirve para piel grasa?", "a": "Muchas personas con piel grasa incorporan este tratamiento dentro de sus protocolos faciales." },
+      { "q": "¿Cuándo puedo ver resultados?", "a": "Los resultados suelen ser progresivos y dependen de diversos factores individuales." }
+    ]
+  },
+  "final": {
+    "title": "Agenda tu valoración facial hoy",
+    "desc": "Tu piel merece atención profesional. Mientras más temprano comiences un protocolo adecuado, más rápido podrás avanzar hacia una piel más saludable.",
+    "cta": "Reservar Cita",
+    "location": "📍 Turrialba, Cartago, Costa Rica"
+  }
+}

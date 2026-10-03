@@ -3,102 +3,136 @@ import { withAppProviders } from "@/components/ReactAppWrapper";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { Link } from "wouter";
 import { SEO } from "@/components/SEO";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { ChevronRight } from "lucide-react";
 
-const sections = [
-  {
-    title: "Páginas Principales",
-    color: "text-primary",
-    links: [
-      { name: "Inicio", href: "/" },
-      { name: "Armonización Facial (Landing)", href: "/medicina-estetica" },
-      { name: "Sobre Nosotros", href: "/nosotros" },
-      { name: "Paquetes", href: "/paquetes" },
-      { name: "Testimonios", href: "/testimonios" },
-      { name: "Médico Estético", href: "/medicos-esteticos" },
-      { name: "Buzón de Sugerencias", href: "/buzon-sugerencias" },
-      { name: "Política de Privacidad", href: "/politica-de-datos" },
-    ],
-  },
-  {
-    title: "Tratamientos Corporales",
-    color: "text-primary",
-    links: [
-      { name: "Todos los Tratamientos Corporales", href: "/servicios/corporales" },
-      { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
-      { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
-      { name: "Masajes Profundos", href: "/servicios/masajes-profundos" },
-      { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios" },
-      { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
-      { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
-      { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
-      { name: "Carboxiterapia", href: "/servicios/carboxiterapia" },
-      { name: "Levantamiento de Glúteo", href: "/servicios/levantamiento-gluteo" },
-      { name: "Levantamiento de Busto", href: "/servicios/levantamiento-busto" },
-      { name: "Vendas Frías", href: "/servicios/vendas-frias" },
-      { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
-      { name: "Boda Spa", href: "/servicios/boda-spa" },
-      { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
-    ],
-  },
-  {
-    title: "Tratamientos Faciales",
-    color: "text-primary",
-    links: [
-      { name: "Todos los Tratamientos Faciales", href: "/servicios/faciales" },
-      { name: "Limpieza Facial en Turrialba", href: "/servicios/limpieza-facial" },
-      { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
-      { name: "Peeling Facial", href: "/servicios/peeling-quimico" },
-      { name: "HOLLYWOOD PEEL EN TURRIALBA", href: "/servicios/hollywood-peel" },
-      { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
-      { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
-      { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
-      { name: "Hilos de Colágeno", href: "/servicios/hilos-colageno" },
-      { name: "Microagujas", href: "/servicios/microagujas" },
-      { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
-      { name: "Microagujas con Vitamina C", href: "/servicios/microagujas-vitamina-c" },
-      { name: "Rejuvenecimiento Facial en Turrialba", href: "/servicios/rejuvenecimiento-facial" },
-      { name: "Rejuvenecimiento Facial Láser", href: "/servicios/rejuvenecimiento-facial-laser" },
-      { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
-    ],
-  },
-  {
-    title: "Tratamientos de Piernas",
-    color: "text-primary",
-    links: [
-      { name: "Todos los Tratamientos de Piernas", href: "/servicios/piernas" },
-      { name: "Tratamiento Anticelulitis", href: "/servicios/tratamiento-anticelulitis" },
-      { name: "Cuidado de Piernas Cansadas", href: "/servicios/piernas-cansadas" },
-    ],
-  },
-  {
-    title: "Medicina Estética",
-    color: "text-primary",
-    links: [
-      { name: "Botox Full Face", href: "/servicios/botox-full-face" },
-      { name: "Relleno de Labios", href: "/servicios/relleno-de-labios" },
-      { name: "Ácido Hialurónico", href: "/servicios/acido-hialuronico" },
-      { name: "Biorevitalización", href: "/servicios/biorevitalizacion" },
-      { name: "Hilos Tensores Turrialba", href: "/servicios/hilos-tensores" },
-      { name: "Nutrición", href: "/servicios/nutricion" },
-      { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
-      { name: "Implante de Barba", href: "/servicios/implante-barba" },
-      { name: "Mesoterapia Capilar", href: "/servicios/mesoterapia-capilar" },
-    ],
-  },
-];
+const sectionsMap = {
+  es: [
+    {
+      title: "Páginas Principales",
+      color: "text-primary",
+      links: [
+        { name: "Inicio", href: "/" },
+        { name: "Armonización Facial (Landing)", href: "/medicina-estetica" },
+        { name: "Sobre Nosotros", href: "/nosotros" },
+        { name: "Paquetes", href: "/paquetes" },
+        { name: "Testimonios", href: "/testimonios" },
+        { name: "Médico Estético", href: "/medicos-esteticos" },
+        { name: "Buzón de Sugerencias", href: "/buzon-sugerencias" },
+        { name: "Política de Privacidad", href: "/politica-de-datos" },
+      ],
+    },
+    {
+      title: "Tratamientos Corporales",
+      color: "text-primary",
+      links: [
+        { name: "Todos los Tratamientos Corporales", href: "/servicios/corporales" },
+        { name: "Masajes Corporales", href: "/servicios/masajes-corporales" },
+        { name: "Masajes Relajantes", href: "/servicios/masajes-relajantes" },
+        { name: "Masajes Profundos", href: "/servicios/masajes-profundos" },
+        { name: "Masajes Post Operatorios", href: "/servicios/masajes-post-operatorios" },
+        { name: "Tensado Corporal", href: "/servicios/tensado-corporal" },
+        { name: "Depilación Láser", href: "/servicios/depilacion-laser" },
+        { name: "Iron Beauty Fitness", href: "/servicios/iron-beauty-fitness" },
+        { name: "Carboxiterapia", href: "/servicios/carboxiterapia" },
+        { name: "Levantamiento de Glúteo", href: "/servicios/levantamiento-gluteo" },
+        { name: "Levantamiento de Busto", href: "/servicios/levantamiento-busto" },
+        { name: "Vendas Frías", href: "/servicios/vendas-frias" },
+        { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
+        { name: "Boda Spa", href: "/servicios/boda-spa" },
+        { name: "Blanqueamiento Zona Íntima", href: "/servicios/blanqueamiento-zona-intima" },
+      ],
+    },
+    {
+      title: "Tratamientos Faciales",
+      color: "text-primary",
+      links: [
+        { name: "Todos los Tratamientos Faciales", href: "/servicios/faciales" },
+        { name: "Limpieza Facial en Turrialba", href: "/servicios/limpieza-facial" },
+        { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
+        { name: "Peeling Facial", href: "/servicios/peeling-quimico" },
+        { name: "HOLLYWOOD PEEL EN TURRIALBA", href: "/servicios/hollywood-peel" },
+        { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
+        { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
+        { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
+        { name: "Hilos de Colágeno", href: "/servicios/hilos-colageno" },
+        { name: "Microagujas", href: "/servicios/microagujas" },
+        { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
+        { name: "Microagujas con Vitamina C", href: "/servicios/microagujas-vitamina-c" },
+        { name: "Rejuvenecimiento Facial en Turrialba", href: "/servicios/rejuvenecimiento-facial" },
+        { name: "Rejuvenecimiento Facial Láser", href: "/servicios/rejuvenecimiento-facial-laser" },
+        { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },
+      ],
+    },
+  ],
+  en: [
+    {
+      title: "Main Pages",
+      color: "text-primary",
+      links: [
+        { name: "Home", href: "/en" },
+        { name: "Facial Harmonization (Landing)", href: "/en/facial-harmonization" },
+        { name: "About Us", href: "/en/nosotros" },
+        { name: "Packages", href: "/en/packages" },
+        { name: "Testimonials", href: "/en/testimonials" },
+        { name: "Medical Aesthetic", href: "/en/medical-aesthetic" },
+        { name: "Suggestion Box", href: "/en/suggestion-box" },
+        { name: "Privacy Policy", href: "/en/data-policy" },
+      ],
+    },
+    {
+      title: "Body Treatments",
+      color: "text-primary",
+      links: [
+        { name: "All Body Treatments", href: "/en/services/body-treatments" },
+        { name: "Body Massages", href: "/en/services/body-massages" },
+        { name: "Relaxing Massages", href: "/en/services/relaxing-massages" },
+        { name: "Deep Tissue Massages", href: "/en/services/deep-tissue-massages" },
+        { name: "Post-Operative Massages", href: "/en/services/post-operative-massages" },
+        { name: "Body Tightening", href: "/en/services/body-tightening" },
+        { name: "Laser Hair Removal", href: "/en/services/laser-hair-removal" },
+        { name: "Carboxytherapy", href: "/en/services/carboxytherapy" },
+        { name: "Butt Lift", href: "/en/services/butt-lift" },
+        { name: "Bust Lift", href: "/en/services/bust-lift" },
+        { name: "Cold Wraps", href: "/en/services/cold-wraps" },
+        { name: "Auriculotherapy", href: "/en/services/auriculotherapy" },
+        { name: "Spa for Brides", href: "/en/services/spa-brides" },
+      ],
+    },
+    {
+      title: "Facial Treatments",
+      color: "text-primary",
+      links: [
+        { name: "All Facial Treatments", href: "/en/services/facials" },
+        { name: "Facial Cleansing", href: "/en/services/facial-cleansing" },
+        { name: "Facial Therapies", href: "/en/services/facial-therapies" },
+        { name: "Facial Peeling", href: "/en/services/facial-peeling" },
+        { name: "Hollywood Peel", href: "/en/services/hollywood-peel" },
+        { name: "Stain Removal", href: "/en/services/stain-removal" },
+        { name: "Facial Radiofrequency", href: "/en/services/facial-radiofrequency" },
+        { name: "Salmon DNA", href: "/en/services/salmon-dna" },
+        { name: "Collagen Threads", href: "/en/services/collagen-threads" },
+        { name: "Microneedling", href: "/en/services/microneedling" },
+        { name: "Facial Rejuvenation", href: "/en/services/facial-rejuvenation" },
+        { name: "Laser Facial Rejuvenation", href: "/en/services/laser-facial-rejuvenation" },
+        { name: "Dark Circles Treatment", href: "/en/services/dark-circles-treatment" },
+      ],
+    },
+  ],
+};
 
-function SitemapPage() {
+function SitemapPage({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Mapa del Sitio"
-        description="Todas las páginas y tratamientos de MJ Fisio Estética y Spa en Turrialba, Costa Rica."
-        canonical="/mapa-del-sitio"
+        title={lang === 'es' ? "Mapa del Sitio" : "Sitemap"}
+        description={lang === 'es' ? "Todas las páginas y tratamientos de MJ Fisio Estética y Spa en Turrialba, Costa Rica." : "All pages and treatments of MJ Fisio Estética & Spa in Turrialba, Costa Rica."}
+        canonical={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"}
+        lang={lang}
       />
-      <Navbar />
+      <Navbar lang={lang} alternateLink={lang === 'es' ? '/en/sitemap' : '/mapa-del-sitio'} />
       <FloatingWhatsApp />
 
       <section className="relative pt-36 pb-20 bg-[#071e2e] overflow-hidden">
@@ -124,7 +158,7 @@ function SitemapPage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            {sections.map((section) => (
+            {sectionsMap[lang].map((section) => (
               <div key={section.title}>
                 <h2 className="text-lg font-serif font-bold text-foreground border-b border-stone-200 pb-3 mb-5">
                   {section.title}
@@ -132,13 +166,13 @@ function SitemapPage() {
                 <ul className="space-y-2">
                   {section.links.map((link) => (
                     <li key={link.href}>
-                      <a
+                      <Link
                         href={link.href}
-                        className="group flex items-center gap-2 text-stone-600 hover:text-primary transition-colors text-sm"
+                        className="group flex items-center gap-2 text-stone-600 hover:text-primary transition-colors text-sm cursor-pointer"
                       >
                         <ChevronRight className="w-3.5 h-3.5 shrink-0 text-primary/50 group-hover:text-primary transition-colors" />
                         {link.name}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -148,7 +182,7 @@ function SitemapPage() {
         </div>
       </section>
 
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

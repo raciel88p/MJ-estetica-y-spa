@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import type { ServicePageData } from "@/data/services";
+import es from "@/i18n/locales/es/vendas-frias.json";
+import en from "@/i18n/locales/en/vendas-frias.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -50,7 +52,8 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
   );
 }
 
-export function VendasFriasContent({ service, waLink }: { service: ServicePageData; waLink: string }) {
+export function VendasFriasContent({ waLink, lang = "es" }: { service: ServicePageData; waLink: string; lang?: "es" | "en" }) {
+  const content = lang === "es" ? es : en;
   return (
     <div className="bg-white">
       {/* ── INTRO SECTION ────────────────────────────── */}
@@ -59,22 +62,14 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-px bg-primary" />
-              <span className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">Bienestar y Autocuidado</span>
+              <span className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase">{content.intro.label}</span>
             </div>
             <p className="text-stone-600 text-lg leading-relaxed mb-6 italic">
-              Tu cuerpo también necesita momentos de descanso, frescura y autocuidado.
+              {content.intro.title}
             </p>
-            <p className="text-stone-600 text-lg leading-relaxed mb-10">
-              En <span className="font-bold text-stone-900">MJ Estética & Wellness Center</span> hemos diseñado protocolos de vendas frías enfocados en brindar una experiencia corporal relajante, personalizada y orientada al bienestar integral femenino.
-            </p>
+            <p className="text-stone-600 text-lg leading-relaxed mb-10" dangerouslySetInnerHTML={{ __html: content.intro.p1 }} />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                "✨ Sensación refrescante",
-                "✨ Experiencia wellness corporal",
-                "✨ Protocolos personalizados",
-                "✨ Ambiente relajante y cómodo",
-                "✨ Atención individualizada"
-              ].map((item, i) => (
+              {content.intro.items.map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <span className="text-stone-700 font-medium">{item}</span>
                 </div>
@@ -83,10 +78,10 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
 
             <div className="mt-16 p-8 bg-stone-50 border-l-4 border-primary">
               <p className="text-xl text-stone-900 font-serif leading-tight">
-                Descubre una nueva experiencia de bienestar corporal
+                {content.intro.box.title}
               </p>
               <p className="mt-4 text-stone-600 leading-relaxed">
-                Muchas veces el estrés, la rutina, la sensación de pesadez corporal o simplemente la necesidad de desconectarnos hacen que el cuerpo pida una pausa.
+                {content.intro.box.p1}
               </p>
             </div>
           </motion.div>
@@ -98,20 +93,15 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
             <p className="text-stone-600 text-lg leading-relaxed mb-8">
-              Las vendas frías son un protocolo wellness corporal diseñado para brindar sensación de frescura, relajación y bienestar mediante técnicas enfocadas en el cuidado estético y el autocuidado femenino.
+              {content.core.p1}
             </p>
             <p className="text-stone-600 text-lg leading-relaxed font-medium">
-              En MJ Estética & Wellness Center cada sesión se adapta de forma individual según tus necesidades, objetivos y experiencia corporal deseada.
+              {content.core.p2}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            {[
-              "✅ Ideal como complemento wellness",
-              "✅ Perfecto para autocuidado corporal",
-              "✅ Experiencia relajante y refrescante",
-              "✅ Ambiente spa premium en Turrialba"
-            ].map((item, i) => (
+            {content.core.items.map((item, i) => (
               <div key={i} className="bg-white p-4 border border-stone-200 shadow-sm rounded-sm text-center">
                 <span className="text-stone-800 font-bold">{item}</span>
               </div>
@@ -124,23 +114,17 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-16">
-            <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8">¿Qué son las vendas frías?</h2>
+            <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8">{content.whatIs.title}</h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-8">
-              Las vendas frías son un protocolo corporal wellness que utiliza técnicas especializadas orientadas a generar sensación de frescura, relajación y bienestar corporal.
+              {content.whatIs.p1}
             </p>
             <p className="text-stone-600 text-lg leading-relaxed">
-              Durante la sesión se aplican vendas con componentes refrescantes cuidadosamente integrados dentro de un protocolo personalizado enfocado en:
+              {content.whatIs.p2}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
-            {[
-              "✔️ bienestar corporal",
-              "✔️ relajación femenina",
-              "✔️ sensación de ligereza",
-              "✔️ autocuidado wellness",
-              "✔️ experiencia spa corporal"
-            ].map((item, i) => (
+            {content.whatIs.items.map((item, i) => (
               <div key={i} className="flex items-center gap-3 p-3 bg-stone-50 rounded-sm">
                 <span className="text-stone-700 font-medium">{item}</span>
               </div>
@@ -148,7 +132,7 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
           </div>
 
           <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center text-primary font-bold italic">
-            Cada protocolo se adapta individualmente, convirtiéndose en una excelente alternativa para quienes desean regalarse un momento de relajación y cuidado personal.
+            {content.whatIs.footer}
           </motion.p>
         </div>
       </section>
@@ -157,23 +141,14 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       <section className="py-24 bg-stone-900 text-white">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold mb-8 text-white">¿Qué beneficios pueden aportar las vendas frías?</h2>
+            <h2 className="text-4xl font-serif font-bold mb-8 text-white">{content.benefits.title}</h2>
             <p className="text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
-              Las vendas frías se han convertido en uno de los tratamientos wellness corporales favoritos por mujeres que desean desconectarse, relajarse y sentirse mejor física y emocionalmente.
+              {content.benefits.desc}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
-            {[
-              "Sensación de frescura corporal",
-              "Relajación y bienestar integral",
-              "Sensación de ligereza corporal",
-              "Complemento de protocolos estéticos corporales",
-              "Experiencia spa wellness premium",
-              "Cuidado corporal personalizado",
-              "Momento de desconexión y autocuidado",
-              "Sensación corporal revitalizante"
-            ].map((item, i) => (
+            {content.benefits.items.map((item, i) => (
               <motion.div
                 key={i}
                 initial="hidden" whileInView="visible" viewport={{ once: true }}
@@ -194,17 +169,12 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl font-serif font-bold text-stone-900 mb-4">¿Para quién se recomiendan las vendas frías?</h2>
-            <p className="text-stone-500">Este protocolo wellness es ideal para:</p>
+            <h2 className="text-3xl font-serif font-bold text-stone-900 mb-4">{content.recommended.title}</h2>
+            <p className="text-stone-500">{content.recommended.desc}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { t: "Mujeres que buscan relajación corporal", d: "Si deseas regalarse un momento de descanso físico y mental, las vendas frías pueden convertirse en una experiencia altamente relajante." },
-              { t: "Personas con sensación de pesadez corporal", d: "Muchas clientas buscan protocolos que les ayuden a sentirse más ligeras y revitalizadas." },
-              { t: "Complemento de tratamientos corporales", d: "Las vendas frías pueden integrarse dentro de programas wellness y protocolos corporales personalizados." },
-              { t: "Personas enfocadas en autocuidado y bienestar", d: "Porque cuidar tu cuerpo también es parte de sentirte bien contigo misma." }
-            ].map((item, i) => (
+            {content.recommended.items.map((item, i) => (
               <motion.div
                 key={i}
                 initial="hidden" whileInView="visible" viewport={{ once: true }}
@@ -223,15 +193,10 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       <section className="py-24 bg-stone-50">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-stone-900">¿Cómo funciona una sesión de vendas frías?</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-stone-900">{content.methodology.title}</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { s: "Paso 1", t: "Evaluación personalizada", d: "Analizamos tus necesidades y objetivos para adaptar el protocolo ideal para ti." },
-              { s: "Paso 2", t: "Aplicación de las vendas frías", d: "Se colocan cuidadosamente las vendas dentro de un ambiente relajante y cómodo." },
-              { s: "Paso 3", t: "Relajación y bienestar", d: "Durante la sesión muchas personas experimentan sensación de frescura, descanso y desconexión corporal." },
-              { s: "Paso 4", t: "Recomendaciones complementarias", d: "Te orientamos sobre frecuencia recomendada y protocolos wellness complementarios." }
-            ].map((step, i) => (
+            {content.methodology.items.map((step, i) => (
               <div key={i} className="relative bg-white p-8 border border-stone-200 shadow-sm group">
                 <span className="text-primary text-[10px] font-bold tracking-[0.3em] uppercase mb-4 block font-sans">{step.s}</span>
                 <h4 className="text-lg font-serif font-bold text-stone-900 mb-4 leading-tight">{step.t}</h4>
@@ -241,18 +206,15 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
           </div>
 
           <div className="mt-16 flex flex-wrap justify-center gap-8">
-            <div className="flex items-center gap-2 text-stone-700 font-medium">
-              <Clock className="w-5 h-5 text-primary" />
-              <span>⏱️ Duración aproximada: 45 a 60 minutos</span>
-            </div>
-            <div className="flex items-center gap-2 text-stone-700 font-medium">
-              <Wind className="w-5 h-5 text-primary" />
-              <span>🌿 Ambiente relajante tipo spa</span>
-            </div>
-            <div className="flex items-center gap-2 text-stone-700 font-medium">
-              <Sparkles className="w-5 h-5 text-primary" />
-              <span>💆‍♀️ Experiencia wellness personalizada</span>
-            </div>
+            {content.methodology.stats.map((stat, i) => {
+              const icons = [<Clock className="w-5 h-5 text-primary" />, <Wind className="w-5 h-5 text-primary" />, <Sparkles className="w-5 h-5 text-primary" />];
+              return (
+              <div key={i} className="flex items-center gap-2 text-stone-700 font-medium">
+                {icons[i]}
+                <span>{stat}</span>
+              </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -261,27 +223,21 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-8">Una experiencia enfocada en bienestar corporal</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-8">{content.philosophy.title}</h2>
             <p className="text-stone-600 text-lg leading-relaxed mb-12">
-              En MJ Estética & Wellness Center creemos que la estética moderna también debe enfocarse en bienestar, relajación y autocuidado.
+              {content.philosophy.p1}
             </p>
-            <p className="text-stone-400 text-[10px] uppercase tracking-widest mb-10 font-bold">Por eso hemos creado un espacio pensado para:</p>
+            <p className="text-stone-400 text-[10px] uppercase tracking-widest mb-10 font-bold">{content.philosophy.label}</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
-              {[
-                "✨ desconectarte del estrés",
-                "✨ sentirte cómoda y cuidada",
-                "✨ vivir una experiencia wellness premium",
-                "✨ disfrutar protocolos corporales personalizados",
-                "✨ reconectar contigo misma"
-              ].map((item, i) => (
+              {content.philosophy.items.map((item, i) => (
                 <div key={i} className="p-4 border border-stone-100 text-stone-800 font-medium text-sm">
                    {item}
                 </div>
               ))}
             </div>
             <div className="p-10 bg-primary/5 border border-primary/20 rounded-sm">
-               <p className="text-2xl font-serif text-stone-900 mb-4">Aquí no solo vienes a recibir un tratamiento…</p>
-               <p className="text-xl font-serif text-primary italic font-bold">Vienes a regalarte un momento para ti.</p>
+               <p className="text-2xl font-serif text-stone-900 mb-4">{content.philosophy.footerTitle}</p>
+               <p className="text-xl font-serif text-primary italic font-bold">{content.philosophy.footerDesc}</p>
             </div>
           </motion.div>
         </div>
@@ -291,16 +247,16 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       <section className="py-24 bg-stone-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <h2 className="text-3xl font-serif font-bold text-stone-900 mb-8">¿Qué se siente durante una sesión?</h2>
-            <p className="text-stone-500 mb-12">La mayoría de nuestras clientas describen la experiencia como:</p>
+            <h2 className="text-3xl font-serif font-bold text-stone-900 mb-8">{content.sensations.title}</h2>
+            <p className="text-stone-500 mb-12">{content.sensations.desc}</p>
             <div className="flex flex-wrap justify-center gap-4 mb-16">
-              {["💙 refrescante", "💙 relajante", "💙 cómoda", "💙 revitalizante", "💙 ideal para desconectarse del estrés diario"].map((item, i) => (
+              {content.sensations.items.map((item, i) => (
                 <span key={i} className="px-6 py-3 bg-white border border-stone-200 text-stone-800 font-bold rounded-full text-sm shadow-sm">
                   {item}
                 </span>
               ))}
             </div>
-            <p className="text-stone-400 text-xs italic">Cada experiencia puede variar según el protocolo personalizado aplicado.</p>
+            <p className="text-stone-400 text-xs italic">{content.sensations.footer}</p>
           </motion.div>
         </div>
       </section>
@@ -309,15 +265,11 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       <section className="py-24 bg-white">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl font-serif font-bold text-stone-900">Testimonios reales</h2>
+            <h2 className="text-3xl font-serif font-bold text-stone-900">{content.testimonials.title}</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              "“Me encantó la sensación de frescura y relajación. Salí sintiéndome más ligera y tranquila.”",
-              "“El ambiente es súper relajante y la atención personalizada hace toda la diferencia.”",
-              "“Más que un tratamiento, sentí que fue una experiencia de autocuidado.”"
-            ].map((text, i) => (
+            {content.testimonials.items.map((text, i) => (
               <motion.div
                 key={i}
                 initial="hidden" whileInView="visible" viewport={{ once: true }}
@@ -326,7 +278,7 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
               >
                 <Quote className="w-8 h-8 text-primary/10 absolute top-4 right-4" />
                 <p className="text-stone-600 mb-6 leading-relaxed italic">{text}</p>
-                <p className="text-primary text-[10px] font-bold tracking-widest uppercase">— Paciente MJ</p>
+                <p className="text-primary text-[10px] font-bold tracking-widest uppercase">— {content.testimonials.badge}</p>
               </motion.div>
             ))}
           </div>
@@ -337,17 +289,10 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       <section className="py-24 bg-stone-50">
         <div className="max-w-3xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-12 text-center">
-            <h2 className="text-4xl font-serif font-bold text-stone-900">Preguntas Frecuentes</h2>
+            <h2 className="text-4xl font-serif font-bold text-stone-900">{content.faq.title}</h2>
           </motion.div>
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="border-t border-stone-200">
-            {[
-              { q: "¿Qué se siente durante una sesión de vendas frías?", a: "Generalmente se experimenta una sensación refrescante y relajante que ayuda a generar bienestar corporal." },
-              { q: "¿Las vendas frías ayudan con sensación de pesadez?", a: "Muchas personas las buscan precisamente por la sensación de ligereza y frescura que pueden aportar." },
-              { q: "¿Cuánto dura la sesión?", a: "Aproximadamente entre 45 y 60 minutos." },
-              { q: "¿Se pueden combinar con otros tratamientos?", a: "Sí, frecuentemente forman parte de protocolos wellness y tratamientos corporales complementarios." },
-              { q: "¿Son relajantes?", a: "Sí, están orientadas a brindar una experiencia corporal relajante y confortable." },
-              { q: "¿Cuántas sesiones se recomiendan?", a: "Depende de cada objetivo y protocolo personalizado." }
-            ].map((item, i) => (
+            {content.faq.items.map((item, i) => (
               <motion.div key={i} variants={fadeUp}>
                 <FaqItem question={item.q} answer={item.a} />
               </motion.div>
@@ -361,22 +306,22 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-900 text-white p-12 relative overflow-hidden">
              <div className="relative z-10">
-               <h2 className="text-3xl font-serif font-bold mb-10 text-center text-white">Paquetes Wellness y Sesiones</h2>
+               <h2 className="text-3xl font-serif font-bold mb-10 text-center text-white">{content.packages.title}</h2>
                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
                  <div className="space-y-4">
-                   {["✨ Sesiones individuales", "✨ Programas corporales wellness"].map((item, i) => (
+                   {content.packages.items.slice(0, 2).map((item, i) => (
                      <p key={i} className="text-lg font-medium">{item}</p>
                    ))}
                  </div>
                  <div className="space-y-4">
-                   {["✨ Experiencias spa premium", "✨ Paquetes personalizados"].map((item, i) => (
+                   {content.packages.items.slice(2, 4).map((item, i) => (
                      <p key={i} className="text-lg font-medium">{item}</p>
                    ))}
                  </div>
                </div>
                <div className="border-t border-stone-200 pt-10 flex flex-col items-center">
-                 <p className="text-2xl font-serif text-primary font-bold mb-2">Planes disponibles</p>
-                 <p className="text-stone-400 text-xs uppercase tracking-widest font-bold">Valoración personalizada incluida</p>
+                 <p className="text-2xl font-serif text-primary font-bold mb-2">{content.packages.footer}</p>
+                 <p className="text-stone-400 text-xs uppercase tracking-widest font-bold">{content.packages.subFooter}</p>
                </div>
              </div>
              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
@@ -388,18 +333,11 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       <section className="py-24 bg-stone-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6">¿Por qué elegir MJ Estética & Wellness Center?</h2>
-            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-12">Porque aquí cada experiencia se adapta a ti.</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6">{content.whyUs.title}</h2>
+            <p className="text-primary font-bold uppercase tracking-widest text-sm mb-12">{content.whyUs.label}</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 text-left max-w-2xl mx-auto mb-16">
-              {[
-                "Protocolos wellness personalizados",
-                "Atención individualizada",
-                "Ambiente relajante y premium",
-                "Experiencia corporal enfocada en bienestar",
-                "Espacios cómodos y profesionales",
-                "Enfoque integral de autocuidado femenino"
-              ].map((item, i) => (
+              {content.whyUs.items.map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
                    <span className="text-stone-700 font-medium">{item}</span>
@@ -408,7 +346,7 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
             </div>
 
             <p className="text-lg text-stone-600 italic">
-              En MJ Estética & Wellness Center buscamos que cada visita se convierta en un momento de bienestar real.
+              {content.whyUs.footer}
             </p>
           </motion.div>
         </div>
@@ -418,9 +356,9 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       <section className="py-20 bg-white border-b border-stone-100">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <h2 className="text-2xl font-serif font-bold text-stone-900 mb-8">📍 Ubicación en Turrialba</h2>
+            <h2 className="text-2xl font-serif font-bold text-stone-900 mb-8">{content.location.title}</h2>
             <div className="flex flex-wrap justify-center gap-8">
-              {["✔️ Fácil acceso", "✔️ Atención personalizada", "✔️ Ambiente wellness premium", "✔️ WhatsApp disponible para reservas", "✔️ Parqueo cercano"].map((item, i) => (
+              {content.location.items.map((item, i) => (
                 <span key={i} className="text-stone-600 font-medium text-sm">{item}</span>
               ))}
             </div>
@@ -432,17 +370,17 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       <section className="py-24 bg-primary text-white overflow-hidden relative">
         <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <p className="text-white/60 text-xs font-bold tracking-[0.4em] uppercase mb-4">🎁 RECURSO GRATUITO EXCLUSIVO</p>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">Guía Gratuita:</h2>
-              <p className="text-2xl font-serif mb-10 italic">“Cómo levantar el busto y mejorar tu bienestar corporal”</p>
+              <p className="text-white/60 text-xs font-bold tracking-[0.4em] uppercase mb-4">{content.leadMagnet.label}</p>
+              <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">{content.leadMagnet.title}</h2>
+              <p className="text-2xl font-serif mb-10 italic">{content.leadMagnet.desc}</p>
               <p className="text-white/80 text-lg mb-12 max-w-2xl mx-auto">
-                Descubre consejos wellness, hábitos de autocuidado y recomendaciones complementarias para sentirte mejor contigo misma.
+                {content.leadMagnet.p1}
               </p>
 
               <div className="max-w-md mx-auto bg-white p-10 text-stone-900 shadow-2xl">
-                 <p className="text-[10px] font-bold text-primary tracking-[0.3em] uppercase mb-4">💌 Comenta la palabra:</p>
-                 <p className="text-5xl font-serif font-bold text-primary mb-10 underline decoration-stone-200">“VENDAS”</p>
-                 <p className="text-sm text-stone-500 leading-relaxed mb-10">y recibe automáticamente la guía gratuita + información exclusiva de nuestras sesiones wellness.</p>
+                 <p className="text-[10px] font-bold text-primary tracking-[0.3em] uppercase mb-4">{content.leadMagnet.keywordLabel}</p>
+                 <p className="text-5xl font-serif font-bold text-primary mb-10 underline decoration-stone-200 uppercase tracking-widest">{content.leadMagnet.keyword}</p>
+                 <p className="text-sm text-stone-500 leading-relaxed mb-10">{content.leadMagnet.footer}</p>
                  <a
                     href="https://www.instagram.com/mj_fisioestetica/"
                     target="_blank"
@@ -450,7 +388,7 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
                     className="flex items-center justify-center gap-3 bg-stone-900 text-white py-4 font-bold tracking-widest uppercase hover:bg-primary transition-colors text-xs"
                  >
                     <Instagram className="w-4 h-4" />
-                    IR A INSTAGRAM
+                    {content.leadMagnet.cta}
                  </a>
               </div>
            </motion.div>
@@ -462,11 +400,11 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-            <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8">Agenda tu experiencia wellness hoy</h2>
+            <h2 className="text-4xl font-serif font-bold text-stone-900 mb-8">{content.final.title}</h2>
             <div className="space-y-2 mb-12">
-               <p className="text-xl text-stone-600 italic">Tu cuerpo merece descanso.</p>
-               <p className="text-xl text-stone-600 italic">Tu mente merece desconexión.</p>
-               <p className="text-xl text-stone-600 italic font-bold">Y tú mereces sentirte bien.</p>
+               <p className="text-xl text-stone-600 italic">{content.final.p1}</p>
+               <p className="text-xl text-stone-600 italic">{content.final.p2}</p>
+               <p className="text-xl text-stone-600 italic font-bold">{content.final.p3}</p>
             </div>
 
             <a
@@ -476,7 +414,7 @@ export function VendasFriasContent({ service, waLink }: { service: ServicePageDa
               className="inline-flex items-center gap-3 bg-primary text-white px-12 py-5 font-bold tracking-[0.2em] uppercase hover:bg-stone-900 transition-all text-xs"
             >
               <MessageCircle className="w-5 h-5" />
-              RESERVAR MI MOMENTO MJ
+              {content.final.cta}
             </a>
           </motion.div>
         </div>

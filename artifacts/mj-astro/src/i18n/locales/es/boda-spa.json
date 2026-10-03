@@ -1,0 +1,86 @@
+{
+  "hero": {
+    "title": "Boda Spa en Turrialba ✨",
+    "subtitle": "El Spa Perfecto Para Novias Que Quieren Verse Radiantes en Su Gran Día",
+    "intro": "¿Estrés, cansancio, ansiedad o piel apagada antes de la boda? En MJ Estética & Wellness Center te ayudamos a relajarte, desconectarte y lucir espectacular con nuestro exclusivo servicio de Boda Spa en Turrialba.",
+    "subintro": "Disfruta una experiencia diseñada para novias, parejas y despedidas de soltera que desean vivir un momento único antes del gran día.",
+    "bullets": [
+      "✔ Masajes relajantes",
+      "✔ Aromaterapia antiestrés",
+      "✔ Hidratación y renovación de la piel",
+      "✔ Ambiente privado y relajante",
+      "✔ Atención personalizada en Turrialba"
+    ],
+    "closing": "Reserva hoy tu experiencia spa y prepárate para tu boda sintiéndote hermosa, relajada y renovada."
+  },
+  "whyChoose": {
+    "title": "¿Por Qué Elegir Nuestro Spa Para Novias en Turrialba?",
+    "subtitle": "Tu boda merece más que un masaje común. Creamos experiencias de relajación profunda para ayudarte a:",
+    "bullets": [
+      "✨ Reducir el estrés pre boda",
+      "✨ Mejorar la circulación y descanso",
+      "✨ Relajar músculos y tensiones",
+      "✨ Revitalizar tu piel antes del maquillaje",
+      "✨ Disfrutar un momento especial con tu pareja o amigas"
+    ],
+    "closing": "Nuestro servicio de spa para novias en Turrialba combina bienestar, relajación y estética en un solo lugar."
+  },
+  "couplesAndParties": {
+    "title": "Spa Para Parejas y Despedidas de Soltera en Turrialba 💍",
+    "subtitle": "Celebra antes de tu boda con una experiencia inolvidable. Ofrecemos:",
+    "options": [
+      "Spa para parejas",
+      "Día de spa para novias",
+      "Masajes relajantes en pareja",
+      "Experiencias para despedidas de soltera",
+      "Paquetes personalizados"
+    ],
+    "note": "Ideal para quienes buscan un momento exclusivo de relajación en Turrialba antes del evento."
+  },
+  "benefits": {
+    "title": "Beneficios de Nuestro Boda Spa",
+    "items": [
+      "✔ Reduce estrés y ansiedad",
+      "✔ Mejora el descanso antes de la boda",
+      "✔ Ayuda a relajar cuello, espalda y piernas",
+      "✔ Mejora la apariencia de la piel",
+      "✔ Genera bienestar físico y emocional"
+    ],
+    "goal": "Nuestro objetivo es que te sientas segura, tranquila y radiante en uno de los días más importantes de tu vida."
+  },
+  "reserve": {
+    "title": "Reserva Tu Spa en Turrialba Hoy 📲",
+    "notice": "Los espacios para fines de semana y temporadas de bodas se llenan rápido.",
+    "agendaTitle": "Agenda ahora tu:",
+    "services": [
+      "masaje relajante en Turrialba",
+      "spa para novias",
+      "spa para parejas",
+      "experiencia pre boda"
+    ],
+    "closing": "y vive una experiencia única en MJ Estética & Wellness Center.",
+    "location": "📍 Atención en Turrialba, Cartago",
+    "cta": "📲 Reserva por WhatsApp hoy mismo"
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "q": "¿Cuándo se recomienda hacer un spa antes de la boda?",
+        "a": "Lo ideal es entre 1 y 7 días antes del evento para reducir el estrés y revitalizar la piel."
+      },
+      {
+        "q": "¿El servicio puede ser para parejas?",
+        "a": "Sí. Contamos con experiencias relajantes para parejas en Turrialba."
+      },
+      {
+        "q": "¿Ofrecen paquetes personalizados?",
+        "a": "Sí. Podemos personalizar la experiencia según tus necesidades."
+      },
+      {
+        "q": "¿El masaje ayuda con el estrés?",
+        "a": "Sí. Los masajes relajantes ayudan a disminuir tensión muscular y ansiedad pre boda."
+      }
+    ]
+  }
+}

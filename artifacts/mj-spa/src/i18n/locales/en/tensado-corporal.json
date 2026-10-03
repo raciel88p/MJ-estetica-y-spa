@@ -1,0 +1,246 @@
+{
+  "intro": {
+    "title": "Body Tightening in Turrialba",
+    "subtitle": "Firmness, wellness, and progressive body contouring in one personalized protocol",
+    "question": "Would you like to improve the appearance of skin firmness and feel more comfortable and confident in your body without invasive procedures?",
+    "desc": "At MJ Estética & Wellness Center, we design personalized body tightening protocols focused on supporting firmer-looking skin, aesthetic wellness, and progressive body contouring through advanced aesthetic technologies and professional care.",
+    "items": [
+      "Personalized body assessment",
+      "Protocols tailored to your goals",
+      "Advanced aesthetic technology",
+      "Premium wellness experience",
+      "Professional care and individualized follow-up"
+    ],
+    "ctaTitle": "Book your body assessment today",
+    "ctaItems": [
+      "Message us on WhatsApp",
+      "Check availability",
+      "Discover the ideal protocol for you"
+    ]
+  },
+  "leadMagnet": {
+    "label": "FREE GUIDE",
+    "title": "DOWNLOAD YOUR FREE GUIDE",
+    "subtitle": "“How to Improve Your Body Tightening Results”",
+    "instagram": "Comment the word TIGHTENING on our Instagram and receive immediate access to our free guide with recommendations to enhance your body treatment and maintain firmer, healthier-looking skin.",
+    "learnTitle": "Inside the guide, you’ll discover:",
+    "items": [
+      "Habits that may help improve results",
+      "Recommended aftercare",
+      "Wellness tips for firmer-looking skin",
+      "How to complement your body treatment"
+    ],
+    "instaCta": "Go to Instagram"
+  },
+  "whatIs": {
+    "title": "What Is Body Tightening?",
+    "desc": "Body tightening is an aesthetic protocol designed to support the appearance of firmer-looking skin through advanced technologies and personalized treatments. At MJ Estética & Wellness Center, every protocol is adapted according to each person's individual needs, goals, and characteristics.",
+    "focusTitle": "Our approach combines:",
+    "items": [
+      "Body radiofrequency",
+      "Firming protocols",
+      "Advanced body wellness",
+      "Progressive aesthetic body contouring",
+      "Premium body care experience"
+    ],
+    "note": "Because every body deserves a personalized assessment and a professional approach focused on overall well-being."
+  },
+  "improvement": {
+    "title": "What Can This Treatment Help Improve?",
+    "intro": "Body tightening may support aesthetic protocols related to:",
+    "items": [
+      "The appearance of firmer-looking skin",
+      "A greater sense of aesthetic well-being",
+      "Progressive body contouring",
+      "Healthy-looking skin glow",
+      "Personalized body treatment protocols",
+      "Premium wellness experiences",
+      "Aesthetic body firming",
+      "A more even and healthy-looking appearance"
+    ]
+  },
+  "benefits": {
+    "title": "Benefits of Body Tightening",
+    "subtitle": "Results focused on wellness and natural-looking firmness",
+    "desc": "Our protocols are designed to provide a premium body care experience focused on progressive and personalized results.",
+    "listTitle": "Most sought-after benefits:",
+    "items": [
+      "Firmer-looking skin",
+      "A greater sense of well-being and body contouring",
+      "Progressive body glow",
+      "Individually tailored protocols",
+      "Comfortable and relaxing experience",
+      "Modern aesthetic technologies",
+      "Personalized professional follow-up",
+      "Overall body wellness"
+    ],
+    "note": "At MJ, we believe aesthetic treatments should feel natural, comfortable, and aligned with your well-being."
+  },
+  "technologies": {
+    "title": "Technologies Used for Body Tightening",
+    "rfTitle": "Body Radiofrequency",
+    "rfDesc": "An aesthetic technology designed to support body-firming and aesthetic wellness protocols through controlled heat and non-invasive techniques.",
+    "itemsTitle": "Benefits:",
+    "items": [
+      "Relaxing sensation",
+      "Progressive protocols",
+      "Premium body care experience",
+      "Ideal complement to body contouring protocols"
+    ],
+    "cta": "Contact us to schedule your personalized assessment."
+  },
+  "personalized": {
+    "title": "Personalized Firming Protocols",
+    "desc": "Every body has different needs. That's why we design personalized body protocols based on:",
+    "items": [
+      "Aesthetic goals",
+      "Skin type",
+      "Areas to be treated",
+      "Lifestyle",
+      "Overall body wellness"
+    ]
+  },
+  "advanced": {
+    "title": "Advanced Body Wellness",
+    "desc": "Our approach combines aesthetics and wellness to make your experience much more complete. We don't promise unrealistic results.",
+    "highlight": "We focus on helping you feel better about yourself through progressive, personalized protocols designed around your individual needs."
+  },
+  "methodology": {
+    "title": "How Does a Body Tightening Protocol Work?",
+    "steps": [
+      {
+        "s": "Step 1",
+        "t": "Personalized Body Assessment",
+        "d": "We discuss your goals and needs to recommend the most appropriate protocol for you."
+      },
+      {
+        "s": "Step 2",
+        "t": "Designing Your Ideal Protocol",
+        "d": "We create a personalized plan based on the body area and your aesthetic goals."
+      },
+      {
+        "s": "Step 3",
+        "t": "Treatment Application",
+        "d": "We perform the treatment using advanced aesthetic technologies and professional guidance."
+      },
+      {
+        "s": "Step 4",
+        "t": "Follow-Up and Recommendations",
+        "d": "We provide aftercare guidance and recommendations to help support your results."
+      }
+    ],
+    "includesTitle": "Your experience includes:",
+    "includesItems": [
+      "Personalized attention",
+      "Comfortable protocols",
+      "Professional follow-up",
+      "Wellness guidance",
+      "Safe and relaxing environment"
+    ]
+  },
+  "who": {
+    "title": "Who Is Body Tightening Recommended For?",
+    "intro": "This treatment may be ideal for people interested in:",
+    "items": [
+      "Firmer-looking skin",
+      "Progressive aesthetic body contouring",
+      "Body wellness",
+      "Premium firming protocols",
+      "Healthy-looking body glow",
+      "Body aesthetics and wellness",
+      "Advanced body treatments"
+    ]
+  },
+  "realistic": {
+    "title": "Realistic, Natural-Looking Results",
+    "desc": "At MJ Estética & Wellness Center, we believe in progressive, natural-looking results that are aligned with overall body wellness. Our photographs and testimonials reflect real experiences focused on:",
+    "items": [
+      "Firmer-looking skin",
+      "Healthy-looking glow",
+      "Progressive body contouring",
+      "Aesthetic wellness"
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "items": [
+      { "quote": "“I loved the experience. My skin felt firmer, and the environment was incredibly relaxing.”" },
+      { "quote": "“The protocol was personalized, and the professional guidance was excellent.”" },
+      { "quote": "“I loved that they explained the entire process and the aftercare recommendations.”" },
+      { "quote": "“The wellness experience makes such a difference.”" }
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions About Body Tightening",
+    "items": [
+      {
+        "q": "What is body tightening?",
+        "a": "It is an aesthetic protocol designed to support the appearance of firmer-looking skin through personalized treatments and advanced aesthetic technologies."
+      },
+      {
+        "q": "Does it help with skin firmness?",
+        "a": "It may support aesthetic firming and progressive body contouring protocols depending on each individual's needs and assessment."
+      },
+      {
+        "q": "What technologies do you use?",
+        "a": "We work with modern aesthetic technologies and personalized body treatment protocols."
+      },
+      {
+        "q": "Is there any downtime?",
+        "a": "These are generally non-invasive protocols designed around a comfortable wellness experience."
+      },
+      {
+        "q": "How many sessions are recommended?",
+        "a": "The recommended number of sessions depends on each person's goals and personalized assessment."
+      },
+      {
+        "q": "Can it be combined with other treatments?",
+        "a": "Yes. In many cases, body tightening can be complemented with other body and wellness protocols."
+      },
+      {
+        "q": "When can results be noticed?",
+        "a": "Everyone responds differently, and results are generally progressive."
+      }
+    ]
+  },
+  "programs": {
+    "title": "Premium Body Programs & Protocols",
+    "desc": "We offer:",
+    "items": [
+      "Body Tightening Programs",
+      "Wellness Body Bundles",
+      "Firming Protocols",
+      "Body Contouring Experiences"
+    ],
+    "footer": "Ask us about our personalized options and packages."
+  },
+  "whyUs": {
+    "title": "Why Choose MJ Estética & Wellness Center?",
+    "desc": "At MJ Estética & Wellness Center, we focus on providing a premium wellness experience with personalized attention and protocols tailored to each individual.",
+    "listTitle": "What sets us apart:",
+    "items": [
+      "Modern aesthetic technology",
+      "Personalized protocols",
+      "Professional care",
+      "Individualized follow-up",
+      "Comfortable and safe environment",
+      "Advanced wellness experience",
+      "Progressive body contouring"
+    ]
+  },
+  "location": {
+    "title": "Location & Contact",
+    "locationText": "Turrialba, Costa Rica",
+    "scheduleText": "Flexible hours",
+    "parkingText": "Parking available",
+    "whatsappText": "WhatsApp support",
+    "assessmentText": "Personalized assessments"
+  },
+  "finalCta": {
+    "title": "Your Body Deserves to Feel Good",
+    "subtitle": "Discover a personalized protocol designed to support your well-being, firmer-looking skin, and personal confidence through a premium aesthetic experience in Turrialba.",
+    "cta1": "Message us on WhatsApp",
+    "cta2": "Check availability",
+    "cta3": "Discover the ideal protocol for you"
+  }
+}

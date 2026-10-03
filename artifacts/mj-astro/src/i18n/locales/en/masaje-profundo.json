@@ -1,0 +1,122 @@
+{
+  "intro": {
+    "quote": "\"Do you feel your body heavy, stiff or exhausted by daily stress? At MJ Estética & Wellness Center we created a deep massage experience designed to help you disconnect, release muscle tension and recover a true sense of body well-being.\"",
+    "instagram": "✨ If you came here after commenting the word “DEEP”, we have something special for you.",
+    "instagramSub": "\"Because we understand that often the body speaks before the mind: pain, fatigue, accumulated tension, physical stress, poor posture, exhaustion… and the constant feeling of not being able to really rest.\"",
+    "focus": "Our Deep Massage in Turrialba is not simply a massage. It is a premium wellness experience focused on:",
+    "items": ["deep relaxation", "physical rest", "tension relief", "muscle well-being", "conscious self-care", "personalized recovery"]
+  },
+  "imagine": {
+    "title": "Imagine for a moment…",
+    "items": [
+      "Arriving at a peaceful environment.",
+      "Relaxing music.",
+      "Gentle aromas.",
+      "Wellness lighting.",
+      "A comfortable table.",
+      "Protocol adapted to you."
+    ],
+    "closing": "That is exactly what we seek to create for you."
+  },
+  "whatIs": {
+    "title": "WHAT IS A DEEP MASSAGE?",
+    "desc": "Deep massage is a body experience aimed at releasing accumulated muscle tension through personalized techniques that seek to provide relaxation, physical rest and body well-being.",
+    "adaptLabel": "Each session is individually adapted according to:",
+    "adaptItems": ["tension level", "body sensitivity", "desired pressure", "highest load areas", "relaxation needs"],
+    "quote": "\"It's not about applying extreme pressure. It's about helping you feel relief, relaxation and physical disconnection.\"",
+    "cta": "Book My Experience"
+  },
+  "benefits": {
+    "title": "WHAT BENEFITS CAN IT PROVIDE?",
+    "items": [
+      "Muscle relaxation sensation",
+      "Integral body well-being",
+      "Deep physical rest",
+      "Premium wellness experience",
+      "Body relief sensation",
+      "Ideal complement for self-care",
+      "Physical and mental relaxation",
+      "Personal disconnection moment",
+      "Body renewal sensation"
+    ]
+  },
+  "forWhom": {
+    "title": "FOR WHOM IS IT RECOMMENDED?",
+    "items": [
+      "feel frequent body tension",
+      "spend many hours sitting or working",
+      "live with high levels of physical stress",
+      "train or perform physical activity",
+      "desire deep relaxation",
+      "seek body self-care",
+      "wish to gift themselves a moment of real well-being"
+    ]
+  },
+  "experience": {
+    "title": "HOW IS THE EXPERIENCE AT MJ?",
+    "steps": [
+      { "s": "01", "t": "Personalized assessment", "d": "We analyze with you the tension areas and the ideal pressure level." },
+      { "s": "02", "t": "Wellness environment", "d": "We create an environment designed to help you disconnect completely." },
+      { "s": "03", "t": "Personalized application", "d": "Every movement and protocol adapts to your body needs." },
+      { "s": "04", "t": "Follow-up", "d": "We provide you with recommendations to enhance the sense of well-being." }
+    ],
+    "durationLabel": "Duration",
+    "durationValue": "60 to 90 minutes",
+    "pressureLabel": "Pressure",
+    "pressureValue": "Totally Personalized"
+  },
+  "philosophy": {
+    "title": "AN EXPERIENCE FOCUSED ON REAL WELL-BEING",
+    "quote": "\"At MJ Estética & Wellness Center we believe that well-being is not a luxury. It is a necessity.\"",
+    "items": ["deep relaxation", "physical rest", "body well-being", "emotional disconnection", "premium self-care"],
+    "exitLabel": "Our goal is for you to leave feeling:",
+    "exitItems": ["lighter,", "more relaxed,", "calmer,", "and with real well-being."]
+  },
+  "whyUs": {
+    "title": "WHY CHOOSE MJ ESTÉTICA & WELLNESS CENTER?",
+    "items": [
+      { "t": "Attention", "d": "Personalized and humane." },
+      { "t": "Protocols", "d": "Individually adapted." },
+      { "t": "Environment", "d": "Relaxing, private and wellness." },
+      { "t": "Experience", "d": "Warm and professional." }
+    ]
+  },
+  "testimonials": {
+    "title": "TESTIMONIALS",
+    "subtitle": "Our clients' voice",
+    "items": [
+      { "text": "“I felt an incredible relaxation from the first session. The environment transmits so much peace.”", "author": "MJ Client" },
+      { "text": "“I arrived with too much body tension and left feeling much lighter.”", "author": "Wellness Client" },
+      { "text": "“More than a massage, it was a complete rest experience.”", "author": "MJ Client" }
+    ]
+  },
+  "faqs": {
+    "title": "FREQUENTLY ASKED QUESTIONS",
+    "items": [
+      { "q": "How does deep massage feel?", "a": "A progressive sensation of muscle relaxation and intense body well-being." },
+      { "q": "Does the pressure adapt?", "a": "Yes. Each session is completely personalized according to your pain threshold and need." },
+      { "q": "How long does it last?", "a": "Between 60 and 90 minutes depending on the selected protocol." },
+      { "q": "Is it relaxing?", "a": "Yes. Although we work the muscle, the main focus is well-being and deep relaxation." },
+      { "q": "Can it be combined with other treatments?", "a": "Yes. It can perfectly complement body exfoliations or wraps." }
+    ]
+  },
+  "leadMagnet": {
+    "label": "Exclusive Gift",
+    "title": "SPECIAL GIFT FOR COMMENTING “DEEP”",
+    "quote": "\"We want to help you enhance your well-being and self-care.\"",
+    "guideTitle": "“How to improve the results of your facial and wellness treatments”",
+    "items": ["take better care of your skin", "boost your results", "improve your routine", "complement your sessions"],
+    "cta": "Claim My Free Guide"
+  },
+  "finalCta": {
+    "label": "Schedule Today",
+    "title": "🔥 SCHEDULE YOUR WELLNESS EXPERIENCE TODAY",
+    "p1": "Your body deserves rest.",
+    "p2": "Your mind deserves disconnection.",
+    "p3": "And you deserve to feel good again.",
+    "cta": "Schedule My Deep Massage",
+    "location": "Turrialba, Costa Rica",
+    "appointment": "By Appointment",
+    "footerDesc": "Body well-being, deep relaxation and premium wellness experiences in Turrialba."
+  }
+}

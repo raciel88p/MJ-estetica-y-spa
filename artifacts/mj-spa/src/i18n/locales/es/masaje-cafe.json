@@ -1,0 +1,240 @@
+{
+  "hero": {
+    "title": "☕ Masaje con Café en Turrialba | Ritual Corporal Anticelulítico y Relajante",
+    "subtitle": "Dale a tu cuerpo una pausa… y a tu piel una experiencia diferente",
+    "p1": "Tu piel también merece que la cuides.",
+    "p2": "Después de una semana de trabajo, estrés y responsabilidades, imagina poder detenerte durante una hora, desconectarte de la rutina y disfrutar de una experiencia que combina café, exfoliación, masaje y relajación.",
+    "p3": "El Masaje con Café de MJ Fisio Estética & Spa es un ritual corporal diseñado para cuidar la apariencia de la piel mientras disfrutas de un momento de bienestar.",
+    "bullets": [
+      "☕ Café natural.",
+      "🌿 Exfoliación.",
+      "💆‍♀️ Masaje.",
+      "✨ Cuidado corporal.",
+      "🌺 Relajación."
+    ],
+    "cta": "RESERVAR POR WHATSAPP"
+  },
+  "whatIs": {
+    "title": "☕ ¿Qué es el Masaje con Café?",
+    "p1": "El Masaje con Café en Turrialba combina el uso cosmético del café con técnicas de masaje y cuidado corporal.",
+    "p2": "La exfoliación ayuda a retirar células superficiales de la piel, mientras el masaje proporciona una experiencia relajante y de bienestar.",
+    "p3": "En MJ Fisio Estética & Spa adaptamos la experiencia según las características y objetivos de cada persona.",
+    "listTitle": "¿Qué puedes disfrutar durante la experiencia?",
+    "bullets": [
+      "☕ Exfoliación corporal con café.",
+      "💆‍♀️ Masaje corporal.",
+      "🌿 Técnicas de masaje orientadas al bienestar.",
+      "✨ Cuidado de la apariencia de la piel.",
+      "💧 Hidratación corporal.",
+      "🌺 Un espacio para relajarte y desconectarte."
+    ],
+    "cta": "QUIERO RESERVAR MI MASAJE CON CAFÉ"
+  },
+  "benefits": {
+    "title": "✨ Beneficios del Masaje con Café",
+    "subtitle": "El tratamiento está pensado para quienes desean combinar cuidado corporal y relajación en una misma experiencia.",
+    "items": [
+      {
+        "t": "🌟 Una piel con apariencia más suave",
+        "d": "La exfoliación corporal ayuda a retirar células superficiales y puede dejar la piel con una sensación más suave y renovada."
+      },
+      {
+        "t": "☕ Una experiencia sensorial diferente",
+        "d": "El café convierte un masaje convencional en un ritual corporal diferente, agradable y sensorial."
+      },
+      {
+        "t": "💆‍♀️ Relajación",
+        "d": "El masaje puede ayudarte a desconectarte de la rutina y disfrutar de un momento de descanso."
+      },
+      {
+        "t": "🌿 Cuidado corporal",
+        "d": "El tratamiento combina exfoliación, masaje e hidratación como parte de una experiencia integral de cuidado de la piel."
+      },
+      {
+        "t": "✨ Complemento para tu rutina estética",
+        "d": "Puede incorporarse como complemento dentro de una rutina de cuidado corporal, dependiendo de tus objetivos y valoración."
+      }
+    ],
+    "cta": "✨ CONSULTAR DISPONIBILIDAD"
+  },
+  "session": {
+    "title": "💆‍♀️ ¿Cómo es una sesión de Masaje con Café?",
+    "intro": "Queremos que desde que llegues puedas comenzar a relajarte.",
+    "steps": [
+      {
+        "num": "1",
+        "t": "Valoración inicial",
+        "d": "Conversamos contigo para conocer tus objetivos y determinar cómo realizar la experiencia."
+      },
+      {
+        "num": "2",
+        "t": "Exfoliación corporal con café",
+        "d": "Aplicamos el protocolo de exfoliación corporal utilizando café como parte del tratamiento."
+      },
+      {
+        "num": "3",
+        "t": "Masaje corporal",
+        "d": "Continuamos con un masaje cuya intensidad se adapta a tus preferencias y al protocolo seleccionado."
+      },
+      {
+        "num": "4",
+        "t": "Hidratación",
+        "d": "Finalizamos con cuidado e hidratación de la piel."
+      },
+      {
+        "num": "5",
+        "t": "Recomendaciones",
+        "d": "Te orientamos sobre cuidados posteriores para mantener la sensación de suavidad y bienestar de la piel."
+      }
+    ],
+    "duration": "⏱️ Duración aproximada: 60 minutos (puede variar según el servicio contratado)."
+  },
+  "forWhom": {
+    "title": "🌺 ¿Para quién puede ser una buena opción?",
+    "subtitle": "El Masaje con Café puede ser una alternativa para personas que desean:",
+    "items": [
+      "Cuidar la apariencia de su piel.",
+      "Disfrutar una exfoliación corporal.",
+      "Relajarse mediante un masaje.",
+      "Incorporar el cuidado corporal a su rutina.",
+      "Disfrutar de una experiencia diferente de spa.",
+      "Complementar otros tratamientos estéticos.",
+      "Regalarse un momento de autocuidado."
+    ],
+    "disclaimer": "Si tienes alguna condición de salud, sensibilidad cutánea, embarazo u otra circunstancia particular, consulta previamente para determinar si este servicio es adecuado para ti."
+  },
+  "cellulite": {
+    "title": "🍑 ¿El Masaje con Café ayuda con la celulitis?",
+    "p1": "La celulitis es una característica común de la piel y puede presentarse incluso en personas delgadas y activas.",
+    "p2": "El Masaje con Café no elimina permanentemente la celulitis.",
+    "p3": "Sin embargo, la exfoliación y el masaje pueden contribuir temporalmente a mejorar la sensación y apariencia de la piel.",
+    "p4": "Por eso presentamos este servicio como un tratamiento de cuidado corporal y bienestar, no como una solución definitiva para la celulitis.",
+    "question": "¿Quieres conocer qué tratamiento puede adaptarse mejor a tus objetivos?",
+    "cta": "📲 CONSULTAR CON MJ ESTÉTICA & SPA"
+  },
+  "whyUs": {
+    "title": "🌿 ¿Por qué elegir MJ Fisio Estética & Spa?",
+    "subtitle": "Cuando reservas un tratamiento corporal, no solamente estás comprando una sesión. También estás eligiendo el lugar donde vas a vivir esa experiencia.",
+    "items": [
+      {
+        "t": "💆‍♀️ Atención personalizada",
+        "d": "Escuchamos tus necesidades y objetivos antes de realizar el tratamiento."
+      },
+      {
+        "t": "🌺 Ambiente de bienestar",
+        "d": "Queremos que puedas desconectarte de la rutina y disfrutar de tu tiempo."
+      },
+      {
+        "t": "✨ Experiencia estética y de bienestar",
+        "d": "Combinamos servicios corporales, faciales, masajes y estética dentro de un mismo espacio."
+      },
+      {
+        "t": "📍 Ubicación en Turrialba",
+        "d": "Puedes disfrutar de tu experiencia de spa sin tener que desplazarte fuera de Turrialba."
+      }
+    ]
+  },
+  "selfCare": {
+    "title": "⭐ Una experiencia para tu piel y para ti",
+    "p1": "Muchas veces pensamos en cuidar nuestro cuerpo solamente cuando queremos cambiar algo. Pero el autocuidado también puede ser simplemente disfrutar de un momento para ti.",
+    "p2": "El Masaje con Café combina: ☕ Café • 🌿 Exfoliación • 💆‍♀️ Masaje • 💧 Hidratación • ✨ Bienestar",
+    "p3": "Todo dentro de una experiencia diseñada para que puedas bajar el ritmo y disfrutar."
+  },
+  "gift": {
+    "title": "🎁 ¿Buscas un regalo diferente?",
+    "subtitle": "Un masaje puede ser mucho más que un regalo. Puede ser una experiencia. El Masaje con Café puede ser una alternativa para sorprender a alguien especial en:",
+    "occasions": [
+      "🎂 Cumpleaños",
+      "💝 Aniversarios",
+      "💐 Día de la Madre",
+      "❤️ Celebraciones de pareja",
+      "🎓 Graduaciones",
+      "🎉 Fechas especiales"
+    ],
+    "cta": "REGALA UNA EXPERIENCIA DE BIENESTAR"
+  },
+  "instagramGuide": {
+    "title": "¿Vienes desde Instagram?",
+    "subtitle": "Si quieres aprender más sobre el cuidado corporal y tips sencillos para tu piel:",
+    "cta": "🎁 QUIERO MI GUÍA GRATIS"
+  },
+  "testimonials": {
+    "title": "⭐ Lo que dicen nuestras clientas",
+    "items": [
+      {
+        "text": "“Desde la primera sesión noté mi piel mucho más suave y luminosa.”",
+        "stars": 5
+      },
+      {
+        "text": "“La atención fue excelente y salí completamente relajada.”",
+        "stars": 5
+      },
+      {
+        "text": "“Es una experiencia diferente y me encantó el resultado de cómo se sentía mi piel.”",
+        "stars": 5
+      }
+    ],
+    "cta": "💆‍♀️ QUIERO VIVIR LA EXPERIENCIA"
+  },
+  "location": {
+    "title": "📍 Masaje con Café en Turrialba, Cartago",
+    "subtitle": "Si estás buscando un Masaje con Café en Turrialba, una experiencia de masaje relajante, un tratamiento corporal o un espacio de bienestar, puedes visitar MJ Fisio Estética & Spa.",
+    "communities": "Atendemos clientes de: Turrialba, Santa Cruz, La Suiza, Pavones, Tucurrique, Juan Viñas y comunidades cercanas.",
+    "address": "MJ Fisio Estética & Spa\nCiudadela Jorge Debravo\nCalle 4, Casa #58\nTurrialba, Cartago, Costa Rica\n\nReferencia: aproximadamente 200 metros al sur de Coopenae y 75 metros al sur del Salón de Cinthya.",
+    "cta": "RESERVAR MASAJE CON CAFÉ"
+  },
+  "faqs": {
+    "title": "❓ Preguntas frecuentes sobre el Masaje con Café",
+    "items": [
+      {
+        "q": "¿Qué es un Masaje con Café?",
+        "a": "Es un tratamiento corporal que combina exfoliación con café, masaje e hidratación dentro de una experiencia orientada al cuidado de la piel y la relajación."
+      },
+      {
+        "q": "¿El Masaje con Café elimina la celulitis?",
+        "a": "No. No existe una garantía de eliminación permanente de la celulitis. El tratamiento puede ayudar temporalmente a mejorar la apariencia y sensación de la piel, dependiendo de cada persona."
+      },
+      {
+        "q": "¿El Masaje con Café es relajante?",
+        "a": "Sí. El servicio incorpora masaje corporal y está diseñado para proporcionar una experiencia de relajación y bienestar."
+      },
+      {
+        "q": "¿Cuánto dura el Masaje con Café?",
+        "a": "La sesión tiene una duración aproximada de 60 minutos, aunque el protocolo puede variar según el servicio contratado."
+      },
+      {
+        "q": "¿Qué incluye el Masaje con Café?",
+        "a": "La experiencia puede incluir valoración inicial, exfoliación corporal con café, masaje, hidratación y recomendaciones de cuidado posterior, de acuerdo con el protocolo contratado."
+      },
+      {
+        "q": "¿Puedo combinarlo con otros tratamientos?",
+        "a": "Dependiendo de tus objetivos, puede formar parte de un programa de cuidado corporal junto con otros servicios. Lo recomendable es consultar previamente para determinar qué combinación es adecuada para ti."
+      },
+      {
+        "q": "¿Puedo hacerme un Masaje con Café si tengo piel sensible?",
+        "a": "La tolerancia depende de cada persona. Si tienes piel sensible, alergias o alguna condición dermatológica, comunícalo antes de reservar para valorar si el tratamiento es adecuado."
+      },
+      {
+        "q": "¿Necesito reservar?",
+        "a": "Sí. Recomendamos reservar previamente para confirmar disponibilidad."
+      },
+      {
+        "q": "¿Dónde puedo hacerme un Masaje con Café en Turrialba?",
+        "a": "Puedes disfrutar de este servicio en MJ Fisio Estética & Spa, ubicado en Turrialba, Cartago, Costa Rica."
+      },
+      {
+        "q": "¿Cómo puedo reservar?",
+        "a": "Puedes escribirnos directamente por WhatsApp para consultar precio, disponibilidad y horarios."
+      }
+    ]
+  },
+  "final": {
+    "title": "☕ Tu momento de café… ahora también puede ser un momento para ti",
+    "p1": "No necesitas esperar a tener una ocasión especial.",
+    "p2": "Tu piel merece cuidado. Tu cuerpo merece descanso. Y tú mereces un momento para desconectarte.",
+    "badge": "☕ Vive la experiencia del Masaje con Café",
+    "subbadge": "📲 RESERVA AHORA POR WHATSAPP",
+    "cta": "RESERVAR MASAJE CON CAFÉ POR WHATSAPP",
+    "waMsg": "Hola, me interesa reservar el Masaje con Café en MJ Fisio Estética & Spa. ¿Me pueden compartir disponibilidad, precio y horarios?"
+  }
+}

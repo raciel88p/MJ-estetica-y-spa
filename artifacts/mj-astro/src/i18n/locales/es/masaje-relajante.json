@@ -1,0 +1,101 @@
+{
+  "intro": {
+    "quote": "En MJ Estética & Wellness Center ofrecemos masajes relajantes, terapéuticos y descontracturantes en Turrialba diseñados para ayudarte a sentirte mejor física y mentalmente desde la primera sesión.",
+    "items": [
+      { "text": "Ubicación conveniente en Turrialba" },
+      { "text": "Reserva rápida por WhatsApp" },
+      { "text": "Citas programadas" },
+      { "text": "Atención personalizada" }
+    ],
+    "guideTitle": "Descarga Gratis Nuestra Guía para Potenciar los Beneficios de un Masaje",
+    "guideDesc": "Aprende cómo obtener mejores resultados antes y después de tu sesión.",
+    "guideCta": "Descargar Guía Gratuita"
+  },
+  "whyUs": {
+    "title": "¿Por Qué Elegir Nuestros Masajes en Turrialba?",
+    "desc": "Vivimos expuestos al estrés, largas jornadas laborales, malas posturas y tensión acumulada.",
+    "consequenceLabel": "Con el tiempo esto puede provocar:",
+    "consequences": [
+      "Dolor de cuello",
+      "Contracturas musculares",
+      "Estrés constante",
+      "Fatiga física",
+      "Problemas para descansar",
+      "Sensación de agotamiento"
+    ],
+    "quote": "Nuestros tratamientos están diseñados para ayudarte a recuperar equilibrio, bienestar y relajación."
+  },
+  "services": {
+    "title": "Servicios de Masajes en Turrialba",
+    "locationSuffix": "en Turrialba",
+    "benefitsLabel": "Beneficios:",
+    "cta": "RESERVAR AHORA",
+    "benefitGroups": {
+      "relajante": ["Relajación profunda", "Mejor descanso", "Menor tensión muscular", "Sensación de bienestar general"],
+      "descontracturante": ["Alivio de contracturas", "Menor rigidez muscular", "Mejor movilidad", "Recuperación muscular"],
+      "default": ["Alivio de tensión localizada", "Recuperación física", "Mayor comodidad corporal", "Sensación de alivio"]
+    },
+    "aromaNote": "Ideal para personas que buscan una experiencia de bienestar integral.",
+    "spaParejaNote": "Una excelente opción para aniversarios, celebraciones o simplemente para desconectarse juntos."
+  },
+  "regularBenefits": {
+    "title": "Beneficios de Recibir Masajes de Forma Regular",
+    "desc": "Muchas personas buscan masajes en Turrialba porque desean mejorar su calidad de vida.",
+    "items": [
+      "Reducir el estrés y la ansiedad",
+      "Mejorar la calidad del sueño",
+      "Disminuir tensión muscular",
+      "Favorecer la circulación sanguínea",
+      "Mejorar el bienestar físico y emocional",
+      "Recuperarte del cansancio diario"
+    ]
+  },
+  "difference": {
+    "title": "Lo Que Hace Diferente a MJ Estética & Wellness Center",
+    "quote": "No ofrecemos sesiones genéricas. Cada masaje se adapta a las necesidades específicas de cada cliente.",
+    "chooseLabel": "Por eso nuestros clientes nos eligen:",
+    "items": [
+      "Atención profesional y personalizada",
+      "Ambiente privado y relajante",
+      "Instalaciones cómodas y seguras",
+      "Protocolos adaptados a cada persona",
+      "Fácil acceso en Turrialba",
+      "Reserva rápida por WhatsApp"
+    ],
+    "opinionsLabel": "Opiniones de Clientes de Turrialba",
+    "opinions": [
+      "Excelente atención y ambiente. Salí completamente relajada.",
+      "El masaje descontracturante me ayudó muchísimo con la tensión de espalda.",
+      "Un lugar muy profesional y acogedor."
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes Sobre Masajes en Turrialba"
+  },
+  "finalCta": {
+    "title": "Reserva Tu Masaje en Turrialba Hoy",
+    "desc": "Si buscas un masaje relajante, terapéutico o descontracturante en Turrialba, estamos listos para ayudarte. No esperes a que el estrés y la tensión sigan acumulándose.",
+    "items": [
+      "MJ Estética & Wellness Center",
+      "Reserva por WhatsApp",
+      "Cupos limitados por día"
+    ],
+    "cta": "👉 AGENDAR MI MASAJE AHORA",
+    "footer": "Recupera tu bienestar, relaja tu cuerpo y vuelve a sentirte mejor.",
+    "zonesTitle": "Zonas que Atendemos",
+    "zonesDesc": "Si buscas masajes en Turrialba o zonas cercanas, estaremos encantados de atenderte.",
+    "zones": [
+      "Turrialba Centro",
+      "La Suiza",
+      "Santa Cruz",
+      "Tucurrique",
+      "Pavones",
+      "Juan Viñas",
+      "Aquiares",
+      "Pejibaye"
+    ]
+  },
+  "waMessages": {
+    "general": "¡Hola! Deseo más información sobre los Masajes en Turrialba"
+  }
+}

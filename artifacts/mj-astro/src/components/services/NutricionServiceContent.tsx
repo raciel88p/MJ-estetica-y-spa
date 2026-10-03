@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, MessageCircle, ArrowRight, Star, MapPin, Phone, Clock, Gift, Download } from "lucide-react";
+import { CheckCircle2, MessageCircle, ArrowRight, Star, MapPin, Phone, Clock } from "lucide-react";
+import es from "@/i18n/locales/es/nutricion.json";
+import en from "@/i18n/locales/en/nutricion.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" as any } },
 };
 
-const stagger = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.09 } },
-};
-
 interface Props {
   waLink: string;
+  lang?: "es" | "en";
 }
 
-export function NutricionServiceContent({ waLink }: Props) {
+export function NutricionServiceContent({ waLink, lang = "es" }: Props) {
+  const content = lang === "es" ? es : en;
+
   return (
     <div className="bg-white">
       {/* ── PROBLEM / AGITATION ──────────────────────── */}
@@ -23,15 +23,15 @@ export function NutricionServiceContent({ waLink }: Props) {
         <div className="max-w-4xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-8 leading-tight">
-              ¿Buscas un Nutricionista en Turrialba que Realmente Adapte el Plan a Tu Estilo de Vida?
+              {content.problem.title}
             </h2>
             <div className="space-y-6 text-stone-600 text-lg leading-relaxed">
-              <p>Muchas personas llegan a consulta después de probar dietas restrictivas, consejos de internet o programas que simplemente no se ajustan a su realidad.</p>
-              <p className="font-bold text-stone-900">El problema no suele ser la falta de disciplina.</p>
-              <p>El problema es que la mayoría de planes no están diseñados para la persona que los está siguiendo.</p>
-              <p>En MJ Estética & Wellness Center entendemos que cada paciente tiene horarios, objetivos, hábitos y necesidades diferentes.</p>
-              <p>Por eso nuestro servicio de nutrición personalizada en Turrialba se enfoca en construir estrategias sostenibles que puedas mantener a largo plazo.</p>
-              <p className="italic font-medium text-primary">Porque la verdadera transformación ocurre cuando la alimentación se adapta a tu vida y no al revés.</p>
+              <p>{content.problem.p1}</p>
+              <p className="font-bold text-stone-900">{content.problem.p2}</p>
+              <p>{content.problem.p3}</p>
+              <p>{content.problem.p4}</p>
+              <p>{content.problem.p5}</p>
+              <p className="italic font-medium text-primary">{content.problem.closing}</p>
             </div>
           </motion.div>
         </div>
@@ -43,38 +43,23 @@ export function NutricionServiceContent({ waLink }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
               <h2 className="text-3xl font-serif font-bold text-stone-900 mb-6 leading-tight">
-                Servicio de Nutricionista en Turrialba con Enfoque en Bienestar Integral
+                {content.focus.title}
               </h2>
-              <p className="text-stone-600 mb-8">Nuestro programa de acompañamiento nutricional está diseñado para apoyar personas que desean:</p>
+              <p className="text-stone-600 mb-8">{content.focus.desc}</p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  "Mejorar sus hábitos alimenticios",
-                  "Organizar mejor su alimentación diaria",
-                  "Recibir educación nutricional personalizada",
-                  "Mejorar su bienestar integral",
-                  "Complementar tratamientos estéticos y wellness",
-                  "Trabajar objetivos de composición corporal",
-                  "Desarrollar hábitos saludables sostenibles",
-                  "Crear una mejor relación con la alimentación"
-                ].map((item, i) => (
+                {content.focus.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-2">
                     <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     <span className="text-sm text-stone-700 font-medium">{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="mt-8 text-stone-500 text-sm italic">Cada consulta se adapta individualmente según tus objetivos, necesidades y estilo de vida.</p>
+              <p className="mt-8 text-stone-500 text-sm italic">{content.focus.note}</p>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-50 p-8 border border-stone-200">
-              <h3 className="text-2xl font-serif font-bold text-stone-900 mb-8">¿Qué Incluye la Consulta Nutricional?</h3>
+              <h3 className="text-2xl font-serif font-bold text-stone-900 mb-8">{content.focus.includesTitle}</h3>
               <div className="space-y-8">
-                {[
-                  { t: "Valoración Nutricional Completa", d: "Conocemos tu situación actual, hábitos alimenticios, objetivos y necesidades." },
-                  { t: "Diagnóstico y Definición de Objetivos", d: "Establecemos metas realistas y alcanzables adaptadas a tu contexto." },
-                  { t: "Plan Nutricional Personalizado", d: "Diseñado específicamente para tu estilo de vida." },
-                  { t: "Educación Nutricional", d: "Aprende cómo tomar mejores decisiones alimenticias sin depender de dietas extremas." },
-                  { t: "Seguimiento Profesional", d: "Realizamos ajustes y acompañamiento para ayudarte a mantener el progreso." }
-                ].map((item, i) => (
+                {content.focus.includes.map((item, i) => (
                   <div key={i} className="flex gap-4">
                     <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary font-bold text-sm">
                       {i + 1}
@@ -97,26 +82,26 @@ export function NutricionServiceContent({ waLink }: Props) {
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 leading-tight">
-                Nutricionista para Bajar de Peso y Mejorar la Composición Corporal en Turrialba
+              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6 leading-tight text-white">
+                {content.composition.title}
               </h2>
-              <p className="text-white/70 mb-8">Uno de los objetivos más frecuentes de nuestros pacientes es mejorar su composición corporal mediante hábitos sostenibles.</p>
+              <p className="text-white/70 mb-8">{content.composition.desc}</p>
               <div className="grid grid-cols-1 gap-3">
-                {["Organizar tu alimentación", "Mejorar tus elecciones nutricionales", "Crear hábitos consistentes", "Optimizar tu bienestar general", "Mantener resultados sostenibles en el tiempo"].map((item, i) => (
+                {content.composition.items.map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
                     <span className="text-sm font-medium">{item}</span>
                   </div>
                 ))}
               </div>
-              <p className="mt-10 text-white/50 italic">No creemos en soluciones rápidas. Creemos en estrategias que puedas mantener durante meses y años.</p>
+              <p className="mt-10 text-white/50 italic">{content.composition.note}</p>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white/5 border border-white/10 p-10 backdrop-blur-sm text-center">
               <Star className="w-12 h-12 text-primary mx-auto mb-6" />
-              <h3 className="text-2xl font-serif font-bold mb-4">Empieza hoy tu cambio</h3>
-              <p className="text-white/60 mb-8 text-sm leading-relaxed">Únete a las decenas de personas en Turrialba que han transformado su relación con la comida.</p>
+              <h3 className="text-2xl font-serif font-bold mb-4 text-white">{content.composition.ctaTitle}</h3>
+              <p className="text-white/60 mb-8 text-sm leading-relaxed">{content.composition.ctaDesc}</p>
               <a href={waLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-primary text-white text-xs font-bold tracking-widest uppercase px-8 py-4 hover:bg-white hover:text-stone-900 transition-all">
-                AGENDAR CITA POR WHATSAPP <ArrowRight className="w-4 h-4" />
+                {content.composition.cta} <ArrowRight className="w-4 h-4" />
               </a>
             </motion.div>
           </div>
@@ -127,18 +112,11 @@ export function NutricionServiceContent({ waLink }: Props) {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">VENTAJAS</p>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900">Beneficios</h2>
+            <p className="text-primary text-[10px] font-bold tracking-[0.4em] uppercase mb-3">{content.benefits.label}</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900">{content.benefits.title}</h2>
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { t: "Alimentación adaptada a ti", d: "No trabajamos con planes genéricos." },
-              { t: "Hábitos sostenibles y realistas", d: "Creamos estrategias que puedas mantener a largo plazo." },
-              { t: "Educación nutricional", d: "Aprende a tomar mejores decisiones por tu cuenta." },
-              { t: "Bienestar integral y energía", d: "Mejora tu calidad de vida y vitalidad." },
-              { t: "Seguimiento y acompañamiento profesional", d: "Te acompañamos en cada etapa del proceso." },
-              { t: "Objetivos personalizados", d: "Ya sea salud, estética o rendimiento deportivo." }
-            ].map((b, i) => (
+            {content.benefits.items.map((b, i) => (
               <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-stone-50 p-8 border border-stone-100 hover:border-primary/20 transition-colors">
                 <h4 className="font-serif font-bold text-xl text-stone-900 mb-3">{b.t}</h4>
                 <p className="text-stone-500 text-sm leading-relaxed">{b.d}</p>
@@ -153,17 +131,12 @@ export function NutricionServiceContent({ waLink }: Props) {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">METODOLOGÍA</p>
-              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">¿Cómo funciona una consulta nutricional en MJ Estética & Wellness Center?</h2>
+              <p className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">{content.methodology.label}</p>
+              <h2 className="text-4xl md:text-5xl font-serif text-stone-900 leading-tight">{content.methodology.title}</h2>
             </motion.div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-100 border border-stone-100">
-            {[
-              { s: "Paso 1", t: "Valoración inicial", d: "Hábitos, objetivos y estilo de vida." },
-              { s: "Paso 2", t: "Diseño del plan nutricional", d: "Estrategia personalizada." },
-              { s: "Paso 3", t: "Implementación", d: "Cambios progresivos." },
-              { s: "Paso 4", t: "Seguimiento y ajustes", d: "Para optimizar resultados." }
-            ].map((step, i) => (
+            {content.methodology.steps.map((step, i) => (
               <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white p-10">
                 <span className="text-primary text-xs font-bold tracking-widest uppercase block mb-6">{step.s}</span>
                 <h3 className="text-2xl font-serif font-bold text-stone-900 mb-4">{step.t}</h3>
@@ -178,42 +151,30 @@ export function NutricionServiceContent({ waLink }: Props) {
       <section className="py-24 bg-stone-50 border-y border-stone-200">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-6">Historias de Éxito</h2>
-            <p className="text-stone-500 max-w-2xl mx-auto">Pacientes reales que han transformado su estilo de vida en Turrialba.</p>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 mb-6">{content.testimonials.title}</h2>
+            <p className="text-stone-500 max-w-2xl mx-auto">{content.testimonials.desc}</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white p-10 shadow-sm border border-stone-100">
-              <div className="flex gap-1 mb-6">
-                {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
-              </div>
-              <p className="text-stone-600 italic mb-8 leading-relaxed">
-                "MJ Estética me ha brindado mucho apoyo para bajar de peso. Además la atención ha sido genial y muy interesados en ayudar a que uno pueda lo más pronto bajar de peso."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center font-bold text-stone-400">E</div>
-                <div>
-                  <p className="text-stone-900 font-bold text-sm uppercase tracking-wider">Eduardo Andres Loaiza Mata</p>
-                  <p className="text-stone-400 text-[10px] uppercase">Paciente de Nutrición</p>
+            {content.testimonials.items.map((item, i) => (
+              <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white p-10 shadow-sm border border-stone-100">
+                <div className="flex gap-1 mb-6">
+                  {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
                 </div>
-              </div>
-            </motion.div>
-
-            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white p-10 shadow-sm border border-stone-100">
-              <div className="flex gap-1 mb-6">
-                {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-primary text-primary" />)}
-              </div>
-              <p className="text-stone-600 italic mb-8 leading-relaxed">
-                "Mis post han sido de gran ayuda para mi, ya eh visto mucho el cambio en mi físico desde q inicié. Los recomiendo a ojos cerrados."
-              </p>
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center font-bold text-stone-400">J</div>
-                <div>
-                  <p className="text-stone-900 font-bold text-sm uppercase tracking-wider">Johana Nuñez Campos</p>
-                  <p className="text-stone-400 text-[10px] uppercase">Paciente de Nutrición</p>
+                <p className="text-stone-600 italic mb-8 leading-relaxed">
+                  "{item.text}"
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center font-bold text-stone-400">
+                    {item.author[0]}
+                  </div>
+                  <div>
+                    <p className="text-stone-900 font-bold text-sm uppercase tracking-wider">{item.author}</p>
+                    <p className="text-stone-400 text-[10px] uppercase">{item.role}</p>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -223,16 +184,11 @@ export function NutricionServiceContent({ waLink }: Props) {
         <div className="max-w-3xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-16 text-center">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-4 leading-tight">
-              Preguntas Frecuentes
+              {content.faqs.title}
             </h2>
           </motion.div>
           <div className="space-y-10">
-            {[
-              { q: "¿Los planes nutricionales son personalizados?", a: "Sí, cada recomendación se adapta a tus objetivos, gustos y estilo de vida." },
-              { q: "¿La consulta incluye seguimiento?", a: "Sí, el acompañamiento es fundamental para el éxito y realizar ajustes según tu progreso." },
-              { q: "¿Puedo combinar nutrición con tratamientos estéticos?", a: "Sí, es el complemento ideal para potenciar resultados corporales y mejorar la composición corporal." },
-              { q: "¿Qué objetivos puede apoyar una nutricionista?", a: "Desde pérdida de grasa y aumento de masa muscular hasta mejorar la relación con la comida y organizar tus menús diarios." }
-            ].map((faq, i) => (
+            {content.faqs.items.map((faq, i) => (
               <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={faqUp}>
                 <h4 className="text-lg font-bold text-stone-900 mb-3">{faq.q}</h4>
                 <p className="text-stone-600 leading-relaxed">{faq.a}</p>
@@ -247,35 +203,32 @@ export function NutricionServiceContent({ waLink }: Props) {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-8 leading-tight">Nutricionista en Turrialba Cerca de Ti</h2>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-8 leading-tight">{content.location.title}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {[
-                  { icon: MapPin, text: "MJ Estética & Wellness Center" },
-                  { icon: MapPin, text: "Turrialba, Cartago, Costa Rica" },
-                  { icon: Clock, text: "Citas programadas" },
-                  { icon: Phone, text: "Atención por WhatsApp" },
-                  { icon: CheckCircle2, text: "Parqueo disponible" },
-                  { icon: Star, text: "Atención personalizada" }
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3 text-stone-700">
-                    <item.icon className="w-5 h-5 text-primary shrink-0" />
-                    <span className="font-medium">{item.text}</span>
-                  </div>
-                ))}
+                {content.location.items.map((item, i) => {
+                  const icons = [MapPin, MapPin, Clock, Phone, CheckCircle2, Star];
+                  const Icon = icons[i];
+                  return (
+                    <div key={i} className="flex items-center gap-3 text-stone-700">
+                      <Icon className="w-5 h-5 text-primary shrink-0" />
+                      <span className="font-medium">{item}</span>
+                    </div>
+                  );
+                })}
               </div>
             </motion.div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-[#071e2e] p-10 text-white text-center">
-              <h2 className="text-3xl font-serif font-bold mb-6 leading-tight">Agenda Tu Valoración Nutricional Hoy</h2>
+              <h2 className="text-3xl font-serif font-bold mb-6 leading-tight text-white">{content.finalCta.title}</h2>
               <p className="text-white/70 mb-10 leading-relaxed">
-                Tu alimentación puede convertirse en una herramienta para mejorar tu bienestar, energía y calidad de vida. Descubre cómo un plan nutricional personalizado puede ayudarte a construir hábitos sostenibles y alcanzar tus objetivos.
+                {content.finalCta.desc}
               </p>
               <div className="flex flex-col gap-4 max-w-sm mx-auto">
                 <a href={waLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-primary text-white text-sm font-bold tracking-[0.15em] uppercase px-8 py-4 hover:bg-white hover:text-stone-900 transition-all group">
                   <MessageCircle className="w-4 h-4" />
-                  Agenda tu valoración
+                  {content.finalCta.cta}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
-                <p className="text-primary font-bold text-xs uppercase tracking-widest mt-2">Cupos limitados por agenda semanal</p>
+                <p className="text-primary font-bold text-xs uppercase tracking-widest mt-2">{content.finalCta.note}</p>
               </div>
             </motion.div>
           </div>

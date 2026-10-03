@@ -1,0 +1,152 @@
+{
+  "diff": {
+    "label": "Differential",
+    "title": "Say goodbye to unwanted hair… and feel free in your own skin again",
+    "items": [
+      "Personalized skin and treatment assessment",
+      "Professional technology suitable for different skin types",
+      "Facial and body treatments",
+      "Visible, progressive results",
+      "Professional, caring, personalized attention"
+    ],
+    "ctaTitle": "Book your personalized consultation today",
+    "ctaSubtitle": "Message us on WhatsApp and discover which treatment package is right for you.",
+    "ctaDesc": "Discover the package that's right for you.",
+    "cta": "Consult via WhatsApp"
+  },
+  "problems": {
+    "title": "What if unwanted hair is affecting more than just your appearance?",
+    "subtitle": "We know that, for many people, unwanted hair is not simply a beauty concern. It can affect how comfortable you feel in your own skin. It may also lead to:",
+    "items": [
+      "Constant skin irritation",
+      "Ingrown hairs and folliculitis",
+      "Darkened areas or uneven-looking skin",
+      "Feeling insecure about your skin",
+      "Time lost shaving over and over again",
+      "Pain or discomfort from waxing and traditional hair-removal methods"
+    ]
+  },
+  "leadMagnet": {
+    "label": "Special Gift",
+    "intro": "You deserve a routine that feels easier. Less shaving, less irritation. To help you get the most out of your laser hair removal journey, we're giving you a:",
+    "title": "Free Beauty & Skin Care Guide",
+    "discover": "Discover:",
+    "items": [
+      "How to prepare your skin before and after laser hair removal",
+      "Common mistakes that can increase irritation and dark spots",
+      "How to support better results throughout your sessions",
+      "Simple tips to keep your skin feeling smooth and looking more even"
+    ],
+    "footer": "👉 Get your free guide here",
+    "cta": "I WANT MY FREE GUIDE"
+  },
+  "whatIs": {
+    "title": "What Is Laser Hair Removal?",
+    "p1": "Laser hair removal is an aesthetic treatment designed to progressively reduce hair growth by using specialized technology that targets the hair follicle.",
+    "p2": "At MJ Estética & Wellness Center, we create personalized treatment protocols based on your skin type, treatment area, and individual needs, helping you enjoy a more comfortable and personalized experience in Turrialba."
+  },
+  "forWhom": {
+    "title": "Who Is Laser Hair Removal Ideal For?",
+    "items": [
+      "Shave frequently",
+      "Experience ingrown hairs",
+      "Deal with folliculitis",
+      "Have skin that becomes easily irritated",
+      "Experience pain or dark spots after waxing",
+      "Want to spend less time on your daily grooming routine",
+      "Want smoother, more even-looking skin"
+    ]
+  },
+  "benefits": {
+    "title": "What Skin Concerns Can Laser Hair Removal Help Improve?",
+    "items": [
+      { "t": "Constant irritation from shaving", "d": "Reducing the need for frequent shaving can help minimize repeated friction and irritation on the skin." },
+      { "t": "Ingrown hairs", "d": "Laser hair removal can help reduce hair growth over time, which may help decrease the occurrence of ingrown hairs." },
+      { "t": "Folliculitis", "d": "Many people notice progressive improvements in the appearance and comfort of their skin as hair growth decreases." },
+      { "t": "Uneven-looking or darkened areas", "d": "Reducing frequent shaving and irritation may help improve the overall appearance and uniformity of the skin." },
+      { "t": "Fast hair growth", "d": "Spend less time constantly shaving and more time enjoying your day." }
+    ],
+    "resultsLabel": "Progressive, Realistic Results",
+    "resultsSubtitle": "Your treatment plan focuses on:",
+    "results": [
+      "Progressive reduction of hair growth",
+      "Improved appearance of the skin",
+      "Reduced irritation associated with frequent shaving",
+      "Less frequent need for hair removal"
+    ],
+    "note": "📍 Sessions and results vary from person to person."
+  },
+  "realBenefits": {
+    "title": "Real Benefits You May Notice"
+  },
+  "howItWorks": {
+    "title": "Here's How Your Treatment Works",
+    "steps": [
+      { "s": "Step 1", "t": "Personalized Consultation", "d": "We assess your skin type, treatment area, hair growth, and individual needs." },
+      { "s": "Step 2", "t": "Skin Preparation", "d": "We explain how to prepare your skin before your session and provide personalized recommendations." },
+      { "s": "Step 3", "t": "Laser Application", "d": "The session usually takes between 15 and 60 minutes, depending on the treatment area." },
+      { "s": "Step 4", "t": "Aftercare", "d": "You'll receive personalized recommendations to help protect your skin and support your results." }
+    ]
+  },
+  "extra": {
+    "painTitle": "Does Laser Hair Removal Hurt?",
+    "painDesc": "Most people describe the sensation as small warm touches or mild little pinches. Your experience may vary depending on the treatment area and your individual sensitivity.",
+    "sessionsTitle": "How Many Sessions Will I Need?",
+    "sessionsDesc": "The number of sessions varies depending on factors such as the treatment area, hair characteristics, and individual response. Many people begin noticing progressive changes during their first few sessions, with continued improvement throughout their treatment plan."
+  },
+  "imagine": {
+    "title": "Imagine This…",
+    "p1": "Waking up… Getting dressed in the clothes you love…",
+    "p2": "Going to the beach… Heading to the gym… Putting on your favorite outfit…",
+    "p3": "Going out spontaneously without having to think about shaving at the last minute.",
+    "seeking": "That's the kind of freedom many people are looking for when they begin laser hair removal:",
+    "items": [
+      "✨ More comfort",
+      "✨ More confidence",
+      "✨ More freedom",
+      "✨ Less time worrying about unwanted hair"
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "items": [
+      "“I used to get extremely irritated every time I shaved. After several sessions, I've noticed that my skin feels much calmer.”",
+      "“I don't have to worry about shaving every few days anymore.”",
+      "“I love how much smoother and more even my skin feels.”"
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions"
+  },
+  "whyMJ": {
+    "title": "Why Choose MJ Estética & Wellness Center?",
+    "subtitle": "Because we don't want to simply provide a treatment. We want to help you feel more comfortable, confident, and free in your own skin.",
+    "items": [
+      "Personalized attention",
+      "Professional treatment protocols",
+      "Specialized technology",
+      "Comfortable and private environment",
+      "Professional follow-up",
+      "Convenient location in Turrialba",
+      "Real experience in aesthetics and wellness"
+    ]
+  },
+  "contact": {
+    "title": "Location & Contact",
+    "items": [
+      { "i": "📍", "t": "Turrialba, Cartago, Costa Rica" },
+      { "i": "📲", "t": "WhatsApp appointments available" },
+      { "i": "🕒", "t": "Flexible scheduling" },
+      { "i": "🚗", "t": "Easy access and nearby parking" }
+    ],
+    "ctaLabel": "Your Skin Can Look and Feel Different",
+    "ctaTitle": "Ready to Feel Free in Your Own Skin?",
+    "ctaDesc": "Every day you postpone starting is another day spent dealing with shaving, irritation, unwanted hair, and unnecessary discomfort. You can choose more comfort, more confidence, and more freedom.",
+    "ctaSteps": [
+      "👉 Book your personalized consultation today",
+      "👉 Discover the package that's right for you",
+      "👉 Message us on WhatsApp"
+    ],
+    "cta": "BOOK NOW"
+  }
+}
