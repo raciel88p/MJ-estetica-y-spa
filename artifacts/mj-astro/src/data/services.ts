@@ -2150,48 +2150,52 @@ export const servicePages: MultiLangServicePageData[] = [
     en: {
       slug: "hollywood-peel",
       name: "Hollywood Peel",
-      tagline: "Piel luminosa, uniforme y rejuvenecida en una sola sesión",
-      heroDescription: "El Hollywood Peel, también conocido como Carbon Laser Peel, es un tratamiento láser no invasivo que revitaliza la piel, unifica el tono, reduce manchas y estimula la producción de colágeno para un aspecto más joven y radiante.",
+      fullTitle: "Hollywood Peel in Turrialba",
+      tagline: "Restore Your Skin’s Natural Glow From the Very First Session",
+      heroDescription: "Do you look in the mirror and feel like your skin looks tired, dull, or marked by spots that even makeup can no longer hide?<br /><br />Maybe you’ve tried creams, masks, or skincare routines that promise amazing results… but the results don’t last—or simply never arrive.<br /><br />The reality is that stress, sun exposure, pollution, and the passage of time can affect your skin faster than you realize.<br /><br />But today, you can restore luminosity, softness, and vitality to your face without surgery, without pain, and without lengthy downtime.",
       benefits: [
-        "Unificación del tono de la piel desde la primera sesión",
-        "Reducción de manchas, líneas finas y cicatrices de acné",
-        "Estimulación del colágeno para una piel más joven",
-        "Sin tiempo de recuperación ni efectos secundarios",
-        "Apto para todos los tipos de piel",
+        "Reduce the appearance of sun spots and acne marks",
+        "Minimize the appearance of enlarged pores",
+        "Control excess facial oil",
+        "Improve skin texture and softness",
+        "Stimulate natural collagen production",
+        "Reduce the appearance of fine lines",
+        "Enhance the skin’s luminosity",
+        "Create a more even and rejuvenated-looking complexion",
       ],
       items: [
         {
           title: "Hollywood Peel Facial",
           description:
-            "Aplicación de carbono líquido sobre el rostro y posterior tratamiento con láser para exfoliar, unificar el tono y estimular la renovación celular.",
+            "Advanced treatment combining activated charcoal and laser technology to deeply exfoliate, even skin tone, and stimulate cellular renewal.",
           duration: "45 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Hollywood Peel Cuello y Escote",
+          title: "Hollywood Peel Neck & Decollete",
           description:
-            "Extensión del tratamiento al cuello y escote para tratar manchas solares, envejecimiento y mejorar la textura en estas zonas.",
+            "Extension of the Hollywood Peel treatment to the neck and chest area to target sun spots, aging signs, and uneven skin texture.",
           duration: "60 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Hollywood Peel + Radiofrecuencia",
+          title: "Hollywood Peel + Radiofrequency",
           description:
-            "Protocolo combinado para máximos resultados: exfoliación y rejuvenecimiento láser más radiofrecuencia para efecto tensor profundo.",
+            "Combined protocol incorporating carbon laser exfoliation and radiofrequency for a deeper firming and rejuvenation effect.",
           duration: "75 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿Duele el Hollywood Peel?",
+          question: "Does the Hollywood Peel hurt?",
           answer:
-            "No, el tratamiento es prácticamente indoloro. Puede notarse una ligera sensación de calor durante la aplicación del láser.",
+            "No, the treatment is virtually painless. Most clients experience only a gentle warm sensation during the laser application.",
         },
         {
-          question: "¿Con qué frecuencia se puede realizar?",
+          question: "How often can the treatment be performed?",
           answer:
-            "Se recomienda una sesión mensual para mantenimiento. Para resultados más intensivos, se puede hacer cada 2–3 semanas.",
+            "A monthly session is recommended for ongoing maintenance, or every 2–3 weeks for a more intensive rejuvenation protocol.",
         },
       ],
     },
