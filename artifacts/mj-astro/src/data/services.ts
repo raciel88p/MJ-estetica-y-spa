@@ -5809,31 +5809,45 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "coffee-massage",
-      name: "Coffee Massage",
-      fullTitle: "Coffee Massage in Turrialba | Body Treatment & Relaxation",
-      tagline: "Give your body a break and your skin a unique experience",
-      heroDescription: "Enjoy a Coffee Massage in Turrialba: body exfoliation, massage, hydration, and relaxation at MJ Fisio Estética & Spa.",
+      name: "Coffee Massage in Turrialba ☕",
+      fullTitle: "Coffee Massage in Turrialba | Anti-Cellulite & Relaxing Body Ritual ☕",
+      tagline: "Give your body a pause… and your skin a whole new experience",
+      heroDescription: "Your skin deserves to be cared for, too.<br /><br />After a week filled with work, stress, and responsibilities, imagine being able to stop for an hour, disconnect from your routine, and enjoy an experience that combines coffee, exfoliation, massage, and relaxation.<br /><br />The <strong>Coffee Massage at MJ Fisio Estética & Spa</strong> is a body ritual designed to care for the appearance of your skin while giving you a moment of relaxation and well-being.",
       benefits: [
-        "Smoother skin appearance through natural exfoliation",
-        "A different, invigorating sensory experience",
-        "Deep body relaxation and disconnection from routine",
-        "Comprehensive skin care and hydration"
+        "Gentle natural skin exfoliation",
+        "Softer, smoother, and more radiant-looking skin",
+        "Deep body relaxation and stress release",
+        "Improved local circulation through massage",
+        "Deep hydration for dry or tired skin",
+        "A unique, invigorating sensory experience",
       ],
       items: [
         {
-          title: "Coffee Massage & Ritual",
-          description: "Full body experience combining coffee scrub exfoliation, relaxing massage, and intensive hydration.",
+          title: "Coffee Massage & Body Ritual",
+          description: "Full body experience combining natural coffee scrub exfoliation, relaxing massage, and intensive hydration.",
           duration: "60 min",
-          price: "Consult price"
-        }
+          price: "Consult price",
+        },
       ],
       faq: [
         {
           question: "What is a Coffee Massage?",
-          answer: "It is a body treatment combining coffee exfoliation, massage, and skin hydration for wellness and relaxation."
-        }
-      ]
-    }
+          answer: "It is a body treatment combining coffee exfoliation, relaxing massage, and skin hydration for wellness and skin renewal.",
+        },
+        {
+          question: "Does a Coffee Massage hurt?",
+          answer: "No, the exfoliation is gentle and the massage is designed to be relaxing and comfortable.",
+        },
+        {
+          question: "Does the coffee stain the skin?",
+          answer: "No, specialized cosmetic products and natural coffee grounds are used and completely removed, leaving skin clean and smooth.",
+        },
+        {
+          question: "How long does the session take?",
+          answer: "The full session takes approximately 60 minutes.",
+        },
+      ],
+    },
   },
   {
     es: {

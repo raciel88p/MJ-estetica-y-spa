@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import es from "@/i18n/locales/es/masaje-cafe.json";
+import en from "@/i18n/locales/en/masaje-cafe.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -51,8 +52,11 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 }
 
 export function MasajeCafeContent({ waLink, lang = "es" }: { waLink: string, lang?: "es" | "en" }) {
-  const content = lang === "es" ? es : (es as any);
-  const coffeeWaLink = `https://wa.me/50686907757?text=${encodeURIComponent("Hola, me interesa reservar el Masaje con Café en MJ Fisio Estética & Spa. ¿Me pueden compartir disponibilidad, precio y horarios?")}`;
+  const content = lang === "es" ? es : en;
+  const coffeeWaMsg = lang === "es"
+    ? "Hola, me interesa reservar el Masaje con Café en MJ Fisio Estética & Spa. ¿Me pueden compartir disponibilidad, precio y horarios?"
+    : "Hi! I would like to book a Coffee Massage at MJ Fisio Estética & Spa. Could you please share availability and details?";
+  const coffeeWaLink = `https://wa.me/50686907757?text=${encodeURIComponent(coffeeWaMsg)}`;
 
   return (
     <div className="bg-white">
