@@ -4838,31 +4838,45 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "spa-brides",
-      name: "Spa for Brides",
-      tagline: "The best gift before your wedding is you",
+      name: "Bridal Spa in Turrialba ✨",
+      fullTitle: "Bridal Spa in Turrialba ✨",
+      tagline: "The Perfect Spa Experience for Brides Who Want to Feel Radiant on Their Big Day",
       heroDescription:
-        "Live the most relaxing Bride Spa experience in Turrialba. Exclusive experience designed to help you regain physical and emotional balance before your special day.",
+        "Feeling stressed, tired, anxious, or worried about dull-looking skin before your wedding?<br /><br />At <strong>MJ Estética & Wellness Center</strong>, we help you relax, disconnect, and look your best with our exclusive <strong>Bridal Spa Experience in Turrialba</strong>.<br /><br />Enjoy an experience designed for brides, couples, and bachelorette parties who want to create a special moment before the big day.",
       benefits: [
-        "Deep relaxation of the nervous system",
-        "Relief of tension and muscle pain",
-        "Improvement of skin luminosity and freshness",
-        "Reduction of pre-wedding anxiety and stress"
+        "Helps reduce stress and promote relaxation",
+        "Supports restful relaxation before the wedding",
+        "Helps release tension in the neck, back, and legs",
+        "Helps refresh and revitalize the appearance of the skin",
+        "Promotes physical and emotional well-being",
       ],
       items: [
         {
           title: "Radiant Bride Package",
-          description: "Integral protocol combining body exfoliation, relaxing massage, and express facial.",
+          description: "Integral protocol combining silk body exfoliation, relaxing massage with aromatherapy, and 'Bridal Glow' express facial.",
           duration: "120 min",
-          price: "Consult price"
-        }
+          price: "Consult price",
+        },
       ],
       faq: [
         {
-          question: "How far in advance should I book?",
-          answer: "We recommend booking at least 2 to 4 weeks in advance."
-        }
-      ]
-    }
+          question: "When is the best time to have a spa treatment before a wedding?",
+          answer: "A relaxing spa experience can be scheduled anywhere from 1 to 7 days before the wedding, depending on the treatments selected and your personal preferences.",
+        },
+        {
+          question: "Can the experience be for couples?",
+          answer: "Yes. We offer relaxing spa experiences designed for couples in Turrialba.",
+        },
+        {
+          question: "Do you offer personalized packages?",
+          answer: "Yes. We can customize your spa experience according to your needs, preferences, and wedding plans.",
+        },
+        {
+          question: "Can a massage help with stress?",
+          answer: "Relaxing massages can help promote relaxation and ease muscle tension, making them a popular wellness option for people looking to unwind before their wedding.",
+        },
+      ],
+    },
   },
   {
     es: {

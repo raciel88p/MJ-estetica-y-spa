@@ -1,99 +1,86 @@
 {
-  "leadMagnet": {
-    "tagline": "💍 EXCLUSIVE GIFT FOR BRIDES",
-    "title": "Download our FREE Guide:",
-    "subtitle": "\"How to Arrive Relaxed, Radiant and Stress-Free to Your Wedding Day\"",
-    "wordLabel": "💌 Comment the word:",
-    "word": "BODA",
-    "desc": "In this guide you will discover:",
-    "items": [
-      "Tips to enjoy the days before.",
-      "How to boost the benefits of a Pre-Wedding Spa.",
-      "Secrets for radiant skin on the big day.",
-      "Relaxation techniques for brides."
+  "hero": {
+    "title": "Bridal Spa in Turrialba ✨",
+    "subtitle": "The Perfect Spa Experience for Brides Who Want to Feel Radiant on Their Big Day",
+    "intro": "Feeling stressed, tired, anxious, or worried about dull-looking skin before your wedding? At MJ Estética & Wellness Center, we help you relax, disconnect, and look your best with our exclusive Bridal Spa Experience in Turrialba.",
+    "subintro": "Enjoy an experience designed for brides, couples, and bachelorette parties who want to create a special moment before the big day.",
+    "bullets": [
+      "✔ Relaxing massages",
+      "✔ Stress-relieving aromatherapy",
+      "✔ Skin hydration and renewal",
+      "✔ Private and relaxing atmosphere",
+      "✔ Personalized attention in Turrialba"
     ],
-    "cta": "DOWNLOAD GUIDE VIA WHATSAPP",
-    "footer": "You will also receive exclusive information about our packages."
+    "closing": "Book your spa experience today and get ready for your wedding feeling beautiful, relaxed, and renewed."
   },
-  "problem": {
-    "title": "The Best Gift Before Your Wedding Is You",
-    "p1": "For months you organize every detail: Dress, Photography, Guests, Makeup, Decoration.",
-    "p2": "But many brides forget to take care of the most important person on that day: Themselves.",
-    "p3": "If you are feeling any of these symptoms, it is time to take a break:",
-    "symptoms": [
-      "Constant stress",
-      "Anxiety",
-      "Muscle pain",
-      "Accumulated fatigue",
-      "Difficulty sleeping",
-      "Dull skin"
+  "whyChoose": {
+    "title": "Why Choose Our Bridal Spa in Turrialba?",
+    "subtitle": "Your wedding deserves more than an ordinary massage. We create relaxing wellness experiences designed to help you:",
+    "bullets": [
+      "✨ Reduce pre-wedding stress",
+      "✨ Support relaxation and restful sleep",
+      "✨ Relax tense muscles",
+      "✨ Revitalize your skin before makeup application",
+      "✨ Enjoy a special moment with your partner or friends"
     ],
-    "closing": "All this can affect how you feel and look on your wedding day. At MJ Estética & Wellness Center we have designed an exclusive experience to help you regain physical and emotional balance."
+    "closing": "Our bridal spa in Turrialba combines wellness, relaxation, and beauty treatments in one place."
+  },
+  "couplesAndParties": {
+    "title": "Couples Spa & Bachelorette Experiences in Turrialba 💍",
+    "subtitle": "Celebrate before your wedding with an unforgettable spa experience. We offer:",
+    "options": [
+      "Couples spa experiences",
+      "Bridal spa days",
+      "Relaxing couples massages",
+      "Bachelorette spa experiences",
+      "Personalized spa packages"
+    ],
+    "note": "Perfect for anyone looking for an exclusive moment of relaxation in Turrialba before the big event."
   },
   "benefits": {
-    "title": "Live the Most Relaxing Bride Spa Experience in Turrialba",
-    "desc": "Our bridal protocols are designed so you arrive at the altar feeling light, renewed and with an unmatched natural glow.",
-    "listTitle": "What you will experience with us:",
+    "title": "Benefits of Our Bridal Spa Experience",
     "items": [
-      "Deep relaxation of the nervous system",
-      "Relief of muscle tension from stress",
-      "Skin preparation for perfect makeup",
-      "Lymphatic drainage to reduce inflammation",
-      "Private and exclusive environment for brides",
-      "100% personalized attention by professionals"
+      "✔ Helps reduce stress and promote relaxation",
+      "✔ Supports restful relaxation before the wedding",
+      "✔ Helps release tension in the neck, back, and legs",
+      "✔ Helps refresh and revitalize the appearance of the skin",
+      "✔ Promotes physical and emotional well-being"
     ],
-    "quote": "You deserve this moment just for you."
+    "goal": "Our goal is for you to feel confident, calm, beautiful, and radiant on one of the most important days of your life."
   },
-  "packages": {
-    "title": "Our Exclusive Packages",
-    "desc": "Select the experience that best suits your needs before the big day.",
-    "items": [
-      {
-        "t": "Radiant Bride",
-        "p": "The Favorite",
-        "d": "Integral protocol combining silk body exfoliation, relaxing massage with aromatherapy and 'Bridal Glow' express facial.",
-        "time": "120 min"
-      },
-      {
-        "t": "Pre-Wedding Couples Spa",
-        "p": "Share the Calm",
-        "d": "Shared experience to release the stress of preparations together in an environment of absolute calm, candles and soft music.",
-        "time": "90 min"
-      },
-      {
-        "t": "Bridal Anti-Stress Massage",
-        "p": "Direct Relief",
-        "d": "Session focused on releasing deep tension in the back, neck and shoulders accumulated by organizing the event.",
-        "time": "60 min"
-      }
-    ]
-  },
-  "whyUs": {
-    "title": "Why Trust Your Relaxation to MJ Estética?",
-    "desc": "We understand the importance of your wedding. We don't just provide a service, we create a sanctuary of peace for you.",
-    "items": [
-      { "t": "Premium Experience" },
-      { "t": "Bridal Specialists" },
-      { "t": "Guaranteed Privacy" },
-      { "t": "Visible Results" },
-      { "t": "Attention to Detail" },
-      { "t": "Turrialba Center" }
-    ]
+  "reserve": {
+    "title": "Book Your Spa Experience in Turrialba Today 📲",
+    "notice": "Weekend appointments and wedding-season dates can fill up quickly.",
+    "agendaTitle": "Book your:",
+    "services": [
+      "relaxing massage in Turrialba",
+      "bridal spa experience",
+      "couples spa experience",
+      "pre-wedding wellness experience"
+    ],
+    "closing": "and enjoy a unique experience at MJ Estética & Wellness Center.",
+    "location": "📍 Located in Turrialba, Cartago, Costa Rica",
+    "cta": "📲 Book through WhatsApp today"
   },
   "faqs": {
-    "title": "Questions for Brides",
+    "title": "Frequently Asked Questions",
     "items": [
-      { "q": "How far in advance should I book my Wedding Spa?", "a": "We recommend booking at least 2 to 4 weeks in advance to ensure your space in our calendar." },
-      { "q": "How many days before the wedding is ideal to perform the spa?", "a": "The ideal is between 2 and 5 days before the wedding. This way you will be relaxed and the aesthetic benefits on your skin will be at their peak on the day of the event." },
-      { "q": "Can my bridesmaids or mom come?", "a": "Of course! We can coordinate a group experience so you can share this moment with your closest people." },
-      { "q": "Do you have packages that include facials?", "a": "Yes, our star package 'Radiant Bride' includes a facial specifically designed to provide immediate luminosity." },
-      { "q": "What should I bring on the day of my session?", "a": "Just your willingness to relax. We provide everything you need: robe, slippers and a courtesy drink." }
+      {
+        "q": "When is the best time to have a spa treatment before a wedding?",
+        "a": "A relaxing spa experience can be scheduled anywhere from 1 to 7 days before the wedding, depending on the treatments selected and your personal preferences."
+      },
+      {
+        "q": "Can the experience be for couples?",
+        "a": "Yes. We offer relaxing spa experiences designed for couples in Turrialba."
+      },
+      {
+        "q": "Do you offer personalized packages?",
+        "a": "Yes. We can customize your spa experience according to your needs, preferences, and wedding plans."
+      },
+      {
+        "q": "Can a massage help with stress?",
+        "a": "Relaxing massages can help promote relaxation and ease muscle tension, making them a popular wellness option for people looking to unwind before their wedding."
+      }
     ]
-  },
-  "finalCta": {
-    "title": "Book Your Wedding Spa in Turrialba Today",
-    "desc": "Don't leave your well-being for the last moment. Arrive at the altar feeling like the best version of yourself.",
-    "cta1": "Schedule via WhatsApp",
-    "cta2": "Check Availability"
   }
 }
