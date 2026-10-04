@@ -782,7 +782,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
         <OjerasServiceContent waLink={WA} lang={lang} />
       )}
 
-      {service.slug === "aromaterapia" && (
+      {(service.slug === "aromaterapia" || service.slug === "aromatherapy") && (
         <AromaterapiaContent waLink={WA} lang={lang} />
       )}
 

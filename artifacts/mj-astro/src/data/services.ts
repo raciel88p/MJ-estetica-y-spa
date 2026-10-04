@@ -5112,49 +5112,50 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "aromaterapia",
-      name: "Aromaterapia en Turrialba",
-      tagline: "Regálate un momento de calma, bienestar y desconexión",
-      heroDescription: "Experiencia wellness que utiliza aceites esenciales y estímulos aromáticos cuidadosamente seleccionados para crear ambientes orientados a la relajación, el bienestar emocional y el descanso.",
+      name: "Aromatherapy",
+      fullTitle: "Aromatherapy in Turrialba | Relaxation, Wellness & Premium Wellness Experiences",
+      tagline: "Give Yourself a Moment of Calm, Well-Being & Disconnection",
+      heroDescription: "Do you feel like stress, responsibilities, and the pace of everyday life leave you with little time for yourself?<br /><br />At <strong>MJ Estética & Wellness Center</strong>, we have created an <strong>aromatherapy experience in Turrialba</strong> designed to help you enjoy moments of deep relaxation, overall well-being, and self-care in a comfortable, private, and fully personalized environment.",
       benefits: [
-        "Sensación de relajación profunda",
-        "Momentos de desconexión y descanso",
-        "Bienestar emocional y físico",
-        "Espacios de calma y armonía",
-        "Experiencias wellness personalizadas",
-        "Autocuidado consciente",
-        "Ambiente premium orientado al bienestar",
+        "A feeling of deep relaxation",
+        "Moments of disconnection and rest",
+        "Emotional and physical well-being",
+        "Spaces of calm and harmony",
+        "Personalized wellness experiences",
+        "Mindful self-care",
+        "A premium environment focused on well-being",
       ],
       items: [],
       faq: [
         {
-          question: "¿Qué es la aromaterapia?",
+          question: "What is aromatherapy?",
           answer:
-            "Es una experiencia wellness que utiliza aromas y aceites esenciales para crear ambientes orientados al bienestar y la relajación.",
+            "It is a wellness experience that uses scents and essential oils to create environments oriented towards well-being and relaxation.",
         },
         {
-          question: "¿Cuánto dura la sesión?",
+          question: "How long is the session?",
           answer:
-            "Depende del protocolo seleccionado y de las necesidades de cada persona.",
+            "It depends on the selected protocol and each person's needs.",
         },
         {
-          question: "¿Se puede combinar con masajes?",
+          question: "Can it be combined with massages?",
           answer:
-            "Sí. Es una de las combinaciones más solicitadas por nuestros clientes.",
+            "Yes. It is one of the most requested combinations by our clients.",
         },
         {
-          question: "¿Qué aceites esenciales utilizan?",
+          question: "What essential oils do you use?",
           answer:
-            "Seleccionamos opciones según la experiencia deseada y las preferencias individuales.",
+            "We select options according to the desired experience and individual preferences.",
         },
         {
-          question: "¿Necesito preparación previa?",
+          question: "Do I need any prior preparation?",
           answer:
-            "No. Solo venir con disposición para disfrutar un momento de bienestar.",
+            "No. Just come with a willingness to enjoy a moment of well-being.",
         },
         {
-          question: "¿Dónde están ubicados?",
+          question: "Where are you located?",
           answer:
-            "Nos encontramos en Turrialba, con fácil acceso y parqueo para nuestros visitantes.",
+            "We are located in Turrialba, with easy access and parking for our visitors.",
         },
       ],
     },
