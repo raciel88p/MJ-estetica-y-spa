@@ -5903,31 +5903,49 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "chocolate-massage",
-      name: "Chocolate Massage (Chocotherapy)",
-      fullTitle: "Chocolate Massage in Turrialba | Relaxing Chocotherapy",
-      tagline: "A chocolate experience to relax, disconnect, and pamper yourself",
-      heroDescription: "Enjoy a Chocolate Massage in Turrialba with chocotherapy, relaxing massage, and a sensory wellness experience.",
+      name: "Chocolate Massage in Turrialba 🍫",
+      fullTitle: "Chocolate Massage in Turrialba | Relaxing Chocolate Therapy 🍫",
+      tagline: "A chocolate-inspired experience designed to help you relax, disconnect, and indulge in a moment just for you",
+      heroDescription: "There are moments when you simply need to stop. Leave work, responsibilities, and the stress of the day behind. Breathe. Relax. And allow yourself to enjoy.<br /><br />At <strong>MJ Fisio Estética & Spa</strong>, we created the <strong>Chocolate Massage in Turrialba</strong>, a chocolate therapy experience that combines body massage, cocoa-inspired cosmetic products, and a sensory environment designed to promote relaxation and well-being.",
       benefits: [
-        "Enveloping sensory experience with cocoa aroma",
-        "Deep skin smoothness and hydration sensation",
-        "Full body relaxation and physical & mental rest",
-        "Personalized care in a comfortable spa environment"
+        "Relax after an intense week",
+        "Enjoy a moment of self-care",
+        "Experience something different and sensory",
+        "Care for the look and feel of your skin",
+        "Disconnect from your routine",
+        "Enjoy a spa experience",
       ],
       items: [
         {
-          title: "Full Body Chocotherapy",
+          title: "Full Body Chocolate Therapy",
           description: "Complete ritual with specialized cocoa cosmetic products, relaxing massage, and hydration.",
           duration: "60 min",
-          price: "Consult price"
-        }
+          price: "Consult price",
+        },
       ],
       faq: [
         {
           question: "What is a Chocolate Massage?",
-          answer: "It is a spa body experience combining relaxing massage with cocoa-inspired cosmetic products."
-        }
-      ]
-    }
+          answer: "It is a spa body experience that combines a relaxing massage with cocoa-inspired cosmetic products and sensory elements associated with chocolate.",
+        },
+        {
+          question: "Is Chocolate Therapy relaxing?",
+          answer: "The experience is designed primarily around massage, a peaceful atmosphere, and sensory elements intended to promote a feeling of relaxation and well-being.",
+        },
+        {
+          question: "What products are used?",
+          answer: "Specialized cosmetic products designed for the Chocolate Therapy protocol are used. This is not edible chocolate applied directly to the skin.",
+        },
+        {
+          question: "Will the chocolate stain my skin?",
+          answer: "The cosmetic products used are designed for body treatments and are easily removed, leaving skin soft and clean.",
+        },
+        {
+          question: "How long does a Chocolate Massage last?",
+          answer: "The session lasts approximately 60 minutes, depending on the selected protocol.",
+        },
+      ],
+    },
   },
   {
     es: {
