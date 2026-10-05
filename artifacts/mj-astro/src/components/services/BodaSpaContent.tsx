@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import es from "@/i18n/locales/es/boda-spa.json";
+import en from "@/i18n/locales/en/boda-spa.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -50,7 +51,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 }
 
 export function BodaSpaContent({ waLink, lang = "es" }: { waLink: string, lang?: "es" | "en" }) {
-  const content = lang === "es" ? es : (es as any);
+  const content = lang === "es" ? es : en;
 
   return (
     <div className="bg-white">

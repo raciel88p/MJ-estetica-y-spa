@@ -790,7 +790,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
         <RejuvenecimientoLaserContent waLink={WA} lang={lang} />
       )}
 
-      {service.slug === "boda-spa" && (
+      {(service.slug === "boda-spa" || service.slug === "spa-brides") && (
         <BodaSpaContent waLink={WA} lang={lang} />
       )}
 
@@ -802,7 +802,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
         <TropicalExtremeContent waLink={WA} lang={lang} />
       )}
 
-      {service.slug === "masaje-cafe" && (
+      {(service.slug === "masaje-cafe" || service.slug === "coffee-massage") && (
         <MasajeCafeContent waLink={WA} lang={lang} />
       )}
 
