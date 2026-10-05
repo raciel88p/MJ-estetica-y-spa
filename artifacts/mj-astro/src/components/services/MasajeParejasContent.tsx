@@ -56,7 +56,11 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 
 export function MasajeParejasContent({ waLink, lang = "es" }: { waLink: string, lang?: "es" | "en" }) {
   const content = lang === "es" ? es : en;
-  const parejasWaLink = `https://wa.me/50686907757?text=${encodeURIComponent("Hola, me interesa reservar el Masaje para Parejas en MJ Fisio Estética & Spa. ¿Me pueden compartir disponibilidad, paquetes y precios?")}`;
+  const parejasWaLink = `https://wa.me/50686907757?text=${encodeURIComponent(
+    lang === "es"
+      ? "Hola, me interesa reservar el Masaje para Parejas en MJ Fisio Estética & Spa. ¿Me pueden compartir disponibilidad, paquetes y precios?"
+      : "Hello, I am interested in booking a Couples Massage at MJ Estética & Wellness Center. Could you please share availability, packages, and pricing?"
+  )}`;
 
   return (
     <div className="bg-white">
