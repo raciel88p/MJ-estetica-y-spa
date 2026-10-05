@@ -1,0 +1,132 @@
+{
+  "hero": {
+    "title": "🍫 Chocolate Massage in Turrialba",
+    "subtitle": "Relaxing Chocolate Therapy",
+    "p1": "A chocolate-inspired experience designed to help you relax, disconnect, and indulge in a moment just for you.",
+    "p2": "There are moments when you simply need to stop. Leave work, responsibilities, and the stress of the day behind. Breathe. Relax. And allow yourself to enjoy.",
+    "bullets": ["🍫 Cocoa aroma", "💆‍♀️ Relaxing massage", "🌿 Spa atmosphere", "✨ Skin care", "🤎 Sensory experience"],
+    "tagline": "Because sometimes, taking care of yourself simply means giving yourself permission to enjoy the moment.",
+    "cta": "BOOK YOUR CHOCOLATE MASSAGE VIA WHATSAPP"
+  },
+  "whatIs": {
+    "title": "🍫 What Is a Chocolate Massage?",
+    "p1": "A Chocolate Massage, also known as Chocolate Therapy, is a spa body experience that incorporates cocoa-inspired cosmetic products along with massage techniques focused on relaxation and well-being.",
+    "p2": "At MJ Fisio Estética & Spa, we aim to transform a massage session into a complete sensory experience. The aroma, texture of the products, massage, and atmosphere come together to help you slow down, change pace, and enjoy a moment dedicated entirely to yourself.",
+    "p3": "It's not just a massage. It's an experience. A pause. A moment to disconnect from your routine and enjoy the well-being you deserve.",
+    "highlight": "Discover Chocolate Therapy in Turrialba at MJ Fisio Estética & Spa.",
+    "cta": "CHECK AVAILABILITY VIA WHATSAPP"
+  },
+  "enjoy": {
+    "title": "🌿 What Can You Enjoy During the Experience?",
+    "items": [
+      {
+        "t": "💆‍♀️ Body Relaxation",
+        "d": "The massage is designed to provide an enjoyable experience of relaxation and rest."
+      },
+      {
+        "t": "🍫 A Sensory Cocoa Experience",
+        "d": "The products used during the experience and the characteristic aroma of cocoa add a unique element to the traditional massage experience."
+      },
+      {
+        "t": "💧 Skin Care",
+        "d": "The cosmetic products used during the ritual are designed to complement your body-care experience and leave your skin feeling soft and cared for."
+      },
+      {
+        "t": "✨ Time for Yourself",
+        "d": "An opportunity to temporarily leave your responsibilities behind and focus on your own well-being."
+      },
+      {
+        "t": "🤎 A Different Kind of Experience",
+        "d": "Ideal for anyone looking to try something different from a conventional massage."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "🍫 Benefits of Chocolate Therapy",
+    "subtitle": "The main purpose of the Chocolate Massage is to provide an experience centered around relaxation, well-being, and body care.",
+    "items": [
+      "💆‍♀️ Relax after an intense week",
+      "🌿 Enjoy a moment of self-care",
+      "🍫 Experience something different and sensory",
+      "💧 Care for the look and feel of your skin",
+      "✨ Disconnect from your routine",
+      "🤎 Enjoy a spa experience",
+      "🎁 Surprise someone special"
+    ]
+  },
+  "session": {
+    "title": "🌺 What Is a Chocolate Massage Session Like?",
+    "intro": "We want your experience to begin from the very first moment.",
+    "steps": [
+      { "num": "1", "t": "Reception & Preparation", "d": "We welcome you into a comfortable, peaceful environment and explain the session protocol." },
+      { "num": "2", "t": "Preparing Your Experience", "d": "We prepare the cosmetic products and treatment space before beginning your Chocolate Therapy ritual." },
+      { "num": "3", "t": "Application of Cocoa-Inspired Products", "d": "We use specialized cosmetic products selected for the Chocolate Therapy body protocol." },
+      { "num": "4", "t": "Relaxing Massage", "d": "We perform the body massage according to the selected protocol, adapting the experience to your preferences." },
+      { "num": "5", "t": "Finishing the Ritual", "d": "We complete the ritual so you can enjoy the lingering feeling of relaxation and body care." }
+    ],
+    "duration": "⏱ APPROXIMATE DURATION: 60 MINUTES",
+    "cta": "BOOK MY CHOCOLATE MASSAGE"
+  },
+  "forWhom": {
+    "title": "🧖‍♀️ Who Is a Chocolate Massage For?",
+    "items": [
+      { "t": "💼 People With Busy Schedules", "d": "If you spend long hours working and need a chance to slow down and change pace." },
+      { "t": "💆‍♀️ People Looking to Relax", "d": "For anyone who wants to enjoy a relaxing massage in a peaceful environment." },
+      { "t": "🍫 Chocolate Lovers", "d": "A different way to enjoy the aroma and sensory experience inspired by cocoa." },
+      { "t": "💕 Couples", "d": "An experience that can become part of a celebration or a special moment together." },
+      { "t": "🎁 People Looking for a Different Kind of Gift", "d": "A wellness experience can be much more memorable than a traditional gift." },
+      { "t": "🌿 People Interested in Self-Care", "d": "For those who enjoy incorporating spa and wellness experiences into their routine." }
+    ]
+  },
+  "experience": {
+    "title": "🤎 Chocolate Massage: An Experience to Enjoy",
+    "p1": "Imagine arriving after an intense week. Putting your phone aside. Entering a peaceful space. Breathing in the aroma of cocoa. Relaxing. And for approximately one hour, not having to think about anything else.",
+    "p2": "That's part of the experience we want to create at MJ Fisio Estética & Spa. A moment for you.",
+    "cta": "I WANT TO BOOK MY EXPERIENCE"
+  },
+  "whyUs": {
+    "title": "✨ Why Choose MJ Fisio Estética & Spa?",
+    "subtitle": "Because we don't want to offer you just a massage. We want to offer you a wellness experience.",
+    "items": [
+      { "t": "🌿 Personalized Attention", "d": "Everyone has different needs and preferences, which is why we pay attention to your individual experience." },
+      { "t": "💆‍♀️ Relaxing Environment", "d": "We create a space where you can slow down, disconnect, and enjoy your session." },
+      { "t": "🍫 Specialized Products", "d": "We use cosmetic products selected for our Chocolate Therapy protocol." },
+      { "t": "✨ A Complete Experience", "d": "We combine massage, atmosphere, and sensory elements to create a complete wellness experience." },
+      { "t": "📍 Located in Turrialba", "d": "Enjoy a spa experience without having to travel outside Turrialba." },
+      { "t": "📅 By Appointment", "d": "We work by appointment so we can provide you with a more personalized experience." }
+    ]
+  },
+  "gift": {
+    "title": "🎁 Looking for a Different Kind of Gift?",
+    "subtitle": "Give an experience, not just an object. A Chocolate Massage can be a special gift.",
+    "occasions": ["Birthdays", "Anniversaries", "Mother's Day", "Couples", "Graduations", "Celebrations"],
+    "cta": "ASK ABOUT GIFT CERTIFICATES"
+  },
+  "location": {
+    "title": "📍 Chocolate Massage in Turrialba, Cartago",
+    "subtitle": "If you're looking for a Chocolate Massage in Turrialba, a Chocolate Therapy experience, a relaxing massage, or a spa where you can enjoy a moment of relaxation and well-being, you can visit MJ Fisio Estética & Spa.",
+    "address": "MJ Fisio Estética & Spa\nCiudadela Jorge Debravo, Calle 4, House #58\nTurrialba, Cartago, Costa Rica",
+    "note": "Landmark: Approximately 200 meters south of Coopenae and 75 meters south of Cinthya's Salon.",
+    "cta": "BOOK CHOCOLATE MASSAGE VIA WHATSAPP"
+  },
+  "faqs": {
+    "title": "❓ Frequently Asked Questions About Chocolate Massage",
+    "items": [
+      { "q": "What is a Chocolate Massage?", "a": "It is a spa body experience that combines a relaxing massage with cocoa-inspired cosmetic products and sensory elements associated with chocolate." },
+      { "q": "Is Chocolate Therapy relaxing?", "a": "The experience is designed primarily around massage, a peaceful atmosphere, and sensory elements intended to promote a feeling of relaxation and well-being." },
+      { "q": "Does Chocolate Massage help reduce stress?", "a": "Massage and a peaceful environment may promote a feeling of relaxation. Individual experiences and results may vary." },
+      { "q": "What products are used?", "a": "Specialized cosmetic products designed for the Chocolate Therapy protocol are used. This is not edible chocolate applied directly to the skin." },
+      { "q": "Will the chocolate stain my skin?", "a": "The cosmetic products used are designed for body treatments and are easily removed, leaving skin soft and clean." },
+      { "q": "How long does a Chocolate Massage last?", "a": "The session lasts approximately 60 minutes, depending on the selected protocol." },
+      { "q": "Can I give a Chocolate Massage as a gift?", "a": "Yes. It can be a thoughtful gift option for birthdays, anniversaries, couples, and other celebrations." },
+      { "q": "Do I need to make a reservation?", "a": "Yes. We recommend booking in advance to confirm availability and your preferred time." }
+    ]
+  },
+  "final": {
+    "title": "🍫 Your Moment of Relaxation Can Begin Here",
+    "p1": "You don't need to wait for a special occasion or until you're completely exhausted. Sometimes, you simply need to give yourself permission to stop, breathe, and enjoy.",
+    "badge": "MJ FISIO ESTÉTICA & SPA",
+    "subbadge": "Turrialba, Cartago, Costa Rica",
+    "cta": "BOOK YOUR CHOCOLATE MASSAGE VIA WHATSAPP"
+  }
+}
