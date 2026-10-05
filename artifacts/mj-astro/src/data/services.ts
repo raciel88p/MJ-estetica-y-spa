@@ -5672,32 +5672,44 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "prenatal-massage",
-      name: "Prenatal Massage",
-      fullTitle: "Prenatal Massage in Turrialba",
-      tagline: "Relief, comfort, and safe rest for you and your baby",
-      heroDescription: "A massage specially tailored for expectant mothers, focused on relieving tension in the back and legs, reducing swelling, and promoting deep, safe relaxation in a comfortable environment.",
+      name: "Prenatal Spa Ritual ✨",
+      fullTitle: "Prenatal Spa Ritual for Expecting Mothers in Turrialba ✨",
+      tagline: "A moment to disconnect, breathe, and enjoy this beautiful and special chapter of your life",
+      heroDescription: "During pregnancy, your body changes, your routine changes, and your priorities change. And while everyone is asking how the baby is doing, there is someone who needs care too: <strong>YOU. ❤️</strong><br /><br />The <strong>Prenatal Spa Ritual at MJ Estética & Spa</strong> was created to give you a moment to pause, rest, and enjoy a wellness experience specially designed for expecting mothers.",
       benefits: [
-        "Relief from lower back and muscle tension",
-        "Reduction of fluid retention in legs and feet",
-        "Improved rest and sleep quality",
-        "Safely and comfortably adapted postures",
-        "Relaxing effect for both mother and baby"
+        "Helps reduce stress and promote relaxation",
+        "Supports restful relaxation before the wedding or arrival",
+        "Helps release tension in the neck, back, and legs",
+        "Helps refresh and revitalize the appearance of the skin",
+        "Promotes physical and emotional well-being",
       ],
       items: [
         {
-          title: "Relaxing Prenatal Massage",
-          description: "Gentle and specialized technique for expectant mothers from the second trimester onwards.",
+          title: "Prenatal Spa Ritual",
+          description: "Gentle and specialized wellness ritual for expecting mothers from the second trimester onwards.",
           duration: "60 min",
-          price: "Consult price"
-        }
+          price: "Consult price",
+        },
       ],
       faq: [
         {
-          question: "When during pregnancy can I get this massage?",
-          answer: "It is recommended from the second trimester (week 12 onwards), with medical clearance if special conditions exist."
-        }
-      ]
-    }
+          question: "When is the best time to have a spa treatment before a wedding or during pregnancy?",
+          answer: "A relaxing spa experience can be scheduled from the second trimester onwards, or anywhere from 1 to 7 days before an event, depending on your preferences.",
+        },
+        {
+          question: "Is the prenatal massage safe?",
+          answer: "Yes. Our prenatal massages use gentle, pregnancy-safe techniques and adapted positioning to ensure complete safety and comfort.",
+        },
+        {
+          question: "Can I request a personalized gift voucher?",
+          answer: "Yes! We offer customized digital or physical gift vouchers for expecting mothers.",
+        },
+        {
+          question: "Can a massage help with stress during pregnancy?",
+          answer: "Relaxing massages can help promote relaxation, ease muscle tension, and reduce pregnancy fatigue.",
+        },
+      ],
+    },
   },
   {
     es: {
