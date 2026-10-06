@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import es from "@/i18n/locales/es/masaje-descarga-muscular.json";
+import en from "@/i18n/locales/en/masaje-descarga-muscular.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -52,8 +53,12 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 }
 
 export function MasajeDescargaMuscularContent({ waLink, lang = "es" }: { waLink: string, lang?: "es" | "en" }) {
-  const content = lang === "es" ? es : (es as any);
-  const descargaWaLink = `https://wa.me/50686907757?text=${encodeURIComponent("Hola, me interesa reservar el Masaje de Descarga Muscular en MJ Fisio Estética & Spa. ¿Me pueden compartir disponibilidad, opciones y horarios?")}`;
+  const content = lang === "es" ? es : en;
+  const descargaWaLink = `https://wa.me/50686907757?text=${encodeURIComponent(
+    lang === "es"
+      ? "Hola, me interesa reservar el Masaje de Descarga Muscular en MJ Fisio Estética & Spa. ¿Me pueden compartir disponibilidad, opciones y horarios?"
+      : "Hello, I am interested in booking a Muscle Recovery Massage at MJ Estética & Wellness Center. Could you please share availability, options, and schedules?"
+  )}`;
 
   return (
     <div className="bg-white">

@@ -6101,10 +6101,10 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "muscle-release-massage",
-      name: "Muscle Release Massage",
-      fullTitle: "Muscle Release Massage in Turrialba",
-      tagline: "Intense release of tension, contractures, and fatigue",
-      heroDescription: "Specially designed for athletes or individuals with heavy physical or work stress. Combines deep pressure techniques and stretching to release muscle overload and accelerate recovery.",
+      name: "Muscle Recovery Massage",
+      fullTitle: "Muscle Recovery Massage in Turrialba",
+      tagline: "Your body needs care, too",
+      heroDescription: "There are days when your body simply says: “I need to slow down.” At MJ Estética & Wellness Center, we have created a muscle recovery experience designed to help you release tension, breathe, and reconnect with a lighter, more relaxed body.",
       benefits: [
         "Effective release of contractures and muscle knots",
         "Accelerated recovery after intense physical exertion",
