@@ -1,0 +1,127 @@
+{
+  "intro": {
+    "label": "Restauración Capilar",
+    "title": "Recupera la apariencia de tu cabello. Recupera la confianza en tu imagen.",
+    "items": [
+      "¿Cada vez que te miras al espejo notas más entradas, menos densidad o una línea capilar que ya no se ve como antes?",
+      "La pérdida de cabello no siempre se queda en el espejo. Puede hacerte sentir menos seguro en fotografías, reuniones, actividades sociales o simplemente cuando quieres volver a sentirte cómodo con tu propia imagen.",
+      "Y quizás ya has intentado shampoos, suplementos, productos o diferentes tratamientos esperando recuperar la apariencia que tenías antes.",
+      "Pero cuando la pérdida capilar ya es evidente, necesitas algo más que cubrir el problema. Existe una alternativa: el Trasplante Capilar."
+    ],
+    "box": {
+      "title": "Trasplante Capilar en Costa Rica",
+      "p1": "En MJ Estética & Wellness Center, en Costa Rica, ofrecemos una evaluación personalizada para determinar si el trasplante capilar puede ser una opción adecuada para ti y diseñar un protocolo de acuerdo con tus características y objetivos.",
+      "p2": "Nuestro objetivo es ayudarte a conseguir una apariencia capilar natural, armónica y acorde con tu rostro, mediante un proceso profesional y personalizado."
+    }
+  },
+  "whatIs": {
+    "title": "¿Qué es un Trasplante Capilar?",
+    "p1": "El trasplante capilar es un procedimiento de restauración capilar que consiste en trasladar folículos capilares de una zona donante a áreas donde existe pérdida o menor densidad.",
+    "p2": "La finalidad es mejorar la apariencia de la densidad capilar, redefinir determinadas áreas de la línea del cabello y conseguir una integración estética natural. No existe un diseño universal. Cada persona tiene un patrón diferente, una densidad distinta, características faciales particulares y una zona donante diferente, además de expectativas y objetivos estéticos propios.",
+    "items": [
+      "Patrón de pérdida capilar único",
+      "Densidad capilar de zona donante",
+      "Características faciales individuales",
+      "Expectativas estéticas",
+      "Objetivos de restauración"
+    ]
+  },
+  "recommended": {
+    "title": "¿Y si pudieras volver a sentirte cómodo con tu imagen?",
+    "desc": "Imagina poder verte al espejo y sentir que tu cabello vuelve a formar parte de tu apariencia de una manera natural. No buscamos simplemente 'poner más cabello'. Buscamos crear una restauración que tenga sentido para tu rostro, tu edad, tu patrón de pérdida y tus características individuales. El objetivo es que el resultado se vea como tú: Natural, Progresivo y Armónico.",
+    "items": [
+      "Entradas cada vez más pronunciadas",
+      "Disminución de densidad en determinadas áreas",
+      "Retroceso de la línea frontal",
+      "Zonas con pérdida visible de cabello",
+      "Cambios en el cabello que afectan tu imagen",
+      "Deseo de restauración capilar personalizada"
+    ]
+  },
+  "worries": {
+    "title": "Las preguntas que probablemente estás pensando",
+    "desc": "No todos los casos son iguales. Una valoración profesional es necesaria para analizar tu situación y determinar las opciones disponibles.",
+    "items": [
+      "“¿Se va a ver natural?” (La distribución es clave)",
+      "“¿Me va a doler?” (La experiencia varía por persona)",
+      "“¿Cuándo voy a ver resultados?” (El crecimiento es progresivo)",
+      "“¿Es permanente?” (Se evalúa cada caso específico)",
+      "“¿Soy un buen candidato?” (Depende de tu zona donante)"
+    ],
+    "footer": "La valoración capilar profesional permite analizar todos estos factores antes de recomendar un procedimiento."
+  },
+  "benefits": {
+    "title": "Beneficios del Trasplante Capilar",
+    "items": [
+      { "t": "Mejora la apariencia de la densidad capilar", "d": "Ayuda a mejorar visualmente zonas donde la pérdida de cabello ha reducido la densidad." },
+      { "t": "Ayuda a redefinir la línea capilar", "d": "Un diseño adecuado contribuye a crear una línea frontal más equilibrada y acorde con las proporciones del rostro." },
+      { "t": "Apariencia natural", "d": "El objetivo es que el cabello trasplantado se integre visualmente con el cabello existente y con tus características faciales." },
+      { "t": "Restauración personalizada", "d": "Cada procedimiento se adapta a las características y necesidades individuales de restauración." },
+      { "t": "Resultados progresivos", "d": "El crecimiento del cabello ocurre gradualmente, requiriendo tiempo, cuidados y un correcto seguimiento profesional." },
+      { "t": "Mayor confianza en tu imagen", "d": "Mejorar la apariencia capilar te ayuda a volver a sentirte cómodo con tu imagen personal diaria." }
+    ]
+  },
+  "process": {
+    "title": "Nuestro proceso",
+    "items": [
+      { "s": "01. Valoración Capilar", "t": "Evaluación Capilar", "d": "Comenzamos con una evaluación de tu situación actual, patrón de pérdida y objetivos. Primero entendemos tu caso." },
+      { "s": "02. Planificación Personalizada", "t": "Diseño del Plan", "d": "Analizamos las características de tu rostro, la zona de pérdida y las posibilidades de restauración para establecer un plan individualizado." },
+      { "s": "03. Procedimiento", "t": "Intervención", "d": "Si eres candidato y decides continuar, el procedimiento se realiza siguiendo el protocolo establecido, buscando siempre naturalidad y armonía." },
+      { "s": "04. Seguimiento", "t": "Cuidados Posteriores", "d": "Te orientamos sobre los cuidados posteriores y el seguimiento de la evolución. La restauración capilar es un proceso." }
+    ]
+  },
+  "timeline": {
+    "title": "¿Cuándo comenzarás a notar cambios?",
+    "p1": "Una de las mayores expectativas de cualquier persona que considera un trasplante capilar es querer ver resultados rápidamente. <span className=\"font-bold text-stone-900\">Sin embargo, el cabello tiene su propio ciclo de crecimiento.</span>",
+    "p2": "Por eso, los resultados se desarrollan progresivamente y pueden variar considerablemente entre pacientes.",
+    "p3": "Tu evolución dependerá de factores individuales y del cumplimiento de las recomendaciones posteriores. La clave es tener expectativas realistas y comprender que la restauración capilar requiere tiempo, paciencia y seguimiento profesional."
+  },
+  "transformations": {
+    "title": "Más que cabello: una nueva relación con tu imagen",
+    "items": [
+      { "n": "Confianza", "t": "Volver a sentirte cómodo en una fotografía." },
+      { "n": "Seguridad", "t": "Sentirte más seguro durante una reunión." },
+      { "n": "Tranquilidad", "t": "Dejar de preocuparte constantemente por tus entradas y mejorar tu línea capilar." }
+    ]
+  },
+  "whyUs": {
+    "title": "¿Por qué elegir MJ Estética & Wellness Center?",
+    "p1": "Porque tu caso merece algo más que un tratamiento estándar. Buscamos que tengas total claridad antes, durante y después de tomar una decisión.",
+    "items": [
+      "Atención personalizada (evaluamos tus características)",
+      "Enfoque estético (armonía facial y apariencia general)",
+      "Evaluación individual de condiciones",
+      "Acompañamiento profesional durante el proceso",
+      "Expectativas realistas explicadas con claridad",
+      "Experiencia premium y confortable"
+    ]
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      { "q": "¿El trasplante capilar duele?", "a": "La experiencia y el nivel de molestia pueden variar según cada paciente y el procedimiento realizado. Durante la valoración recibirás información específica sobre el manejo del procedimiento." },
+      { "q": "¿El resultado se ve natural?", "a": "El objetivo de un trasplante capilar bien planificado es conseguir una apariencia natural y armónica. El resultado depende de múltiples factores individuales y de la planificación del procedimiento." },
+      { "q": "¿Cuánto dura la recuperación?", "a": "El tiempo de recuperación puede variar según el paciente, el procedimiento y otros factores individuales. Recibirás indicaciones específicas sobre los cuidados posteriores." },
+      { "q": "¿Los resultados son inmediatos?", "a": "No. El crecimiento capilar ocurre progresivamente y los resultados pueden tardar meses en desarrollarse." },
+      { "q": "¿Quién es candidato para un trasplante capilar?", "a": "La candidatura depende de factores como el patrón de pérdida, disponibilidad de zona donante, densidad, características individuales y expectativas. Una valoración profesional es necesaria." },
+      { "q": "¿Puede combinarse con otros tratamientos capilares?", "a": "Dependiendo del diagnóstico y las necesidades del paciente, pueden existir diferentes estrategias complementarias. Cualquier combinación debe determinarse de manera individual durante la valoración." }
+    ]
+  },
+  "final": {
+    "title": "Tu primer paso no es hacerte un trasplante. Tu primer paso es saber si eres candidato.",
+    "p1": "No necesitas decidir hoy si vas a realizarte un procedimiento. Primero necesitas respuestas. Una valoración capilar personalizada puede ayudarte a conocer qué está ocurriendo con tu pérdida capilar, qué opciones pueden estar disponibles para tu caso y qué expectativas son razonables.",
+    "box": {
+      "items": [
+        "Diagnóstico profesional de pérdida capilar",
+        "Evaluación individual de zona donante",
+        "Protocolo personalizado de diseño capilar",
+        "Atención especializada y experta",
+        "Seguimiento posterior y recomendaciones"
+      ],
+      "p1": "Agenda tu valoración capilar en Costa Rica.",
+      "p2": "Da el primer paso hacia una imagen con la que vuelvas a sentirte cómodo. Solicita tu valoración personalizada con MJ Estética & Wellness Center."
+    },
+    "cta": "AGENDA TU VALORACIÓN CAPILAR",
+    "footer": "Trasplante Capilar en Costa Rica — MJ Estética & Wellness Center — Tu cabello puede cambiar. Tu confianza también. Agenda hoy tu valoración capilar."
+  }
+}

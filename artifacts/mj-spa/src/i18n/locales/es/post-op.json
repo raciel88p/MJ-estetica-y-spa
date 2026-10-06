@@ -1,0 +1,93 @@
+{
+  "symptoms": {
+    "label": "Síntomas a tratar",
+    "title": "¿Notas durezas, inflamación o <span class=\"font-light italic text-primary\">molestias tras tu cirugía?</span>",
+    "desc": "Es completamente normal que tras una intervención aparezcan hematomas, edema o fibrosis. Nuestro objetivo es tratarlos a tiempo para asegurar que el resultado final sea el que siempre soñaste.",
+    "items": [
+      {
+        "title": "Fibrosis Quirúrgica",
+        "desc": "Tratamos las acumulaciones de tejido cicatricial que generan durezas e irregularidades bajo la piel."
+      },
+      {
+        "title": "Edema e Inflamación",
+        "desc": "Aceleramos la eliminación de líquidos acumulados para reducir el volumen y la presión."
+      },
+      {
+        "title": "Hematomas",
+        "desc": "Mejoramos la circulación local para que los moretones desaparezcan de forma más rápida."
+      }
+    ]
+  },
+  "vital": {
+    "label": "¿Por qué es vital?",
+    "title": "El post operatorio es el <span class=\"font-light italic text-primary\">50% del éxito de tu cirugía</span>",
+    "items": [
+      "Resultados más uniformes y sin irregularidades",
+      "Reducción significativa del dolor y la tensión",
+      "Mejor cicatrización y calidad de la piel",
+      "Retorno más rápido a tus actividades diarias",
+      "Prevención de complicaciones a largo plazo"
+    ],
+    "cta": "CONSULTAR DISPONIBILIDAD",
+    "stats": "Satisfacción en recuperación guiada"
+  },
+  "protocol": {
+    "label": "Nuestro Protocolo",
+    "title": "4 Pasos hacia tu mejor versión",
+    "steps": [
+      { "num": "01", "title": "Valoración", "desc": "Analizamos tu tipo de cirugía y el estado actual de los tejidos." },
+      { "num": "02", "title": "Drenaje", "desc": "Activamos el sistema linfático para evacuar líquidos y toxinas." },
+      { "num": "03", "title": "Desfibrosis", "desc": "Trabajamos manualmente las zonas de dureza para ablandarlas." },
+      { "num": "04", "title": "Seguimiento", "desc": "Monitoreamos tu evolución hasta que el tejido esté 100% sano." }
+    ]
+  },
+  "leadMagnet": {
+    "label": "Recurso Exclusivo",
+    "title": "Descarga nuestra <span class=\"text-primary italic font-light\">Guía de Cuidados</span> Post Operatorios en Casa",
+    "desc": "Aprende qué hacer y qué evitar los primeros días para no comprometer tus resultados. Totalmente gratis.",
+    "cta": "SOLICITAR GUÍA POR WHATSAPP"
+  },
+  "whyUs": {
+    "label": "Confianza & Experiencia",
+    "title": "¿Por qué confiar en <span class=\"font-light italic text-primary\">MJ Wellness Center?</span>",
+    "items": [
+      {
+        "title": "Experiencia Hospitalaria",
+        "desc": "Contamos con años de experiencia trabajando con cirujanos de renombre en el Hospital La Católica."
+      },
+      {
+        "title": "Técnicas de Vanguardia",
+        "desc": "Protocolos actualizados que combinan drenaje manual con aparatología de última generación."
+      },
+      {
+        "title": "Atención 1 a 1",
+        "desc": "No somos una clínica de volumen. Cada paciente recibe el tiempo y la atención que su cirugía requiere."
+      }
+    ]
+  },
+  "faq": {
+    "label": "Resolviendo tus dudas",
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "q": "¿Cuándo debo iniciar mis masajes?",
+        "a": "Generalmente a partir de las 48-72 horas para drenaje linfático suave. Para trabajo de fibrosis, solemos iniciar a partir de la 3ª semana."
+      },
+      {
+        "q": "¿Los masajes post operatorios duelen?",
+        "a": "El drenaje linfático es una técnica muy suave e indolora. El trabajo de desfibrosis puede generar algo de molestia, pero siempre se adapta a tu sensibilidad."
+      },
+      {
+        "q": "¿Cuántas sesiones voy a necesitar?",
+        "a": "Depende de la cirugía y de cómo responda tu cuerpo. El promedio para una liposucción o abdominoplastia es de 10 a 15 sesiones."
+      }
+    ]
+  },
+  "finalCta": {
+    "label": "Tu recuperación empieza aquí",
+    "title": "¿Lista para asegurar los <span class=\"italic font-light opacity-80\">mejores resultados de tu cirugía?</span>",
+    "cta1": "AGENDAR VALORACIÓN",
+    "cta2": "CONSULTA POR WHATSAPP",
+    "footer": "Cupos limitados por semana para garantizar atención personalizada"
+  }
+}

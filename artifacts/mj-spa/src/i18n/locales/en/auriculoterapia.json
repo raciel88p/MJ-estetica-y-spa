@@ -1,0 +1,100 @@
+{
+  "intro": {
+    "quote": "\"At MJ Fisio Estética & Wellness Center, we help our patients reduce stress, control anxiety, and complement weight loss processes through professional auriculotherapy sessions in Turrialba.\"",
+    "p1": "This natural therapy stimulates specific points on the ear to help the body regain its physical and emotional balance in a safe and relaxing way.",
+    "highlight": "Book your appointment today via WhatsApp and start your journey to well-being.",
+    "cta": "Book My Appointment"
+  },
+  "whatIs": {
+    "title": "What is Auriculotherapy?",
+    "desc": "Auriculotherapy is a therapeutic technique that works with reflex points on the ear connected to different areas of the body. It is used to:",
+    "items": [
+      "Reduce anxiety and stress",
+      "Control appetite and cravings",
+      "Improve rest and sleep",
+      "Complement reductive treatments",
+      "Support emotional processes",
+      "Improve general well-being"
+    ],
+    "quote": "\"At our aesthetics center in Turrialba, we perform personalized sessions according to each patient's needs.\""
+  },
+  "benefits": {
+    "label": "Real Effects",
+    "title": "Benefits of Auriculotherapy in Turrialba",
+    "items": [
+      {
+        "title": "Control Anxiety and Stress",
+        "desc": "Ideal for people with work tension, mental exhaustion, or constant anxiety."
+      },
+      {
+        "title": "Weight Control Support",
+        "desc": "Can reduce cravings and support reductive treatments and healthy habits."
+      },
+      {
+        "title": "Improve Rest",
+        "desc": "Many patients experience a deep sense of relaxation and better sleep quality."
+      },
+      {
+        "title": "Natural and Non-Invasive Therapy",
+        "desc": "No painful procedures or recovery times."
+      }
+    ]
+  },
+  "who": {
+    "title": "Who is it Recommended for?",
+    "intro": "Auriculotherapy is ideal for people in Turrialba looking for:",
+    "items": [
+      "Anxiety management",
+      "Stress reduction",
+      "Weight loss support",
+      "Improved eating habits",
+      "Emotional well-being",
+      "Natural complementary therapies"
+    ]
+  },
+  "process": {
+    "label": "The Process",
+    "title": "What is an Auriculotherapy Session Like?",
+    "items": [
+      "We evaluate your goals and needs.",
+      "We identify the appropriate auricular points.",
+      "We apply specific therapeutic stimuli.",
+      "You finish with a sense of relaxation and well-being."
+    ],
+    "footer": "Sessions are quick, comfortable, and personalized."
+  },
+  "whyUs": {
+    "title": "Why Choose Us in Turrialba?",
+    "items": [
+      {
+        "title": "Personalized Attention",
+        "desc": "Each patient receives an individual evaluation."
+      },
+      {
+        "title": "Relaxing and Professional Atmosphere",
+        "desc": "We create an experience focused on physical and emotional well-being."
+      },
+      {
+        "title": "Integral Experience",
+        "desc": "We combine aesthetic techniques and complementary therapies to enhance results."
+      }
+    ]
+  },
+  "faqs": {
+    "label": "Answering Doubts",
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "Does auriculotherapy hurt?", "a": "No. Most patients only feel a slight pressure or gentle stimulus." },
+      { "q": "How many sessions do I need?", "a": "It depends on your goals and condition. Many people notice changes from the first sessions." },
+      { "q": "Does auriculotherapy help with weight loss?", "a": "Yes, it can help control anxiety and appetite as a complement to healthy habits." },
+      { "q": "Are there any side effects?", "a": "It is a natural and safe therapy when applied by trained professionals." }
+    ]
+  },
+  "finalCta": {
+    "title": "Book Your Auriculotherapy Session in Turrialba",
+    "desc": "If you are looking for a natural alternative to reduce stress, anxiety or complement your well-being process, at MJ Fisio Estética y Spa we are ready to help you.",
+    "cta": "Write to us today",
+    "location": "Turrialba, Costa Rica",
+    "schedule": "Flexible Schedules"
+  }
+}

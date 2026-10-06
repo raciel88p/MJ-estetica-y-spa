@@ -99,16 +99,15 @@ export default defineConfig(async () => {
               id.includes("node_modules/use-sync-external-store/")
             ) return "vendor-react";
 
-            if (id.includes("node_modules/framer-motion"))  return "vendor-motion";
-            if (id.includes("node_modules/@radix-ui"))      return "vendor-radix";
-            if (id.includes("node_modules/wouter"))         return "vendor-router";
-            if (id.includes("node_modules/@tanstack"))      return "vendor-query";
+            if (id.includes("node_modules/sanity")) return "vendor-sanity-studio";
+            if (id.includes("node_modules/framer-motion")) return "vendor-motion";
+            if (id.includes("node_modules/@radix-ui")) return "vendor-radix";
+            if (id.includes("node_modules/wouter")) return "vendor-router";
+            if (id.includes("node_modules/@tanstack")) return "vendor-query";
             if (
               id.includes("node_modules/zod") ||
               id.includes("node_modules/react-hook-form")
             ) return "vendor-forms";
-
-            if (id.includes("node_modules/")) return "vendor-misc";
           },
         },
         treeshake: { preset: "recommended" },

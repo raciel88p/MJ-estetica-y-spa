@@ -1,0 +1,113 @@
+{
+  "problem": {
+    "title": "¿Buscas un Nutricionista en Turrialba que Realmente Adapte el Plan a Tu Estilo de Vida?",
+    "p1": "Muchas personas llegan a consulta después de probar dietas restrictivas, consejos de internet o programas que simplemente no se ajustan a su realidad.",
+    "p2": "El problema no suele ser la falta de disciplina.",
+    "p3": "El problema es que la mayoría de planes no están diseñados para la persona que los está siguiendo.",
+    "p4": "En MJ Estética & Wellness Center entendemos que cada paciente tiene horarios, objetivos, hábitos y necesidades diferentes.",
+    "p5": "Por eso nuestro servicio de nutrición personalizada en Turrialba se enfoca en construir estrategias sostenibles que puedas mantener a largo plazo.",
+    "closing": "Porque la verdadera transformación ocurre cuando la alimentación se adapta a tu vida y no al revés."
+  },
+  "focus": {
+    "title": "Servicio de Nutricionista en Turrialba con Enfoque en Bienestar Integral",
+    "desc": "Nuestro programa de acompañamiento nutricional está diseñado para apoyar personas que desean:",
+    "items": [
+      "Mejorar sus hábitos alimenticios",
+      "Organizar mejor su alimentación diaria",
+      "Recibir educación nutricional personalizada",
+      "Mejorar su bienestar integral",
+      "Complementar tratamientos estéticos y wellness",
+      "Trabajar objetivos de composición corporal",
+      "Desarrollar hábitos saludables sostenibles",
+      "Crear una mejor relación con la alimentación"
+    ],
+    "note": "Cada consulta se adapta individualmente según tus objetivos, necesidades y estilo de vida.",
+    "includesTitle": "¿Qué Incluye la Consulta Nutricional?",
+    "includes": [
+      { "t": "Valoración Nutricional Completa", "d": "Conocemos tu situación actual, hábitos alimenticios, objetivos y necesidades." },
+      { "t": "Diagnóstico y Definición de Objetivos", "d": "Establecemos metas realistas y alcanzables adaptadas a tu contexto." },
+      { "t": "Plan Nutricional Personalizado", "d": "Diseñado específicamente para tu estilo de vida." },
+      { "t": "Educación Nutricional", "d": "Aprende cómo tomar mejores decisiones alimenticias sin depender de dietas extremas." },
+      { "t": "Seguimiento Profesional", "d": "Realizamos ajustes y acompañamiento para ayudarte a mantener el progreso." }
+    ]
+  },
+  "composition": {
+    "title": "Nutricionista para Bajar de Peso y Mejorar la Composición Corporal en Turrialba",
+    "desc": "Uno de los objetivos más frecuentes de nuestros pacientes es mejorar su composición corporal mediante hábitos sostenibles.",
+    "items": [
+      "Organizar tu alimentación",
+      "Mejorar tus elecciones nutricionales",
+      "Crear hábitos consistentes",
+      "Optimizar tu bienestar general",
+      "Mantener resultados sostenibles en el tiempo"
+    ],
+    "note": "No creemos en soluciones rápidas. Creemos en estrategias que puedas mantener durante meses y años.",
+    "ctaTitle": "Empieza hoy tu cambio",
+    "ctaDesc": "Únete a las decenas de personas en Turrialba que han transformado su relación con la comida.",
+    "cta": "AGENDAR CITA POR WHATSAPP"
+  },
+  "benefits": {
+    "label": "VENTAJAS",
+    "title": "Beneficios",
+    "items": [
+      { "t": "Alimentación adaptada a ti", "d": "No trabajamos con planes genéricos." },
+      { "t": "Hábitos sostenibles y realistas", "d": "Creamos estrategias que puedas mantener a largo plazo." },
+      { "t": "Educación nutricional", "d": "Aprende a tomar mejores decisiones por tu cuenta." },
+      { "t": "Bienestar integral y energía", "d": "Mejora tu calidad de vida y vitalidad." },
+      { "t": "Seguimiento y acompañamiento profesional", "d": "Te acompañamos en cada etapa del proceso." },
+      { "t": "Objetivos personalizados", "d": "Ya sea salud, estética o rendimiento deportivo." }
+    ]
+  },
+  "methodology": {
+    "label": "METODOLOGÍA",
+    "title": "¿Cómo funciona una consulta nutricional en MJ Estética & Wellness Center?",
+    "steps": [
+      { "s": "Paso 1", "t": "Valoración inicial", "d": "Hábitos, objetivos y estilo de vida." },
+      { "s": "Paso 2", "t": "Diseño del plan nutricional", "d": "Estrategia personalizada." },
+      { "s": "Paso 3", "t": "Implementación", "d": "Cambios progresivos." },
+      { "s": "Paso 4", "t": "Seguimiento y ajustes", "d": "Para optimizar resultados." }
+    ]
+  },
+  "testimonials": {
+    "title": "Historias de Éxito",
+    "desc": "Pacientes reales que han transformado su estilo de vida en Turrialba.",
+    "items": [
+      {
+        "text": "MJ Estética me ha brindado mucho apoyo para bajar de peso. Además la atención ha sido genial y muy interesados en ayudar a que uno pueda lo más pronto bajar de peso.",
+        "author": "Eduardo Andres Loaiza Mata",
+        "role": "Paciente de Nutrición"
+      },
+      {
+        "text": "Mis post han sido de gran ayuda para mi, ya eh visto mucho el cambio en mi físico desde q inicié. Los recomiendo a ojos cerrados.",
+        "author": "Johana Nuñez Campos",
+        "role": "Paciente de Nutrición"
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      { "q": "¿Los planes nutricionales son personalizados?", "a": "Sí, cada recomendación se adapta a tus objetivos, gustos y estilo de vida." },
+      { "q": "¿La consulta incluye seguimiento?", "a": "Sí, el acompañamiento es fundamental para el éxito y realizar ajustes según tu progreso." },
+      { "q": "¿Puedo combinar nutrición con tratamientos estéticos?", "a": "Sí, es el complemento ideal para potenciar resultados corporales y mejorar la composición corporal." },
+      { "q": "¿Qué objetivos puede apoyar una nutricionista?", "a": "Desde pérdida de grasa y aumento de masa muscular hasta mejorar la relación con la comida y organizar tus menús diarios." }
+    ]
+  },
+  "location": {
+    "title": "Nutricionista en Turrialba Cerca de Ti",
+    "items": [
+      "MJ Estética & Wellness Center",
+      "Turrialba, Cartago, Costa Rica",
+      "Citas programadas",
+      "Atención por WhatsApp",
+      "Parqueo disponible",
+      "Atención personalizada"
+    ]
+  },
+  "finalCta": {
+    "title": "Agenda Tu Valoración Nutricional Hoy",
+    "desc": "Tu alimentación puede convertirse en una herramienta para mejorar tu bienestar, energía y calidad de vida. Descubre cómo un plan nutricional personalizado puede ayudarte a construir hábitos sostenibles y alcanzar tus objetivos.",
+    "cta": "Agenda tu valoración",
+    "note": "Cupos limitados por agenda semanal"
+  }
+}

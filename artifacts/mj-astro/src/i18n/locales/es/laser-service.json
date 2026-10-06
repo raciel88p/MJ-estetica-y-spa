@@ -1,0 +1,151 @@
+{
+  "diff": {
+    "label": "Diferencial",
+    "title": "Qué nos diferencia",
+    "items": [
+      "Valoración personalizada",
+      "Tecnología segura para distintos tipos de piel",
+      "Tratamientos corporales y faciales",
+      "Resultados progresivos visibles",
+      "Atención profesional y humana"
+    ],
+    "ctaTitle": "¡Empieza hoy!",
+    "ctaSubtitle": "👉 Agenda hoy tu valoración personalizada",
+    "ctaDesc": "Escríbenos por WhatsApp y descubre cuál paquete es ideal para ti.",
+    "cta": "Consultar por WhatsApp"
+  },
+  "problems": {
+    "title": "Sabemos que muchas veces el vello no es solo estética…",
+    "subtitle": "También puede causar:",
+    "items": [
+      "Irritación constante",
+      "Foliculitis",
+      "Manchas",
+      "Inseguridad",
+      "Tiempo perdido rasurándote",
+      "Dolor con cera o métodos tradicionales"
+    ]
+  },
+  "leadMagnet": {
+    "label": "Regalo Especial",
+    "intro": "Por eso queremos regalarte una:",
+    "title": "Guía Gratuita de Belleza y Cuidado de la Piel",
+    "discover": "Descubre:",
+    "items": [
+      "Cómo cuidar tu piel antes y después de la depilación láser",
+      "Errores que aumentan manchas e irritación",
+      "Cómo lograr mejores resultados en menos sesiones",
+      "Tips para mantener tu piel suave y uniforme"
+    ],
+    "footer": "👉 Descarga tu guía gratuita aquí",
+    "cta": "QUIERO MI GUÍA"
+  },
+  "whatIs": {
+    "title": "¿Qué es la Depilación Láser?",
+    "p1": "La depilación láser es un tratamiento estético que ayuda a reducir progresivamente el crecimiento del vello utilizando tecnología especializada que actúa directamente sobre el folículo piloso.",
+    "p2": "En MJ Estética & Wellness Center trabajamos con protocolos personalizados para diferentes zonas y tipos de piel, brindando una experiencia más cómoda, segura y efectiva en Turrialba."
+  },
+  "forWhom": {
+    "title": "¿Para quién es ideal?",
+    "items": [
+      "Te rasuras constantemente",
+      "Sufres de vellos encarnados",
+      "Tienes foliculitis",
+      "Tu piel se irrita con facilidad",
+      "La cera te causa dolor o manchas",
+      "Quieres ahorrar tiempo en tu rutina",
+      "Deseas una piel más uniforme y suave"
+    ]
+  },
+  "benefits": {
+    "title": "¿Qué problemas ayuda a mejorar la depilación láser?",
+    "items": [
+      { "t": "Irritación constante al rasurarte", "d": "Reduce el roce frecuente y el daño continuo sobre la piel." },
+      { "t": "Vellos encarnados", "d": "Ayuda a disminuir el crecimiento irregular del vello." },
+      { "t": "Foliculitis", "d": "Muchas personas notan una mejora progresiva en la apariencia de la piel." },
+      { "t": "Oscurecimiento de zonas", "d": "Puede ayudar visualmente a mejorar la uniformidad de la piel." },
+      { "t": "Crecimiento rápido del vello", "d": "Olvídate de rasurarte constantemente." }
+    ],
+    "resultsLabel": "Resultados progresivos y reales",
+    "resultsSubtitle": "Lo que normalmente se trabaja:",
+    "results": [
+      "Reducción progresiva del vello",
+      "Mejor apariencia de la piel",
+      "Disminución de irritación",
+      "Menos crecimiento frecuente"
+    ],
+    "note": "📍 Las sesiones y resultados pueden variar según cada persona."
+  },
+  "realBenefits": {
+    "title": "Beneficios reales que notarás"
+  },
+  "howItWorks": {
+    "title": "Así funciona tu tratamiento",
+    "steps": [
+      { "s": "Paso 1", "t": "Valoración personalizada", "d": "Analizamos tu tipo de piel, zona y necesidades." },
+      { "s": "Paso 2", "t": "Preparación de la piel", "d": "Te explicamos cuidados previos y recomendaciones." },
+      { "s": "Paso 3", "t": "Aplicación del láser", "d": "La sesión suele durar entre 15 y 60 minutos dependiendo de la zona." },
+      { "s": "Paso 4", "t": "Cuidados posteriores", "d": "Recibes indicaciones para mejorar resultados y proteger tu piel." }
+    ]
+  },
+  "extra": {
+    "painTitle": "¿Duele?",
+    "painDesc": "La sensación suele describirse como pequeños “toques de calor” o “piquetitos leves”. Es un tratamiento rápido y tolerable.",
+    "sessionsTitle": "¿Cuántas sesiones necesito?",
+    "sessionsDesc": "Depende del tipo de vello y zona, pero muchas personas comienzan a notar cambios progresivos desde las primeras sesiones."
+  },
+  "imagine": {
+    "title": "Imagina esto…",
+    "p1": "Despertarte…",
+    "p2": "Ponerte la ropa que te gusta…",
+    "p3": "Ir a la playa, al gimnasio o salir sin preocuparte por rasurarte a última hora.",
+    "seeking": "Eso es lo que muchas personas buscan cuando empiezan depilación láser:",
+    "items": [
+      "✨ Más comodidad",
+      "✨ Más confianza",
+      "✨ Más tranquilidad con su piel"
+    ]
+  },
+  "testimonials": {
+    "title": "Testimonios de clientes",
+    "items": [
+      "Antes me irritaba muchísimo al rasurarme. Después de varias sesiones he notado mi piel mucho más tranquila.",
+      "Ya no tengo que preocuparme por rasurarme cada pocos días.",
+      "Me encanta sentir la piel más suave y uniforme."
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas frecuentes"
+  },
+  "whyMJ": {
+    "title": "¿Por qué elegir MJ Estética & Wellness Center?",
+    "subtitle": "Buscamos ayudarte a sentirte mejor contigo misma.",
+    "items": [
+      "Atención personalizada",
+      "Protocolos profesionales",
+      "Tecnología segura",
+      "Ambiente cómodo y privado",
+      "Seguimiento profesional",
+      "Ubicación accesible en Turrialba",
+      "Experiencia real en estética y wellness"
+    ]
+  },
+  "contact": {
+    "title": "Ubicación y contacto",
+    "items": [
+      { "i": "📍", "t": "Turrialba, Cartago" },
+      { "i": "📲", "t": "Atención por WhatsApp" },
+      { "i": "🕒", "t": "Horarios flexibles" },
+      { "i": "🚗", "t": "Fácil acceso y parqueo cercano" }
+    ],
+    "ctaLabel": "Finaliza hoy el rasurado",
+    "ctaTitle": "Tu piel puede verse y sentirse diferente",
+    "ctaDesc": "Cada día que pospones empezar… es otro día lidiando con irritación, rasurado constante y molestias innecesarias. Hoy puede ser el momento de cambiar eso.",
+    "ctaSteps": [
+      "👉 Agenda tu valoración personalizada ahora",
+      "👉 Descubre el paquete ideal para ti",
+      "👉 Escríbenos por WhatsApp"
+    ],
+    "cta": "RESERVAR AHORA"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "values": [
+    {
+      "title": "Service Vocation",
+      "description": "Each treatment is designed with dedication and empathy. Your well-being is our greatest motivation and satisfaction."
+    },
+    {
+      "title": "Professional Excellence",
+      "description": "Our team has specialized training and is continuously updated to offer you cutting-edge techniques and technologies."
+    },
+    {
+      "title": "Personalized Care",
+      "description": "Each person is unique. That's why we listen, evaluate, and design a custom plan for each client."
+    },
+    {
+      "title": "Wellness Environment",
+      "description": "We have created a space designed so that from the moment you enter, you disconnect from the world and enjoy."
+    }
+  ],
+  "team": [
+    {
+      "name": "María Jeanneth",
+      "role": "Director & Aesthetic Specialist",
+      "description": "Founder of MJ Fisio Estética & Spa, with more than 15 years of experience in aesthetic treatments and well-being. Her passion for personal care led her to create a reference space in Turrialba."
+    },
+    {
+      "name": "Physiotherapy Team",
+      "role": "Certified Physiotherapists",
+      "description": "Certified professionals specialized in rehabilitation techniques, therapeutic massages, and body treatments. With experience in sports, injuries, and general well-being."
+    },
+    {
+      "name": "Medical Aesthetic Team",
+      "role": "Doctors and Specialists",
+      "description": "Doctors specializing in advanced aesthetics: botox, tensor threads, fillers, and hair transplant. Committed to natural and safe results."
+    },
+    {
+      "name": "Nutritionist",
+      "role": "Nutrition Specialist",
+      "description": "Expert in designing personalized nutritional plans for health, weight, and sports performance goals."
+    }
+  ],
+  "experience": "Years of Experience"
+}

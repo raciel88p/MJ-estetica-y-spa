@@ -1,0 +1,104 @@
+{
+  "intro": {
+    "quote": "Looking for a place where you can relax, release muscle tension, and disconnect from the stress of everyday life? At MJ Estética & Wellness Center, we offer relaxing, therapeutic, and deep tissue massages in Turrialba, designed to help you feel better physically and mentally from your very first session.",
+    "items": [
+      { "text": "Convenient location in Turrialba" },
+      { "text": "Quick booking via WhatsApp" },
+      { "text": "Appointments available by reservation" },
+      { "text": "Personalized attention" }
+    ],
+    "guideTitle": "Download Our Free Guide to Enhance the Benefits of Your Massage",
+    "guideDesc": "Learn how to get the most out of your massage experience before and after your session.",
+    "guideCta": "👉 Download Your Free Guide"
+  },
+  "whyUs": {
+    "title": "Why Choose Our Massages in Turrialba?",
+    "desc": "We live with constant exposure to stress, long workdays, poor posture, and accumulated muscle tension.",
+    "consequenceLabel": "Over time, this can contribute to:",
+    "consequences": [
+      "Neck discomfort",
+      "Muscle tightness",
+      "Ongoing stress",
+      "Physical fatigue",
+      "Difficulty getting quality rest",
+      "A constant feeling of exhaustion"
+    ],
+    "quote": "Our massage treatments are designed to help you reconnect with balance, relaxation, and overall well-being."
+  },
+  "services": {
+    "title": "Massage Services in Turrialba",
+    "locationSuffix": "in Turrialba",
+    "benefitsLabel": "Benefits:",
+    "cta": "BOOK NOW",
+    "benefitGroups": {
+      "relajante": ["Deep relaxation", "Better rest", "Reduced muscle tension", "Greater overall sense of well-being"],
+      "relaxing": ["Deep relaxation", "Better rest", "Reduced muscle tension", "Greater overall sense of well-being"],
+      "descontracturante": ["Helps release muscle tightness", "Reduced muscle stiffness", "Improved mobility", "Supports muscle recovery"],
+      "deep-tissue": ["Helps release muscle tightness", "Reduced muscle stiffness", "Improved mobility", "Supports muscle recovery"],
+      "default": ["Helps relieve localized tension", "Supports physical recovery", "Greater body comfort", "Increased sense of relief"]
+    },
+    "aromaNote": "We combine massage techniques with essential oils to enhance relaxation and create a deeper sense of well-being. Ideal for anyone looking for a complete wellness experience for both body and mind.",
+    "spaParejaNote": "Share a unique relaxation experience with someone special. An excellent option for anniversaries, celebrations, special occasions, or simply enjoying quality time together while disconnecting from everyday stress."
+  },
+  "regularBenefits": {
+    "title": "Benefits of Getting Massages Regularly",
+    "desc": "Many people look for massages in Turrialba because they want to take better care of their overall quality of life and well-being.",
+    "items": [
+      "Reduce stress and promote relaxation",
+      "Support better sleep",
+      "Relieve muscle tension",
+      "Promote healthy circulation",
+      "Support physical and emotional well-being",
+      "Recover from everyday physical fatigue"
+    ]
+  },
+  "difference": {
+    "title": "What Makes MJ Estética & Wellness Center Different?",
+    "quote": "We don't believe in one-size-fits-all massage sessions. Each experience is adapted to the individual needs, preferences, and goals of every client.",
+    "chooseLabel": "That's why our clients choose MJ:",
+    "items": [
+      "Professional and personalized attention",
+      "Private and relaxing environment",
+      "Comfortable and welcoming facilities",
+      "Personalized protocols",
+      "Convenient location in Turrialba",
+      "Easy booking via WhatsApp"
+    ],
+    "opinionsLabel": "What Our Clients in Turrialba Say",
+    "opinions": [
+      "Excellent service and atmosphere. I left feeling completely relaxed.",
+      "The deep tissue massage helped me so much with my back tension.",
+      "A very professional and welcoming place."
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions About Massages in Turrialba"
+  },
+  "finalCta": {
+    "title": "Book Your Massage in Turrialba Today",
+    "desc": "If you're looking for a relaxing, therapeutic, or deep tissue massage in Turrialba, we're ready to help you create a wellness experience tailored to you. Don't wait until stress and muscle tension continue to build up.",
+    "items": [
+      "MJ Estética & Wellness Center",
+      "Book via WhatsApp",
+      "Limited appointments available each day"
+    ],
+    "cta": "👉 BOOK MY MASSAGE NOW",
+    "footer": "Restore your well-being, relax your body, and give yourself the time you deserve to feel better.",
+    "zonesTitle": "Areas We Serve",
+    "zonesDesc": "We welcome clients from:",
+    "zones": [
+      "Turrialba Downtown",
+      "La Suiza",
+      "Santa Cruz",
+      "Tucurrique",
+      "Pavones",
+      "Juan Viñas",
+      "Aquiares",
+      "Pejibaye",
+      "Eastern Cartago"
+    ]
+  },
+  "waMessages": {
+    "general": "Hi! I would like to book a massage in Turrialba"
+  }
+}

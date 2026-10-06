@@ -8,13 +8,13 @@ import { ChatProof } from "./ChatProof";
 
 type Tab = "testimonios" | "resultados" | "chat";
 
-export function TestimonialGrid() {
+export function TestimonialGrid({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   const [activeTab, setActiveTab] = useState<Tab>("testimonios");
 
   const tabs: { id: Tab; label: string; icon: React.ReactNode }[] = [
-    { id: "testimonios", label: "Testimonios", icon: <Quote className="w-4 h-4" /> },
-    { id: "resultados", label: "Antes & Después", icon: <Image className="w-4 h-4" /> },
-    { id: "chat", label: "Mensajes reales", icon: <MessageSquare className="w-4 h-4" /> },
+    { id: "testimonios", label: lang === 'es' ? "Testimonios" : "Testimonials", icon: <Quote className="w-4 h-4" /> },
+    { id: "resultados", label: lang === 'es' ? "Antes & Después" : "Before & After", icon: <Image className="w-4 h-4" /> },
+    { id: "chat", label: lang === 'es' ? "Mensajes reales" : "Real messages", icon: <MessageSquare className="w-4 h-4" /> },
   ];
 
   return (
@@ -48,7 +48,7 @@ export function TestimonialGrid() {
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
-                <TestimonialCard key={t.id} testimonial={t} index={i} />
+                <TestimonialCard key={t.id} testimonial={t} index={i} lang={lang} />
               ))}
             </div>
           </motion.div>
@@ -63,11 +63,11 @@ export function TestimonialGrid() {
             transition={{ duration: 0.3 }}
           >
             <p className="text-center text-sm text-stone-500 mb-8 italic">
-              * Por privacidad de nuestras clientas, no mostramos rostros. Solo áreas tratadas.
+              {lang === 'es' ? "* Por privacidad de nuestras clientas, no mostramos rostros. Solo áreas tratadas." : "* For our clients' privacy, we do not show faces. Only treated areas."}
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {beforeAfterItems.map((item, i) => (
-                <BeforeAfterCard key={item.id} item={item} index={i} />
+                <BeforeAfterCard key={item.id} item={item} index={i} lang={lang} />
               ))}
             </div>
           </motion.div>
@@ -82,10 +82,10 @@ export function TestimonialGrid() {
             transition={{ duration: 0.3 }}
           >
             <p className="text-center text-sm text-stone-500 mb-8 italic">
-              Mensajes reales compartidos por nuestras clientas con su permiso.
+              {lang === 'es' ? "Mensajes reales compartidos por nuestras clientas con su permiso." : "Real messages shared by our clients with their permission."}
             </p>
             <div className="max-w-lg mx-auto">
-              <ChatProof messages={chatProofs} title="Mensajes de clientas reales" />
+              <ChatProof messages={chatProofs} title={lang === 'es' ? "Mensajes de clientas reales" : "Real client messages"} />
             </div>
           </motion.div>
         )}

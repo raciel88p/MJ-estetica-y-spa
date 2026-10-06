@@ -1,0 +1,164 @@
+{
+  "intro": {
+    "label": "Bienestar y Autocuidado",
+    "title": "Tu cuerpo también necesita momentos de descanso, frescura y autocuidado.",
+    "p1": "En <span className=\"font-bold text-stone-900\">MJ Estética & Wellness Center</span> hemos diseñado protocolos de vendas frías enfocados en brindar una experiencia corporal relajante, personalizada y orientada al bienestar integral femenino.",
+    "items": [
+      "✨ Sensación refrescante",
+      "✨ Experiencia wellness corporal",
+      "✨ Protocolos personalizados",
+      "✨ Ambiente relajante y cómodo",
+      "✨ Atención individualizada"
+    ],
+    "box": {
+      "title": "Descubre una nueva experiencia de bienestar corporal",
+      "p1": "Muchas veces el estrés, la rutina, la sensación de pesadez corporal o simplemente la necesidad de desconectarnos hacen que el cuerpo pida una pausa."
+    }
+  },
+  "core": {
+    "p1": "Las vendas frías son un protocolo wellness corporal diseñado para brindar sensación de frescura, relajación y bienestar mediante técnicas enfocadas en el cuidado estético y el autocuidado femenino.",
+    "p2": "En MJ Estética & Wellness Center cada sesión se adapta de forma individual según tus necesidades, objetivos y experiencia corporal deseada.",
+    "items": [
+      "✅ Ideal como complemento wellness",
+      "✅ Perfecto para autocuidado corporal",
+      "✅ Experiencia relajante y refrescante",
+      "✅ Ambiente spa premium en Turrialba"
+    ]
+  },
+  "whatIs": {
+    "title": "¿Qué son las vendas frías?",
+    "p1": "Las vendas frías son un protocolo corporal wellness que utiliza técnicas especializadas orientadas a generar sensación de frescura, relajación y bienestar corporal.",
+    "p2": "Durante la sesión se aplican vendas con componentes refrescantes cuidadosamente integrados dentro de un protocolo personalizado enfocado en:",
+    "items": [
+      "✔️ bienestar corporal",
+      "✔️ relajación femenina",
+      "✔️ sensación de ligereza",
+      "✔️ autocuidado wellness",
+      "✔️ experiencia spa corporal"
+    ],
+    "footer": "Cada protocolo se adapta individualmente, convirtiéndose en una excelente alternativa para quienes desean regalarse un momento de relajación y cuidado personal."
+  },
+  "benefits": {
+    "title": "¿Qué beneficios pueden aportar las vendas frías?",
+    "desc": "Las vendas frías se han convertido en uno de los tratamientos wellness corporales favoritos por mujeres que desean desconectarse, relajarse y sentirse mejor física y emocionalmente.",
+    "items": [
+      "Sensación de frescura corporal",
+      "Relajación y bienestar integral",
+      "Sensación de ligereza corporal",
+      "Complemento de protocolos estéticos corporales",
+      "Experiencia spa wellness premium",
+      "Cuidado corporal personalizado",
+      "Momento de desconexión y autocuidado",
+      "Sensación corporal revitalizante"
+    ]
+  },
+  "recommended": {
+    "title": "¿Para quién se recomiendan las vendas frías?",
+    "desc": "Este protocolo wellness es ideal para:",
+    "items": [
+      { "t": "Mujeres que buscan relajación corporal", "d": "Si deseas regalarse un momento de descanso físico y mental, las vendas frías pueden convertirse en una experiencia altamente relajante." },
+      { "t": "Personas con sensación de pesadez corporal", "d": "Muchas clientas buscan protocolos que les ayuden a sentirse más ligeras y revitalizadas." },
+      { "t": "Complemento de tratamientos corporales", "d": "Las vendas frías pueden integrarse dentro de programas wellness y protocolos corporales personalizados." },
+      { "t": "Personas enfocadas en autocuidado y bienestar", "d": "Porque cuidar tu cuerpo también es parte de sentirte bien contigo misma." }
+    ]
+  },
+  "methodology": {
+    "title": "¿Cómo funciona una sesión de vendas frías?",
+    "items": [
+      { "s": "Paso 1", "t": "Evaluación personalizada", "d": "Analizamos tus necesidades y objetivos para adaptar el protocolo ideal para ti." },
+      { "s": "Paso 2", "t": "Aplicación de las vendas frías", "d": "Se colocan cuidadosamente las vendas dentro de un ambiente relajante y cómodo." },
+      { "s": "Paso 3", "t": "Relajación y bienestar", "d": "Durante la sesión muchas personas experimentan sensación de frescura, descanso y desconexión corporal." },
+      { "s": "Paso 4", "t": "Recomendaciones complementarias", "d": "Te orientamos sobre frecuencia recomendada y protocolos wellness complementarios." }
+    ],
+    "stats": [
+      "⏱️ Duración aproximada: 45 a 60 minutos",
+      "🌿 Ambiente relajante tipo spa",
+      "💆‍♀️ Experiencia wellness personalizada"
+    ]
+  },
+  "philosophy": {
+    "title": "Una experiencia enfocada en bienestar corporal",
+    "p1": "En MJ Estética & Wellness Center creemos que la estética moderna también debe enfocarse en bienestar, relajación y autocuidado.",
+    "label": "Por eso hemos creado un espacio pensado para:",
+    "items": [
+      "✨ desconectarte del estrés",
+      "✨ sentirte cómoda y cuidada",
+      "✨ vivir una experiencia wellness premium",
+      "✨ disfrutar protocolos corporales personalizados",
+      "✨ reconectar contigo misma"
+    ],
+    "footerTitle": "Aquí no solo vienes a recibir un tratamiento…",
+    "footerDesc": "Vienes a regalarte un momento para ti."
+  },
+  "sensations": {
+    "title": "¿Qué se siente durante una sesión?",
+    "desc": "La mayoría de nuestras clientas describen la experiencia como:",
+    "items": ["💙 refrescante", "💙 relajante", "💙 cómoda", "💙 revitalizante", "💙 ideal para desconectarse del estrés diario"],
+    "footer": "Cada experiencia puede variar según el protocolo personalizado aplicado."
+  },
+  "testimonials": {
+    "title": "Testimonios reales",
+    "items": [
+      "“Me encantó la sensación de frescura y relajación. Salí sintiéndome más ligera y tranquila.”",
+      "“El ambiente es súper relajante y la atención personalizada hace toda la diferencia.”",
+      "“Más que un tratamiento, sentí que fue una experiencia de autocuidado.”"
+    ],
+    "badge": "Paciente MJ"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      { "q": "¿Qué se siente durante una sesión de vendas frías?", "a": "Generalmente se experimenta una sensación refrescante y relajante que ayuda a generar bienestar corporal." },
+      { "q": "¿Las vendas frías ayudan con sensación de pesadez?", "a": "Muchas personas las buscan precisamente por la sensación de ligereza y frescura que pueden aportar." },
+      { "q": "¿Cuánto dura la sesión?", "a": "Aproximadamente entre 45 y 60 minutos." },
+      { "q": "¿Se pueden combinar con otros tratamientos?", "a": "Sí, frecuentemente forman parte de protocolos wellness y tratamientos corporales complementarios." },
+      { "q": "¿Son relajantes?", "a": "Sí, están orientadas a brindar una experiencia corporal relajante y confortable." },
+      { "q": "¿Cuántas sesiones se recomiendan?", "a": "Depende de cada objetivo y protocolo personalizado." }
+    ]
+  },
+  "packages": {
+    "title": "Paquetes Wellness y Sesiones",
+    "items": [
+      "✨ Sesiones individuales",
+      "✨ Programas corporales wellness",
+      "✨ Experiencias spa premium",
+      "✨ Paquetes personalizados"
+    ],
+    "footer": "Planes disponibles",
+    "subFooter": "Valoración personalizada incluida"
+  },
+  "whyUs": {
+    "title": "¿Por qué elegir MJ Estética & Wellness Center?",
+    "label": "Porque aquí cada experiencia se adapta a ti.",
+    "items": [
+      "Protocolos wellness personalizados",
+      "Atención individualizada",
+      "Ambiente relajante y premium",
+      "Experiencia corporal enfocada en bienestar",
+      "Espacios cómodos y profesionales",
+      "Enfoque integral de autocuidado femenino"
+    ],
+    "footer": "En MJ Estética & Wellness Center buscamos que cada visita se convierta en un momento de bienestar real."
+  },
+  "location": {
+    "title": "📍 Ubicación en Turrialba",
+    "items": ["✔️ Fácil acceso", "✔️ Atención personalizada", "✔️ Ambiente wellness premium", "✔️ WhatsApp disponible para reservas", "✔️ Parqueo cercano"]
+  },
+  "leadMagnet": {
+    "label": "🎁 RECURSO GRATUITO EXCLUSIVO",
+    "title": "Guía Gratuita:",
+    "desc": "“Cómo levantar el busto y mejorar tu bienestar corporal”",
+    "p1": "Descubre consejos wellness, hábitos de autocuidado y recomendaciones complementarias para sentirte mejor contigo misma.",
+    "keywordLabel": "💌 Comenta la palabra:",
+    "keyword": "“VENDAS”",
+    "footer": "y recibe automáticamente la guía gratuita + información exclusiva de nuestras sesiones wellness.",
+    "cta": "IR A INSTAGRAM"
+  },
+  "final": {
+    "title": "Agenda tu experiencia wellness hoy",
+    "p1": "Tu cuerpo merece descanso.",
+    "p2": "Tu mente merece desconexión.",
+    "p3": "Y tú mereces sentirte bien.",
+    "cta": "RESERVAR MI MOMENTO MJ"
+  }
+}

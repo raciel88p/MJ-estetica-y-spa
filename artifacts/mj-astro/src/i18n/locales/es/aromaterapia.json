@@ -1,0 +1,118 @@
+{
+  "intro": {
+    "title": "¿Por Qué Cada Vez Más Personas Buscan Aromaterapia en Turrialba?",
+    "tags": ["Trabajo", "Familia", "Responsabilidades", "Pantallas", "Estrés"],
+    "p1": "La vida moderna nos mantiene constantemente ocupados. Por eso cada vez más personas buscan experiencias que les permitan desconectarse por un momento y reconectar consigo mismas.",
+    "p2": "La aromaterapia es una experiencia wellness que utiliza aceites esenciales y estímulos aromáticos cuidadosamente seleccionados para crear ambientes orientados a la relajación, el bienestar emocional y el descanso.",
+    "highlight": "En MJ Estética & Wellness Center personalizamos cada experiencia porque entendemos que cada persona vive el bienestar de manera diferente."
+  },
+  "benefits": {
+    "title": "Aromaterapia en Turrialba: Mucho Más Que Un Aroma Agradable",
+    "desc": "Nuestra experiencia está diseñada para estimular los sentidos y crear un espacio donde puedas sentirte cómodo, relajado y acompañado.",
+    "subtitle": "Beneficios que nuestros clientes valoran:",
+    "items": [
+      "Relajación profunda",
+      "Desconexión y descanso",
+      "Bienestar emocional",
+      "Calma y armonía",
+      "Experiencias personalizadas",
+      "Autocuidado consciente",
+      "Ambiente premium"
+    ]
+  },
+  "process": {
+    "title": "¿Cómo Funciona Nuestra Experiencia?",
+    "steps": [
+      { "s": "Paso 1", "t": "Valoración Personalizada", "d": "Conocemos tus preferencias y objetivos de bienestar." },
+      { "s": "Paso 2", "t": "Selección Aromática", "d": "Elegimos los aromas y aceites esenciales que mejor se adapten a la experiencia que deseas vivir." },
+      { "s": "Paso 3", "t": "Experiencia Wellness", "d": "Disfrutas de una sesión diseñada para favorecer la relajación y el bienestar en un ambiente cómodo y privado." },
+      { "s": "Paso 4", "t": "Recomendaciones", "d": "Recibes consejos para prolongar la sensación de bienestar después de tu visita." }
+    ],
+    "items": [
+      "Duración según protocolo",
+      "Ubicación céntrica",
+      "Parqueo disponible",
+      "Fácil reserva"
+    ]
+  },
+  "who": {
+    "title": "¿Para Quién Está Recomendada la Aromaterapia?",
+    "intro": "Esta experiencia es ideal para personas que buscan incorporar momentos de autocuidado y bienestar integral a su rutina.",
+    "items": [
+      "Personas que desean relajarse.",
+      "Personas que buscan bienestar integral.",
+      "Interesados en experiencias spa premium.",
+      "Deseo de autocuidado consciente.",
+      "Espacios de desconexión y descanso.",
+      "Complemento de programas wellness."
+    ]
+  },
+  "combinations": {
+    "title": "Aromaterapia y Masajes Relajantes en Turrialba",
+    "desc": "Muchos de nuestros clientes combinan la aromaterapia con otros servicios wellness para potenciar la experiencia.",
+    "items": [
+      "Aromaterapia relajante",
+      "Masajes relajantes",
+      "Experiencias spa premium",
+      "Bienestar integral",
+      "Protocolos de autocuidado"
+    ],
+    "quote": "Consulta cuál es la mejor combinación según tus objetivos.",
+    "cta": "CONSULTAR COMBINACIONES"
+  },
+  "whyUs": {
+    "title": "¿Por Qué Elegir MJ Estética & Wellness Center?",
+    "desc": "Buscamos ofrecerte un espacio donde realmente puedas desconectarte del exterior y dedicar tiempo a tu bienestar.",
+    "items": [
+      { "t": "Atención personalizada" },
+      { "t": "Protocolos adaptados" },
+      { "t": "Ambiente cómodo y relajante" },
+      { "t": "Instalaciones privadas" },
+      { "t": "Equipo comprometido" },
+      { "t": "Ubicación estratégica" }
+    ]
+  },
+  "testimonials": {
+    "title": "Opiniones de Nuestros Clientes",
+    "items": [
+      "Una experiencia increíble. Desde que llegué sentí tranquilidad y relajación.",
+      "Me encantó la atención y el ambiente. Se nota el cuidado en cada detalle.",
+      "Perfecto para desconectarse del estrés diario y enfocarse en uno mismo."
+    ],
+    "author": "Paciente MJ"
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      { "q": "¿Qué es la aromaterapia?", "a": "Es una experiencia wellness que utiliza aromas y aceites esenciales para crear ambientes orientados al bienestar y la relajación." },
+      { "q": "¿Cuánto dura la sesión?", "a": "Depende del protocolo seleccionado y de las necesidades de cada persona." },
+      { "q": "¿Se puede combinar con masajes?", "a": "Sí. Es una de las combinaciones más solicitadas por nuestros clientes." },
+      { "q": "¿Qué aceites esenciales utilizan?", "a": "Seleccionamos opciones según la experiencia deseada y las preferencias individuales." },
+      { "q": "¿Necesito preparación previa?", "a": "No. Solo venir con disposición para disfrutar un momento de bienestar." },
+      { "q": "¿Dónde están ubicados?", "a": "Nos encontramos en Turrialba, con fácil acceso y parqueo para nuestros visitantes." }
+    ]
+  },
+  "leadMagnet": {
+    "label": "🎁 RECURSO GRATUITO EXCLUSIVO",
+    "title": "Descarga Tu Guía Gratuita de Bienestar",
+    "subtitle": "\"Cómo potenciar tus resultados de bienestar y autocuidado\"",
+    "ctaLabel": "💌 Comenta la palabra:",
+    "word": "AROMA",
+    "learn": "Aprenderás:",
+    "items": [
+      "Hábitos para mejorar tus momentos de relajación.",
+      "Consejos para potenciar experiencias wellness.",
+      "Recomendaciones de autocuidado diario.",
+      "Estrategias para reducir el estrés cotidiano."
+    ],
+    "cta": "SOLICITAR GUÍA POR WHATSAPP"
+  },
+  "finalCta": {
+    "title": "Agenda Tu Experiencia de Aromaterapia en Turrialba",
+    "desc": "Miles de personas invierten tiempo en trabajo, responsabilidades y compromisos. Hoy puede ser el momento perfecto para invertir tiempo en ti misma.",
+    "location": "MJ Estética & Wellness Center",
+    "address": "Turrialba, Cartago, Costa Rica",
+    "cta": "Reserva por WhatsApp",
+    "cta2": "CONSULTAR DISPONIBILIDAD"
+  }
+}

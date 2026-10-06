@@ -1,0 +1,121 @@
+{
+  "hero": {
+    "title": "☕ Coffee Massage in Turrialba",
+    "subtitle": "Anti-Cellulite & Relaxing Body Ritual",
+    "p1": "Give your body a pause… and your skin a whole new experience. Your skin deserves to be cared for, too.",
+    "p2": "After a week filled with work, stress, and responsibilities, imagine being able to stop for an hour, disconnect from your routine, and enjoy an experience that combines coffee, exfoliation, massage, and relaxation.",
+    "p3": "The Coffee Massage at MJ Fisio Estética & Spa is a body ritual designed to care for the appearance of your skin while giving you a moment of relaxation and well-being.",
+    "bullets": ["☕ Natural coffee", "🌿 Exfoliation", "💆‍♀️ Massage", "✨ Body care", "🌺 Relaxation"],
+    "cta": "BOOK VIA WHATSAPP"
+  },
+  "whatIs": {
+    "title": "☕ What Is a Coffee Massage?",
+    "p1": "The Coffee Massage is a body treatment that combines natural coffee exfoliation, massage, and deep hydration into a unique spa experience.",
+    "p2": "Coffee is one of the most widely used ingredients in body aesthetics due to its antioxidant properties and its ability to stimulate skin circulation and renewal.",
+    "p3": "During the session, natural coffee grounds are applied to gently exfoliate dead skin cells, followed by a relaxing massage that helps release tension and leaves skin feeling soft, smooth, and nourished.",
+    "listTitle": "Included in the experience:",
+    "bullets": [
+      "✔ Gentle natural skin exfoliation",
+      "✔ Softer, smoother, and more radiant-looking skin",
+      "✔ Deep body relaxation and stress release",
+      "✔ Improved local circulation through massage",
+      "✔ Deep hydration for dry or tired skin",
+      "✔ A unique, invigorating sensory experience"
+    ],
+    "cta": "CONSULT AVAILABILITY VIA WHATSAPP"
+  },
+  "benefits": {
+    "title": "🌿 Benefits of a Coffee Massage",
+    "subtitle": "A complete sensory body treatment for your skin and mind",
+    "items": [
+      { "t": "Natural Exfoliation", "d": "Removes dead skin cells to reveal smoother, brighter-looking skin." },
+      { "t": "Deep Relaxation", "d": "Eases muscle tension and helps reduce accumulated daily stress." },
+      { "t": "Circulation Boost", "d": "Stimulates microcirculation through gentle coffee exfoliation and massage." },
+      { "t": "Deep Hydration", "d": "Nourishes the skin with specialized body oils and moisturizing cream." },
+      { "t": "Sensory Experience", "d": "Enveloping coffee aroma that stimulates energy and well-being." },
+      { "t": "Improved Skin Tone", "d": "Helps skin look firmer, refreshed, and naturally radiant." }
+    ],
+    "cta": "BOOK YOUR COFFEE MASSAGE"
+  },
+  "session": {
+    "title": "💆‍♀️ What Is a Session Like?",
+    "intro": "Enjoy a step-by-step 60-minute relaxing body ritual",
+    "steps": [
+      { "num": "1", "t": "Preparation & Skin Assessment", "d": "We prepare the treatment area and select the appropriate exfoliation protocol for your skin." },
+      { "num": "2", "t": "Natural Coffee Exfoliation", "d": "Natural coffee grounds and nourishing oils are applied with gentle circular movements to exfoliate and stimulate the skin." },
+      { "num": "3", "t": "Relaxing Body Massage", "d": "A relaxing massage is performed to ease muscle tension, improve circulation, and promote deep relaxation." },
+      { "num": "4", "t": "Hydration & Finishing Care", "d": "An ultra-nourishing body cream or oil is applied to seal in hydration and leave the skin silky smooth." }
+    ],
+    "duration": "⏱ SESSION DURATION: 60 MINUTES • LOCATION: TURRIALBA"
+  },
+  "forWhom": {
+    "title": "🌺 Who Is This Treatment Ideal For?",
+    "subtitle": "This treatment is a great choice if you are looking for:",
+    "items": [
+      "✔ A relaxing and sensory spa experience",
+      "✔ Smoother and more hydrated skin",
+      "✔ Exfoliation to remove dead skin cells",
+      "✔ A way to release stress and muscle tension",
+      "✔ A unique body treatment or special gift"
+    ],
+    "disclaimer": "* Suitable for all skin types looking for relaxation and body care."
+  },
+  "cellulite": {
+    "title": "❓ Does a Coffee Massage Help with Cellulite?",
+    "p1": "While coffee exfoliation and massage can help improve skin texture and stimulate local circulation, it is not a permanent cure for cellulite.",
+    "p2": "However, regular body exfoliation combined with massage can help skin look smoother, firmer, and more toned.",
+    "p3": "If you are looking for targeted cellulite reduction, we also offer specialized aesthetic treatments such as Carboxytherapy and Anti-Cellulite Protocols.",
+    "p4": "Our team will gladly recommend the best treatment for your goals.",
+    "question": "Want to know which treatment is right for you?",
+    "cta": "CONSULT VIA WHATSAPP"
+  },
+  "whyUs": {
+    "title": "🏆 Why Choose MJ Fisio Estética & Spa?",
+    "subtitle": "We provide a peaceful environment dedicated to your personal well-being.",
+    "items": [
+      { "t": "Professional Care", "d": "Personalized attention adapted to your skin's needs." },
+      { "t": "Relaxing Spa Setting", "d": "Private, quiet, and comfortable facilities in Turrialba." },
+      { "t": "Natural Products", "d": "High-quality natural coffee grounds and cosmetic oils." },
+      { "t": "Convenient Location", "d": "Easy access in Turrialba with parking available for clients." }
+    ]
+  },
+  "gift": {
+    "title": "🎁 A Unique Gift Experience",
+    "subtitle": "A Coffee Massage Gift Voucher is a wonderful way to treat someone to an hour of pure relaxation and body care.",
+    "occasions": ["Birthdays", "Anniversaries", "Mother's Day", "Special Celebrations", "Self-Care Gifts"],
+    "cta": "REQUEST GIFT VOUCHER"
+  },
+  "testimonials": {
+    "title": "💬 What Our Clients Say",
+    "items": [
+      { "text": "An amazing experience! My skin felt so soft afterwards and the massage was incredibly relaxing.", "stars": 5 },
+      { "text": "The coffee aroma and the massage combination was perfect. Highly recommended!", "stars": 5 },
+      { "text": "One of the best body treatments I've had in Turrialba.", "stars": 5 }
+    ],
+    "cta": "SEE MORE REVIEWS OR BOOK"
+  },
+  "location": {
+    "title": "📍 Location & Areas We Serve",
+    "subtitle": "MJ Fisio Estética & Spa is located in Turrialba, Cartago, Costa Rica, welcoming clients from:",
+    "communities": "Turrialba Downtown • La Suiza • Santa Cruz • Tucurrique • Pavones • Juan Viñas • Aquiares • Pejibaye • Eastern Cartago",
+    "address": "MJ Fisio Estética & Spa\nTurrialba, Cartago, Costa Rica",
+    "cta": "VIEW LOCATION ON MAP / WHATSAPP"
+  },
+  "faqs": {
+    "title": "❓ Frequently Asked Questions",
+    "items": [
+      { "q": "What is a Coffee Massage?", "a": "It is a body treatment combining coffee exfoliation, relaxing massage, and skin hydration for wellness and skin renewal." },
+      { "q": "Does a Coffee Massage hurt?", "a": "No, the exfoliation is gentle and the massage is designed to be relaxing and comfortable." },
+      { "q": "Does the coffee stain the skin?", "a": "No, specialized cosmetic products and natural coffee grounds are used and completely removed, leaving skin clean and smooth." },
+      { "q": "How long does the session take?", "a": "The full session takes approximately 60 minutes." }
+    ]
+  },
+  "final": {
+    "title": "☕ BOOK YOUR COFFEE MASSAGE TODAY",
+    "p1": "Give your body the care and relaxation it deserves.",
+    "p2": "Book via WhatsApp and confirm availability for your session.",
+    "badge": "MJ FISIO ESTÉTICA & SPA",
+    "subbadge": "Turrialba, Cartago, Costa Rica",
+    "cta": "BOOK COFFEE MASSAGE ON WHATSAPP"
+  }
+}

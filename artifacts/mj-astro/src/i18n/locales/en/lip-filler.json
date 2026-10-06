@@ -1,0 +1,209 @@
+{
+  "hero": {
+    "title": "Lip Fillers in Turrialba",
+    "subtitle": "Discover how to achieve more hydrated, defined, and harmonious lips with natural-looking, personalized results",
+    "p1": "Would you love to have more defined, hydrated, and beautiful lips without losing your natural essence?",
+    "p2": "At MJ Estética & Wellness Center, we understand that lips should never look artificial or overdone.",
+    "p3": "That is why we design personalized lip filler protocols focused on facial harmony, natural-looking results, and individualized beauty.",
+    "quote": "Our goal is not to change your face. Our goal is to enhance what already makes you beautiful.",
+    "bullets": [
+      "Natural-looking results",
+      "Personalized consultation",
+      "Professional facial harmonization",
+      "Individualized protocols",
+      "Premium aesthetic experience"
+    ]
+  },
+  "leadMagnet": {
+    "label": "FREE Guide",
+    "title": "🎁 Claim Your Free Guide",
+    "subtitle": "“How to Achieve Better Lip Filler Results and Keep Your Lips Looking Beautiful for Longer”",
+    "desc": "You will also receive exclusive information about aftercare, recommendations, and tips to help you get the most out of your results.",
+    "cta": "Request your free guide and book your aesthetic consultation today."
+  },
+  "whatIs": {
+    "title": "What Are Lip Fillers?",
+    "p1": "Lip fillers are an aesthetic treatment used to enhance the appearance, hydration, definition, and harmony of the lips through specialized techniques tailored to each individual.",
+    "p2": "At MJ Estética & Wellness Center, we understand that every face is unique. That is why we provide a personalized consultation to design results that complement your facial features, aesthetic goals, and personal style.",
+    "subtitle": "Lip filler treatments can help enhance:",
+    "bullets": [
+      "Lip hydration",
+      "Lip contour definition",
+      "Natural lip shaping",
+      "Customized volume",
+      "Visual symmetry",
+      "Facial harmony",
+      "A more refreshed appearance"
+    ],
+    "conclusion": "Our approach is always focused on achieving elegant, balanced, and natural-looking results."
+  },
+  "natural": {
+    "title": "Will My Results Look Natural?",
+    "p1": "This is one of the most common questions we receive. The answer is yes.",
+    "p2": "When the treatment is performed following an appropriate assessment and personalized facial design, the results can look harmonious, elegant, and naturally suited to your facial features.",
+    "subtitle": "Many people want:",
+    "bullets": [
+      "💋 More hydrated-looking lips",
+      "💋 Better definition",
+      "💋 To restore lost volume",
+      "💋 Subtle lip enhancement",
+      "💋 A fresher, more youthful appearance"
+    ],
+    "conclusion": "Without making it obvious to others exactly what has changed. That is precisely the approach we follow at MJ."
+  },
+  "enhance": {
+    "title": "What Can Lip Filler Help Enhance?",
+    "items": [
+      {
+        "t": "Lip Hydration",
+        "d": "It can enhance the appearance of lips that look dry or lack visible hydration."
+      },
+      {
+        "t": "Natural Lip Definition",
+        "d": "It can help define the lip contour while maintaining an elegant appearance."
+      },
+      {
+        "t": "Customized Volume",
+        "d": "Each treatment is tailored according to the individual's goals and facial proportions."
+      },
+      {
+        "t": "Facial Harmonization",
+        "d": "Your lips are part of your overall facial balance. That is why we consider facial proportions and harmony before performing any treatment."
+      },
+      {
+        "t": "Aesthetic Confidence",
+        "d": "Many people choose aesthetic treatments because they want to feel more confident and comfortable with their appearance. Facial harmonization can be part of that personal journey."
+      }
+    ]
+  },
+  "benefits": {
+    "title": "Benefits of Lip Fillers",
+    "items": [
+      "More hydrated-looking lips",
+      "More defined lip contour",
+      "Customized, natural-looking volume",
+      "Elegant facial harmonization",
+      "A fresher appearance",
+      "Gradual-looking results",
+      "Treatment tailored to each patient",
+      "Professional follow-up",
+      "Premium aesthetic experience",
+      "Highly personalized approach"
+    ]
+  },
+  "objectives": {
+    "title": "Personalized Results Based on Your Goals",
+    "items": [
+      {
+        "t": "Natural Lip Hydration",
+        "d": "Ideal for those looking for lips with a healthier, more hydrated appearance.",
+        "b": ["Fresher-looking lips", "Improved visual texture", "Very natural-looking result"],
+        "cta": "Book your consultation."
+      },
+      {
+        "t": "Lip Contouring",
+        "d": "Designed for those who want to enhance and define their lip contour.",
+        "b": ["Improved definition", "More elegant appearance", "Enhanced facial harmony"],
+        "cta": "Check availability."
+      },
+      {
+        "t": "Subtle & Elegant Volume",
+        "d": "Designed for those who want to enhance lip volume without an exaggerated appearance.",
+        "b": ["Natural-looking appearance", "More defined lip presence", "Personalized results"],
+        "cta": "Book your consultation."
+      },
+      {
+        "t": "Premium Facial Harmonization",
+        "d": "Your lips play an important role in overall facial balance.",
+        "b": ["Improved visual proportions", "Design adapted to your facial features", "A more harmonious overall appearance"],
+        "cta": "Message us on WhatsApp."
+      }
+    ]
+  },
+  "steps": {
+    "title": "How Does the Procedure Work?",
+    "items": [
+      { "s": "Step 1", "t": "Personalized Aesthetic Consultation", "d": "We discuss your goals, facial proportions, and expectations." },
+      { "s": "Step 2", "t": "Personalized Treatment Design", "d": "We create an individualized approach focused on facial harmony and natural-looking results." },
+      { "s": "Step 3", "t": "Treatment Application", "d": "The procedure is performed following professional protocols and a personalized treatment plan." },
+      { "s": "Step 4", "t": "Aftercare & Follow-Up", "d": "You receive personalized aftercare instructions to support your recovery and results." }
+    ]
+  },
+  "forWhom": {
+    "title": "Who Is Lip Filler Recommended For?",
+    "p1": "This treatment may be suitable for people looking for:",
+    "bullets": [
+      "Facial harmonization",
+      "Enhanced lip hydration",
+      "Elegant lip definition",
+      "Natural-looking volume",
+      "Better lip definition",
+      "Premium aesthetic treatments",
+      "Non-surgical facial rejuvenation",
+      "Personalized aesthetic results"
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Patients Say",
+    "items": [
+      { "q": "I loved how natural the result looked. My lips look more defined without losing my essence.", "s": 5 },
+      { "q": "I was looking for hydration and a little more volume. The result exceeded my expectations.", "s": 5 },
+      { "q": "The consultation was very professional, and they helped me choose the ideal result for my face.", "s": 5 }
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "What are lip fillers?",
+        "a": "Lip fillers are an aesthetic treatment designed to enhance lip hydration, definition, and volume through a personalized approach."
+      },
+      {
+        "q": "Will my results look natural?",
+        "a": "The goal is to achieve facial harmony and results that complement each individual's natural features."
+      },
+      {
+        "q": "How long does the procedure take?",
+        "a": "Treatment time may vary depending on each person's needs and professional assessment."
+      },
+      {
+        "q": "Can the amount of volume be customized?",
+        "a": "Yes. Each treatment is tailored to the individual's goals, facial proportions, and desired result."
+      },
+      {
+        "q": "Is there any downtime?",
+        "a": "Every patient may experience a different recovery process. During your consultation, you will receive information about what to expect and the recommended aftercare."
+      },
+      {
+        "q": "What aftercare is required?",
+        "a": "You will receive personalized aftercare instructions based on your treatment and individual needs."
+      }
+    ]
+  },
+  "whyUs": {
+    "title": "Why Choose MJ Estética & Wellness Center?",
+    "quote": "Because we believe true beauty isn't about changing your face. It's about enhancing what already makes you beautiful.",
+    "p1": "At MJ, you will find:",
+    "items": [
+      "Professional care",
+      "Personalized protocols",
+      "Natural-looking results",
+      "Premium aesthetic experience",
+      "Facial harmonization approach",
+      "Personalized follow-up",
+      "Comfortable and welcoming environment",
+      "Updated techniques and technology"
+    ]
+  },
+  "final": {
+    "title": "Book Your Aesthetic Consultation",
+    "subtitle": "Your lips can look more hydrated, defined, and harmonious while maintaining a natural appearance. Discover the treatment approach that's right for you.",
+    "cta1": "Request Your Free Guide",
+    "cta2": "Message Us on WhatsApp",
+    "cta3": "Book Your Personalized Consultation",
+    "motto": "Discover your best version with natural-looking, elegant results.",
+    "brand": "MJ Estética & Wellness Center",
+    "location": "Turrialba, Costa Rica",
+    "tagline": "Professional facial harmonization and aesthetic wellness"
+  }
+}

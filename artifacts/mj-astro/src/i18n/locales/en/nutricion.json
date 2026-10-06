@@ -1,0 +1,113 @@
+{
+  "problem": {
+    "title": "Looking for a Nutritionist in Turrialba who Really Adapts the Plan to Your Lifestyle?",
+    "p1": "Many people come to consultation after trying restrictive diets, internet advice or programs that simply don't fit their reality.",
+    "p2": "The problem is usually not a lack of discipline.",
+    "p3": "The problem is that most plans are not designed for the person following them.",
+    "p4": "At MJ Estética & Wellness Center we understand that each patient has different schedules, goals, habits, and needs.",
+    "p5": "That's why our personalized nutrition service in Turrialba focuses on building sustainable strategies that you can maintain in the long term.",
+    "closing": "Because true transformation happens when nutrition adapts to your life and not the other way around."
+  },
+  "focus": {
+    "title": "Nutritionist Service in Turrialba with a Focus on Integral Well-being",
+    "desc": "Our nutritional guidance program is designed to support people who want to:",
+    "items": [
+      "Improve their eating habits",
+      "Organize their daily nutrition better",
+      "Receive personalized nutritional education",
+      "Improve their integral well-being",
+      "Complement aesthetic and wellness treatments",
+      "Work on body composition goals",
+      "Develop sustainable healthy habits",
+      "Create a better relationship with food"
+    ],
+    "note": "Each consultation is individually adapted according to your goals, needs, and lifestyle.",
+    "includesTitle": "What Does the Nutritional Consultation Include?",
+    "includes": [
+      { "t": "Complete Nutritional Assessment", "d": "We learn about your current situation, eating habits, goals, and needs." },
+      { "t": "Diagnosis and Goal Definition", "d": "We establish realistic and achievable goals adapted to your context." },
+      { "t": "Personalized Nutritional Plan", "d": "Specifically designed for your lifestyle." },
+      { "t": "Nutritional Education", "d": "Learn how to make better food choices without relying on extreme diets." },
+      { "t": "Professional Follow-up", "d": "We perform adjustments and guidance to help you maintain progress." }
+    ]
+  },
+  "composition": {
+    "title": "Nutritionist for Weight Loss and Improving Body Composition in Turrialba",
+    "desc": "One of the most frequent goals of our patients is to improve their body composition through sustainable habits.",
+    "items": [
+      "Organize your nutrition",
+      "Improve your nutritional choices",
+      "Create consistent habits",
+      "Optimize your general well-being",
+      "Maintain sustainable results over time"
+    ],
+    "note": "We don't believe in quick fixes. We believe in strategies you can maintain for months and years.",
+    "ctaTitle": "Start your change today",
+    "ctaDesc": "Join the dozens of people in Turrialba who have transformed their relationship with food.",
+    "cta": "SCHEDULE APPOINTMENT VIA WHATSAPP"
+  },
+  "benefits": {
+    "label": "ADVANTAGES",
+    "title": "Benefits",
+    "items": [
+      { "t": "Nutrition adapted to you", "d": "We don't work with generic plans." },
+      { "t": "Sustainable and realistic habits", "d": "We create strategies you can maintain in the long term." },
+      { "t": "Nutritional education", "d": "Learn to make better decisions on your own." },
+      { "t": "Integral well-being and energy", "d": "Improve your quality of life and vitality." },
+      { "t": "Professional follow-up and guidance", "d": "We accompany you at every stage of the process." },
+      { "t": "Personalized goals", "d": "Whether it's health, aesthetics, or sports performance." }
+    ]
+  },
+  "methodology": {
+    "label": "METHODOLOGY",
+    "title": "How does a nutritional consultation work at MJ Estética & Wellness Center?",
+    "steps": [
+      { "s": "Step 1", "t": "Initial Assessment", "d": "Habits, goals, and lifestyle." },
+      { "s": "Step 2", "t": "Nutritional Plan Design", "d": "Personalized strategy." },
+      { "s": "Step 3", "t": "Implementation", "d": "Progressive changes." },
+      { "s": "Step 4", "t": "Follow-up and Adjustments", "d": "To optimize results." }
+    ]
+  },
+  "testimonials": {
+    "title": "Success Stories",
+    "desc": "Real patients who have transformed their lifestyle in Turrialba.",
+    "items": [
+      {
+        "text": "MJ Estética has provided me with a lot of support to lose weight. Also the service has been great and very interested in helping one to lose weight as soon as possible.",
+        "author": "Eduardo Andres Loaiza Mata",
+        "role": "Nutrition Patient"
+      },
+      {
+        "text": "My posts have been of great help to me, I have already seen a lot of change in my physique since I started. I recommend them with eyes closed.",
+        "author": "Johana Nuñez Campos",
+        "role": "Nutrition Patient"
+      }
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "Are nutritional plans personalized?", "a": "Yes, each recommendation is adapted to your goals, tastes, and lifestyle." },
+      { "q": "Does the consultation include follow-up?", "a": "Yes, follow-up is fundamental for success and to make adjustments according to your progress." },
+      { "q": "Can I combine nutrition with aesthetic treatments?", "a": "Yes, it is the ideal complement to boost body results and improve body composition." },
+      { "q": "What goals can a nutritionist support?", "a": "From fat loss and muscle mass gain to improving your relationship with food and organizing your daily menus." }
+    ]
+  },
+  "location": {
+    "title": "Nutritionist in Turrialba Near You",
+    "items": [
+      "MJ Estética & Wellness Center",
+      "Turrialba, Cartago, Costa Rica",
+      "Scheduled appointments",
+      "WhatsApp service",
+      "Parking available",
+      "Personalized attention"
+    ]
+  },
+  "finalCta": {
+    "title": "Schedule Your Nutritional Assessment Today",
+    "desc": "Your nutrition can become a tool to improve your well-being, energy, and quality of life. Discover how a personalized nutritional plan can help you build sustainable habits and achieve your goals.",
+    "cta": "Schedule your assessment",
+    "note": "Limited spots by weekly schedule"
+  }
+}

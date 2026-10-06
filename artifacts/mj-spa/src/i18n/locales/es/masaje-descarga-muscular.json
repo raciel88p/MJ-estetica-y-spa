@@ -1,0 +1,147 @@
+{
+  "hero": {
+    "title": "TU CUERPO TAMBIÉN NECESITA QUE LO CUIDES",
+    "subtitle": "Masaje de Descarga Muscular en Turrialba",
+    "p1": "Hay días en los que el cuerpo simplemente dice: “necesito parar”.",
+    "p2": "Tensión acumulada, músculos cargados después de entrenar, cansancio físico o esa sensación de llevar demasiado tiempo sin darte un verdadero descanso.",
+    "p3": "En MJ Estética & Wellness Center creamos una experiencia de descarga muscular pensada para ayudarte a soltar, respirar y volver a sentir tu cuerpo ligero y relajado.",
+    "p4": "Una experiencia de bienestar corporal que combina técnicas de masaje adaptadas a tus necesidades con un ambiente cómodo, tranquilo y pensado para que ese momento sea completamente para ti.",
+    "badge": "✨ Agenda tu experiencia de descarga muscular",
+    "subbadge": "Regálale a tu cuerpo el descanso que te está pidiendo.",
+    "cta": "CONSULTAR DISPONIBILIDAD POR WHATSAPP"
+  },
+  "whatIs": {
+    "title": "¿Qué es un masaje de descarga muscular?",
+    "p1": "El masaje de descarga muscular es una experiencia corporal enfocada en trabajar zonas donde puede existir tensión y sobrecarga muscular, especialmente después de actividad física, entrenamiento o períodos de esfuerzo corporal.",
+    "p2": "A diferencia de un masaje pensado únicamente para relajarte, la descarga muscular busca combinar bienestar, relajación y recuperación corporal, adaptando la intensidad y las técnicas según lo que tu cuerpo necesite.",
+    "quote": "Porque no todos los cuerpos son iguales. Tu sesión comienza escuchando lo que tu cuerpo necesita."
+  },
+  "reasons": {
+    "title": "¿Sientes tu cuerpo cargado?",
+    "subtitle": "Tal vez sea momento de hacer una pausa. El masaje de descarga muscular puede ser una excelente opción si buscas:",
+    "bullets": [
+      "✨ Relajar músculos que se sienten cargados",
+      "✨ Recuperar sensación de bienestar después del entrenamiento",
+      "✨ Disfrutar un momento de descanso físico",
+      "✨ Liberar la sensación de tensión corporal",
+      "✨ Complementar tu rutina de ejercicio y bienestar",
+      "✨ Dedicarte un espacio de autocuidado"
+    ],
+    "conclusion": "No se trata solamente de recibir un masaje. Se trata de volver a sentirte bien en tu propio cuerpo."
+  },
+  "targetAudience": {
+    "title": "Para quienes no dejan de moverse",
+    "profiles": [
+      {
+        "icon": "🏋️",
+        "title": "Personas físicamente activas",
+        "description": "Si entrenas regularmente, sabes que cuidar tu cuerpo también forma parte del entrenamiento. Una sesión de descarga puede convertirse en ese espacio de recuperación y descanso que complementa tu rutina."
+      },
+      {
+        "icon": "🏃",
+        "title": "Atletas y amantes del fitness",
+        "description": "Después de entrenar, tu cuerpo merece atención. La experiencia puede adaptarse a las zonas que hayan recibido mayor carga durante tu actividad física."
+      },
+      {
+        "icon": "💆",
+        "title": "Personas con tensión muscular",
+        "description": "Si pasas muchas horas trabajando, conduciendo o realizando actividades que generan tensión corporal, una sesión puede ayudarte a dedicar un momento de atención y relajación a tu cuerpo."
+      },
+      {
+        "icon": "🌿",
+        "title": "Personas que simplemente necesitan desconectarse",
+        "description": "No tienes que ser atleta. A veces simplemente necesitas detenerte, respirar y regalarte un momento de bienestar. Tu cuerpo también merece ese tiempo."
+      }
+    ]
+  },
+  "steps": {
+    "title": "¿Cómo es tu experiencia en MJ?",
+    "items": [
+      {
+        "num": "01",
+        "t": "Escuchamos tu cuerpo",
+        "d": "Antes de comenzar, conversamos contigo para conocer cómo te sientes y qué zonas deseas trabajar."
+      },
+      {
+        "num": "02",
+        "t": "Personalizamos tu experiencia",
+        "d": "La intensidad y las técnicas se adaptan a tus necesidades y preferencias."
+      },
+      {
+        "num": "03",
+        "t": "Comenzamos la descarga",
+        "d": "Trabajamos las zonas seleccionadas dentro de un ambiente tranquilo y confortable."
+      },
+      {
+        "num": "04",
+        "t": "Te regalamos un momento para ti",
+        "d": "La experiencia termina con recomendaciones de bienestar y descanso según tus necesidades."
+      }
+    ],
+    "conclusion": "Sin prisas. Sin presión. Un espacio pensado para ti."
+  },
+  "waiting": {
+    "title": "No necesitas esperar a sentirte agotado",
+    "p1": "El autocuidado no debería ser el último punto de tu lista. Puedes incorporar el bienestar corporal como parte de tu rutina.",
+    "bullets": [
+      "Entrenas.",
+      "Trabajas.",
+      "Corres.",
+      "Cuidas de todos.",
+      "Cumples con todo."
+    ],
+    "conclusion": "Ahora también puedes cuidar de ti."
+  },
+  "whyUs": {
+    "title": "Una experiencia diferente en Turrialba",
+    "subtitle": "En MJ Estética & Wellness Center buscamos que cada visita sea mucho más que un servicio. Queremos que encuentres un espacio donde puedas sentirte cómodo, atendido y escuchado.",
+    "bullets": [
+      "✨ Atención profesional",
+      "✨ Protocolos personalizados",
+      "✨ Ambiente cómodo y relajante",
+      "✨ Experiencia wellness",
+      "✨ Enfoque individualizado",
+      "✨ Atención enfocada en tu bienestar corporal"
+    ],
+    "conclusion": "Porque cuando se trata de tu cuerpo, mereces sentir que estás en buenas manos."
+  },
+  "faqs": {
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "q": "¿El masaje de descarga muscular es solamente para atletas?",
+        "a": "No. Aunque es muy utilizado por personas físicamente activas, también puede ser una opción para quienes buscan relajación muscular, descanso corporal y bienestar."
+      },
+      {
+        "q": "¿Qué se siente durante una sesión?",
+        "a": "La experiencia puede variar según la persona y la intensidad elegida. El objetivo es trabajar de manera personalizada, respetando tus sensaciones y necesidades."
+      },
+      {
+        "q": "¿Cuánto dura una sesión?",
+        "a": "La duración depende del protocolo seleccionado. Puedes consultar las opciones disponibles al momento de reservar."
+      },
+      {
+        "q": "¿Cada cuánto puedo realizarme un masaje?",
+        "a": "La frecuencia puede variar según tu actividad física, necesidades personales y objetivos de bienestar. En MJ podemos orientarte para encontrar una frecuencia adecuada para ti."
+      },
+      {
+        "q": "¿Puedo recibirlo después de entrenar?",
+        "a": "Sí, puede formar parte de una rutina de bienestar y recuperación post entrenamiento. La intensidad y el momento adecuado pueden variar según el tipo de actividad realizada."
+      },
+      {
+        "q": "¿Tengo que estar haciendo ejercicio para recibirlo?",
+        "a": "No. El masaje también puede disfrutarse como una experiencia de relajación y bienestar corporal."
+      }
+    ]
+  },
+  "final": {
+    "title": "Tu cuerpo te ha acompañado en todo.",
+    "subtitle": "Ahora es tu turno de cuidarlo.",
+    "p1": "Date ese momento que siempre estás posponiendo.",
+    "motto": "Respira. Relájate. Suelta.",
+    "badge": "Agenda tu masaje de descarga muscular en Turrialba",
+    "cta": "ESCRÍBENOS POR WHATSAPP Y CONSULTA DISPONIBILIDAD",
+    "footerText": "MJ Estética & Wellness Center — Tu espacio para sentirte bien, cuidar tu cuerpo y volver a conectar contigo.",
+    "tagline": "Porque el bienestar no es un lujo. También es una forma de cuidarte."
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "intro": {
+    "title": "Why Are More People Looking for Aromatherapy in Turrialba?",
+    "tags": ["Work", "Family", "Responsibilities", "Screens", "Stress"],
+    "p1": "Modern life keeps us constantly busy. Work. Family. Responsibilities. Screens. Stress.",
+    "p2": "That is why more and more people are looking for experiences that allow them to disconnect for a moment and reconnect with themselves. Aromatherapy is a wellness experience that uses essential oils and carefully selected aromatic stimuli to create an environment focused on relaxation, emotional well-being, and rest.",
+    "highlight": "At MJ Estética & Wellness Center, we personalize every experience because we understand that everyone experiences wellness differently."
+  },
+  "benefits": {
+    "title": "Aromatherapy in Turrialba: Much More Than a Pleasant Scent",
+    "desc": "Our experience is designed to engage your senses and create a space where you can feel comfortable, relaxed, and cared for.",
+    "subtitle": "Benefits Our Clients Value",
+    "items": [
+      "A feeling of deep relaxation",
+      "Moments of disconnection and rest",
+      "Emotional and physical well-being",
+      "Spaces of calm and harmony",
+      "Personalized wellness experiences",
+      "Mindful self-care",
+      "A premium environment focused on well-being"
+    ]
+  },
+  "process": {
+    "title": "How Does Our Aromatherapy Experience Work?",
+    "steps": [
+      { "s": "Step 1", "t": "Personalized Consultation", "d": "We learn about your preferences and wellness goals." },
+      { "s": "Step 2", "t": "Aromatic Selection", "d": "We select the scents and essential oils that best suit the experience you want to enjoy." },
+      { "s": "Step 3", "t": "Wellness Experience", "d": "Enjoy a session designed to promote relaxation and well-being in a comfortable and private environment." },
+      { "s": "Step 4", "t": "Personalized Recommendations", "d": "Receive tips to help extend your feeling of well-being after your visit." }
+    ],
+    "items": [
+      "Duration depends on protocol",
+      "Convenient location in Turrialba",
+      "Parking available",
+      "Easy booking via WhatsApp"
+    ]
+  },
+  "who": {
+    "title": "Who Is Aromatherapy For?",
+    "intro": "This experience is ideal for:",
+    "items": [
+      "People who want to relax.",
+      "People looking for overall well-being.",
+      "People interested in premium spa experiences.",
+      "People who want to incorporate more self-care into their routine.",
+      "People looking for moments of disconnection and rest.",
+      "People who want to complement relaxing massages and wellness programs."
+    ]
+  },
+  "combinations": {
+    "title": "Aromatherapy & Relaxing Massages in Turrialba",
+    "desc": "Many of our clients combine aromatherapy with other wellness services to enhance their overall experience. Some of our most requested experiences include:",
+    "items": [
+      "Relaxing aromatherapy",
+      "Relaxing massages",
+      "Premium spa experiences",
+      "Holistic wellness programs",
+      "Self-care protocols"
+    ],
+    "quote": "Ask us which combination may be best suited to your wellness goals.",
+    "cta": "CONSULT COMBINATIONS"
+  },
+  "whyUs": {
+    "title": "Why Choose MJ Estética & Wellness Center?",
+    "desc": "We are not looking to offer a generic experience. We want to provide you with a space where you can truly disconnect from the outside world and dedicate meaningful time to your well-being.",
+    "items": [
+      { "t": "Personalized attention" },
+      { "t": "Premium wellness protocols" },
+      { "t": "Relaxing and sensory environment" },
+      { "t": "Private and comfortable spaces" },
+      { "t": "Convenient location in Turrialba" },
+      { "t": "Easy booking via WhatsApp" }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "items": [
+      "An incredible experience. From the moment I arrived, I felt peace and relaxation.",
+      "I loved the attention and atmosphere. Care is evident in every detail.",
+      "Perfect for disconnecting from daily stress and focusing on yourself."
+    ],
+    "author": "MJ Client"
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions About Aromatherapy in Turrialba",
+    "items": [
+      { "q": "What is aromatherapy?", "a": "It is a wellness experience that uses scents and essential oils to create environments oriented towards well-being and relaxation." },
+      { "q": "How long is a session?", "a": "It depends on the selected protocol and each person's needs." },
+      { "q": "Can it be combined with massages?", "a": "Yes. It is one of the most requested combinations by our clients." },
+      { "q": "What essential oils do you use?", "a": "We select options according to the desired experience and individual preferences." },
+      { "q": "Do I need any prior preparation?", "a": "No. Just come with a willingness to enjoy a moment of well-being." },
+      { "q": "Where are you located?", "a": "We are located in Turrialba, with easy access and parking for our visitors." }
+    ]
+  },
+  "leadMagnet": {
+    "label": "🎁 FREE WELLNESS GUIDE",
+    "title": "Download Your Free Wellness Guide",
+    "subtitle": "“How to Enhance Your Wellness & Self-Care Results”",
+    "ctaLabel": "💌 Comment the word on Instagram:",
+    "word": "AROMA",
+    "learn": "You’ll learn:",
+    "items": [
+      "Habits to improve your relaxation moments.",
+      "Tips to enhance your wellness experiences.",
+      "Daily self-care recommendations.",
+      "Strategies to manage everyday stress."
+    ],
+    "cta": "DOWNLOAD GUIDE VIA WHATSAPP"
+  },
+  "finalCta": {
+    "title": "Book Your Aromatherapy Experience in Turrialba Today",
+    "desc": "Many people dedicate all their time to work, responsibilities, and commitments. Today is the perfect time to give yourself the gift of relaxation and well-being.",
+    "location": "MJ Estética & Wellness Center",
+    "address": "Turrialba, Cartago, Costa Rica",
+    "cta": "Book via WhatsApp",
+    "cta2": "CHECK AVAILABILITY"
+  }
+}

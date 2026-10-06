@@ -1,0 +1,88 @@
+{
+  "trust": [
+    { "title": "Profesionales", "sub": "Certificados" },
+    { "title": "Resultados", "sub": "Garantizados" },
+    { "title": "Atención", "sub": "Personalizada" },
+    { "title": "Tecnología", "sub": "Médica" }
+  ],
+  "specialties": [
+    {
+      "title": "Depilación Láser",
+      "desc": "Piel lisa y sin vello para siempre.",
+      "link": "/servicios/depilacion-laser"
+    },
+    {
+      "title": "Faciales",
+      "desc": "Limpieza y rejuvenecimiento facial.",
+      "link": "/servicios/faciales"
+    },
+    {
+      "title": "Piernas",
+      "desc": "Tratamientos circulatorios.",
+      "link": "/servicios/piernas-cansadas"
+    },
+    {
+      "title": "Arteterapia",
+      "desc": "Creatividad y bienestar emocional.",
+      "link": "/servicios/arteterapia"
+    }
+  ],
+  "featured": {
+    "label": "Tratamientos Destacados",
+    "viewAll": "Ver todos los servicios",
+    "items": [
+      {
+        "title": "Botox Full Face",
+        "category": "Médico Estético",
+        "desc": "Suaviza arrugas de expresión manteniendo tu naturalidad.",
+        "link": "/servicios/botox-full-face"
+      },
+      {
+        "title": "Hidrolipoclasia",
+        "category": "Corporal",
+        "desc": "Elimina grasa localizada sin cirugía en una sesión.",
+        "link": "/servicios/masajes-corporales"
+      },
+      {
+        "title": "Limpieza Facial Profunda",
+        "category": "Facial",
+        "desc": "Renovación completa para una piel radiante y sin impurezas.",
+        "link": "/servicios/limpieza-facial"
+      },
+      {
+        "title": "Hilos Tensores",
+        "category": "Médico Estético",
+        "desc": "Efecto lifting inmediato estimulando tu propio colágeno.",
+        "link": "/servicios/hilos-tensores"
+      },
+      {
+        "title": "Depilación Láser",
+        "category": "Premium",
+        "desc": "Despídete del vello para siempre con tecnología de punta.",
+        "link": "/servicios/depilacion-laser"
+      },
+      {
+        "title": "Levantamiento de Glúteo",
+        "category": "Corporal",
+        "desc": "Tonifica y proyecta tu figura de forma no invasiva.",
+        "link": "/servicios/levantamiento-gluteo"
+      }
+    ]
+  },
+  "experience": {
+    "stat": "Años de experiencia"
+  },
+  "testimonials": {
+    "quote": "\"Excelente atención, el personal es muy profesional y amable. Las instalaciones son de primer nivel y los resultados de los tratamientos son visibles desde la primera sesión. 100% recomendado para quienes buscan calidad.\"",
+    "viewMore": "Ver más testimonios",
+    "leaveReview": "Dejar reseña en Google"
+  },
+  "contact": {
+    "address": "Turrialba Centro, 150m este de la Iglesia Católica, Cartago, Costa Rica.",
+    "schedule": "Lun - Vie: 9:00 - 20:00 / Sáb: 8:00 - 15:00"
+  },
+  "suggestion": {
+    "text": "¿Tienes alguna idea para mejorar nuestra página?",
+    "cta": "Enviar Sugerencia"
+  }
+}

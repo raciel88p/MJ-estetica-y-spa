@@ -1,0 +1,174 @@
+{
+  "intro": {
+    "title": "Descubre el protocolo ideal para tu piel hoy",
+    "cta": "Escríbenos por WhatsApp"
+  },
+  "whatIs": {
+    "title": "¿Qué es una limpieza facial?",
+    "desc1": "La limpieza facial es un tratamiento skincare diseñado para apoyar la limpieza profunda de la piel, mejorar la sensación de frescura facial y favorecer una apariencia más luminosa y revitalizada.",
+    "desc2": "En MJ Estética & Wellness Center cada protocolo se adapta según las necesidades específicas de tu piel, porque no todas las pieles requieren el mismo cuidado.",
+    "focus": "Nuestro enfoque combina:",
+    "focusItems": [
+      "limpieza profunda facial",
+      "bienestar de la piel",
+      "glow facial natural",
+      "hidratación y cuidado profesional",
+      "experiencia wellness premium"
+    ],
+    "quote": "La meta no es cambiar quién eres. Es ayudarte a sentirte más cómoda, fresca y segura con tu piel."
+  },
+  "improvements": {
+    "title": "¿Qué puede ayudar a mejorar este tratamiento?",
+    "desc": "La limpieza facial puede apoyar protocolos orientados a:",
+    "note": "Cada piel responde de manera distinta, por eso realizamos una valoración previa antes de recomendar cualquier protocolo."
+  },
+  "why": {
+    "title": "¿Por qué tantas personas están incorporando limpiezas faciales en sus rutinas?",
+    "p1": "Porque hoy el skincare dejó de ser un lujo. Ahora es parte del autocuidado.",
+    "p2": "Muchas personas pasan semanas usando maquillaje, protector solar, estrés diario y contaminación ambiental sobre la piel… sin darle un verdadero proceso de limpieza profunda.",
+    "resultLabel": "El resultado puede sentirse así:",
+    "results": [
+      "Piel apagada",
+      "Sensación de grasa o resequedad",
+      "Falta de luminosidad",
+      "Textura irregular",
+      "Sensación de cansancio facial"
+    ],
+    "closing": "Ahí es donde una experiencia facial premium puede marcar la diferencia."
+  },
+  "realBenefits": {
+    "title": "Beneficios reales de una limpieza facial",
+    "desc": "En MJ Estética & Wellness Center buscamos resultados progresivos, naturales y personalizados.",
+    "items": [
+      "Glow facial progresivo",
+      "Sensación de frescura y limpieza",
+      "Apariencia más luminosa",
+      "Bienestar facial integral",
+      "Experiencia skincare premium",
+      "Relajación y autocuidado",
+      "Cuidado profesional de la piel",
+      "Protocolos adaptados individualmente"
+    ],
+    "quote": "Sin promesas irreales. Sin exageraciones. Solo cuidado profesional enfocado en el bienestar y la salud visual de tu piel."
+  },
+  "types": {
+    "title": "Tipos de limpieza facial disponibles"
+  },
+  "howItWorks": {
+    "title": "¿Cómo funciona una limpieza facial?",
+    "steps": [
+      {
+        "step": "Paso 1",
+        "title": "Valoración facial personalizada",
+        "desc": "Analizamos tu piel y tus objetivos para recomendar el protocolo más adecuado."
+      },
+      {
+        "step": "Paso 2",
+        "title": "Limpieza y preparación facial",
+        "desc": "Se realiza un proceso de limpieza profesional orientado al bienestar y preparación de la piel."
+      },
+      {
+        "step": "Paso 3",
+        "title": "Aplicación del protocolo skincare",
+        "desc": "Aplicamos productos y técnicas según las necesidades específicas evaluadas."
+      },
+      {
+        "step": "Paso 4",
+        "title": "Recomendaciones posteriores",
+        "desc": "Te brindamos recomendaciones de hidratación, protector solar y cuidado facial para potenciar resultados."
+      }
+    ],
+    "durationLabel": "Duración aproximada",
+    "durationValue": "60 a 90 minutos",
+    "feature1": "Experiencia relajante y cómoda",
+    "feature2": "Recomendado protector solar e hidratación",
+    "cta": "Reservar sesión"
+  },
+  "forWhom": {
+    "title": "¿Para quién se recomienda una limpieza facial?",
+    "desc": "Este tratamiento puede ser ideal para:",
+    "items": [
+      "Personas interesadas en glow facial",
+      "Personas que buscan limpieza profunda",
+      "Quienes desean iniciar una rutina skincare",
+      "Personas interesadas en bienestar facial",
+      "Personas que buscan una experiencia premium de cuidado facial",
+      "Rutinas preventivas de cuidado de la piel",
+      "Personas que desean mejorar la sensación de frescura y luminosidad"
+    ]
+  },
+  "beforeAfter": {
+    "title": "Antes y después: resultados reales",
+    "desc": "En MJ Estética & Wellness Center creemos en resultados naturales.",
+    "items": [
+      "Glow saludable",
+      "Luminosidad progresiva",
+      "Piel con apariencia más fresca",
+      "Bienestar facial real",
+      "Resultados personalizados"
+    ],
+    "note": "📸 Utilizamos fotografías reales de pacientes y procesos auténticos."
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestras clientas",
+    "items": [
+      "Mi piel se siente mucho más fresca y luminosa.",
+      "La experiencia fue súper relajante y personalizada.",
+      "Me encantó cómo quedó mi piel después de la limpieza facial.",
+      "Sentí una diferencia en luminosidad y suavidad desde la primera sesión."
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes sobre Limpiezas Faciales"
+  },
+  "programs": {
+    "title": "Programas y experiencias skincare premium",
+    "items": [
+      "Valoración facial personalizada",
+      "Programas glow facial",
+      "Skincare memberships",
+      "Wellness facial bundles",
+      "Protocolos premium adaptados individualmente"
+    ],
+    "promoNote": "Promociones activas disponibles por WhatsApp."
+  },
+  "whyMJ": {
+    "title": "¿Por qué elegir MJ Estética & Wellness Center?",
+    "desc": "Porque creemos que el skincare debe sentirse humano, profesional y personalizado.",
+    "items": [
+      "Protocolos personalizados",
+      "Atención profesional",
+      "Experiencia skincare avanzada",
+      "Ambiente cómodo y relajante",
+      "Enfoque wellness facial",
+      "Seguimiento individualizado",
+      "Cuidado orientado a glow natural y bienestar"
+    ],
+    "closing": "No buscamos hacer una limpieza facial genérica. Buscamos ayudarte a vivir una experiencia premium de cuidado facial."
+  },
+  "location": {
+    "title": "Limpieza Facial en Turrialba",
+    "items": [
+      { "icon": "📍", "text": "Ubicación accesible en Turrialba" },
+      { "icon": "📲", "text": "Atención por WhatsApp" },
+      { "icon": "🚗", "text": "Parqueo cercano" },
+      { "icon": "🕒", "text": "Horarios sujetos a disponibilidad" },
+      { "icon": "✨", "text": "Atención personalizada" }
+    ]
+  },
+  "finalCta": {
+    "title": "Descubre el protocolo ideal para tu piel",
+    "desc": "Tu piel merece más que una limpieza rápida. Merece cuidado profesional, bienestar y una experiencia diseñada especialmente para ti.",
+    "waLinkText": "Escríbenos por WhatsApp y descubre tu protocolo ideal"
+  },
+  "leadMagnet": {
+    "title": "🎁 Guía Gratuita: Cómo mejorar los resultados de una limpieza facial",
+    "wordLabel": "Comenta la palabra:",
+    "word": "LIMPIEZA",
+    "desc": "Y recibe GRATIS nuestra guía con recomendaciones profesionales para potenciar glow, luminosidad y bienestar facial desde casa.",
+    "cta": "QUIERO MI GUÍA GRATIS"
+  },
+  "waMessages": {
+    "general": "¡Hola! Deseo más información sobre la Limpieza Facial en Turrialba"
+  }
+}
