@@ -2396,56 +2396,76 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "radiofrecuencia-facial",
-      name: "Radiofrecuencia Facial",
-      tagline: "Reafirmación y rejuvenecimiento sin cirugía",
-      heroDescription: "La radiofrecuencia facial es un tratamiento no invasivo que utiliza energía electromagnética para calentar las capas profundas de la piel, estimulando la producción de colágeno y elastina para un efecto tensor, reafirmante y rejuvenecedor visible.",
+      name: "Facial Radiofrequency",
+      fullTitle: "Facial Radiofrequency in Turrialba",
+      tagline: "Rejuvenate Your Skin Naturally, Gradually & Non-Invasively",
+      heroDescription:
+        "Your skin reflects how you feel… and also how you care for yourself.<br /><br />The <strong>Facial Radiofrequency Treatment at MJ Estética & Wellness Center</strong> is designed to help improve the appearance, firmness, and texture of your skin through personalized protocols focused on natural, gradual, and elegant-looking results.<br /><br />Facial radiofrequency is a <strong>non-invasive aesthetic treatment</strong> that uses specialized technology to create controlled thermal sensations in the skin, helping support processes associated with the appearance of firmness and facial rejuvenation.",
       benefits: [
-        "Reafirmación y efecto lifting visible",
-        "Estimulación natural del colágeno y elastina",
-        "Reducción de arrugas y líneas de expresión",
-        "Sin cirugía, sin agujas, sin recuperación",
-        "Resultados que mejoran progresivamente",
+        "Natural glow & skin that feels firmer",
+        "Refreshed & naturally rejuvenated appearance",
+        "Non-invasive facial treatment with minimal recovery time",
+        "Complements advanced skincare routines",
+        "Premium wellness experience in Turrialba",
       ],
       items: [
         {
-          title: "Radiofrecuencia Facial Completa",
+          title: "Full Facial Radiofrequency",
           description:
-            "Tratamiento de todo el rostro para mejorar la firmeza, reducir la flacidez y atenuar arrugas de forma global.",
+            "Personalized protocol designed to improve the appearance of skin firmness, texture, and natural glow across the entire face.",
           duration: "60 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Radiofrecuencia de Contorno",
+          title: "Contour & Jawline Radiofrequency",
           description:
-            "Tratamiento focalizado en el óvalo facial, papada y cuello para definir y tensar la línea mandibular.",
+            "Focused treatment targeting facial oval, double chin, and neck to help define and firm the jawline.",
           duration: "45 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
         {
-          title: "Radiofrecuencia Ocular",
+          title: "Eye Contour Radiofrequency",
           description:
-            "Tratamiento específico para el contorno de ojos: suaviza las patas de gallo, reduce bolsas y ojeras y levanta el párpado caído.",
+            "Targeted treatment for the eye contour area to smooth fine lines and refresh tired-looking skin.",
           duration: "30 min",
-          price: "Consultar precio",
-        },
-        {
-          title: "Radiofrecuencia + Mesoterapia",
-          description:
-            "Protocolo combinado de máxima eficacia: la radiofrecuencia abre canales en la piel que potencian la absorción de activos de la mesoterapia.",
-          duration: "75 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿Cuándo se notan los resultados?",
+          question: "Does Facial Radiofrequency hurt?",
           answer:
-            "Se aprecia una mejoría inmediata tras la primera sesión. Los mejores resultados se obtienen a partir de la 4ª–6ª sesión y siguen mejorando semanas después.",
+            "No. It is generally experienced as a warm and relaxing sensation.",
         },
         {
-          question: "¿Es dolorosa?",
+          question: "When will I see results?",
           answer:
-            "No. La sensación es de calor agradable y confortable. Es un tratamiento muy relajante que muchas clientas comparan con un masaje cálido.",
+            "Many people notice gradual changes in skin radiance and the appearance of firmness as they progress through their sessions.",
+        },
+        {
+          question: "Is Facial Radiofrequency invasive?",
+          answer:
+            "No. It is a non-invasive facial treatment.",
+        },
+        {
+          question: "Can it help with skin laxity?",
+          answer:
+            "It may help improve the appearance of facial firmness depending on each person's individual situation.",
+        },
+        {
+          question: "Is there any downtime?",
+          answer:
+            "Recovery time is generally minimal.",
+        },
+        {
+          question: "Can it be combined with other facial treatments?",
+          answer:
+            "Yes. It can often be incorporated into personalized facial protocols.",
+        },
+        {
+          question: "How often is it recommended?",
+          answer:
+            "The ideal frequency depends on your facial assessment and personal goals.",
         },
       ],
     },
