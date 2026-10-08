@@ -408,7 +408,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
 
   const BASE = import.meta.env.BASE_URL;
 
-  const isNutritionEspecialist = service.slug === "nutricion" || service.slug === "inbody";
+  const isNutritionEspecialist = service.slug === "nutricion" || service.slug === "nutrition" || service.slug === "inbody";
   const isPeelingSpecialist = service.slug === "peeling-quimico" || service.slug === "microdermoabrasion";
   const isPsychologySpecialist = service.slug === "psicologia-infantil";
 
@@ -654,7 +654,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
           </motion.div>
 
           {/* ── NUTRITION LEAD MAGNET (OUTSIDE CARD) ── */}
-          {service.slug === "nutricion" && (
+          {(service.slug === "nutricion" || service.slug === "nutrition") && (
             <motion.div
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}
               className="mt-12"
@@ -831,7 +831,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
         <PsicologiaInfantilContent waLink={WA} lang={lang} />
       )}
 
-      {service.slug === "nutricion" && (
+      {(service.slug === "nutricion" || service.slug === "nutrition") && (
         <NutricionServiceContent waLink={WA} lang={lang} />
       )}
 

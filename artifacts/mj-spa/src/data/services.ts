@@ -1742,16 +1742,17 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "nutrition",
-      name: "Nutritionist in Turrialba | Personalized Nutritional Plans",
-      tagline: "Feed your body, transform your life",
+      name: "Nutritionist in Turrialba",
+      fullTitle: "Nutritionist in Turrialba | Personalized Nutrition Plans for Wellness, Health & Body Composition",
+      tagline: "Transform your eating habits with professional guidance and a nutrition plan designed specifically for you.",
       heroDescription:
-        "Transform your eating habits with professional guidance and a nutritional plan designed specifically for you.",
+        "At MJ Estética & Wellness Center, we help people in Turrialba, Cartago, and nearby areas improve their nutrition, develop sustainable habits, and achieve their wellness goals through personalized nutrition consultations.",
       benefits: [
-        "Fully personalized nutritional plan",
-        "Improvement in weight and body composition",
-        "Greater energy and daily vitality",
-        "Reduction of metabolic diseases",
-        "Sustainable eating habits in the long term",
+        "Professional Nutritional Assessment",
+        "Personalized Nutrition Plan",
+        "Ongoing Follow-Up & Support",
+        "Nutrition for Wellness & Aesthetics",
+        "Nutrition Services in Turrialba",
       ],
       items: [
         {
