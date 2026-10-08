@@ -5755,14 +5755,16 @@ export const servicePages: MultiLangServicePageData[] = [
     en: {
       slug: "tropical-extreme",
       name: "Tropical Extreme",
-      fullTitle: "Tropical Extreme Massage in Turrialba | MJ Estética & Spa",
+      fullTitle: "Tropical Extreme Ritual in Turrialba",
       tagline: "A moment to disconnect, relax, and reconnect with yourself",
-      heroDescription: "Enjoy the Tropical Extreme Ritual in Turrialba, a massage and spa experience designed to relax and disconnect from daily routine.",
+      heroDescription: "There are days when you need more than just rest. You need to pause. To put your phone away for a moment, step back from work, responsibilities, and the fast pace of everyday life.<br /><br />The <strong>Tropical Extreme Ritual at MJ Estética & Spa</strong> is designed to turn that pause into a meaningful wellness and relaxation experience, combining a relaxing massage with an atmosphere inspired by the energy and sensory beauty of the tropics.",
       benefits: [
-        "Exclusive environment to disconnect",
-        "Massage experience focused on deep relaxation",
-        "Personalized care tailored to your needs",
-        "Aromatherapy and relaxing tropical inspiration"
+        "A relaxing massage in Turrialba",
+        "A different kind of spa experience",
+        "A moment of self-care",
+        "A chance to disconnect from your routine",
+        "A special experience to share with someone",
+        "A unique and memorable gift"
       ],
       items: [
         {
