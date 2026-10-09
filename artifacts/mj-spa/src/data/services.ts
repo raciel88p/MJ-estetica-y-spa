@@ -2703,30 +2703,34 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "microagujas-ginkgo-biloba",
-      name: "Microagujas con Ginkgo Biloba",
-      tagline: "Glow natural, revitalización facial y skincare avanzado",
-      heroDescription: "Glow natural, revitalización facial y skincare avanzado en un solo protocolo",
+      name: "Microneedling with Ginkgo Biloba",
+      fullTitle: "Microneedling with Ginkgo Biloba in Turrialba",
+      tagline: "Natural Glow, Facial Revitalization & Advanced Skincare in One Personalized Protocol",
+      heroDescription: "At MJ Estética & Wellness Center, we design Microneedling with Ginkgo Biloba protocols focused on supporting facial revitalization, improving the appearance of skin texture, and enhancing a natural glow through a premium facial wellness experience.",
       benefits: [
-        "Glow facial natural",
-        "Apariencia de piel revitalizada",
-        "Textura visualmente más uniforme",
-        "Sensación de hidratación y frescura",
-        "Protocolos adaptados a cada tipo de piel",
+        "Natural facial glow",
+        "Revitalized-looking skin",
+        "Visually more even skin texture",
+        "A feeling of hydration and freshness",
+        "Premium facial wellness experience",
+        "Protocols adapted to each skin type",
       ],
       items: [
         {
-          title: "Protocolo Ginkgo Biloba Premium",
-          description:
-            "Sesión de microagujas combinada con activos de Ginkgo Biloba para revitalización profunda.",
-          duration: "75 min",
-          price: "Consultar precio",
+          title: "Premium Ginkgo Biloba Microneedling Protocol",
+          description: "Microneedling session combined with active Ginkgo Biloba ingredients for deep facial revitalization.",
+          duration: "60-90 min",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿Qué son las Microagujas con Ginkgo Biloba?",
-          answer:
-            "Es un tratamiento que combina microneedling con activos de Ginkgo Biloba para potenciar el glow y la salud de la piel.",
+          question: "Does Microneedling with Ginkgo Biloba hurt?",
+          answer: "The sensation can vary from person to person. It is generally described as tolerable, and the protocol can be adapted according to professional assessment.",
+        },
+        {
+          question: "Does it help with facial glow?",
+          answer: "Many people choose this treatment as part of skincare protocols designed to support facial radiance and revitalization.",
         },
       ],
     },
