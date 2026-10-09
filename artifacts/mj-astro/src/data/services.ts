@@ -1514,40 +1514,53 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "facial-peeling",
-      name: "Facial Peeling",
-      tagline: "Professional treatment for younger, more radiant skin",
-      heroDescription:
-        "Professional facial peeling is an aesthetic treatment that helps renew the skin, stimulate cellular regeneration, and restore luminosity to your face in Turrialba.",
+      name: "Facial Peel",
+      fullTitle: "Facial Peel in Turrialba: Reduce Dark Spots, Acne Marks & Signs of Aging",
+      tagline: "Professional Facial Peel Treatment in Turrialba for Younger-Looking, Radiant Skin",
+      heroDescription: "Are you looking for a facial peel in Turrialba to help improve dark spots, acne marks, enlarged pores, or fine lines? At MJ Fisio Estética & Spa, we offer facial rejuvenation treatments in Turrialba designed to renew the skin, support cellular renewal, and restore a brighter, more radiant appearance to your face.",
       benefits: [
-        "Elimination of spots and hyperpigmentation",
-        "Reduction of fine wrinkles",
-        "Improvement of texture and luminosity",
-        "Treatment of acne and its marks",
-        "Stimulation of cellular renewal",
+        "Reduce the appearance of sun spots",
+        "Improve the appearance of acne marks and superficial acne scars",
+        "Reduce the appearance of fine lines",
+        "Improve skin texture",
+        "Minimize the appearance of enlarged pores",
+        "Support skin renewal",
+        "Enhance facial radiance",
+        "Promote a younger-looking, healthier appearance",
       ],
       items: [
         {
-          title: "Superfacial Peeling",
-          description: "Acts on the outermost layers of the epidermis. Ideal for dull skin.",
-          duration: "30 min",
-          faq: [
-        {
-          question: "¿El peeling duele?",
-          answer:
-            "Durante la aplicación puede sentirse un leve calor o picor que dura pocos minutos. Es perfectamente tolerable y controlado por nuestra especialista.",
-        },
-        {
-          question: "¿Cuánto tiempo de recuperación necesito?",
-          answer:
-            "Los peelings superficiales no requieren recuperación. Los más intensos pueden producir descamación 2-5 días. Te daremos pautas detalladas de cuidado post-tratamiento.",
-        },
-        {
-          question: "¿Cuándo no se puede hacer un peeling?",
-          answer:
-            "No se realiza con piel bronceada, durante el embarazo, con algunas medicaciones fotosensibilizantes ni en pieles con heridas activas.",
+          title: "Professional Facial Peel",
+          description: "An aesthetic treatment designed to remove dead skin cells from the surface of the skin through the controlled application of specialized substances.",
+          duration: "30-45 min",
+          price: "Consult price",
         },
       ],
-    },
+      faq: [
+        {
+          question: "How much does a facial peel cost in Turrialba?",
+          answer: "The cost depends on the type of peel and the specific needs of each patient. We can provide detailed information during your assessment.",
+        },
+        {
+          question: "How many facial peel sessions do I need?",
+          answer: "The number of sessions varies depending on your treatment goals and the current condition of your skin.",
+        },
+        {
+          question: "Does a facial peel help with dark spots?",
+          answer: "Yes. Facial peels are commonly used as part of aesthetic protocols designed to improve the appearance of facial pigmentation and uneven skin tone.",
+        },
+        {
+          question: "Does it work for acne marks?",
+          answer: "A facial peel may help improve the appearance of superficial acne marks and uneven skin texture. The appropriate treatment depends on the individual skin assessment.",
+        },
+        {
+          question: "When will I see results?",
+          answer: "Some people notice a brighter-looking complexion after their first session, while the overall results and number of sessions vary according to the skin and treatment protocol.",
+        },
+        {
+          question: "Where can I get a facial peel in Turrialba?",
+          answer: "At MJ Fisio Estética & Spa, we offer personalized skin assessments and facial treatments adapted to each patient's needs.",
+        },
       ],
     },
   },
