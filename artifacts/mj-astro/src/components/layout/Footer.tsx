@@ -144,8 +144,9 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
               Página realizada por <a href="https://robertoperezsalazar.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors underline underline-offset-2">Robertoperezsalazar.com</a> especialista en posicionamiento web.
             </span>
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <a href={lang === 'es' ? "/politica-de-datos" : "/en/data-policy"} className="hover:text-white">{lang === 'es' ? "Política de Privacidad" : "Privacy Policy"}</a>
+            <a href="/politica-devoluciones" className="hover:text-white">{lang === 'es' ? "Política de Devoluciones y Cancelaciones" : "Refund Policy"}</a>
             <a href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-white">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</a>
           </div>
         </div>

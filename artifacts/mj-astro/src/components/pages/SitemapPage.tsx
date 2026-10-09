@@ -20,6 +20,7 @@ const sectionsMap = {
         { name: "Médico Estético", href: "/medicos-esteticos" },
         { name: "Buzón de Sugerencias", href: "/buzon-sugerencias" },
         { name: "Política de Privacidad", href: "/politica-de-datos" },
+        { name: "Política de Devoluciones y Cancelaciones", href: "/politica-devoluciones" },
       ],
     },
     {
