@@ -1,0 +1,217 @@
+{
+  "hero": {
+    "badge": "Estética Facial Premium",
+    "title": "Hilos de Colágeno en Turrialba",
+    "subtitle": "Rejuvenecimiento Facial Natural, Firmeza y Glow Premium",
+    "question": "¿Te gustaría verte más fresca, firme y armonizada sin perder tu naturalidad?",
+    "p1": "En MJ Estética & Wellness Center diseñamos protocolos personalizados con Hilos de Colágeno orientados a rejuvenecimiento progresivo, firmeza facial y armonización estética natural.",
+    "p2": "Este procedimiento está pensado para personas que desean mejorar la apariencia de su piel, recuperar luminosidad facial y apoyar protocolos antiaging con un enfoque elegante, moderno y personalizado.",
+    "bullets": [
+      "✨ Resultados naturales",
+      "✨ Glow facial saludable",
+      "✨ Armonización facial progresiva",
+      "✨ Atención profesional y personalizada",
+      "✨ Experiencia estética premium en Turrialba"
+    ],
+    "boxTitle": "Agenda hoy tu valoración facial personalizada",
+    "boxBullets": [
+      "👉 Escríbenos por WhatsApp",
+      "👉 Consulta disponibilidad",
+      "👉 Descubre el protocolo ideal para ti"
+    ]
+  },
+  "whatAre": {
+    "title": "¿Qué son los Hilos de Colágeno?",
+    "p1": "Los Hilos de Colágeno son un procedimiento estético avanzado utilizado en protocolos de rejuvenecimiento facial y firmeza progresiva.",
+    "p2": "Su objetivo es apoyar la apariencia de una piel más firme, armonizada y luminosa mediante técnicas enfocadas en bienestar estético y resultados naturales.",
+    "p3": "En MJ Estética & Wellness Center entendemos que cada rostro es diferente. Por eso, cada protocolo se adapta de manera personalizada según las necesidades, objetivos y características faciales de cada paciente.",
+    "focusTitle": "Nuestro enfoque siempre se centra en:",
+    "focusItems": [
+      "✔ Naturalidad",
+      "✔ Armonización facial",
+      "✔ Rejuvenecimiento elegante",
+      "✔ Glow saludable",
+      "✔ Bienestar estético integral"
+    ]
+  },
+  "improvements": {
+    "title": "¿Qué puede ayudar a mejorar este procedimiento?",
+    "intro": "Los Hilos de Colágeno pueden apoyar protocolos orientados a:",
+    "items": [
+      "✨ Apariencia de firmeza facial",
+      "✨ Rejuvenecimiento progresivo",
+      "✨ Glow y luminosidad natural",
+      "✨ Definición facial elegante",
+      "✨ Armonización estética natural",
+      "✨ Bienestar facial premium",
+      "✨ Apariencia más descansada y fresca",
+      "✨ Protocolos antiaging personalizados"
+    ],
+    "note": "Todo procedimiento requiere valoración individual para determinar recomendaciones y expectativas personalizadas."
+  },
+  "benefits": {
+    "title": "Beneficios de los Hilos de Colágeno",
+    "intro": "En MJ Estética & Wellness Center buscamos resultados naturales y progresivos, evitando cambios exagerados o artificiales.",
+    "valueTitle": "Lo que más valoran nuestras pacientes:",
+    "items": [
+      "Apariencia más firme y armonizada",
+      "Glow facial natural",
+      "Rejuvenecimiento elegante",
+      "Resultados progresivos y personalizados",
+      "Sensación de frescura facial",
+      "Definición suave y natural",
+      "Atención premium y seguimiento profesional",
+      "Protocolos adaptados individualmente"
+    ],
+    "closing": "Porque verte bien también puede sentirse natural."
+  },
+  "steps": {
+    "title": "¿Cómo funciona el procedimiento?",
+    "subtitle": "Nuestro protocolo está diseñado para brindar tranquilidad, claridad y acompañamiento durante todo el proceso.",
+    "items": [
+      {
+        "step": "Paso 1",
+        "title": "Valoración facial personalizada",
+        "desc": "Analizamos tus objetivos, características faciales y necesidades estéticas."
+      },
+      {
+        "step": "Paso 2",
+        "title": "Diseño del protocolo ideal",
+        "desc": "Creamos una propuesta personalizada enfocada en armonización facial y resultados naturales."
+      },
+      {
+        "step": "Paso 3",
+        "title": "Aplicación del procedimiento",
+        "desc": "El procedimiento se realiza bajo protocolos profesionales orientados a comodidad y seguridad."
+      },
+      {
+        "step": "Paso 4",
+        "title": "Seguimiento y recomendaciones posteriores",
+        "desc": "Te acompañamos con cuidados posteriores y seguimiento individualizado para optimizar resultados."
+      }
+    ],
+    "meta": [
+      "📍 Duración aproximada: según valoración personalizada",
+      "📍 Recuperación: progresiva y variable",
+      "📍 Cuidados posteriores detallados"
+    ]
+  },
+  "targetAudience": {
+    "title": "¿Para quién se recomiendan los Hilos de Colágeno?",
+    "intro": "Este procedimiento puede ser ideal para personas que buscan:",
+    "items": [
+      "✨ Rejuvenecimiento facial natural",
+      "✨ Firmeza facial progresiva",
+      "✨ Glow saludable",
+      "✨ Armonización estética premium",
+      "✨ Protocolos antiaging modernos",
+      "✨ Resultados elegantes y personalizados",
+      "✨ Mejorar la apariencia de cansancio facial"
+    ],
+    "note": "Cada paciente requiere valoración individual para determinar el protocolo más adecuado."
+  },
+  "philosophy": {
+    "title": "Resultados Naturales y Progresivos",
+    "p1": "En MJ Estética & Wellness Center creemos en una estética elegante y armónica. Nuestro enfoque no busca transformar tu rostro. Busca ayudarte a sentirte más segura, fresca y luminosa manteniendo tu esencia natural.",
+    "bullets": [
+      "✔ Naturalidad",
+      "✔ Progresividad",
+      "✔ Glow saludable",
+      "✔ Armonización facial"
+    ],
+    "tagline": "Bienestar estético integral"
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestras pacientes",
+    "items": [
+      "✨ “Sentí mi rostro más fresco y definido sin verme exagerada.”",
+      "✨ “Me encantó el glow natural que noté después del procedimiento.”",
+      "✨ “La atención fue súper personalizada y me explicaron todo el proceso.”",
+      "✨ “Buscaba algo natural y justamente eso fue lo que encontré.”"
+    ]
+  },
+  "faqs": {
+    "title": "Preguntas Frecuentes",
+    "items": [
+      {
+        "q": "¿Qué son los Hilos de Colágeno?",
+        "a": "Son procedimientos estéticos orientados a protocolos de firmeza y rejuvenecimiento facial progresivo."
+      },
+      {
+        "q": "¿Los resultados se ven naturales?",
+        "a": "Sí. El objetivo en MJ Estética & Wellness Center es mantener armonización facial y naturalidad."
+      },
+      {
+        "q": "¿Ayudan con firmeza facial?",
+        "a": "Pueden apoyar protocolos orientados a mejorar la apariencia de firmeza facial."
+      },
+      {
+        "q": "¿Tiene recuperación?",
+        "a": "Cada persona responde diferente. Durante la valoración se explican cuidados y recomendaciones posteriores."
+      },
+      {
+        "q": "¿Cuándo se ven resultados?",
+        "a": "Los resultados pueden percibirse progresivamente según cada paciente y protocolo aplicado."
+      },
+      {
+        "q": "¿Se puede combinar con otros tratamientos?",
+        "a": "Sí, dependiendo de la valoración profesional y objetivos individuales."
+      },
+      {
+        "q": "¿Duele el procedimiento?",
+        "a": "La experiencia puede variar según cada persona. Nuestro enfoque prioriza comodidad y acompañamiento profesional."
+      }
+    ]
+  },
+  "programs": {
+    "title": "Programas Premium de Rejuvenecimiento Facial",
+    "items": [
+      "✨ Protocolos de firmeza facial",
+      "✨ Programas de glow y armonización estética",
+      "✨ Facial rejuvenation bundles",
+      "✨ Protocolos antiaging premium",
+      "✨ Memberships estéticos personalizados"
+    ],
+    "note": "Consulta disponibilidad y opciones durante tu valoración"
+  },
+  "whyUs": {
+    "title": "¿Por qué elegir MJ Estética & Wellness Center?",
+    "subtitle": "Porque creemos que la belleza más poderosa es la que se siente natural.",
+    "items": [
+      "Protocolos personalizados",
+      "Atención profesional y cercana",
+      "Experiencia estética premium",
+      "Enfoque natural y progresivo",
+      "Seguimiento individualizado",
+      "Ambiente cómodo y seguro"
+    ],
+    "closing": "Nos enfocamos en ayudarte a verte bien sin perder tu esencia."
+  },
+  "freeGuide": {
+    "badge": "🎁 RECURSO GRATUITO EXCLUSIVO",
+    "title": "Guía Gratuita:",
+    "subtitle": "“Cómo mejorar los resultados de tus Hilos de Colágeno”",
+    "learnTitle": "Aprende:",
+    "items": [
+      "✔ Cuidados posteriores recomendados",
+      "✔ Cómo potenciar el glow facial",
+      "✔ Hábitos que apoyan firmeza facial",
+      "✔ Recomendaciones estéticas y wellness",
+      "✔ Consejos para prolongar resultados"
+    ],
+    "ctaText": "🎁 Solicítala ahora por WhatsApp.",
+    "ctaBtn": "SOLICITAR GUÍA POR WHATSAPP"
+  },
+  "finalCta": {
+    "title": "Agenda tu valoración facial hoy",
+    "desc": "Si estás buscando un protocolo de rejuvenecimiento facial natural, armonización estética y glow saludable en Turrialba, estamos listas para ayudarte.",
+    "heading": "MJ Estética & Wellness Center — Turrialba",
+    "bullets": [
+      "✅ Agenda tu valoración facial",
+      "✅ Descubre el protocolo ideal",
+      "✅ Consulta disponibilidad hoy"
+    ],
+    "cta": "ESCRIBIR POR WHATSAPP",
+    "footerTagline": "✨ Estética avanzada, bienestar y armonización facial premium"
+  }
+}

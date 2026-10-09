@@ -2509,18 +2509,16 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "hilos-colageno",
-      name: "Hilos de Colágeno",
-      tagline: "Rejuvenecimiento Facial Natural, Firmeza y Glow Premium",
-      heroDescription: "Diseñamos protocolos personalizados con Hilos de Colágeno orientados a rejuvenecimiento progresivo, firmeza facial y armonización estética natural en Turrialba.",
+      name: "Collagen Threads",
+      fullTitle: "Collagen Threads in Turrialba",
+      tagline: "Natural Facial Rejuvenation, Firmness & Premium Glow",
+      heroDescription: "Would you love to look fresher, firmer, and more harmonious without losing your natural appearance?<br /><br />At <strong>MJ Estética & Wellness Center</strong>, we design personalized Collagen Thread protocols focused on progressive rejuvenation, facial firmness, and natural-looking aesthetic harmony.<br /><br />This treatment is designed for people who want to improve the appearance of their skin, restore facial radiance, and complement anti-aging protocols with an elegant, modern, and personalized approach.",
       benefits: [
-        "Apariencia de firmeza facial",
-        "Rejuvenecimiento progresivo",
-        "Glow y luminosidad natural",
-        "Definición facial elegante",
-        "Armonización estética natural",
-        "Bienestar facial premium",
-        "Apariencia más descansada y fresca",
-        "Protocolos antiaging personalizados",
+        "Natural-looking results",
+        "Healthy facial glow",
+        "Progressive facial harmony",
+        "Professional, personalized care",
+        "Premium aesthetic experience in Turrialba",
       ],
       items: [
         {
@@ -2580,9 +2578,9 @@ export const servicePages: MultiLangServicePageData[] = [
     en: {
       slug: "rejuvenecimiento-facial-laser",
       name: "Laser Facial Rejuvenation",
-      fullTitle: "Laser Facial Rejuvenation in Turrialba",
+      fullTitle: "Laser Facial Rejuvenation in Turrialba | Restore Your Skin’s Youthful Glow",
       tagline: "Looking for laser facial rejuvenation in Turrialba?",
-      heroDescription: "Restore Your Skin’s Youthful Glow<br /><br />If you have started noticing fine lines, wrinkles, sun spots, or a loss of firmness in your skin, you are not alone.",
+      heroDescription: "If you have started noticing fine lines, wrinkles, sun spots, or a loss of firmness in your skin, you are not alone.",
       benefits: [
         "Supports natural collagen production",
         "Improves skin texture and smoothness",
