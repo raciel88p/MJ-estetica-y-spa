@@ -63,6 +63,7 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
               <li><Link href={lang === 'es' ? "/testimonios" : "/en/testimonials"} className="hover:text-secondary transition-colors cursor-pointer">{lang === 'es' ? "Testimonios" : "Testimonials"}</Link></li>
               <li><Link href={lang === 'es' ? "/blog" : "/en/blog"} className="hover:text-secondary transition-colors cursor-pointer">{lang === 'es' ? "Blog" : "Blog"}</Link></li>
               <li><Link href={lang === 'es' ? "/buzon-sugerencias" : "/en/suggestion-box"} className="hover:text-secondary transition-colors font-medium text-primary cursor-pointer">{lang === 'es' ? "Buzón de Sugerencias" : "Suggestion Box"}</Link></li>
+              <li><Link href={lang === 'es' ? "/politica-devoluciones" : "/en/refund-policy"} className="hover:text-secondary transition-colors font-medium">{lang === 'es' ? "Política de Devoluciones y Cancelaciones" : "Refund and Cancellation Policy"}</Link></li>
               <li><Link href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-secondary transition-colors cursor-pointer">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</Link></li>
             </ul>
           </div>
