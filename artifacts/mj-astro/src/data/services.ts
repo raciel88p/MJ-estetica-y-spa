@@ -1306,7 +1306,7 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
     en: {
-      slug: "microdermabrasion",
+      slug: "facial-microdermabrasion",
       name: "Microdermabrasion",
       tagline: "Renew the texture, luminosity and natural freshness of your skin",
       heroDescription:
@@ -2645,32 +2645,31 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
     en: {
-      slug: "microagujas",
-      name: "Microagujas",
-      tagline: "Renovación, Glow y Skincare Premium",
-      heroDescription: "Glow Facial, Renovación y Skincare Premium en MJ Estética & Wellness Center",
+      slug: "microdermabrasion",
+      name: "Microneedling",
+      fullTitle: "Microneedling in Turrialba",
+      tagline: "Facial Glow, Renewal & Premium Skincare",
+      heroDescription: "Facial Glow, Renewal & Premium Skincare at MJ Estética & Wellness Center",
       benefits: [
-        "Glow y luminosidad facial",
-        "Apariencia de textura más uniforme",
-        "Sensación de renovación facial",
-        "Bienestar y revitalización de la piel",
-        "Protocolos skincare personalizados",
-        "Rejuvenecimiento facial progresivo",
+        "Healthy-looking facial glow",
+        "A refreshed and renewed feeling",
+        "Skin that looks more revitalized",
+        "Fully personalized protocols",
+        "Premium aesthetic experience",
+        "Professional attention and follow-up",
       ],
       items: [
         {
-          title: "Microneedling Facial Premium",
-          description:
-            "Protocolo orientado a renovación facial progresiva y bienestar de la piel.",
+          title: "Premium Facial Microneedling",
+          description: "A protocol designed to support progressive facial renewal and overall skin wellness.",
           duration: "60 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿Qué son las microagujas?",
-          answer:
-            "Son técnicas avanzadas de microneedling facial utilizadas dentro de protocolos skincare orientados a glow, renovación y bienestar facial.",
+          question: "What Is Microneedling?",
+          answer: "Microneedling is an advanced facial skincare technique used within protocols focused on glow, renewal, and facial skin wellness.",
         },
       ],
     },
