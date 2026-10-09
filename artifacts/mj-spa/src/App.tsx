@@ -9,6 +9,7 @@ import AdminPage from "@/pages/AdminPage";
 const NotFound          = lazy(() => import("@/pages/not-found"));
 const ServicePage       = lazy(() => import("@/pages/ServicePage"));
 const PoliticaDatos     = lazy(() => import("@/pages/PoliticaDatos"));
+const PoliticaDevoluciones = lazy(() => import("@/pages/PoliticaDevoluciones"));
 const MedicosEsteticos  = lazy(() => import("@/pages/MedicosEsteticos"));
 const Nosotros          = lazy(() => import("@/pages/Nosotros"));
 const Testimonios       = lazy(() => import("@/pages/Testimonios"));
@@ -52,6 +53,7 @@ function Router() {
         {/* ES Routes */}
         <Route path="/" component={Home} />
         <Route path="/politica-de-datos" component={PoliticaDatos} />
+        <Route path="/politica-devoluciones" component={PoliticaDevoluciones} />
         <Route path="/medicos-esteticos" component={MedicosEsteticos} />
         <Route path="/nosotros" component={Nosotros} />
         <Route path="/testimonios" component={Testimonios} />

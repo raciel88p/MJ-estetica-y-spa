@@ -141,8 +141,9 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
           <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. {t('footer.rights')}</p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <Link href={lang === 'es' ? "/politica-de-datos" : "/en/data-policy"} className="hover:text-white cursor-pointer">{lang === 'es' ? "Política de Privacidad" : "Privacy Policy"}</Link>
+            <Link href="/politica-devoluciones" className="hover:text-white cursor-pointer">{lang === 'es' ? "Política de Devoluciones y Cancelaciones" : "Refund Policy"}</Link>
             <Link href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-white cursor-pointer">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</Link>
           </div>
         </div>
