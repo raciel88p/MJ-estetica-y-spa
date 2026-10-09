@@ -739,7 +739,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
       {(service.slug === "masajes-relajantes" || service.slug === "relaxing-massages") && (
         <MasajeRelajanteContent service={service} waLink={WA} lang={lang} />
       )}
-      {service.slug === "microdermoabrasion" && (
+      {(service.slug === "microdermoabrasion" || service.slug === "facial-microdermabrasion") && (
         <MicrodermoabrasionContent service={service} waLink={WA} lang={lang} />
       )}
 

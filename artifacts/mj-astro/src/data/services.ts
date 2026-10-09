@@ -1308,54 +1308,49 @@ export const servicePages: MultiLangServicePageData[] = [
     en: {
       slug: "facial-microdermabrasion",
       name: "Microdermabrasion",
-      tagline: "Renew the texture, luminosity and natural freshness of your skin",
-      heroDescription:
-        "Our Microdermabrasion treatment is designed to support facial renewal protocols through professional exfoliation and personalized care.",
+      fullTitle: "Microdermabrasion Facial in Turrialba",
+      tagline: "Renew your skin’s texture, radiance, and natural freshness with a premium advanced skincare experience",
+      heroDescription: "The Microdermabrasion Facial at MJ Estética & Wellness Center is designed to support professional skin-renewal protocols through advanced exfoliation and personalized care focused on improving the appearance, radiance, and overall well-being of your skin.",
       benefits: [
-        "Brighter skin",
-        "Sensation of facial freshness",
-        "More uniform texture",
-        "Progressive natural glow",
+        "Brighter-looking skin",
+        "A fresh facial sensation",
+        "More even-looking texture",
+        "Progressive, natural glow",
         "Premium wellness experience",
       ],
       items: [
         {
-          title: "Microdermabrasion Protocol",
-          description: "Professional exfoliation treatment oriented towards skin renewal.",
+          title: "Microdermabrasion Facial Protocol",
+          description: "A professional facial exfoliation protocol performed to support skin renewal and revitalization.",
           duration: "45-60 min",
-          faq: [
-        {
-          question: "¿La microdermoabrasión duele?",
-          answer:
-            "Generalmente es un procedimiento confortable y bien tolerado.",
-        },
-        {
-          question: "¿Cuándo se ven resultados?",
-          answer:
-            "Muchas personas notan sensación de frescura y luminosidad desde las primeras sesiones, aunque los resultados pueden variar según cada piel.",
-        },
-        {
-          question: "¿Ayuda con textura facial?",
-          answer:
-            "El tratamiento está orientado a apoyar protocolos de renovación facial y apariencia más uniforme de la piel.",
-        },
-        {
-          question: "¿Tiene tiempo de recuperación?",
-          answer:
-            "Normalmente las personas continúan sus actividades habituales siguiendo recomendaciones de hidratación y protección solar.",
-        },
-        {
-          question: "¿Se puede combinar con otros faciales?",
-          answer:
-            "Sí, dependiendo de la valoración profesional y objetivos skincare.",
-        },
-        {
-          question: "¿Cuántas sesiones se recomiendan?",
-          answer:
-            "Cada protocolo es personalizado según las necesidades individuales de la piel.",
+          price: "Consult price",
         },
       ],
-    },
+      faq: [
+        {
+          question: "Does microdermabrasion hurt?",
+          answer: "It is generally a comfortable and well-tolerated procedure. Individual experiences may vary depending on skin sensitivity and the protocol selected.",
+        },
+        {
+          question: "When will I see results?",
+          answer: "Many people notice a feeling of freshness and improved radiance after their first sessions, although results can vary depending on each person’s skin.",
+        },
+        {
+          question: "Can microdermabrasion help with facial texture?",
+          answer: "The treatment is designed to support facial renewal protocols and a more even-looking appearance of the skin.",
+        },
+        {
+          question: "Is there any downtime?",
+          answer: "Most people can continue their usual activities while following the recommended hydration and sun-protection guidelines.",
+        },
+        {
+          question: "Can it be combined with other facials?",
+          answer: "Yes. Depending on your professional assessment and skincare goals, microdermabrasion may be combined with other facial protocols.",
+        },
+        {
+          question: "How many sessions are recommended?",
+          answer: "Each protocol is personalized according to your skin’s individual needs and goals.",
+        },
       ],
     },
   },
