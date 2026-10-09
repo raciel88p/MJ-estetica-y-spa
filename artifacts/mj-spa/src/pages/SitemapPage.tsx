@@ -81,6 +81,7 @@ const sectionsMap = {
         { name: "Medical Aesthetic", href: "/en/medical-aesthetic" },
         { name: "Suggestion Box", href: "/en/suggestion-box" },
         { name: "Privacy Policy", href: "/en/data-policy" },
+        { name: "Refund and Cancellation Policy", href: "/en/refund-policy" },
       ],
     },
     {

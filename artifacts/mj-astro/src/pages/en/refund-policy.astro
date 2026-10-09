@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { PoliticaDevoluciones } from '../../components/pages/PoliticaDevoluciones';
+
+export const prerender = true;
+---
+
+<Layout lang="en" title="Refund and Cancellation Policy | MJ Terapia y Estética" description="Read the terms and conditions for refunds and cancellations of services and gift certificates at MJ Terapia y Estética in Turrialba.">
+  <PoliticaDevoluciones client:load lang="en" />
+</Layout>
