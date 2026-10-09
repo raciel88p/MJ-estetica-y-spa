@@ -146,7 +146,7 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
           </p>
           <div className="flex flex-wrap gap-4">
             <a href={lang === 'es' ? "/politica-de-datos" : "/en/data-policy"} className="hover:text-white">{lang === 'es' ? "Política de Privacidad" : "Privacy Policy"}</a>
-            <a href="/politica-devoluciones" className="hover:text-white">{lang === 'es' ? "Política de Devoluciones y Cancelaciones" : "Refund Policy"}</a>
+            <a href={lang === 'es' ? "/politica-devoluciones" : "/en/refund-policy"} className="hover:text-white">{lang === 'es' ? "Política de Devoluciones y Cancelaciones" : "Refund and Cancellation Policy"}</a>
             <a href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-white">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</a>
           </div>
         </div>

@@ -72,6 +72,7 @@ function Router() {
         {/* EN Routes */}
         <Route path="/en"><Home lang="en" /></Route>
         <Route path="/en/data-policy"><PoliticaDatos lang="en" /></Route>
+        <Route path="/en/refund-policy"><PoliticaDevoluciones lang="en" /></Route>
         <Route path="/en/medical-aesthetic"><LandingMedicos lang="en" /></Route>
         <Route path="/en/medical-aesthetic-specialists"><MedicosEsteticos lang="en" /></Route>
         <Route path="/en/about-us"><Nosotros lang="en" /></Route>

@@ -143,7 +143,7 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
           <p>© {new Date().getFullYear()} MJ Fisio Estética y Spa. {t('footer.rights')}</p>
           <div className="flex flex-wrap gap-4">
             <Link href={lang === 'es' ? "/politica-de-datos" : "/en/data-policy"} className="hover:text-white cursor-pointer">{lang === 'es' ? "Política de Privacidad" : "Privacy Policy"}</Link>
-            <Link href="/politica-devoluciones" className="hover:text-white cursor-pointer">{lang === 'es' ? "Política de Devoluciones y Cancelaciones" : "Refund Policy"}</Link>
+            <Link href={lang === 'es' ? "/politica-devoluciones" : "/en/refund-policy"} className="hover:text-white cursor-pointer">{lang === 'es' ? "Política de Devoluciones y Cancelaciones" : "Refund and Cancellation Policy"}</Link>
             <Link href={lang === 'es' ? "/mapa-del-sitio" : "/en/sitemap"} className="hover:text-white cursor-pointer">{lang === 'es' ? "Mapa del Sitio" : "Sitemap"}</Link>
           </div>
         </div>
