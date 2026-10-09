@@ -1,0 +1,227 @@
+{
+  "hero": {
+    "title": "Microdermabrasion Facial in Turrialba",
+    "subtitle": "Renew your skin’s texture, radiance, and natural freshness with a premium advanced skincare experience",
+    "question": "Does your skin feel dull, uneven, or lacking the healthy glow you desire?",
+    "description": "The Microdermabrasion Facial at MJ Estética & Wellness Center is designed to support professional skin-renewal protocols through advanced exfoliation and personalized care focused on improving the appearance, radiance, and overall well-being of your skin.",
+    "bullets": [
+      "✨ Brighter-looking skin",
+      "✨ A fresh facial sensation",
+      "✨ More even-looking texture",
+      "✨ Progressive, natural glow",
+      "✨ Premium wellness experience"
+    ],
+    "ctaTitle": "Schedule your personalized facial consultation today",
+    "ctaBullets": [
+      "Check availability",
+      "Message us on WhatsApp",
+      "Discover the ideal protocol for your skin"
+    ]
+  },
+  "freeGuideBox": {
+    "title": "🎁 Download Your FREE Glow Facial & Microdermabrasion Results Guide",
+    "commentText": "Comment the word:",
+    "code": "“limpieza_facial”",
+    "subtext": "and receive an exclusive guide with recommendations to:",
+    "items": [
+      "Enhance your facial results",
+      "Maintain radiant-looking skin for longer",
+      "Improve your skincare routine",
+      "Learn proper post-treatment care",
+      "Avoid common mistakes that can affect your skin"
+    ],
+    "cta": "QUIERO MI GUÍA GRATIS"
+  },
+  "whatIs": {
+    "title": "What Is a Microdermabrasion Facial?",
+    "p1": "Facial microdermabrasion is a professional exfoliation treatment designed to support skin renewal through protocols focused on improving the appearance of facial texture, radiance, and overall skin appearance.",
+    "p2": "At MJ Estética & Wellness Center, every protocol is personalized according to your skin’s needs because we understand that every face requires unique care.",
+    "p3": "This treatment can complement advanced skincare routines and help visibly revitalize the skin through an aesthetic experience focused on facial wellness and progressive results."
+  },
+  "improvements": {
+    "title": "What Can Microdermabrasion Help Improve?",
+    "intro": "Our facial protocol is designed to support:",
+    "items": [
+      "The appearance of uneven facial texture",
+      "Natural radiance and glow",
+      "The appearance of dull or tired-looking skin",
+      "Progressive facial renewal",
+      "Skin freshness and well-being",
+      "A healthier, revitalized appearance",
+      "Advanced facial cleansing",
+      "Professional skincare routines"
+    ],
+    "note": "All through personalized care and protocols adapted to your individual needs.",
+    "imagineTitle": "Imagine Looking in the Mirror and Seeing Your Skin Glow Again…",
+    "simpleGoal": "“I want my skin to look fresh again.”",
+    "painPointsIntro": "But behind that feeling, there is often:",
+    "painPoints": [
+      "Dull-looking skin",
+      "A tired-looking complexion",
+      "Uneven-looking texture",
+      "Skincare routines that no longer seem to deliver visible results",
+      "Not enough time to properly care for their skin"
+    ],
+    "closing": "That is why at MJ Estética & Wellness Center, we created an experience focused not only on your skin… but also on how you feel about yourself. Because when your skin looks healthy, your confidence can change too."
+  },
+  "benefits": {
+    "title": "Real Benefits of a Microdermabrasion Facial",
+    "subtitle": "What benefits can you experience?",
+    "items": [
+      "A brighter-looking complexion",
+      "A feeling of facial renewal",
+      "Progressive, natural-looking glow",
+      "Visibly more even-looking texture",
+      "An ideal complement to advanced skincare",
+      "Overall facial wellness",
+      "Fresher-looking skin",
+      "A deep-clean feeling"
+    ],
+    "disclaimer": "Our goal is NOT to promise unrealistic results. Our approach is to support you with personalized protocols focused on the progressive care and well-being of your skin."
+  },
+  "process": {
+    "title": "How Does the Treatment Work?",
+    "steps": [
+      {
+        "step": "Step 1",
+        "title": "Personalized Facial Assessment",
+        "desc": "We assess your skin’s needs to determine the ideal protocol based on texture, sensitivity, and skincare goals."
+      },
+      {
+        "step": "Step 2",
+        "title": "Cleansing & Preparation",
+        "desc": "Your skin is prepared through professional cleansing to optimize the treatment experience."
+      },
+      {
+        "step": "Step 3",
+        "title": "Microdermabrasion Application",
+        "desc": "A professional facial exfoliation protocol is performed, focused on supporting skin renewal and revitalization."
+      },
+      {
+        "step": "Step 4",
+        "title": "Hydration & Personalized Recommendations",
+        "desc": "We finish with facial hydration and personalized recommendations for your post-treatment skincare routine."
+      }
+    ],
+    "durationTitle": "Approximate Duration",
+    "durationValue": "45–60 minutes",
+    "sensationTitle": "What Does the Treatment Feel Like?",
+    "sensationText": "Most people describe the experience as relaxing, refreshing, and comfortable.",
+    "careTitle": "Post-Treatment Care",
+    "careItems": [
+      "Hydration",
+      "Sun protection",
+      "Personalized skincare routine",
+      "Follow-up according to your skin’s progress"
+    ],
+    "reserveBtn": "Book Session"
+  },
+  "targetAudience": {
+    "title": "Who Is This Facial Recommended For?",
+    "intro": "This protocol may be ideal for people looking for:",
+    "items": [
+      "A natural facial glow",
+      "Improved appearance of facial texture",
+      "A complement to advanced skincare routines",
+      "A feeling of renewal and freshness",
+      "Preventive facial maintenance",
+      "Premium skin wellness and care"
+    ],
+    "note": "Every skin type requires a personalized assessment before beginning any protocol."
+  },
+  "results": {
+    "title": "Real, Natural-Looking Results",
+    "intro": "At MJ Estética & Wellness Center, we believe in realistic results. That is why our protocols focus on:",
+    "items": [
+      "Natural-looking glow",
+      "Progressive radiance",
+      "Healthy-looking skin",
+      "More even-looking texture",
+      "Overall facial wellness"
+    ],
+    "note": "We do not rely on unrealistic images or exaggerated expectations. Our approach is centered on natural-looking results, professional care, and a premium wellness experience."
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "items": [
+      "“My skin felt so much fresher and brighter after my first session.”",
+      "“I loved it because my face had a natural glow without looking artificial.”",
+      "“The experience was incredibly relaxing and personalized.”",
+      "“My skin now feels softer and looks healthier.”"
+    ]
+  },
+  "faqs": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Does microdermabrasion hurt?",
+        "a": "It is generally a comfortable and well-tolerated procedure. Individual experiences may vary depending on skin sensitivity and the protocol selected."
+      },
+      {
+        "q": "When will I see results?",
+        "a": "Many people notice a feeling of freshness and improved radiance after their first sessions, although results can vary depending on each person’s skin."
+      },
+      {
+        "q": "Can microdermabrasion help with facial texture?",
+        "a": "The treatment is designed to support facial renewal protocols and a more even-looking appearance of the skin."
+      },
+      {
+        "q": "Is there any downtime?",
+        "a": "Most people can continue their usual activities while following the recommended hydration and sun-protection guidelines."
+      },
+      {
+        "q": "Can it be combined with other facials?",
+        "a": "Yes. Depending on your professional assessment and skincare goals, microdermabrasion may be combined with other facial protocols."
+      },
+      {
+        "q": "How many sessions are recommended?",
+        "a": "Each protocol is personalized according to your skin’s individual needs and goals."
+      }
+    ]
+  },
+  "plans": {
+    "title": "Facial Plans & Protocols",
+    "items": [
+      "Personalized facial protocols",
+      "Facial glow programs",
+      "Skincare maintenance",
+      "Facial rejuvenation bundles",
+      "Individualized pre-treatment assessment"
+    ],
+    "footer": "Ask us about availability and special packages."
+  },
+  "whyUs": {
+    "title": "Why Choose MJ Estética & Wellness Center?",
+    "subtitle": "Because we don't believe in one-size-fits-all treatments.",
+    "intro": "Our approach focuses on:",
+    "items": [
+      "Personalized skin protocols",
+      "Individualized attention",
+      "Premium wellness experience",
+      "Safe and professional environment",
+      "Advanced skincare",
+      "Progressive follow-up",
+      "Natural-looking results and facial well-being"
+    ]
+  },
+  "location": {
+    "title": "Location & Facial Care in Turrialba",
+    "items": [
+      "📍 Serving clients in Turrialba",
+      "🚗 Easy access and parking available",
+      "📲 WhatsApp support",
+      "🕒 Ask about hours and availability"
+    ]
+  },
+  "finalCta": {
+    "title": "Your Skin Deserves Professional, Personalized Care",
+    "subtitle": "It's not just about getting a facial. It's about feeling good about yourself, bringing back your skin's natural-looking radiance, and giving your skin the care it deserves.",
+    "ctaHeader": "Schedule Your Facial Consultation Today",
+    "bullets": [
+      "Discover the ideal protocol for your skin",
+      "Check availability",
+      "Message us on WhatsApp",
+      "Reserve your premium skincare experience in Turrialba"
+    ]
+  }
+}
