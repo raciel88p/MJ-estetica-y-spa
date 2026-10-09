@@ -727,7 +727,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
       {service.slug === "auriculoterapia" && (
         <AuriculoterapiaContent waLink={WA} lang={lang} />
       )}
-      {service.slug === "microagujas" && (
+      {(service.slug === "microagujas" || service.slug === "microdermabrasion") && (
         <MicroagujasContent waLink={WA} lang={lang} />
       )}
       {service.slug === "microagujas-ginkgo-biloba" && (

@@ -1306,7 +1306,7 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
     en: {
-      slug: "microdermabrasion",
+      slug: "facial-microdermabrasion",
       name: "Microdermabrasion",
       tagline: "Renew the texture, luminosity and natural freshness of your skin",
       heroDescription:
@@ -2509,18 +2509,16 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "hilos-colageno",
-      name: "Hilos de Colágeno",
-      tagline: "Rejuvenecimiento Facial Natural, Firmeza y Glow Premium",
-      heroDescription: "Diseñamos protocolos personalizados con Hilos de Colágeno orientados a rejuvenecimiento progresivo, firmeza facial y armonización estética natural en Turrialba.",
+      name: "Collagen Threads",
+      fullTitle: "Collagen Threads in Turrialba",
+      tagline: "Natural Facial Rejuvenation, Firmness & Premium Glow",
+      heroDescription: "Would you love to look fresher, firmer, and more harmonious without losing your natural appearance?<br /><br />At <strong>MJ Estética & Wellness Center</strong>, we design personalized Collagen Thread protocols focused on progressive rejuvenation, facial firmness, and natural-looking aesthetic harmony.<br /><br />This treatment is designed for people who want to improve the appearance of their skin, restore facial radiance, and complement anti-aging protocols with an elegant, modern, and personalized approach.",
       benefits: [
-        "Apariencia de firmeza facial",
-        "Rejuvenecimiento progresivo",
-        "Glow y luminosidad natural",
-        "Definición facial elegante",
-        "Armonización estética natural",
-        "Bienestar facial premium",
-        "Apariencia más descansada y fresca",
-        "Protocolos antiaging personalizados",
+        "Natural-looking results",
+        "Healthy facial glow",
+        "Progressive facial harmony",
+        "Professional, personalized care",
+        "Premium aesthetic experience in Turrialba",
       ],
       items: [
         {
@@ -2580,9 +2578,9 @@ export const servicePages: MultiLangServicePageData[] = [
     en: {
       slug: "rejuvenecimiento-facial-laser",
       name: "Laser Facial Rejuvenation",
-      fullTitle: "Laser Facial Rejuvenation in Turrialba",
+      fullTitle: "Laser Facial Rejuvenation in Turrialba | Restore Your Skin’s Youthful Glow",
       tagline: "Looking for laser facial rejuvenation in Turrialba?",
-      heroDescription: "Restore Your Skin’s Youthful Glow<br /><br />If you have started noticing fine lines, wrinkles, sun spots, or a loss of firmness in your skin, you are not alone.",
+      heroDescription: "If you have started noticing fine lines, wrinkles, sun spots, or a loss of firmness in your skin, you are not alone.",
       benefits: [
         "Supports natural collagen production",
         "Improves skin texture and smoothness",
@@ -2647,32 +2645,31 @@ export const servicePages: MultiLangServicePageData[] = [
       ],
     },
     en: {
-      slug: "microagujas",
-      name: "Microagujas",
-      tagline: "Renovación, Glow y Skincare Premium",
-      heroDescription: "Glow Facial, Renovación y Skincare Premium en MJ Estética & Wellness Center",
+      slug: "microdermabrasion",
+      name: "Microneedling",
+      fullTitle: "Microneedling in Turrialba",
+      tagline: "Facial Glow, Renewal & Premium Skincare",
+      heroDescription: "Facial Glow, Renewal & Premium Skincare at MJ Estética & Wellness Center",
       benefits: [
-        "Glow y luminosidad facial",
-        "Apariencia de textura más uniforme",
-        "Sensación de renovación facial",
-        "Bienestar y revitalización de la piel",
-        "Protocolos skincare personalizados",
-        "Rejuvenecimiento facial progresivo",
+        "Healthy-looking facial glow",
+        "A refreshed and renewed feeling",
+        "Skin that looks more revitalized",
+        "Fully personalized protocols",
+        "Premium aesthetic experience",
+        "Professional attention and follow-up",
       ],
       items: [
         {
-          title: "Microneedling Facial Premium",
-          description:
-            "Protocolo orientado a renovación facial progresiva y bienestar de la piel.",
+          title: "Premium Facial Microneedling",
+          description: "A protocol designed to support progressive facial renewal and overall skin wellness.",
           duration: "60 min",
-          price: "Consultar precio",
+          price: "Consult price",
         },
       ],
       faq: [
         {
-          question: "¿Qué son las microagujas?",
-          answer:
-            "Son técnicas avanzadas de microneedling facial utilizadas dentro de protocolos skincare orientados a glow, renovación y bienestar facial.",
+          question: "What Is Microneedling?",
+          answer: "Microneedling is an advanced facial skincare technique used within protocols focused on glow, renewal, and facial skin wellness.",
         },
       ],
     },
