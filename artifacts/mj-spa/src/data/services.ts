@@ -351,10 +351,11 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "body-massages",
-      name: "Body Massages with Hydrolipoclasia Turrialba",
-      tagline: "Release tension, renew your energy",
+      name: "Body Massages",
+      fullTitle: "Hydrolipoclasia in Turrialba | Reduce Localized Fat Without Surgery",
+      tagline: "Reduce Localized Fat and Redefine Your Body Contour Without Surgery",
       heroDescription:
-        "Our body massages combine professional techniques to relieve stress, reduce muscle tension and promote a sense of total well-being. Reduce localized fat and redefine your body contour without surgery.",
+        "At <strong>MJ Estética & Wellness Center</strong>, we combine specialized body contouring protocols, personalized attention, and advanced aesthetic technology to help improve the appearance of areas with localized fat and help you regain confidence in your body.",
       benefits: [
         "Reduction of stress and anxiety",
         "Relief of muscle pain",
