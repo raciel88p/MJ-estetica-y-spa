@@ -1,0 +1,140 @@
+{
+  "hero": {
+    "title": "Discover How to Restore a Firmer, More Youthful Appearance Without Surgery",
+    "quote": "If you commented TENSORES, you are likely looking for a way to look fresher, more defined, and rejuvenated without going through surgery.",
+    "intro": "The good news is that advanced aesthetic procedures are now available to help improve the appearance of facial firmness, redefine contours, and support natural-looking facial rejuvenation.\n\nAt MJ Estética & Wellness Center, we help people look and feel their best while preserving their natural beauty.",
+    "cta_box_title": "Book Your Personalized Facial Assessment",
+    "cta_box_1": "👉 Message us on WhatsApp",
+    "cta_box_2": "👉 Check availability",
+    "cta_box_3": "👉 Discover the ideal protocol for your skin",
+    "cta_box_button": "BOOK NOW"
+  },
+  "guide": {
+    "badge": "Exclusive Resource",
+    "title": "Download Our Free Guide:",
+    "subtitle": "“How to Enhance and Maintain Better Results with Thread Lifts”",
+    "description": "Request your free guide and receive personalized advice.",
+    "bullets": [
+      "How thread lifts work",
+      "What to expect from the procedure",
+      "Pre- and post-treatment care",
+      "Habits that may help prolong results",
+      "Complementary treatments to enhance facial harmony"
+    ],
+    "cta_button": "DOWNLOAD YOUR FREE GUIDE",
+    "cta_subtext": "Request your free guide and receive personalized advice"
+  },
+  "what_is": {
+    "badge": "Concept",
+    "title": "What Are Thread Lifts?",
+    "p1": "Thread lifts are minimally invasive aesthetic procedures designed to support facial rejuvenation, improve the appearance of firmness, and enhance facial harmony.",
+    "p2": "Their purpose is to help improve the appearance of certain areas that may lose definition over time due to the natural aging process.",
+    "p3": "Many people consider thread lifts an alternative for those seeking a facial lifting effect without surgery and with a relatively short recovery period.",
+    "quote": "The most important thing to understand is that every face is different. That’s why, at MJ Estética & Wellness Center, we provide personalized assessments to design a treatment plan tailored to your aesthetic goals."
+  },
+  "benefits": {
+    "badge": "Results",
+    "title": "What Can This Procedure Help Improve?",
+    "subtitle": "Thread lifts may be part of treatment plans designed to:",
+    "items": [
+      { "title": "Facial Firmness", "desc": "Improve the appearance of facial firmness" },
+      { "title": "Rejuvenation", "desc": "Promote a more youthful appearance" },
+      { "title": "Definition", "desc": "Define facial contours" },
+      { "title": "Harmonization", "desc": "Support facial harmonization" },
+      { "title": "Support", "desc": "Improve the appearance of areas that have lost support" },
+      { "title": "Complementary", "desc": "Complement other facial rejuvenation treatments" }
+    ],
+    "footer": "All while aiming to maintain a natural, elegant appearance."
+  },
+  "why_choose": {
+    "title": "Why Are More People Choosing Thread Lifts?",
+    "subtitle": "Because they want visible improvements without the recovery time associated with surgical procedures.",
+    "bullets": [
+      "A firmer, more defined appearance",
+      "Gradual-looking rejuvenation",
+      "Personalized treatment plans",
+      "A minimally invasive procedure",
+      "Natural-looking facial harmony",
+      "A relatively short recovery period",
+      "Greater personal confidence and well-being"
+    ],
+    "philosophy_title": "Our Philosophy",
+    "philosophy_p1": "Our goal isn’t to change your face.",
+    "philosophy_p2": "Our goal is to help you enhance your natural beauty."
+  },
+  "story": {
+    "title": "The Story of Many Patients Who Visit MJ",
+    "p1": "Perhaps you can relate.",
+    "p2": "You look in the mirror and notice that your face no longer reflects how you feel on the inside.",
+    "p3": "You take care of yourself. You exercise. You invest in yourself.",
+    "p4": "Yet certain areas begin to show natural changes associated with the passage of time.",
+    "p5": "Then a question comes to mind:",
+    "question": "“Is there an option that can help me look fresher without surgery?”",
+    "p6": "That’s precisely why many people seek a professional assessment to find out whether thread lifts may be suitable for their goals.",
+    "p7": "When they discover that personalized options may be available to support a natural-looking result, they can feel more confident about looking in the mirror and feeling good about themselves again."
+  },
+  "how_it_works": {
+    "badge": "MJ Methodology",
+    "title": "How Does the Procedure Work?",
+    "steps": [
+      { "step": "01", "title": "Step 1: Personalized Facial Assessment", "desc": "We assess your facial features, goals, and expectations." },
+      { "step": "02", "title": "Step 2: Customized Treatment Plan", "desc": "We develop an individualized proposal based on your needs." },
+      { "step": "03", "title": "Step 3: Procedure", "desc": "The procedure is performed according to professional protocols tailored to your treatment plan." },
+      { "step": "04", "title": "Step 4: Follow-Up and Recommendations", "desc": "You’ll receive guidance to support appropriate recovery and help you get the most out of your experience." }
+    ]
+  },
+  "candidates": {
+    "title": "Who May Be a Candidate for Thread Lifts?",
+    "bullets": [
+      "Gradual facial rejuvenation",
+      "A nonsurgical facial lifting effect",
+      "Facial harmonization",
+      "More defined facial contours",
+      "Improved appearance of facial firmness",
+      "Premium aesthetic treatment plans",
+      "Natural-looking, elegant results"
+    ],
+    "footer": "The best way to determine whether this procedure is right for you is through a professional assessment."
+  },
+  "different": {
+    "title": "What Makes MJ Estética & Wellness Center Different?",
+    "subtitle": "We don’t believe in one-size-fits-all treatments. We believe every person is unique.",
+    "bullets": [
+      "Personalized assessments",
+      "Individualized treatment plans",
+      "Professional care",
+      "A safe, comfortable environment",
+      "Post-treatment follow-up",
+      "A focus on natural-looking results and facial harmony",
+      "A premium aesthetic experience"
+    ],
+    "commitment": "Our commitment is to help you make informed decisions about your aesthetic well-being."
+  },
+  "faq": {
+    "badge": "Answering your questions",
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "Do thread lifts look natural?", "a": "When incorporated into an appropriate, personalized treatment plan, the goal is to maintain a balanced, natural-looking appearance." },
+      { "q": "Is it a surgical procedure?", "a": "No. Thread lifts are generally considered minimally invasive aesthetic procedures." },
+      { "q": "Is there a recovery period?", "a": "Every case is different. During your assessment, we’ll explain what you can expect based on your individual circumstances." },
+      { "q": "Can thread lifts be combined with other treatments?", "a": "In some cases, they may be incorporated into a broader facial rejuvenation plan." },
+      { "q": "How long do the results last?", "a": "Results may vary depending on individual factors and each person’s habits." },
+      { "q": "How do I know if I’m a suitable candidate?", "a": "A personalized facial assessment is the best place to start." }
+    ]
+  },
+  "location": {
+    "badge": "Strategic Location",
+    "title": "Book Your Facial Assessment",
+    "subtitle": "If you’d like to discover which treatment plan may help you achieve a firmer, more balanced, and more youthful appearance, our team is ready to guide you.",
+    "bullets": [
+      "Find out whether thread lifts may be right for you.",
+      "Receive a personalized assessment.",
+      "Explore the options available for your aesthetic goals."
+    ],
+    "cta": "BOOK YOUR ASSESSMENT TODAY",
+    "wa": "Message us on WhatsApp",
+    "avail": "Check availability",
+    "reserve": "Reserve your appointment",
+    "footer": "Because looking good doesn’t mean changing who you are. It means feeling good about the best version of yourself."
+  }
+}

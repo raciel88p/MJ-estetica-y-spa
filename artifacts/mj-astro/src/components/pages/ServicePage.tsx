@@ -977,7 +977,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
         <BotoxServiceContent waLink={WA} faq={service.faq} lang={lang} />
       )}
       {/* ── HILOS TENSORES CUSTOM SECTIONS ─────────── */}
-      {service.slug === "hilos-tensores" && (
+      {(service.slug === "hilos-tensores" || service.slug === "tension-threads") && (
         <HilosTensoresContent waLink={WA} faq={service.faq} lang={lang} />
       )}
 
