@@ -706,7 +706,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
       )}
 
       {/* ── CUSTOM CONTENT: HIDROLIPOCLASIA ────────────────── */}
-      {service.slug === "masajes-corporales" && (
+      {(service.slug === "masajes-corporales" || service.slug === "body-massages") && (
         <HydrolipoclasiaContent waLink={WA} lang={lang} />
       )}
       {service.slug === "masajes-profundos" && (
@@ -1379,7 +1379,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
       })()}
 
       {/* ── BOTTOM CONTENT: HIDROLIPOCLASIA ────────────────── */}
-      {service.slug === "masajes-corporales" && (
+      {(service.slug === "masajes-corporales" || service.slug === "body-massages") && (
         <HydrolipoclasiaBottomContent waLink={WA} />
       )}
       {service.slug === "masajes-profundos" && (
