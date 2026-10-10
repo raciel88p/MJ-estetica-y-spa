@@ -1,7 +1,7 @@
 {
   "intro": {
     "label": "HAIR RESTORATION",
-    "title": "Restore Your Confidence with a Natural-Looking Hair Transplant in Turrialba",
+    "title": "Restore Your Confidence with a Natural-Looking Hair Transplant in Costa Rica",
     "items": [
       "Are you concerned about hair loss and how it affects your appearance?",
       "Every time you look in the mirror, you may notice less density, more pronounced receding areas, or sections where your hair no longer looks the way it used to.",
@@ -11,107 +11,108 @@
       "But there is an option designed for people who want to improve their hair appearance in a progressive, natural-looking, and personalized way."
     ],
     "box": {
-      "title": "Discover Hair Transplantation at MJ Estética & Wellness Center",
-      "p1": "At MJ Estética & Wellness Center, we understand that every person has a different story behind their hair loss. That is why we develop personalized protocols designed to restore the appearance of your hair while respecting your facial harmony and aiming for progressive, natural-looking results.",
+      "title": "Discover Hair Transplantation in Costa Rica at MJ Estética & Wellness Center",
+      "p1": "At MJ Estética & Wellness Center in Costa Rica, we understand that every person has a different story behind their hair loss. That is why we focus on personalized hair restoration plans designed to address individual needs, facial harmony, and aesthetic goals.",
       "p2": "Our approach is not simply about restoring hair. It is about helping you regain confidence, self-assurance, and aesthetic well-being."
     }
   },
   "whatIs": {
     "title": "What Is a Hair Transplant?",
-    "p1": "Hair transplantation is a procedure designed to support hair restoration by strategically redistributing hair follicles.",
-    "p2": "Its goal is to improve the visual appearance of hair density, strengthen the hairline, and create a more balanced and natural-looking appearance. Every case requires an individualized assessment to determine the most appropriate protocol based on:",
+    "p1": "Hair transplantation is a medical procedure designed to restore hair in selected areas by relocating hair follicles from one part of the scalp to another.",
+    "p2": "Its goal is to improve the appearance of hair density, strengthen the hairline, and create a more balanced and natural-looking appearance. Every case requires an individualized medical assessment to determine the most appropriate approach based on:",
     "items": [
       "Hair loss pattern",
       "Current hair density",
       "Facial characteristics",
       "Personal expectations",
-      "Aesthetic goals"
+      "Aesthetic goals",
+      "Donor hair availability and suitability"
     ]
   },
   "recommended": {
     "title": "Who Is Hair Transplantation Recommended For?",
-    "desc": "This procedure may be an option for people who want to improve:",
+    "desc": "Hair transplantation may be an option for people who want to address:",
     "items": [
       "The appearance of hair loss",
       "Pronounced receding areas",
       "Reduced visual hair density",
       "An undefined hairline",
-      "Overall appearance",
-      "Confidence and self-esteem",
-      "Facial harmony"
+      "Changes in their overall appearance",
+      "Concerns about confidence and self-esteem",
+      "The desire for a more balanced facial appearance"
     ]
   },
   "worries": {
-    "title": "What Concerns People Most About Hair Transplantation",
-    "desc": "Most people considering a hair transplant ask similar questions:",
+    "title": "What Concerns People Most About Hair Transplantation in Costa Rica?",
+    "desc": "People considering a hair transplant often ask similar questions:",
     "items": [
       "\"Will it look natural?\"",
       "\"Will it hurt?\"",
-      "\"Will the results be permanent?\"",
+      "\"Will the results last?\"",
       "\"When will I start seeing results?\"",
       "\"Will it be worth it?\""
     ],
-    "footer": "And these are completely valid questions. That is why our process always begins with a professional assessment to evaluate your individual situation and develop a personalized strategy."
+    "footer": "These are completely valid questions. That is why the process should begin with a professional assessment to evaluate your individual situation, explain the available options, and establish realistic expectations. If you are researching hair transplantation in Costa Rica, understanding the procedure, recovery process, and expected timeline is an important first step."
   },
   "benefits": {
     "title": "Benefits of Hair Transplantation",
     "items": [
       {
         "t": "Natural-Looking Appearance",
-        "d": "Our goal is to achieve harmonious integration with your individual facial features."
+        "d": "The goal is to create a hairline and hair distribution that complement your individual facial features."
       },
       {
         "t": "Improved Visual Hair Density",
-        "d": "It can help create a more uniform and balanced appearance."
+        "d": "Hair transplantation can help improve the appearance of density in selected areas, depending on your suitability for the procedure."
       },
       {
         "t": "Progressive Results",
-        "d": "The evolution occurs gradually, respecting the natural hair growth cycle."
+        "d": "Results develop gradually as transplanted follicles progress through the hair growth cycle."
       },
       {
         "t": "Greater Confidence",
-        "d": "Many patients report feeling more confident about their appearance."
+        "d": "Improving the appearance of hair loss may help some people feel more comfortable with their appearance."
       },
       {
         "t": "Personalized Restoration",
-        "d": "Each protocol is adapted to the specific needs of every patient."
+        "d": "Each treatment plan should be adapted to the individual's hair loss pattern, donor hair availability, and aesthetic goals."
       },
       {
         "t": "Professional Follow-Up",
-        "d": "We accompany you throughout the recovery and progression process."
+        "d": "Appropriate medical follow-up helps monitor recovery, assess progress, and address concerns throughout the restoration process."
       }
     ]
   },
   "process": {
-    "title": "How Does the Process Work?",
+    "title": "How Does the Hair Transplant Process Work?",
     "items": [
       {
         "s": "01. Assessment",
-        "t": "Step 1: Hair Assessment",
-        "d": "We evaluate your individual case, history, and aesthetic goals."
+        "t": "Step 1: Hair and Scalp Assessment",
+        "d": "Your individual situation, medical history, hair loss pattern, and aesthetic goals are evaluated to determine whether you may be a suitable candidate."
       },
       {
         "s": "02. Planning",
-        "t": "Step 2: Personalized Planning",
-        "d": "We create a plan based on your specific hair loss pattern."
+        "t": "Step 2: Personalized Treatment Planning",
+        "d": "A qualified medical professional develops a plan based on your specific needs, donor hair availability, and expected outcomes."
       },
       {
         "s": "03. Procedure",
-        "t": "Step 3: Procedure",
-        "d": "The procedure is performed following protocols designed to promote natural-looking results and visual harmony."
+        "t": "Step 3: Hair Transplant Procedure",
+        "d": "If you are an appropriate candidate, the procedure is performed by qualified professionals using the selected technique and applicable medical protocols."
       },
       {
         "s": "04. Follow-Up",
         "t": "Step 4: Follow-Up and Recovery",
-        "d": "You receive professional guidance throughout your recovery and aftercare process."
+        "d": "You receive instructions for aftercare and follow-up appointments to monitor healing and hair growth."
       }
     ]
   },
   "timeline": {
-    "title": "When Will You Start Seeing Results?",
-    "p1": "This is one of the most frequently asked questions. The answer is simple: <span class=\"font-bold text-stone-900\">Results are progressive.</span>",
-    "p2": "Every patient develops differently, and the timeline may vary depending on multiple individual factors. The important thing is to understand that hair growth takes time and requires proper follow-up.",
-    "p3": "Visible changes generally develop gradually as the recovery and growth process progresses."
+    "title": "When Will You Start Seeing Hair Transplant Results?",
+    "p1": "This is one of the most frequently asked questions. The answer is simple: <span class=\"font-bold text-stone-900\">Hair transplant results develop progressively.</span>",
+    "p2": "Every patient is different, and the timeline varies depending on individual factors, the technique used, and the hair growth cycle.",
+    "p3": "Some transplanted hairs may shed during the early recovery period before new growth begins. Visible improvement generally develops over several months as new hair grows."
   },
   "transformations": {
     "title": "Transformation Stories",
@@ -187,6 +188,6 @@
       "p2": "Click now and check availability via WhatsApp. Your new look can begin with a conversation."
     },
     "cta": "CHECK AVAILABILITY VIA WHATSAPP",
-    "footer": "Hair Transplant in Turrialba — MJ Estética & Wellness Center — Restore Your Confidence with a Natural-Looking Hair Transplant."
+    "footer": "Hair Transplant in Costa Rica — MJ Estética & Wellness Center — Restore Your Confidence with a Natural-Looking Hair Transplant."
   }
 }

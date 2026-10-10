@@ -1850,9 +1850,9 @@ export const servicePages: MultiLangServicePageData[] = [
     en: {
       slug: "hair-transplant",
       name: "Hair Transplant",
-      fullTitle: "Hair Transplant in Turrialba",
-      tagline: "Restore Your Confidence with a Natural-Looking Hair Transplant",
-      heroDescription: "Hair transplantation is a procedure designed to support hair restoration by strategically redistributing hair follicles to improve density, strengthen the hairline, and restore your confidence.",
+      fullTitle: "Restore Your Confidence with a Natural-Looking Hair Transplant in Costa Rica",
+      tagline: "Restore Your Confidence with a Natural-Looking Hair Transplant in Costa Rica",
+      heroDescription: "Are you concerned about hair loss and how it affects your appearance?<br /><br />At <strong>MJ Estética & Wellness Center in Costa Rica</strong>, we focus on personalized hair restoration plans designed to address individual needs, facial harmony, and aesthetic goals.",
       benefits: [
         "Natural-Looking Appearance",
         "Improved Visual Hair Density",
