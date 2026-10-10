@@ -1974,10 +1974,11 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "tension-threads",
-      name: "Tension Threads Turrialba",
-      tagline: "The most effective non-surgical lifting on the market",
+      name: "Tension Threads",
+      fullTitle: "Discover How to Restore a Firmer, More Youthful Appearance Without Surgery",
+      tagline: "Discover How to Restore a Firmer, More Youthful Appearance Without Surgery",
       heroDescription:
-        "Tension threads are the non-surgical alternative to a facelift. They restore firmness and tension immediately, stimulating natural collagen production.",
+        "The good news is that advanced aesthetic procedures are now available to help improve the appearance of facial firmness, redefine contours, and support natural-looking facial rejuvenation.<br /><br />At <strong>MJ Estética & Wellness Center</strong>, we help people look and feel their best while preserving their natural beauty.",
       benefits: [
         "Immediate and progressive lifting effect",
         "Natural collagen stimulation",

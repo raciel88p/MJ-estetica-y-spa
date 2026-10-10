@@ -27,13 +27,18 @@ const stagger = {
   visible: { transition: { staggerChildren: 0.1 } },
 };
 
+import hilosEn from "@/i18n/locales/en/hilos-tensores.json";
+
 export function HilosTensoresContent({
   waLink,
-  faq
+  faq,
+  lang = "es"
 }: {
   waLink: string;
-  faq?: { question: string; answer: string }[]
+  faq?: { question: string; answer: string }[];
+  lang?: "es" | "en";
 }) {
+  const isEn = lang === "en";
   return (
     <div className="bg-white">
       {/* ── SECCIÓN: INTRODUCCIÓN ────────────────────── */}
@@ -45,28 +50,28 @@ export function HilosTensoresContent({
                 <Sparkles className="w-6 h-6 text-primary" />
               </div>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 mb-6 uppercase tracking-tight">
-                Descubre Cómo Recuperar una Apariencia Más Firme y Rejuvenecida Sin Cirugía
+                {isEn ? hilosEn.hero.title : "Descubre Cómo Recuperar una Apariencia Más Firme y Rejuvenecida Sin Cirugía"}
               </h2>
               <p className="text-stone-800 text-xl md:text-2xl font-serif leading-relaxed italic max-w-3xl">
-                "Si comentaste la palabra TENSORES, probablemente estés buscando una forma de verte más fresca, definida y rejuvenecida sin pasar por una cirugía."
+                {isEn ? `"${hilosEn.hero.quote}"` : `"Si comentaste la palabra TENSORES, probablemente estés buscando una forma de verte más fresca, definida y rejuvenecida sin pasar por una cirugía."`}
               </p>
             </div>
 
             <div className="space-y-6 text-stone-600 text-lg leading-relaxed text-center max-w-3xl mx-auto mb-16">
-              <p>
-                Y la buena noticia es que hoy existen procedimientos avanzados que pueden ayudar a mejorar la apariencia de firmeza facial, redefinir contornos y favorecer una armonización natural del rostro.
-              </p>
-              <p className="font-serif italic text-stone-900">
-                En MJ Estética & Wellness Center ayudamos a personas que desean verse mejor sin perder su esencia.
-              </p>
+              <p dangerouslySetInnerHTML={{ __html: isEn ? hilosEn.hero.intro.replace(/\n\n/g, '<br /><br />') : "Y la buena noticia es que hoy existen procedimientos avanzados que pueden ayudar a mejorar la apariencia de firmeza facial, redefinir contornos y favorecer una armonización natural del rostro." }} />
+              {!isEn && (
+                <p className="font-serif italic text-stone-900">
+                  En MJ Estética & Wellness Center ayudamos a personas que desean verse mejor sin perder su esencia.
+                </p>
+              )}
             </div>
 
             <div className="text-center bg-stone-900 text-white p-10 rounded-sm">
-               <h3 className="text-2xl font-serif font-bold mb-6">Agenda tu valoración facial personalizada</h3>
+               <h3 className="text-2xl font-serif font-bold mb-6">{isEn ? hilosEn.hero.cta_box_title : "Agenda tu valoración facial personalizada"}</h3>
                <div className="space-y-4 mb-8">
-                  <p className="flex items-center justify-center gap-2">👉 Escríbenos por WhatsApp</p>
-                  <p className="flex items-center justify-center gap-2">👉 Consulta disponibilidad</p>
-                  <p className="flex items-center justify-center gap-2">👉 Descubre el protocolo ideal para tu piel</p>
+                  <p className="flex items-center justify-center gap-2">{isEn ? hilosEn.hero.cta_box_1 : "👉 Escríbenos por WhatsApp"}</p>
+                  <p className="flex items-center justify-center gap-2">{isEn ? hilosEn.hero.cta_box_2 : "👉 Consulta disponibilidad"}</p>
+                  <p className="flex items-center justify-center gap-2">{isEn ? hilosEn.hero.cta_box_3 : "👉 Descubre el protocolo ideal para tu piel"}</p>
                </div>
                <a
                   href={waLink}
@@ -75,7 +80,7 @@ export function HilosTensoresContent({
                   className="inline-flex items-center gap-3 bg-primary text-white px-10 py-4 font-bold tracking-[0.2em] uppercase hover:bg-white hover:text-stone-900 transition-all shadow-xl"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  RESERVAR AHORA
+                  {isEn ? hilosEn.hero.cta_box_button : "RESERVAR AHORA"}
                 </a>
             </div>
           </motion.div>
