@@ -1,0 +1,144 @@
+{
+  "intro": {
+    "quote": "Would you love your skin to look brighter, fresher, and revitalized while still looking completely natural?",
+    "text": "At MJ Estética & Wellness Center, we have designed a premium microneedling with Vitamin C protocol focused on supporting facial radiance, a more even-looking skin texture, and progressive skin wellness.",
+    "bullets": [
+      "Personalized facial treatment",
+      "Protocols tailored to your skin",
+      "Premium skincare experience",
+      "Professional care and individualized guidance",
+      "Natural facial glow and progressive rejuvenation"
+    ]
+  },
+  "guide": {
+    "badge": "Exclusive Resource",
+    "title": "Download the FREE Guide:",
+    "subtitle": "“How to Enhance the Results of Your Microneedling with Vitamin C”",
+    "description": "Discover:",
+    "bullets": [
+      "Pre- and post-treatment skincare",
+      "How to prolong your facial glow",
+      "Common mistakes that may affect your results",
+      "Professional skincare recommendations",
+      "Tips to support skin radiance and texture"
+    ],
+    "cta": "Click here and schedule your personalized facial consultation.",
+    "ig": "👉 Comment the word VitaminC on Instagram to receive immediate access"
+  },
+  "what_is": {
+    "title": "What Is Microneedling with Vitamin C?",
+    "p1": "Microneedling with Vitamin C is an advanced skincare protocol that combines facial microneedling techniques with Vitamin C application, designed to support skin radiance, a more even-looking appearance, and a renewed skin feel.",
+    "p2": "This treatment is designed to support a progressive rejuvenation experience and a natural-looking glow through personalized protocols based on each person's specific skin needs.",
+    "p3": "Every skin type is different. That's why at MJ Estética & Wellness Center, we perform an individualized facial assessment before beginning any treatment protocol.",
+    "quote": "This treatment is ideal for people who want to care for their skin through a natural, progressive, and professional approach."
+  },
+  "enhance": {
+    "badge": "Results",
+    "title": "What Can This Treatment Help Improve?",
+    "bullets": [
+      "Facial glow and radiance",
+      "The appearance of more even skin texture",
+      "A renewed and refreshed facial appearance",
+      "Professional skin wellness and care",
+      "A revitalized, fresher-looking complexion",
+      "Premium skincare routines and protocols",
+      "Progressive facial rejuvenation"
+    ]
+  },
+  "why_seek": {
+    "title": "Why Are So Many People Looking for Microneedling with Vitamin C?",
+    "subtitle": "Because today, many people want to look fresher without exaggerated results.",
+    "bullets": [
+      "Improve the appearance of their skin",
+      "Incorporate advanced professional skincare",
+      "Support facial radiance",
+      "Feel more confident when they look in the mirror"
+    ],
+    "quote": "Vitamin C is widely recognized in facial skincare for its association with radiance and a healthy-looking glow, while microneedling provides an advanced aesthetic experience designed to support progressive skin renewal."
+  },
+  "benefits": {
+    "badge": "Real Effects",
+    "title": "Realistic Benefits of Microneedling with Vitamin C",
+    "items": [
+      "Progressive facial glow",
+      "A renewed skin feel",
+      "A brighter-looking complexion",
+      "More even-looking facial texture",
+      "Premium skincare experience",
+      "Professional facial wellness",
+      "Natural and gradual rejuvenation",
+      "Protocols personalized to each skin type"
+    ],
+    "quote": "Our approach is NOT about creating artificial-looking results. We want your skin to look healthy, fresh, radiant, and naturally revitalized."
+  },
+  "how_it_works": {
+    "badge": "Methodology",
+    "title": "How Does the Treatment Work?",
+    "steps": [
+      { "step": "01", "title": "Step 1 — Personalized Facial Assessment", "desc": "We assess your skin's needs and design an individualized protocol." },
+      { "step": "02", "title": "Step 2 — Facial Cleansing & Preparation", "desc": "We prepare the skin using professional cleansing, hygiene, and skincare protocols." },
+      { "step": "03", "title": "Step 3 — Microneedling with Vitamin C", "desc": "The treatment is performed using advanced microneedling techniques combined with Vitamin C, with a focus on supporting facial glow and overall skin wellness." },
+      { "step": "04", "title": "Step 4 — Post-Treatment Care", "desc": "We provide personalized recommendations to support your skin's recovery and help maintain its radiance." }
+    ],
+    "info": {
+      "duration": "Approx. 60–90 min",
+      "sensation": "Light & Tolerable",
+      "care": "Sunscreen Recommended",
+      "recovery": "May Vary"
+    }
+  },
+  "candidates": {
+    "title": "Who Is Microneedling with Vitamin C Recommended For?",
+    "bullets": [
+      "People looking for a natural facial glow",
+      "People interested in progressive facial rejuvenation",
+      "People concerned about the appearance of uneven skin texture",
+      "People looking for advanced skincare",
+      "People interested in premium facial wellness routines",
+      "People who want to care for their skin professionally"
+    ],
+    "quote": "Every skin type responds differently, and our protocols are individually adapted to each person."
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "items": [
+      { "text": "“My skin felt so much brighter and fresher after the treatment.”", "author": "Andrea M." },
+      { "text": "“I loved it because the result looks natural and elegant.”", "author": "Katherine R." },
+      { "text": "“My skin now feels more even and has so much glow.”", "author": "Sofía V." }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      { "q": "What is Microneedling with Vitamin C?", "a": "It is a facial skincare protocol that combines microneedling with Vitamin C, designed to support facial glow, more even-looking texture, and overall skin wellness." },
+      { "q": "Does Microneedling with Vitamin C help with facial glow?", "a": "Many people choose this treatment because of its focus on supporting facial radiance and progressive rejuvenation." },
+      { "q": "Is there any downtime?", "a": "Recovery can vary depending on your individual skin and the protocol performed." },
+      { "q": "How many sessions are recommended?", "a": "The recommended number of sessions depends on your goals and personalized facial assessment." },
+      { "q": "What does the treatment feel like?", "a": "The sensation is generally light and tolerable, although it can vary depending on individual sensitivity." },
+      { "q": "When might I notice changes?", "a": "Results and timing can vary from person to person and may depend on consistency with the recommended protocol." },
+      { "q": "Can it be combined with other facial treatments?", "a": "Yes, depending on your personalized professional assessment." }
+    ]
+  },
+  "why_us": {
+    "title": "Why Choose MJ Estética & Wellness Center?",
+    "bullets": [
+      "Professional care",
+      "Individualized protocols",
+      "Advanced skincare",
+      "Premium experience",
+      "Facial wellness",
+      "Personalized guidance",
+      "Comfortable and safe environment",
+      "Natural and progressive approach"
+    ],
+    "quote": "We don't believe in exaggerated results. We believe in helping you feel confident and comfortable in your own skin."
+  },
+  "location": {
+    "city": "Turrialba, Costa Rica",
+    "title": "Schedule Your Facial Consultation Today",
+    "cta": "Message us on WhatsApp",
+    "parking": "Nearby Parking",
+    "hours": "Flexible Appointment Times",
+    "care": "Personalized Attention"
+  }
+}
