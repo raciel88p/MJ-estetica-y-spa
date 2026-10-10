@@ -3201,9 +3201,10 @@ export const servicePages: MultiLangServicePageData[] = [
     },
     en: {
       slug: "microagujas-vitamina-c",
-      name: "Microagujas con Vitamina C",
-      tagline: "Glow facial, luminosidad natural y rejuvenecimiento progresivo",
-      heroDescription: "Glow facial, luminosidad natural y rejuvenecimiento progresivo",
+      name: "Microneedling with Vitamin C",
+      fullTitle: "Microneedling with Vitamin C in Turrialba",
+      tagline: "Facial Glow, Natural Radiance & Progressive Rejuvenation",
+      heroDescription: "Would you love your skin to look brighter, fresher, and revitalized while still looking completely natural?<br /><br />At <strong>MJ Estética & Wellness Center</strong>, we have designed a premium <strong>microneedling with Vitamin C protocol</strong> focused on supporting facial radiance, a more even-looking skin texture, and progressive skin wellness.",
       benefits: [
         "Glow facial progresivo",
         "Sensación de renovación",
