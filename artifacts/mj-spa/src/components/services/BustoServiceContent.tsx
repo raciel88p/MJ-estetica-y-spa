@@ -116,7 +116,7 @@ export function BustoServiceContent({ service, waLink, lang = "es" }: { service:
             <span className="inline-block px-4 py-1.5 bg-primary text-white text-[10px] font-bold tracking-widest uppercase mb-4 rounded-full">
               {content.leadMagnet.label}
             </span>
-            <h3 className="text-3xl font-serif font-bold mb-3">{content.leadMagnet.title}</h3>
+            <h3 className="text-3xl font-serif font-bold mb-3 text-white">{content.leadMagnet.title}</h3>
             <p className="text-xl font-serif italic text-primary mb-8">{content.leadMagnet.subtitle}</p>
 
             <div className="bg-white/5 border border-white/10 p-8 max-w-2xl mx-auto mb-8 text-left">
@@ -210,13 +210,13 @@ export function BustoServiceContent({ service, waLink, lang = "es" }: { service:
       <section className="py-24 bg-stone-900 text-white">
         <div className="max-w-5xl mx-auto px-6">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">{content.methodology.title}</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4 text-white">{content.methodology.title}</h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
             {content.methodology.steps?.map((step: any, idx: number) => (
               <div key={idx} className="bg-white/5 p-6 border border-white/10">
                 <span className="text-primary font-bold text-xs uppercase tracking-widest block mb-2">{step.s}</span>
-                <h4 className="text-lg font-serif font-bold mb-3">{step.t}</h4>
+                <h4 className="text-lg font-serif font-bold mb-3 text-white">{step.t}</h4>
                 <p className="text-white/60 text-xs leading-relaxed">{step.d}</p>
               </div>
             ))}
