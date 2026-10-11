@@ -69,6 +69,31 @@ export function PostOpServiceContent({ waLink, lang = "es" }: { waLink: string; 
         </section>
       )}
 
+      {/* ── WHAT DO OUR SESSIONS INCLUDE ── */}
+      {content.includes && (
+        <section className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-6 sm:px-10">
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
+              <h2 className="text-3xl font-serif font-bold text-stone-900 mb-2">{content.includes.title}</h2>
+              {content.includes.subtitle && (
+                <p className="text-xl font-serif italic text-primary mb-6">{content.includes.subtitle}</p>
+              )}
+              {content.includes.intro && (
+                <p className="text-stone-600 mb-6 font-medium">{content.includes.intro}</p>
+              )}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {content.includes.items?.map((item: string, idx: number) => (
+                  <div key={idx} className="flex items-center gap-3 bg-stone-50 p-4 border border-stone-100">
+                    <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                    <span className="text-stone-800 text-sm font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* ── WHAT ARE POST-OP MASSAGES ── */}
       {content.whatIs && (
         <section className="py-20 bg-stone-50">
