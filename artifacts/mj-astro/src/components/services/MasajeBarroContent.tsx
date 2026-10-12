@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import es from "@/i18n/locales/es/masaje-barro.json";
+import en from "@/i18n/locales/en/masaje-barro.json";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -51,7 +52,7 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
 }
 
 export function MasajeBarroContent({ waLink, lang = "es" }: { waLink: string, lang?: "es" | "en" }) {
-  const content = lang === "es" ? es : (es as any);
+  const content = lang === "es" ? es : (en as any);
   const barroWaLink = `https://wa.me/50686907757?text=${encodeURIComponent("Hola, me interesa reservar el Ritual de Masaje de Barro en MJ Fisio Estética & Spa. ¿Me pueden compartir disponibilidad, precio y horarios?")}`;
 
   return (
