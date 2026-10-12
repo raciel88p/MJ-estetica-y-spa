@@ -1148,15 +1148,15 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
                     </a>
                   </motion.div>
                 ))}
-                {(service.slug === "psicologia-infantil" || service.slug === "relleno-de-labios" || service.slug === "lip-filler" || service.slug === "boda-spa" || service.slug === "spa-brides") && (
+                {(service.slug === "psicologia-infantil" || service.slug === "relleno-de-labios" || service.slug === "lip-filler" || service.slug === "boda-spa" || service.slug === "spa-brides" || service.slug === "masaje-embarazadas" || service.slug === "prenatal-massage") && (
                   <motion.div
                     variants={fadeUp}
                     className="bg-white p-6 md:p-8 flex items-center justify-center overflow-hidden"
                   >
                     <div className="relative w-full h-full min-h-[280px] md:min-h-[340px] max-h-[420px] rounded-sm overflow-hidden bg-stone-50 border border-stone-100 flex items-center justify-center group">
                       <img
-                        src={service.slug === "psicologia-infantil" ? "https://cdn.sanity.io/images/c7ltnbh1/production/4e8f015f6997a29f0ac99c3b232c9ed35f40ba63-800x800.jpg?w=800" : (service.slug === "boda-spa" || service.slug === "spa-brides") ? "/images/boda-spa-img.webp" : `${BASE}images/acido-hialuronico-bg.webp`}
-                        alt={service.slug === "psicologia-infantil" ? (lang === 'es' ? "Consulta de Psicología Familiar e Infantil - Linc. Cristina Pérez Ibarra" : "Family & Child Psychology Consultation - Linc. Cristina Pérez Ibarra") : (service.slug === "boda-spa" || service.slug === "spa-brides") ? (lang === 'es' ? "Experiencia Boda Spa en MJ Estética & Wellness Center" : "Spa Brides Experience at MJ Estética & Wellness Center") : (lang === 'es' ? "Relleno de Labios con Ácido Hialurónico en Turrialba" : "Lip Filler Treatment with Hyaluronic Acid in Turrialba")}
+                        src={service.slug === "psicologia-infantil" ? "https://cdn.sanity.io/images/c7ltnbh1/production/4e8f015f6997a29f0ac99c3b232c9ed35f40ba63-800x800.jpg?w=800" : (service.slug === "boda-spa" || service.slug === "spa-brides") ? "/images/boda-spa-img.webp" : (service.slug === "masaje-embarazadas" || service.slug === "prenatal-massage") ? `${BASE}images/masajes-relajantes-bg.webp` : `${BASE}images/acido-hialuronico-bg.webp`}
+                        alt={service.slug === "psicologia-infantil" ? (lang === 'es' ? "Consulta de Psicología Familiar e Infantil - Linc. Cristina Pérez Ibarra" : "Family & Child Psychology Consultation - Linc. Cristina Pérez Ibarra") : (service.slug === "boda-spa" || service.slug === "spa-brides") ? (lang === 'es' ? "Experiencia Boda Spa en MJ Estética & Wellness Center" : "Spa Brides Experience at MJ Estética & Wellness Center") : (service.slug === "masaje-embarazadas" || service.slug === "prenatal-massage") ? (lang === 'es' ? "Masaje para Embarazadas en MJ Estética & Wellness Center" : "Prenatal Massage at MJ Estética & Wellness Center") : (lang === 'es' ? "Relleno de Labios con Ácido Hialurónico en Turrialba" : "Lip Filler Treatment with Hyaluronic Acid in Turrialba")}
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                         onError={(e) => {
                           if (service.slug === "psicologia-infantil") {
