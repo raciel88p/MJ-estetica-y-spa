@@ -338,6 +338,65 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
   );
 }
 
+function getServiceGridImage(service: ServicePageData, base: string): string {
+  const slug = service.slug;
+  if (slug === "psicologia-infantil" || slug === "child-psychology") {
+    return "https://cdn.sanity.io/images/c7ltnbh1/production/4e8f015f6997a29f0ac99c3b232c9ed35f40ba63-800x800.jpg?w=800";
+  }
+  if (slug === "boda-spa" || slug === "spa-brides") {
+    return "/images/boda-spa-img.webp";
+  }
+  if (slug === "masaje-chocolate" || slug === "chocolate-massage") {
+    return "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80";
+  }
+  if (slug === "arteterapia" || slug === "art-therapy") {
+    return `${base}images/arteterapia-sagrada-familia.jpeg`;
+  }
+  if (slug === "relleno-de-labios" || slug === "lip-filler" || slug === "acido-hialuronico" || slug === "hyaluronic-acid") {
+    return `${base}images/acido-hialuronico-bg.webp`;
+  }
+  if (slug === "botox-full-face") {
+    return `${base}images/botox-full-face-bg.webp`;
+  }
+  if (slug === "depilacion-laser" || slug === "laser-hair-removal") {
+    return `${base}images/depilacion-laser-bg.webp`;
+  }
+  if (slug === "nutricion" || slug === "nutrition") {
+    return `${base}images/nutricion-bg.webp`;
+  }
+  if (slug === "piernas-cansadas") {
+    return `${base}images/piernas-cansadas-bg.webp`;
+  }
+  if (slug === "tratamiento-anticelulitis") {
+    return `${base}images/anticelulitis-bg.webp`;
+  }
+  if (slug === "vendas-frias") {
+    return `${base}images/vendas-frias-bg.webp`;
+  }
+  if (slug === "auriculoterapia") {
+    return `${base}images/auriculoterapia-bg.webp`;
+  }
+  if (slug === "biorevitalizacion") {
+    return `${base}images/biorevitalizacion-bg.webp`;
+  }
+  if (slug === "eliminacion-manchas") {
+    return `${base}images/eliminacion-manchas-bg.webp`;
+  }
+  if (slug === "peeling-quimico" || slug === "facial-peeling" || slug === "hollywood-peel") {
+    return `${base}images/peeling-quimico-bg.webp`;
+  }
+  if (slug === "radiofrecuencia-facial") {
+    return `${base}images/radiofrecuencia-facial-bg.webp`;
+  }
+  if (slug === "masajes-corporales" || slug === "body-massages" || slug === "masajes-relajantes" || slug === "relaxing-massages" || slug === "masajes-profundos" || slug === "deep-tissue-massages" || slug === "masaje-cafe" || slug === "coffee-massage" || slug === "masaje-parejas" || slug === "couples-massage" || slug === "masaje-barro" || slug === "mud-massage" || slug === "tropical-extreme" || slug === "masaje-embarazadas" || slug === "prenatal-massage" || slug === "masaje-descarga-muscular" || slug === "muscle-release-massage") {
+    return `${base}images/masajes-relajantes-bg.webp`;
+  }
+  if (service.image) {
+    return service.image.startsWith("http") || service.image.startsWith("/") ? service.image : `${base}images/${service.image}`;
+  }
+  return `${base}images/faciales-bg.webp`;
+}
+
 function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?: 'es' | 'en' }) {
   const t = useTranslations(lang);
   const categoryRaw = serviceCategoryMap[service.slug];
@@ -1149,19 +1208,21 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
                     </a>
                   </motion.div>
                 ))}
-                {(service.slug === "psicologia-infantil" || service.slug === "relleno-de-labios" || service.slug === "lip-filler" || service.slug === "boda-spa" || service.slug === "spa-brides" || service.slug === "masaje-embarazadas" || service.slug === "prenatal-massage" || service.slug === "masaje-chocolate" || service.slug === "chocolate-massage" || service.slug === "masaje-descarga-muscular" || service.slug === "muscle-release-massage") && (
+                {(service.items.length % 2 !== 0 || ["psicologia-infantil", "child-psychology", "relleno-de-labios", "lip-filler", "boda-spa", "spa-brides", "masaje-embarazadas", "prenatal-massage", "masaje-chocolate", "chocolate-massage", "masaje-descarga-muscular", "muscle-release-massage"].includes(service.slug)) && (
                   <motion.div
                     variants={fadeUp}
                     className="bg-white p-6 md:p-8 flex items-center justify-center overflow-hidden"
                   >
                     <div className="relative w-full h-full min-h-[280px] md:min-h-[340px] max-h-[420px] rounded-sm overflow-hidden bg-stone-50 border border-stone-100 flex items-center justify-center group">
                       <img
-                        src={service.slug === "psicologia-infantil" ? "https://cdn.sanity.io/images/c7ltnbh1/production/4e8f015f6997a29f0ac99c3b232c9ed35f40ba63-800x800.jpg?w=800" : (service.slug === "boda-spa" || service.slug === "spa-brides") ? "/images/boda-spa-img.webp" : (service.slug === "masaje-embarazadas" || service.slug === "prenatal-massage" || service.slug === "masaje-descarga-muscular" || service.slug === "muscle-release-massage") ? `${BASE}images/masajes-relajantes-bg.webp` : (service.slug === "masaje-chocolate" || service.slug === "chocolate-massage") ? "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" : `${BASE}images/acido-hialuronico-bg.webp`}
-                        alt={service.slug === "psicologia-infantil" ? (lang === 'es' ? "Consulta de Psicología Familiar e Infantil - Linc. Cristina Pérez Ibarra" : "Family & Child Psychology Consultation - Linc. Cristina Pérez Ibarra") : (service.slug === "boda-spa" || service.slug === "spa-brides") ? (lang === 'es' ? "Experiencia Boda Spa en MJ Estética & Wellness Center" : "Spa Brides Experience at MJ Estética & Wellness Center") : (service.slug === "masaje-embarazadas" || service.slug === "prenatal-massage") ? (lang === 'es' ? "Masaje para Embarazadas en MJ Estética & Wellness Center" : "Prenatal Massage at MJ Estética & Wellness Center") : (service.slug === "masaje-descarga-muscular" || service.slug === "muscle-release-massage") ? (lang === 'es' ? "Masaje de Descarga Muscular en MJ Estética & Wellness Center" : "Muscle Release Massage at MJ Estética & Wellness Center") : (service.slug === "masaje-chocolate" || service.slug === "chocolate-massage") ? (lang === 'es' ? "Masaje de Chocolate en MJ Estética & Wellness Center" : "Chocolate Massage Ritual at MJ Estética & Wellness Center") : (lang === 'es' ? "Relleno de Labios con Ácido Hialurónico en Turrialba" : "Lip Filler Treatment with Hyaluronic Acid in Turrialba")}
+                        src={getServiceGridImage(service, BASE)}
+                        alt={`${service.title} - MJ Estética & Wellness Center`}
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                         onError={(e) => {
-                          if (service.slug === "psicologia-infantil") {
+                          if (service.slug === "psicologia-infantil" || service.slug === "child-psychology") {
                             (e.target as HTMLImageElement).src = "/images/cristina-perez.webp";
+                          } else {
+                            (e.target as HTMLImageElement).src = `${BASE}images/faciales-bg.webp`;
                           }
                         }}
                       />
