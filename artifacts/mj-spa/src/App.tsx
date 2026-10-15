@@ -19,6 +19,7 @@ const TratamientosFaciales   = lazy(() => import("@/pages/TratamientosFaciales")
 const TratamientosPiernas    = lazy(() => import("@/pages/TratamientosPiernas"));
 const SitemapPage       = lazy(() => import("@/pages/SitemapPage"));
 const Paquetes          = lazy(() => import("@/pages/Paquetes"));
+const SucursalPageWrapper = lazy(() => import("@/components/pages/SucursalPage").then(m => ({ default: m.SucursalPage })));
 const LandingReductivos = lazy(() => import("@/pages/LandingReductivos"));
 const LandingFaciales   = lazy(() => import("@/pages/LandingFaciales"));
 const LandingMedicos    = lazy(() => import("@/pages/LandingMedicos"));
@@ -52,6 +53,8 @@ function Router() {
       <Switch>
         {/* ES Routes */}
         <Route path="/" component={Home} />
+        <Route path="/sucursales/turrialba"><SucursalPageWrapper branch="turrialba" lang="es" /></Route>
+        <Route path="/sucursales/siquirres"><SucursalPageWrapper branch="siquirres" lang="es" /></Route>
         <Route path="/politica-de-datos" component={PoliticaDatos} />
         <Route path="/politica-devoluciones" component={PoliticaDevoluciones} />
         <Route path="/medicos-esteticos" component={MedicosEsteticos} />
@@ -71,6 +74,8 @@ function Router() {
 
         {/* EN Routes */}
         <Route path="/en"><Home lang="en" /></Route>
+        <Route path="/en/locations/turrialba"><SucursalPageWrapper branch="turrialba" lang="en" /></Route>
+        <Route path="/en/locations/siquirres"><SucursalPageWrapper branch="siquirres" lang="en" /></Route>
         <Route path="/en/data-policy"><PoliticaDatos lang="en" /></Route>
         <Route path="/en/refund-policy"><PoliticaDevoluciones lang="en" /></Route>
         <Route path="/en/medical-aesthetic"><LandingMedicos lang="en" /></Route>
