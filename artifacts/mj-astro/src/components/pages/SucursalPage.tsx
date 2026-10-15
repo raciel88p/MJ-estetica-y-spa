@@ -118,12 +118,16 @@ function SucursalPageComponent({ branch, lang = "es" }: SucursalPageProps) {
           ],
       popularServices: isEs
         ? [
+            { name: "Tratamientos Dentales", desc: "Estética dental, limpieza, blanqueamiento y salud oral integral." },
+            { name: "Trasplante Capilar", desc: "Restauración y microinjerto capilar de alta precisión para recuperar la densidad del cabello." },
             { name: "Medicina Estética Avanzada", desc: "Aplicación de Botox, Ácido Hialurónico e Hilos Tensores." },
             { name: "Fisioterapia Terapéutica & Deportiva", desc: "Rehabilitación, descarga muscular y manejo del dolor." },
             { name: "Tratamientos Faciales Especializados", desc: "Limpiezas profundas, peeling y rejuvenecimiento." },
             { name: "Modelado Corporal", desc: "Tratamientos reductivos y tensado de piel." }
           ]
         : [
+            { name: "Dental Treatments", desc: "Dental aesthetics, teeth whitening, deep cleaning, and comprehensive oral health." },
+            { name: "Hair Transplant", desc: "High-precision hair restoration and micrografting to restore hair density." },
             { name: "Advanced Medical Aesthetics", desc: "Botox, Hyaluronic Acid, and Tension Thread treatments." },
             { name: "Therapeutic & Sports Physical Therapy", desc: "Rehabilitation, muscle release, and pain management." },
             { name: "Specialized Facial Treatments", desc: "Deep cleansings, chemical peels, and rejuvenation." },
