@@ -213,130 +213,164 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                     onMouseEnter={servicios.cancelClose}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >
-                    <div className="w-[1000px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-border overflow-hidden m-[5px]">
-                      <div className="px-5 pt-5 pb-5">
-                        <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-4">
-                          Nuestros Servicios
+                    <div className="w-[1050px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-stone-200/80 overflow-hidden m-[5px] p-6">
+                      <div className="flex items-center justify-between border-b border-stone-100 pb-3.5 mb-5">
+                        <p className="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">
+                          {lang === 'es' ? 'Nuestros Servicios & Especialidades' : 'Our Services & Specialties'}
                         </p>
-                        <div className="grid grid-cols-5 gap-x-4">
-                          {/* Corporales col 1 */}
-                          <div>
-                            <a href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"}
-                              className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
-                              onClick={() => setOpenDropdown(null)}
-                            >
-                              {lang === 'es' ? 'Corporales' : 'Body'}
-                            </a>
-                            {corporalesHalf1.map((link) => (
-                              <a
-                                key={link.name}
-                                href={link.href}
-                                className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
-                                onClick={() => setOpenDropdown(null)}
-                              >
-                                {link.name}
-                              </a>
-                            ))}
-                          </div>
-                          {/* Corporales col 2 (continuation) */}
-                          <div className="pt-6">
-                            {corporalesHalf2.map((link) => (
-                              <a
-                                key={link.name}
-                                href={link.href}
-                                className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
-                                onClick={() => setOpenDropdown(null)}
-                              >
-                                {link.name}
-                              </a>
-                            ))}
-                          </div>
-                          {/* Faciales col 1 */}
-                          <div>
-                            <a href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"}
-                              className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
-                              onClick={() => setOpenDropdown(null)}
-                            >
-                              {lang === 'es' ? 'Faciales' : 'Facials'}
-                            </a>
-                            {facialesHalf1.map((link) => (
-                              <a
-                                key={link.name}
-                                href={link.href}
-                                className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
-                                onClick={() => setOpenDropdown(null)}
-                              >
-                                {link.name}
-                              </a>
-                            ))}
-                          </div>
-                          {/* Faciales col 2 (continuation) */}
-                          <div className="pt-6">
-                            {facialesHalf2.map((link) => (
-                              <a
-                                key={link.name}
-                                href={link.href}
-                                className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
-                                onClick={() => setOpenDropdown(null)}
-                              >
-                                {link.name}
-                              </a>
-                            ))}
-                          </div>
-                          {/* Piernas */}
-                          <div>
-                            <a href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"}
-                              className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest hover:bg-secondary/30 rounded mb-1 transition-colors"
-                              onClick={() => setOpenDropdown(null)}
-                            >
-                              {lang === 'es' ? 'Piernas' : 'Legs'}
-                            </a>
-                          {tratamientosPiernasLinks[lang].map((link) => (
-                              <a
-                                key={link.name}
-                                href={link.href}
-                                className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
-                                onClick={() => setOpenDropdown(null)}
-                              >
-                                {link.name}
-                              </a>
-                            ))}
+                        <span className="text-[11px] font-medium text-stone-400 bg-stone-100 px-2.5 py-0.5 rounded-full">
+                          {lang === 'es' ? 'MJ Fisio Estética & Spa' : 'MJ Physio Aesthetics & Spa'}
+                        </span>
+                      </div>
 
-                            {/* Rituales SPA */}
-                            <div className="mt-4">
-                              <span className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest mb-1">
-                                {lang === 'es' ? 'Rituales SPA' : 'SPA Rituals'}
-                              </span>
-                              {ritualesSpaLinks[lang].map((link) => (
-                                <a
-                                  key={link.name}
-                                  href={link.href}
-                                  className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
-                                  onClick={() => setOpenDropdown(null)}
-                                >
-                                  {link.name}
-                                </a>
-                              ))}
-                            </div>
-
-                            {/* MJ Creativo */}
-                            <div className="mt-4">
-                              <span className="block px-2 py-1 text-[10px] font-bold text-primary uppercase tracking-widest mb-1">
-                                MJ Creativo
-                              </span>
-                            {mjCreativoLinks[lang].map((link) => (
-                                <a
-                                  key={link.name}
-                                  href={link.href}
-                                  className="block px-2 py-1 text-[12px] text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded"
-                                  onClick={() => setOpenDropdown(null)}
-                                >
-                                  {link.name}
-                                </a>
-                              ))}
-                            </div>
-                          </div>
+                      <div className="grid grid-cols-5 gap-x-5 text-left">
+                        {/* Col 1: Médico Estético */}
+                        <div>
+                          <a
+                            href={lang === 'es' ? "/medicina-estetica" : "/en/medical-aesthetic"}
+                            className="block pb-2 mb-2 text-[11px] font-bold text-primary uppercase tracking-wider border-b border-primary/20 hover:text-primary/80 transition-colors"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            {lang === 'es' ? 'Médico Estético' : 'Medical Aesthetics'}
+                          </a>
+                          <a
+                            href={lang === 'es' ? "/medicina-estetica" : "/en/facial-harmonization"}
+                            className="block px-2 py-1 text-[12px] font-semibold text-stone-800 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            {lang === 'es' ? 'Armonización Facial' : 'Facial Harmonization'}
+                          </a>
+                          {medicoEsteticosLinks[lang].map((link) => (
+                            <a
+                              key={link.name}
+                              href={link.href}
+                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
+                              onClick={() => setOpenDropdown(null)}
+                            >
+                              {link.name}
+                            </a>
+                          ))}
                         </div>
+
+                        {/* Col 2: Tratamientos Corporales */}
+                        <div>
+                          <a
+                            href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"}
+                            className="block pb-2 mb-2 text-[11px] font-bold text-primary uppercase tracking-wider border-b border-primary/20 hover:text-primary/80 transition-colors"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            {lang === 'es' ? 'Corporales' : 'Body Treatments'}
+                          </a>
+                          {tratamientosCorporalesLinks[lang].map((link) => (
+                            <a
+                              key={link.name}
+                              href={link.href}
+                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
+                              onClick={() => setOpenDropdown(null)}
+                            >
+                              {link.name}
+                            </a>
+                          ))}
+                        </div>
+
+                        {/* Col 3: Faciales Core */}
+                        <div>
+                          <a
+                            href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"}
+                            className="block pb-2 mb-2 text-[11px] font-bold text-primary uppercase tracking-wider border-b border-primary/20 hover:text-primary/80 transition-colors"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            {lang === 'es' ? 'Cuidado Facial' : 'Facial Care'}
+                          </a>
+                          {tratamientosFacialesLinks[lang].slice(1, 11).map((link) => (
+                            <a
+                              key={link.name}
+                              href={link.href}
+                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
+                              onClick={() => setOpenDropdown(null)}
+                            >
+                              {link.name}
+                            </a>
+                          ))}
+                        </div>
+
+                        {/* Col 4: Faciales Avanzados */}
+                        <div>
+                          <a
+                            href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"}
+                            className="block pb-2 mb-2 text-[11px] font-bold text-primary uppercase tracking-wider border-b border-primary/20 hover:text-primary/80 transition-colors"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            {lang === 'es' ? 'Faciales Avanzados' : 'Advanced Facials'}
+                          </a>
+                          {tratamientosFacialesLinks[lang].slice(11).map((link) => (
+                            <a
+                              key={link.name}
+                              href={link.href}
+                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
+                              onClick={() => setOpenDropdown(null)}
+                            >
+                              {link.name}
+                            </a>
+                          ))}
+                        </div>
+
+                        {/* Col 5: Rituales SPA y Especiales */}
+                        <div>
+                          <a
+                            href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"}
+                            className="block pb-2 mb-2 text-[11px] font-bold text-primary uppercase tracking-wider border-b border-primary/20 hover:text-primary/80 transition-colors"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            {lang === 'es' ? 'Rituales SPA & Piernas' : 'SPA Rituals & Legs'}
+                          </a>
+                          {ritualesSpaLinks[lang].map((link) => (
+                            <a
+                              key={link.name}
+                              href={link.href}
+                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
+                              onClick={() => setOpenDropdown(null)}
+                            >
+                              {link.name}
+                            </a>
+                          ))}
+                          {tratamientosPiernasLinks[lang].map((link) => (
+                            <a
+                              key={link.name}
+                              href={link.href}
+                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
+                              onClick={() => setOpenDropdown(null)}
+                            >
+                              {link.name}
+                            </a>
+                          ))}
+                          {mjCreativoLinks[lang].map((link) => (
+                            <a
+                              key={link.name}
+                              href={link.href}
+                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
+                              onClick={() => setOpenDropdown(null)}
+                            >
+                              {link.name}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Footer banner inside Mega Menu */}
+                      <div className="mt-5 pt-3.5 border-t border-stone-100 flex items-center justify-between text-xs">
+                        <span className="flex items-center gap-2 font-medium text-stone-600">
+                          <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
+                          {lang === 'es' ? '¿Tienes dudas sobre qué tratamiento elegir para tu piel?' : 'Not sure which treatment is best for your skin?'}
+                        </span>
+                        <a
+                          href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-bold text-primary hover:underline flex items-center gap-1 transition-all hover:translate-x-0.5"
+                        >
+                          {lang === 'es' ? 'Hablar con una especialista por WhatsApp →' : 'Chat with a specialist on WhatsApp →'}
+                        </a>
                       </div>
                     </div>
                   </motion.div>
