@@ -51,7 +51,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
   const [currentPath, setCurrentPath] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
-  const [isMobileMedicosOpen, setIsMobileMedicosOpen] = useState(false);
   const [isMobileNosotrosOpen, setIsMobileNosotrosOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<DropdownKey>(null);
 
@@ -70,7 +69,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
 
   const nosotros = useHoverDropdown("nosotros", openDropdown, setOpenDropdown as any);
   const servicios = useHoverDropdown("servicios", openDropdown, setOpenDropdown as any);
-  const medicos = useHoverDropdown("medicos", openDropdown, setOpenDropdown as any);
 
   const textClass = isScrolled ? "text-[#0c3e5a]" : "text-white/90";
   const linkBase = `text-[11px] xl:text-[13px] uppercase tracking-wider font-semibold hover:text-primary transition-all duration-300 relative group/link`;
@@ -384,66 +382,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
               </AnimatePresence>
             </div>
 
-            {/* ── Médico Estético Dropdown ── */}
-            <div
-              className="relative"
-              onMouseEnter={() => { medicos.cancelClose(); medicos.open(); }}
-              onMouseLeave={medicos.scheduleClose}
-            >
-              <div className="flex items-center gap-1">
-                <Link
-                  href={lang === 'es' ? "/medicina-estetica" : "/en/medical-aesthetic"}
-                  className={`${linkBase} ${textClass} ${isActive("/medicina-estetica") ? "text-primary" : ""} cursor-pointer`}
-                >
-                  {t('nav.medico')}
-                  {isActive("/medicina-estetica") && <ActiveIndicator />}
-                </Link>
-                <button
-                  className={`p-1 ${textClass} hover:text-primary transition-colors`}
-                  onClick={(e) => { e.stopPropagation(); setOpenDropdown(medicos.isOpen ? null : "medicos"); }}
-                >
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${medicos.isOpen ? "rotate-180" : ""}`} />
-                </button>
-              </div>
-              <AnimatePresence>
-                {medicos.isOpen && (
-                  <motion.div
-                    {...dropdownPanelVariants}
-                    transition={{ duration: 0.16, ease: "easeOut" as const }}
-                    onMouseEnter={medicos.cancelClose}
-                    className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
-                  >
-                    <div className="w-56 bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
-                      <div className="px-3 pt-4 pb-3">
-                        <p className="text-xs uppercase tracking-widest text-muted-foreground font-medium mb-3 px-2">
-                          Especialidades
-                        </p>
-                        <div className="flex flex-col gap-1">
-                          <Link
-                            href={lang === 'es' ? "/medicina-estetica" : "/en/facial-harmonization"}
-                            className="block px-3 py-2 text-sm font-bold text-primary hover:bg-secondary/40 transition-colors rounded-lg cursor-pointer"
-                            onClick={() => setOpenDropdown(null)}
-                          >
-                            {lang === 'es' ? 'Armonización Facial' : 'Facial Harmonization'}
-                          </Link>
-                          {medicoEsteticosLinks[lang].map((link) => (
-                            <Link
-                              key={link.name}
-                              href={link.href}
-                              className="block px-3 py-2 text-sm text-foreground hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg cursor-pointer"
-                              onClick={() => setOpenDropdown(null)}
-                            >
-                              {link.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
             <a href={lang === 'es' ? "/#contacto" : "/en/#contact"} className={`${linkBase} ${textClass} cursor-pointer`}>
               {lang === 'es' ? "Contacto" : "Contact"}
             </a>
@@ -702,58 +640,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                   )}
                 </AnimatePresence>
               </div>
-
-              {/* Mobile Médico Estético Accordion */}
-              <div className="border-b border-muted">
-                <div className="flex justify-between items-center w-full">
-                  <Link
-                    href={lang === 'es' ? "/medicina-estetica" : "/en/facial-harmonization"}
-                    className={`flex-grow ${isActive("/medicina-estetica") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 hover:text-primary transition-colors font-serif cursor-pointer`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {t('nav.medico')}
-                  </Link>
-                  <button
-                    className="p-3 text-foreground hover:text-primary transition-colors"
-                    onClick={() => setIsMobileMedicosOpen(!isMobileMedicosOpen)}
-                  >
-                    <ChevronDown className={`w-5 h-5 transition-transform ${isMobileMedicosOpen ? "rotate-180" : ""}`} />
-                  </button>
-                </div>
-                <AnimatePresence>
-                  {isMobileMedicosOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="overflow-hidden"
-                    >
-                      <div className="pb-3 pl-4 flex flex-col gap-1">
-                          <Link
-                            href={lang === 'es' ? "/medicina-estetica" : "/en/facial-harmonization"}
-                            className="block py-2 text-base font-bold text-primary hover:text-primary/80 transition-colors cursor-pointer"
-                            onClick={() => { setIsMobileMenuOpen(false); setIsMobileMedicosOpen(false); }}
-                          >
-                            {lang === 'es' ? 'Armonización Facial' : 'Facial Harmonization'}
-                          </Link>
-                      {medicoEsteticosLinks[lang].map((link) => (
-                          <Link
-                            key={link.name}
-                            href={link.href}
-                            className="block py-2 text-base text-muted-foreground hover:text-primary transition-colors cursor-pointer"
-                            onClick={() => { setIsMobileMenuOpen(false); setIsMobileMedicosOpen(false); }}
-                          >
-                            {link.name}
-                          </Link>
-                        ))}
-
-
-                        </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
 
               <a
                 href={lang === 'es' ? "/#contacto" : "/en/#contact"}
