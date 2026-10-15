@@ -179,13 +179,13 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                           <span className="block px-3 py-1 text-[11px] font-bold text-primary uppercase tracking-wider">
                             {lang === 'es' ? 'Sucursales' : 'Locations'}
                           </span>
-                          <a href={lang === 'es' ? "/#contacto" : "/en/#contact"}
+                          <a href={lang === 'es' ? "/sucursales/turrialba" : "/en/locations/turrialba"}
                             className="block px-3 py-1.5 text-xs text-stone-600 hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg pl-5"
                             onClick={() => setOpenDropdown(null)}
                           >
                             📍 Turrialba
                           </a>
-                          <a href={lang === 'es' ? "/#contacto" : "/en/#contact"}
+                          <a href={lang === 'es' ? "/sucursales/siquirres" : "/en/locations/siquirres"}
                             className="block px-3 py-1.5 text-xs text-stone-600 hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg pl-5"
                             onClick={() => setOpenDropdown(null)}
                           >
@@ -517,13 +517,13 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                           <span className="block py-1 text-xs font-bold text-primary uppercase tracking-wider">
                             {lang === 'es' ? 'Sucursales' : 'Locations'}
                           </span>
-                          <a href={lang === 'es' ? "/#contacto" : "/en/#contact"}
+                          <a href={lang === 'es' ? "/sucursales/turrialba" : "/en/locations/turrialba"}
                             className="block py-1.5 text-sm text-muted-foreground hover:text-primary transition-colors pl-3"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                           >
                             📍 Turrialba
                           </a>
-                          <a href={lang === 'es' ? "/#contacto" : "/en/#contact"}
+                          <a href={lang === 'es' ? "/sucursales/siquirres" : "/en/locations/siquirres"}
                             className="block py-1.5 text-sm text-muted-foreground hover:text-primary transition-colors pl-3"
                             onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
                           >
