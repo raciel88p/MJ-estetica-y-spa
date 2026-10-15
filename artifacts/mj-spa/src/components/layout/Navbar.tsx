@@ -176,6 +176,23 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                         >
                           {lang === 'es' ? 'Buzón de Sugerencias' : 'Suggestion Box'}
                         </Link>
+                        <div className="pt-2 mt-1 border-t border-stone-100">
+                          <span className="block px-3 py-1 text-[11px] font-bold text-primary uppercase tracking-wider">
+                            {lang === 'es' ? 'Sucursales' : 'Locations'}
+                          </span>
+                          <a href={lang === 'es' ? "/#contacto" : "/en/#contact"}
+                            className="block px-3 py-1.5 text-xs text-stone-600 hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg pl-5 cursor-pointer"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            📍 Turrialba
+                          </a>
+                          <a href={lang === 'es' ? "/#contacto" : "/en/#contact"}
+                            className="block px-3 py-1.5 text-xs text-stone-600 hover:bg-secondary/40 hover:text-primary transition-colors rounded-lg pl-5 cursor-pointer"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            📍 Siquirres
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </motion.div>
@@ -502,6 +519,23 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                         >
                           {lang === 'es' ? 'Buzón de Sugerencias' : 'Suggestion Box'}
                         </Link>
+                        <div className="mt-2 pt-2 border-t border-muted pr-4">
+                          <span className="block py-1 text-xs font-bold text-primary uppercase tracking-wider">
+                            {lang === 'es' ? 'Sucursales' : 'Locations'}
+                          </span>
+                          <a href={lang === 'es' ? "/#contacto" : "/en/#contact"}
+                            className="block py-1.5 text-sm text-muted-foreground hover:text-primary transition-colors pl-3 cursor-pointer"
+                            onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
+                          >
+                            📍 Turrialba
+                          </a>
+                          <a href={lang === 'es' ? "/#contacto" : "/en/#contact"}
+                            className="block py-1.5 text-sm text-muted-foreground hover:text-primary transition-colors pl-3 cursor-pointer"
+                            onClick={() => { setIsMobileMenuOpen(false); setIsMobileNosotrosOpen(false); }}
+                          >
+                            📍 Siquirres
+                          </a>
+                        </div>
                       </div>
                     </motion.div>
                   )}
