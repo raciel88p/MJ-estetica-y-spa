@@ -72,8 +72,6 @@ export const tratamientosCorporalesLinks = {
     { name: "Levantamiento de Busto", href: "/servicios/levantamiento-busto" },
     { name: "Vendas Frías", href: "/servicios/vendas-frias" },
     { name: "Auriculoterapia", href: "/servicios/auriculoterapia" },
-    { name: "Aromaterapia", href: "/servicios/aromaterapia" },
-    { name: "Boda Spa", href: "/servicios/boda-spa" },
     {
       name: "Blanqueamiento Zona Íntima",
       href: "/servicios/blanqueamiento-zona-intima",
@@ -92,8 +90,6 @@ export const tratamientosCorporalesLinks = {
     { name: "Bust Lift", href: "/en/services/levantamiento-busto" },
     { name: "Cold Wraps", href: "/en/services/vendas-frias" },
     { name: "Auriculotherapy", href: "/en/services/auriculoterapia" },
-    { name: "Aromatherapy", href: "/en/services/aromaterapia" },
-    { name: "Spa for Brides", href: "/en/services/spa-brides" },
     { name: "Intimate Area Whitening", href: "/en/services/blanqueamiento-zona-intima" },
   ],
 };
