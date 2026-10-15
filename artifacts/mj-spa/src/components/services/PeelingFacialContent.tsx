@@ -256,7 +256,7 @@ export function PeelingFacialContent({ waLink, lang = "es" }: { waLink: string; 
       <section className="py-24 bg-[#040f19] text-white overflow-hidden relative">
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8">{content.whyUs.title}</h2>
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8 text-white">{content.whyUs.title}</h2>
             <p className="text-white/50 max-w-2xl mx-auto italic">{content.whyUs.desc}</p>
           </motion.div>
 
