@@ -11,6 +11,7 @@ import {
   ritualesSpaLinks,
   mjCreativoLinks,
 } from "@/data/services";
+import { dentalServicesData } from "@/data/dentalServices";
 import { useTranslations } from "@/i18n/ui";
 
 type DropdownKey = "nosotros" | "servicios" | "medicos" | "paquetes" | "idioma" | null;
@@ -41,10 +42,7 @@ function useHoverDropdown(key: DropdownKey, openDropdown: DropdownKey, setOpenDr
 export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alternateLink?: string }) {
   const t = useTranslations(lang);
 
-  const corporalesHalf1 = tratamientosCorporalesLinks[lang].slice(0, 6);
-  const corporalesHalf2 = tratamientosCorporalesLinks[lang].slice(6);
-  const facialesHalf1 = tratamientosFacialesLinks[lang].slice(0, 9);
-  const facialesHalf2 = tratamientosFacialesLinks[lang].slice(9);
+  const dentalList = dentalServicesData[lang] || dentalServicesData.es;
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [currentPath, setCurrentPath] = useState("");
@@ -76,11 +74,9 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
     const normalizedPath = currentPath.replace(/^\/en/, '') || '/';
     const normalizedTarget = path.replace(/^\/en/, '') || '/';
 
-    // Handle special case for about-us / nosotros renaming
     const isAboutPath = (p: string) => p === '/nosotros' || p === '/about-us';
     if (isAboutPath(normalizedPath) && isAboutPath(normalizedTarget)) return true;
 
-    // Handle special case for other renamed pages if any
     if (normalizedTarget === '/suggestion-box' && normalizedPath === '/buzon-sugerencias') return true;
     if (normalizedTarget === '/buzon-sugerencias' && normalizedPath === '/suggestion-box') return true;
 
@@ -125,7 +121,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center w-full">
-          {/* Large prominent Brand Logo on the left with zero side margins */}
           <a href={lang === 'es' ? "/" : "/en"} className="flex items-center cursor-pointer group shrink-0 mx-0 px-0">
             <img
               src="/images/logo-mj.svg"
@@ -136,7 +131,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
             />
           </a>
 
-          {/* Desktop Nav on the right */}
           <nav className="hidden lg:flex items-center gap-3 xl:gap-6 ml-auto">
 
             {/* ── Nosotros Dropdown ── */}
@@ -204,8 +198,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
               {isActive("/testimonios") && <ActiveIndicator />}
             </a>
 
-
-
             {/* ── Servicios Dropdown ── */}
             <div
               className=""
@@ -228,17 +220,14 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                     onMouseEnter={servicios.cancelClose}
                     className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50"
                   >
-                    <div className="w-[1050px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-stone-200/80 overflow-hidden m-[5px] p-6">
-                      <div className="flex items-center justify-between border-b border-stone-100 pb-3.5 mb-5">
+                    <div className="w-[1180px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-stone-200/80 overflow-hidden m-[5px] p-6">
+                      <div className="flex items-center justify-between border-b border-stone-100 pb-3 mb-4">
                         <p className="text-xs font-bold uppercase tracking-[0.2em] text-stone-400">
                           {lang === 'es' ? 'Nuestros Servicios & Especialidades' : 'Our Services & Specialties'}
                         </p>
-                        <span className="text-[11px] font-medium text-stone-400 bg-stone-100 px-2.5 py-0.5 rounded-full">
-                          {lang === 'es' ? 'MJ Fisio Estética & Spa' : 'MJ Physio Aesthetics & Spa'}
-                        </span>
                       </div>
 
-                      <div className="grid grid-cols-5 gap-x-5 text-left">
+                      <div className="grid grid-cols-5 gap-x-5 text-left max-h-[70vh] overflow-y-auto pr-1">
                         {/* Col 1: Médico Estético */}
                         <div>
                           <a
@@ -250,7 +239,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                           </a>
                           <a
                             href={lang === 'es' ? "/medicina-estetica" : "/en/facial-harmonization"}
-                            className="block px-2 py-1 text-[12px] font-semibold text-stone-800 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
+                            className="block px-2 py-1 text-[11px] font-semibold text-stone-800 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded"
                             onClick={() => setOpenDropdown(null)}
                           >
                             {lang === 'es' ? 'Armonización Facial' : 'Facial Harmonization'}
@@ -259,7 +248,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                             <a
                               key={link.name}
                               href={link.href}
-                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
+                              className="block px-2 py-1 text-[11px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded"
                               onClick={() => setOpenDropdown(null)}
                             >
                               {link.name}
@@ -280,7 +269,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                             <a
                               key={link.name}
                               href={link.href}
-                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
+                              className="block px-2 py-1 text-[11px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded"
                               onClick={() => setOpenDropdown(null)}
                             >
                               {link.name}
@@ -288,7 +277,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                           ))}
                         </div>
 
-                        {/* Col 3: Faciales Core */}
+                        {/* Col 3: Cuidado Facial */}
                         <div>
                           <a
                             href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"}
@@ -297,11 +286,11 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                           >
                             {lang === 'es' ? 'Cuidado Facial' : 'Facial Care'}
                           </a>
-                          {tratamientosFacialesLinks[lang].slice(1, 11).map((link) => (
+                          {tratamientosFacialesLinks[lang].slice(0, 11).map((link) => (
                             <a
                               key={link.name}
                               href={link.href}
-                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
+                              className="block px-2 py-1 text-[11px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded"
                               onClick={() => setOpenDropdown(null)}
                             >
                               {link.name}
@@ -309,81 +298,92 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                           ))}
                         </div>
 
-                        {/* Col 4: Faciales Avanzados */}
+                        {/* Col 4: Rituales SPA & Piernas */}
                         <div>
                           <a
-                            href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"}
+                            href={lang === 'es' ? "/servicios/boda-spa" : "/en/services/spa-brides"}
                             className="block pb-2 mb-2 text-[11px] font-bold text-primary uppercase tracking-wider border-b border-primary/20 hover:text-primary/80 transition-colors"
                             onClick={() => setOpenDropdown(null)}
                           >
-                            {lang === 'es' ? 'Faciales Avanzados' : 'Advanced Facials'}
-                          </a>
-                          {tratamientosFacialesLinks[lang].slice(11).map((link) => (
-                            <a
-                              key={link.name}
-                              href={link.href}
-                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
-                              onClick={() => setOpenDropdown(null)}
-                            >
-                              {link.name}
-                            </a>
-                          ))}
-                        </div>
-
-                        {/* Col 5: Rituales SPA, Salud Dental y Especiales */}
-                        <div>
-                          <a
-                            href={lang === 'es' ? "/servicios/dental" : "/en/services/dental"}
-                            className="block pb-2 mb-2 text-[11px] font-bold text-primary uppercase tracking-wider border-b border-primary/20 hover:text-primary/80 transition-colors"
-                            onClick={() => setOpenDropdown(null)}
-                          >
-                            {lang === 'es' ? 'Salud Dental & Odontología' : 'Dental Care & Dentistry'}
-                          </a>
-                          <a
-                            href={lang === 'es' ? "/servicios/dental" : "/en/services/dental"}
-                            className="block px-2 py-1 text-[12px] font-bold text-stone-900 bg-primary/10 hover:bg-primary hover:text-white transition-all duration-200 rounded hover:translate-x-1 mb-1"
-                            onClick={() => setOpenDropdown(null)}
-                          >
-                            {lang === 'es' ? '🦷 Odontología Siquirres (Hub)' : '🦷 Siquirres Dental (Hub)'}
+                            {lang === 'es' ? 'Rituales SPA' : 'SPA Rituals'}
                           </a>
                           {ritualesSpaLinks[lang].map((link) => (
                             <a
                               key={link.name}
                               href={link.href}
-                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
+                              className="block px-2 py-1 text-[11px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded"
                               onClick={() => setOpenDropdown(null)}
                             >
                               {link.name}
                             </a>
                           ))}
-                          {tratamientosPiernasLinks[lang].map((link) => (
-                            <a
-                              key={link.name}
-                              href={link.href}
-                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
-                              onClick={() => setOpenDropdown(null)}
-                            >
-                              {link.name}
-                            </a>
-                          ))}
-                          {mjCreativoLinks[lang].map((link) => (
-                            <a
-                              key={link.name}
-                              href={link.href}
-                              className="block px-2 py-1 text-[12px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded hover:translate-x-1"
-                              onClick={() => setOpenDropdown(null)}
-                            >
-                              {link.name}
-                            </a>
-                          ))}
+                          <div className="mt-3 pt-2 border-t border-stone-100">
+                            <span className="block px-2 py-1 text-[10px] font-bold text-stone-400 uppercase tracking-wider">
+                              {lang === 'es' ? 'Piernas & Creativo' : 'Legs & Creative'}
+                            </span>
+                            {tratamientosPiernasLinks[lang].map((link) => (
+                              <a
+                                key={link.name}
+                                href={link.href}
+                                className="block px-2 py-1 text-[11px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded"
+                                onClick={() => setOpenDropdown(null)}
+                              >
+                                {link.name}
+                              </a>
+                            ))}
+                            {mjCreativoLinks[lang].map((link) => (
+                              <a
+                                key={link.name}
+                                href={link.href}
+                                className="block px-2 py-1 text-[11px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded"
+                                onClick={() => setOpenDropdown(null)}
+                              >
+                                {link.name}
+                              </a>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Col 5: Servicios Dentales (Siquirres) */}
+                        <div>
+                          <a
+                            href={lang === 'es' ? "/servicios/dental" : "/en/services/dental"}
+                            className="block pb-2 mb-2 text-[11px] font-bold text-primary uppercase tracking-wider border-b border-primary/20 hover:text-primary/80 transition-colors"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            {lang === 'es' ? 'Servicios Dentales' : 'Dental Services'}
+                          </a>
+                          <a
+                            href={lang === 'es' ? "/servicios/dental" : "/en/services/dental"}
+                            className="block px-2 py-1 text-[11px] font-bold text-stone-900 bg-primary/10 hover:bg-primary hover:text-white transition-all duration-200 rounded mb-1"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            {lang === 'es' ? '🦷 Odontología Siquirres (Hub)' : '🦷 Siquirres Dental (Hub)'}
+                          </a>
+                          {dentalList.map((item) => {
+                            const subHref = lang === 'es'
+                              ? `/servicios/dental/${item.slug}`
+                              : `/en/services/dental/${item.slug}`;
+                            return (
+                              <a
+                                key={item.slug}
+                                href={subHref}
+                                className="block px-2 py-0.5 text-[11px] text-stone-600 hover:bg-stone-50 hover:text-primary transition-all duration-200 rounded truncate"
+                                onClick={() => setOpenDropdown(null)}
+                                title={item.name}
+                              >
+                                {item.name}
+                              </a>
+                            );
+                          })}
                         </div>
                       </div>
 
                       {/* Footer banner inside Mega Menu */}
-                      <div className="mt-5 pt-3.5 border-t border-stone-100 flex items-center justify-between text-xs">
+                      <div className="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
                         <span className="flex items-center gap-2 font-medium text-stone-600">
                           <span className="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-pulse"></span>
-                          {lang === 'es' ? '¿Tienes dudas sobre qué tratamiento elegir para tu piel?' : 'Not sure which treatment is best for your skin?'}
+                          {lang === 'es' ? '¿Tienes dudas sobre qué tratamiento elegir?' : 'Need guidance choosing the right treatment?'}
                         </span>
                         <a
                           href="https://api.whatsapp.com/message/EEYLUNVMY2UDJ1?autoload=1&app_absent=0"
@@ -391,7 +391,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                           rel="noopener noreferrer"
                           className="font-bold text-primary hover:underline flex items-center gap-1 transition-all hover:translate-x-0.5"
                         >
-                          {lang === 'es' ? 'Hablar con una especialista por WhatsApp →' : 'Chat with a specialist on WhatsApp →'}
+                          {lang === 'es' ? 'Hablar con un especialista por WhatsApp →' : 'Chat with a specialist on WhatsApp →'}
                         </a>
                       </div>
                     </div>
@@ -468,7 +468,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
             className="absolute top-full left-0 right-0 bg-white shadow-xl border-t border-border lg:hidden max-h-[85vh] overflow-y-auto"
           >
             <div className="flex flex-col py-4 px-6 gap-1">
-              {/* Mobile Language Selection - TOP & PROMINENT */}
               <div className="py-5 border-b-2 border-primary/5 bg-stone-50/50 -mx-6 px-6 mb-4">
                 <div className="flex items-center gap-2 mb-4 justify-center">
                   <Globe className="w-4 h-4 text-primary" />
@@ -550,8 +549,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                 {t('nav.testimonios')}
               </a>
 
-
-
               {/* Mobile Services Accordion */}
               <div className="border-b border-muted">
                 <button
@@ -570,6 +567,26 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                       className="overflow-hidden"
                     >
                       <div className="pb-3 pl-4 flex flex-col gap-1">
+                        {/* Servicios Dentales (Mobile) */}
+                        <div className="mb-3">
+                          <a href={lang === 'es' ? "/servicios/dental" : "/en/services/dental"}
+                            className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
+                            onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
+                          >
+                            {lang === 'es' ? '🦷 Servicios Dentales (Siquirres)' : '🦷 Dental Services (Siquirres)'}
+                          </a>
+                          {dentalList.map((item) => (
+                            <a
+                              key={item.slug}
+                              href={lang === 'es' ? `/servicios/dental/${item.slug}` : `/en/services/dental/${item.slug}`}
+                              className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors pl-2"
+                              onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
+                            >
+                              {item.name}
+                            </a>
+                          ))}
+                        </div>
+
                         {/* Corporales */}
                         <div className="mb-2">
                           <a href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"}
@@ -588,8 +605,8 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                               {link.name}
                             </a>
                           ))}
-
                         </div>
+
                         {/* Faciales */}
                         <div className="mb-2">
                           <a href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"}
@@ -608,17 +625,14 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                               {link.name}
                             </a>
                           ))}
-
                         </div>
-                        {/* Piernas */}
+
+                        {/* Rituales SPA */}
                         <div className="mb-2">
-                          <a href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"}
-                            className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest"
-                            onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
-                          >
-                            {lang === 'es' ? 'Piernas' : 'Legs'}
-                          </a>
-                          {tratamientosPiernasLinks[lang].map((link) => (
+                          <span className="block py-1.5 text-xs font-bold text-primary uppercase tracking-widest">
+                            {lang === 'es' ? 'Rituales SPA' : 'SPA Rituals'}
+                          </span>
+                          {ritualesSpaLinks[lang].map((link) => (
                             <a
                               key={link.name}
                               href={link.href}
@@ -628,40 +642,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                               {link.name}
                             </a>
                           ))}
-
-                          {/* Rituales SPA (Mobile) */}
-                          <div className="mt-3 pl-2">
-                            <span className="block py-1 text-[10px] font-bold text-primary uppercase tracking-widest mb-1">
-                              {lang === 'es' ? 'Rituales SPA' : 'SPA Rituals'}
-                            </span>
-                            {ritualesSpaLinks[lang].map((link) => (
-                              <a
-                                key={link.name}
-                                href={link.href}
-                                className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors"
-                                onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
-                              >
-                                {link.name}
-                              </a>
-                            ))}
-                          </div>
-
-                          {/* MJ Creativo (Mobile) */}
-                          <div className="mt-3 pl-2">
-                            <span className="block py-1 text-[10px] font-bold text-primary uppercase tracking-widest mb-1">
-                              MJ Creativo
-                            </span>
-                            {mjCreativoLinks[lang].map((link) => (
-                              <a
-                                key={link.name}
-                                href={link.href}
-                                className="block py-1 text-sm text-muted-foreground hover:text-primary transition-colors"
-                                onClick={() => { setIsMobileMenuOpen(false); setIsMobileServicesOpen(false); }}
-                              >
-                                {link.name}
-                              </a>
-                            ))}
-                          </div>
                         </div>
                       </div>
                     </motion.div>
