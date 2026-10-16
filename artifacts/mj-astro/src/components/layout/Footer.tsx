@@ -54,6 +54,7 @@ export function Footer({ lang = 'es' }: { lang?: 'es' | 'en' }) {
             <h4 className="text-xl font-serif text-white mb-6">{t('footer.pages')}</h4>
             <ul className="space-y-3">
               <li><a href={lang === 'es' ? "/nosotros" : "/en/about-us"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Sobre Nosotros" : "About Us"}</a></li>
+              <li><a href={lang === 'es' ? "/servicios/dental" : "/en/services/dental"} className="hover:text-secondary font-bold text-primary transition-colors">{lang === 'es' ? "🦷 Salud Dental & Odontología (Siquirres)" : "🦷 Dental Care & Dentistry (Siquirres)"}</a></li>
               <li><a href={lang === 'es' ? "/servicios/corporales" : "/en/services/body-treatments"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos Corporales" : "Body Treatments"}</a></li>
               <li><a href={lang === 'es' ? "/servicios/faciales" : "/en/services/facials"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos Faciales" : "Facial Treatments"}</a></li>
               <li><a href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"} className="hover:text-secondary transition-colors">{lang === 'es' ? "Tratamientos de Piernas" : "Leg Treatments"}</a></li>

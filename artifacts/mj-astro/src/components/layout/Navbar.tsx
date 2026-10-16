@@ -330,14 +330,21 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                           ))}
                         </div>
 
-                        {/* Col 5: Rituales SPA y Especiales */}
+                        {/* Col 5: Rituales SPA, Salud Dental y Especiales */}
                         <div>
                           <a
-                            href={lang === 'es' ? "/servicios/piernas" : "/en/services/leg-treatments"}
+                            href={lang === 'es' ? "/servicios/dental" : "/en/services/dental"}
                             className="block pb-2 mb-2 text-[11px] font-bold text-primary uppercase tracking-wider border-b border-primary/20 hover:text-primary/80 transition-colors"
                             onClick={() => setOpenDropdown(null)}
                           >
-                            {lang === 'es' ? 'Rituales SPA & Piernas' : 'SPA Rituals & Legs'}
+                            {lang === 'es' ? 'Salud Dental & Odontología' : 'Dental Care & Dentistry'}
+                          </a>
+                          <a
+                            href={lang === 'es' ? "/servicios/dental" : "/en/services/dental"}
+                            className="block px-2 py-1 text-[12px] font-bold text-stone-900 bg-primary/10 hover:bg-primary hover:text-white transition-all duration-200 rounded hover:translate-x-1 mb-1"
+                            onClick={() => setOpenDropdown(null)}
+                          >
+                            {lang === 'es' ? '🦷 Odontología Siquirres (Hub)' : '🦷 Siquirres Dental (Hub)'}
                           </a>
                           {ritualesSpaLinks[lang].map((link) => (
                             <a
