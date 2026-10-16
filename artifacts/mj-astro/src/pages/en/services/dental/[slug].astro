@@ -1,0 +1,19 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import { DentalServiceDetailPage } from '../../../../components/pages/DentalServiceDetailPage';
+import { dentalServicesData } from '../../../../data/dentalServices';
+
+export function getStaticPaths() {
+  const services = dentalServicesData.en;
+  return services.map((service) => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+}
+
+const { slug } = Astro.params;
+---
+
+<Layout title="Dental Care Siquirres | MJ Fisio Estética & Spa">
+  <DentalServiceDetailPage client:only="react" slug={slug || 'limpieza-dental'} lang="en" />
+</Layout>

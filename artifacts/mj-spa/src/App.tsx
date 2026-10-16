@@ -20,6 +20,8 @@ const TratamientosPiernas    = lazy(() => import("@/pages/TratamientosPiernas"))
 const SitemapPage       = lazy(() => import("@/pages/SitemapPage"));
 const Paquetes          = lazy(() => import("@/pages/Paquetes"));
 const SucursalPageWrapper = lazy(() => import("@/components/pages/SucursalPage").then(m => ({ default: m.SucursalPage })));
+const DentalHubPageWrapper = lazy(() => import("@/components/pages/DentalHubPage").then(m => ({ default: m.DentalHubPage })));
+const DentalServiceDetailPageWrapper = lazy(() => import("@/components/pages/DentalServiceDetailPage").then(m => ({ default: m.DentalServiceDetailPage })));
 const LandingReductivos = lazy(() => import("@/pages/LandingReductivos"));
 const LandingFaciales   = lazy(() => import("@/pages/LandingFaciales"));
 const LandingMedicos    = lazy(() => import("@/pages/LandingMedicos"));
@@ -55,6 +57,8 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/sucursales/turrialba"><SucursalPageWrapper branch="turrialba" lang="es" /></Route>
         <Route path="/sucursales/siquirres"><SucursalPageWrapper branch="siquirres" lang="es" /></Route>
+        <Route path="/servicios/dental"><DentalHubPageWrapper lang="es" /></Route>
+        <Route path="/servicios/dental/:slug">{(params) => <DentalServiceDetailPageWrapper slug={params.slug} lang="es" />}</Route>
         <Route path="/politica-de-datos" component={PoliticaDatos} />
         <Route path="/politica-devoluciones" component={PoliticaDevoluciones} />
         <Route path="/medicos-esteticos" component={MedicosEsteticos} />
@@ -76,6 +80,8 @@ function Router() {
         <Route path="/en"><Home lang="en" /></Route>
         <Route path="/en/locations/turrialba"><SucursalPageWrapper branch="turrialba" lang="en" /></Route>
         <Route path="/en/locations/siquirres"><SucursalPageWrapper branch="siquirres" lang="en" /></Route>
+        <Route path="/en/services/dental"><DentalHubPageWrapper lang="en" /></Route>
+        <Route path="/en/services/dental/:slug">{(params) => <DentalServiceDetailPageWrapper slug={params.slug} lang="en" />}</Route>
         <Route path="/en/data-policy"><PoliticaDatos lang="en" /></Route>
         <Route path="/en/refund-policy"><PoliticaDevoluciones lang="en" /></Route>
         <Route path="/en/medical-aesthetic"><LandingMedicos lang="en" /></Route>
