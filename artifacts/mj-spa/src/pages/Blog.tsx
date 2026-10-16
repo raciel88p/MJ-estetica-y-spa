@@ -13,12 +13,47 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
+const categoriesES = [
+  { id: "all", name: "Todos" },
+  { id: "medicina-estetica", name: "Servicios Médicos Estéticos" },
+  { id: "corporales", name: "Servicios Corporales" },
+  { id: "faciales", name: "Cuidados Faciales" },
+  { id: "dentales", name: "Servicios Dentales" },
+  { id: "capilar", name: "Trasplante Capilar" },
+  { id: "rituales-spa", name: "Rituales SPA" }
+];
+
+const categoriesEN = [
+  { id: "all", name: "All" },
+  { id: "medicina-estetica", name: "Medical Aesthetic Services" },
+  { id: "corporales", name: "Body Treatments" },
+  { id: "faciales", name: "Facial Care" },
+  { id: "dentales", name: "Dental Services" },
+  { id: "capilar", name: "Hair Transplant" },
+  { id: "rituales-spa", name: "SPA Rituals" }
+];
+
+function getPostCategory(post: any): string {
+  const title = (post.title || "").toLowerCase();
+  const role = (post.author?.role || "").toLowerCase();
+  const name = (post.author?.name || "").toLowerCase();
+
+  if (title.includes("denta") || title.includes("diente") || title.includes("limpieza") || role.includes("denta") || role.includes("odon")) return "dentales";
+  if (title.includes("capilar") || title.includes("trasplante") || title.includes("pelo") || role.includes("capilar")) return "capilar";
+  if (title.includes("botox") || title.includes("hilos") || title.includes("ácido") || title.includes("medici") || name.includes("dr.") || role.includes("médic")) return "medicina-estetica";
+  if (title.includes("corporal") || title.includes("masaje") || title.includes("celulitis") || title.includes("reductor") || role.includes("fisio")) return "corporales";
+  if (title.includes("spa") || title.includes("boda") || title.includes("relaj")) return "rituales-spa";
+  return "faciales";
+}
+
 export default function Blog({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   const [posts, setPosts] = useState<any[]>([]);
   const [authors, setAuthors] = useState<any[]>([]);
-  const [selectedFilter, setSelectedFilter] = useState<string>("all");
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [loading, setLoading] = useState(true);
   const t = useTranslations(lang);
+
+  const categories = lang === 'es' ? categoriesES : categoriesEN;
 
   useEffect(() => {
     Promise.all([
@@ -36,14 +71,14 @@ export default function Blog({ lang = 'es' }: { lang?: 'es' | 'en' }) {
       .catch(console.error);
   }, [lang]);
 
-  const filteredPosts = selectedFilter === "all"
+  const filteredPosts = selectedCategory === "all"
     ? posts
-    : posts.filter((p) => p.author?.name === selectedFilter);
+    : posts.filter((p) => getPostCategory(p) === selectedCategory);
 
   return (
     <div className="min-h-screen bg-white font-sans text-stone-900">
       <SEO
-        title={lang === 'es' ? "Blog & Publicaciones | MJ Fisio Estética y Spa" : "Blog & Articles | MJ Fisio Estética & Spa"}
+        title={lang === 'es' ? "Blog & Publicaciones por Sector Médico | MJ Fisio Estética y Spa" : "Blog & Articles by Medical Sector | MJ Physio Aesthetics & Spa"}
         description={lang === 'es' ? "Consejos de salud, medicina estética, odontología y bienestar en Turrialba y Siquirres." : "Health, medical aesthetic, dental care and wellness articles in Turrialba and Siquirres."}
       />
       <Navbar lang={lang} />
@@ -59,8 +94,8 @@ export default function Blog({ lang = 'es' }: { lang?: 'es' | 'en' }) {
             </h1>
             <p className="text-lg text-stone-600 max-w-xl mx-auto">
               {lang === 'es'
-                ? 'Consejos expertos sobre medicina estética, cuidado facial, salud dental y bienestar integral.'
-                : 'Expert advice on medical aesthetics, skincare, dental health, and holistic wellness.'}
+                ? 'Consejos expertos en medicina estética, cuidado facial, salud dental, corporal y bienestar integral.'
+                : 'Expert advice on medical aesthetics, skincare, dental health, body care, and holistic wellness.'}
             </p>
           </div>
 
@@ -70,39 +105,29 @@ export default function Blog({ lang = 'es' }: { lang?: 'es' | 'en' }) {
             </div>
           ) : (
             <>
-              {/* Category / Expert Filter Buttons */}
+              {/* Sector Category Filter Buttons */}
               <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200 mb-12 shadow-sm">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-stone-200/60">
                   <h3 className="font-serif font-bold text-stone-900 text-base">
-                    {lang === 'es' ? "Filtrar por Categoria de Experto" : "Filter by Expert Specialty"}
+                    {lang === 'es' ? "Filtrar Publicaciones por Sector Médico" : "Filter Articles by Medical Sector"}
                   </h3>
                   <span className="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full w-fit">
                     {filteredPosts.length} {lang === 'es' ? (filteredPosts.length === 1 ? 'Artículo' : 'Artículos') : (filteredPosts.length === 1 ? 'Article' : 'Articles')}
                   </span>
                 </div>
 
-                <div className="flex flex-wrap gap-2">
-                  <button
-                    onClick={() => setSelectedFilter("all")}
-                    className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
-                      selectedFilter === "all"
-                        ? "bg-primary text-white shadow-sm"
-                        : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
-                    }`}
-                  >
-                    {lang === 'es' ? "Todos" : "All"}
-                  </button>
-                  {authors.map((author: any) => (
+                <div className="flex flex-wrap gap-2.5">
+                  {categories.map((cat) => (
                     <button
-                      key={author._id}
-                      onClick={() => setSelectedFilter(author.name)}
+                      key={cat.id}
+                      onClick={() => setSelectedCategory(cat.id)}
                       className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
-                        selectedFilter === author.name
+                        selectedCategory === cat.id
                           ? "bg-primary text-white shadow-sm"
-                          : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
+                          : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200/80"
                       }`}
                     >
-                      {author.name} {author.role ? `• ${author.role}` : ''}
+                      {cat.name}
                     </button>
                   ))}
                 </div>
@@ -167,7 +192,7 @@ export default function Blog({ lang = 'es' }: { lang?: 'es' | 'en' }) {
                 <div className="text-center py-20 bg-stone-50 rounded-3xl border-2 border-dashed border-stone-200">
                   <p className="text-stone-400 font-medium">
                     {lang === 'es'
-                      ? 'No hay publicaciones para el filtro seleccionado.'
+                      ? 'No hay publicaciones para la categoría seleccionada.'
                       : 'No articles found for the selected category.'}
                   </p>
                 </div>

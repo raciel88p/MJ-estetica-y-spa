@@ -13,12 +13,35 @@ const posts = await sanityClient.fetch<any[]>(`*[_type == "post" && language == 
 }`);
 const authors = await sanityClient.fetch<any[]>(`*[_type == "author"] | order(name asc)`);
 const lang = 'es';
+
+const categoriesES = [
+  { id: "all", name: "Todos" },
+  { id: "medicina-estetica", name: "Servicios Médicos Estéticos" },
+  { id: "corporales", name: "Servicios Corporales" },
+  { id: "faciales", name: "Cuidados Faciales" },
+  { id: "dentales", name: "Servicios Dentales" },
+  { id: "capilar", name: "Trasplante Capilar" },
+  { id: "rituales-spa", name: "Rituales SPA" }
+];
+
+function getPostCategory(post: any): string {
+  const title = (post.title || "").toLowerCase();
+  const role = (post.author?.role || "").toLowerCase();
+  const name = (post.author?.name || "").toLowerCase();
+
+  if (title.includes("denta") || title.includes("diente") || title.includes("limpieza") || role.includes("denta") || role.includes("odon")) return "dentales";
+  if (title.includes("capilar") || title.includes("trasplante") || title.includes("pelo") || role.includes("capilar")) return "capilar";
+  if (title.includes("botox") || title.includes("hilos") || title.includes("ácido") || title.includes("medici") || name.includes("dr.") || role.includes("médic")) return "medicina-estetica";
+  if (title.includes("corporal") || title.includes("masaje") || title.includes("celulitis") || title.includes("reductor") || role.includes("fisio")) return "corporales";
+  if (title.includes("spa") || title.includes("boda") || title.includes("relaj")) return "rituales-spa";
+  return "faciales";
+}
 ---
 
 <Layout lang={lang}>
   <SEO
-    title="Blog & Publicaciones | MJ Fisio Estética y Spa"
-    description="Consejos de salud, medicina estética, odontología y bienestar en Turrialba y Siquirres."
+    title="Blog & Publicaciones por Sector Médico | MJ Fisio Estética y Spa"
+    description="Explora artículos clasificados por sector médico: Odontología, Medicina Estética, Corporales, Faciales, Trasplante Capilar y SPA."
     slot="seo"
     client:load
   />
@@ -45,19 +68,19 @@ const lang = 'es';
             <span class="italic font-light text-primary">Bienestar</span>
           </h1>
           <p class="text-lg md:text-xl text-white/60 font-light leading-relaxed max-w-xl">
-            Explora consejos expertos, tendencias en medicina estética, odontología integral y rituales de cuidado personal diseñados para tu mejor versión.
+            Explora consejos expertos en Medicina Estética, Odontología, Cuidado Facial, Corporal, Trasplante Capilar y Rituales SPA.
           </p>
         </div>
       </div>
     </section>
 
     <div class="container mx-auto px-6 -mt-12 relative z-20 pb-32">
-      {/* ── CATEGORÍAS & FILTRO POR EXPERTO ─────────────── */}
+      {/* ── FILTRO POR SECTOR MÉDICO ─────────────────── */}
       <div class="bg-white p-6 rounded-2xl shadow-xl border border-stone-200/80 mb-16" id="filtro-categoria">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-4 border-b border-stone-100">
           <div>
-            <h3 class="font-serif font-bold text-stone-900 text-lg">Filtrar Publicaciones por Categoria de Experto</h3>
-            <p class="text-stone-500 text-xs">Selecciona un tema o especialista para explorar artículos específicos</p>
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Filtrar Publicaciones por Sector Médico</h3>
+            <p class="text-stone-500 text-xs">Selecciona la temática de tu interés para explorar artículos especializados</p>
           </div>
           <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full w-fit">
             {posts.length} {posts.length === 1 ? 'Artículo' : 'Artículos'}
@@ -65,18 +88,16 @@ const lang = 'es';
         </div>
 
         <div class="flex flex-wrap gap-2.5" id="filter-buttons">
-          <button
-            data-filter="all"
-            class="filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-primary text-white shadow-sm"
-          >
-            Todos
-          </button>
-          {authors.map((author: any) => (
+          {categoriesES.map((cat, idx) => (
             <button
-              data-filter={author.name}
-              class="filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200/80"
+              data-filter={cat.id}
+              class={`filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
+                idx === 0
+                  ? "bg-primary text-white shadow-sm"
+                  : "bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200/80"
+              }`}
             >
-              {author.name} {author.role ? `• ${author.role}` : ''}
+              {cat.name}
             </button>
           ))}
         </div>
@@ -84,7 +105,7 @@ const lang = 'es';
 
       {/* ── POST DESTACADO ────────────────────────────── */}
       {posts.length > 0 && (
-        <article class="post-card group bg-white rounded-sm shadow-2xl overflow-hidden mb-20 border border-stone-100" data-author={posts[0].author?.name || ''}>
+        <article class="post-card group bg-white rounded-sm shadow-2xl overflow-hidden mb-20 border border-stone-100" data-category={getPostCategory(posts[0])}>
           <div class="flex flex-col lg:flex-row">
             <div class="lg:w-3/5 overflow-hidden">
               <a href={`/blog/${posts[0].slug.current}`} class="block h-full">
@@ -126,7 +147,7 @@ const lang = 'es';
       {/* ── GRID DE ARTÍCULOS ─────────────────────────── */}
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20" id="posts-grid">
         {posts.slice(1).map((post: any) => (
-          <article class="post-card group flex flex-col" data-author={post.author?.name || ''}>
+          <article class="post-card group flex flex-col" data-category={getPostCategory(post)}>
             <div class="relative aspect-[4/5] overflow-hidden bg-stone-100 mb-8 rounded-sm shadow-sm transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-1">
               {post.mainImage && (
                 <a href={`/blog/${post.slug.current}`} class="block h-full">
@@ -187,7 +208,7 @@ const lang = 'es';
         </div>
       )}
 
-      {/* ── NUESTROS EXPERTOS MOSTRANDO CATEGORÍA Y ESPECIALIDAD ── */}
+      {/* ── NUESTROS EXPERTOS ── */}
       {authors.length > 0 && (
         <div class="mt-32">
           <div class="text-center mb-12">
@@ -253,8 +274,8 @@ const lang = 'es';
           btn.classList.add("bg-primary", "text-white", "shadow-sm");
 
           cards.forEach((card) => {
-            const author = card.getAttribute("data-author");
-            if (filter === "all" || author === filter) {
+            const category = card.getAttribute("data-category");
+            if (filter === "all" || category === filter) {
               (card as HTMLElement).style.display = "";
             } else {
               (card as HTMLElement).style.display = "none";
