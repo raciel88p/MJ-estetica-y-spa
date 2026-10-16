@@ -4134,57 +4134,72 @@ export const servicePages: MultiLangServicePageData[] = [
       slug: "auriculoterapia",
       name: "Auriculoterapia",
       fullTitle:
-        "Auriculoterapia en Turrialba para Ansiedad, Estrés y Control de Peso",
-      tagline: "El equilibrio del cuerpo a través del oído",
+        "Auriculoterapia en Turrialba y Siquirres: Bienestar Emocional, Estrés y Control de Peso",
+      tagline: "Vuelve a sentirte bien contigo misma. Tu bienestar también merece un espacio.",
       heroBg: "auriculoterapia-bg.webp",
       heroDescription:
-        "Recupera el equilibrio de tu cuerpo y mente con auriculoterapia en Turrialba",
+        "¿Sientes que el estrés del día a día te está robando la tranquilidad? ¿Te cuesta controlar los antojos cuando estás ansiosa o sientes que, por cuidar de todos, has dejado de cuidarte a ti misma?<br /><br />A veces, recuperar el equilibrio comienza con algo tan sencillo como regalarte un momento para ti.<br /><br />En <strong>MJ Fisio Estética & Wellness Center</strong>, te ofrecemos sesiones personalizadas de <strong>auriculoterapia en Turrialba</strong>, diseñadas para acompañarte en tu camino hacia el bienestar físico y emocional. Si vives en <strong>Siquirres</strong>, también puedes consultar por nuestras opciones de atención y disponibilidad.<br /><br />Nuestro objetivo es brindarte un espacio de atención profesional donde puedas desconectarte de las preocupaciones cotidianas y comenzar a trabajar en tus objetivos de bienestar.<br /><br />✨ <strong>No se trata de cambiarlo todo de un día para otro. Se trata de comenzar a cuidarte, un paso a la vez.</strong>",
       benefits: [
-        "Reduce la ansiedad y el apetito emocional de forma natural",
-        "Apoya el control de peso y los hábitos alimenticios",
-        "Alivia el estrés crónico y mejora la calidad del sueño",
-        "Técnica indolora y completamente no invasiva",
-        "Equilibra el sistema nervioso y endocrino",
-        "Compatible con cualquier otro tratamiento estético o médico",
+        "Encuentra un espacio para liberar el estrés y detenerte a respirar",
+        "Trabaja tus hábitos alimenticios con acompañamiento y estrategias de autocuidado",
+        "Dedícate tiempo para ti en un entorno de comodidad y atención individual",
+        "Incorpora una terapia complementaria a tu rutina sin cirugías ni tiempo de recuperación",
+        "Personalización de cada sesión de acuerdo con tus necesidades y objetivos",
+        "Atención dedicada en Turrialba y consultas para personas de Siquirres",
       ],
       items: [
         {
-          title: "Auriculoterapia para Control de Peso",
+          title: "Auriculoterapia para Manejo del Estrés & Relajación",
           description:
-            "Estimulación de los puntos auriculares relacionados con el metabolismo, el apetito y la ansiedad alimentaria. Especialmente indicada como complemento a programas de alimentación y tratamientos reductores.",
-          duration: "30 min",
+            "Incorpora un espacio de profunda relajación en medio de una rutina exigente, ayudando a calmar la tensión neuromuscular y favoreciendo el descanso.",
+          duration: "30-45 min",
           price: "Consultar precio",
         },
         {
-          title: "Auriculoterapia Antiestres y Bienestar",
+          title: "Auriculoterapia para Bienestar Emocional & Antojos",
           description:
-            "Protocolo de equilibrio emocional y del sistema nervioso para reducir el estrés crónico, la ansiedad y el insomnio. Produce una sensación de calma profunda y bienestar que se mantiene días después.",
-          duration: "30 min",
+            "Acompaña hábitos de autocuidado y estrategias para el manejo de la ansiedad alimentaria y los antojos dentro de un plan de vida saludable.",
+          duration: "30-45 min",
           price: "Consultar precio",
         },
         {
-          title: "Auriculoterapia para Control del Dolor",
+          title: "Auriculoterapia como Apoyo al Control de Peso",
           description:
-            "Estimulación de los puntos auriculares analgésicos para el manejo de dolores musculares, articulares o cefaleas tensionales. Un enfoque complementario natural al tratamiento del dolor crónico.",
-          duration: "30 min",
+            "Funciona como terapia complementaria dentro de un proceso integral que incluye alimentación equilibrada, actividad física y acompañamiento profesional.",
+          duration: "30-45 min",
           price: "Consultar precio",
         },
       ],
       faq: [
         {
-          question: "¿Es dolorosa la auriculoterapia?",
+          question: "¿La auriculoterapia duele?",
           answer:
-            "No. Se utilizan semillas de mostaza o pequeñas agujas muy superficiales que producen una leve presión. La mayoría de las clientas lo viven como un tratamiento relajante y agradable.",
+            "Depende del método utilizado. Algunas técnicas producen una sensación leve de presión o sensibilidad. Si se utilizan microagujas, pueden presentarse molestias locales breves. Siempre informamos al profesional si sientes incomodidad para adaptar el estímulo.",
         },
         {
-          question: "¿En cuántas sesiones se notan los efectos?",
+          question: "¿Cuántas sesiones necesito?",
           answer:
-            "Muchas clientas sienten cambios desde la primera sesión: menor ansiedad, mejor calidad de sueño o reducción del apetito. Para resultados consolidados recomendamos un ciclo de 6 a 10 sesiones semanales.",
+            "Depende de tus objetivos, del método empleado y de tu respuesta individual. Antes de recomendar una frecuencia, es importante establecer expectativas realistas y revisar tu evolución paso a paso.",
         },
         {
-          question: "¿Puedo hacerla junto con otros tratamientos?",
+          question: "¿La auriculoterapia sirve para bajar de peso?",
           answer:
-            "Sí, es perfectamente compatible y de hecho se potencia con tratamientos como el drenaje linfático, la nutrición o cualquier programa de reducción de medidas. Es un excelente complemento holístico.",
+            "No se ha demostrado de forma concluyente que la auriculoterapia produzca una pérdida de peso significativa por sí sola. Si tu objetivo es controlar tu peso, puede consultarse como terapia complementaria dentro de un programa integral de alimentación, actividad física y acompañamiento profesional.",
+        },
+        {
+          question: "¿Puede ayudar con la ansiedad y el estrés?",
+          answer:
+            "Algunas personas buscan la auriculoterapia como complemento para relajarse. Sin embargo, no sustituye la evaluación ni el tratamiento profesional de los trastornos de ansiedad. Si los síntomas persisten o afectan tu vida diaria, busca atención médica o psicológica.",
+        },
+        {
+          question: "¿Dónde puedo recibir auriculoterapia en Turrialba?",
+          answer:
+            "Puedes consultar por las sesiones de auriculoterapia en MJ Fisio Estética & Wellness Center, en Turrialba, Cartago, y conocer los horarios disponibles.",
+        },
+        {
+          question: "¿Atienden a personas de Siquirres?",
+          answer:
+            "Sí. Puedes contactarnos para consultar las opciones de atención disponibles para personas que viven en Siquirres y coordinar tu visita.",
         },
       ],
     },
