@@ -13,12 +13,34 @@ const posts = await sanityClient.fetch<any[]>(`*[_type == "post" && language == 
 }`);
 const authors = await sanityClient.fetch<any[]>(`*[_type == "author"] | order(name asc)`);
 const lang = 'en';
+
+const categoriesEN = [
+  { id: "all", name: "All" },
+  { id: "medicina-estetica", name: "Medical Aesthetic Services" },
+  { id: "corporales", name: "Body Treatments" },
+  { id: "faciales", name: "Facial Care" },
+  { id: "dentales", name: "Dental Services" },
+  { id: "capilar", name: "Hair Transplant" },
+  { id: "rituales-spa", name: "SPA Rituals" }
+];
+
+function getPostCategory(post: any): string {
+  const title = (post.title || "").toLowerCase();
+  const role = (post.author?.role || "").toLowerCase();
+
+  if (title.includes("denta") || title.includes("teeth") || title.includes("clean") || role.includes("denta")) return "dentales";
+  if (title.includes("capilar") || title.includes("transplant") || title.includes("hair")) return "capilar";
+  if (title.includes("botox") || title.includes("thread") || title.includes("acid") || title.includes("medic") || role.includes("medic")) return "medicina-estetica";
+  if (title.includes("body") || title.includes("massage") || title.includes("cellulite")) return "corporales";
+  if (title.includes("spa") || title.includes("bridal") || title.includes("relax")) return "rituales-spa";
+  return "faciales";
+}
 ---
 
 <Layout lang={lang}>
   <SEO
-    title="Blog & Articles | MJ Physio Aesthetics & Spa"
-    description="Health, medical aesthetic, dental care and wellness articles in Turrialba and Siquirres."
+    title="Blog & Articles by Medical Sector | MJ Physio Aesthetics & Spa"
+    description="Explore articles categorized by medical sector: Dentistry, Medical Aesthetics, Body, Facial, Hair Transplant, and SPA."
     slot="seo"
     client:load
   />
@@ -45,19 +67,19 @@ const lang = 'en';
             <span class="italic font-light text-primary">Journal</span>
           </h1>
           <p class="text-lg md:text-xl text-white/60 font-light leading-relaxed max-w-xl">
-            Explore expert insights, medical aesthetic trends, dentistry news, and self-care rituals designed to bring out your best self.
+            Explore expert insights across Medical Aesthetics, Dentistry, Facial & Body Care, Hair Restoration, and SPA Rituals.
           </p>
         </div>
       </div>
     </section>
 
     <div class="container mx-auto px-6 -mt-12 relative z-20 pb-32">
-      {/* ── EXPERT CATEGORY FILTER ─────────────────────── */}
+      {/* ── SECTOR CATEGORY FILTER ────────────────────── */}
       <div class="bg-white p-6 rounded-2xl shadow-xl border border-stone-200/80 mb-16" id="filtro-categoria">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-4 border-b border-stone-100">
           <div>
-            <h3 class="font-serif font-bold text-stone-900 text-lg">Filter Articles by Expert Category</h3>
-            <p class="text-stone-500 text-xs">Select a specialist or topic to explore tailored articles</p>
+            <h3 class="font-serif font-bold text-stone-900 text-lg">Filter Articles by Medical Sector</h3>
+            <p class="text-stone-500 text-xs">Select a sector to explore specialized publications and advice</p>
           </div>
           <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full w-fit">
             {posts.length} {posts.length === 1 ? 'Article' : 'Articles'}
@@ -65,18 +87,16 @@ const lang = 'en';
         </div>
 
         <div class="flex flex-wrap gap-2.5" id="filter-buttons">
-          <button
-            data-filter="all"
-            class="filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-primary text-white shadow-sm"
-          >
-            All
-          </button>
-          {authors.map((author: any) => (
+          {categoriesEN.map((cat, idx) => (
             <button
-              data-filter={author.name}
-              class="filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200/80"
+              data-filter={cat.id}
+              class={`filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all ${
+                idx === 0
+                  ? "bg-primary text-white shadow-sm"
+                  : "bg-stone-100 text-stone-700 hover:bg-stone-200 border border-stone-200/80"
+              }`}
             >
-              {author.name} {author.role ? `• ${author.role}` : ''}
+              {cat.name}
             </button>
           ))}
         </div>
@@ -84,7 +104,7 @@ const lang = 'en';
 
       {/* ── FEATURED POST ────────────────────────────── */}
       {posts.length > 0 && (
-        <article class="post-card group bg-white rounded-sm shadow-2xl overflow-hidden mb-20 border border-stone-100" data-author={posts[0].author?.name || ''}>
+        <article class="post-card group bg-white rounded-sm shadow-2xl overflow-hidden mb-20 border border-stone-100" data-category={getPostCategory(posts[0])}>
           <div class="flex flex-col lg:flex-row">
             <div class="lg:w-3/5 overflow-hidden">
               <a href={`/en/blog/${posts[0].slug.current}`} class="block h-full">
@@ -126,7 +146,7 @@ const lang = 'en';
       {/* ── POSTS GRID ─────────────────────────── */}
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-20" id="posts-grid">
         {posts.slice(1).map((post: any) => (
-          <article class="post-card group flex flex-col" data-author={post.author?.name || ''}>
+          <article class="post-card group flex flex-col" data-category={getPostCategory(post)}>
             <div class="relative aspect-[4/5] overflow-hidden bg-stone-100 mb-8 rounded-sm shadow-sm transition-all duration-500 group-hover:shadow-xl group-hover:-translate-y-1">
               {post.mainImage && (
                 <a href={`/en/blog/${post.slug.current}`} class="block h-full">
@@ -253,8 +273,8 @@ const lang = 'en';
           btn.classList.add("bg-primary", "text-white", "shadow-sm");
 
           cards.forEach((card) => {
-            const author = card.getAttribute("data-author");
-            if (filter === "all" || author === filter) {
+            const category = card.getAttribute("data-category");
+            if (filter === "all" || category === filter) {
               (card as HTMLElement).style.display = "";
             } else {
               (card as HTMLElement).style.display = "none";
