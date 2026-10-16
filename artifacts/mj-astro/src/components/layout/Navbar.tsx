@@ -353,13 +353,6 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                           >
                             {lang === 'es' ? 'Servicios Dentales' : 'Dental Services'}
                           </a>
-                          <a
-                            href={lang === 'es' ? "/servicios/dental" : "/en/services/dental"}
-                            className="block px-2 py-1 text-[11px] font-bold text-stone-900 bg-primary/10 hover:bg-primary hover:text-white transition-all duration-200 rounded mb-1"
-                            onClick={() => setOpenDropdown(null)}
-                          >
-                            {lang === 'es' ? '🦷 Odontología Siquirres (Hub)' : '🦷 Siquirres Dental (Hub)'}
-                          </a>
                           {dentalList.map((item) => {
                             const subHref = lang === 'es'
                               ? `/servicios/dental/${item.slug}`
