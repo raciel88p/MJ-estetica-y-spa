@@ -1,3 +1,4 @@
+import { BranchesSection } from '../common/BranchesSection';
 import { withAppProviders } from "@/components/ReactAppWrapper";
 import { motion, AnimatePresence } from "framer-motion";
 import { CheckCircle2, Clock, Clock4, ChevronDown, ArrowRight, MessageCircle, Star, ShieldCheck, Award, UserCheck, GraduationCap, BadgeCheck, Download } from "lucide-react";
@@ -1584,6 +1585,7 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
         </section>
       )}
 
+      <BranchesSection lang={lang} />
       <Footer lang={lang} />
       <FloatingWhatsApp />
     </div>

@@ -1,3 +1,4 @@
+import { BranchesSection } from '../common/BranchesSection';
 import React, { useState } from "react";
 import { withAppProviders } from "@/components/ReactAppWrapper";
 import { SEO } from "@/components/SEO";
@@ -339,6 +340,7 @@ function DentalServiceDetailPageComponent({ slug, lang = "es" }: DentalServiceDe
         </div>
       </section>
 
+      <BranchesSection lang={lang} />
       <Footer lang={lang} />
       <FloatingWhatsApp />
     </div>
