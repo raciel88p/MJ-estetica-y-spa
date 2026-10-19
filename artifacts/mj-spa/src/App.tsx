@@ -1,3 +1,4 @@
+import { MembresiasPage } from './components/pages/MembresiasPage';
 import { lazy, Suspense, useEffect } from "react";
 import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
