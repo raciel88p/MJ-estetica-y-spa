@@ -15,6 +15,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { PersonalizedBanner } from "@/components/PersonalizedBanner";
+import { usePersonalization } from "@/lib/usePersonalization";
+import { CategoryInterest } from "@/lib/personalizationEngine";
 import { GoogleMap, MAPS_LINK, GOOGLE_REVIEW_LINK } from "@/components/GoogleMap";
 import { StatsBar } from "@/components/StatsBar";
 import { Button } from "@/components/ui/button";
@@ -48,10 +50,60 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   const content = lang === 'es' ? esLoc : enLoc;
   const [mounted, setMounted] = useState(false);
   const { toast } = useToast();
+  const { topCategory, profile } = usePersonalization();
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Personalized Hero Configs
+  const HERO_PERSONALIZATION: Record<CategoryInterest, {
+    bg: string;
+    tagline: Record<'es' | 'en', string>;
+    title: Record<'es' | 'en', string>;
+    titleItalic: Record<'es' | 'en', string>;
+    desc: Record<'es' | 'en', string>;
+  }> = {
+    'medicina-estetica': {
+      bg: '/images/medicina-estetica-hero.jpg',
+      tagline: { es: 'Medicina Estética & Armonización', en: 'Medical Aesthetics & Harmonization' },
+      title: { es: 'Realza tu Belleza', en: 'Enhance Your Beauty' },
+      titleItalic: { es: 'con Precisión Médica', en: 'with Medical Precision' },
+      desc: { es: 'Tratamientos médicos no invasivos, bótox, hilos tensores y ácido hialurónico con resultados naturales.', en: 'Non-invasive medical treatments, botox, tensor threads, and hyaluronic acid with natural results.' }
+    },
+    'reductivos': {
+      bg: '/images/reduccion-de-medidas-bg.webp',
+      tagline: { es: 'Reductivos & Moldeo Corporal', en: 'Body Sculpting & Weight Loss' },
+      title: { es: 'Moldea tu Silueta', en: 'Sculpt Your Figure' },
+      titleItalic: { es: 'sin Cirugías', en: 'Without Surgery' },
+      desc: { es: 'Tecnología avanzada de hidrolipoclasia, carboxiterapia y masajes reductivos para eliminar grasa localizada.', en: 'Advanced hydrolipoclasia, carboxytherapy, and body sculpting to eliminate stubborn fat.' }
+    },
+    'corporales': {
+      bg: '/images/masajes-corporales-bg.webp',
+      tagline: { es: 'Tratamientos Corporales Avanzados', en: 'Advanced Body Treatments' },
+      title: { es: 'Firmeza y Tonicidad', en: 'Firmness & Toning' },
+      titleItalic: { es: 'para tu Cuerpo', en: 'for Your Body' },
+      desc: { es: 'Levantamiento de glúteos, busto, tensado corporal y drenaje linfático profesional.', en: 'Buttock lifting, bust firming, body tightening, and professional lymphatic drainage.' }
+    },
+    'spa': {
+      bg: '/images/boda-spa-img.webp',
+      tagline: { es: 'Experiencia Spa & Relax', en: 'Spa & Relax Experience' },
+      title: { es: 'Desconexión y Bienestar', en: 'Unplug & Wellness' },
+      titleItalic: { es: 'para tu Mente y Cuerpo', en: 'for Mind and Body' },
+      desc: { es: 'Masajes relajantes, aromaterapia, rituales en pareja y experiencias sensoriales únicas.', en: 'Relaxing massages, aromatherapy, couples rituals, and unique sensory experiences.' }
+    },
+    'faciales': {
+      bg: '/images/hero-bg.webp',
+      tagline: { es: t('home.hero.tagline'), en: t('home.hero.tagline') },
+      title: { es: t('home.hero.title'), en: t('home.hero.title') },
+      titleItalic: { es: t('home.hero.title_italic'), en: t('home.hero.title_italic') },
+      desc: { es: t('home.hero.desc'), en: t('home.hero.desc') }
+    }
+  };
+
+  const currentHero = (profile.totalPageViews > 1 && HERO_PERSONALIZATION[topCategory])
+    ? HERO_PERSONALIZATION[topCategory]
+    : HERO_PERSONALIZATION['faciales'];
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -81,15 +133,17 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
       <section className="relative h-[90vh] min-h-[700px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/hero-bg.webp"
+            key={currentHero.bg}
+            src={currentHero.bg}
             alt="MJ Fisio Estética & Spa"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center transition-all duration-1000"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent md:bg-gradient-to-r md:from-black/70 md:via-black/30 md:to-transparent" />
         </div>
 
         <div className="container relative z-10 mx-auto px-6">
           <motion.div
+            key={topCategory}
             initial="hidden"
             animate="visible"
             variants={stagger}
@@ -97,22 +151,22 @@ function Home({ lang = 'es' }: { lang?: 'es' | 'en' }) {
           >
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-6">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase">{t('home.hero.tagline')}</span>
+              <span className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase">{currentHero.tagline[lang]}</span>
             </motion.div>
 
             <motion.h1
               variants={fadeUp}
               className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] mb-8"
             >
-              {t('home.hero.title')} <br />
-              <span className="italic font-light text-primary">{t('home.hero.title_italic')}</span>
+              {currentHero.title[lang]} <br />
+              <span className="italic font-light text-primary">{currentHero.titleItalic[lang]}</span>
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
               className="text-lg md:text-xl text-white/80 mb-10 max-w-xl leading-relaxed font-light"
             >
-              {t('home.hero.desc')}
+              {currentHero.desc[lang]}
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5">
