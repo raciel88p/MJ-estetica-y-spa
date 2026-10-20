@@ -110,7 +110,7 @@ export const MembresiasPage: React.FC<MembresiasPageProps> = ({ lang = 'es' }) =
                     <ul className="space-y-2 text-stone-700 text-sm">
                       <li className="flex items-start gap-2.5">
                         <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                        <span><strong>10% {isEn ? 'permanent discount' : 'de descuento permanente'}</strong> {isEn ? 'on aesthetic treatments and MJ products.' : 'en tratamientos estéticos y productos MJ.'}</span>
+                        <span><strong>10% {isEn ? 'permanent discount' : 'de descuento permanente'}</strong> {isEn ? 'on aesthetic treatments and MJ products.*' : 'en tratamientos estéticos y productos MJ.*'}</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -219,7 +219,7 @@ export const MembresiasPage: React.FC<MembresiasPageProps> = ({ lang = 'es' }) =
                       </li>
                       <li className="flex items-start gap-2.5">
                         <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                        <span><strong>10% {isEn ? 'discount' : 'de descuento'}</strong> {isEn ? 'on other aesthetic treatments and MJ products.' : 'en otros tratamientos estéticos y productos MJ.'}</span>
+                        <span><strong>10% {isEn ? 'discount' : 'de descuento'}</strong> {isEn ? 'on other aesthetic treatments and MJ products.*' : 'en otros tratamientos estéticos y productos MJ.*'}</span>
                       </li>
                       <li className="flex items-start gap-2.5">
                         <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
@@ -258,6 +258,20 @@ export const MembresiasPage: React.FC<MembresiasPageProps> = ({ lang = 'es' }) =
 
           </div>
         </section>
+
+        {/* Conditions Disclaimer Banner */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+          <div className="bg-amber-500/10 border border-amber-500/20 rounded-2xl p-6 text-center text-xs sm:text-sm text-stone-600">
+            <p className="font-semibold text-stone-800 mb-1">
+              {isEn ? '📌 Terms & Conditions (MJ Club):' : '📌 Condiciones de MJ Club:'}
+            </p>
+            <p>
+              {isEn
+                ? '* The 10% discount benefit in MJ Club is not applicable to medical aesthetic, nutritional, or psychological treatments.'
+                : '* Beneficios y descuentos de MJ Club no aplicables a tratamientos médico-estéticos, nutricionales o psicológicos.'}
+            </p>
+          </div>
+        </div>
 
         {/* Branches Section */}
         <div className="mt-20">
