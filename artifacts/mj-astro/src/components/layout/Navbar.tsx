@@ -393,6 +393,11 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
               </AnimatePresence>
             </div>
 
+            <a href={lang === 'es' ? "/membresias" : "/en/memberships"} className={`${linkBase} ${textClass} ${isActive("/membresias") || isActive("/memberships") ? "text-primary" : ""}`}>
+              MJ Club
+              {(isActive("/membresias") || isActive("/memberships")) && <ActiveIndicator />}
+            </a>
+
             <a href={lang === 'es' ? "/#contacto" : "/en/#contact"} className={`${linkBase} ${textClass}`}>
               {lang === 'es' ? "Contacto" : "Contact"}
             </a>
@@ -641,6 +646,14 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                   )}
                 </AnimatePresence>
               </div>
+
+              <a
+                href={lang === 'es' ? "/membresias" : "/en/memberships"}
+                className={`${isActive("/membresias") || isActive("/memberships") ? "text-primary font-bold" : "text-foreground"} text-lg py-3 border-b border-muted hover:text-primary transition-colors font-serif block`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                MJ Club
+              </a>
 
               <a
                 href={lang === 'es' ? "/#contacto" : "/en/#contact"}
