@@ -12,6 +12,24 @@ interface ContentOffer {
   highlight: Record<'es' | 'en', string>;
 }
 
+const AGE_EXTRA_RECOMMENDATIONS: Record<AgeBracket, Array<{ name: Record<'es' | 'en', string>; url: string }>> = {
+  young: [
+    { name: { es: 'Depilación Láser', en: 'Laser Hair Removal' }, url: '/servicios/depilacion-laser' },
+    { name: { es: 'Limpieza Hidratante', en: 'Hydrating Cleansing' }, url: '/servicios/limpieza-facial-hidratante' },
+    { name: { es: 'Perfilado de Labios', en: 'Lip Sculpting' }, url: '/servicios/relleno-de-labios' }
+  ],
+  mature: [
+    { name: { es: 'Bótox Full Face', en: 'Botox Full Face' }, url: '/servicios/botox-full-face' },
+    { name: { es: 'ADN Salmón', en: 'Salmon DNA' }, url: '/servicios/adn-salmon' },
+    { name: { es: 'Anticelulitis Pro', en: 'Anti-Cellulite Pro' }, url: '/servicios/tratamiento-anticelulitis' }
+  ],
+  advanced: [
+    { name: { es: 'Hilos Tensores', en: 'Tensor Threads' }, url: '/servicios/hilos-tensores' },
+    { name: { es: 'Tensado Corporal', en: 'Body Tightening' }, url: '/servicios/tensado-corporal' },
+    { name: { es: 'Medicina Estética', en: 'Medical Aesthetics' }, url: '/medicina-estetica' }
+  ]
+};
+
 const PERSONALIZED_OFFERS: Record<CategoryInterest, Record<AgeBracket, ContentOffer>> = {
   'faciales': {
     young: {
@@ -205,15 +223,34 @@ export const PersonalizedBanner: React.FC<PersonalizationProps> = ({ lang = 'es'
             </span>
           </div>
 
-          <div className="pt-2">
+          <div className="pt-2 flex flex-col gap-3">
             <a
               href={offer.ctaUrl}
               onClick={() => trackClick('personalized_banner_cta', { url: offer.ctaUrl })}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-stone-950 font-bold text-sm shadow-lg hover:shadow-amber-500/20 transition-all transform hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center sm:justify-start gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-stone-950 font-bold text-sm shadow-lg hover:shadow-amber-500/20 transition-all transform hover:-translate-y-0.5 w-fit"
             >
               <span>{offer.ctaText[lang]}</span>
               <ArrowRight className="w-4 h-4" />
             </a>
+
+            {/* Extra Age Recommendations Chips */}
+            <div className="pt-2 border-t border-stone-800/80">
+              <p className="text-[11px] font-semibold text-amber-300 mb-2">
+                {lang === 'es' ? 'Otros tratamientos recomendados para tu edad:' : 'Other recommended treatments for your age:'}
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {AGE_EXTRA_RECOMMENDATIONS[selectedAge].map((rec, i) => (
+                  <a
+                    key={i}
+                    href={rec.url}
+                    onClick={() => trackClick('age_extra_recommendation_click', { url: rec.url, age: selectedAge })}
+                    className="px-2.5 py-1 rounded-lg bg-stone-800/90 hover:bg-amber-500 hover:text-stone-950 text-stone-300 text-xs font-medium border border-stone-700 transition-all"
+                  >
+                    + {rec.name[lang]}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
