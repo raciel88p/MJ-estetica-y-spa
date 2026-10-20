@@ -78,7 +78,7 @@ const PERSONALIZED_OFFERS: Record<CategoryInterest, Record<AgeBracket, ContentOf
       title: { es: "Previene Líneas y Restaura el Volumen", en: "Prevent Lines & Restore Volume" },
       description: { es: "Tratamientos médicos estéticos no invasivos para mantener un rostro descansado y juvenil.", en: "Non-invasive medical aesthetic treatments to maintain a rested, youthful face." },
       ctaText: { es: "Explorar Bótox y Rellenos", en: "Explore Botox & Fillers" },
-      ctaUrl: "/servicios/botox",
+      ctaUrl: "/servicios/botox-full-face",
       badge: { es: "Pre-Aging Pro (30-45)", en: "Pre-Aging Pro (30-45)" },
       highlight: { es: "Toxina Botulínica + Ácido Hialurónico", en: "Botulinum Toxin + Hyaluronic Acid" }
     },
