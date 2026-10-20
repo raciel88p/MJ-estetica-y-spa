@@ -4,6 +4,7 @@ import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
+import { BranchesSection } from "@/components/common/BranchesSection";
 import { StatsBar } from "@/components/StatsBar";
 import {
   CheckCircle2,
@@ -124,8 +125,8 @@ function LandingMedicos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <SEO
-        title={lang === 'es' ? "Tratamientos Médico-Estéticos en Turrialba | Armonización Facial" : "Medical Aesthetic Treatments in Turrialba | MJ Estética & Wellness"}
-        description={lang === 'es' ? "Armonización facial y bienestar estético con resultados naturales en Turrialba. Botox, rellenos, bioestimuladores y protocolos personalizados. MJ Estética." : "Facial harmony and aesthetic wellness with natural, progressive results in Turrialba. Discover personalized medical aesthetic protocols at MJ Estética & Wellness Center."}
+        title={lang === 'es' ? "Tratamientos Médico-Estéticos en Turrialba & Siquirres | Armonización Facial" : "Medical Aesthetic Treatments in Turrialba & Siquirres | MJ Estética & Wellness"}
+        description={lang === 'es' ? "Armonización facial y bienestar estético con resultados naturales en Turrialba y Siquirres. Botox, rellenos, bioestimuladores y protocolos personalizados. MJ Estética." : "Facial harmony and aesthetic wellness with natural, progressive results in Turrialba & Siquirres. Discover personalized medical aesthetic protocols at MJ Estética & Wellness Center."}
         canonical={lang === 'es' ? "/medicina-estetica" : "/en/medical-aesthetic"}
         lang={lang}
       />
@@ -157,7 +158,7 @@ function LandingMedicos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
             transition={{ delay: 0.1, duration: 0.6 }}
             className="text-5xl sm:text-6xl md:text-7xl font-serif text-white leading-tight mb-6"
           >
-            {lang === 'es' ? "Tratamientos" : "Medical Aesthetic"} <span className="text-primary italic">{lang === 'es' ? "Médico-Estéticos" : "Treatments"}</span> {lang === 'es' ? "en Turrialba" : "in Turrialba"}
+            {lang === 'es' ? "Tratamientos" : "Medical Aesthetic"} <span className="text-primary italic">{lang === 'es' ? "Médico-Estéticos" : "Treatments"}</span> {lang === 'es' ? "en Turrialba & Siquirres" : "in Turrialba & Siquirres"}
           </motion.h1>
 
           <motion.p
@@ -701,7 +702,7 @@ function LandingMedicos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
             <CTAButton label={lang === 'es' ? "Agendar valoración por WhatsApp" : "Book Your Aesthetic Consultation"} id="final-cta-medicos" className="text-lg px-12 py-5 shadow-2xl" />
 
             <div className="mt-16 pt-8 border-t border-stone-200">
-              <p className="text-stone-900 font-serif font-bold text-lg mb-1">📍 MJ Estética & Wellness Center — Turrialba</p>
+              <p className="text-stone-900 font-serif font-bold text-lg mb-1">📍 MJ Estética & Wellness Center — Turrialba & Siquirres</p>
               <p className="text-stone-500 text-sm">
                 {lang === 'es'
                   ? "Atención wellness y médico-estética premium orientada a resultados naturales y progresivos."
@@ -711,6 +712,9 @@ function LandingMedicos({ lang = 'es' }: { lang?: 'es' | 'en' }) {
           </motion.div>
         </div>
       </section>
+
+      {/* Hub de Turrialba y Siquirres */}
+      <BranchesSection lang={lang} />
 
       <Footer lang={lang} />
       <FloatingWhatsApp />
