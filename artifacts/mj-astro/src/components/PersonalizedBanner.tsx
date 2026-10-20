@@ -34,7 +34,7 @@ const PERSONALIZED_OFFERS: Record<CategoryInterest, Record<AgeBracket, ContentOf
       title: { es: "Rejuvenecimiento Facial Profundo", en: "Deep Facial Rejuvenation" },
       description: { es: "Atenúa arrugas marcadas, restaura la firmeza y rejuvenece tu piel de forma natural y segura.", en: "Reduce deep wrinkles, restore firmness and rejuvenate your skin naturally and safely." },
       ctaText: { es: "Ver Protocolos Antiaging", en: "View Antiaging Protocols" },
-      ctaUrl: "/servicios/armonizacion-facial",
+      ctaUrl: "/medicina-estetica",
       badge: { es: "Protocolo Anti-Edad Pro (46+)", en: "Pro Anti-Age Protocol (46+)" },
       highlight: { es: "Hilos Tensores + Bótox", en: "Tensor Threads + Botox" }
     }
@@ -78,7 +78,7 @@ const PERSONALIZED_OFFERS: Record<CategoryInterest, Record<AgeBracket, ContentOf
       title: { es: "Previene Líneas y Restaura el Volumen", en: "Prevent Lines & Restore Volume" },
       description: { es: "Tratamientos médicos estéticos no invasivos para mantener un rostro descansado y juvenil.", en: "Non-invasive medical aesthetic treatments to maintain a rested, youthful face." },
       ctaText: { es: "Explorar Bótox y Rellenos", en: "Explore Botox & Fillers" },
-      ctaUrl: "/servicios/botox",
+      ctaUrl: "/servicios/botox-full-face",
       badge: { es: "Pre-Aging Pro (30-45)", en: "Pre-Aging Pro (30-45)" },
       highlight: { es: "Toxina Botulínica + Ácido Hialurónico", en: "Botulinum Toxin + Hyaluronic Acid" }
     },
@@ -86,7 +86,7 @@ const PERSONALIZED_OFFERS: Record<CategoryInterest, Record<AgeBracket, ContentOf
       title: { es: "Efecto Lifting Sin Cirugía", en: "Non-Surgical Lifting Effect" },
       description: { es: "Tratamientos médicos avanzados para recuperar el óvalo facial y devolver la densidad a la piel.", en: "Advanced medical treatments to restore facial contour and skin density." },
       ctaText: { es: "Ver Armonización Avanzada", en: "View Advanced Harmonization" },
-      ctaUrl: "/servicios/armonizacion-facial",
+      ctaUrl: "/medicina-estetica",
       badge: { es: "Lifting Médico (46+)", en: "Medical Lifting (46+)" },
       highlight: { es: "Hilos Tensores + Armonización", en: "Tensor Threads + Harmonization" }
     }
