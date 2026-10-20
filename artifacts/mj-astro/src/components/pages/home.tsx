@@ -14,6 +14,7 @@ import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Marquee } from "@/components/Marquee";
+import { PersonalizedBanner } from "@/components/PersonalizedBanner";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { GoogleMap, MAPS_LINK, GOOGLE_REVIEW_LINK } from "@/components/GoogleMap";
 import { StatsBar } from "@/components/StatsBar";
@@ -143,6 +144,11 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
           </motion.div>
         </div>
       </section>
+
+      {/* ── PERSONALIZED MARKETING BANNER ──────────────── */}
+      <div className="container mx-auto px-6">
+        <PersonalizedBanner lang={lang} />
+      </div>
 
       {/* ── TRUST BAR ──────────────────────────────────── */}
       <section className="bg-[#050c14] py-12 border-b border-white/5">

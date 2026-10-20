@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { WebMCPRegistry } from "../components/WebMCPRegistry";
 import { CookieBanner } from "../components/CookieBanner";
+import { AnalyticsWidget } from "../components/AnalyticsWidget";
 
 interface Props {
 	title?: string;
@@ -37,6 +38,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 		<slot />
 		<CookieBanner client:load lang={lang as "es" | "en"} />
+		<AnalyticsWidget client:load lang={lang as "es" | "en"} />
 	</body>
 </html>
 
