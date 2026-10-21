@@ -70,7 +70,7 @@ export const MembresiasPage: React.FC<MembresiasPageProps> = ({ lang = 'es' }) =
                 </h2>
 
                 <div className="flex items-baseline gap-2 mb-6">
-                  <span className="text-3xl sm:text-4xl font-serif text-amber-700 font-normal">₡30.000</span>
+                  <span className="text-3xl sm:text-4xl font-serif text-amber-700 font-normal">₡30.915</span>
                   <span className="text-stone-500 text-sm font-medium">{isEn ? '/ month' : '/ mes'}</span>
                 </div>
 
