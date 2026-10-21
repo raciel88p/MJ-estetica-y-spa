@@ -3,7 +3,6 @@ import { lazy, Suspense, useEffect } from "react";
 import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
-import { AnalyticsWidget } from "@/components/AnalyticsWidget";
 import Home from "@/pages/home";
 import { servicePages } from "@/data/services";
 import AdminPage from "@/pages/AdminPage";

@@ -132,7 +132,6 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
 
         <div className="container relative z-10 mx-auto px-6">
           <motion.div
-            key={topCategory}
             initial="hidden"
             animate="visible"
             variants={stagger}
