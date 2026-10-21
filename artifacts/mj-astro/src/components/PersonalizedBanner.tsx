@@ -12,16 +12,22 @@ const AGE_EXTRA_RECOMMENDATIONS: Record<AgeBracket, { labelEs: string; labelEn: 
     { labelEs: 'Depilación Láser', labelEn: 'Laser Hair Removal', path: '/servicios/depilacion-laser' },
     { labelEs: 'Limpieza Hidratante', labelEn: 'Hydrating Facial Cleanse', path: '/servicios/limpieza-facial-profunda' },
     { labelEs: 'Perfilado de Labios', labelEn: 'Lip Contouring', path: '/servicios/relleno-de-labios' },
+    { labelEs: 'Hollywood Peel', labelEn: 'Hollywood Carbon Peel', path: '/servicios/hollywood-peel' },
+    { labelEs: 'Láser Acné', labelEn: 'Acne Laser Care', path: '/servicios/laser-acne' },
   ],
   mature: [
     { labelEs: 'Bótox Full Face', labelEn: 'Full Face Botox', path: '/servicios/botox-full-face' },
     { labelEs: 'ADN Salmón', labelEn: 'Salmon DNA Biorevitalizer', path: '/servicios/adn-salmon' },
     { labelEs: 'Anticelulitis Pro', labelEn: 'Pro Anti-Cellulite', path: '/servicios/tratamiento-anticelulitis' },
+    { labelEs: 'Radiofrecuencia Facial', labelEn: 'Facial Radiofrequency', path: '/servicios/radiofrecuencia-facial' },
+    { labelEs: 'Carboxiterapia', labelEn: 'Carboxytherapy', path: '/servicios/carboxiterapia' },
   ],
   advanced: [
     { labelEs: 'Hilos Tensores', labelEn: 'Tension Threads', path: '/servicios/hilos-tensores' },
     { labelEs: 'Tensado Corporal', labelEn: 'Body Firming', path: '/servicios/tensado-corporal' },
     { labelEs: 'Medicina Estética', labelEn: 'Medical Aesthetics', path: '/medicina-estetica' },
+    { labelEs: 'Rejuvenecimiento Láser', labelEn: 'Laser Rejuvenation', path: '/servicios/rejuvenecimiento-facial-laser' },
+    { labelEs: 'Hilos de Colágeno', labelEn: 'Collagen Threads', path: '/servicios/hilos-colageno' },
   ],
 };
 

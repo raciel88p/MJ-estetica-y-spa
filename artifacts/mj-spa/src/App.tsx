@@ -69,6 +69,7 @@ function Router() {
         <Route path="/buzon-sugerencias" component={BuzonSugerencias} />
         <Route path="/mapa-del-sitio" component={SitemapPage} />
         <Route path="/paquetes" component={Paquetes} />
+        <Route path="/membresias"><MembresiasPage lang="es" /></Route>
         <Route path="/servicios/corporales" component={TratamientosCorporales} />
         <Route path="/servicios/faciales" component={TratamientosFaciales} />
         <Route path="/servicios/piernas" component={TratamientosPiernas} />
@@ -93,6 +94,7 @@ function Router() {
         <Route path="/en/suggestion-box"><BuzonSugerencias lang="en" /></Route>
         <Route path="/en/sitemap"><SitemapPage lang="en" /></Route>
         <Route path="/en/packages"><Paquetes lang="en" /></Route>
+        <Route path="/en/memberships"><MembresiasPage lang="en" /></Route>
         <Route path="/en/services/body-treatments"><TratamientosCorporales lang="en" /></Route>
         <Route path="/en/services/facials"><TratamientosFaciales lang="en" /></Route>
         <Route path="/en/services/leg-treatments"><TratamientosPiernas lang="en" /></Route>
