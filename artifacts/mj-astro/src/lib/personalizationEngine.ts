@@ -1,5 +1,5 @@
-export type AgeBracket = 'young' | 'mature' | 'advanced'; // young: 18-29, mature: 30-45, advanced: 46+
-export type CategoryInterest = 'medicina-estetica' | 'faciales' | 'reductivos' | 'corporales' | 'spa';
+export type AgeBracket = 'young' | 'mature' | 'advanced';
+export type CategoryInterest = 'faciales' | 'reductivos' | 'medicina-estetica' | 'corporales' | 'spa';
 
 export interface AnalyticsEvent {
   eventType: 'impression' | 'click' | 'email_captured' | 'age_selected' | 'page_view';
@@ -10,62 +10,50 @@ export interface AnalyticsEvent {
 
 export interface UserPersonalizationProfile {
   categoryScores: Record<CategoryInterest, number>;
-  topCategory: CategoryInterest;
   inferredAgeBracket: AgeBracket;
   explicitAgeBracket?: AgeBracket;
-  userEmail?: string;
+  email?: string;
   totalPageViews: number;
-  lastVisitedPath: string;
-  lastVisitedAt: number;
-  analyticsEvents: AnalyticsEvent[];
+  eventsHistory: AnalyticsEvent[];
+  lastUpdated: number;
 }
 
 const STORAGE_KEY = 'marysart_personalization_profile_v1';
 
 const DEFAULT_SCORES: Record<CategoryInterest, number> = {
+  faciales: 1,
+  reductivos: 0,
   'medicina-estetica': 0,
-  'faciales': 0,
-  'reductivos': 0,
-  'corporales': 0,
-  'spa': 0,
+  corporales: 0,
+  spa: 0,
 };
 
-export function getInitialProfile(): UserPersonalizationProfile {
-  if (typeof window === 'undefined') {
-    return {
-      categoryScores: { ...DEFAULT_SCORES },
-      topCategory: 'faciales',
-      inferredAgeBracket: 'young',
-      totalPageViews: 0,
-      lastVisitedPath: '/',
-      lastVisitedAt: Date.now(),
-      analyticsEvents: [],
-    };
-  }
+const DEFAULT_PROFILE: UserPersonalizationProfile = {
+  categoryScores: { ...DEFAULT_SCORES },
+  inferredAgeBracket: 'mature',
+  totalPageViews: 0,
+  eventsHistory: [],
+  lastUpdated: Date.now(),
+};
 
+export function getStoredProfile(): UserPersonalizationProfile {
+  if (typeof window === 'undefined') return DEFAULT_PROFILE;
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) {
-      const parsed = JSON.parse(raw);
-      return {
-        ...parsed,
-        categoryScores: { ...DEFAULT_SCORES, ...(parsed.categoryScores || {}) },
-        analyticsEvents: parsed.analyticsEvents || [],
-      };
-    }
+    if (!raw) return DEFAULT_PROFILE;
+    const parsed = JSON.parse(raw);
+    return {
+      ...DEFAULT_PROFILE,
+      ...parsed,
+      categoryScores: {
+        ...DEFAULT_SCORES,
+        ...(parsed.categoryScores || {}),
+      },
+      eventsHistory: Array.isArray(parsed.eventsHistory) ? parsed.eventsHistory : [],
+    };
   } catch (e) {
-    console.warn('Error reading personalization profile from localStorage', e);
+    return DEFAULT_PROFILE;
   }
-
-  return {
-    categoryScores: { ...DEFAULT_SCORES },
-    topCategory: 'faciales',
-    inferredAgeBracket: 'young',
-    totalPageViews: 0,
-    lastVisitedPath: typeof window !== 'undefined' ? window.location.pathname : '/',
-    lastVisitedAt: Date.now(),
-    analyticsEvents: [],
-  };
 }
 
 export function saveProfile(profile: UserPersonalizationProfile): void {
@@ -73,125 +61,117 @@ export function saveProfile(profile: UserPersonalizationProfile): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(profile));
   } catch (e) {
-    console.warn('Error saving personalization profile to localStorage', e);
+    // Ignore storage quota errors
   }
 }
 
-export function inferCategoryAndAgeFromPath(path: string): { category?: CategoryInterest; ageWeight?: AgeBracket } {
-  const cleanPath = path.toLowerCase();
+export function getDominantCategory(scores: Record<CategoryInterest, number>): CategoryInterest {
+  let highestCategory: CategoryInterest = 'faciales';
+  let maxScore = -1;
+  const categories: CategoryInterest[] = ['faciales', 'reductivos', 'medicina-estetica', 'corporales', 'spa'];
 
-  if (cleanPath.includes('medicina-estetica') || cleanPath.includes('botox') || cleanPath.includes('hilos') || cleanPath.includes('armonizacion') || cleanPath.includes('trasplante-capilar') || cleanPath.includes('medical-aesthetic')) {
-    return { category: 'medicina-estetica', ageWeight: 'mature' };
-  }
-  if (cleanPath.includes('reductivos') || cleanPath.includes('hidrolipoclasia') || cleanPath.includes('anticelulitis') || cleanPath.includes('carboxiterapia') || cleanPath.includes('iron-beauty')) {
-    return { category: 'reductivos', ageWeight: 'mature' };
-  }
-  if (cleanPath.includes('corporal') || cleanPath.includes('masajes-corporales') || cleanPath.includes('levantamiento') || cleanPath.includes('tensado-corporal')) {
-    return { category: 'corporales', ageWeight: 'mature' };
-  }
-  if (cleanPath.includes('spa') || cleanPath.includes('boda') || cleanPath.includes('parejas') || cleanPath.includes('embarazadas') || cleanPath.includes('relajante')) {
-    return { category: 'spa', ageWeight: 'young' };
-  }
-  if (cleanPath.includes('facial') || cleanPath.includes('limpieza') || cleanPath.includes('acne') || cleanPath.includes('hydrafacial') || cleanPath.includes('ojeras')) {
-    return { category: 'faciales', ageWeight: 'young' };
-  }
-  if (cleanPath.includes('tensado') || cleanPath.includes('antiage') || cleanPath.includes('rejuvenecimiento')) {
-    return { category: 'medicina-estetica', ageWeight: 'advanced' };
+  for (const cat of categories) {
+    const score = scores[cat] || 0;
+    if (score > maxScore) {
+      maxScore = score;
+      highestCategory = cat;
+    }
   }
 
-  return {};
+  return highestCategory;
+}
+
+export function inferCategoryFromPath(path: string): CategoryInterest | null {
+  const normalized = path.toLowerCase();
+
+  if (normalized.includes('medicina-estetica') || normalized.includes('botox') || normalized.includes('hilos') || normalized.includes('adn-salmon') || normalized.includes('harmonization') || normalized.includes('medical')) {
+    return 'medicina-estetica';
+  }
+  if (normalized.includes('reductiv') || normalized.includes('anticelulitis') || normalized.includes('carboxiterapia') || normalized.includes('weight-loss')) {
+    return 'reductivos';
+  }
+  if (normalized.includes('spa') || normalized.includes('masaje') || normalized.includes('parejas') || normalized.includes('embarazadas') || normalized.includes('boda') || normalized.includes('aromaterapia')) {
+    return 'spa';
+  }
+  if (normalized.includes('corporal') || normalized.includes('vendas-frias') || normalized.includes('post-operatorio') || normalized.includes('body')) {
+    return 'corporales';
+  }
+  if (normalized.includes('facial') || normalized.includes('microagujas') || normalized.includes('microdermoabrasion') || normalized.includes('peeling') || normalized.includes('limpieza') || normalized.includes('hollywood')) {
+    return 'faciales';
+  }
+
+  return null;
 }
 
 export function trackPageView(path: string): UserPersonalizationProfile {
-  const profile = getInitialProfile();
-  const { category, ageWeight } = inferCategoryAndAgeFromPath(path);
-
+  const profile = getStoredProfile();
   profile.totalPageViews += 1;
-  profile.lastVisitedPath = path;
-  profile.lastVisitedAt = Date.now();
+  profile.lastUpdated = Date.now();
 
-  if (category) {
-    profile.categoryScores[category] = (profile.categoryScores[category] || 0) + 1;
-  }
+  const detectedCategory = inferCategoryFromPath(path);
+  if (detectedCategory) {
+    profile.categoryScores[detectedCategory] = (profile.categoryScores[detectedCategory] || 0) + 2;
 
-  // Calculate top category
-  let maxScore = -1;
-  let topCat: CategoryInterest = profile.topCategory || 'faciales';
-  for (const cat in profile.categoryScores) {
-    const key = cat as CategoryInterest;
-    if (profile.categoryScores[key] > maxScore) {
-      maxScore = profile.categoryScores[key];
-      topCat = key;
-    }
-  }
-  profile.topCategory = topCat;
-
-  // Infer age bracket based on visited pages and top category if explicit age not set
-  if (!profile.explicitAgeBracket) {
-    if (ageWeight) {
-      if (ageWeight === 'advanced' || profile.categoryScores['medicina-estetica'] > 3) {
+    if (!profile.explicitAgeBracket) {
+      if (detectedCategory === 'medicina-estetica') {
         profile.inferredAgeBracket = 'advanced';
-      } else if (ageWeight === 'mature' || profile.categoryScores['reductivos'] + profile.categoryScores['corporales'] > 2) {
-        profile.inferredAgeBracket = 'mature';
-      } else {
+      } else if (detectedCategory === 'reductivos' || detectedCategory === 'faciales') {
         profile.inferredAgeBracket = 'young';
+      } else {
+        profile.inferredAgeBracket = 'mature';
       }
     }
   }
 
-  // Log page view event
-  profile.analyticsEvents.push({
+  const pageViewEvent: AnalyticsEvent = {
     eventType: 'page_view',
     target: path,
     timestamp: Date.now(),
-    metadata: { topCategory: profile.topCategory, inferredAge: profile.inferredAgeBracket },
-  });
+  };
 
-  // Limit analytics history to last 50 events
-  if (profile.analyticsEvents.length > 50) {
-    profile.analyticsEvents = profile.analyticsEvents.slice(-50);
-  }
+  profile.eventsHistory = [pageViewEvent, ...profile.eventsHistory].slice(0, 50);
 
   saveProfile(profile);
   return profile;
 }
 
 export function setExplicitAgeBracket(age: AgeBracket, email?: string): UserPersonalizationProfile {
-  const profile = getInitialProfile();
+  const profile = getStoredProfile();
   profile.explicitAgeBracket = age;
   if (email) {
-    profile.userEmail = email;
-    profile.analyticsEvents.push({
-      eventType: 'email_captured',
-      target: 'personalization_widget',
-      timestamp: Date.now(),
-      metadata: { email, ageBracket: age },
-    });
-  } else {
-    profile.analyticsEvents.push({
-      eventType: 'age_selected',
-      target: 'personalization_widget',
-      timestamp: Date.now(),
-      metadata: { ageBracket: age },
-    });
+    profile.email = email;
   }
+  profile.lastUpdated = Date.now();
+
+  const ageEvent: AnalyticsEvent = {
+    eventType: 'age_selected',
+    target: age,
+    timestamp: Date.now(),
+    metadata: { email },
+  };
+
+  profile.eventsHistory = [ageEvent, ...profile.eventsHistory].slice(0, 50);
 
   saveProfile(profile);
   return profile;
 }
 
-export function logAnalyticsEvent(eventType: AnalyticsEvent['eventType'], target: string, metadata?: Record<string, any>): UserPersonalizationProfile {
-  const profile = getInitialProfile();
-  profile.analyticsEvents.push({
+export function logAnalyticsEvent(
+  eventType: AnalyticsEvent['eventType'],
+  target: string,
+  metadata?: Record<string, any>
+): UserPersonalizationProfile {
+  const profile = getStoredProfile();
+  profile.lastUpdated = Date.now();
+
+  const event: AnalyticsEvent = {
     eventType,
     target,
     timestamp: Date.now(),
     metadata,
-  });
+  };
 
-  if (profile.analyticsEvents.length > 50) {
-    profile.analyticsEvents = profile.analyticsEvents.slice(-50);
-  }
+  profile.eventsHistory = [event, ...profile.eventsHistory].slice(0, 50);
 
   saveProfile(profile);
   return profile;

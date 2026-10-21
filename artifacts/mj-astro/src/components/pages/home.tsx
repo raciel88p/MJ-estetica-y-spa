@@ -16,7 +16,6 @@ import { Footer } from "@/components/layout/Footer";
 import { Marquee } from "@/components/Marquee";
 import { PersonalizedBanner } from "@/components/PersonalizedBanner";
 import { usePersonalization } from "@/lib/usePersonalization";
-import { CategoryInterest } from "@/lib/personalizationEngine";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { GoogleMap, MAPS_LINK, GOOGLE_REVIEW_LINK } from "@/components/GoogleMap";
 import { StatsBar } from "@/components/StatsBar";
@@ -53,60 +52,48 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
   const content = lang === 'es' ? esLoc : enLoc;
   const [mounted, setMounted] = useState(false);
   const { toast } = useToast();
-  const { topCategory, profile } = usePersonalization();
+  const { profile, topCategory } = usePersonalization();
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Personalized Hero Configs
-  const HERO_PERSONALIZATION: Record<CategoryInterest, {
-    bg: string;
-    tagline: Record<'es' | 'en', string>;
-    title: Record<'es' | 'en', string>;
-    titleItalic: Record<'es' | 'en', string>;
-    desc: Record<'es' | 'en', string>;
-  }> = {
-    'medicina-estetica': {
-      bg: '/images/medicina-estetica-hero.jpg',
-      tagline: { es: 'Medicina Estética & Armonización', en: 'Medical Aesthetics & Harmonization' },
-      title: { es: 'Realza tu Belleza', en: 'Enhance Your Beauty' },
-      titleItalic: { es: 'con Precisión Médica', en: 'with Medical Precision' },
-      desc: { es: 'Tratamientos médicos no invasivos, bótox, hilos tensores y ácido hialurónico con resultados naturales.', en: 'Non-invasive medical treatments, botox, tensor threads, and hyaluronic acid with natural results.' }
-    },
-    'reductivos': {
-      bg: '/images/reduccion-de-medidas-bg.webp',
-      tagline: { es: 'Reductivos & Moldeo Corporal', en: 'Body Sculpting & Weight Loss' },
-      title: { es: 'Moldea tu Silueta', en: 'Sculpt Your Figure' },
-      titleItalic: { es: 'sin Cirugías', en: 'Without Surgery' },
-      desc: { es: 'Tecnología avanzada de hidrolipoclasia, carboxiterapia y masajes reductivos para eliminar grasa localizada.', en: 'Advanced hydrolipoclasia, carboxytherapy, and body sculpting to eliminate stubborn fat.' }
-    },
-    'corporales': {
-      bg: '/images/masajes-corporales-bg.webp',
-      tagline: { es: 'Tratamientos Corporales Avanzados', en: 'Advanced Body Treatments' },
-      title: { es: 'Firmeza y Tonicidad', en: 'Firmness & Toning' },
-      titleItalic: { es: 'para tu Cuerpo', en: 'for Your Body' },
-      desc: { es: 'Levantamiento de glúteos, busto, tensado corporal y drenaje linfático profesional.', en: 'Buttock lifting, bust firming, body tightening, and professional lymphatic drainage.' }
-    },
-    'spa': {
-      bg: '/images/boda-spa-img.webp',
-      tagline: { es: 'Experiencia Spa & Relax', en: 'Spa & Relax Experience' },
-      title: { es: 'Desconexión y Bienestar', en: 'Unplug & Wellness' },
-      titleItalic: { es: 'para tu Mente y Cuerpo', en: 'for Mind and Body' },
-      desc: { es: 'Masajes relajantes, aromaterapia, rituales en pareja y experiencias sensoriales únicas.', en: 'Relaxing massages, aromatherapy, couples rituals, and unique sensory experiences.' }
-    },
-    'faciales': {
-      bg: '/images/hero-bg.webp',
-      tagline: { es: t('home.hero.tagline'), en: t('home.hero.tagline') },
-      title: { es: t('home.hero.title'), en: t('home.hero.title') },
-      titleItalic: { es: t('home.hero.title_italic'), en: t('home.hero.title_italic') },
-      desc: { es: t('home.hero.desc'), en: t('home.hero.desc') }
-    }
-  };
+  // Dynamic hero customization based on top category when user has navigated previously
+  const isPersonalizedHero = profile.totalPageViews > 1;
 
-  const currentHero = (profile.totalPageViews > 1 && HERO_PERSONALIZATION[topCategory])
-    ? HERO_PERSONALIZATION[topCategory]
-    : HERO_PERSONALIZATION['faciales'];
+  let heroBg = "/images/hero-bg.webp";
+  let heroTagline = t('home.hero.tagline');
+  let heroTitle = t('home.hero.title');
+  let heroTitleItalic = t('home.hero.title_italic');
+  let heroDesc = t('home.hero.desc');
+
+  if (isPersonalizedHero) {
+    if (topCategory === 'medicina-estetica') {
+      heroBg = "/images/medicina-estetica-hero.jpg";
+      heroTagline = lang === 'es' ? "Medicina Estética de Alta Precisión" : "High Precision Medical Aesthetics";
+      heroTitle = lang === 'es' ? "Realza tu Belleza" : "Enhance Your Beauty";
+      heroTitleItalic = lang === 'es' ? "con Precisión Médica" : "with Medical Precision";
+      heroDesc = lang === 'es' ? "Armonización facial, Bótox, rellenos con ácido hialurónico y bioestimuladores con valoración profesional en Turrialba y Siquirres." : "Facial harmonization, Botox, hyaluronic acid fillers, and biostimulators with professional medical consultation.";
+    } else if (topCategory === 'reductivos') {
+      heroBg = "/images/reduccion-de-medidas-bg.webp";
+      heroTagline = lang === 'es' ? "Tratamientos Reductivos Avanzados" : "Advanced Reduction Protocols";
+      heroTitle = lang === 'es' ? "Moldea tu Silueta" : "Shape Your Contour";
+      heroTitleItalic = lang === 'es' ? "sin Cirugías Exageradas" : "Without Invasive Surgeries";
+      heroDesc = lang === 'es' ? "Hidrolipoclasia, cavitación y protocolos personalizados para reducción de medidas y tonicidad corporal." : "Hydrolipoclasia, cavitation, and custom protocols for body contouring and fat reduction.";
+    } else if (topCategory === 'corporales') {
+      heroBg = "/images/masajes-corporales-bg.webp";
+      heroTagline = lang === 'es' ? "Cuidado Corporal Integral" : "Comprehensive Body Care";
+      heroTitle = lang === 'es' ? "Firmeza y Tonicidad" : "Firmness and Tone";
+      heroTitleItalic = lang === 'es' ? "para tu Cuerpo" : "for Your Body";
+      heroDesc = lang === 'es' ? "Tratamientos de tensado, masajes post-operatorios y terapias de tonificación diseñadas a tu medida." : "Firming treatments, post-operative massages, and toning therapies tailored to your needs.";
+    } else if (topCategory === 'spa') {
+      heroBg = "/images/boda-spa-img.webp";
+      heroTagline = lang === 'es' ? "Rituales SPA & Relajación" : "SPA Rituals & Relaxation";
+      heroTitle = lang === 'es' ? "Desconexión y Bienestar" : "Disconnection and Wellness";
+      heroTitleItalic = lang === 'es' ? "para Mente y Cuerpo" : "for Mind & Body";
+      heroDesc = lang === 'es' ? "Masajes relajantes, para parejas, piedras volcánicas y rituales wellness en un ambiente de absoluta paz." : "Relaxing massages, couples spa, hot stones, and wellness rituals in absolute tranquility.";
+    }
+  }
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -136,10 +123,9 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
       <section className="relative h-[90vh] min-h-[700px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            key={currentHero.bg}
-            src={currentHero.bg}
+            src={heroBg}
             alt="MJ Fisio Estética & Spa"
-            className="w-full h-full object-cover object-center transition-all duration-1000"
+            className="w-full h-full object-cover object-center transition-all duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent md:bg-gradient-to-r md:from-black/70 md:via-black/30 md:to-transparent" />
         </div>
@@ -154,22 +140,22 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
           >
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-6">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase">{currentHero.tagline[lang]}</span>
+              <span className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase">{heroTagline}</span>
             </motion.div>
 
             <motion.h1
               variants={fadeUp}
               className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] mb-8"
             >
-              {currentHero.title[lang]} <br />
-              <span className="italic font-light text-primary">{currentHero.titleItalic[lang]}</span>
+              {heroTitle} <br />
+              <span className="italic font-light text-primary">{heroTitleItalic}</span>
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
               className="text-lg md:text-xl text-white/80 mb-10 max-w-xl leading-relaxed font-light"
             >
-              {currentHero.desc[lang]}
+              {heroDesc}
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5">
@@ -200,9 +186,7 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
       </section>
 
       {/* ── PERSONALIZED MARKETING BANNER ──────────────── */}
-      <div className="container mx-auto px-6">
-        <PersonalizedBanner lang={lang} />
-      </div>
+      <PersonalizedBanner lang={lang} />
 
       {/* ── TRUST BAR ──────────────────────────────────── */}
       <section className="bg-[#050c14] py-12 border-b border-white/5">

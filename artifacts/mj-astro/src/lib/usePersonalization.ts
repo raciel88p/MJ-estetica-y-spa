@@ -1,23 +1,25 @@
 import { useState, useEffect, useCallback } from 'react';
 import {
-  UserPersonalizationProfile,
-  getInitialProfile,
+  getStoredProfile,
   trackPageView,
   setExplicitAgeBracket,
   logAnalyticsEvent,
-  AgeBracket,
+  getDominantCategory,
+  type UserPersonalizationProfile,
+  type AgeBracket,
+  type CategoryInterest,
+  type AnalyticsEvent,
 } from './personalizationEngine';
 
-export function usePersonalization(currentPath?: string) {
-  const [profile, setProfile] = useState<UserPersonalizationProfile>(() => getInitialProfile());
+export function usePersonalization() {
+  const [profile, setProfile] = useState<UserPersonalizationProfile>(() => getStoredProfile());
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const path = currentPath || window.location.pathname;
-      const updated = trackPageView(path);
+      const updated = trackPageView(window.location.pathname);
       setProfile(updated);
     }
-  }, [currentPath]);
+  }, []);
 
   const updateAge = useCallback((age: AgeBracket, email?: string) => {
     const updated = setExplicitAgeBracket(age, email);
@@ -34,12 +36,13 @@ export function usePersonalization(currentPath?: string) {
     setProfile(updated);
   }, []);
 
-  const activeAgeBracket = profile.explicitAgeBracket || profile.inferredAgeBracket;
+  const activeAgeBracket: AgeBracket = profile.explicitAgeBracket || profile.inferredAgeBracket || 'mature';
+  const topCategory: CategoryInterest = getDominantCategory(profile.categoryScores);
 
   return {
     profile,
     activeAgeBracket,
-    topCategory: profile.topCategory,
+    topCategory,
     updateAge,
     trackClick,
     trackImpression,
