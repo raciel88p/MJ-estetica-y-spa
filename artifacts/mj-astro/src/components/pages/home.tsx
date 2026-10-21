@@ -14,6 +14,8 @@ import { SEO } from "@/components/SEO";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Marquee } from "@/components/Marquee";
+import { PersonalizedBanner } from "@/components/PersonalizedBanner";
+import { usePersonalization } from "@/lib/usePersonalization";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { GoogleMap, MAPS_LINK, GOOGLE_REVIEW_LINK } from "@/components/GoogleMap";
 import { StatsBar } from "@/components/StatsBar";
@@ -50,10 +52,48 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
   const content = lang === 'es' ? esLoc : enLoc;
   const [mounted, setMounted] = useState(false);
   const { toast } = useToast();
+  const { profile, topCategory } = usePersonalization();
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Dynamic hero customization based on top category when user has navigated previously
+  const isPersonalizedHero = profile.totalPageViews > 1;
+
+  let heroBg = "/images/hero-bg.webp";
+  let heroTagline = t('home.hero.tagline');
+  let heroTitle = t('home.hero.title');
+  let heroTitleItalic = t('home.hero.title_italic');
+  let heroDesc = t('home.hero.desc');
+
+  if (isPersonalizedHero) {
+    if (topCategory === 'medicina-estetica') {
+      heroBg = "/images/medicina-estetica-hero.jpg";
+      heroTagline = lang === 'es' ? "Medicina Estética de Alta Precisión" : "High Precision Medical Aesthetics";
+      heroTitle = lang === 'es' ? "Realza tu Belleza" : "Enhance Your Beauty";
+      heroTitleItalic = lang === 'es' ? "con Precisión Médica" : "with Medical Precision";
+      heroDesc = lang === 'es' ? "Armonización facial, Bótox, rellenos con ácido hialurónico y bioestimuladores con valoración profesional en Turrialba y Siquirres." : "Facial harmonization, Botox, hyaluronic acid fillers, and biostimulators with professional medical consultation.";
+    } else if (topCategory === 'reductivos') {
+      heroBg = "/images/reduccion-de-medidas-bg.webp";
+      heroTagline = lang === 'es' ? "Tratamientos Reductivos Avanzados" : "Advanced Reduction Protocols";
+      heroTitle = lang === 'es' ? "Moldea tu Silueta" : "Shape Your Contour";
+      heroTitleItalic = lang === 'es' ? "sin Cirugías Exageradas" : "Without Invasive Surgeries";
+      heroDesc = lang === 'es' ? "Hidrolipoclasia, cavitación y protocolos personalizados para reducción de medidas y tonicidad corporal." : "Hydrolipoclasia, cavitation, and custom protocols for body contouring and fat reduction.";
+    } else if (topCategory === 'corporales') {
+      heroBg = "/images/masajes-corporales-bg.webp";
+      heroTagline = lang === 'es' ? "Cuidado Corporal Integral" : "Comprehensive Body Care";
+      heroTitle = lang === 'es' ? "Firmeza y Tonicidad" : "Firmness and Tone";
+      heroTitleItalic = lang === 'es' ? "para tu Cuerpo" : "for Your Body";
+      heroDesc = lang === 'es' ? "Tratamientos de tensado, masajes post-operatorios y terapias de tonificación diseñadas a tu medida." : "Firming treatments, post-operative massages, and toning therapies tailored to your needs.";
+    } else if (topCategory === 'spa') {
+      heroBg = "/images/boda-spa-img.webp";
+      heroTagline = lang === 'es' ? "Rituales SPA & Relajación" : "SPA Rituals & Relaxation";
+      heroTitle = lang === 'es' ? "Desconexión y Bienestar" : "Disconnection and Wellness";
+      heroTitleItalic = lang === 'es' ? "para Mente y Cuerpo" : "for Mind & Body";
+      heroDesc = lang === 'es' ? "Masajes relajantes, para parejas, piedras volcánicas y rituales wellness en un ambiente de absoluta paz." : "Relaxing massages, couples spa, hot stones, and wellness rituals in absolute tranquility.";
+    }
+  }
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -83,9 +123,9 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
       <section className="relative h-[90vh] min-h-[700px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/hero-bg.webp"
+            src={heroBg}
             alt="MJ Fisio Estética & Spa"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-center transition-all duration-700"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent md:bg-gradient-to-r md:from-black/70 md:via-black/30 md:to-transparent" />
         </div>
@@ -99,22 +139,22 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
           >
             <motion.div variants={fadeUp} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm mb-6">
               <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase">{t('home.hero.tagline')}</span>
+              <span className="text-primary text-[10px] font-bold tracking-[0.2em] uppercase">{heroTagline}</span>
             </motion.div>
 
             <motion.h1
               variants={fadeUp}
               className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[1.1] mb-8"
             >
-              {t('home.hero.title')} <br />
-              <span className="italic font-light text-primary">{t('home.hero.title_italic')}</span>
+              {heroTitle} <br />
+              <span className="italic font-light text-primary">{heroTitleItalic}</span>
             </motion.h1>
 
             <motion.p
               variants={fadeUp}
               className="text-lg md:text-xl text-white/80 mb-10 max-w-xl leading-relaxed font-light"
             >
-              {t('home.hero.desc')}
+              {heroDesc}
             </motion.p>
 
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-5">
@@ -143,6 +183,9 @@ function Home({ lang = 'es', latestPosts = [], authors = [] }: { lang?: 'es' | '
           </motion.div>
         </div>
       </section>
+
+      {/* ── PERSONALIZED MARKETING BANNER ──────────────── */}
+      <PersonalizedBanner lang={lang} />
 
       {/* ── TRUST BAR ──────────────────────────────────── */}
       <section className="bg-[#050c14] py-12 border-b border-white/5">

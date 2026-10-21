@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Home from "@/pages/home";
 import { servicePages } from "@/data/services";
 import AdminPage from "@/pages/AdminPage";
+import { AnalyticsWidget } from "@/components/AnalyticsWidget";
 
 const NotFound          = lazy(() => import("@/pages/not-found"));
 const ServicePage       = lazy(() => import("@/pages/ServicePage"));
@@ -130,6 +131,7 @@ function App() {
         <Router />
       </WouterRouter>
       <Toaster />
+      <AnalyticsWidget />
     </QueryClientProvider>
   );
 }
