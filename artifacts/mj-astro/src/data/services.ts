@@ -1564,7 +1564,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "botox-full-face",
-      name: "Botox Full Face en Turrialba",
+      name: "Botox Full Face en Turrialba y Siquirres",
       tagline: "Recupera la frescura de tu mirada con armonía total",
       heroDescription:
         "Apariencia más fresca, descansada y natural sin perder tu esencia<br /><br />Tu rostro habla antes que tú.<br />Las líneas de expresión, el cansancio facial o la tensión acumulada pueden hacerte lucir agotada incluso cuando te sientes bien.",
