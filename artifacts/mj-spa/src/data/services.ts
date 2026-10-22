@@ -3471,7 +3471,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "acido-hialuronico",
-      name: "Ácido Hialurónico",
+      name: "Ácido Hialurónico Turrialba y Siquirres",
       tagline: "Volumen, hidratación y relleno natural",
       heroDescription:
         "El ácido hialurónico es un componente natural de la piel que se reduce con la edad. Su aplicación mediante infiltración restituye el volumen perdido, rellena arrugas profundas y mejora la hidratación cutánea de forma natural y duradera.",
