@@ -31,7 +31,7 @@ export const medicoEsteticosLinks = {
     { name: "Nutrición", href: "/servicios/nutricion" },
     { name: "Psicología Familiar e Infantil", href: "/servicios/psicologia-infantil" },
     { name: "Botox Full Face", href: "/servicios/botox-full-face" },
-    { name: "Hilos Tensores Turrialba", href: "/servicios/hilos-tensores" },
+    { name: "Hilos Tensores Turrialba y Siquirres", href: "/servicios/hilos-tensores" },
     { name: "Trasplante Capilar", href: "/servicios/trasplante-capilar" },
     { name: "Ácido Hialurónico", href: "/servicios/acido-hialuronico" },
     { name: "Biorevitalización", href: "/servicios/biorevitalizacion" },
@@ -1909,8 +1909,8 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "hilos-tensores",
-      name: "Hilos Tensores Turrialba",
-      fullTitle: "Hilos Tensores Turrialba",
+      name: "Hilos Tensores Turrialba y Siquirres",
+      fullTitle: "Hilos Tensores Turrialba y Siquirres",
       tagline: "El lifting sin bisturí más efectivo del mercado",
       heroDescription:
         "Los hilos tensores son la alternativa no quirúrgica al lifting facial. Devuelven la firmeza y tensión perdida de forma inmediata, estimulando la producción natural de colágeno.",
@@ -3471,7 +3471,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "acido-hialuronico",
-      name: "Ácido Hialurónico",
+      name: "Ácido Hialurónico Turrialba y Siquirres",
       tagline: "Volumen, hidratación y relleno natural",
       heroDescription:
         "El ácido hialurónico es un componente natural de la piel que se reduce con la edad. Su aplicación mediante infiltración restituye el volumen perdido, rellena arrugas profundas y mejora la hidratación cutánea de forma natural y duradera.",

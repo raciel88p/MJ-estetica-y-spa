@@ -7,6 +7,8 @@ import { SEO } from "@/components/SEO";
 import { motion } from "framer-motion";
 import { useTranslations } from "@/i18n/ui";
 import { Link } from "wouter";
+import { usePersonalization } from "@/lib/usePersonalization";
+import { Sparkles, UserCheck } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -52,6 +54,7 @@ export default function Blog({ lang = 'es' }: { lang?: 'es' | 'en' }) {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [loading, setLoading] = useState(true);
   const t = useTranslations(lang);
+  const { topCategory, activeAgeBracket, profile } = usePersonalization();
 
   const categories = lang === 'es' ? categoriesES : categoriesEN;
 
@@ -105,6 +108,55 @@ export default function Blog({ lang = 'es' }: { lang?: 'es' | 'en' }) {
             </div>
           ) : (
             <>
+              {/* Personalized Recommended Articles Section */}
+              {profile.totalPageViews > 0 && posts.length > 0 && (
+                <div className="bg-gradient-to-r from-stone-900 via-stone-800 to-amber-950 text-white p-6 md:p-8 rounded-3xl border border-amber-500/20 shadow-xl mb-12">
+                  <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-amber-500/20">
+                    <div className="flex items-center gap-2">
+                      <Sparkles className="w-5 h-5 text-amber-400 animate-pulse" />
+                      <h3 className="font-serif font-bold text-lg text-amber-100">
+                        {lang === 'es' ? '✨ Recomendados para ti' : '✨ Recommended for You'}
+                      </h3>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs bg-amber-500/10 border border-amber-500/20 text-amber-300 px-3 py-1 rounded-full">
+                      <UserCheck className="w-3.5 h-3.5" />
+                      <span className="capitalize">{lang === 'es' ? `Perfil: ${topCategory} (${activeAgeBracket})` : `Profile: ${topCategory} (${activeAgeBracket})`}</span>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {posts
+                      .filter((p) => {
+                        const cat = getPostCategory(p);
+                        if (topCategory === 'medicina-estetica') return cat === 'medicina-estetica';
+                        if (topCategory === 'reductivos') return cat === 'corporales';
+                        if (topCategory === 'spa') return cat === 'rituales-spa';
+                        if (topCategory === 'corporales') return cat === 'corporales';
+                        return cat === 'faciales';
+                      })
+                      .slice(0, 3)
+                      .map((recPost) => (
+                        <div key={`rec-${recPost._id}`} className="bg-white/5 border border-white/10 rounded-2xl p-4 flex flex-col justify-between hover:bg-white/10 transition-colors">
+                          <div>
+                            <span className="text-[10px] font-bold text-amber-300 uppercase tracking-widest block mb-2">
+                              {recPost.author?.role || (lang === 'es' ? 'Sugerencia Personalizada' : 'Personalized Pick')}
+                            </span>
+                            <h4 className="font-serif font-bold text-base text-amber-50 mb-2 line-clamp-2">
+                              {recPost.title}
+                            </h4>
+                          </div>
+                          <Link
+                            href={lang === 'es' ? `/blog/${recPost.slug.current}` : `/en/blog/${recPost.slug.current}`}
+                            className="mt-4 text-xs font-bold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1"
+                          >
+                            {lang === 'es' ? 'Leer artículo →' : 'Read article →'}
+                          </Link>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              )}
+
               {/* Sector Category Filter Buttons */}
               <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200 mb-12 shadow-sm">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-stone-200/60">
