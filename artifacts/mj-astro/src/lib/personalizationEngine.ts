@@ -56,10 +56,46 @@ export function getStoredProfile(): UserPersonalizationProfile {
   }
 }
 
+export function syncThirdPartyAnalytics(profile: UserPersonalizationProfile): void {
+  if (typeof window === 'undefined') return;
+
+  const topCategory = getDominantCategory(profile.categoryScores);
+  const activeAge = profile.explicitAgeBracket || profile.inferredAgeBracket || 'mature';
+
+  // 1. Google Tag Manager / GA4 dataLayer event & user properties
+  if (Array.isArray((window as any).dataLayer)) {
+    (window as any).dataLayer.push({
+      event: 'user_profile_updated',
+      user_properties: {
+        top_category: topCategory,
+        age_bracket: activeAge,
+        age_is_explicit: Boolean(profile.explicitAgeBracket),
+        has_email: Boolean(profile.email),
+        total_page_views: profile.totalPageViews,
+      },
+    });
+  }
+
+  // 2. Microsoft Clarity Custom Tags and Session Identification
+  if (typeof (window as any).clarity === 'function') {
+    try {
+      (window as any).clarity('set', 'topCategory', topCategory);
+      (window as any).clarity('set', 'ageBracket', activeAge);
+      (window as any).clarity('set', 'ageIsExplicit', String(Boolean(profile.explicitAgeBracket)));
+      if (profile.email) {
+        (window as any).clarity('identify', profile.email);
+      }
+    } catch (e) {
+      // Clarity safe fallback
+    }
+  }
+}
+
 export function saveProfile(profile: UserPersonalizationProfile): void {
   if (typeof window === 'undefined') return;
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(profile));
+    syncThirdPartyAnalytics(profile);
   } catch (e) {
     // Ignore storage quota errors
   }
