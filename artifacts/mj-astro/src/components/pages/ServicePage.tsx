@@ -1591,6 +1591,21 @@ function ServicePage({ service, lang = 'es' }: { service: ServicePageData, lang?
         </section>
       )}
 
+      {/* ── HUBSPOT FORM EMBED (ESPAÑOL) ────────────────── */}
+      {lang === 'es' && (
+        <section className="py-12 bg-stone-50 border-t border-stone-200">
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h3 className="text-2xl font-serif font-bold text-stone-900 mb-6">
+              ¿Tienes alguna consulta adicional? Contáctanos
+            </h3>
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-stone-200/80">
+              <script src="https://js.hsforms.net/forms/embed/52143505.js" defer></script>
+              <div className="hs-form-frame" data-region="na1" data-form-id="f1252d24-502f-4d2d-80fd-4e30dbc93591" data-portal-id="52143505"></div>
+            </div>
+          </div>
+        </section>
+      )}
+
       <BranchesSection lang={lang} />
       <Footer lang={lang} />
       <FloatingWhatsApp />
