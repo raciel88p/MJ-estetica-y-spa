@@ -644,7 +644,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "masajes-profundos",
       name: "Masajes Profundos",
-      fullTitle: "Masajes profundos Turrialba",
+      fullTitle: "Masajes profundos Turrialba & Siquirres",
       tagline: "Libera tensión, recupera bienestar",
       heroDescription:
         "¿Sientes tu cuerpo cargado, rígido o agotado por el estrés del día a día?",
