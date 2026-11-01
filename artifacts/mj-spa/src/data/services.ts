@@ -4925,7 +4925,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "relleno-de-labios",
-      name: "Relleno de Labios en Turrialba",
+      name: "Relleno de Labios en Turrialba y Siquirres",
       tagline:
         "Labios con volumen, contorno definido y aspecto completamente natural",
       heroBg: "acido-hialuronico-bg.webp",
