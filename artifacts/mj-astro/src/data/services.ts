@@ -503,7 +503,7 @@ export const servicePages: MultiLangServicePageData[] = [
       slug: "masajes-relajantes",
       name: "Masajes Relajantes",
       fullTitle:
-        "Masajes en Turrialba | Relajantes, Terapéuticos y Descontracturantes",
+        "Masajes en Turrialba & Siquirres | Relajantes, Terapéuticos y Descontracturantes",
       tagline: "Un viaje al bienestar total",
       heroDescription:
         "Recupera tu bienestar con masajes profesionales en Turrialba. ¿Buscas un lugar donde puedas relajarte, aliviar tensiones musculares y desconectarte del estrés diario?",
