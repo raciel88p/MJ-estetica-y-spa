@@ -824,7 +824,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "depilacion-laser",
-      name: "Depilación Láser",
+      name: "Depilación Láser Turrialba & Siquirres",
       tagline: "Piel lisa para siempre, con tecnología avanzada",
       heroDescription:
         "Depilación Láser en Turrialba | MJ Estética & Wellness Center<br />Despídete del vello… y vuelve a sentirte cómoda con tu piel<br /><br />Reduce progresivamente el crecimiento del vello, evita irritación constante y luce una piel más suave y uniforme con tecnología de depilación láser profesional en MJ Estética & Wellness Center en Turrialba.",
