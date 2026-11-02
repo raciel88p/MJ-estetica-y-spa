@@ -2012,7 +2012,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "tensado-corporal",
-      name: "Tensado Corporal en Turrialba",
+      name: "Tensado Corporal en Turrialba & Siquirres",
       tagline: "Reafirma y esculpe tu silueta sin cirugía",
       heroDescription:
         "Firmeza, bienestar y remodelación corporal progresiva en un solo protocolo",
