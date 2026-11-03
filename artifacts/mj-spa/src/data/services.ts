@@ -3756,7 +3756,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "levantamiento-gluteo",
-      name: "Levantamiento de Glúteo en Turrialba",
+      name: "Levantamiento de Glúteo en Turrialba & Siquirres",
       tagline: "Glúteos firmes y elevados sin cirugía ni implantes",
       heroBg: "levantamiento-gluteo-bg.webp",
       heroDescription:
