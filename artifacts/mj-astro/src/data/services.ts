@@ -4017,7 +4017,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "vendas-frias",
       name: "Vendas Frías",
-      fullTitle: "Vendas Frías en Turrialba",
+      fullTitle: "Vendas Frías en Turrialba & Siquirres",
       tagline: "Pérdida de centímetros y detox corporal en una sola sesión",
       heroBg: "vendas-frias-bg.webp",
       heroDescription:
