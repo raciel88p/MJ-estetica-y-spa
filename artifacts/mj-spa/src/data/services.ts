@@ -3661,7 +3661,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "carboxiterapia",
-      name: "Carboxiterapia",
+      name: "Carboxiterapia Turrialba & Siquirres",
       tagline: "La potencia del CO₂ para renovar y rejuvenecer tu cuerpo",
       heroBg: "carboxiterapia-bg.webp",
       heroDescription:
