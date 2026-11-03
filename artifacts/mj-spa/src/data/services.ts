@@ -4409,7 +4409,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "iron-beauty-fitness",
-      name: "ESTÉTICA PARA FISICOCULTURISTAS Y ATLETAS EN TURRIALBA",
+      name: "ESTÉTICA PARA FISICOCULTURISTAS Y ATLETAS EN TURRIALBA & Siquirres",
       tagline: "Estética especializada para atletas del mundo fitness",
       heroDescription:
         "Recuperación, definición corporal y wellness deportivo en un solo protocolo especializado<br /><br />Tu cuerpo entrena fuerte.<br />Tu recuperación también debería hacerlo.",
