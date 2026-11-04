@@ -3903,7 +3903,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "levantamiento-busto",
-      name: "Levantamiento de Busto en Turrialba",
+      name: "Levantamiento de Busto en Turrialba & Siquirres",
       tagline: "Busto firme, elevado y reafirmado sin cirugía",
       heroBg: "levantamiento-busto-bg.webp",
       heroDescription:
