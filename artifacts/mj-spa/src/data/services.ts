@@ -5306,11 +5306,11 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "blanqueamiento-zona-intima",
       name: "Blanqueamiento Zona Íntima",
-      fullTitle: "Blanqueamiento de Zona Íntima en Turrialba",
+      fullTitle: "Blanqueamiento de Zona Íntima en Turrialba & Siquirres",
       tagline:
         "Unifica el tono de tus zonas más delicadas con seguridad y confianza",
       heroDescription:
-        "Recupera la seguridad en ti misma con nuestros protocolos especializados de blanqueamiento para entrepierna, axilas y zona perianal. Tratamientos no invasivos, respetuosos y altamente efectivos en Turrialba.",
+        "Recupera la seguridad en ti misma con nuestros protocolos especializados de blanqueamiento para entrepierna, axilas y zona perianal. Tratamientos no invasivos, respetuosos y altamente efectivos en Turrialba & Siquirres.",
       benefits: [
         "Unificación del tono de piel en zonas de hiperpigmentación",
         "Tratamiento 100% seguro y respetuoso con la piel íntima",
