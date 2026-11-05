@@ -147,7 +147,7 @@
     "closing": "No buscamos hacer una limpieza facial genérica. Buscamos ayudarte a vivir una experiencia premium de cuidado facial."
   },
   "location": {
-    "title": "Limpieza Facial en Turrialba",
+    "title": "Limpieza Facial en Turrialba & Siquirres",
     "items": [
       { "icon": "📍", "text": "Ubicación accesible en Turrialba" },
       { "icon": "📲", "text": "Atención por WhatsApp" },
@@ -169,6 +169,6 @@
     "cta": "QUIERO MI GUÍA GRATIS"
   },
   "waMessages": {
-    "general": "¡Hola! Deseo más información sobre la Limpieza Facial en Turrialba"
+    "general": "¡Hola! Deseo más información sobre la Limpieza Facial en Turrialba & Siquirres"
   }
 }
