@@ -957,7 +957,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "limpieza-facial",
       name: "Limpieza Facial",
-      fullTitle: "Limpieza Facial en Turrialba",
+      fullTitle: "Limpieza Facial en Turrialba & Siquirres",
       tagline: "Glow natural, bienestar facial y skincare premium",
       heroDescription:
         "En MJ Estética & Wellness Center entendemos que una limpieza facial no se trata solo de “limpiar la piel”.<br />Se trata de ayudarte a recuperar frescura, glow natural y bienestar facial mediante protocolos personalizados y una experiencia skincare premium en Turrialba.",

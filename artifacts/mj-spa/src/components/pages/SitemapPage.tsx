@@ -50,7 +50,7 @@ const sectionsMap = {
       color: "text-primary",
       links: [
         { name: "Todos los Tratamientos Faciales", href: "/servicios/faciales" },
-        { name: "Limpieza Facial en Turrialba", href: "/servicios/limpieza-facial" },
+        { name: "Limpieza Facial en Turrialba & Siquirres", href: "/servicios/limpieza-facial" },
         { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
         { name: "Peeling Facial", href: "/servicios/peeling-quimico" },
         { name: "HOLLYWOOD PEEL EN TURRIALBA", href: "/servicios/hollywood-peel" },
