@@ -130,7 +130,7 @@ export const tratamientosFacialesLinks = {
       href: "/servicios/microagujas-melanout",
     },
     {
-      name: "Rejuvenecimiento Facial",
+      name: "Rejuvenecimiento Facial en Turrialba",
       href: "/servicios/rejuvenecimiento-facial",
     },
     {
@@ -139,7 +139,7 @@ export const tratamientosFacialesLinks = {
     },
     { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
     {
-      name: "Tratamiento para Ojeras en Turrialba",
+      name: "Tratamiento de Ojeras",
       href: "/servicios/tratamiento-ojeras",
     },
     { name: "Masaje Maxilofacial", href: "/servicios/masaje-maxilofacial" },
@@ -1169,7 +1169,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "limpieza-facial-profunda",
-      name: "Limpieza Facial Profunda",
+      name: "Limpieza Facial Profunda Turrialba y Siquirres",
       tagline: "Limpieza intensiva y renovación facial",
       heroDescription:
         "Nuestra limpieza facial profunda está diseñada para quienes buscan una renovación completa de la piel, eliminando impurezas acumuladas y devolviendo la vitalidad perdida.",
