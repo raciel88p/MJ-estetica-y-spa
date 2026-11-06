@@ -1208,7 +1208,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "limpieza-facial-hidratante",
-      name: "Limpieza Facial Hidratante",
+      name: "Limpieza Facial Hidratante Turrialba y Siquirres",
       tagline: "Hidratación, suavidad y luminosidad natural",
       heroDescription:
         "Protocolo ideal para pieles secas o deshidratadas que necesitan recuperar su equilibrio hídrico y lucir un glow saludable.",
