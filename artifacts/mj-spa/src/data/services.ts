@@ -1169,7 +1169,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "limpieza-facial-profunda",
-      name: "Limpieza Facial Profunda",
+      name: "Limpieza Facial Profunda Turrialba y Siquirres",
       tagline: "Limpieza intensiva y renovación facial",
       heroDescription:
         "Nuestra limpieza facial profunda está diseñada para quienes buscan una renovación completa de la piel, eliminando impurezas acumuladas y devolviendo la vitalidad perdida.",
