@@ -130,7 +130,7 @@ export const tratamientosFacialesLinks = {
       href: "/servicios/microagujas-melanout",
     },
     {
-      name: "Rejuvenecimiento Facial",
+      name: "Rejuvenecimiento Facial en Turrialba",
       href: "/servicios/rejuvenecimiento-facial",
     },
     {
@@ -139,7 +139,7 @@ export const tratamientosFacialesLinks = {
     },
     { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
     {
-      name: "Tratamiento para Ojeras en Turrialba",
+      name: "Tratamiento de Ojeras",
       href: "/servicios/tratamiento-ojeras",
     },
     { name: "Masaje Maxilofacial", href: "/servicios/masaje-maxilofacial" },

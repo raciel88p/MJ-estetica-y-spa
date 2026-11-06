@@ -286,7 +286,7 @@ export function Navbar({ lang = 'es', alternateLink }: { lang?: 'es' | 'en', alt
                           >
                             {lang === 'es' ? 'Cuidado Facial' : 'Facial Care'}
                           </a>
-                          {tratamientosFacialesLinks[lang].slice(0, 11).map((link) => (
+                          {tratamientosFacialesLinks[lang].map((link) => (
                             <a
                               key={link.name}
                               href={link.href}
