@@ -2233,7 +2233,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "eliminacion-manchas",
-      name: "Eliminación de Manchas",
+      name: "Eliminación de Manchas Turrialba y Siquirres",
       tagline: "Recupera un tono de piel uniforme y luminoso",
       heroDescription:
         "Las manchas en la piel (melasma, manchas solares, hiperpigmentación) son tratadas con métodos de última generación que eliminan la pigmentación de forma segura y efectiva, devolviendo la uniformidad y luminosidad natural de tu piel.",
