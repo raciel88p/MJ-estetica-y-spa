@@ -74,7 +74,7 @@ const sectionsMap = {
         { name: "Limpieza Facial Hidratante", href: "/servicios/limpieza-facial-hidratante" },
         { name: "Terapias Faciales", href: "/servicios/terapias-faciales" },
         { name: "Peeling Facial", href: "/servicios/peeling-quimico" },
-        { name: "Hollywood Peel en Turrialba", href: "/servicios/hollywood-peel" },
+        { name: "Hollywood Peel en Turrialba & Siquirres", href: "/servicios/hollywood-peel" },
         { name: "Eliminación de Manchas", href: "/servicios/eliminacion-manchas" },
         { name: "Radiofrecuencia Facial", href: "/servicios/radiofrecuencia-facial" },
         { name: "ADN de Salmón", href: "/servicios/adn-salmon" },
