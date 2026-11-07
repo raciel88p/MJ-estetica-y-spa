@@ -1449,7 +1449,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "peeling-quimico",
       name: "Peeling Facial",
-      fullTitle: "Peeling Facial en Turrialba",
+      fullTitle: "Peeling Facial en Turrialba & Siquirres",
       tagline:
         "Tratamiento de Peeling Facial Profesional en Turrialba para una Piel Más Joven y Luminosa",
       heroDescription:
