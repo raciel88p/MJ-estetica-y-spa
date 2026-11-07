@@ -1355,7 +1355,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "terapias-faciales",
       name: "Terapias Faciales",
-      fullTitle: "Terapias Faciales en Turrialba",
+      fullTitle: "Terapias Faciales en Turrialba Turrialba y Siquirres",
       tagline: "Revitaliza tu rostro con protocolos avanzados",
       heroDescription:
         "En MJ Estética & Wellness Center ofrecemos una gama de terapias faciales diseñadas para tratar necesidades específicas de la piel, desde hidratación profunda hasta regeneración celular y armonización estética.",
