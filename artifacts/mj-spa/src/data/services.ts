@@ -2346,7 +2346,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "radiofrecuencia-facial",
-      name: "Radiofrecuencia Facial",
+      name: "Radiofrecuencia Facial Turrialba y Siquirres",
       tagline: "Reafirmación y rejuvenecimiento sin cirugía",
       heroDescription:
         "La radiofrecuencia facial es un tratamiento no invasivo que utiliza energía electromagnética para calentar las capas profundas de la piel, estimulando la producción de colágeno y elastina para un efecto tensor, reafirmante y rejuvenecedor visible.",
