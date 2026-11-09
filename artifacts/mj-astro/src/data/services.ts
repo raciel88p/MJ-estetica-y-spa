@@ -5121,7 +5121,7 @@ export const servicePages: MultiLangServicePageData[] = [
       slug: "aromaterapia",
       name: "Aromaterapia en Turrialba",
       fullTitle:
-        "Aromaterapia en Turrialba | Relajación, Bienestar y Experiencias Wellness Premium",
+        "Aromaterapia en Turrialba & Siquirres| Relajación, Bienestar y Experiencias Wellness Premium",
       tagline: "Regálate un momento de calma, bienestar y desconexión",
       heroDescription:
         "Experiencia wellness que utiliza aceites esenciales y estímulos aromáticos cuidadosamente seleccionados para crear ambientes orientados a la relajación, el bienestar emocional y el descanso.",
