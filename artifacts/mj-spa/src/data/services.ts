@@ -4854,7 +4854,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "boda-spa",
       name: "Boda Spa",
-      fullTitle: "Boda Spa y Cuidados Pre-Boda en Turrialba",
+      fullTitle: "Boda Spa y Cuidados Pre-Boda en Turrialba & Siquirres",
       tagline: "El mejor regalo antes de tu boda eres tú",
       heroDescription:
         "Vive la experiencia Boda Spa más relajante en Turrialba. Nuestros protocolos para novias están diseñados para ayudarte a recuperar el equilibrio físico y emocional antes de tu gran día.",
