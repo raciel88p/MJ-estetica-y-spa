@@ -3071,7 +3071,7 @@ export const servicePages: MultiLangServicePageData[] = [
       slug: "microagujas-melanout",
       name: "Microneedling con MelanOut en Turrialba",
       fullTitle:
-        "Microneedling con MelanOut en Turrialba | Tratamiento para Manchas, Melasma y Rejuvenecimiento Facial",
+        "Microneedling con MelanOut en Turrialba & Siquirres | Tratamiento para Manchas, Melasma",
       tagline: "Recupera la uniformidad y luminosidad de tu piel",
       heroDescription:
         "¿Te gustaría lucir una piel más luminosa, uniforme y saludable?<br /><br />En MJ Estética & Wellness Center hemos desarrollado protocolos personalizados de Microneedling con MelanOut en Turrialba, diseñados para apoyar tratamientos despigmentantes, mejorar la apariencia de la textura facial y potenciar la luminosidad natural de la piel.",
