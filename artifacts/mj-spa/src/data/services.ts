@@ -5829,7 +5829,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "masaje-cafe",
       name: "Masaje con Café",
-      fullTitle: "Masaje con Café en Turrialba | Ritual Corporal Anticelulítico y Relajante | MJ Estética",
+      fullTitle: "Masaje con Café en Turrialba  & Siquirres | Ritual Corporal Anticelulítico y Relajante",
       tagline: "Dale a tu cuerpo una pausa… y a tu piel una experiencia diferente",
       heroDescription: "Disfruta un Masaje con Café en Turrialba: exfoliación corporal, masaje, hidratación y relajación en MJ Fisio Estética & Spa.",
       benefits: [
