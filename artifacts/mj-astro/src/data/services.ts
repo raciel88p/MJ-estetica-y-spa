@@ -5759,7 +5759,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "tropical-extreme",
       name: "Tropical Extreme",
-      fullTitle: "Masaje Tropical Extreme en Turrialba | MJ Estética & Spa",
+      fullTitle: "Masaje Tropical Extreme en Turrialba & Siquirres",
       tagline: "Un momento para desconectarte, relajarte y volver a conectar contigo",
       heroDescription: "Disfruta el Ritual Tropical Extreme en Turrialba, una experiencia de masaje y spa diseñada para relajarte y desconectarte de la rutina combinando elementos sensoriales del trópico.",
       benefits: [
