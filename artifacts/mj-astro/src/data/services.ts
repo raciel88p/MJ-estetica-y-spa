@@ -5121,7 +5121,7 @@ export const servicePages: MultiLangServicePageData[] = [
       slug: "aromaterapia",
       name: "Aromaterapia en Turrialba",
       fullTitle:
-        "Aromaterapia en Turrialba | Relajación, Bienestar y Experiencias Wellness Premium",
+        "Aromaterapia en Turrialba & Siquirres| Relajación, Bienestar y Experiencias Wellness Premium",
       tagline: "Regálate un momento de calma, bienestar y desconexión",
       heroDescription:
         "Experiencia wellness que utiliza aceites esenciales y estímulos aromáticos cuidadosamente seleccionados para crear ambientes orientados a la relajación, el bienestar emocional y el descanso.",
@@ -5689,7 +5689,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "masaje-embarazadas",
       name: "Masajes para Embarazadas",
-      fullTitle: "Masajes para Embarazadas en Turrialba",
+      fullTitle: "Masajes para Embarazadas en Turrialba & Siquirres",
       tagline: "Alivio, confort y descanso seguro para ti y tu bebé",
       heroDescription: "Un masaje especialmente adaptado para las necesidades de la gestante, enfocado en aliviar la tensión acumulada en espalda y piernas, reducir la hinchazón y promover una relajación profunda y segura en un entorno cómodo y amigable.",
       benefits: [
