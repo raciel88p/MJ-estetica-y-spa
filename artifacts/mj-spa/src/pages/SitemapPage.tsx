@@ -84,7 +84,7 @@ const sectionsMap = {
         { name: "Microagujas con Ginkgo Biloba", href: "/servicios/microagujas-ginkgo-biloba" },
         { name: "Microagujas con Vitamina C", href: "/servicios/microagujas-vitamina-c" },
         { name: "Microagujas con MelanOut", href: "/servicios/microagujas-melanout" },
-        { name: "Rejuvenecimiento Facial en Turrialba", href: "/servicios/rejuvenecimiento-facial" },
+        { name: "Rejuvenecimiento Facial en Turrialba &  Siquirres", href: "/servicios/rejuvenecimiento-facial" },
         { name: "Rejuvenecimiento Facial Láser", href: "/servicios/rejuvenecimiento-facial-laser" },
         { name: "Microdermoabrasión", href: "/servicios/microdermoabrasion" },
         { name: "Tratamiento de Ojeras", href: "/servicios/tratamiento-ojeras" },

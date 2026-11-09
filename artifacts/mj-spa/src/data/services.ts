@@ -130,7 +130,7 @@ export const tratamientosFacialesLinks = {
       href: "/servicios/microagujas-melanout",
     },
     {
-      name: "Rejuvenecimiento Facial en Turrialba",
+      name: "Rejuvenecimiento Facial en Turrialba &  Siquirres",
       href: "/servicios/rejuvenecimiento-facial",
     },
     {
@@ -2944,7 +2944,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "rejuvenecimiento-facial",
       name: "Rejuvenecimiento Facial",
-      fullTitle: "Rejuvenecimiento Facial en Turrialba",
+      fullTitle: "Rejuvenecimiento Facial en Turrialba &  Siquirres",
       tagline: "Glow Natural, Armonización Facial y Bienestar Estético Premium",
       heroDescription:
         "Glow Natural, Armonización Facial y Bienestar Estético Premium un espacio, Tu piel cuenta tu historia…<br />pero también puede reflejar luminosidad, frescura y bienestar.",
