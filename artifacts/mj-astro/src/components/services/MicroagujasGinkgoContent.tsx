@@ -393,7 +393,7 @@ export function MicroagujasGinkgoContent({
             <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-8">
               <MapPin className="w-4 h-4" />
               <span className="text-[10px] font-bold tracking-widest uppercase">
-                {isEn ? ginkgoEn.finalCta.badge : "Microagujas con Ginkgo Biloba en Turrialba"}
+                {isEn ? ginkgoEn.finalCta.badge : "Microagujas con Ginkgo Biloba en Turrialba & Siquirres"}
               </span>
             </div>
             <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8 uppercase tracking-tighter text-white leading-tight">

@@ -2684,7 +2684,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "microagujas-ginkgo-biloba",
       name: "Microagujas con Ginkgo Biloba",
-      fullTitle: "Microagujas con Ginkgo Biloba en Turrialba",
+      fullTitle: "Microagujas con Ginkgo Biloba en Turrialba & Siquirres",
       tagline: "Glow natural, revitalización facial y skincare avanzado",
       heroDescription:
         "Glow natural, revitalización facial y skincare avanzado en un solo protocolo",
