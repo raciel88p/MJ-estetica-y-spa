@@ -2480,7 +2480,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "hilos-colageno",
       name: "Hilos de Colágeno",
-      fullTitle: "Hilos de Colágeno en Turrialba",
+      fullTitle: "Hilos de Colágeno en Turrialba & Siquirres",
       tagline: "Rejuvenecimiento Facial Natural, Firmeza y Glow Premium",
       heroBg:
         "https://i5.walmartimages.com/asr/81a8d6ba-e929-41d2-b349-eaaac42faa01.5a1383e330f604e473d84befe6ae4df5.jpeg",
