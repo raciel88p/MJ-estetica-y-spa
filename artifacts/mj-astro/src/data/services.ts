@@ -2621,7 +2621,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "microagujas",
       name: "Microagujas",
-      fullTitle: "Microagujas en Turrialba",
+      fullTitle: "Microagujas en Turrialba & Siquirres",
       tagline: "Renovación, Glow y Skincare Premium",
       heroDescription:
         "Glow Facial, Renovación y Skincare Premium en MJ Estética & Wellness Center",
