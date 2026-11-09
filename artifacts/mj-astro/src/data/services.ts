@@ -1248,7 +1248,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "microdermoabrasion",
       name: "Microdermoabrasión",
-      fullTitle: "Facial de Microdermoabrasión en Turrialba",
+      fullTitle: "Facial de Microdermoabrasión en Turrialba & Siquirres",
       tagline:
         "Renueva la textura, luminosidad y frescura natural de tu piel con una experiencia premium de skincare avanzado",
       heroDescription:
