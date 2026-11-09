@@ -3230,7 +3230,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "adn-salmon",
-      name: "ADN de Salmón",
+      name: "ADN de Salmón Turrialba & Siquirres",
       tagline: "Regeneración celular profunda para una piel radiante",
       heroDescription:
         "✨ EL SECRETO COREANO QUE ESTÁ REVOLUCIONANDO EL REJUVENECIMIENTO FACIAL YA LLEGÓ A TURRIALBA ✨<br /><br />¿Te imaginas despertar con una piel más luminosa, hidratada y rejuvenecida… sin cirugías ni cambios artificiales?<br /><br />Eso es exactamente lo que muchas personas están logrando gracias al tratamiento de ADN de Salmón, una de las terapias más innovadoras en medicina estética avanzada.<br /><br />Y ahora puedes vivirlo en MJ Estética Wellness Center.<br /><br />👇",
