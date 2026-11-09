@@ -2548,7 +2548,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "rejuvenecimiento-facial-laser",
       name: "Rejuvenecimiento Facial Láser",
-      fullTitle: "Rejuvenecimiento Facial con Láser en Turrialba",
+      fullTitle: "Rejuvenecimiento Facial con Láser en Turrialba & Siquirres",
       tagline: "Recupera la Juventud y Luminosidad de tu Piel",
       heroDescription:
         "Recupera la Juventud y Luminosidad de tu Piel con tecnología láser de vanguardia en Turrialba.",
