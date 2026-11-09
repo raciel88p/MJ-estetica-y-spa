@@ -5689,7 +5689,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "masaje-embarazadas",
       name: "Masajes para Embarazadas",
-      fullTitle: "Masajes para Embarazadas en Turrialba",
+      fullTitle: "Masajes para Embarazadas en Turrialba & Siquirres",
       tagline: "Alivio, confort y descanso seguro para ti y tu bebé",
       heroDescription: "Un masaje especialmente adaptado para las necesidades de la gestante, enfocado en aliviar la tensión acumulada en espalda y piernas, reducir la hinchazón y promover una relajación profunda y segura en un entorno cómodo y amigable.",
       benefits: [
