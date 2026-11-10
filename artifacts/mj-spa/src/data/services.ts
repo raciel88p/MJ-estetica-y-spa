@@ -6051,7 +6051,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "masaje-parejas",
       name: "Masajes para Parejas",
-      fullTitle: "Masajes para Parejas en Turrialba | MJ Estética & Wellness Center",
+      fullTitle: "Masajes para Parejas en Turrialba & Siquirres | MJ Estética & Wellness Center",
       tagline: "Conecten, relajen y disfruten una experiencia wellness premium juntos",
       heroDescription: "En MJ Estética & Wellness Center creamos experiencias de masajes para parejas en Turrialba, pensadas para disfrutar relajación, bienestar y comodidad en un ambiente acogedor y privado.",
       benefits: [
