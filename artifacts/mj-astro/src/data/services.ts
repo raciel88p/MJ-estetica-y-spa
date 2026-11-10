@@ -5911,7 +5911,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "masaje-chocolate",
       name: "Masaje de Chocolate (Chocoterapia)",
-      fullTitle: "Masaje de Chocolate en Turrialba | Chocolaterapia Relajante | MJ Estética",
+      fullTitle: "Masaje de Chocolate en Turrialba & Siquirres",
       tagline: "Una experiencia de chocolate para relajarte, desconectarte y consentirte",
       heroDescription: "Disfruta un Masaje de Chocolate en Turrialba con chocolaterapia, masaje relajante y una experiencia sensorial de bienestar.",
       benefits: [
