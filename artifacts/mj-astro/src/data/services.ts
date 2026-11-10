@@ -6119,7 +6119,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "masaje-descarga-muscular",
       name: "Masaje de Descarga Muscular",
-      fullTitle: "Masaje de Descarga Muscular en Turrialba",
+      fullTitle: "Masaje de Descarga Muscular en Turrialba & Siquirres",
       tagline: "Liberación intensa de tensión, contracturas y fatiga",
       heroDescription: "Especialmente diseñado para deportistas o personas con alta carga de estrés físico y laboral. Combina técnicas de presión profunda y estiramientos para liberar sobrecargas musculares y acelerar la recuperación.",
       benefits: [
