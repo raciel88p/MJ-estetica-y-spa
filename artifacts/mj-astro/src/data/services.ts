@@ -3366,7 +3366,7 @@ export const servicePages: MultiLangServicePageData[] = [
   {
     es: {
       slug: "piernas-cansadas",
-      name: "Cuidado de Piernas Cansadas",
+      name: "Cuidado de Piernas Cansadas Turrialba & Siquirres",
       tagline: "Piernas ligeras, activas y sin pesadez",
       heroDescription:
         "La sensación de pesadez, hinchazón y cansancio en las piernas es muy frecuente y puede mejorar significativamente con tratamientos especializados que activan la circulación y el drenaje linfático.",
