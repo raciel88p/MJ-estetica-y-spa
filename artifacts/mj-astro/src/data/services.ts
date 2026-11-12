@@ -4260,7 +4260,7 @@ export const servicePages: MultiLangServicePageData[] = [
     es: {
       slug: "tratamiento-anticelulitis",
       name: "Tratamiento Anticelulitis",
-      fullTitle: "Tratamientos Anticelulitis en Turrialba",
+      fullTitle: "Tratamientos Anticelulitis en Turrialba & Siquirres",
       tagline: "Elimina la celulitis de forma definitiva y sin cirugía",
       heroBg: "anticelulitis-bg.webp",
       heroDescription:
